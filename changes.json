@@ -1,66 +1,11 @@
 {
-  "generated_at": "2026-07-13T16:27:25.139853+09:00",
+  "generated_at": "2026-07-13T17:07:47.932554+09:00",
   "center_date": "2026-07-13",
   "window": {
     "start": "2026-07-10",
     "end": "2026-07-16"
   },
   "target_count": 11,
-  "change_count": 2,
-  "changes": [
-    {
-      "date": "2026-07-12",
-      "sport": "jra",
-      "venue": "福島",
-      "name": "七夕賞",
-      "before": {
-        "date": "2026-07-12",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "福島",
-        "grade": "GⅢ",
-        "name": "七夕賞",
-        "winner": "アスクナイスショー"
-      },
-      "after": {
-        "date": "2026-07-12",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "福島",
-        "grade": "GIII",
-        "name": "七夕賞",
-        "winner": "アスクナイスショー"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-07-12",
-      "sport": "jra",
-      "venue": "福島",
-      "name": "七夕賞",
-      "before": {
-        "date": "2026-07-12",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "福島",
-        "grade": "GIII",
-        "name": "七夕賞",
-        "winner": "アスクナイスショー"
-      },
-      "after": {
-        "date": "2026-07-12",
-        "time": "15:30",
-        "sport": "jra",
-        "venue": "福島",
-        "grade": "GIII",
-        "name": "七夕賞",
-        "winner": "アスクナイスショー"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/7/0712.html",
-      "note": "JRA競馬番組"
-    }
-  ]
+  "change_count": 0,
+  "changes": []
 }
