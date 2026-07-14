@@ -41,7 +41,7 @@
     main {
       width: min(100% - 32px, 760px);
       margin: 0 auto;
-      padding: calc(var(--header-total-h) + 38px) 0 72px;
+      padding: calc(var(--header-total-h) + 38px) 0 calc(var(--bottom-nav-total-h, 62px) + 30px);
     }
 
     .lead {
@@ -110,6 +110,7 @@
       font-size: 0.8rem;
     }
   </style>
+  <script src="./shared/bottom-nav.js?v=16" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -140,5 +141,6 @@
 
     <footer>zenrace demo</footer>
   </main>
+  <zenrace-bottom-nav active="home"></zenrace-bottom-nav>
 </body>
 </html>
