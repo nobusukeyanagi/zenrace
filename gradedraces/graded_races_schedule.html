@@ -2,213 +2,417 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>公営競技重賞日程</title>
 <style>
+
 :root{
-  --bg:#eef1f5;--panel:#fff;--line:#d9dee7;--text:#17202a;--muted:#6f7a8b;
-  --jra:#23834a;--nar:#8b5a2b;--boat:#1876c9;--keirin:#db6b1f;--auto:#7b49b5;
-  --sat:#eaf4ff;--sun:#fff0f0;--holiday:#fff0f0;--today:#fff6c9;
-  --table-font:12px;
+  --bg:#edf0f4;
+  --panel:#fff;
+  --line:#d9dee7;
+  --text:#17202a;
+  --muted:#6f7a8b;
+  --gold:#d4af37;
+  --gold-light:#ffe18a;
+  --gold-dark:#7a5811;
+  --jra:#23834a;
+  --nar:#8b5a2b;
+  --boat:#1876c9;
+  --keirin:#db6b1f;
+  --auto:#7650b5;
+  --sat:#eaf4ff;
+  --holiday:#fff0f0;
+  --today:#fff6c9;
+  --table-font:11px;
 }
 *{box-sizing:border-box}
+html{
+  min-height:100%;
+  background:#090704;
+}
 body{
-  margin:0;min-width:0;overflow-x:hidden;color:var(--text);
-  background:linear-gradient(180deg,#f8fafc,var(--bg));
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif
+  margin:0;
+  min-width:0;
+  min-height:100%;
+  overflow-x:hidden;
+  color:var(--text);
+  background:linear-gradient(180deg,#f7f8fa,var(--bg));
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  -webkit-font-smoothing:antialiased;
 }
 button,textarea{font:inherit}
-.topbar{
-  position:sticky;top:0;z-index:50;height:58px;display:flex;align-items:center;justify-content:center;
-  padding:8px 20px;color:#fff;background:linear-gradient(135deg,#111827,#263345 58%,#111827);
-  box-shadow:0 6px 18px rgba(15,23,42,.18)
-}
-.month-nav{display:flex;align-items:center;gap:7px}
-.month-title{min-width:164px;text-align:center;font-size:21px;font-weight:850;letter-spacing:.04em}
-.top-actions{position:absolute;right:20px;display:flex;gap:7px}
-.btn{
-  border:1px solid rgba(255,255,255,.23);border-radius:7px;padding:7px 11px;color:#fff;
-  background:rgba(255,255,255,.08);cursor:pointer;transition:.16s
-}
-.btn:hover{background:rgba(255,255,255,.16);transform:translateY(-1px)}
-.btn.primary{color:#111827;background:#fff;border-color:#fff;font-weight:800}
-.icon-btn{width:34px;height:34px;padding:0;display:grid;place-items:center;font-size:20px}
 
-.schedule{padding:10px 14px 24px}
-.day-block{
-  display:grid;grid-template-columns:54px minmax(0,1fr);margin-bottom:4px;
-  border:1px solid var(--line);border-radius:7px;background:var(--panel);
-  box-shadow:0 2px 7px rgba(15,23,42,.04);overflow:hidden
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  min-height:calc(56px + env(safe-area-inset-top,0px));
+  padding:calc(env(safe-area-inset-top,0px) + 8px) 8px 8px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  color:#fff;
+  background:
+    linear-gradient(105deg,transparent 0 28%,rgba(255,224,128,.09) 42%,transparent 57%),
+    radial-gradient(circle at 75% -30%,rgba(255,218,111,.32),transparent 46%),
+    linear-gradient(135deg,#050403 0%,#181307 48%,#0a0804 100%);
+  border-bottom:1px solid rgba(212,175,55,.62);
+  box-shadow:
+    0 5px 18px rgba(0,0,0,.38),
+    inset 0 -1px 0 rgba(255,225,139,.13);
 }
-.day-block.today{border-color:#dfb82f;box-shadow:0 0 0 1px rgba(223,184,47,.18)}
+.topbar::after{
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:0;
+  left:0;
+  height:2px;
+  background:linear-gradient(90deg,transparent,#9b741b 20%,#ffe18a 50%,#9b741b 80%,transparent);
+  opacity:.8;
+}
+.month-nav{
+  position:absolute;
+  left:50%;
+  top:calc(env(safe-area-inset-top,0px) + 8px);
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  transform:translateX(-50%);
+}
+.month-title{
+  min-width:106px;
+  text-align:center;
+  color:#fff5d4;
+  font-size:17px;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:.01em;
+  text-shadow:0 1px 8px rgba(212,175,55,.28);
+  white-space:nowrap;
+}
+.top-actions{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.btn{
+  height:34px;
+  border:1px solid rgba(255,220,116,.42);
+  border-radius:8px;
+  padding:0 8px;
+  color:#fff4cf;
+  background:rgba(255,255,255,.055);
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn:active{background:rgba(255,215,106,.14)}
+.btn.primary{
+  color:#120e05;
+  border-color:#f1cf67;
+  background:linear-gradient(180deg,#ffe796,#c79a27);
+  font-weight:900;
+}
+.icon-btn{
+  width:34px;
+  padding:0;
+  display:grid;
+  place-items:center;
+  color:#ffe18a;
+  font-size:22px;
+}
+#editBtn{display:none}
+
+.schedule{
+  padding:7px 7px 15px;
+}
+.day-block{
+  display:grid;
+  grid-template-columns:54px minmax(0,1fr);
+  margin-bottom:6px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:var(--panel);
+  box-shadow:0 2px 8px rgba(15,23,42,.055);
+}
+.day-block.today{
+  border-color:#d7aa21;
+  box-shadow:0 0 0 1px rgba(215,170,33,.16),0 3px 10px rgba(15,23,42,.06);
+}
 .date-cell{
-  position:relative;display:flex;align-items:center;justify-content:center;gap:4px;
-  min-height:30px;border-right:1px solid var(--line);background:#f8fafc
+  position:relative;
+  min-height:38px;
+  padding:5px 3px;
+  display:grid;
+  grid-template-columns:auto 1em;
+  align-content:center;
+  align-items:baseline;
+  justify-content:center;
+  column-gap:3px;
+  border-right:1px solid var(--line);
+  background:#f8fafc;
+  white-space:nowrap;
 }
 .day-block.sat .date-cell{background:var(--sat)}
-.day-block.sun .date-cell,.day-block.holiday .date-cell{background:var(--holiday)}
+.day-block.sun .date-cell,
+.day-block.holiday .date-cell{background:var(--holiday)}
 .day-block.today .date-cell{background:var(--today)}
-.date-number{font-size:21px;line-height:1;font-weight:900}
-.weekday{font-size:8px;line-height:1;font-weight:800;color:var(--muted)}
-.day-block.sat .date-number,.day-block.sat .weekday{color:#1769aa}
-.day-block.sun .date-number,.day-block.sun .weekday,
-.day-block.holiday .date-number,.day-block.holiday .weekday{color:#c43b3b}
+.date-number{
+  font-size:18px;
+  line-height:1;
+  font-weight:950;
+  font-variant-numeric:tabular-nums;
+}
+.weekday{
+  width:1em;
+  font-size:9px;
+  line-height:1;
+  font-weight:900;
+  color:var(--muted);
+  text-align:center;
+  white-space:nowrap;
+}
+.day-block.sat .date-number,
+.day-block.sat .weekday{color:#1769aa}
+.day-block.sun .date-number,
+.day-block.sun .weekday,
+.day-block.holiday .date-number,
+.day-block.holiday .weekday{color:#c43b3b}
 .today-tag{
-  position:absolute;top:3px;left:3px;padding:1px 3px;border-radius:3px;background:#d1a600;
-  color:#fff;font-size:6px;font-weight:900
+  position:absolute;
+  top:2px;
+  left:2px;
+  padding:1px 3px;
+  border-radius:3px;
+  color:#fff;
+  background:#b88d13;
+  font-size:5px;
+  font-weight:950;
+  line-height:1.2;
 }
 
-.race-list{min-width:0}
+.race-list{
+  min-width:0;
+  overflow-x:auto;
+  overflow-y:hidden;
+  overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+  scrollbar-color:#c8a13c transparent;
+}
+.race-list::-webkit-scrollbar{height:4px}
+.race-list::-webkit-scrollbar-thumb{
+  border-radius:99px;
+  background:#c8a13c;
+}
 .race-row{
-  --sport:#555;display:grid;grid-template-columns:58px 122px 92px 58px minmax(240px,1fr) 132px;
-  align-items:stretch;min-height:30px;border-bottom:1px solid #e7ebf0;
-  font-size:var(--table-font)
+  display:grid;
+  grid-template-columns:
+    50px
+    112px
+    50px
+    minmax(180px,max-content)
+    minmax(112px,max-content);
+  width:max-content;
+  min-width:100%;
+  min-height:38px;
+  align-items:stretch;
+  border-bottom:1px solid #e7ebf0;
+  background:#fff;
+  font-size:var(--table-font);
 }
 .race-row:last-child{border-bottom:0}
-.race-row:hover{background:#f8fafc}
-.race-row.jra{--sport:var(--jra)}.race-row.nar{--sport:var(--nar)}
-.race-row.boat{--sport:var(--boat)}.race-row.keirin{--sport:var(--keirin)}.race-row.auto{--sport:var(--auto)}
-
-.time-cell,.sport-cell,.venue-cell,.grade-cell,.name-cell,.winner-cell{
-  min-width:0;padding:4px 8px;display:flex;align-items:center;
-  font-size:var(--table-font);line-height:1.2
+.time-cell,
+.venue-cell,
+.grade-cell,
+.name-cell,
+.winner-cell{
+  min-width:0;
+  padding:5px 7px;
+  display:flex;
+  align-items:center;
+  line-height:1.15;
+  white-space:nowrap;
 }
 .time-cell{
-  justify-content:center;border-right:1px solid #edf0f4;
-  font-variant-numeric:tabular-nums;font-weight:800;white-space:nowrap
+  justify-content:center;
+  border-right:1px solid #edf0f4;
+  font-variant-numeric:tabular-nums;
+  font-weight:900;
 }
-.time-cell.pending{color:#8a94a3;font-weight:650}
-.time-cell.cancelled{color:#c43b3b;font-weight:900}
-.sport-cell{gap:7px;font-weight:850;white-space:nowrap;padding-left:7px;padding-right:9px}
-.sport-bar{
-  width:4px;height:20px;flex:0 0 4px;border-radius:2px;background:var(--sport)
-}
+.time-cell.pending{color:#8a94a3;font-weight:700}
+.time-cell.cancelled{color:#c43b3b;font-weight:950}
 .venue-cell{
-  justify-content:center;border-left:1px solid #edf0f4;border-right:1px solid #edf0f4;
-  text-align:center;font-weight:850;white-space:nowrap;padding-left:10px;padding-right:10px
+  gap:6px;
+  border-right:1px solid #edf0f4;
+  font-weight:900;
 }
+.venue-name{white-space:nowrap}
 .grade-cell{
-  justify-content:center;border-right:1px solid #edf0f4;
-  text-align:center;font-weight:750;white-space:nowrap
+  justify-content:center;
+  border-right:1px solid #edf0f4;
+  font-weight:850;
+  text-align:center;
 }
-.name-cell{font-weight:750}
-.race-name{min-width:0;overflow-wrap:anywhere}
+.name-cell{
+  border-right:1px solid #edf0f4;
+  font-weight:800;
+}
+.race-name{white-space:nowrap}
 .winner-cell{
-  justify-content:center;border-left:1px solid #edf0f4;
-  text-align:center;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis
+  font-weight:800;
 }
-.grade-top,.name-top{color:#c62828}
+.grade-top,
+.name-top,
+.winner-top{
+  color:#c62828;
+  font-weight:950;
+}
+
+.sport-icon{
+  width:27px;
+  height:27px;
+  flex:0 0 27px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border-radius:8px;
+  color:#fff;
+  box-shadow:
+    0 2px 5px rgba(0,0,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.24);
+}
+.sport-icon.jra{background:var(--jra)}
+.sport-icon.nar{background:var(--nar)}
+.sport-icon.boat{background:var(--boat)}
+.sport-icon.keirin{background:var(--keirin)}
+.sport-icon.auto{background:var(--auto)}
+.sport-icon svg{
+  width:26px;
+  height:26px;
+  display:block;
+}
+.sport-icon.horse svg{
+  width:28px;
+  height:28px;
+}
+.sport-icon.boat svg{
+  width:29px;
+  height:29px;
+}
 
 .empty-month{
-  padding:48px 20px;border:1px dashed #cbd2dc;border-radius:10px;background:rgba(255,255,255,.7);
-  color:#8a94a3;text-align:center;font-size:13px
+  padding:48px 20px;
+  border:1px dashed #cbd2dc;
+  border-radius:10px;
+  background:rgba(255,255,255,.72);
+  color:#8a94a3;
+  text-align:center;
+  font-size:13px;
 }
-.data-note{padding:0 16px 18px;color:#7c8694;font-size:10px;text-align:right}
+.data-note{
+  padding:0 10px 14px;
+  color:#7c8694;
+  font-size:9px;
+  line-height:1.55;
+  text-align:left;
+}
 
 .modal-backdrop{
-  position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:22px;
-  background:rgba(15,23,42,.67);backdrop-filter:blur(5px)
+  position:fixed;
+  inset:0;
+  z-index:1100;
+  display:none;
+  place-items:center;
+  padding:8px;
+  background:rgba(15,23,42,.72);
+  backdrop-filter:blur(5px);
 }
 .modal-backdrop.open{display:grid}
 .modal{
-  width:min(980px,95vw);max-height:90vh;display:grid;
-  grid-template-rows:auto auto minmax(260px,1fr) auto auto;gap:10px;padding:17px;
-  border-radius:14px;background:#fff;box-shadow:0 24px 80px rgba(0,0,0,.34)
+  width:100%;
+  max-height:calc(100dvh - 16px);
+  display:grid;
+  grid-template-rows:auto auto minmax(180px,1fr) auto auto;
+  gap:9px;
+  padding:12px;
+  border-radius:14px;
+  background:#fff;
+  box-shadow:0 24px 80px rgba(0,0,0,.34);
 }
-.modal-head,.modal-actions{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.modal h2{margin:0;font-size:18px}.help{margin:0;color:var(--muted);font-size:11px;line-height:1.65}
+.modal-head,.modal-actions{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.modal h2{margin:0;font-size:16px}
+.help{margin:0;color:var(--muted);font-size:10px;line-height:1.55}
 #jsonEditor{
-  width:100%;min-height:360px;resize:vertical;padding:12px;border:1px solid #cfd6df;border-radius:9px;
-  background:#f8fafc;font:11px/1.5 Consolas,monospace
+  width:100%;
+  min-height:260px;
+  resize:vertical;
+  padding:10px;
+  border:1px solid #cfd6df;
+  border-radius:9px;
+  background:#f8fafc;
+  font:10px/1.5 Consolas,monospace;
 }
-.modal .btn{color:#243041;border-color:#cad2dc;background:#fff}
-.modal .btn.primary{color:#fff;border-color:#1f2937;background:#1f2937}
-.modal-actions .left,.modal-actions .right{display:flex;gap:7px}
+.modal .btn{
+  color:#243041;
+  border-color:#cad2dc;
+  background:#fff;
+}
+.modal .btn.primary{
+  color:#fff;
+  border-color:#1f2937;
+  background:#1f2937;
+}
+.modal-actions{
+  align-items:stretch;
+  flex-direction:column;
+}
+.modal-actions .left,.modal-actions .right{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
 .error{min-height:16px;color:#c93636;font-size:11px;font-weight:800}
 
-@media(max-width:700px){
-  :root{--table-font:11px}
-  .topbar{
-    min-height:54px;height:auto;justify-content:space-between;gap:7px;
-    padding:7px 8px
-  }
-  .month-nav{min-width:0;gap:4px}
-  .month-title{min-width:96px;font-size:17px;letter-spacing:.01em}
-  .top-actions{position:static;right:auto;flex:0 0 auto;gap:4px}
-  .btn{padding:7px 8px;font-size:11px}
-  .icon-btn{width:32px;height:32px;padding:0;font-size:19px}
-  #editBtn{display:none}
-
-  .schedule{padding:7px 7px 14px}
-  .day-block{
-    grid-template-columns:43px minmax(0,1fr);margin-bottom:6px;
-    border-radius:8px
-  }
-  .date-cell{min-height:46px;flex-direction:column;gap:1px;padding:4px 1px}
-  .date-number{font-size:18px}
-  .weekday{font-size:9px}
-  .today-tag{top:2px;left:2px;font-size:5px}
-
-  .race-row{
-    grid-template-columns:48px minmax(82px,1.45fr) minmax(48px,.8fr) 47px;
-    grid-template-areas:
-      "time sport venue grade"
-      "name name name name"
-      "winner winner winner winner";
-    min-height:0;font-size:var(--table-font)
-  }
-  .time-cell{grid-area:time}
-  .sport-cell{grid-area:sport}
-  .venue-cell{grid-area:venue}
-  .grade-cell{grid-area:grade}
-  .name-cell{grid-area:name}
-  .winner-cell{grid-area:winner}
-  .time-cell,.sport-cell,.venue-cell,.grade-cell{
-    min-height:29px;padding:4px 5px
-  }
-  .sport-cell{gap:5px;padding-left:5px;padding-right:4px}
-  .sport-bar{width:3px;height:18px;flex-basis:3px}
-  .venue-cell{padding-inline:4px}
-  .grade-cell{padding-inline:3px}
-  .name-cell{
-    min-height:28px;padding:6px 7px;border-top:1px solid #edf0f4;
-    font-size:12px;line-height:1.35
-  }
-  .winner-cell{
-    min-height:25px;justify-content:flex-start;padding:4px 7px;
-    border-top:1px dashed #edf0f4;border-left:0;color:#596579;
-    font-size:10px;text-align:left
-  }
-  .winner-cell:not(:empty)::before{
-    content:"優勝：";margin-right:2px;color:#8a94a3;font-weight:650
-  }
-  .winner-cell:empty{display:none}
-  .data-note{padding:0 10px 12px;font-size:9px;line-height:1.55;text-align:left}
-
-  .modal-backdrop{padding:8px}
-  .modal{
-    width:100%;max-height:calc(100dvh - 16px);padding:12px;
-    grid-template-rows:auto auto minmax(180px,1fr) auto auto
-  }
-  .modal-head{align-items:flex-start}
-  .modal h2{font-size:16px}
-  #jsonEditor{min-height:260px;font-size:10px}
-  .modal-actions{align-items:stretch;flex-direction:column}
-  .modal-actions .left,.modal-actions .right{flex-wrap:wrap}
-}
 @media(max-width:350px){
-  .month-title{min-width:84px;font-size:15px}
-  .top-actions .btn{padding-inline:6px}
-  .race-row{grid-template-columns:45px minmax(76px,1.4fr) minmax(44px,.8fr) 43px}
-  .time-cell,.sport-cell,.venue-cell,.grade-cell{padding-inline:3px}
+  .day-block{grid-template-columns:51px minmax(0,1fr)}
+  .date-cell{padding-inline:2px}
+  .month-title{min-width:96px;font-size:16px}
+  .btn{padding-inline:6px}
+  .race-row{
+    grid-template-columns:
+      47px
+      108px
+      47px
+      minmax(175px,max-content)
+      minmax(108px,max-content);
+  }
 }
 @media print{
-  body{min-width:0;background:#fff}.top-actions,.modal-backdrop,.data-note{display:none!important}
-  .topbar{position:static;height:44px;box-shadow:none}.schedule{padding:5px}
-  .day-block{margin-bottom:2px;border-radius:4px;box-shadow:none;page-break-inside:avoid}
-  .race-row{min-height:25px}
-  .time-cell,.sport-cell,.venue-cell,.grade-cell,.name-cell,.winner-cell{padding:2px 5px}
+  zenrace-bottom-nav,.modal-backdrop,.data-note,.top-actions{display:none!important}
+  html,body{background:#fff}
+  .topbar{
+    position:static;
+    min-height:44px;
+    padding:5px;
+    box-shadow:none;
+  }
+  .month-nav{top:5px}
+  .schedule{padding:5px}
+  .day-block{break-inside:avoid;box-shadow:none}
+  .race-list{overflow:visible}
 }
+
 </style>
 </head>
 <body>
@@ -296,18 +500,73 @@ function timeClass(time){
   if(!time)return "pending";
   return "";
 }
+
+function sportIcon(sport){
+  const labels={
+    jra:"JRA",
+    nar:"地方競馬",
+    boat:"ボートレース",
+    keirin:"競輪",
+    auto:"オートレース"
+  };
+  const icons={
+    jra:`<span class="sport-icon horse jra" role="img" aria-label="${labels.jra}">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path fill="currentColor" d="M15 58c1-14 5-25 14-35l-3-13 13 8 10-7 1 14c7 6 10 14 10 25v8H40v-8h10c0-7-2-12-7-16l-8 5-9-5c-5 7-8 15-9 24H15z"/>
+        <path fill="#fff" d="M42 25a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+        <path fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" d="M28 34c4 4 9 5 15 3"/>
+      </svg>
+    </span>`,
+    nar:`<span class="sport-icon horse nar" role="img" aria-label="${labels.nar}">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path fill="currentColor" d="M15 58c1-14 5-25 14-35l-3-13 13 8 10-7 1 14c7 6 10 14 10 25v8H40v-8h10c0-7-2-12-7-16l-8 5-9-5c-5 7-8 15-9 24H15z"/>
+        <path fill="#fff" d="M42 25a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+        <path fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" d="M28 34c4 4 9 5 15 3"/>
+      </svg>
+    </span>`,
+    boat:`<span class="sport-icon boat" role="img" aria-label="${labels.boat}">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path fill="#fff" d="M8 39h40l9 7-10 9H20L8 45z"/>
+        <path fill="#fff" d="M24 27h20l6 12H18z"/>
+        <path fill="#1876c9" d="M29 30h12l3 7H25z"/>
+        <path fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" d="M7 58h21M35 58h18"/>
+        <path fill="#fff" d="M48 35l8-5 2 3-8 6z"/>
+      </svg>
+    </span>`,
+    keirin:`<span class="sport-icon keirin" role="img" aria-label="${labels.keirin}">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="17" cy="46" r="10" fill="none" stroke="currentColor" stroke-width="4.5"/>
+        <circle cx="48" cy="46" r="10" fill="none" stroke="currentColor" stroke-width="4.5"/>
+        <path d="M17 46l12-18 8 18H25l-8 0zm12-18h15l4 18" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="35" cy="15" r="5" fill="currentColor"/>
+        <path d="M34 21l-7 10m8-10l12 6m-12-6l3 12" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+    </span>`,
+    auto:`<span class="sport-icon auto" role="img" aria-label="${labels.auto}">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="16" cy="47" r="9" fill="none" stroke="currentColor" stroke-width="4.5"/>
+        <circle cx="49" cy="47" r="9" fill="none" stroke="currentColor" stroke-width="4.5"/>
+        <path d="M16 47h17l8-13h9m-18 13l-7-14h13l10 14" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="34" cy="17" r="5" fill="currentColor"/>
+        <path d="M33 23l-9 10m10-9l13 5m-14-5l5 10" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+        <path d="M22 31h-7" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </span>`
+  };
+  return icons[sport]||"";
+}
+
 function raceRow(x){
   const gc=gradeClass(x.sport,x.grade);
   return `<div class="race-row ${x.sport}">
     <div class="time-cell ${timeClass(x.time)}">${esc(x.time)}</div>
-    <div class="sport-cell">
-      <span class="sport-bar" aria-hidden="true"></span>
-      <span>${esc(SPORT_NAMES[x.sport])}</span>
+    <div class="venue-cell">
+      ${sportIcon(x.sport)}
+      <span class="venue-name">${esc(x.venue)}</span>
     </div>
-    <div class="venue-cell">${esc(x.venue)}</div>
     <div class="grade-cell ${gc?`grade-${gc}`:""}">${esc(x.grade)}</div>
     <div class="name-cell ${gc?`name-${gc}`:""}"><span class="race-name">${esc(x.name)}</span></div>
-    <div class="winner-cell" title="${esc(x.winner||"")}">${esc(x.winner||"")}</div>
+    <div class="winner-cell ${gc?`winner-${gc}`:""}" title="${esc(x.winner||"")}">${esc(x.winner||"")}</div>
   </div>`;
 }
 function render(){
