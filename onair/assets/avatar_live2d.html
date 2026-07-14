@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=920, initial-scale=1">
+<title>Live2D Avatar Haru</title>
+<style>
+:root {
+  --w: 1610px;
+  --h: 3300px;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: var(--w);
+  height: var(--h);
+  overflow: hidden;
+  background: transparent;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+}
+body {
+  pointer-events: none;
+}
+.avatar-scene {
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  overflow: hidden;
+  background: transparent;
+}
+.avatar-scene::before {
+  display: none;
+}
+.avatar-light {
+  display: none;
+}
+#avatarCanvas {
+  position: absolute;
+  inset: 0;
+  width: var(--w);
+  height: var(--h);
+  z-index: 2;
+  filter:
+    drop-shadow(0 28px 36px rgba(0,0,0,.20))
+    drop-shadow(13px 12px 22px rgba(0,0,0,.13))
+    drop-shadow(-5px 0 12px rgba(255,255,255,.06));
+  transform-origin: 58% 84%;
+  animation: subtleSway 6.2s ease-in-out infinite;
+}
+#fallback {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 52%;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,.78);
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(0,0,0,.75);
+  display: none;
+  z-index: 4;
+}
+@keyframes subtleSway {
+  0%, 100% { transform: translateX(0) rotate(.035deg); }
+  35% { transform: translateX(-1.3px) rotate(-.045deg); }
+  70% { transform: translateX(1.3px) rotate(.045deg); }
+}
+</style>
+</head>
+<body>
+  <main class="avatar-scene" aria-hidden="true">
+    <canvas id="avatarCanvas"></canvas>
+    <div class="avatar-light"></div>
+    <div id="fallback">Live2D Avatar</div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.10/dist/browser/pixi.min.js"></script>
+  <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.4.0/dist/cubism4.min.js"></script>
+  <script>
+    const W = 1610;
+    const H = 3300;
+    const canvas = document.getElementById('avatarCanvas');
+    const fallback = document.getElementById('fallback');
+
+    let app = null;
+    let model = null;
+    let lastScene = '';
+    let idleTimer = null;
+    let shouldLipSync = false;
+    let lipPhase = 0;
+    let mouthLevelTarget = 0;
+    let mouthLevelCurrent = 0;
+
+    // ランダム採用モーションを厳選。
+    // 除外: 申し訳ない系 / 考えている系 / 腕を組んでいる系 / 動きが大きすぎるもの
+    const curatedMotions = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const bowMotionIndex = 2;
+    let lastAvatarMode = '';
+    let bowLockUntil = 0;
+
+    function showFallback() {
+      fallback.style.display = 'block';
+    }
+
+    function setParam(id, value) {
+      if (!model) return;
+      try {
+        const core = model.internalModel && model.internalModel.coreModel;
+        if (!core) return;
+        if (typeof core.setParameterValueById === 'function') {
+          core.setParameterValueById(id, value);
+        }
+      } catch (e) {}
+    }
+
+    function setMouthOpen(value) {
+      const v = Math.max(0, Math.min(1, value));
+      setParam('ParamMouthOpenY', v);
+    }
+
+    function applyBaseSmile() {
+      // 基本表情を笑顔寄りに固定します。モーションで上書きされてもtickerで戻します。
+      setParam('ParamMouthForm', 0.85);
+      setParam('ParamEyeLSmile', 0.55);
+      setParam('ParamEyeRSmile', 0.55);
+      setParam('ParamBrowLY', 0.12);
+      setParam('ParamBrowRY', 0.12);
+    }
+
+    function updateLipSync(delta) {
+      if (!model) return;
+      applyBaseSmile();
+
+      if (!shouldLipSync || mouthLevelTarget <= 0.02) {
+        mouthLevelCurrent *= 0.72;
+        setMouthOpen(Math.max(0.02, mouthLevelCurrent * 0.35));
+        return;
+      }
+
+      // ボイス音声の実音量に合わせて口を開きます。
+      mouthLevelCurrent = mouthLevelCurrent * 0.55 + mouthLevelTarget * 0.45;
+      lipPhase += delta * 0.128;
+      const wave = (Math.sin(lipPhase * 2.7) + Math.sin(lipPhase * 5.2) * 0.35 + 1.35) / 2.7;
+      const open = 0.05 + mouthLevelCurrent * (0.40 + wave * 0.58);
+      setMouthOpen(open);
+    }
+
+    function fitModel() {
+      if (!model) return;
+
+      // いったん等倍に戻してから、表示エリアに合わせてスケールを決めます。
+      model.scale.set(1);
+      const rawH = model.height || 1;
+      const targetH = 3274;
+      const s = targetH / rawH;
+      model.scale.set(s);
+
+      // 頭が上部の出走表に少しかぶる位置感を狙う。
+      model.x = (W - model.width) / 2 + 72;
+      model.y = Math.max(42, H - model.height + 42);
+    }
+
+    function playIdle() {
+      if (!model) return;
+      try {
+        // model3.jsonの最初のmotionがidleです。
+        model.motion('', 0);
+      } catch (e) {}
+    }
+
+    function getAvatarMode(scene) {
+      if (scene === 'personality2' || scene === 'personality') return 'personality';
+      if (scene === 'concierge') return 'concierge';
+      return 'none';
+    }
+
+    function playBowGreeting() {
+      if (!model) return;
+      bowLockUntil = Date.now() + 2300;
+      try {
+        // モード切替後の最初は、お辞儀に近い短めのモーションを再生します。
+        model.motion('', bowMotionIndex);
+      } catch (e) {}
+
+      setTimeout(() => {
+        if (!shouldLipSync && Date.now() >= bowLockUntil) playIdle();
+      }, 2300);
+    }
+
+    function playSmallReaction() {
+      // 口パク中・お辞儀中は、通常リアクションを抑制します。
+      if (!model || shouldLipSync || Date.now() < bowLockUntil) return;
+      try {
+        const index = curatedMotions[Math.floor(Math.random() * curatedMotions.length)];
+        model.motion('', index);
+      } catch (e) {
+        playIdle();
+      }
+      setTimeout(() => {
+        if (!shouldLipSync && Date.now() >= bowLockUntil) playIdle();
+      }, 2600);
+    }
+
+    async function init() {
+      try {
+        app = new PIXI.Application({
+          view: canvas,
+          width: W,
+          height: H,
+          transparent: true,
+          backgroundAlpha: 0,
+          antialias: true,
+          autoStart: true,
+          resolution: Math.min(window.devicePixelRatio || 1, 2)
+        });
+
+        try {
+          app.renderer.background.alpha = 0;
+          app.renderer.view.style.background = 'transparent';
+        } catch (e) {}
+
+        model = await PIXI.live2d.Live2DModel.from('./live2d/runtime/haru_greeter_t05.model3.json', {
+          autoInteract: false
+        });
+
+        app.stage.addChild(model);
+        fitModel();
+        playIdle();
+        applyBaseSmile();
+
+        app.ticker.add((delta) => {
+          updateLipSync(delta);
+        }, undefined, PIXI.UPDATE_PRIORITY.LOW);
+
+        // Live2D本体の自然な物理演算とアイドルを活かしつつ、反応は控えめに。
+        idleTimer = setInterval(() => {
+          if (!shouldLipSync && Math.random() < 0.35) playSmallReaction();
+        }, 12000);
+
+        window.addEventListener('resize', fitModel);
+      } catch (e) {
+        console.warn(e);
+        showFallback();
+      }
+    }
+
+    window.addEventListener('message', (event) => {
+      const data = event.data || {};
+      if (data.type === 'avatarState') {
+        shouldLipSync = !!data.speaking;
+        mouthLevelTarget = shouldLipSync ? Math.max(0, Math.min(1, Number(data.level) || 0)) : 0;
+        if (!shouldLipSync) setMouthOpen(0.02);
+
+        const nextMode = getAvatarMode(data.scene);
+        if (nextMode !== lastAvatarMode) {
+          lastAvatarMode = nextMode;
+          if (nextMode === 'personality' || nextMode === 'concierge') {
+            playBowGreeting();
+          }
+        }
+
+        if (data.scene && data.scene !== lastScene) {
+          lastScene = data.scene;
+        }
+      }
+      if (data.type === 'avatarReaction') {
+        if (!shouldLipSync && Date.now() >= bowLockUntil) playSmallReaction();
+      }
+    });
+
+    init();
+  </script>
+</body>
+</html>

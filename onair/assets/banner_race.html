@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1080, initial-scale=1" />
+  <title>簡易出走表｜浜松12R</title>
+  <style>
+    :root {
+      --canvas-w: 1080px;
+      --canvas-h: 550px;
+
+      /* バナー_依存症対策と同じ外枠サイズ */
+      --w: 1024px;
+      --h: 500px;
+
+      --title-h: 88px;
+      --row-h: 103px;
+      --black: #111111;
+      --navy-1: #081225;
+      --navy-2: #17284f;
+      --gold: #f3c94c;
+      --line: #e7eaf0;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: var(--canvas-w);
+      height: var(--canvas-h);
+      overflow: hidden;
+      background: transparent;
+      font-family:
+        "Noto Sans JP",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+    }
+
+    .race-board {
+      width: var(--w);
+      height: var(--h);
+      overflow: hidden;
+      background: #ffffff;
+      color: #101010;
+      border-radius: 26px;
+      box-shadow:
+        0 26px 54px rgba(0, 0, 0, .34),
+        0 10px 22px rgba(0, 0, 0, .24),
+        inset 0 1px 0 rgba(255, 255, 255, .75);
+      border: 1px solid rgba(255, 255, 255, .42);
+    }
+
+    .race-title {
+      width: 100%;
+      height: var(--title-h);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background:
+        radial-gradient(circle at 86% 18%, rgba(243, 201, 76, .18) 0%, transparent 26%),
+        linear-gradient(135deg, var(--navy-1) 0%, var(--navy-2) 100%);
+      color: #ffffff;
+      border-bottom: 4px solid var(--gold);
+      text-align: center;
+      line-height: 1;
+      white-space: nowrap;
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, .14),
+        inset 0 -10px 24px rgba(0, 0, 0, .18);
+    }
+
+    .title-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 43px;
+      font-weight: 1000;
+      letter-spacing: .03em;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, .28);
+    }
+
+
+    .title-icon {
+      width: 54px;
+      height: 54px;
+      flex: 0 0 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 2px;
+      border-radius: 16px;
+      background: #7a4cff;
+      box-shadow:
+        0 0 18px rgba(122,76,255,.30),
+        0 4px 10px rgba(0,0,0,.28),
+        inset 0 1px 0 rgba(255,255,255,.18);
+    }
+
+    .title-icon img {
+      width: 48px;
+      height: 48px;
+      display: block;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .title-label {
+      display: inline-block;
+    }
+
+    .title-main .sub {
+      margin-left: 8px;
+      color: #ffe48a;
+      font-size: 34px;
+      font-weight: 1000;
+      letter-spacing: .04em;
+      vertical-align: 3px;
+    }
+
+    .entry-grid {
+      height: calc(var(--h) - var(--title-h));
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, var(--row-h));
+      background: #f7f8fb;
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 104px 1fr 118px;
+      align-items: center;
+      min-width: 0;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border-bottom: 1px solid var(--line);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .95),
+        inset 0 -1px 0 rgba(0, 0, 0, .025);
+    }
+
+    .entry:nth-child(2n) { border-left: 1px solid var(--line); }
+
+    .entry:nth-child(7),
+    .entry:nth-child(8) { border-bottom: none; }
+
+    .frame-wrap {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-badge {
+      width: 74px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      font-size: 39px;
+      font-weight: 1000;
+      line-height: 1;
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, .38),
+        inset 0 -4px 0 rgba(0, 0, 0, .18),
+        0 5px 12px rgba(0, 0, 0, .20);
+    }
+
+    .rider-name {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      min-width: 0;
+      padding: 0 4px 0 0;
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: .002em;
+      line-height: 1;
+      color: #101010;
+      white-space: nowrap;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, .9);
+    }
+
+    .trial-time {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 10px;
+      font-size: 39px;
+      font-weight: 1000;
+      letter-spacing: .002em;
+      color: #1a2333;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .trial-time span {
+      min-width: 100px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #f8fafc 0%, #e9eef7 100%);
+      border: 1px solid #d6ddea;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .85),
+        0 2px 5px rgba(0, 0, 0, .08);
+    }
+
+    .car-1 {
+      background: linear-gradient(180deg, #ffffff 0%, #f1f4f8 100%);
+      color: #111111;
+      border: 3px solid #d7dbe3;
+    }
+
+    .car-2 {
+      background: linear-gradient(180deg, #333333 0%, #050505 100%);
+      color: #ffffff;
+      border: 3px solid #111111;
+    }
+
+    .car-3 {
+      background: linear-gradient(180deg, #ff2636 0%, #d90010 100%);
+      color: #ffffff;
+      border: 3px solid #e60012;
+    }
+
+    .car-4 {
+      background: linear-gradient(180deg, #1286dd 0%, #005aa4 100%);
+      color: #ffffff;
+      border: 3px solid #0068b7;
+    }
+
+    .car-5 {
+      background: linear-gradient(180deg, #fff06a 0%, #ffd900 100%);
+      color: #111111;
+      border: 3px solid #e4c100;
+    }
+
+    .car-6 {
+      background: linear-gradient(180deg, #12b85a 0%, #00853b 100%);
+      color: #ffffff;
+      border: 3px solid #009944;
+    }
+
+    .car-7 {
+      background: linear-gradient(180deg, #ffab2e 0%, #f28c00 100%);
+      color: #111111;
+      border: 3px solid #e47d00;
+    }
+
+    .car-8 {
+      background: linear-gradient(180deg, #ffc1db 0%, #f6a6c9 100%);
+      color: #111111;
+      border: 3px solid #e88db8;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="race-board" aria-label="簡易出走表">
+    <header class="race-title">
+      <div class="title-main">
+        <span class="title-icon" aria-hidden="true"><img src="icons/auto.png" alt=""></span><span class="title-label">浜松12R</span><span class="sub">全日本選抜オートレース｜優勝戦</span></div>
+    </header>
+
+    <div class="entry-grid">
+      <div class="entry">
+        <div class="frame-wrap"><div class="frame-badge car-1">1</div></div>
+        <div class="rider-name">黒川 京介</div>
+        <div class="trial-time"><span>3.28</span></div>
+      </div>
+      <div class="entry">
+        <div class="frame-wrap"><div class="frame-badge car-5">5</div></div>
+        <div class="rider-name">長田 稚也</div>
+        <div class="trial-time"><span>3.27</span></div>
+      </div>
+
+      <div class="entry">
+        <div class="frame-wrap"><div class="frame-badge car-2">2</div></div>
+        <div class="rider-name">鈴木 圭一郎</div>
+        <div class="trial-time"><span>3.31</span></div>
+      </div>
+      <div class="entry">
+        <div class="frame-wrap"><div class="frame-badge car-6">6</div></div>
+        <div class="rider-name">佐藤 励</div>
+        <div class="trial-time"><span>3.28</span></div>
+      </div>
+
+      <div class="entry">
+        <div class="frame-wrap"><div class="frame-badge car-3">3</div></div>
+        <div class="rider-name">青山 周平</div>
+        <div class="trial-time"><span>3.28</span></div>
+      </div>
+      <div class="entry">
+        <div class="frame-wrap"><div class="frame-badge car-7">7</div></div>
+        <div class="rider-name">鈴木 宏和</div>
+        <div class="trial-time"><span>3.29</span></div>
+      </div>
+
+      <div class="entry">
+        <div class="frame-wrap"><div class="frame-badge car-4">4</div></div>
+        <div class="rider-name">金子 大輔</div>
+        <div class="trial-time"><span>3.27</span></div>
+      </div>
+      <div class="entry">
+        <div class="frame-wrap"><div class="frame-badge car-8">8</div></div>
+        <div class="rider-name">佐藤 摩弥</div>
+        <div class="trial-time"><span>3.31</span></div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

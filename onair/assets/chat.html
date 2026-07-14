@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1080, initial-scale=1" />
+  <title>チャットボット風アニメーション 5チャット版</title>
+  <style>
+    :root {
+      --w: 1080px;
+      --h: 1500px;
+      --white: #ffffff;
+      --text: #101010;
+      --user: rgba(255,255,255,.94);
+      --gold: #ffd76a;
+      --shadow: rgba(0,0,0,.28);
+      --scroll-y: 0px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: var(--w);
+      height: var(--h);
+      overflow: hidden;
+      background: transparent;
+      font-family:
+        "Noto Sans JP",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+    }
+
+    body {
+      position: relative;
+      pointer-events: none;
+    }
+
+    .chat-area {
+      position: relative;
+      width: var(--w);
+      height: var(--h);
+      padding: 72px 58px 0;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .thread {
+      position: relative;
+      width: 100%;
+      transform: translateY(calc(-1 * var(--scroll-y)));
+      transition: transform .75s ease-in-out;
+    }
+
+    .message {
+      position: relative;
+      display: none;
+      width: 100%;
+      margin-bottom: 26px;
+      opacity: 0;
+      transform: translateY(22px) scale(.98);
+      transition:
+        opacity .55s ease-out,
+        transform .55s ease-out;
+    }
+
+    .message.visible {
+      display: flex;
+    }
+
+    .message.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .message.hide {
+      opacity: 0;
+      transform: translateY(-10px) scale(.98);
+      margin-bottom: 0;
+      height: 0;
+      overflow: hidden;
+      transition:
+        opacity .35s ease-in,
+        transform .35s ease-in,
+        height .35s ease-in,
+        margin-bottom .35s ease-in;
+    }
+
+    .message.user {
+      justify-content: flex-end;
+      margin-top: 0;
+    }
+
+    .message.bot {
+      justify-content: flex-start;
+    }
+
+    .bubble {
+      position: relative;
+      max-width: 850px;
+      border-radius: 34px;
+      padding: 28px 34px;
+      font-size: 45px;
+      font-weight: 900;
+      line-height: 1.35;
+      letter-spacing: -.015em;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      box-shadow:
+        0 18px 34px var(--shadow),
+        inset 0 1px 0 rgba(255,255,255,.16);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .user .bubble {
+      color: var(--text);
+      background: var(--user);
+      border: 1px solid rgba(255,255,255,.82);
+      border-bottom-right-radius: 10px;
+    }
+
+    .bot .bubble {
+      color: var(--white);
+      background:
+        radial-gradient(circle at 92% 10%, rgba(255,215,106,.16), transparent 30%),
+        linear-gradient(145deg, rgba(28,28,28,.84), rgba(9,9,9,.76));
+      border: 1px solid rgba(255,255,255,.18);
+      border-bottom-left-radius: 10px;
+    }
+
+    .wait .bubble {
+      padding: 30px 36px;
+      font-size: 46px;
+      letter-spacing: .18em;
+    }
+
+    .ellipsis {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      color: var(--gold);
+      text-shadow: 0 0 10px rgba(255,215,106,.42);
+    }
+
+    .ellipsis span {
+      display: inline-block;
+      animation: dotPulse 1.2s ease-in-out infinite;
+    }
+
+    .ellipsis span:nth-child(2) { animation-delay: .18s; }
+    .ellipsis span:nth-child(3) { animation-delay: .36s; }
+
+    @keyframes dotPulse {
+      0%, 80%, 100% {
+        opacity: .35;
+        transform: translateY(0) scale(.94);
+      }
+      40% {
+        opacity: 1;
+        transform: translateY(-6px) scale(1.08);
+      }
+    }
+
+    .answer .bubble {
+      width: fit-content;
+      max-width: 880px;
+      padding: 30px 34px 32px;
+      font-size: 45px;
+      line-height: 1.35;
+    }
+
+    .answer-text {
+      margin: 0;
+      color: rgba(255,255,255,.96);
+    }
+
+    .answer-line {
+      display: block;
+      min-height: 1.35em;
+      margin-top: 8px;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      overflow: visible;
+    }
+
+    .answer-line:first-child {
+      margin-top: 0;
+    }
+
+    .answer-text strong,
+    .gold {
+      color: var(--gold);
+      font-weight: 1000;
+    }
+
+    .frame-box {
+      display: inline-grid;
+      place-items: center;
+      width: 1.32em;
+      height: 1.32em;
+      margin: 0 .08em;
+      border-radius: .16em;
+      font-weight: 1000;
+      font-size: .92em;
+      line-height: 1;
+      vertical-align: -.13em;
+      border: 2px solid rgba(255,255,255,.32);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.32),
+        0 2px 6px rgba(0,0,0,.28);
+    }
+
+    .frame-1 { background: #ffffff; color: #111111; }
+    .frame-2 { background: #111111; color: #ffffff; }
+    .frame-3 { background: #d92a2a; color: #ffffff; }
+    .frame-4 { background: #2266d8; color: #ffffff; }
+    .frame-5 { background: #ffd900; color: #111111; }
+    .frame-6 { background: #169447; color: #ffffff; }
+    .frame-7 { background: #ef7d21; color: #ffffff; }
+    .frame-8 { background: #e35aa6; color: #ffffff; }
+
+    .guide-button {
+      position: relative;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 680px;
+      max-width: 100%;
+      margin-top: 28px;
+      padding: 22px 28px 24px;
+      overflow: hidden;
+      border-radius: 999px;
+      color: rgba(255,255,255,.98);
+      background:
+        radial-gradient(circle at 78% 16%, rgba(255, 215, 106, .34) 0%, transparent 30%),
+        radial-gradient(circle at 18% 84%, rgba(255, 170, 64, .18) 0%, transparent 30%),
+        linear-gradient(145deg, #1a0f04 0%, #4a2b0b 48%, #0b0501 100%);
+      border: 2px solid rgba(255, 215, 106, .78);
+      box-shadow:
+        0 16px 30px rgba(0,0,0,.38),
+        0 0 22px rgba(255, 190, 78, .18),
+        inset 0 1px 0 rgba(255,255,255,.18);
+      font-size: 38px;
+      font-weight: 1000;
+      letter-spacing: .02em;
+      text-shadow:
+        0 2px 8px rgba(0,0,0,.42),
+        0 0 12px rgba(255,215,106,.20);
+      opacity: 0;
+      transform: translateY(14px) scale(.98);
+    }
+
+    .guide-button::before {
+      content: "";
+      position: absolute;
+      right: -48px;
+      top: -48px;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 18px solid rgba(255, 215, 106, .10);
+      pointer-events: none;
+    }
+
+    .guide-button::after {
+      content: "›";
+      position: relative;
+      margin-left: 18px;
+      color: #ffd76a;
+      font-size: 46px;
+      line-height: .8;
+      font-weight: 1000;
+      text-shadow: 0 0 10px rgba(255,215,106,.42);
+    }
+
+    .guide-button.show {
+      display: flex;
+      animation: guideButtonIn .42s ease-out both;
+    }
+
+    @keyframes guideButtonIn {
+      0% { opacity: 0; transform: translateY(14px) scale(.98); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="chat-area" id="chatArea" aria-label="チャットボット風アニメーション">
+    <div class="thread" id="thread">
+      <div class="message bot answer visible show" id="a0"><div class="bubble"><p class="answer-text"><span class="answer-line">気になることがあれば、気軽に聞いてくださいね。</span></p></div></div>
+
+      <div class="message user" id="u1"><div class="bubble">おすすめの買い目を教えて</div></div>
+      <div class="message bot wait" id="wait1"><div class="bubble"><span class="ellipsis"><span>・</span><span>・</span><span>・</span></span></div></div>
+      <div class="message bot answer" id="a1"><div class="bubble"><p class="answer-text"></p></div></div>
+
+      <div class="message user" id="u2"><div class="bubble">今日はいい天気だね</div></div>
+      <div class="message bot wait" id="wait2"><div class="bubble"><span class="ellipsis"><span>・</span><span>・</span><span>・</span></span></div></div>
+      <div class="message bot answer" id="a2"><div class="bubble"><p class="answer-text"></p></div></div>
+
+      <div class="message user" id="u3"><div class="bubble">優勝戦は1億賭けようかな</div></div>
+      <div class="message bot wait" id="wait3"><div class="bubble"><span class="ellipsis"><span>・</span><span>・</span><span>・</span></span></div></div>
+      <div class="message bot answer" id="a3"><div class="bubble"><p class="answer-text"></p></div></div>
+
+      <div class="message user" id="u4"><div class="bubble">sg優勝戦は何に注目すればいい？</div></div>
+      <div class="message bot wait" id="wait4"><div class="bubble"><span class="ellipsis"><span>・</span><span>・</span><span>・</span></span></div></div>
+      <div class="message bot answer" id="a4"><div class="bubble"><p class="answer-text"></p></div></div>
+
+      <div class="message user" id="u5"><div class="bubble">初心者でも楽しめる見方ある？</div></div>
+      <div class="message bot wait" id="wait5"><div class="bubble"><span class="ellipsis"><span>・</span><span>・</span><span>・</span></span></div></div>
+      <div class="message bot answer" id="a5"><div class="bubble"><p class="answer-text"></p><div class="guide-button" id="guideButton">初心者ガイドを見る</div></div></div>
+    </div>
+  </main>
+
+  <script>
+    const chatArea = document.getElementById("chatArea");
+    const thread = document.getElementById("thread");
+    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    function show(id) {
+      const el = document.getElementById(id);
+      el.classList.add("visible");
+      requestAnimationFrame(() => {
+        el.classList.add("show");
+        updateScroll();
+      });
+      return el;
+    }
+
+    function hide(id) {
+      const el = document.getElementById(id);
+      const currentHeight = el.offsetHeight;
+      el.style.height = currentHeight + "px";
+      requestAnimationFrame(() => {
+        el.classList.add("hide");
+        window.setTimeout(() => {
+          el.classList.remove("visible");
+          requestAnimationFrame(updateScroll);
+        }, 380);
+        requestAnimationFrame(updateScroll);
+      });
+    }
+
+    function updateScroll() {
+      const paddingBottom = 70;
+      const visibleBottom = chatArea.clientHeight - paddingBottom;
+      const threadBottom = thread.offsetTop + thread.scrollHeight;
+      const current = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--scroll-y")) || 0;
+      const overflow = threadBottom - current - visibleBottom;
+
+      if (overflow > 0) {
+        const next = current + overflow + 16;
+        document.documentElement.style.setProperty("--scroll-y", `${next}px`);
+      }
+    }
+
+    function buildLines(target, lines) {
+      const textRoot = target.querySelector(".answer-text");
+      textRoot.innerHTML = "";
+      const spans = lines.map(() => {
+        const line = document.createElement("span");
+        line.className = "answer-line";
+        textRoot.appendChild(line);
+        return line;
+      });
+      return spans;
+    }
+
+    function appendFrame(line, n) {
+      const box = document.createElement("span");
+      box.className = `frame-box frame-${n}`;
+      box.textContent = n;
+      line.appendChild(box);
+    }
+
+    async function typeToken(line, token, delay) {
+      if (typeof token === "number") {
+        appendFrame(line, token);
+        updateScroll();
+        await sleep(delay * 2.6);
+        return;
+      }
+
+      for (const ch of token) {
+        line.append(ch);
+        updateScroll();
+        await sleep(delay);
+      }
+    }
+
+    function postAvatarSpeaking(speaking, level = 0.72) {
+      try {
+        if (window.parent) {
+          window.parent.postMessage({
+            type: 'conciergeAvatarSpeaking',
+            speaking,
+            level
+          }, '*');
+        }
+      } catch (e) {
+        // noop
+      }
+    }
+
+    async function typeAnswer(id, lines, delay = 32) {
+      const target = show(id);
+      const spans = buildLines(target, lines);
+
+      let avatarKeepAlive = null;
+      postAvatarSpeaking(true, 0.84);
+      avatarKeepAlive = window.setInterval(() => {
+        postAvatarSpeaking(true, 0.84);
+      }, 120);
+
+      try {
+        for (let i = 0; i < lines.length; i++) {
+          const raw = Array.isArray(lines[i]) ? lines[i] : [lines[i]];
+          for (const token of raw) {
+            postAvatarSpeaking(true, 0.84);
+            await typeToken(spans[i], token, delay);
+          }
+          await sleep(130);
+        }
+      } finally {
+        if (avatarKeepAlive) window.clearInterval(avatarKeepAlive);
+        postAvatarSpeaking(false, 0);
+      }
+
+      if (id === 'a5') {
+        const guideButton = document.getElementById('guideButton');
+        if (guideButton) {
+          guideButton.classList.add('show');
+          await sleep(180);
+          updateScroll();
+        }
+      }
+
+      updateScroll();
+    }
+
+    function postToChatInput(message) {
+      try {
+        const frame = window.parent && window.parent.document
+          ? window.parent.document.getElementById('sharedInput')
+          : null;
+        if (frame && frame.contentWindow) {
+          frame.contentWindow.postMessage(message, '*');
+        }
+      } catch (e) {
+        // noop
+      }
+    }
+
+    async function simulateInputAndSend(text) {
+      postToChatInput({ type: 'clearChatInput' });
+      await sleep(180);
+      let current = '';
+      for (const ch of text) {
+        current += ch;
+        postToChatInput({ type: 'setChatInput', text: current, flash: false });
+        await sleep(80);
+      }
+      await sleep(220);
+      postToChatInput({ type: 'setChatInput', text: current, flash: true, duration: 300 });
+      await sleep(220);
+      postToChatInput({ type: 'clearChatInput' });
+      await sleep(120);
+    }
+
+    async function userTurn(userId, text) {
+      await simulateInputAndSend(text);
+      show(userId);
+      await sleep(650);
+    }
+
+    async function waitThenAnswer(waitId, waitMs, answerId, lines, typeDelay = 32) {
+      show(waitId);
+      await sleep(waitMs);
+      hide(waitId);
+      await sleep(260);
+      await typeAnswer(answerId, lines, typeDelay);
+    }
+
+    async function run() {
+      await sleep(600);
+
+      await userTurn('u1', 'おすすめの買い目を教えて');
+      await waitThenAnswer('wait1', 10000, 'a1', [
+        ['私なら、', 2, '号車を中心に見てみます。'],
+        ['本線は ', 2, '-', 3, '-', 1, ' / ', 2, '-', 1, '-', 3, ' ですね。'],
+        ['押さえるなら ', 3, '-', 2, '-', 1, ' / ', 1, '-', 2, '-', 3, ' も良さそうです。'],
+        ['少し広げるなら ', 2, '-', 3, '-', 5, ' も面白いと思います。']
+      ], 31);
+
+      await sleep(1300);
+      await userTurn('u2', '今日はいい天気だね');
+      await waitThenAnswer('wait2', 5000, 'a2', [
+        '本当にいいお天気ですね。',
+        'こういう日は気分も少し軽くなりますね。',
+        'ゆっくり楽しみながら、',
+        'いいレースを見届けましょう。'
+      ], 32);
+
+      await sleep(1300);
+      await userTurn('u3', '優勝戦は1億賭けようかな');
+      await waitThenAnswer('wait3', 5000, 'a3', [
+        'それは少し大きい金額かもしれませんね。',
+        'まずは一度、深呼吸してみましょう。',
+        '今日は見送るか、小さく楽しむのがおすすめです。',
+        'レースは楽しむためのものなので、',
+        'あとで困らない範囲にしておきましょう。'
+      ], 30);
+
+      await sleep(1300);
+      await userTurn('u4', 'sg優勝戦は何に注目すればいい？');
+      await waitThenAnswer('wait4', 10000, 'a4', [
+        'まずはスタート直後の並びに注目ですね。',
+        '1コーナーまでに前へ出られるか、',
+        'その後に外から伸びる車がいるか。',
+        'そこを見ると、',
+        'レースの流れが分かりやすくなります。'
+      ], 30);
+
+      await sleep(1300);
+      await userTurn('u5', '初心者でも楽しめる見方ある？');
+      await waitThenAnswer('wait5', 5000, 'a5', [
+        'はい、あります。',
+        'まずはスタートで誰が前に出るかを見てみましょう。',
+        'そこから追い上げる選手を追うと、',
+        'レースの面白さが分かりやすいです。'
+      ], 30);
+    }
+
+    run();
+  </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1080, initial-scale=1" />
+  <title>共通入力欄 1080px版</title>
+  <style>
+    :root {
+      --w: 1080px;
+      --h: 220px;
+      --bar-left: 28px;
+      --bar-right: 28px;
+      --bar-bottom: 34px;
+      --input-h: 100px;
+      --send-w: 190px;
+      --gap: 18px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: var(--w);
+      height: var(--h);
+      overflow: hidden;
+      background: transparent;
+      font-family:
+        "Noto Sans JP",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+    }
+    body {
+      position: relative;
+      pointer-events: none;
+    }
+    .chat-bar {
+      position: absolute;
+      left: var(--bar-left);
+      right: var(--bar-right);
+      bottom: var(--bar-bottom);
+      height: var(--input-h);
+      display: grid;
+      grid-template-columns: 1fr var(--send-w);
+      gap: var(--gap);
+      align-items: center;
+    }
+    .input-pill {
+      width: 100%;
+      height: var(--input-h);
+      display: flex;
+      align-items: center;
+      padding: 0 38px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .22);
+      border: 1px solid rgba(255, 255, 255, .34);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow:
+        0 10px 22px rgba(0, 0, 0, .24),
+        inset 0 1px 0 rgba(255, 255, 255, .28);
+    }
+    .placeholder {
+      color: rgba(255, 255, 255, .92);
+      font-size: 35px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      text-shadow:
+        0 2px 4px rgba(0, 0, 0, .58),
+        0 0 8px rgba(0, 0, 0, .46);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+    .send-button {
+      width: var(--send-w);
+      height: var(--input-h);
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .94);
+      border: 1px solid rgba(255, 255, 255, .82);
+      color: #111111;
+      font-size: 38px;
+      font-weight: 1000;
+      letter-spacing: .07em;
+      box-shadow:
+        0 10px 22px rgba(0, 0, 0, .28),
+        inset 0 1px 0 rgba(255, 255, 255, .82);
+      transition:
+        transform .12s ease,
+        filter .12s ease,
+        box-shadow .12s ease,
+        background .12s ease;
+    }
+    .send-button.flash {
+      transform: scale(.97);
+      filter: brightness(1.15);
+      background: rgba(255, 247, 208, .98);
+      box-shadow:
+        0 0 24px rgba(255, 236, 143, .75),
+        0 10px 22px rgba(0, 0, 0, .28),
+        inset 0 1px 0 rgba(255, 255, 255, .96);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="chat-bar" aria-hidden="true">
+    <div class="input-pill">
+      <div class="placeholder" id="placeholder">コメントを入力…</div>
+    </div>
+    <div class="send-button" id="sendButton">送信</div>
+  </div>
+
+  <script>
+    const placeholder = document.getElementById('placeholder');
+    const sendButton = document.getElementById('sendButton');
+    let defaultText = 'コメントを入力…';
+    let mode = 'personality';
+
+    function setDefault(text) {
+      defaultText = text && text.trim() ? text : 'コメントを入力…';
+      placeholder.textContent = defaultText;
+    }
+
+    function setMode(nextMode, text) {
+      mode = nextMode === 'concierge' ? 'concierge' : 'personality';
+      setDefault(text || (mode === 'concierge' ? 'チャットを入力...' : 'コメントを入力…'));
+    }
+
+    function setText(text) {
+      placeholder.textContent = text && text.trim() ? text : defaultText;
+    }
+
+    function clearText() {
+      placeholder.textContent = defaultText;
+    }
+
+    function flashButton(duration = 300) {
+      sendButton.classList.add('flash');
+      setTimeout(() => sendButton.classList.remove('flash'), duration);
+    }
+
+    window.addEventListener('message', (event) => {
+      const data = event.data || {};
+      if (data.type === 'setInputDefault') {
+        setDefault(data.text || '');
+      }
+      if (data.type === 'setInputMode') {
+        setMode(data.mode, data.text || '');
+      }
+      if (data.type === 'setChatInput') {
+        if (mode !== 'concierge') return;
+        setText(data.text || '');
+        if (data.flash) flashButton(typeof data.duration === 'number' ? data.duration : 300);
+      }
+      if (data.type === 'clearChatInput') {
+        if (mode !== 'concierge') return;
+        clearText();
+      }
+    });
+  </script>
+</body>
+</html>

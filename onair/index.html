@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>ONAIR | ZENRACE</title>
+<style>
+:root {
+  --w: 1080px;
+  --h: 2148px;
+  --fade: 300ms;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  overscroll-behavior: none;
+  touch-action: manipulation;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+}
+body { position: relative; }
+#appViewport {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: var(--visual-top, 0px);
+  bottom: calc(var(--visual-bottom, 0px) + var(--bottom-nav-total-h, 62px));
+  overflow: hidden;
+  background: #000;
+}
+#stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--w);
+  height: var(--h);
+  overflow: hidden;
+  background: #000;
+}
+.layer {
+  position: absolute;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--fade) linear;
+}
+.layer.show {
+  opacity: 1;
+}
+.layer.no-fade {
+  transition: none;
+}
+iframe.layer {
+  background: transparent;
+}
+img.layer {
+  object-fit: fill;
+}
+.bg {
+  left: 0;
+  top: 0;
+  width: 1080px;
+  height: 2148px;
+  z-index: 0;
+}
+.banner {
+  left: 0;
+  top: 90px;
+  width: 1080px;
+  height: 550px;
+  z-index: 30;
+}
+
+.vote-button-layer {
+  left: 60px;
+  top: 728px;
+  width: 300px;
+  height: 300px;
+  z-index: 45;
+}
+.chat {
+  left: 0;
+  top: 0;
+  width: 1080px;
+  height: 1500px;
+  z-index: 42;
+}
+.comment-stream {
+  left: 0;
+  top: 1110px;
+  width: 860px;
+  height: 740px;
+  z-index: 60;
+}
+.transition-screen {
+  left: 0;
+  top: 0;
+  width: 1080px;
+  height: 2148px;
+  z-index: 65;
+}
+.input {
+  left: 0;
+  top: 1810px;
+  width: 1080px;
+  height: 220px;
+  z-index: 70;
+}
+.menu-button {
+  left: 820px;
+  top: 1650px;
+  width: 200px;
+  height: 200px;
+  z-index: 75;
+  transition:
+    opacity var(--fade) linear,
+    filter .12s ease,
+    transform .12s ease;
+}
+.menu-button.press {
+  filter:
+    brightness(1.35)
+    drop-shadow(0 0 18px rgba(255, 215, 106, .95))
+    drop-shadow(0 0 34px rgba(255, 190, 78, .62));
+  transform: scale(.97);
+}
+.avatar-custom {
+  left: -153px;
+  top: 420px;
+  width: 1610px;
+  height: 3300px;
+  z-index: 20;
+}
+.hidden-media {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 6px;
+  height: 6px;
+  opacity: 0.003;
+  pointer-events: none;
+  z-index: -1;
+}
+#debug {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10000;
+  color: rgba(255,255,255,.8);
+  background: rgba(0,0,0,.4);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font: 12px/1.2 monospace;
+  display: none;
+}
+</style>
+</head>
+<body>
+<div id="appViewport"><div id="stage">
+  <!-- 背景 -->
+  <iframe id="bgPersonality" class="layer bg" src="assets/personality_bg.html"></iframe>
+  <iframe id="bgConcierge" class="layer bg" src="assets/concierge_bg.html"></iframe>
+  <iframe id="transitionScreen" class="layer transition-screen" src="assets/transition_screen.html"></iframe>
+
+  <!-- アバター（Live2D） -->
+  <iframe id="avatarCustom" class="layer avatar-custom" src="assets/avatar_live2d.html"></iframe>
+
+  <!-- 上部UI -->
+
+  <!-- バナー・チャット -->
+  <iframe id="bannerRace" class="layer banner" src="assets/banner_race.html"></iframe>
+  <iframe id="bannerAddiction" class="layer banner" src="assets/banner_addiction.html"></iframe>
+  <iframe id="voteButton" class="layer vote-button-layer" src="assets/vote_button.html"></iframe>
+  <iframe id="chatBot" class="layer chat" src="assets/chat.html"></iframe>
+
+  <!-- コメント・入力欄・ボタン・ボトムナビ -->
+  <iframe id="commentStream" class="layer comment-stream" src="assets/comment_stream.html"></iframe>
+  <iframe id="sharedInput" class="layer input" src="assets/shared_input.html"></iframe>
+  <iframe id="personalityButton" class="layer menu-button" src="assets/personality_button.html"></iframe>
+  <iframe id="conciergeButton" class="layer menu-button" src="assets/concierge_button.html"></iframe>
+
+  <!-- 音声 -->
+  <audio id="bgm" class="hidden-media" src="assets/bgm.mp3" preload="auto" loop></audio>
+  <audio id="voiceRace" class="hidden-media" src="assets/voice_race.wav" preload="auto"></audio>
+  <audio id="voiceAddiction" class="hidden-media" src="assets/voice_addiction.wav" preload="auto"></audio>
+  <div id="debug"></div>
+</div></div>
+<zenrace-bottom-nav active="onair"></zenrace-bottom-nav>
+<script src="../shared/bottom-nav.js?v=16"></script>
+
+<script>
+const CONFIG = {
+  width: 1080,
+  height: 2148,
+
+  // OBSで録画するときの音量。必要に応じてここだけ変更してください。
+  bgmVolume: 0.18,
+  voiceVolume: 1.0,
+
+  // GitHubデモ用タイムライン（開始・終了画面なし）
+  // 0:00〜1:00   パーソナリティ：出走表
+  // 1:00〜1:03   切替演出
+  // 1:03〜2:20   コンシェルジュ
+  // 2:20〜2:23   切替演出
+  // 2:23〜2:45   パーソナリティ：出走表
+  // 2:45〜3:56   パーソナリティ：依存症対策
+  tStart: 0,
+  tPersonality2: 0.000,
+  tConcierge: 60.000,
+  tPersonality2Return: 140.000,
+  tPersonality2End: 165.000,
+  tPersonality: 165.000,
+  tPersonalityEnd: 236.000,
+  tFinalStart: 236.000,
+  tEnd: 236.000,
+  transitionDuration: 3.0,
+  preSwitchFlash: 0.3,
+
+  // 表示時計は実時刻ではなく、HTML再生開始時に15:30:30から進めます。
+  clockStartSeconds: 15 * 3600 + 30 * 60 + 30
+};
+
+const $ = (id) => document.getElementById(id);
+const layers = {
+  bgPersonality: $('bgPersonality'),
+  bgConcierge: $('bgConcierge'),
+  transitionScreen: $('transitionScreen'),
+  bannerRace: $('bannerRace'),
+  bannerAddiction: $('bannerAddiction'),
+  voteButton: $('voteButton'),
+  chatBot: $('chatBot'),
+  commentStream: $('commentStream'),
+  sharedInput: $('sharedInput'),
+  personalityButton: $('personalityButton'),
+  conciergeButton: $('conciergeButton'),
+  avatarCustom: $('avatarCustom')
+};
+
+const bgm = $('bgm');
+const voiceRace = $('voiceRace');
+const voiceAddiction = $('voiceAddiction');
+const debug = $('debug');
+
+bgm.volume = CONFIG.bgmVolume;
+voiceRace.volume = CONFIG.voiceVolume;
+voiceAddiction.volume = CONFIG.voiceVolume;
+
+let startTime = null;
+let raceVoiceStarted = false;
+let addictionVoiceStarted = false;
+let finished = false;
+let currentScene = '';
+let previousScene = '';
+let conciergeChatStarted = false;
+let voiceAudioContext = null;
+let voiceAnalyserItems = [];
+let voiceAnalysisReady = false;
+let voiceLevelSmooth = 0;
+let conciergeAvatarSpeaking = false;
+let conciergeAvatarLevel = 0;
+let conciergeAvatarSpeakingAt = 0;
+
+function setupVoiceAudioAnalysis() {
+  if (voiceAnalysisReady) return;
+
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContextClass) return;
+
+  try {
+    voiceAudioContext = voiceAudioContext || new AudioContextClass();
+    voiceAnalyserItems = [voiceRace, voiceAddiction].map((audio) => {
+      const source = voiceAudioContext.createMediaElementSource(audio);
+      const analyser = voiceAudioContext.createAnalyser();
+      analyser.fftSize = 1024;
+      analyser.smoothingTimeConstant = 0.35;
+      source.connect(analyser);
+      analyser.connect(voiceAudioContext.destination);
+      return {
+        audio,
+        analyser,
+        data: new Uint8Array(analyser.fftSize)
+      };
+    });
+    voiceAnalysisReady = true;
+  } catch (e) {
+    // すでに接続済み・環境制約などの場合は、口パクを安全側で止めます。
+    voiceAnalysisReady = false;
+  }
+}
+
+function resumeVoiceAudioAnalysis() {
+  try {
+    if (voiceAudioContext && voiceAudioContext.state !== 'running') {
+      voiceAudioContext.resume().catch(() => {});
+    }
+  } catch (e) {}
+}
+
+function getVoiceRmsLevel() {
+  if (!voiceAnalysisReady || !voiceAnalyserItems.length) {
+    voiceLevelSmooth *= 0.72;
+    return voiceLevelSmooth;
+  }
+
+  let maxLevel = 0;
+  for (const item of voiceAnalyserItems) {
+    const audio = item.audio;
+    if (!audio || audio.paused || audio.ended) continue;
+
+    item.analyser.getByteTimeDomainData(item.data);
+    let sum = 0;
+    for (let i = 0; i < item.data.length; i++) {
+      const v = (item.data[i] - 128) / 128;
+      sum += v * v;
+    }
+    const rms = Math.sqrt(sum / item.data.length);
+    if (rms > maxLevel) maxLevel = rms;
+  }
+
+  // 音量のばらつきを軽く平滑化し、無音時はすぐ閉じすぎない程度に減衰します。
+  voiceLevelSmooth = voiceLevelSmooth * 0.62 + maxLevel * 0.38;
+  if (maxLevel < 0.006) voiceLevelSmooth *= 0.72;
+  return voiceLevelSmooth;
+}
+
+window.addEventListener('message', (event) => {
+  const data = event.data || {};
+  if (data.type === 'conciergeAvatarSpeaking') {
+    conciergeAvatarSpeaking = !!data.speaking;
+    conciergeAvatarLevel = conciergeAvatarSpeaking
+      ? Math.max(0, Math.min(1, Number(data.level) || 0.82))
+      : 0;
+    if (conciergeAvatarSpeaking) {
+      conciergeAvatarSpeakingAt = performance.now();
+    }
+  }
+});
+
+function setVisible(el, visible) {
+  if (!el) return;
+  el.classList.toggle('show', !!visible);
+}
+
+function flashButton(el) {
+  if (!el) return;
+  el.classList.remove('press');
+  void el.offsetWidth;
+  el.classList.add('press');
+  setTimeout(() => el.classList.remove('press'), 300);
+}
+
+function getScene(t) {
+  const d = CONFIG.transitionDuration;
+  if (t < CONFIG.tConcierge) return 'personality2';
+  if (t < CONFIG.tConcierge + d) return 'transitionToConcierge';
+  if (t < CONFIG.tPersonality2Return) return 'concierge';
+  if (t < CONFIG.tPersonality2Return + d) return 'transitionToPersonality';
+  if (t < CONFIG.tPersonality2End) return 'personality2';
+  return 'personality';
+}
+
+function restartConciergeChat() {
+  // チャット.htmlは、③コンシェルジュ画面に入ったタイミングで読み直して、
+  // 画面開始時からアニメーションが始まるようにします。
+  conciergeAvatarSpeaking = false;
+  conciergeAvatarLevel = 0;
+  conciergeAvatarSpeakingAt = 0;
+  layers.chatBot.src = `assets/chat.html?start=${Date.now()}`;
+  try {
+    layers.sharedInput.contentWindow.postMessage({ type: 'clearChatInput' }, '*');
+  } catch (e) {}
+}
+
+function applyScene(scene) {
+  if (scene === currentScene) return;
+  previousScene = currentScene;
+  currentScene = scene;
+
+  const isP2 = scene === 'personality2';
+  const isPersonality = scene === 'personality';
+  const isConcierge = scene === 'concierge';
+  const isTransition = scene === 'transitionToConcierge' || scene === 'transitionToPersonality';
+  const isAnyPersonality = isP2 || isPersonality;
+
+  setVisible(layers.bgPersonality, isAnyPersonality);
+  setVisible(layers.bgConcierge, isConcierge);
+  setVisible(layers.transitionScreen, isTransition);
+
+
+  setVisible(layers.bannerRace, isP2);
+  setVisible(layers.bannerAddiction, isPersonality);
+  setVisible(layers.voteButton, isAnyPersonality);
+  setVisible(layers.chatBot, isConcierge);
+
+  setVisible(layers.commentStream, isAnyPersonality);
+  setVisible(layers.sharedInput, isAnyPersonality || isConcierge);
+
+  try {
+    if (isAnyPersonality) {
+      layers.sharedInput.contentWindow.postMessage({ type: 'setInputMode', mode: 'personality', text: 'コメントを入力…' }, '*');
+    } else if (isConcierge) {
+      layers.sharedInput.contentWindow.postMessage({ type: 'setInputMode', mode: 'concierge', text: 'チャットを入力...' }, '*');
+    }
+  } catch (e) {}
+
+  setVisible(layers.personalityButton, isAnyPersonality);
+  setVisible(layers.conciergeButton, isConcierge);
+  setVisible(layers.avatarCustom, isAnyPersonality || isConcierge);
+
+  if (previousScene && previousScene !== currentScene) {
+    const cameFromPersonality = previousScene === 'personality2' || previousScene === 'personality';
+    const goingToPersonality = isP2 || isPersonality;
+    if (cameFromPersonality && isConcierge) flashButton(layers.conciergeButton);
+    if (previousScene === 'concierge' && goingToPersonality) flashButton(layers.personalityButton);
+  }
+
+  if (isConcierge && !conciergeChatStarted) {
+    conciergeChatStarted = true;
+    restartConciergeChat();
+  }
+
+  // Live2Dアバターの横位置は固定。
+  layers.avatarCustom.style.left = '-153px';
+}
+
+async function startPlayback() {
+  if (startTime !== null) return;
+  startTime = performance.now();
+  setupVoiceAudioAnalysis();
+  applyScene('personality2');
+  requestAnimationFrame(tick);
+
+  bgm.currentTime = 1;
+  bgm.play().then(resumeVoiceAudioAnalysis).catch(() => {});
+}
+
+function unlockAudio() {
+  if (startTime === null) return;
+  const elapsed = Math.max(0, (performance.now() - startTime) / 1000);
+  setupVoiceAudioAnalysis();
+  resumeVoiceAudioAnalysis();
+  if (bgm.paused) {
+    try { bgm.currentTime = 1 + (elapsed % Math.max(1, bgm.duration || 9999)); } catch (e) {}
+    bgm.play().catch(() => {});
+  }
+  if (elapsed < CONFIG.tConcierge && voiceRace.paused) {
+    try { voiceRace.currentTime = Math.min(elapsed, Math.max(0, (voiceRace.duration || elapsed) - .05)); } catch (e) {}
+    voiceRace.play().catch(() => {});
+  }
+  if (elapsed >= CONFIG.tPersonality && elapsed < CONFIG.tEnd && voiceAddiction.paused) {
+    try { voiceAddiction.currentTime = Math.min(elapsed - CONFIG.tPersonality, Math.max(0, (voiceAddiction.duration || elapsed) - .05)); } catch (e) {}
+    voiceAddiction.play().catch(() => {});
+  }
+}
+
+['pointerdown','touchstart','click'].forEach(type => {
+  window.addEventListener(type, unlockAudio, { once: true, passive: true });
+});
+
+
+const preSwitchFlashState = {
+  toConcierge: false,
+  toPersonality: false
+};
+
+function maybeFlashPreSwitch(t) {
+  const lead = CONFIG.preSwitchFlash;
+  if (!preSwitchFlashState.toConcierge && t >= CONFIG.tConcierge - lead && t < CONFIG.tConcierge) {
+    preSwitchFlashState.toConcierge = true;
+    flashButton(layers.personalityButton);
+  }
+  if (!preSwitchFlashState.toPersonality && t >= CONFIG.tPersonality2Return - lead && t < CONFIG.tPersonality2Return) {
+    preSwitchFlashState.toPersonality = true;
+    flashButton(layers.conciergeButton);
+  }
+}
+
+
+let lastAvatarStateSent = 0;
+function updateCustomAvatar(t, scene, now) {
+  if (!layers.avatarCustom || now - lastAvatarStateSent < 80) return;
+  lastAvatarStateSent = now;
+
+  const isPersonalityScene = scene === 'personality2' || scene === 'personality';
+  const isConciergeScene = scene === 'concierge';
+  const voiceLevel = getVoiceRmsLevel();
+
+  // パーソナリティ：ボイス音声の実音量が一定以上のときだけ口パク。
+  // コンシェルジュ：応答チャットがタイプ表示されている間だけ口パク。
+  // BGMは解析対象に含めません。
+  const personalitySpeaking = isPersonalityScene && voiceLevel > 0.014;
+  // コンシェルジュはチャット応答のタイプ表示中に口パクします。
+  // postMessageの瞬間的な取りこぼしを防ぐため、直近の発話通知から短い余韻を持たせます。
+  const conciergeSpeaking = isConciergeScene && (
+    conciergeAvatarSpeaking || (now - conciergeAvatarSpeakingAt < 450)
+  );
+  const speaking = personalitySpeaking || conciergeSpeaking;
+  const mouthLevel = personalitySpeaking
+    ? Math.max(0, Math.min(1, (voiceLevel - 0.010) * 8.0))
+    : (conciergeSpeaking ? Math.max(0.68, conciergeAvatarLevel || 0.82) : 0);
+
+  try {
+    layers.avatarCustom.contentWindow.postMessage({
+      type: 'avatarState',
+      scene,
+      speaking,
+      level: mouthLevel
+    }, '*');
+  } catch (e) {}
+}
+
+function tick(now) {
+  if (startTime === null) return;
+  const t = (now - startTime) / 1000;
+  const scene = getScene(t);
+  applyScene(scene);
+  maybeFlashPreSwitch(t);
+  updateCustomAvatar(t, scene, now);
+
+  if (!raceVoiceStarted && t >= CONFIG.tPersonality2) {
+    raceVoiceStarted = true;
+    resumeVoiceAudioAnalysis();
+    voiceRace.currentTime = 0;
+    voiceRace.play().catch(() => {});
+  }
+
+  if (!addictionVoiceStarted && t >= CONFIG.tPersonality) {
+    addictionVoiceStarted = true;
+    resumeVoiceAudioAnalysis();
+    voiceAddiction.currentTime = 0;
+    voiceAddiction.play().catch(() => {});
+  }
+
+  if (!finished && t >= CONFIG.tEnd) {
+    finished = true;
+    bgm.pause();
+    voiceRace.pause();
+    voiceAddiction.pause();
+    window.__AITUBER_DONE__ = true;
+  }
+
+  debug.textContent = `${t.toFixed(1)}s / ${scene}`;
+  if (!finished) requestAnimationFrame(tick);
+}
+
+function syncViewport() {
+  const root = document.documentElement;
+  const vv = window.visualViewport;
+  const layoutHeight = Math.max(root.clientHeight, window.innerHeight || 0);
+  const top = vv ? Math.max(0, vv.offsetTop) : 0;
+  const visibleHeight = vv ? vv.height : (window.innerHeight || layoutHeight);
+  const bottom = vv ? Math.max(0, layoutHeight - visibleHeight - top) : 0;
+  root.style.setProperty('--visual-top', `${Math.round(top)}px`);
+  root.style.setProperty('--visual-bottom', `${Math.round(bottom)}px`);
+
+  const viewport = document.getElementById('appViewport');
+  const stage = document.getElementById('stage');
+  if (!viewport || !stage) return;
+  const scale = Math.min(viewport.clientWidth / CONFIG.width, viewport.clientHeight / CONFIG.height);
+  stage.style.transformOrigin = '0 0';
+  stage.style.transform = `scale(${scale})`;
+  stage.style.left = `${Math.max(0, (viewport.clientWidth - CONFIG.width * scale) / 2)}px`;
+  stage.style.top = `${Math.max(0, (viewport.clientHeight - CONFIG.height * scale) / 2)}px`;
+}
+
+window.addEventListener('load', () => {
+  syncViewport();
+  setTimeout(startPlayback, 120);
+});
+window.addEventListener('resize', syncViewport, { passive: true });
+window.addEventListener('orientationchange', () => setTimeout(syncViewport, 100), { passive: true });
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', syncViewport, { passive: true });
+  window.visualViewport.addEventListener('scroll', syncViewport, { passive: true });
+}
+</script>
+</body>
+</html>
