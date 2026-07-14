@@ -8,32 +8,32 @@
       id: "home",
       label: "ホーム",
       path: "",
-      icon: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.2 12 4l9 7.2"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M9.5 20v-6h5v6"/></svg>`,
+      icon: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.8 12 4l8 6.8"/><path d="M6.5 10.3V20h11v-9.7"/><path d="M10 20v-5.2h4V20"/></svg>`,
     },
     {
       id: "schedule",
       label: "開催情報",
       path: "gradedraces/",
-      icon: `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="15" rx="2"/><path d="M7.5 3.5v4M16.5 3.5v4M3.5 9.5h17"/><path d="M7.5 13h2M11 13h2M14.5 13h2M7.5 16.5h2M11 16.5h2"/></svg>`,
+      icon: `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.8" y="5.2" width="16.4" height="14.8" rx="2.2"/><path d="M7.5 3.6v3.8M16.5 3.6v3.8M3.8 9.4h16.4"/><path d="M7.3 13.1h2.1M11 13.1h2.1M14.7 13.1h2.1M7.3 16.7h2.1M11 16.7h5.8"/></svg>`,
     },
     {
       id: "vote",
       label: "投票",
       path: "vote/",
       featured: true,
-      icon: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5h11l3 3V20.5H5z"/><path d="M16 3.5v4h4M8 11h8M8 14.5h8M8 18h5"/><path d="m8 7 1.3 1.3L12 5.7"/></svg>`,
+      icon: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.8h10.8l3.2 3.2V20.2H5z"/><path d="M15.8 3.8V7h3.2"/><path d="M8 10.2 9.4 11.6 12.5 8.5"/><path d="M8 14h8M8 17.3h6.6"/></svg>`,
     },
     {
       id: "onair",
       label: "ONAIR",
       path: "onair/",
-      icon: `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="13" rx="2"/><path d="m10 8 5 3-5 3zM8 21h8M12 17.5V21"/></svg>`,
+      icon: `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="4.6" width="17.6" height="12.8" rx="2"/><path d="m10.2 8 4.9 3-4.9 3z"/><path d="M8.2 20.8h7.6M12 17.4v3.4"/></svg>`,
     },
     {
       id: "mypage",
       label: "マイページ",
       path: "mypage/",
-      icon: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.7-4 3-6 6.5-6s5.8 2 6.5 6"/></svg>`,
+      icon: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.3"/><path d="M5.7 20c.8-3.9 3.1-5.9 6.3-5.9s5.5 2 6.3 5.9"/></svg>`,
     },
   ];
 
