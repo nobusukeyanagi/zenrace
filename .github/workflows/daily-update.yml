@@ -108,9 +108,11 @@ jobs:
           if git diff --cached --quiet; then
             echo "コミット対象の変更はありません。"
           else
-            git pull --rebase origin main
+            # 先にローカルの変更をコミットしてから、
+            # リモートmainの最新状態を取り込む。
             git commit -m "Update graded races and notification state"
-            git push origin main
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
 
       - name: Upload diagnostic reports
