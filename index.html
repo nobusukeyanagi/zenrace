@@ -2,9 +2,19 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111827">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090909">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="zenrace">
   <title>zenrace</title>
+<style id="zenrace-header-critical">
+:root{--header-h:58px;--visual-top:0px;--header-safe-top:env(safe-area-inset-top,0px);--header-total-h:calc(var(--header-h) + var(--header-safe-top))}
+.topbar,header.topbar{box-sizing:border-box;position:fixed!important;left:0!important;right:0!important;top:var(--visual-top,0px)!important;width:100%!important;height:var(--header-total-h)!important;padding:var(--header-safe-top) 0 0!important;z-index:10000!important;display:grid!important;grid-template-columns:minmax(72px,1fr) auto minmax(72px,1fr)!important;align-items:center!important;visibility:visible!important;opacity:1!important;color:#fff!important;background:linear-gradient(110deg,rgba(213,171,67,.15),transparent 25%,transparent 70%,rgba(213,171,67,.12)),linear-gradient(135deg,#050505,#202020 56%,#080808)!important;border-bottom:1px solid rgba(213,171,67,.42)!important;box-shadow:0 5px 18px rgba(0,0,0,.24)!important}
+.header-side{display:flex;align-items:center;height:100%;min-width:0;padding:0 10px}.header-side.left{justify-content:flex-start}.header-side.right{justify-content:flex-end}.header-center{display:flex;align-items:center;justify-content:center;height:100%;min-width:0}.header-title{margin:0;color:#fff;font-size:17px;font-weight:900;line-height:1;white-space:nowrap}.header-btn{min-width:52px;height:34px;padding:0 10px;border:1px solid rgba(242,216,137,.42);border-radius:8px;color:#f8e8b8;background:rgba(255,255,255,.055);font-weight:800}
+@media(max-width:430px){:root{--header-h:54px}.topbar,header.topbar{grid-template-columns:68px auto 68px!important}.header-side{padding:0 7px}.header-title{font-size:15px}.header-btn{min-width:48px;height:32px}}
+</style>
+<link rel="stylesheet" href="./shared/header.css?v=15">
   <style>
     :root {
       color-scheme: dark;
@@ -15,39 +25,28 @@
         sans-serif;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
+
+    html { background: #030712; }
 
     body {
-      min-height: 100vh;
+      min-height: 100dvh;
       margin: 0;
       color: #f8fafc;
       background:
-        radial-gradient(
-          circle at 85% 8%,
-          rgba(212, 175, 55, 0.22),
-          transparent 28rem
-        ),
+        radial-gradient(circle at 85% 8%, rgba(212, 175, 55, 0.22), transparent 28rem),
         linear-gradient(145deg, #111827, #030712);
     }
 
     main {
-      width: min(100% - 28px, 760px);
+      width: min(100% - 32px, 760px);
       margin: 0 auto;
-      padding: clamp(42px, 13vw, 72px) 0 28px;
-    }
-
-    .brand {
-      margin: 0;
-      font-size: clamp(2.5rem, 10vw, 5rem);
-      line-height: 1;
-      letter-spacing: 0.06em;
+      padding: calc(var(--header-total-h) + 38px) 0 72px;
     }
 
     .lead {
       max-width: 36rem;
-      margin: 20px 0 44px;
+      margin: 0 0 44px;
       color: #cbd5e1;
       line-height: 1.8;
     }
@@ -66,10 +65,7 @@
       border: 1px solid rgba(255, 255, 255, 0.13);
       border-radius: 20px;
       box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
-      transition:
-        transform 160ms ease,
-        border-color 160ms ease,
-        background 160ms ease;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
     }
 
     .card:hover,
@@ -116,8 +112,15 @@
   </style>
 </head>
 <body>
+  <header class="topbar">
+    <div class="header-side left"></div>
+    <div class="header-center">
+      <h1 class="header-title">ZENRACE</h1>
+    </div>
+    <div class="header-side right"></div>
+  </header>
+
   <main>
-    <h1 class="brand">zenrace</h1>
     <p class="lead">
       公営競技を、もっと分かりやすく楽しむための
       スマートフォンアプリ構想デモです。
@@ -137,8 +140,5 @@
 
     <footer>zenrace demo</footer>
   </main>
-
-  <zenrace-bottom-nav active="home"></zenrace-bottom-nav>
-  <script src="./shared/bottom-nav.js" defer></script>
 </body>
 </html>
