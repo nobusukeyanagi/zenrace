@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1080, initial-scale=1" />
+  <title>LIVE表示｜背景透過 1080px版</title>
+  <style>
+    :root {
+      --w: 1080px;
+      --h: 128px;
+      --white: #ffffff;
+      --red-top: #ff3b45;
+      --red-bottom: #ff2030;
+      --pill: rgba(0, 0, 0, .68);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: var(--w);
+      height: var(--h);
+      overflow: hidden;
+      background: transparent;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    body {
+      color: var(--white);
+      pointer-events: none;
+    }
+
+    .stage {
+      position: relative;
+      width: var(--w);
+      height: var(--h);
+      background: transparent;
+    }
+
+    .time {
+      position: absolute;
+      left: 116px;
+      top: 48px;
+      color: var(--white);
+      font-size: 44px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.035em;
+      font-variant-numeric: tabular-nums;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, .18);
+    }
+
+    .system-icons {
+      position: absolute;
+      right: 76px;
+      top: 47px;
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      color: var(--white);
+      filter: drop-shadow(0 1px 3px rgba(0,0,0,.18));
+    }
+
+    .icon {
+      display: block;
+      color: var(--white);
+    }
+
+    .live-pill {
+      position: absolute;
+      left: 35px;
+      top: 18px;
+      width: 390px;
+      height: 92px;
+      border-radius: 46px;
+      background: var(--pill);
+      display: flex;
+      align-items: center;
+      padding: 14px 27px;
+      gap: 29px;
+      box-shadow:
+        0 10px 24px rgba(0,0,0,.26),
+        inset 0 1px 0 rgba(255,255,255,.13);
+      backdrop-filter: blur(14px) saturate(125%);
+      -webkit-backdrop-filter: blur(14px) saturate(125%);
+    }
+
+    .live-badge {
+      position: relative;
+      width: 117px;
+      height: 64px;
+      border-radius: 16px;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      background: linear-gradient(180deg, var(--red-top), var(--red-bottom));
+      font-size: 35px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: .04em;
+      box-shadow:
+        0 6px 13px rgba(0,0,0,.22),
+        inset 0 1px 0 rgba(255,255,255,.20);
+      animation: liveGlow 15s infinite;
+    }
+
+    .live-badge::after {
+      content: "";
+      position: absolute;
+      top: -42%;
+      left: -84%;
+      width: 70%;
+      height: 184%;
+      background: linear-gradient(
+        110deg,
+        transparent 0%,
+        rgba(255,255,255,0) 22%,
+        rgba(255,255,255,.88) 48%,
+        rgba(255,255,255,0) 76%,
+        transparent 100%
+      );
+      transform: skewX(-18deg);
+      animation: liveShine 15s infinite;
+    }
+
+    @keyframes liveGlow {
+      0%, 7%, 100% {
+        filter: brightness(1);
+        box-shadow:
+          0 6px 13px rgba(0,0,0,.22),
+          inset 0 1px 0 rgba(255,255,255,.20);
+      }
+      2.5% {
+        filter: brightness(1.55);
+        box-shadow:
+          0 0 18px rgba(255, 55, 70, .94),
+          0 0 37px rgba(255, 55, 70, .46),
+          inset 0 1px 0 rgba(255,255,255,.38);
+      }
+    }
+
+    @keyframes liveShine {
+      0% { left: -85%; opacity: 0; }
+      1% { opacity: 0; }
+      2% { opacity: 1; }
+      5.5% { left: 120%; opacity: .95; }
+      7% { opacity: 0; }
+      100% { left: 120%; opacity: 0; }
+    }
+
+    .eye {
+      width: 52px;
+      height: 40px;
+      flex: 0 0 auto;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,.16));
+    }
+
+    .viewer-count {
+      min-width: 80px;
+      color: var(--white);
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.015em;
+      font-variant-numeric: tabular-nums;
+      text-shadow: 0 1px 4px rgba(0,0,0,.20);
+      transition: opacity .22s ease, transform .22s ease;
+    }
+
+    .viewer-count.updating {
+      opacity: .58;
+      transform: translateY(-2px);
+    }
+  
+
+    .deadline-area {
+      position: absolute;
+      left: 448px;
+      top: 18px;
+      width: 600px;
+      height: 92px;
+      overflow: hidden;
+      border-radius: 46px;
+      pointer-events: none;
+    }
+
+    .deadline-notice {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 92px;
+      min-width: 560px;
+      padding: 0 24px 0 20px;
+      border-radius: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      color: #fff;
+      font-size: 34px;
+      font-weight: 1000;
+      letter-spacing: .01em;
+      white-space: nowrap;
+      background:
+        linear-gradient(180deg, rgba(72,18,8,.94), rgba(18,6,3,.76)),
+        radial-gradient(circle at 15% 50%, rgba(255,215,106,.40), transparent 42%),
+        radial-gradient(circle at 82% 48%, rgba(255,80,38,.22), transparent 48%);
+      border: 1.5px solid rgba(255,215,106,.72);
+      box-shadow:
+        0 0 26px rgba(255,215,106,.42),
+        0 12px 28px rgba(0,0,0,.34),
+        inset 0 1px 0 rgba(255,255,255,.22),
+        inset 0 -1px 0 rgba(255,215,106,.16);
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
+      text-shadow:
+        0 2px 8px rgba(0,0,0,.76),
+        0 0 12px rgba(255,215,106,.18);
+      transform: translateX(112%);
+      opacity: 0;
+    }
+
+    .deadline-notice.show {
+      animation: deadlineSlide 30s ease-in-out both;
+    }
+
+    .deadline-notice::before {
+      content: "!";
+      width: 42px;
+      height: 42px;
+      margin-right: 14px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, #ff4f2a, #b8180b);
+      color: #fff;
+      font-size: 29px;
+      font-weight: 1000;
+      box-shadow:
+        0 0 14px rgba(255,78,42,.62),
+        inset 0 1px 0 rgba(255,255,255,.28);
+      animation: alertPulse 1.2s ease-in-out infinite;
+    }
+
+    .deadline-icon {
+      width: 44px;
+      height: 44px;
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: #ff8b2b;
+      box-shadow:
+        0 0 18px rgba(255,139,43,.28),
+        0 4px 10px rgba(0,0,0,.26),
+        inset 0 1px 0 rgba(255,255,255,.18);
+    }
+
+    .deadline-icon svg {
+      width: 40px;
+      height: 40px;
+      display: block;
+    }
+
+    .deadline-notice .venue {
+      color: #ffd76a;
+      margin-right: 0;
+      text-shadow:
+        0 0 16px rgba(255,215,106,.50),
+        0 2px 8px rgba(0,0,0,.76);
+    }
+
+    .deadline-notice .race-no {
+      color: #ffd76a;
+      margin-left: -2px;
+      margin-right: 8px;
+      text-shadow:
+        0 0 16px rgba(255,215,106,.50),
+        0 2px 8px rgba(0,0,0,.76);
+    }
+
+    .deadline-notice .deadline-text {
+      color: #ffffff;
+    }
+
+    @keyframes deadlineSlide {
+      0% { transform: translateX(112%); opacity: 0; }
+      5% { transform: translateX(0); opacity: 1; }
+      92% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(-8%); opacity: 0; }
+    }
+
+    @keyframes alertPulse {
+      0%, 100% { transform: scale(1); filter: brightness(1); }
+      50% { transform: scale(1.10); filter: brightness(1.25); }
+    }
+
+    .time, .system-icons { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="time" id="clock">9:41</div>
+
+    <div class="system-icons" aria-hidden="true">
+      <!-- iOS風セルラー -->
+      <svg class="icon" width="52" height="34" viewBox="0 0 52 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2"  y="22" width="8" height="10" rx="3.2" fill="currentColor"/>
+        <rect x="16" y="16" width="8" height="16" rx="3.2" fill="currentColor"/>
+        <rect x="30" y="9"  width="8" height="23" rx="3.2" fill="currentColor"/>
+        <rect x="44" y="2"  width="8" height="30" rx="3.2" fill="currentColor"/>
+      </svg>
+
+      <!-- iOS風Wi-Fi -->
+      <svg class="icon" width="50" height="36" viewBox="0 0 50 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 11.5C16.3 2.6 33.7 2.6 45.5 11.5" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+        <path d="M13 20C20.2 14.9 29.8 14.9 37 20" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+        <path d="M21.4 28.5C23.5 27.1 26.5 27.1 28.6 28.5L25 32.3L21.4 28.5Z" fill="currentColor"/>
+      </svg>
+
+      <!-- iOS風バッテリー -->
+      <svg class="icon" width="76" height="34" viewBox="0 0 76 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="5" width="63" height="24" rx="7" stroke="currentColor" stroke-width="3.2"/>
+        <path d="M68 13C71.5 13.8 74 16.4 74 19C74 21.6 71.5 24.2 68 25V13Z" fill="currentColor" opacity=".85"/>
+        <rect x="7.2" y="10.2" width="53" height="13.6" rx="4.2" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <div class="live-pill" aria-hidden="true">
+      <div class="live-badge">LIVE</div>
+
+      <svg class="eye" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 40C20.5 18 38.5 8 60 8C81.5 8 99.5 18 112 40C99.5 62 81.5 72 60 72C38.5 72 20.5 62 8 40Z"
+              stroke="white" stroke-width="8" stroke-linejoin="round"/>
+        <circle cx="60" cy="40" r="17" stroke="white" stroke-width="8"/>
+      </svg>
+
+      <div class="viewer-count" id="viewerCount">500</div>
+    </div>
+
+    <div class="deadline-area" aria-hidden="true">
+      <div class="deadline-notice" id="deadlineNotice"></div>
+    </div>
+  </div>
+
+  <script>
+    const clockEl = document.getElementById("clock");
+    const viewerEl = document.getElementById("viewerCount");
+    const deadlineEl = document.getElementById("deadlineNotice");
+    const venues = ["富山", "前橋", "函館", "弥彦", "川崎", "高松", "武雄", "福井", "高知", "静岡"];
+    let lastMinuteForNotice = null;
+    const SIM_START_SECONDS = 15 * 3600 + 30 * 60 + 30;
+    const localStart = performance.now();
+    let lastExternalClockAt = 0;
+
+    function formatClock(totalSeconds) {
+      const secondsInDay = ((Math.floor(totalSeconds) % 86400) + 86400) % 86400;
+      const h = Math.floor(secondsInDay / 3600);
+      const m = String(Math.floor((secondsInDay % 3600) / 60)).padStart(2, "0");
+      clockEl.textContent = `${h}:${m}`;
+
+      const minuteKey = `${h}:${m}`;
+      if (lastMinuteForNotice === null) {
+        lastMinuteForNotice = minuteKey;
+      } else if (lastMinuteForNotice !== minuteKey) {
+        lastMinuteForNotice = minuteKey;
+        showDeadlineNotice();
+      }
+    }
+
+    function showDeadlineNotice() {
+      const venue = venues[Math.floor(Math.random() * venues.length)];
+      const raceNo = 1 + Math.floor(Math.random() * 12);
+      deadlineEl.classList.remove("show");
+      deadlineEl.innerHTML = `<span class="deadline-icon" aria-hidden="true">
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="22" cy="44" r="10" fill="none" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="46" cy="44" r="10" fill="none" stroke="#ffffff" stroke-width="5"/>
+  <path d="M16 36L27 23H39L47 36" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M29 22L23 15" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="22" cy="14" r="4.6" fill="#ffffff"/>
+  <path d="M37 23L31 31" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+</svg>
+</span><span class="venue">${venue}</span><span class="race-no">${raceNo}R</span><span class="deadline-text">締切10分前</span>`;
+      void deadlineEl.offsetWidth;
+      deadlineEl.classList.add("show");
+    }
+
+    function updateClock() {
+      // 親HTMLから時刻が送られている場合はそちらを優先します。
+      if (performance.now() - lastExternalClockAt < 1500) return;
+      const elapsed = (performance.now() - localStart) / 1000;
+      formatClock(SIM_START_SECONDS + elapsed);
+    }
+
+    window.addEventListener("message", (event) => {
+      const data = event.data || {};
+      if (data.type === "simulatedClock") {
+        lastExternalClockAt = performance.now();
+        formatClock(Number(data.totalSeconds) || SIM_START_SECONDS);
+      }
+    });
+
+    function randomViewerCount() {
+      return Math.floor(Math.random() * 61) + 470;
+    }
+
+    function updateViewerCount() {
+      viewerEl.classList.add("updating");
+      window.setTimeout(() => {
+        viewerEl.textContent = randomViewerCount();
+        viewerEl.classList.remove("updating");
+      }, 220);
+    }
+
+    formatClock(SIM_START_SECONDS);
+    setInterval(updateClock, 250);
+
+    updateViewerCount();
+    setInterval(updateViewerCount, 15000);
+  </script>
+</body>
+</html>

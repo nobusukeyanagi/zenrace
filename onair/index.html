@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>ONAIR | ZENRACE</title>
 <style>
 :root {
@@ -70,9 +72,16 @@ img.layer {
   height: 2148px;
   z-index: 0;
 }
+.status-live {
+  left: 0;
+  top: 0;
+  width: 1080px;
+  height: 128px;
+  z-index: 50;
+}
 .banner {
   left: 0;
-  top: 90px;
+  top: 130px;
   width: 1080px;
   height: 550px;
   z-index: 30;
@@ -80,7 +89,7 @@ img.layer {
 
 .vote-button-layer {
   left: 60px;
-  top: 728px;
+  top: 768px;
   width: 300px;
   height: 300px;
   z-index: 45;
@@ -94,7 +103,7 @@ img.layer {
 }
 .comment-stream {
   left: 0;
-  top: 1110px;
+  top: 1150px;
   width: 860px;
   height: 740px;
   z-index: 60;
@@ -108,14 +117,14 @@ img.layer {
 }
 .input {
   left: 0;
-  top: 1810px;
+  top: 1850px;
   width: 1080px;
   height: 220px;
   z-index: 70;
 }
 .menu-button {
   left: 820px;
-  top: 1650px;
+  top: 1690px;
   width: 200px;
   height: 200px;
   z-index: 75;
@@ -133,7 +142,7 @@ img.layer {
 }
 .avatar-custom {
   left: -153px;
-  top: 420px;
+  top: 460px;
   width: 1610px;
   height: 3300px;
   z-index: 20;
@@ -165,35 +174,36 @@ img.layer {
 <body>
 <div id="appViewport"><div id="stage">
   <!-- 背景 -->
-  <iframe id="bgPersonality" class="layer bg" src="assets/personality_bg.html"></iframe>
-  <iframe id="bgConcierge" class="layer bg" src="assets/concierge_bg.html"></iframe>
-  <iframe id="transitionScreen" class="layer transition-screen" src="assets/transition_screen.html"></iframe>
+  <iframe id="bgPersonality" loading="eager" scrolling="no" class="layer bg" src="assets/personality_bg.html"></iframe>
+  <iframe id="bgConcierge" loading="eager" scrolling="no" class="layer bg" src="assets/concierge_bg.html"></iframe>
+  <iframe id="transitionScreen" loading="eager" scrolling="no" class="layer transition-screen" src="assets/transition_screen.html"></iframe>
 
   <!-- アバター（Live2D） -->
-  <iframe id="avatarCustom" class="layer avatar-custom" src="assets/avatar_live2d.html"></iframe>
+  <iframe id="avatarCustom" loading="eager" scrolling="no" class="layer avatar-custom" src="assets/avatar_live2d.html"></iframe>
 
-  <!-- 上部UI -->
+  <!-- 上部UI：iPhone風ステータスバーは非表示、LIVE行のみ表示 -->
+  <iframe id="statusLive" loading="eager" scrolling="no" class="layer status-live" src="assets/status_live_row.html" scrolling="no"></iframe>
 
   <!-- バナー・チャット -->
-  <iframe id="bannerRace" class="layer banner" src="assets/banner_race.html"></iframe>
-  <iframe id="bannerAddiction" class="layer banner" src="assets/banner_addiction.html"></iframe>
-  <iframe id="voteButton" class="layer vote-button-layer" src="assets/vote_button.html"></iframe>
-  <iframe id="chatBot" class="layer chat" src="assets/chat.html"></iframe>
+  <iframe id="bannerRace" loading="eager" scrolling="no" class="layer banner" src="assets/banner_race.html"></iframe>
+  <iframe id="bannerAddiction" loading="eager" scrolling="no" class="layer banner" src="assets/banner_addiction.html"></iframe>
+  <iframe id="voteButton" loading="eager" scrolling="no" class="layer vote-button-layer" src="assets/vote_button.html"></iframe>
+  <iframe id="chatBot" loading="eager" scrolling="no" class="layer chat" src="assets/chat.html"></iframe>
 
   <!-- コメント・入力欄・ボタン・ボトムナビ -->
-  <iframe id="commentStream" class="layer comment-stream" src="assets/comment_stream.html"></iframe>
-  <iframe id="sharedInput" class="layer input" src="assets/shared_input.html"></iframe>
-  <iframe id="personalityButton" class="layer menu-button" src="assets/personality_button.html"></iframe>
-  <iframe id="conciergeButton" class="layer menu-button" src="assets/concierge_button.html"></iframe>
+  <iframe id="commentStream" loading="eager" scrolling="no" class="layer comment-stream" src="assets/comment_stream.html"></iframe>
+  <iframe id="sharedInput" loading="eager" scrolling="no" class="layer input" src="assets/shared_input.html"></iframe>
+  <iframe id="personalityButton" loading="eager" scrolling="no" class="layer menu-button" src="assets/personality_button.html"></iframe>
+  <iframe id="conciergeButton" loading="eager" scrolling="no" class="layer menu-button" src="assets/concierge_button.html"></iframe>
 
   <!-- 音声 -->
-  <audio id="bgm" class="hidden-media" src="assets/bgm.mp3" preload="auto" loop></audio>
-  <audio id="voiceRace" class="hidden-media" src="assets/voice_race.wav" preload="auto"></audio>
-  <audio id="voiceAddiction" class="hidden-media" src="assets/voice_addiction.wav" preload="auto"></audio>
+  <audio id="bgm" class="hidden-media" src="assets/bgm.mp3" preload="metadata" loop></audio>
+  <audio id="voiceRace" class="hidden-media" src="assets/voice_race.wav" preload="metadata" playsinline></audio>
+  <audio id="voiceAddiction" class="hidden-media" src="assets/voice_addiction.wav" preload="metadata" playsinline></audio>
   <div id="debug"></div>
 </div></div>
 <zenrace-bottom-nav active="onair"></zenrace-bottom-nav>
-<script src="../shared/bottom-nav.js?v=16"></script>
+<script src="../shared/bottom-nav.js?v=17"></script>
 
 <script>
 const CONFIG = {
@@ -232,6 +242,7 @@ const layers = {
   bgPersonality: $('bgPersonality'),
   bgConcierge: $('bgConcierge'),
   transitionScreen: $('transitionScreen'),
+  statusLive: $('statusLive'),
   bannerRace: $('bannerRace'),
   bannerAddiction: $('bannerAddiction'),
   voteButton: $('voteButton'),
@@ -247,6 +258,7 @@ const bgm = $('bgm');
 const voiceRace = $('voiceRace');
 const voiceAddiction = $('voiceAddiction');
 const debug = $('debug');
+const IS_IOS_SAFARI = /iP(?:hone|ad|od)/.test(navigator.userAgent) && /WebKit/.test(navigator.userAgent) && !/(CriOS|FxiOS|EdgiOS)/.test(navigator.userAgent);
 
 bgm.volume = CONFIG.bgmVolume;
 voiceRace.volume = CONFIG.voiceVolume;
@@ -268,7 +280,7 @@ let conciergeAvatarLevel = 0;
 let conciergeAvatarSpeakingAt = 0;
 
 function setupVoiceAudioAnalysis() {
-  if (voiceAnalysisReady) return;
+  if (voiceAnalysisReady || IS_IOS_SAFARI) return;
 
   const AudioContextClass = window.AudioContext || window.webkitAudioContext;
   if (!AudioContextClass) return;
@@ -305,7 +317,10 @@ function resumeVoiceAudioAnalysis() {
 
 function getVoiceRmsLevel() {
   if (!voiceAnalysisReady || !voiceAnalyserItems.length) {
-    voiceLevelSmooth *= 0.72;
+    const activeVoice = [voiceRace, voiceAddiction].some((audio) => audio && !audio.paused && !audio.ended);
+    const phase = performance.now() / 105;
+    const target = activeVoice ? 0.025 + 0.018 * (0.5 + 0.5 * Math.sin(phase)) : 0;
+    voiceLevelSmooth = voiceLevelSmooth * 0.72 + target * 0.28;
     return voiceLevelSmooth;
   }
 
@@ -392,7 +407,7 @@ function applyScene(scene) {
   setVisible(layers.bgPersonality, isAnyPersonality);
   setVisible(layers.bgConcierge, isConcierge);
   setVisible(layers.transitionScreen, isTransition);
-
+  setVisible(layers.statusLive, isAnyPersonality);
 
   setVisible(layers.bannerRace, isP2);
   setVisible(layers.bannerAddiction, isPersonality);
@@ -572,8 +587,16 @@ function syncViewport() {
 
 window.addEventListener('load', () => {
   syncViewport();
-  setTimeout(startPlayback, 120);
+  setTimeout(startPlayback, 180);
 });
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    try { bgm.pause(); voiceRace.pause(); voiceAddiction.pause(); } catch (e) {}
+  } else if (startTime !== null && !finished) {
+    unlockAudio();
+  }
+}, { passive: true });
 window.addEventListener('resize', syncViewport, { passive: true });
 window.addEventListener('orientationchange', () => setTimeout(syncViewport, 100), { passive: true });
 if (window.visualViewport) {
