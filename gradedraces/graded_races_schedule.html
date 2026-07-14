@@ -13,7 +13,7 @@
 }
 *{box-sizing:border-box}
 body{
-  margin:0;min-width:760px;color:var(--text);
+  margin:0;min-width:0;overflow-x:hidden;color:var(--text);
   background:linear-gradient(180deg,#f8fafc,var(--bg));
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif
 }
@@ -126,10 +126,81 @@ button,textarea{font:inherit}
 .modal-actions .left,.modal-actions .right{display:flex;gap:7px}
 .error{min-height:16px;color:#c93636;font-size:11px;font-weight:800}
 
-@media(max-width:900px){
-  body{min-width:820px}
-  .race-row{grid-template-columns:54px 112px 84px 54px minmax(210px,1fr) 120px}
-  .time-cell,.sport-cell,.venue-cell,.grade-cell,.name-cell,.winner-cell{padding:3px 6px}
+@media(max-width:700px){
+  :root{--table-font:11px}
+  .topbar{
+    min-height:54px;height:auto;justify-content:space-between;gap:7px;
+    padding:7px 8px
+  }
+  .month-nav{min-width:0;gap:4px}
+  .month-title{min-width:96px;font-size:17px;letter-spacing:.01em}
+  .top-actions{position:static;right:auto;flex:0 0 auto;gap:4px}
+  .btn{padding:7px 8px;font-size:11px}
+  .icon-btn{width:32px;height:32px;padding:0;font-size:19px}
+  #editBtn{display:none}
+
+  .schedule{padding:7px 7px 14px}
+  .day-block{
+    grid-template-columns:43px minmax(0,1fr);margin-bottom:6px;
+    border-radius:8px
+  }
+  .date-cell{min-height:46px;flex-direction:column;gap:1px;padding:4px 1px}
+  .date-number{font-size:18px}
+  .weekday{font-size:9px}
+  .today-tag{top:2px;left:2px;font-size:5px}
+
+  .race-row{
+    grid-template-columns:48px minmax(82px,1.45fr) minmax(48px,.8fr) 47px;
+    grid-template-areas:
+      "time sport venue grade"
+      "name name name name"
+      "winner winner winner winner";
+    min-height:0;font-size:var(--table-font)
+  }
+  .time-cell{grid-area:time}
+  .sport-cell{grid-area:sport}
+  .venue-cell{grid-area:venue}
+  .grade-cell{grid-area:grade}
+  .name-cell{grid-area:name}
+  .winner-cell{grid-area:winner}
+  .time-cell,.sport-cell,.venue-cell,.grade-cell{
+    min-height:29px;padding:4px 5px
+  }
+  .sport-cell{gap:5px;padding-left:5px;padding-right:4px}
+  .sport-bar{width:3px;height:18px;flex-basis:3px}
+  .venue-cell{padding-inline:4px}
+  .grade-cell{padding-inline:3px}
+  .name-cell{
+    min-height:28px;padding:6px 7px;border-top:1px solid #edf0f4;
+    font-size:12px;line-height:1.35
+  }
+  .winner-cell{
+    min-height:25px;justify-content:flex-start;padding:4px 7px;
+    border-top:1px dashed #edf0f4;border-left:0;color:#596579;
+    font-size:10px;text-align:left
+  }
+  .winner-cell:not(:empty)::before{
+    content:"優勝：";margin-right:2px;color:#8a94a3;font-weight:650
+  }
+  .winner-cell:empty{display:none}
+  .data-note{padding:0 10px 12px;font-size:9px;line-height:1.55;text-align:left}
+
+  .modal-backdrop{padding:8px}
+  .modal{
+    width:100%;max-height:calc(100dvh - 16px);padding:12px;
+    grid-template-rows:auto auto minmax(180px,1fr) auto auto
+  }
+  .modal-head{align-items:flex-start}
+  .modal h2{font-size:16px}
+  #jsonEditor{min-height:260px;font-size:10px}
+  .modal-actions{align-items:stretch;flex-direction:column}
+  .modal-actions .left,.modal-actions .right{flex-wrap:wrap}
+}
+@media(max-width:350px){
+  .month-title{min-width:84px;font-size:15px}
+  .top-actions .btn{padding-inline:6px}
+  .race-row{grid-template-columns:45px minmax(76px,1.4fr) minmax(44px,.8fr) 43px}
+  .time-cell,.sport-cell,.venue-cell,.grade-cell{padding-inline:3px}
 }
 @media print{
   body{min-width:0;background:#fff}.top-actions,.modal-backdrop,.data-note{display:none!important}
@@ -327,5 +398,8 @@ importJson.onchange=async e=>{
 };
 load();render();
 </script>
+
+<zenrace-bottom-nav active="schedule"></zenrace-bottom-nav>
+<script src="../shared/bottom-nav.js" defer></script>
 </body>
 </html>

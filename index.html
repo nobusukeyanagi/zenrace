@@ -33,9 +33,9 @@
     }
 
     main {
-      width: min(100% - 32px, 760px);
+      width: min(100% - 28px, 760px);
       margin: 0 auto;
-      padding: 72px 0;
+      padding: clamp(42px, 13vw, 72px) 0 28px;
     }
 
     .brand {
@@ -137,5 +137,8 @@
 
     <footer>zenrace demo</footer>
   </main>
+
+  <zenrace-bottom-nav active="home"></zenrace-bottom-nav>
+  <script src="./shared/bottom-nav.js" defer></script>
 </body>
 </html>
