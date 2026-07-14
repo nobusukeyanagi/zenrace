@@ -1,16 +1,16 @@
 [
   {
     "date": "2026-01-02",
-    "time": "",
+    "time": "17:00",
     "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅠ",
+    "grade": "BG1",
     "name": "帯広記念",
     "winner": "メムロボブサップ"
   },
   {
     "date": "2026-01-03",
-    "time": "",
+    "time": "15:50",
     "sport": "nar",
     "venue": "園田",
     "grade": "重賞Ⅰ",
@@ -19,7 +19,7 @@
   },
   {
     "date": "2026-01-03",
-    "time": "",
+    "time": "16:35",
     "sport": "nar",
     "venue": "川崎",
     "grade": "SⅢ",
@@ -28,25 +28,16 @@
   },
   {
     "date": "2026-01-03",
-    "time": "",
+    "time": "18:20",
     "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅠ",
+    "grade": "BG1",
     "name": "天馬賞",
     "winner": "リュウセイウンカイ"
   },
   {
     "date": "2026-01-04",
-    "time": "",
-    "sport": "jra",
-    "venue": "中山",
-    "grade": "GⅢ",
-    "name": "中山金杯",
-    "winner": "カラマティアノス"
-  },
-  {
-    "date": "2026-01-04",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "京都",
     "grade": "GⅢ",
@@ -55,7 +46,16 @@
   },
   {
     "date": "2026-01-04",
-    "time": "",
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "中山",
+    "grade": "GⅢ",
+    "name": "中山金杯",
+    "winner": "カラマティアノス"
+  },
+  {
+    "date": "2026-01-04",
+    "time": "17:05",
     "sport": "nar",
     "venue": "佐賀",
     "grade": "",
@@ -64,7 +64,7 @@
   },
   {
     "date": "2026-01-05",
-    "time": "",
+    "time": "18:10",
     "sport": "nar",
     "venue": "名古屋",
     "grade": "SPⅠ",
@@ -73,16 +73,7 @@
   },
   {
     "date": "2026-01-07",
-    "time": "",
-    "sport": "nar",
-    "venue": "浦和",
-    "grade": "SⅢ",
-    "name": "ニューイヤーカップ",
-    "winner": "モコパンチ"
-  },
-  {
-    "date": "2026-01-07",
-    "time": "",
+    "time": "16:20",
     "sport": "keirin",
     "venue": "立川",
     "grade": "GⅢ",
@@ -90,8 +81,17 @@
     "winner": "脇本 勇希"
   },
   {
+    "date": "2026-01-07",
+    "time": "17:45",
+    "sport": "nar",
+    "venue": "浦和",
+    "grade": "SⅢ",
+    "name": "ニューイヤーカップ",
+    "winner": "モコパンチ"
+  },
+  {
     "date": "2026-01-09",
-    "time": "",
+    "time": "14:30",
     "sport": "boat",
     "venue": "唐津",
     "grade": "GⅢ",
@@ -100,7 +100,7 @@
   },
   {
     "date": "2026-01-11",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "中山",
     "grade": "GⅢ",
@@ -109,7 +109,7 @@
   },
   {
     "date": "2026-01-11",
-    "time": "",
+    "time": "17:05",
     "sport": "nar",
     "venue": "佐賀",
     "grade": "",
@@ -118,7 +118,7 @@
   },
   {
     "date": "2026-01-12",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "京都",
     "grade": "GⅢ",
@@ -127,7 +127,7 @@
   },
   {
     "date": "2026-01-12",
-    "time": "",
+    "time": "16:20",
     "sport": "keirin",
     "venue": "和歌山",
     "grade": "GⅢ",
@@ -136,7 +136,7 @@
   },
   {
     "date": "2026-01-12",
-    "time": "",
+    "time": "17:00",
     "sport": "auto",
     "venue": "伊勢崎",
     "grade": "GⅠ",
@@ -145,16 +145,7 @@
   },
   {
     "date": "2026-01-15",
-    "time": "",
-    "sport": "nar",
-    "venue": "名古屋",
-    "grade": "SPⅡ",
-    "name": "新春ペガサスカップ",
-    "winner": "アストラビアンコ"
-  },
-  {
-    "date": "2026-01-15",
-    "time": "",
+    "time": "16:05",
     "sport": "nar",
     "venue": "園田",
     "grade": "重賞Ⅰ",
@@ -162,8 +153,17 @@
     "winner": "スマートアンバー"
   },
   {
+    "date": "2026-01-15",
+    "time": "20:15",
+    "sport": "nar",
+    "venue": "名古屋",
+    "grade": "SPⅡ",
+    "name": "新春ペガサスカップ",
+    "winner": "アストラビアンコ"
+  },
+  {
     "date": "2026-01-17",
-    "time": "",
+    "time": "16:38",
     "sport": "boat",
     "venue": "芦屋",
     "grade": "GⅠ",
@@ -172,16 +172,7 @@
   },
   {
     "date": "2026-01-18",
-    "time": "",
-    "sport": "jra",
-    "venue": "中山",
-    "grade": "GⅢ",
-    "name": "京成杯",
-    "winner": "グリーンエナジー"
-  },
-  {
-    "date": "2026-01-18",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "京都",
     "grade": "GⅡ",
@@ -190,16 +181,16 @@
   },
   {
     "date": "2026-01-18",
-    "time": "",
-    "sport": "nar",
-    "venue": "高知",
-    "grade": "",
-    "name": "大高坂賞",
-    "winner": "オタマジャクシ"
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "中山",
+    "grade": "GⅢ",
+    "name": "京成杯",
+    "winner": "グリーンエナジー"
   },
   {
     "date": "2026-01-18",
-    "time": "",
+    "time": "16:10",
     "sport": "keirin",
     "venue": "大宮",
     "grade": "GⅢ",
@@ -207,8 +198,17 @@
     "winner": "北津留 翼"
   },
   {
+    "date": "2026-01-18",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "高知",
+    "grade": "",
+    "name": "大高坂賞",
+    "winner": "オタマジャクシ"
+  },
+  {
     "date": "2026-01-19",
-    "time": "",
+    "time": "20:45",
     "sport": "boat",
     "venue": "蒲郡",
     "grade": "GⅢ",
@@ -217,16 +217,7 @@
   },
   {
     "date": "2026-01-21",
-    "time": "",
-    "sport": "nar",
-    "venue": "船橋",
-    "grade": "JpnⅢ",
-    "name": "ブルーバードカップ",
-    "winner": "フィンガー"
-  },
-  {
-    "date": "2026-01-21",
-    "time": "",
+    "time": "16:15",
     "sport": "boat",
     "venue": "びわこ",
     "grade": "GⅡ",
@@ -234,17 +225,17 @@
     "winner": "岩瀬 裕亮"
   },
   {
-    "date": "2026-01-22",
-    "time": "",
+    "date": "2026-01-21",
+    "time": "20:05",
     "sport": "nar",
-    "venue": "姫路",
-    "grade": "重賞Ⅱ",
-    "name": "兵庫クイーンセレクション",
-    "winner": "ジューンキートス"
+    "venue": "船橋",
+    "grade": "JpnⅢ",
+    "name": "ブルーバードカップ",
+    "winner": "フィンガー"
   },
   {
     "date": "2026-01-22",
-    "time": "",
+    "time": "15:35",
     "sport": "nar",
     "venue": "笠松",
     "grade": "SPⅡ",
@@ -253,7 +244,16 @@
   },
   {
     "date": "2026-01-22",
-    "time": "",
+    "time": "15:55",
+    "sport": "nar",
+    "venue": "姫路",
+    "grade": "重賞Ⅱ",
+    "name": "兵庫クイーンセレクション",
+    "winner": "ジューンキートス"
+  },
+  {
+    "date": "2026-01-22",
+    "time": "20:05",
     "sport": "nar",
     "venue": "船橋",
     "grade": "SⅢ",
@@ -262,7 +262,7 @@
   },
   {
     "date": "2026-01-23",
-    "time": "",
+    "time": "20:30",
     "sport": "boat",
     "venue": "丸亀",
     "grade": "GⅢ",
@@ -271,7 +271,7 @@
   },
   {
     "date": "2026-01-24",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "小倉",
     "grade": "GⅢ",
@@ -280,16 +280,7 @@
   },
   {
     "date": "2026-01-25",
-    "time": "",
-    "sport": "jra",
-    "venue": "中山",
-    "grade": "GⅡ",
-    "name": "アメリカジョッキークラブカップ",
-    "winner": "ショウヘイ"
-  },
-  {
-    "date": "2026-01-25",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "京都",
     "grade": "GⅡ",
@@ -298,25 +289,16 @@
   },
   {
     "date": "2026-01-25",
-    "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "花吹雪賞",
-    "winner": "サキドリトッケン"
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "中山",
+    "grade": "GⅡ",
+    "name": "アメリカジョッキークラブカップ",
+    "winner": "ショウヘイ"
   },
   {
     "date": "2026-01-25",
-    "time": "",
-    "sport": "boat",
-    "venue": "尼崎",
-    "grade": "PGⅠ",
-    "name": "BBCトーナメント",
-    "winner": "末永 和也"
-  },
-  {
-    "date": "2026-01-25",
-    "time": "",
+    "time": "16:20",
     "sport": "keirin",
     "venue": "いわき平",
     "grade": "GⅢ",
@@ -325,7 +307,16 @@
   },
   {
     "date": "2026-01-25",
-    "time": "",
+    "time": "16:35",
+    "sport": "boat",
+    "venue": "尼崎",
+    "grade": "PGⅠ",
+    "name": "BBCトーナメント",
+    "winner": "末永 和也"
+  },
+  {
+    "date": "2026-01-25",
+    "time": "16:50",
     "sport": "auto",
     "venue": "飯塚",
     "grade": "GⅡ",
@@ -333,17 +324,17 @@
     "winner": "木山 優輝"
   },
   {
-    "date": "2026-01-28",
-    "time": "",
+    "date": "2026-01-25",
+    "time": "18:05",
     "sport": "nar",
-    "venue": "大井",
-    "grade": "SⅡ",
-    "name": "金盃",
-    "winner": "グリューヴルム"
+    "venue": "佐賀",
+    "grade": "",
+    "name": "花吹雪賞",
+    "winner": "サキドリトッケン"
   },
   {
     "date": "2026-01-28",
-    "time": "",
+    "time": "16:15",
     "sport": "boat",
     "venue": "江戸川",
     "grade": "GⅢ",
@@ -351,8 +342,17 @@
     "winner": "渡邉 真奈美"
   },
   {
+    "date": "2026-01-28",
+    "time": "16:35",
+    "sport": "nar",
+    "venue": "大井",
+    "grade": "SⅡ",
+    "name": "金盃",
+    "winner": "グリューヴルム"
+  },
+  {
     "date": "2026-01-29",
-    "time": "",
+    "time": "20:15",
     "sport": "nar",
     "venue": "名古屋",
     "grade": "SPⅠ",
@@ -361,7 +361,7 @@
   },
   {
     "date": "2026-02-01",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "京都",
     "grade": "GⅢ",
@@ -370,7 +370,7 @@
   },
   {
     "date": "2026-02-01",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅢ",
@@ -379,16 +379,16 @@
   },
   {
     "date": "2026-02-01",
-    "time": "",
-    "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅠ",
-    "name": "ヒロインズカップ",
-    "winner": "サクラヒメ"
+    "time": "16:20",
+    "sport": "keirin",
+    "venue": "小松島",
+    "grade": "GⅢ",
+    "name": "玉藻杯争覇戦in小松島",
+    "winner": "石原 颯"
   },
   {
     "date": "2026-02-01",
-    "time": "",
+    "time": "18:15",
     "sport": "nar",
     "venue": "高知",
     "grade": "",
@@ -397,16 +397,16 @@
   },
   {
     "date": "2026-02-01",
-    "time": "",
-    "sport": "keirin",
-    "venue": "小松島",
-    "grade": "GⅢ",
-    "name": "玉藻杯争覇戦in小松島",
-    "winner": "石原 颯"
+    "time": "18:25",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG1",
+    "name": "ヒロインズカップ",
+    "winner": "サクラヒメ"
   },
   {
     "date": "2026-02-03",
-    "time": "",
+    "time": "20:45",
     "sport": "boat",
     "venue": "下関",
     "grade": "GⅠ",
@@ -415,16 +415,7 @@
   },
   {
     "date": "2026-02-04",
-    "time": "",
-    "sport": "nar",
-    "venue": "川崎",
-    "grade": "SⅢ",
-    "name": "報知オールスターカップ",
-    "winner": "スレイマン"
-  },
-  {
-    "date": "2026-02-04",
-    "time": "",
+    "time": "16:45",
     "sport": "boat",
     "venue": "唐津",
     "grade": "GⅠ",
@@ -432,17 +423,17 @@
     "winner": "定松 勇樹"
   },
   {
-    "date": "2026-02-05",
-    "time": "",
+    "date": "2026-02-04",
+    "time": "20:10",
     "sport": "nar",
-    "venue": "笠松",
-    "grade": "SPⅢ",
-    "name": "ゴールドジュニア",
-    "winner": "リバーサルトップ"
+    "venue": "川崎",
+    "grade": "SⅢ",
+    "name": "報知オールスターカップ",
+    "winner": "スレイマン"
   },
   {
     "date": "2026-02-05",
-    "time": "",
+    "time": "14:30",
     "sport": "boat",
     "venue": "鳴門",
     "grade": "GⅠ",
@@ -450,8 +441,26 @@
     "winner": "山田 祐也"
   },
   {
+    "date": "2026-02-05",
+    "time": "16:50",
+    "sport": "nar",
+    "venue": "笠松",
+    "grade": "SPⅢ",
+    "name": "ゴールドジュニア",
+    "winner": "リバーサルトップ"
+  },
+  {
     "date": "2026-02-08",
-    "time": "",
+    "time": "16:20",
+    "sport": "keirin",
+    "venue": "奈良",
+    "grade": "GⅢ",
+    "name": "春日賞争覇戦",
+    "winner": "佐々木 悠葵"
+  },
+  {
+    "date": "2026-02-08",
+    "time": "18:05",
     "sport": "nar",
     "venue": "佐賀",
     "grade": "",
@@ -460,25 +469,16 @@
   },
   {
     "date": "2026-02-08",
-    "time": "",
+    "time": "18:30",
     "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅡ",
+    "grade": "BG2",
     "name": "翔雲賞",
     "winner": "レッドウンカイ"
   },
   {
-    "date": "2026-02-08",
-    "time": "",
-    "sport": "keirin",
-    "venue": "奈良",
-    "grade": "GⅢ",
-    "name": "春日賞争覇戦",
-    "winner": "佐々木 悠葵"
-  },
-  {
     "date": "2026-02-09",
-    "time": "",
+    "time": "20:45",
     "sport": "boat",
     "venue": "住之江",
     "grade": "GⅠ",
@@ -487,7 +487,7 @@
   },
   {
     "date": "2026-02-10",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "京都",
     "grade": "GⅢ",
@@ -496,7 +496,7 @@
   },
   {
     "date": "2026-02-10",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅢ",
@@ -505,7 +505,7 @@
   },
   {
     "date": "2026-02-10",
-    "time": "",
+    "time": "16:15",
     "sport": "boat",
     "venue": "常滑",
     "grade": "GⅠ",
@@ -514,7 +514,7 @@
   },
   {
     "date": "2026-02-11",
-    "time": "",
+    "time": "15:55",
     "sport": "nar",
     "venue": "姫路",
     "grade": "重賞Ⅰ",
@@ -523,16 +523,16 @@
   },
   {
     "date": "2026-02-11",
-    "time": "",
-    "sport": "nar",
-    "venue": "船橋",
-    "grade": "JpnⅢ",
-    "name": "クイーン賞",
-    "winner": "テンカジョウ"
+    "time": "16:35",
+    "sport": "auto",
+    "venue": "山陽",
+    "grade": "GⅠ",
+    "name": "スピード王決定戦",
+    "winner": "長田 稚也"
   },
   {
     "date": "2026-02-11",
-    "time": "",
+    "time": "16:36",
     "sport": "boat",
     "venue": "多摩川",
     "grade": "GⅠ",
@@ -541,16 +541,16 @@
   },
   {
     "date": "2026-02-11",
-    "time": "",
-    "sport": "auto",
-    "venue": "山陽",
-    "grade": "GⅠ",
-    "name": "スピード王決定戦",
-    "winner": "長田 稚也"
+    "time": "20:05",
+    "sport": "nar",
+    "venue": "船橋",
+    "grade": "JpnⅢ",
+    "name": "クイーン賞",
+    "winner": "テンカジョウ"
   },
   {
     "date": "2026-02-12",
-    "time": "",
+    "time": "19:30",
     "sport": "nar",
     "venue": "佐賀",
     "grade": "JpnⅢ",
@@ -559,7 +559,7 @@
   },
   {
     "date": "2026-02-14",
-    "time": "",
+    "time": "13:35",
     "sport": "jra",
     "venue": "小倉",
     "grade": "J・GⅢ",
@@ -568,7 +568,7 @@
   },
   {
     "date": "2026-02-14",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅢ",
@@ -577,7 +577,7 @@
   },
   {
     "date": "2026-02-15",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "京都",
     "grade": "GⅡ",
@@ -586,7 +586,7 @@
   },
   {
     "date": "2026-02-15",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅢ",
@@ -595,16 +595,16 @@
   },
   {
     "date": "2026-02-15",
-    "time": "",
-    "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅡ",
-    "name": "黒ユリ賞",
-    "winner": "コトブキラベンダー"
+    "time": "16:30",
+    "sport": "keirin",
+    "venue": "静岡",
+    "grade": "GⅢ",
+    "name": "たちあおい賞争奪戦",
+    "winner": "吉田 拓矢"
   },
   {
     "date": "2026-02-15",
-    "time": "",
+    "time": "18:15",
     "sport": "nar",
     "venue": "高知",
     "grade": "",
@@ -613,16 +613,16 @@
   },
   {
     "date": "2026-02-15",
-    "time": "",
-    "sport": "keirin",
-    "venue": "静岡",
-    "grade": "GⅢ",
-    "name": "たちあおい賞争奪戦",
-    "winner": "吉田 拓矢"
+    "time": "18:25",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG2",
+    "name": "黒ユリ賞",
+    "winner": "コトブキラベンダー"
   },
   {
     "date": "2026-02-17",
-    "time": "",
+    "time": "16:40",
     "sport": "boat",
     "venue": "平和島",
     "grade": "GⅢ",
@@ -631,7 +631,7 @@
   },
   {
     "date": "2026-02-18",
-    "time": "",
+    "time": "16:35",
     "sport": "nar",
     "venue": "大井",
     "grade": "JpnⅢ",
@@ -640,7 +640,7 @@
   },
   {
     "date": "2026-02-19",
-    "time": "",
+    "time": "16:05",
     "sport": "nar",
     "venue": "姫路",
     "grade": "重賞Ⅱ",
@@ -649,7 +649,7 @@
   },
   {
     "date": "2026-02-19",
-    "time": "",
+    "time": "17:00",
     "sport": "nar",
     "venue": "笠松",
     "grade": "SPⅠ",
@@ -658,7 +658,7 @@
   },
   {
     "date": "2026-02-20",
-    "time": "",
+    "time": "20:45",
     "sport": "boat",
     "venue": "若松",
     "grade": "GⅠ",
@@ -667,16 +667,7 @@
   },
   {
     "date": "2026-02-21",
-    "time": "",
-    "sport": "jra",
-    "venue": "東京",
-    "grade": "GⅢ",
-    "name": "ダイヤモンドステークス",
-    "winner": "スティンガーグラス"
-  },
-  {
-    "date": "2026-02-21",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "阪神",
     "grade": "GⅢ",
@@ -684,8 +675,17 @@
     "winner": "ソンシ"
   },
   {
+    "date": "2026-02-21",
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "東京",
+    "grade": "GⅢ",
+    "name": "ダイヤモンドステークス",
+    "winner": "スティンガーグラス"
+  },
+  {
     "date": "2026-02-22",
-    "time": "",
+    "time": "15:15",
     "sport": "jra",
     "venue": "小倉",
     "grade": "GⅢ",
@@ -694,7 +694,7 @@
   },
   {
     "date": "2026-02-22",
-    "time": "",
+    "time": "15:40",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅠ",
@@ -703,16 +703,7 @@
   },
   {
     "date": "2026-02-22",
-    "time": "",
-    "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅡ",
-    "name": "チャンピオンカップ",
-    "winner": "メムロボブサップ"
-  },
-  {
-    "date": "2026-02-22",
-    "time": "",
+    "time": "18:15",
     "sport": "nar",
     "venue": "高知",
     "grade": "",
@@ -720,17 +711,17 @@
     "winner": "ローリエフレイバー"
   },
   {
-    "date": "2026-02-23",
-    "time": "",
+    "date": "2026-02-22",
+    "time": "18:25",
     "sport": "nar",
-    "venue": "名古屋",
-    "grade": "JpnⅢ",
-    "name": "かきつばた記念",
-    "winner": "ダノンフィーゴ"
+    "venue": "帯広",
+    "grade": "BG2",
+    "name": "チャンピオンカップ",
+    "winner": "メムロボブサップ"
   },
   {
     "date": "2026-02-23",
-    "time": "",
+    "time": "16:30",
     "sport": "keirin",
     "venue": "熊本",
     "grade": "GⅠ",
@@ -739,7 +730,7 @@
   },
   {
     "date": "2026-02-23",
-    "time": "",
+    "time": "16:45",
     "sport": "auto",
     "venue": "浜松",
     "grade": "SG",
@@ -747,8 +738,17 @@
     "winner": "青山 周平"
   },
   {
+    "date": "2026-02-23",
+    "time": "17:50",
+    "sport": "nar",
+    "venue": "名古屋",
+    "grade": "JpnⅢ",
+    "name": "かきつばた記念",
+    "winner": "ダノンフィーゴ"
+  },
+  {
     "date": "2026-02-24",
-    "time": "",
+    "time": "16:25",
     "sport": "boat",
     "venue": "江戸川",
     "grade": "GⅠ",
@@ -757,7 +757,7 @@
   },
   {
     "date": "2026-02-25",
-    "time": "",
+    "time": "16:50",
     "sport": "nar",
     "venue": "佐賀",
     "grade": "",
@@ -766,7 +766,7 @@
   },
   {
     "date": "2026-02-25",
-    "time": "",
+    "time": "17:35",
     "sport": "nar",
     "venue": "浦和",
     "grade": "SⅡ",
@@ -775,16 +775,7 @@
   },
   {
     "date": "2026-02-26",
-    "time": "",
-    "sport": "nar",
-    "venue": "名古屋",
-    "grade": "SPⅠ",
-    "name": "スプリングカップ",
-    "winner": "アストラビアンコ"
-  },
-  {
-    "date": "2026-02-26",
-    "time": "",
+    "time": "16:05",
     "sport": "nar",
     "venue": "姫路",
     "grade": "重賞Ⅰ",
@@ -792,8 +783,17 @@
     "winner": "ゴッドフェンサー"
   },
   {
+    "date": "2026-02-26",
+    "time": "20:15",
+    "sport": "nar",
+    "venue": "名古屋",
+    "grade": "SPⅠ",
+    "name": "スプリングカップ",
+    "winner": "アストラビアンコ"
+  },
+  {
     "date": "2026-02-28",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "中山",
     "grade": "GⅢ",
@@ -802,16 +802,7 @@
   },
   {
     "date": "2026-03-01",
-    "time": "",
-    "sport": "jra",
-    "venue": "中山",
-    "grade": "GⅡ",
-    "name": "中山記念",
-    "winner": "レーベンスティール"
-  },
-  {
-    "date": "2026-03-01",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "阪神",
     "grade": "GⅡ",
@@ -820,16 +811,16 @@
   },
   {
     "date": "2026-03-01",
-    "time": "",
-    "sport": "nar",
-    "venue": "高知",
-    "grade": "",
-    "name": "御厨人窟賞",
-    "winner": "ジョウショーホープ"
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "中山",
+    "grade": "GⅡ",
+    "name": "中山記念",
+    "winner": "レーベンスティール"
   },
   {
     "date": "2026-03-01",
-    "time": "",
+    "time": "16:30",
     "sport": "boat",
     "venue": "鳴門",
     "grade": "PGⅠ",
@@ -837,8 +828,17 @@
     "winner": "鎌倉 涼"
   },
   {
+    "date": "2026-03-01",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "高知",
+    "grade": "",
+    "name": "御厨人窟賞",
+    "winner": "ジョウショーホープ"
+  },
+  {
     "date": "2026-03-02",
-    "time": "",
+    "time": "20:41",
     "sport": "boat",
     "venue": "下関",
     "grade": "GⅢ",
@@ -847,7 +847,7 @@
   },
   {
     "date": "2026-03-03",
-    "time": "",
+    "time": "16:20",
     "sport": "keirin",
     "venue": "大垣",
     "grade": "GⅢ",
@@ -856,7 +856,7 @@
   },
   {
     "date": "2026-03-05",
-    "time": "",
+    "time": "17:15",
     "sport": "nar",
     "venue": "笠松",
     "grade": "SPⅡ",
@@ -865,16 +865,7 @@
   },
   {
     "date": "2026-03-07",
-    "time": "",
-    "sport": "jra",
-    "venue": "中山",
-    "grade": "GⅢ",
-    "name": "中山牝馬ステークス",
-    "winner": "エセルフリーダ"
-  },
-  {
-    "date": "2026-03-07",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "阪神",
     "grade": "GⅡ",
@@ -883,7 +874,16 @@
   },
   {
     "date": "2026-03-07",
-    "time": "",
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "中山",
+    "grade": "GⅢ",
+    "name": "中山牝馬ステークス",
+    "winner": "エセルフリーダ"
+  },
+  {
+    "date": "2026-03-07",
+    "time": "16:50",
     "sport": "boat",
     "venue": "児島",
     "grade": "GⅠ",
@@ -892,7 +892,7 @@
   },
   {
     "date": "2026-03-08",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "中山",
     "grade": "GⅡ",
@@ -901,34 +901,7 @@
   },
   {
     "date": "2026-03-08",
-    "time": "",
-    "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅢ",
-    "name": "ポプラ賞",
-    "winner": "スターイチバン"
-  },
-  {
-    "date": "2026-03-08",
-    "time": "",
-    "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅡ",
-    "name": "スプリングカップ",
-    "winner": "ディオニス"
-  },
-  {
-    "date": "2026-03-08",
-    "time": "",
-    "sport": "nar",
-    "venue": "高知",
-    "grade": "",
-    "name": "土佐春花賞",
-    "winner": "カツテナイオイシサ"
-  },
-  {
-    "date": "2026-03-08",
-    "time": "",
+    "time": "16:20",
     "sport": "keirin",
     "venue": "松山",
     "grade": "GⅢ",
@@ -937,7 +910,7 @@
   },
   {
     "date": "2026-03-08",
-    "time": "",
+    "time": "16:50",
     "sport": "auto",
     "venue": "川口",
     "grade": "GⅠ",
@@ -945,8 +918,35 @@
     "winner": "高橋 義弘"
   },
   {
+    "date": "2026-03-08",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "水沢",
+    "grade": "M2",
+    "name": "スプリングカップ",
+    "winner": "ディオニス"
+  },
+  {
+    "date": "2026-03-08",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "高知",
+    "grade": "",
+    "name": "土佐春花賞",
+    "winner": "カツテナイオイシサ"
+  },
+  {
+    "date": "2026-03-08",
+    "time": "19:30",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG3",
+    "name": "ポプラ賞",
+    "winner": "スターイチバン"
+  },
+  {
     "date": "2026-03-10",
-    "time": "",
+    "time": "16:55",
     "sport": "nar",
     "venue": "大井",
     "grade": "SⅢ",
@@ -955,7 +955,7 @@
   },
   {
     "date": "2026-03-11",
-    "time": "",
+    "time": "20:05",
     "sport": "nar",
     "venue": "船橋",
     "grade": "JpnⅡ",
@@ -964,16 +964,7 @@
   },
   {
     "date": "2026-03-12",
-    "time": "",
-    "sport": "nar",
-    "venue": "名古屋",
-    "grade": "SPⅠ",
-    "name": "若草賞土古記念",
-    "winner": "マーブルマウンテン"
-  },
-  {
-    "date": "2026-03-12",
-    "time": "",
+    "time": "16:05",
     "sport": "nar",
     "venue": "姫路",
     "grade": "重賞Ⅰ",
@@ -982,7 +973,16 @@
   },
   {
     "date": "2026-03-12",
-    "time": "",
+    "time": "19:50",
+    "sport": "nar",
+    "venue": "名古屋",
+    "grade": "SPⅠ",
+    "name": "若草賞土古記念",
+    "winner": "マーブルマウンテン"
+  },
+  {
+    "date": "2026-03-12",
+    "time": "20:05",
     "sport": "nar",
     "venue": "船橋",
     "grade": "SⅢ",
@@ -991,7 +991,7 @@
   },
   {
     "date": "2026-03-13",
-    "time": "",
+    "time": "20:45",
     "sport": "boat",
     "venue": "大村",
     "grade": "GⅠ",
@@ -1000,7 +1000,7 @@
   },
   {
     "date": "2026-03-14",
-    "time": "",
+    "time": "13:45",
     "sport": "jra",
     "venue": "阪神",
     "grade": "J・GⅡ",
@@ -1009,52 +1009,7 @@
   },
   {
     "date": "2026-03-15",
-    "time": "",
-    "sport": "jra",
-    "venue": "中京",
-    "grade": "GⅡ",
-    "name": "金鯱賞",
-    "winner": "シェイクユアハート"
-  },
-  {
-    "date": "2026-03-15",
-    "time": "",
-    "sport": "jra",
-    "venue": "中山",
-    "grade": "GⅡ",
-    "name": "スプリングステークス",
-    "winner": "アウダーシア"
-  },
-  {
-    "date": "2026-03-15",
-    "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "九州クラウン",
-    "winner": "ウルトラノホシ"
-  },
-  {
-    "date": "2026-03-15",
-    "time": "",
-    "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅠ",
-    "name": "イレネー記念",
-    "winner": "オレノコクオウ"
-  },
-  {
-    "date": "2026-03-15",
-    "time": "",
-    "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅢ",
-    "name": "駒形賞",
-    "winner": "ボウトロイ"
-  },
-  {
-    "date": "2026-03-15",
-    "time": "",
+    "time": "14:27",
     "sport": "boat",
     "venue": "徳山",
     "grade": "GⅢ",
@@ -1063,16 +1018,16 @@
   },
   {
     "date": "2026-03-15",
-    "time": "",
-    "sport": "boat",
-    "venue": "若松",
-    "grade": "GⅢ",
-    "name": "シャボン玉石けん杯",
-    "winner": "山一 鉄也"
+    "time": "15:15",
+    "sport": "jra",
+    "venue": "中京",
+    "grade": "GⅡ",
+    "name": "金鯱賞",
+    "winner": "シェイクユアハート"
   },
   {
     "date": "2026-03-15",
-    "time": "",
+    "time": "15:40",
     "sport": "keirin",
     "venue": "取手",
     "grade": "GⅢ",
@@ -1081,7 +1036,43 @@
   },
   {
     "date": "2026-03-15",
-    "time": "",
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "中山",
+    "grade": "GⅡ",
+    "name": "スプリングステークス",
+    "winner": "アウダーシア"
+  },
+  {
+    "date": "2026-03-15",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "九州クラウン",
+    "winner": "ウルトラノホシ"
+  },
+  {
+    "date": "2026-03-15",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "水沢",
+    "grade": "M3",
+    "name": "駒形賞",
+    "winner": "ボウトロイ"
+  },
+  {
+    "date": "2026-03-15",
+    "time": "19:30",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG1",
+    "name": "イレネー記念",
+    "winner": "オレノコクオウ"
+  },
+  {
+    "date": "2026-03-15",
+    "time": "20:30",
     "sport": "keirin",
     "venue": "西武園",
     "grade": "GⅢ",
@@ -1089,8 +1080,17 @@
     "winner": "阿部 将大"
   },
   {
+    "date": "2026-03-15",
+    "time": "20:36",
+    "sport": "boat",
+    "venue": "若松",
+    "grade": "GⅢ",
+    "name": "シャボン玉石けん杯",
+    "winner": "山一 鉄也"
+  },
+  {
     "date": "2026-03-18",
-    "time": "",
+    "time": "17:45",
     "sport": "nar",
     "venue": "浦和",
     "grade": "SⅠ",
@@ -1099,7 +1099,7 @@
   },
   {
     "date": "2026-03-19",
-    "time": "",
+    "time": "16:35",
     "sport": "boat",
     "venue": "尼崎",
     "grade": "GⅠ",
@@ -1108,7 +1108,7 @@
   },
   {
     "date": "2026-03-20",
-    "time": "",
+    "time": "16:15",
     "sport": "nar",
     "venue": "笠松",
     "grade": "SPⅡ",
@@ -1117,7 +1117,7 @@
   },
   {
     "date": "2026-03-21",
-    "time": "",
+    "time": "15:20",
     "sport": "jra",
     "venue": "中京",
     "grade": "GⅢ",
@@ -1126,7 +1126,7 @@
   },
   {
     "date": "2026-03-21",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "中山",
     "grade": "GⅢ",
@@ -1135,7 +1135,7 @@
   },
   {
     "date": "2026-03-22",
-    "time": "",
+    "time": "15:15",
     "sport": "jra",
     "venue": "中京",
     "grade": "GⅢ",
@@ -1144,7 +1144,7 @@
   },
   {
     "date": "2026-03-22",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "阪神",
     "grade": "GⅡ",
@@ -1153,43 +1153,7 @@
   },
   {
     "date": "2026-03-22",
-    "time": "",
-    "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅠ",
-    "name": "ばんえい記念",
-    "winner": "メムロボブサップ"
-  },
-  {
-    "date": "2026-03-22",
-    "time": "",
-    "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅡ",
-    "name": "あやめ賞",
-    "winner": "セイクリスティーナ"
-  },
-  {
-    "date": "2026-03-22",
-    "time": "",
-    "sport": "nar",
-    "venue": "高知",
-    "grade": "",
-    "name": "ネクストスター西日本",
-    "winner": "カツテナイオイシサ"
-  },
-  {
-    "date": "2026-03-22",
-    "time": "",
-    "sport": "boat",
-    "venue": "唐津",
-    "grade": "GⅡ",
-    "name": "モーターボート大賞",
-    "winner": "古賀 繁輝"
-  },
-  {
-    "date": "2026-03-22",
-    "time": "",
+    "time": "16:30",
     "sport": "keirin",
     "venue": "防府",
     "grade": "GⅡ",
@@ -1198,7 +1162,16 @@
   },
   {
     "date": "2026-03-22",
-    "time": "",
+    "time": "16:45",
+    "sport": "boat",
+    "venue": "唐津",
+    "grade": "GⅡ",
+    "name": "モーターボート大賞",
+    "winner": "古賀 繁輝"
+  },
+  {
+    "date": "2026-03-22",
+    "time": "16:50",
     "sport": "auto",
     "venue": "浜松",
     "grade": "特GⅠ",
@@ -1206,8 +1179,35 @@
     "winner": "黒川 京介"
   },
   {
+    "date": "2026-03-22",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "水沢",
+    "grade": "M2",
+    "name": "あやめ賞",
+    "winner": "セイクリスティーナ"
+  },
+  {
+    "date": "2026-03-22",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "高知",
+    "grade": "",
+    "name": "ネクストスター西日本",
+    "winner": "カツテナイオイシサ"
+  },
+  {
+    "date": "2026-03-22",
+    "time": "20:00",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG1",
+    "name": "ばんえい記念",
+    "winner": "メムロボブサップ"
+  },
+  {
     "date": "2026-03-24",
-    "time": "",
+    "time": "16:45",
     "sport": "nar",
     "venue": "高知",
     "grade": "JpnⅢ",
@@ -1216,16 +1216,7 @@
   },
   {
     "date": "2026-03-25",
-    "time": "",
-    "sport": "nar",
-    "venue": "大井",
-    "grade": "JpnⅡ",
-    "name": "京浜盃",
-    "winner": "ロックターミガン"
-  },
-  {
-    "date": "2026-03-25",
-    "time": "",
+    "time": "17:10",
     "sport": "boat",
     "venue": "浜名湖",
     "grade": "GⅢ",
@@ -1233,17 +1224,17 @@
     "winner": "島村 隆幸"
   },
   {
-    "date": "2026-03-28",
-    "time": "",
-    "sport": "jra",
-    "venue": "中山",
-    "grade": "GⅡ",
-    "name": "日経賞",
-    "winner": "マイユニバース"
+    "date": "2026-03-25",
+    "time": "20:10",
+    "sport": "nar",
+    "venue": "大井",
+    "grade": "JpnⅡ",
+    "name": "京浜盃",
+    "winner": "ロックターミガン"
   },
   {
     "date": "2026-03-28",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "阪神",
     "grade": "GⅢ",
@@ -1251,44 +1242,17 @@
     "winner": "アルトラムス"
   },
   {
-    "date": "2026-03-29",
-    "time": "",
-    "sport": "jra",
-    "venue": "中京",
-    "grade": "GⅠ",
-    "name": "高松宮記念",
-    "winner": "サトノレーヴ"
-  },
-  {
-    "date": "2026-03-29",
-    "time": "",
+    "date": "2026-03-28",
+    "time": "15:45",
     "sport": "jra",
     "venue": "中山",
-    "grade": "GⅢ",
-    "name": "マーチステークス",
-    "winner": "サンデーファンデー"
+    "grade": "GⅡ",
+    "name": "日経賞",
+    "winner": "マイユニバース"
   },
   {
     "date": "2026-03-29",
-    "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "はがくれ大賞典",
-    "winner": "シンメデージー"
-  },
-  {
-    "date": "2026-03-29",
-    "time": "",
-    "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅢ",
-    "name": "白嶺賞",
-    "winner": "カナオールウェイズ"
-  },
-  {
-    "date": "2026-03-29",
-    "time": "",
+    "time": "14:27",
     "sport": "boat",
     "venue": "三国",
     "grade": "GⅢ",
@@ -1297,7 +1261,43 @@
   },
   {
     "date": "2026-03-29",
-    "time": "",
+    "time": "15:25",
+    "sport": "jra",
+    "venue": "中山",
+    "grade": "GⅢ",
+    "name": "マーチステークス",
+    "winner": "サンデーファンデー"
+  },
+  {
+    "date": "2026-03-29",
+    "time": "15:40",
+    "sport": "jra",
+    "venue": "中京",
+    "grade": "GⅠ",
+    "name": "高松宮記念",
+    "winner": "サトノレーヴ"
+  },
+  {
+    "date": "2026-03-29",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "水沢",
+    "grade": "M3",
+    "name": "白嶺賞",
+    "winner": "カナオールウェイズ"
+  },
+  {
+    "date": "2026-03-29",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "はがくれ大賞典",
+    "winner": "シンメデージー"
+  },
+  {
+    "date": "2026-03-29",
+    "time": "20:40",
     "sport": "boat",
     "venue": "蒲郡",
     "grade": "SG",
@@ -1306,16 +1306,7 @@
   },
   {
     "date": "2026-03-31",
-    "time": "",
-    "sport": "nar",
-    "venue": "船橋",
-    "grade": "SⅠ",
-    "name": "京成盃グランドマイラーズ",
-    "winner": "ジョージテソーロ"
-  },
-  {
-    "date": "2026-03-31",
-    "time": "",
+    "time": "14:21",
     "sport": "boat",
     "venue": "芦屋",
     "grade": "GⅢ",
@@ -1324,7 +1315,7 @@
   },
   {
     "date": "2026-03-31",
-    "time": "",
+    "time": "16:20",
     "sport": "keirin",
     "venue": "豊橋",
     "grade": "GⅢ",
@@ -1333,7 +1324,16 @@
   },
   {
     "date": "2026-03-31",
-    "time": "",
+    "time": "20:05",
+    "sport": "nar",
+    "venue": "船橋",
+    "grade": "SⅠ",
+    "name": "京成盃グランドマイラーズ",
+    "winner": "ジョージテソーロ"
+  },
+  {
+    "date": "2026-03-31",
+    "time": "23:45",
     "sport": "auto",
     "venue": "飯塚",
     "grade": "GⅡ",
@@ -1342,7 +1342,7 @@
   },
   {
     "date": "2026-04-01",
-    "time": "",
+    "time": "16:05",
     "sport": "nar",
     "venue": "園田",
     "grade": "JpnⅢ",
@@ -1351,7 +1351,7 @@
   },
   {
     "date": "2026-04-02",
-    "time": "",
+    "time": "16:05",
     "sport": "nar",
     "venue": "園田",
     "grade": "重賞Ⅰ",
@@ -1360,16 +1360,7 @@
   },
   {
     "date": "2026-04-04",
-    "time": "",
-    "sport": "jra",
-    "venue": "中山",
-    "grade": "GⅢ",
-    "name": "ダービー卿チャレンジトロフィー",
-    "winner": "スズハローム"
-  },
-  {
-    "date": "2026-04-04",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "阪神",
     "grade": "GⅢ",
@@ -1377,8 +1368,17 @@
     "winner": "アスクイキゴミ"
   },
   {
+    "date": "2026-04-04",
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "中山",
+    "grade": "GⅢ",
+    "name": "ダービー卿チャレンジトロフィー",
+    "winner": "スズハローム"
+  },
+  {
     "date": "2026-04-05",
-    "time": "",
+    "time": "15:40",
     "sport": "jra",
     "venue": "阪神",
     "grade": "GⅠ",
@@ -1387,7 +1387,16 @@
   },
   {
     "date": "2026-04-05",
-    "time": "",
+    "time": "16:25",
+    "sport": "keirin",
+    "venue": "伊東",
+    "grade": "GⅢ",
+    "name": "椿賞争奪戦",
+    "winner": "古性 優作"
+  },
+  {
+    "date": "2026-04-05",
+    "time": "18:05",
     "sport": "nar",
     "venue": "佐賀",
     "grade": "",
@@ -1396,25 +1405,25 @@
   },
   {
     "date": "2026-04-05",
-    "time": "",
+    "time": "18:15",
     "sport": "nar",
     "venue": "水沢",
-    "grade": "MⅠ",
+    "grade": "M1",
     "name": "ネクストスター北日本",
     "winner": "ゴッドバロック"
   },
   {
-    "date": "2026-04-05",
-    "time": "",
-    "sport": "keirin",
-    "venue": "伊東",
-    "grade": "GⅢ",
-    "name": "椿賞争奪戦",
-    "winner": "古性 優作"
+    "date": "2026-04-07",
+    "time": "16:35",
+    "sport": "boat",
+    "venue": "津",
+    "grade": "GⅠ",
+    "name": "ダイヤモンドカップ",
+    "winner": "宮地 元輝"
   },
   {
     "date": "2026-04-07",
-    "time": "",
+    "time": "20:00",
     "sport": "nar",
     "venue": "名古屋",
     "grade": "SPⅠ",
@@ -1423,7 +1432,7 @@
   },
   {
     "date": "2026-04-07",
-    "time": "",
+    "time": "20:10",
     "sport": "nar",
     "venue": "川崎",
     "grade": "SⅢ",
@@ -1432,7 +1441,7 @@
   },
   {
     "date": "2026-04-07",
-    "time": "",
+    "time": "20:40",
     "sport": "nar",
     "venue": "金沢",
     "grade": "",
@@ -1440,17 +1449,8 @@
     "winner": "ミモザノキセツ"
   },
   {
-    "date": "2026-04-07",
-    "time": "",
-    "sport": "boat",
-    "venue": "津",
-    "grade": "GⅠ",
-    "name": "ダイヤモンドカップ",
-    "winner": "宮地 元輝"
-  },
-  {
     "date": "2026-04-08",
-    "time": "",
+    "time": "20:10",
     "sport": "nar",
     "venue": "川崎",
     "grade": "JpnⅠ",
@@ -1459,7 +1459,7 @@
   },
   {
     "date": "2026-04-08",
-    "time": "",
+    "time": "20:45",
     "sport": "boat",
     "venue": "住之江",
     "grade": "GⅠ",
@@ -1468,7 +1468,7 @@
   },
   {
     "date": "2026-04-09",
-    "time": "",
+    "time": "20:05",
     "sport": "nar",
     "venue": "名古屋",
     "grade": "SPⅠ",
@@ -1477,16 +1477,7 @@
   },
   {
     "date": "2026-04-11",
-    "time": "",
-    "sport": "jra",
-    "venue": "中山",
-    "grade": "GⅡ",
-    "name": "ニュージーランドトロフィー",
-    "winner": "レザベーション"
-  },
-  {
-    "date": "2026-04-11",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "阪神",
     "grade": "GⅡ",
@@ -1494,8 +1485,17 @@
     "winner": "エンブロイダリー"
   },
   {
+    "date": "2026-04-11",
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "中山",
+    "grade": "GⅡ",
+    "name": "ニュージーランドトロフィー",
+    "winner": "レザベーション"
+  },
+  {
     "date": "2026-04-12",
-    "time": "",
+    "time": "15:40",
     "sport": "jra",
     "venue": "阪神",
     "grade": "GⅠ",
@@ -1504,34 +1504,7 @@
   },
   {
     "date": "2026-04-12",
-    "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "佐賀がばいスプリント",
-    "winner": "ツークフォーゲル"
-  },
-  {
-    "date": "2026-04-12",
-    "time": "",
-    "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "JBCイヤー記念",
-    "winner": "ハクサンツキミテイ"
-  },
-  {
-    "date": "2026-04-12",
-    "time": "",
-    "sport": "nar",
-    "venue": "高知",
-    "grade": "",
-    "name": "二十四万石賞",
-    "winner": "プリフロオールイン"
-  },
-  {
-    "date": "2026-04-12",
-    "time": "",
+    "time": "16:21",
     "sport": "keirin",
     "venue": "西武園",
     "grade": "GⅢ",
@@ -1540,7 +1513,7 @@
   },
   {
     "date": "2026-04-12",
-    "time": "",
+    "time": "16:45",
     "sport": "auto",
     "venue": "山陽",
     "grade": "GⅠ",
@@ -1548,8 +1521,35 @@
     "winner": "長田 稚也"
   },
   {
+    "date": "2026-04-12",
+    "time": "17:45",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "",
+    "name": "JBCイヤー記念",
+    "winner": "ハクサンツキミテイ"
+  },
+  {
+    "date": "2026-04-12",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "佐賀がばいスプリント",
+    "winner": "ツークフォーゲル"
+  },
+  {
+    "date": "2026-04-12",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "高知",
+    "grade": "",
+    "name": "二十四万石賞",
+    "winner": "プリフロオールイン"
+  },
+  {
     "date": "2026-04-13",
-    "time": "",
+    "time": "14:30",
     "sport": "boat",
     "venue": "唐津",
     "grade": "GⅢ",
@@ -1558,16 +1558,16 @@
   },
   {
     "date": "2026-04-14",
-    "time": "",
+    "time": "18:10",
     "sport": "nar",
     "venue": "水沢",
-    "grade": "MⅡ",
+    "grade": "M2",
     "name": "赤松杯",
     "winner": "ヒロシクン"
   },
   {
     "date": "2026-04-15",
-    "time": "",
+    "time": "20:10",
     "sport": "nar",
     "venue": "大井",
     "grade": "JpnⅢ",
@@ -1576,7 +1576,7 @@
   },
   {
     "date": "2026-04-16",
-    "time": "",
+    "time": "15:55",
     "sport": "nar",
     "venue": "園田",
     "grade": "重賞Ⅰ",
@@ -1585,16 +1585,7 @@
   },
   {
     "date": "2026-04-16",
-    "time": "",
-    "sport": "nar",
-    "venue": "大井",
-    "grade": "SⅢ",
-    "name": "ブリリアントカップ",
-    "winner": "リベイクフルシティ"
-  },
-  {
-    "date": "2026-04-16",
-    "time": "",
+    "time": "18:00",
     "sport": "boat",
     "venue": "福岡",
     "grade": "GⅠ",
@@ -1602,8 +1593,17 @@
     "winner": "上野 真之介"
   },
   {
+    "date": "2026-04-16",
+    "time": "20:10",
+    "sport": "nar",
+    "venue": "大井",
+    "grade": "SⅢ",
+    "name": "ブリリアントカップ",
+    "winner": "リベイクフルシティ"
+  },
+  {
     "date": "2026-04-17",
-    "time": "",
+    "time": "20:45",
     "sport": "boat",
     "venue": "桐生",
     "grade": "GⅠ",
@@ -1612,16 +1612,7 @@
   },
   {
     "date": "2026-04-18",
-    "time": "",
-    "sport": "jra",
-    "venue": "中山",
-    "grade": "J・GⅠ",
-    "name": "中山グランドジャンプ",
-    "winner": "エコロデュエル"
-  },
-  {
-    "date": "2026-04-18",
-    "time": "",
+    "time": "15:25",
     "sport": "jra",
     "venue": "阪神",
     "grade": "GⅢ",
@@ -1629,17 +1620,17 @@
     "winner": "ムルソー"
   },
   {
-    "date": "2026-04-19",
-    "time": "",
+    "date": "2026-04-18",
+    "time": "15:40",
     "sport": "jra",
     "venue": "中山",
-    "grade": "GⅠ",
-    "name": "皐月賞",
-    "winner": "ロブチェン"
+    "grade": "J・GⅠ",
+    "name": "中山グランドジャンプ",
+    "winner": "エコロデュエル"
   },
   {
     "date": "2026-04-19",
-    "time": "",
+    "time": "15:15",
     "sport": "jra",
     "venue": "福島",
     "grade": "GⅢ",
@@ -1648,7 +1639,25 @@
   },
   {
     "date": "2026-04-19",
-    "time": "",
+    "time": "15:40",
+    "sport": "jra",
+    "venue": "中山",
+    "grade": "GⅠ",
+    "name": "皐月賞",
+    "winner": "ロブチェン"
+  },
+  {
+    "date": "2026-04-19",
+    "time": "16:30",
+    "sport": "boat",
+    "venue": "戸田",
+    "grade": "GⅢ",
+    "name": "サントリー杯",
+    "winner": "宇佐見 淳"
+  },
+  {
+    "date": "2026-04-19",
+    "time": "17:25",
     "sport": "nar",
     "venue": "佐賀",
     "grade": "",
@@ -1657,16 +1666,7 @@
   },
   {
     "date": "2026-04-19",
-    "time": "",
-    "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅠ",
-    "name": "留守杯日高賞",
-    "winner": "セイクリスティーナ"
-  },
-  {
-    "date": "2026-04-19",
-    "time": "",
+    "time": "18:05",
     "sport": "nar",
     "venue": "金沢",
     "grade": "",
@@ -1675,25 +1675,16 @@
   },
   {
     "date": "2026-04-19",
-    "time": "",
-    "sport": "boat",
-    "venue": "戸田",
-    "grade": "GⅢ",
-    "name": "サントリー杯",
-    "winner": "宇佐見 淳"
-  },
-  {
-    "date": "2026-04-21",
-    "time": "",
+    "time": "18:15",
     "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "金沢スプリングカップ",
-    "winner": "フラップシグナス"
+    "venue": "水沢",
+    "grade": "M1",
+    "name": "留守杯日高賞",
+    "winner": "セイクリスティーナ"
   },
   {
     "date": "2026-04-21",
-    "time": "",
+    "time": "16:21",
     "sport": "keirin",
     "venue": "武雄",
     "grade": "GⅢ",
@@ -1701,8 +1692,17 @@
     "winner": "眞杉 匠"
   },
   {
+    "date": "2026-04-21",
+    "time": "20:10",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "",
+    "name": "金沢スプリングカップ",
+    "winner": "フラップシグナス"
+  },
+  {
     "date": "2026-04-22",
-    "time": "",
+    "time": "17:45",
     "sport": "nar",
     "venue": "浦和",
     "grade": "SⅢ",
@@ -1711,16 +1711,16 @@
   },
   {
     "date": "2026-04-23",
-    "time": "",
+    "time": "20:50",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅢ",
+    "grade": "H3",
     "name": "エトワール賞",
     "winner": "スペシャルエックス"
   },
   {
     "date": "2026-04-25",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅡ",
@@ -1729,7 +1729,7 @@
   },
   {
     "date": "2026-04-26",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "京都",
     "grade": "GⅡ",
@@ -1738,43 +1738,7 @@
   },
   {
     "date": "2026-04-26",
-    "time": "",
-    "sport": "jra",
-    "venue": "東京",
-    "grade": "GⅡ",
-    "name": "フローラステークス",
-    "winner": "ラフターラインズ"
-  },
-  {
-    "date": "2026-04-26",
-    "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "佐賀ヴィーナスカップ",
-    "winner": "サノノエスポ"
-  },
-  {
-    "date": "2026-04-26",
-    "time": "",
-    "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅡ",
-    "name": "ばんえい十勝オッズパーク杯",
-    "winner": "メムロボブサップ"
-  },
-  {
-    "date": "2026-04-26",
-    "time": "",
-    "sport": "boat",
-    "venue": "宮島",
-    "grade": "PGⅠ",
-    "name": "マスターズチャンピオン",
-    "winner": "白井 英治"
-  },
-  {
-    "date": "2026-04-26",
-    "time": "",
+    "time": "15:30",
     "sport": "keirin",
     "venue": "名古屋",
     "grade": "GⅢ",
@@ -1783,7 +1747,43 @@
   },
   {
     "date": "2026-04-26",
-    "time": "",
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "東京",
+    "grade": "GⅡ",
+    "name": "フローラステークス",
+    "winner": "ラフターラインズ"
+  },
+  {
+    "date": "2026-04-26",
+    "time": "16:38",
+    "sport": "boat",
+    "venue": "宮島",
+    "grade": "PGⅠ",
+    "name": "マスターズチャンピオン",
+    "winner": "白井 英治"
+  },
+  {
+    "date": "2026-04-26",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "佐賀ヴィーナスカップ",
+    "winner": "サノノエスポ"
+  },
+  {
+    "date": "2026-04-26",
+    "time": "20:00",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG2",
+    "name": "ばんえい十勝オッズパーク杯",
+    "winner": "メムロボブサップ"
+  },
+  {
+    "date": "2026-04-26",
+    "time": "20:30",
     "sport": "keirin",
     "venue": "松戸",
     "grade": "GⅠ",
@@ -1792,7 +1792,7 @@
   },
   {
     "date": "2026-04-27",
-    "time": "",
+    "time": "20:31",
     "sport": "boat",
     "venue": "若松",
     "grade": "GⅢ",
@@ -1801,25 +1801,16 @@
   },
   {
     "date": "2026-04-28",
-    "time": "",
+    "time": "18:10",
     "sport": "nar",
     "venue": "水沢",
-    "grade": "MⅢ",
+    "grade": "M3",
     "name": "栗駒賞",
     "winner": "ルコルセール"
   },
   {
     "date": "2026-04-29",
-    "time": "",
-    "sport": "nar",
-    "venue": "大井",
-    "grade": "JpnⅠ",
-    "name": "羽田盃",
-    "winner": "フィンガー"
-  },
-  {
-    "date": "2026-04-29",
-    "time": "",
+    "time": "16:30",
     "sport": "nar",
     "venue": "笠松",
     "grade": "SPⅠ",
@@ -1828,7 +1819,16 @@
   },
   {
     "date": "2026-04-29",
-    "time": "",
+    "time": "20:05",
+    "sport": "nar",
+    "venue": "大井",
+    "grade": "JpnⅠ",
+    "name": "羽田盃",
+    "winner": "フィンガー"
+  },
+  {
+    "date": "2026-04-29",
+    "time": "20:45",
     "sport": "auto",
     "venue": "飯塚",
     "grade": "SG",
@@ -1837,7 +1837,7 @@
   },
   {
     "date": "2026-04-30",
-    "time": "",
+    "time": "20:10",
     "sport": "nar",
     "venue": "大井",
     "grade": "SⅠ",
@@ -1846,16 +1846,16 @@
   },
   {
     "date": "2026-04-30",
-    "time": "",
+    "time": "20:35",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅢ",
+    "grade": "H3",
     "name": "北斗盃",
     "winner": "ゴッドバロック"
   },
   {
     "date": "2026-05-02",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "京都",
     "grade": "GⅢ",
@@ -1864,7 +1864,7 @@
   },
   {
     "date": "2026-05-02",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅡ",
@@ -1873,7 +1873,7 @@
   },
   {
     "date": "2026-05-03",
-    "time": "",
+    "time": "15:40",
     "sport": "jra",
     "venue": "京都",
     "grade": "GⅠ",
@@ -1882,16 +1882,7 @@
   },
   {
     "date": "2026-05-03",
-    "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "佐賀皐月賞",
-    "winner": "サキドリトッケン"
-  },
-  {
-    "date": "2026-05-03",
-    "time": "",
+    "time": "17:45",
     "sport": "nar",
     "venue": "金沢",
     "grade": "",
@@ -1900,7 +1891,16 @@
   },
   {
     "date": "2026-05-03",
-    "time": "",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "佐賀皐月賞",
+    "winner": "サキドリトッケン"
+  },
+  {
+    "date": "2026-05-03",
+    "time": "18:15",
     "sport": "nar",
     "venue": "高知",
     "grade": "",
@@ -1909,16 +1909,16 @@
   },
   {
     "date": "2026-05-04",
-    "time": "",
-    "sport": "nar",
-    "venue": "名古屋",
-    "grade": "JpnⅡ",
-    "name": "名古屋グランプリ",
-    "winner": "アウトレンジ"
+    "time": "14:29",
+    "sport": "boat",
+    "venue": "鳴門",
+    "grade": "GⅢ",
+    "name": "オールレディース",
+    "winner": "香川 素子"
   },
   {
     "date": "2026-05-04",
-    "time": "",
+    "time": "16:05",
     "sport": "nar",
     "venue": "園田",
     "grade": "重賞Ⅰ",
@@ -1927,25 +1927,16 @@
   },
   {
     "date": "2026-05-04",
-    "time": "",
-    "sport": "boat",
-    "venue": "鳴門",
-    "grade": "GⅢ",
-    "name": "オールレディース",
-    "winner": "香川 素子"
-  },
-  {
-    "date": "2026-05-05",
-    "time": "",
+    "time": "18:05",
     "sport": "nar",
     "venue": "名古屋",
-    "grade": "SPⅠ",
-    "name": "駿蹄賞",
-    "winner": "リバーサルトップ"
+    "grade": "JpnⅡ",
+    "name": "名古屋グランプリ",
+    "winner": "アウトレンジ"
   },
   {
     "date": "2026-05-05",
-    "time": "",
+    "time": "16:15",
     "sport": "nar",
     "venue": "園田",
     "grade": "重賞Ⅰ",
@@ -1954,16 +1945,25 @@
   },
   {
     "date": "2026-05-05",
-    "time": "",
+    "time": "17:30",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅠ",
+    "grade": "M1",
     "name": "ダイヤモンドカップ",
     "winner": "フォースメン"
   },
   {
     "date": "2026-05-05",
-    "time": "",
+    "time": "17:55",
+    "sport": "nar",
+    "venue": "名古屋",
+    "grade": "SPⅠ",
+    "name": "駿蹄賞",
+    "winner": "リバーサルトップ"
+  },
+  {
+    "date": "2026-05-05",
+    "time": "20:05",
     "sport": "nar",
     "venue": "船橋",
     "grade": "JpnⅠ",
@@ -1972,7 +1972,7 @@
   },
   {
     "date": "2026-05-06",
-    "time": "",
+    "time": "16:15",
     "sport": "nar",
     "venue": "園田",
     "grade": "JpnⅡ",
@@ -1981,7 +1981,16 @@
   },
   {
     "date": "2026-05-06",
-    "time": "",
+    "time": "16:30",
+    "sport": "keirin",
+    "venue": "平塚",
+    "grade": "GⅠ",
+    "name": "日本選手権競輪",
+    "winner": "古性 優作"
+  },
+  {
+    "date": "2026-05-06",
+    "time": "20:05",
     "sport": "nar",
     "venue": "船橋",
     "grade": "SⅡ",
@@ -1990,25 +1999,16 @@
   },
   {
     "date": "2026-05-06",
-    "time": "",
+    "time": "20:30",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅡ",
+    "grade": "H2",
     "name": "コスモバルク記念",
     "winner": "ベルピット"
   },
   {
-    "date": "2026-05-06",
-    "time": "",
-    "sport": "keirin",
-    "venue": "平塚",
-    "grade": "GⅠ",
-    "name": "日本選手権競輪",
-    "winner": "古性 優作"
-  },
-  {
     "date": "2026-05-09",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "京都",
     "grade": "GⅡ",
@@ -2017,7 +2017,7 @@
   },
   {
     "date": "2026-05-09",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅢ",
@@ -2026,7 +2026,7 @@
   },
   {
     "date": "2026-05-10",
-    "time": "",
+    "time": "15:40",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅠ",
@@ -2035,7 +2035,16 @@
   },
   {
     "date": "2026-05-10",
-    "time": "",
+    "time": "16:50",
+    "sport": "auto",
+    "venue": "浜松",
+    "grade": "GⅠ",
+    "name": "開場70周年記念 ゴールデンレース",
+    "winner": "黒川 京介"
+  },
+  {
+    "date": "2026-05-10",
+    "time": "17:25",
     "sport": "nar",
     "venue": "佐賀",
     "grade": "",
@@ -2044,25 +2053,7 @@
   },
   {
     "date": "2026-05-10",
-    "time": "",
-    "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅢ",
-    "name": "カーネーションカップ",
-    "winner": "カフカ"
-  },
-  {
-    "date": "2026-05-10",
-    "time": "",
-    "sport": "nar",
-    "venue": "盛岡",
-    "grade": "MⅠ",
-    "name": "シアンモア記念",
-    "winner": "ルコルセール"
-  },
-  {
-    "date": "2026-05-10",
-    "time": "",
+    "time": "18:05",
     "sport": "nar",
     "venue": "金沢",
     "grade": "",
@@ -2071,7 +2062,25 @@
   },
   {
     "date": "2026-05-10",
-    "time": "",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "盛岡",
+    "grade": "M1",
+    "name": "シアンモア記念",
+    "winner": "ルコルセール"
+  },
+  {
+    "date": "2026-05-10",
+    "time": "20:00",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG3",
+    "name": "カーネーションカップ",
+    "winner": "カフカ"
+  },
+  {
+    "date": "2026-05-10",
+    "time": "20:45",
     "sport": "boat",
     "venue": "丸亀",
     "grade": "GⅡ",
@@ -2079,17 +2088,8 @@
     "winner": "西橋 奈未"
   },
   {
-    "date": "2026-05-10",
-    "time": "",
-    "sport": "auto",
-    "venue": "浜松",
-    "grade": "GⅠ",
-    "name": "開場70周年記念 ゴールデンレース",
-    "winner": "黒川 京介"
-  },
-  {
     "date": "2026-05-12",
-    "time": "",
+    "time": "20:30",
     "sport": "keirin",
     "venue": "松阪",
     "grade": "GⅢ",
@@ -2098,7 +2098,7 @@
   },
   {
     "date": "2026-05-13",
-    "time": "",
+    "time": "20:10",
     "sport": "nar",
     "venue": "川崎",
     "grade": "JpnⅡ",
@@ -2107,7 +2107,7 @@
   },
   {
     "date": "2026-05-14",
-    "time": "",
+    "time": "16:15",
     "sport": "nar",
     "venue": "園田",
     "grade": "重賞Ⅰ",
@@ -2116,7 +2116,7 @@
   },
   {
     "date": "2026-05-14",
-    "time": "",
+    "time": "16:25",
     "sport": "nar",
     "venue": "笠松",
     "grade": "SPⅢ",
@@ -2125,16 +2125,7 @@
   },
   {
     "date": "2026-05-14",
-    "time": "",
-    "sport": "nar",
-    "venue": "門別",
-    "grade": "HⅢ",
-    "name": "フロイラインスプリント",
-    "winner": "トリップス"
-  },
-  {
-    "date": "2026-05-14",
-    "time": "",
+    "time": "16:35",
     "sport": "boat",
     "venue": "津",
     "grade": "GⅢ",
@@ -2142,8 +2133,17 @@
     "winner": "豊田 健士郎"
   },
   {
+    "date": "2026-05-14",
+    "time": "20:35",
+    "sport": "nar",
+    "venue": "門別",
+    "grade": "H3",
+    "name": "フロイラインスプリント",
+    "winner": "トリップス"
+  },
+  {
     "date": "2026-05-16",
-    "time": "",
+    "time": "13:35",
     "sport": "jra",
     "venue": "京都",
     "grade": "J・GⅡ",
@@ -2152,7 +2152,7 @@
   },
   {
     "date": "2026-05-16",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "新潟",
     "grade": "GⅢ",
@@ -2161,7 +2161,7 @@
   },
   {
     "date": "2026-05-16",
-    "time": "",
+    "time": "16:25",
     "sport": "boat",
     "venue": "江戸川",
     "grade": "GⅡ",
@@ -2170,7 +2170,7 @@
   },
   {
     "date": "2026-05-17",
-    "time": "",
+    "time": "15:40",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅠ",
@@ -2179,7 +2179,7 @@
   },
   {
     "date": "2026-05-17",
-    "time": "",
+    "time": "17:25",
     "sport": "nar",
     "venue": "佐賀",
     "grade": "",
@@ -2188,16 +2188,16 @@
   },
   {
     "date": "2026-05-17",
-    "time": "",
+    "time": "18:05",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅢ",
+    "grade": "M3",
     "name": "イーハトーブマイル",
     "winner": "リアルライン"
   },
   {
     "date": "2026-05-17",
-    "time": "",
+    "time": "18:15",
     "sport": "nar",
     "venue": "金沢",
     "grade": "",
@@ -2206,7 +2206,7 @@
   },
   {
     "date": "2026-05-17",
-    "time": "",
+    "time": "20:30",
     "sport": "keirin",
     "venue": "函館",
     "grade": "GⅢ",
@@ -2215,16 +2215,7 @@
   },
   {
     "date": "2026-05-20",
-    "time": "",
-    "sport": "nar",
-    "venue": "大井",
-    "grade": "SⅠ",
-    "name": "大井記念",
-    "winner": "サントノーレ"
-  },
-  {
-    "date": "2026-05-20",
-    "time": "",
+    "time": "16:45",
     "sport": "boat",
     "venue": "芦屋",
     "grade": "GⅠ",
@@ -2232,8 +2223,17 @@
     "winner": "中島 孝平"
   },
   {
+    "date": "2026-05-20",
+    "time": "20:10",
+    "sport": "nar",
+    "venue": "大井",
+    "grade": "SⅠ",
+    "name": "大井記念",
+    "winner": "サントノーレ"
+  },
+  {
     "date": "2026-05-21",
-    "time": "",
+    "time": "23:30",
     "sport": "keirin",
     "venue": "青森",
     "grade": "GⅢ",
@@ -2242,16 +2242,7 @@
   },
   {
     "date": "2026-05-23",
-    "time": "",
-    "sport": "jra",
-    "venue": "京都",
-    "grade": "GⅢ",
-    "name": "平安ステークス",
-    "winner": "ロードクロンヌ"
-  },
-  {
-    "date": "2026-05-23",
-    "time": "",
+    "time": "14:15",
     "sport": "boat",
     "venue": "徳山",
     "grade": "GⅢ",
@@ -2259,8 +2250,17 @@
     "winner": "小野 生奈"
   },
   {
+    "date": "2026-05-23",
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "京都",
+    "grade": "GⅢ",
+    "name": "平安ステークス",
+    "winner": "ロードクロンヌ"
+  },
+  {
     "date": "2026-05-24",
-    "time": "",
+    "time": "15:40",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅠ",
@@ -2269,16 +2269,16 @@
   },
   {
     "date": "2026-05-24",
-    "time": "",
+    "time": "18:05",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅢ",
+    "grade": "M3",
     "name": "あすなろ賞",
     "winner": "ラッキードリーム"
   },
   {
     "date": "2026-05-24",
-    "time": "",
+    "time": "18:15",
     "sport": "nar",
     "venue": "高知",
     "grade": "",
@@ -2287,7 +2287,7 @@
   },
   {
     "date": "2026-05-25",
-    "time": "",
+    "time": "16:40",
     "sport": "boat",
     "venue": "びわこ",
     "grade": "GⅡ",
@@ -2296,7 +2296,7 @@
   },
   {
     "date": "2026-05-27",
-    "time": "",
+    "time": "17:45",
     "sport": "nar",
     "venue": "浦和",
     "grade": "SⅢ",
@@ -2305,7 +2305,7 @@
   },
   {
     "date": "2026-05-28",
-    "time": "",
+    "time": "17:05",
     "sport": "nar",
     "venue": "笠松",
     "grade": "SPⅠ",
@@ -2314,16 +2314,16 @@
   },
   {
     "date": "2026-05-28",
-    "time": "",
+    "time": "20:50",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅢ",
+    "grade": "H3",
     "name": "ヒダカソウカップ",
     "winner": "バレンタインケーキ"
   },
   {
     "date": "2026-05-30",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "京都",
     "grade": "GⅢ",
@@ -2332,7 +2332,7 @@
   },
   {
     "date": "2026-05-31",
-    "time": "",
+    "time": "15:40",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅠ",
@@ -2341,52 +2341,7 @@
   },
   {
     "date": "2026-05-31",
-    "time": "",
-    "sport": "jra",
-    "venue": "東京",
-    "grade": "GⅡ",
-    "name": "目黒記念",
-    "winner": "ファイアンクランツ"
-  },
-  {
-    "date": "2026-05-31",
-    "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "九州優駿栄城賞",
-    "winner": "カシノアミュレット"
-  },
-  {
-    "date": "2026-05-31",
-    "time": "",
-    "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅠ",
-    "name": "東北優駿",
-    "winner": "レジェンドバローズ"
-  },
-  {
-    "date": "2026-05-31",
-    "time": "",
-    "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "百万石賞",
-    "winner": "ナミダノキス"
-  },
-  {
-    "date": "2026-05-31",
-    "time": "",
-    "sport": "boat",
-    "venue": "丸亀",
-    "grade": "GⅢ",
-    "name": "琴参バスカップ",
-    "winner": "北野 輝季"
-  },
-  {
-    "date": "2026-05-31",
-    "time": "",
+    "time": "16:35",
     "sport": "boat",
     "venue": "浜名湖",
     "grade": "SG",
@@ -2395,7 +2350,52 @@
   },
   {
     "date": "2026-05-31",
-    "time": "",
+    "time": "17:00",
+    "sport": "jra",
+    "venue": "東京",
+    "grade": "GⅡ",
+    "name": "目黒記念",
+    "winner": "ファイアンクランツ"
+  },
+  {
+    "date": "2026-05-31",
+    "time": "17:45",
+    "sport": "nar",
+    "venue": "水沢",
+    "grade": "M1",
+    "name": "東北優駿",
+    "winner": "レジェンドバローズ"
+  },
+  {
+    "date": "2026-05-31",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "九州優駿栄城賞",
+    "winner": "カシノアミュレット"
+  },
+  {
+    "date": "2026-05-31",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "",
+    "name": "百万石賞",
+    "winner": "ナミダノキス"
+  },
+  {
+    "date": "2026-05-31",
+    "time": "20:30",
+    "sport": "boat",
+    "venue": "丸亀",
+    "grade": "GⅢ",
+    "name": "琴参バスカップ",
+    "winner": "北野 輝季"
+  },
+  {
+    "date": "2026-05-31",
+    "time": "20:40",
     "sport": "auto",
     "venue": "伊勢崎",
     "grade": "GⅠ",
@@ -2404,7 +2404,7 @@
   },
   {
     "date": "2026-06-02",
-    "time": "",
+    "time": "16:19",
     "sport": "keirin",
     "venue": "宇都宮",
     "grade": "GⅢ",
@@ -2413,16 +2413,7 @@
   },
   {
     "date": "2026-06-04",
-    "time": "",
-    "sport": "nar",
-    "venue": "名古屋",
-    "grade": "SPⅠ",
-    "name": "東海優駿",
-    "winner": "アストラビアンコ"
-  },
-  {
-    "date": "2026-06-04",
-    "time": "",
+    "time": "15:55",
     "sport": "nar",
     "venue": "園田",
     "grade": "重賞Ⅰ",
@@ -2431,7 +2422,25 @@
   },
   {
     "date": "2026-06-04",
-    "time": "",
+    "time": "17:43",
+    "sport": "boat",
+    "venue": "多摩川",
+    "grade": "GⅢ",
+    "name": "オールレディース",
+    "winner": "三浦 永理"
+  },
+  {
+    "date": "2026-06-04",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "名古屋",
+    "grade": "SPⅠ",
+    "name": "東海優駿",
+    "winner": "アストラビアンコ"
+  },
+  {
+    "date": "2026-06-04",
+    "time": "20:05",
     "sport": "nar",
     "venue": "船橋",
     "grade": "SⅢ",
@@ -2440,25 +2449,16 @@
   },
   {
     "date": "2026-06-04",
-    "time": "",
+    "time": "20:30",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅢ",
+    "grade": "H3",
     "name": "グランシャリオ門別スプリント",
     "winner": "ストリーム"
   },
   {
-    "date": "2026-06-04",
-    "time": "",
-    "sport": "boat",
-    "venue": "多摩川",
-    "grade": "GⅢ",
-    "name": "オールレディース",
-    "winner": "三浦 永理"
-  },
-  {
     "date": "2026-06-07",
-    "time": "",
+    "time": "15:40",
     "sport": "jra",
     "venue": "東京",
     "grade": "GⅠ",
@@ -2467,7 +2467,16 @@
   },
   {
     "date": "2026-06-07",
-    "time": "",
+    "time": "16:25",
+    "sport": "keirin",
+    "venue": "久留米",
+    "grade": "GⅢ",
+    "name": "中野カップレース",
+    "winner": "新山 響平"
+  },
+  {
+    "date": "2026-06-07",
+    "time": "18:05",
     "sport": "nar",
     "venue": "佐賀",
     "grade": "",
@@ -2476,34 +2485,16 @@
   },
   {
     "date": "2026-06-07",
-    "time": "",
+    "time": "18:15",
     "sport": "nar",
     "venue": "水沢",
-    "grade": "MⅡ",
+    "grade": "M2",
     "name": "早池峰賞",
     "winner": "ルコルセール"
   },
   {
-    "date": "2026-06-07",
-    "time": "",
-    "sport": "keirin",
-    "venue": "久留米",
-    "grade": "GⅢ",
-    "name": "中野カップレース",
-    "winner": "新山 響平"
-  },
-  {
     "date": "2026-06-09",
-    "time": "",
-    "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "石川優駿",
-    "winner": "グリーゼ"
-  },
-  {
-    "date": "2026-06-09",
-    "time": "",
+    "time": "16:45",
     "sport": "boat",
     "venue": "宮島",
     "grade": "GⅠ",
@@ -2511,8 +2502,17 @@
     "winner": "岩瀬 裕亮"
   },
   {
+    "date": "2026-06-09",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "",
+    "name": "石川優駿",
+    "winner": "グリーゼ"
+  },
+  {
     "date": "2026-06-10",
-    "time": "",
+    "time": "20:05",
     "sport": "nar",
     "venue": "大井",
     "grade": "JpnⅠ",
@@ -2521,7 +2521,7 @@
   },
   {
     "date": "2026-06-11",
-    "time": "",
+    "time": "16:50",
     "sport": "nar",
     "venue": "笠松",
     "grade": "SPⅢ",
@@ -2530,25 +2530,16 @@
   },
   {
     "date": "2026-06-11",
-    "time": "",
+    "time": "20:35",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅠ",
+    "grade": "H1",
     "name": "北海優駿",
     "winner": "ゴッドバロック"
   },
   {
     "date": "2026-06-13",
-    "time": "",
-    "sport": "jra",
-    "venue": "函館",
-    "grade": "GⅢ",
-    "name": "函館スプリントステークス",
-    "winner": "ピューロマジック"
-  },
-  {
-    "date": "2026-06-13",
-    "time": "",
+    "time": "11:30",
     "sport": "jra",
     "venue": "東京",
     "grade": "J・GⅢ",
@@ -2557,7 +2548,16 @@
   },
   {
     "date": "2026-06-13",
-    "time": "",
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "函館",
+    "grade": "GⅢ",
+    "name": "函館スプリントステークス",
+    "winner": "ピューロマジック"
+  },
+  {
+    "date": "2026-06-13",
+    "time": "16:35",
     "sport": "boat",
     "venue": "尼崎",
     "grade": "GⅠ",
@@ -2566,7 +2566,7 @@
   },
   {
     "date": "2026-06-14",
-    "time": "",
+    "time": "15:40",
     "sport": "jra",
     "venue": "阪神",
     "grade": "GⅠ",
@@ -2575,43 +2575,7 @@
   },
   {
     "date": "2026-06-14",
-    "time": "",
-    "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅢ",
-    "name": "北斗賞",
-    "winner": "ツガルノヒロイモノ"
-  },
-  {
-    "date": "2026-06-14",
-    "time": "",
-    "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅢ",
-    "name": "ウイナーカップ",
-    "winner": "ベアコルム"
-  },
-  {
-    "date": "2026-06-14",
-    "time": "",
-    "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "日本海スプリント",
-    "winner": "キュムロンニンバス"
-  },
-  {
-    "date": "2026-06-14",
-    "time": "",
-    "sport": "nar",
-    "venue": "高知",
-    "grade": "",
-    "name": "高知優駿",
-    "winner": "カツテナイオイシサ"
-  },
-  {
-    "date": "2026-06-14",
-    "time": "",
+    "time": "15:40",
     "sport": "keirin",
     "venue": "岐阜",
     "grade": "GⅢ",
@@ -2620,7 +2584,43 @@
   },
   {
     "date": "2026-06-14",
-    "time": "",
+    "time": "17:35",
+    "sport": "nar",
+    "venue": "水沢",
+    "grade": "M3",
+    "name": "ウイナーカップ",
+    "winner": "ベアコルム"
+  },
+  {
+    "date": "2026-06-14",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "",
+    "name": "日本海スプリント",
+    "winner": "キュムロンニンバス"
+  },
+  {
+    "date": "2026-06-14",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "高知",
+    "grade": "",
+    "name": "高知優駿",
+    "winner": "カツテナイオイシサ"
+  },
+  {
+    "date": "2026-06-14",
+    "time": "20:05",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG3",
+    "name": "北斗賞",
+    "winner": "ツガルノヒロイモノ"
+  },
+  {
+    "date": "2026-06-14",
+    "time": "20:30",
     "sport": "keirin",
     "venue": "玉野",
     "grade": "GⅢ",
@@ -2629,7 +2629,7 @@
   },
   {
     "date": "2026-06-14",
-    "time": "",
+    "time": "20:45",
     "sport": "auto",
     "venue": "川口",
     "grade": "GⅡ",
@@ -2638,7 +2638,7 @@
   },
   {
     "date": "2026-06-16",
-    "time": "",
+    "time": "20:10",
     "sport": "nar",
     "venue": "川崎",
     "grade": "SⅢ",
@@ -2647,7 +2647,16 @@
   },
   {
     "date": "2026-06-17",
-    "time": "",
+    "time": "18:00",
+    "sport": "boat",
+    "venue": "福岡",
+    "grade": "GⅢ",
+    "name": "オールレディース",
+    "winner": "竹井 奈美"
+  },
+  {
+    "date": "2026-06-17",
+    "time": "20:10",
     "sport": "nar",
     "venue": "川崎",
     "grade": "JpnⅡ",
@@ -2656,34 +2665,16 @@
   },
   {
     "date": "2026-06-17",
-    "time": "",
+    "time": "20:35",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅡ",
+    "grade": "H2",
     "name": "栄冠賞",
     "winner": "ダブルゲーム"
   },
   {
-    "date": "2026-06-17",
-    "time": "",
-    "sport": "boat",
-    "venue": "福岡",
-    "grade": "GⅢ",
-    "name": "オールレディース",
-    "winner": "竹井 奈美"
-  },
-  {
     "date": "2026-06-18",
-    "time": "",
-    "sport": "nar",
-    "venue": "名古屋",
-    "grade": "SPⅡ",
-    "name": "トリトン争覇",
-    "winner": "ベント"
-  },
-  {
-    "date": "2026-06-18",
-    "time": "",
+    "time": "16:15",
     "sport": "nar",
     "venue": "園田",
     "grade": "重賞Ⅱ",
@@ -2692,16 +2683,16 @@
   },
   {
     "date": "2026-06-18",
-    "time": "",
-    "sport": "nar",
-    "venue": "門別",
-    "grade": "HⅢ",
-    "name": "赤レンガ記念",
-    "winner": "ベルピット"
+    "time": "16:30",
+    "sport": "keirin",
+    "venue": "岸和田",
+    "grade": "GⅠ",
+    "name": "パールカップ",
+    "winner": "佐藤 水菜"
   },
   {
     "date": "2026-06-18",
-    "time": "",
+    "time": "16:40",
     "sport": "boat",
     "venue": "常滑",
     "grade": "GⅠ",
@@ -2709,44 +2700,26 @@
     "winner": "松本 純平"
   },
   {
-    "date": "2026-06-21",
-    "time": "",
-    "sport": "jra",
-    "venue": "東京",
-    "grade": "GⅢ",
-    "name": "府中牝馬ステークス",
-    "winner": "セキトバイースト"
-  },
-  {
-    "date": "2026-06-21",
-    "time": "",
-    "sport": "jra",
-    "venue": "阪神",
-    "grade": "GⅢ",
-    "name": "しらさぎステークス",
-    "winner": "エルトンバローズ"
-  },
-  {
-    "date": "2026-06-21",
-    "time": "",
+    "date": "2026-06-18",
+    "time": "18:10",
     "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "吉野ヶ里記念",
-    "winner": "ツークフォーゲル"
+    "venue": "名古屋",
+    "grade": "SPⅡ",
+    "name": "トリトン争覇",
+    "winner": "ベント"
   },
   {
-    "date": "2026-06-21",
-    "time": "",
+    "date": "2026-06-18",
+    "time": "20:35",
     "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅠ",
-    "name": "一條記念みちのく大賞典",
-    "winner": "リケアカプチーノ"
+    "venue": "門別",
+    "grade": "H3",
+    "name": "赤レンガ記念",
+    "winner": "ベルピット"
   },
   {
     "date": "2026-06-21",
-    "time": "",
+    "time": "14:14",
     "sport": "boat",
     "venue": "徳山",
     "grade": "GⅢ",
@@ -2755,16 +2728,25 @@
   },
   {
     "date": "2026-06-21",
-    "time": "",
-    "sport": "keirin",
-    "venue": "岸和田",
-    "grade": "GⅠ",
-    "name": "パールカップ",
-    "winner": "佐藤 水菜"
+    "time": "15:30",
+    "sport": "jra",
+    "venue": "阪神",
+    "grade": "GⅢ",
+    "name": "しらさぎステークス",
+    "winner": "エルトンバローズ"
   },
   {
     "date": "2026-06-21",
-    "time": "",
+    "time": "15:45",
+    "sport": "jra",
+    "venue": "東京",
+    "grade": "GⅢ",
+    "name": "府中牝馬ステークス",
+    "winner": "セキトバイースト"
+  },
+  {
+    "date": "2026-06-21",
+    "time": "16:30",
     "sport": "keirin",
     "venue": "岸和田",
     "grade": "GⅠ",
@@ -2772,8 +2754,26 @@
     "winner": "古性 優作"
   },
   {
+    "date": "2026-06-21",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "吉野ヶ里記念",
+    "winner": "ツークフォーゲル"
+  },
+  {
+    "date": "2026-06-21",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "水沢",
+    "grade": "M1",
+    "name": "一條記念みちのく大賞典",
+    "winner": "リケアカプチーノ"
+  },
+  {
     "date": "2026-06-22",
-    "time": "",
+    "time": "20:37",
     "sport": "boat",
     "venue": "大村",
     "grade": "GⅡ",
@@ -2782,7 +2782,7 @@
   },
   {
     "date": "2026-06-24",
-    "time": "",
+    "time": "18:50",
     "sport": "nar",
     "venue": "浦和",
     "grade": "JpnⅠ",
@@ -2791,7 +2791,7 @@
   },
   {
     "date": "2026-06-25",
-    "time": "",
+    "time": "17:05",
     "sport": "nar",
     "venue": "笠松",
     "grade": "SPⅢ",
@@ -2800,16 +2800,16 @@
   },
   {
     "date": "2026-06-25",
-    "time": "",
+    "time": "20:50",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅢ",
+    "grade": "H3",
     "name": "フロイラインカップ",
     "winner": "ウィルラウス"
   },
   {
     "date": "2026-06-28",
-    "time": "",
+    "time": "15:20",
     "sport": "jra",
     "venue": "函館",
     "grade": "GⅢ",
@@ -2818,7 +2818,7 @@
   },
   {
     "date": "2026-06-28",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "福島",
     "grade": "GⅢ",
@@ -2827,34 +2827,7 @@
   },
   {
     "date": "2026-06-28",
-    "time": "",
-    "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅢ",
-    "name": "柏林賞",
-    "winner": "スターイチバン"
-  },
-  {
-    "date": "2026-06-28",
-    "time": "",
-    "sport": "nar",
-    "venue": "盛岡",
-    "grade": "MⅢ",
-    "name": "サファイア賞",
-    "winner": "セイクリスティーナ"
-  },
-  {
-    "date": "2026-06-28",
-    "time": "",
-    "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "金沢サマーカップ",
-    "winner": "シンリミテス"
-  },
-  {
-    "date": "2026-06-28",
-    "time": "",
+    "time": "16:35",
     "sport": "boat",
     "venue": "鳴門",
     "grade": "SG",
@@ -2863,7 +2836,34 @@
   },
   {
     "date": "2026-06-28",
-    "time": "",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "",
+    "name": "金沢サマーカップ",
+    "winner": "シンリミテス"
+  },
+  {
+    "date": "2026-06-28",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "盛岡",
+    "grade": "M3",
+    "name": "サファイア賞",
+    "winner": "セイクリスティーナ"
+  },
+  {
+    "date": "2026-06-28",
+    "time": "20:00",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG3",
+    "name": "柏林賞",
+    "winner": "スターイチバン"
+  },
+  {
+    "date": "2026-06-28",
+    "time": "20:40",
     "sport": "auto",
     "venue": "伊勢崎",
     "grade": "GⅡ",
@@ -2872,7 +2872,25 @@
   },
   {
     "date": "2026-06-30",
-    "time": "",
+    "time": "16:21",
+    "sport": "keirin",
+    "venue": "取手",
+    "grade": "GⅢ",
+    "name": "水戸黄門賞",
+    "winner": "吉田 拓矢"
+  },
+  {
+    "date": "2026-06-30",
+    "time": "18:10",
+    "sport": "nar",
+    "venue": "盛岡",
+    "grade": "M2",
+    "name": "ハヤテスプリント",
+    "winner": "ジェイエルビット"
+  },
+  {
+    "date": "2026-06-30",
+    "time": "20:10",
     "sport": "nar",
     "venue": "大井",
     "grade": "SⅡ",
@@ -2881,30 +2899,12 @@
   },
   {
     "date": "2026-06-30",
-    "time": "",
-    "sport": "nar",
-    "venue": "盛岡",
-    "grade": "MⅡ",
-    "name": "ハヤテスプリント",
-    "winner": "ジェイエルビット"
-  },
-  {
-    "date": "2026-06-30",
-    "time": "",
+    "time": "20:45",
     "sport": "boat",
     "venue": "桐生",
     "grade": "GⅢ",
     "name": "サッポロビールカップ",
     "winner": "四宮 与寛"
-  },
-  {
-    "date": "2026-06-30",
-    "time": "",
-    "sport": "keirin",
-    "venue": "取手",
-    "grade": "GⅢ",
-    "name": "水戸黄門賞",
-    "winner": "吉田 拓矢"
   },
   {
     "date": "2026-07-01",
@@ -2947,7 +2947,7 @@
     "time": "17:25",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅡ",
+    "grade": "M2",
     "name": "せきれい賞",
     "winner": "コスモフロイデ"
   },
@@ -2974,7 +2974,7 @@
     "time": "18:10",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅡ",
+    "grade": "M2",
     "name": "岩鷲賞",
     "winner": "ルコルセール"
   },
@@ -3001,7 +3001,7 @@
     "time": "20:35",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅢ",
+    "grade": "H3",
     "name": "星雲賞",
     "winner": "トリップス"
   },
@@ -3055,7 +3055,7 @@
     "time": "18:05",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅡ",
+    "grade": "M2",
     "name": "やまびこ賞",
     "winner": "レジェンドバローズ"
   },
@@ -3073,7 +3073,7 @@
     "time": "20:05",
     "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅡ",
+    "grade": "BG2",
     "name": "旭川記念",
     "winner": "タカラキングダム"
   },
@@ -3100,7 +3100,7 @@
     "time": "20:50",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅡ",
+    "grade": "H2",
     "name": "ノースクイーンカップ",
     "winner": ""
   },
@@ -3145,7 +3145,7 @@
     "time": "17:40",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅢ",
+    "grade": "M3",
     "name": "いしがきマイラーズ",
     "winner": ""
   },
@@ -3154,17 +3154,8 @@
     "time": "",
     "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅢ",
+    "grade": "BG3",
     "name": "ばんえい大賞典",
-    "winner": ""
-  },
-  {
-    "date": "2026-07-19",
-    "time": "",
-    "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "金沢城鼠多門賞",
     "winner": ""
   },
   {
@@ -3174,6 +3165,15 @@
     "venue": "高知",
     "grade": "",
     "name": "トレノ賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-07-19",
+    "time": "",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "",
+    "name": "金沢城鼠多門賞",
     "winner": ""
   },
   {
@@ -3226,7 +3226,7 @@
     "time": "",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅢ",
+    "grade": "H3",
     "name": "リリーカップ",
     "winner": ""
   },
@@ -3244,7 +3244,7 @@
     "time": "",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅡ",
+    "grade": "H2",
     "name": "王冠賞",
     "winner": ""
   },
@@ -3261,18 +3261,18 @@
     "date": "2026-07-24",
     "time": "",
     "sport": "boat",
-    "venue": "下関",
+    "venue": "福岡",
     "grade": "GⅢ",
-    "name": "オールレディース",
+    "name": "ウエスタンヤング",
     "winner": ""
   },
   {
     "date": "2026-07-24",
     "time": "",
     "sport": "boat",
-    "venue": "福岡",
+    "venue": "下関",
     "grade": "GⅢ",
-    "name": "ウエスタンヤング",
+    "name": "オールレディース",
     "winner": ""
   },
   {
@@ -3307,7 +3307,7 @@
     "time": "18:55",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅢ",
+    "grade": "M3",
     "name": "若鮎賞",
     "winner": ""
   },
@@ -3334,7 +3334,7 @@
     "time": "18:15",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅡ",
+    "grade": "M2",
     "name": "オパールカップ",
     "winner": ""
   },
@@ -3361,7 +3361,7 @@
     "time": "",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅢ",
+    "grade": "H3",
     "name": "旭岳賞",
     "winner": ""
   },
@@ -3370,7 +3370,7 @@
     "time": "",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅢ",
+    "grade": "H3",
     "name": "ポラリスサマースプリント",
     "winner": ""
   },
@@ -3397,7 +3397,7 @@
     "time": "",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅢ",
+    "grade": "M3",
     "name": "フェアリーカップ",
     "winner": ""
   },
@@ -3450,18 +3450,18 @@
     "date": "2026-08-06",
     "time": "",
     "sport": "nar",
-    "venue": "船橋",
-    "grade": "SⅡ",
-    "name": "習志野きらっとスプリント",
+    "venue": "門別",
+    "grade": "H3",
+    "name": "サッポロクラシックカップ",
     "winner": ""
   },
   {
     "date": "2026-08-06",
     "time": "",
     "sport": "nar",
-    "venue": "門別",
-    "grade": "HⅢ",
-    "name": "サッポロクラシックカップ",
+    "venue": "船橋",
+    "grade": "SⅡ",
+    "name": "習志野きらっとスプリント",
     "winner": ""
   },
   {
@@ -3505,17 +3505,8 @@
     "time": "",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅠ",
+    "grade": "M1",
     "name": "ひまわり賞（オークス）",
-    "winner": ""
-  },
-  {
-    "date": "2026-08-09",
-    "time": "",
-    "sport": "keirin",
-    "venue": "佐世保",
-    "grade": "GⅠ",
-    "name": "毎日新聞社杯女子オールスター競輪",
     "winner": ""
   },
   {
@@ -3528,12 +3519,12 @@
     "winner": ""
   },
   {
-    "date": "2026-08-11",
+    "date": "2026-08-09",
     "time": "",
-    "sport": "nar",
-    "venue": "浦和",
-    "grade": "SⅢ",
-    "name": "ルーキーズサマーカップ",
+    "sport": "keirin",
+    "venue": "佐世保",
+    "grade": "GⅠ",
+    "name": "毎日新聞社杯女子オールスター競輪",
     "winner": ""
   },
   {
@@ -3543,6 +3534,15 @@
     "venue": "盛岡",
     "grade": "JpnⅢ",
     "name": "クラスターカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-08-11",
+    "time": "",
+    "sport": "nar",
+    "venue": "浦和",
+    "grade": "SⅢ",
+    "name": "ルーキーズサマーカップ",
     "winner": ""
   },
   {
@@ -3576,18 +3576,18 @@
     "date": "2026-08-13",
     "time": "",
     "sport": "nar",
-    "venue": "大井",
-    "grade": "SⅢ",
-    "name": "黒潮盃",
+    "venue": "門別",
+    "grade": "JpnⅢ",
+    "name": "北海道スプリントカップ",
     "winner": ""
   },
   {
     "date": "2026-08-13",
     "time": "",
     "sport": "nar",
-    "venue": "門別",
-    "grade": "JpnⅢ",
-    "name": "北海道スプリントカップ",
+    "venue": "大井",
+    "grade": "SⅢ",
+    "name": "黒潮盃",
     "winner": ""
   },
   {
@@ -3631,7 +3631,7 @@
     "time": "",
     "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅡ",
+    "grade": "BG2",
     "name": "ばんえいグランプリ",
     "winner": ""
   },
@@ -3667,7 +3667,7 @@
     "time": "",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅠ",
+    "grade": "M1",
     "name": "岩手県知事杯OROカップ",
     "winner": ""
   },
@@ -3685,8 +3685,17 @@
     "time": "",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅢ",
+    "grade": "H3",
     "name": "フルールカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-08-20",
+    "time": "",
+    "sport": "nar",
+    "venue": "門別",
+    "grade": "H2",
+    "name": "ブリーダーズゴールドジュニアカップ",
     "winner": ""
   },
   {
@@ -3696,24 +3705,6 @@
     "venue": "名古屋",
     "grade": "SPⅡ",
     "name": "ベイスプリント",
-    "winner": ""
-  },
-  {
-    "date": "2026-08-20",
-    "time": "",
-    "sport": "nar",
-    "venue": "門別",
-    "grade": "HⅡ",
-    "name": "ブリーダーズゴールドジュニアカップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-08-23",
-    "time": "",
-    "sport": "jra",
-    "venue": "新潟",
-    "grade": "GⅢ",
-    "name": "新潟2歳ステークス",
     "winner": ""
   },
   {
@@ -3728,10 +3719,10 @@
   {
     "date": "2026-08-23",
     "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "九州チャンピオンシップ",
+    "sport": "jra",
+    "venue": "新潟",
+    "grade": "GⅢ",
+    "name": "新潟2歳ステークス",
     "winner": ""
   },
   {
@@ -3739,7 +3730,7 @@
     "time": "",
     "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅢ",
+    "grade": "BG3",
     "name": "はまなす賞",
     "winner": ""
   },
@@ -3748,8 +3739,17 @@
     "time": "",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅠ",
+    "grade": "M1",
     "name": "ジュニアグランプリ",
+    "winner": ""
+  },
+  {
+    "date": "2026-08-23",
+    "time": "",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "九州チャンピオンシップ",
     "winner": ""
   },
   {
@@ -3829,7 +3829,7 @@
     "time": "",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅠ",
+    "grade": "M1",
     "name": "ビューチフルドリーマーカップ",
     "winner": ""
   },
@@ -3927,6 +3927,15 @@
     "date": "2026-09-06",
     "time": "",
     "sport": "jra",
+    "venue": "阪神",
+    "grade": "GⅡ",
+    "name": "セントウルステークス",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-06",
+    "time": "",
+    "sport": "jra",
     "venue": "中山",
     "grade": "GⅡ",
     "name": "紫苑ステークス",
@@ -3935,10 +3944,10 @@
   {
     "date": "2026-09-06",
     "time": "",
-    "sport": "jra",
-    "venue": "阪神",
-    "grade": "GⅡ",
-    "name": "セントウルステークス",
+    "sport": "nar",
+    "venue": "水沢",
+    "grade": "M3",
+    "name": "ビギナーズカップ",
     "winner": ""
   },
   {
@@ -3948,15 +3957,6 @@
     "venue": "佐賀",
     "grade": "",
     "name": "九州ジュニアチャンピオン",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-06",
-    "time": "",
-    "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅢ",
-    "name": "ビギナーズカップ",
     "winner": ""
   },
   {
@@ -4062,24 +4062,6 @@
     "date": "2026-09-13",
     "time": "",
     "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅡ",
-    "name": "岩見沢記念",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-13",
-    "time": "",
-    "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅡ",
-    "name": "青藍賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-13",
-    "time": "",
-    "sport": "nar",
     "venue": "金沢",
     "grade": "",
     "name": "サラブレッド大賞典",
@@ -4089,9 +4071,27 @@
     "date": "2026-09-13",
     "time": "",
     "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG2",
+    "name": "岩見沢記念",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-13",
+    "time": "",
+    "sport": "nar",
     "venue": "高知",
     "grade": "",
     "name": "建依別賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-13",
+    "time": "",
+    "sport": "nar",
+    "venue": "水沢",
+    "grade": "M2",
+    "name": "青藍賞",
     "winner": ""
   },
   {
@@ -4125,9 +4125,18 @@
     "date": "2026-09-17",
     "time": "",
     "sport": "nar",
-    "venue": "名古屋",
-    "grade": "SPⅠ",
-    "name": "秋の鞍",
+    "venue": "大井",
+    "grade": "SⅢ",
+    "name": "ゴールドジュニア",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-17",
+    "time": "",
+    "sport": "nar",
+    "venue": "門別",
+    "grade": "H3",
+    "name": "フローラルカップ",
     "winner": ""
   },
   {
@@ -4143,18 +4152,9 @@
     "date": "2026-09-17",
     "time": "",
     "sport": "nar",
-    "venue": "大井",
-    "grade": "SⅢ",
-    "name": "ゴールドジュニア",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-17",
-    "time": "",
-    "sport": "nar",
-    "venue": "門別",
-    "grade": "HⅢ",
-    "name": "フローラルカップ",
+    "venue": "名古屋",
+    "grade": "SPⅠ",
+    "name": "秋の鞍",
     "winner": ""
   },
   {
@@ -4198,7 +4198,7 @@
     "time": "",
     "sport": "nar",
     "venue": "水沢",
-    "grade": "MⅠ",
+    "grade": "M1",
     "name": "オータムティアラ",
     "winner": ""
   },
@@ -4233,27 +4233,18 @@
     "date": "2026-09-22",
     "time": "",
     "sport": "nar",
-    "venue": "金沢",
-    "grade": "JpnⅢ",
-    "name": "白山大賞典",
+    "venue": "門別",
+    "grade": "H2",
+    "name": "ウポポイオータムスプリント",
     "winner": ""
   },
   {
     "date": "2026-09-22",
     "time": "",
     "sport": "nar",
-    "venue": "門別",
-    "grade": "HⅡ",
-    "name": "ウポポイオータムスプリント",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-23",
-    "time": "",
-    "sport": "nar",
-    "venue": "園田",
-    "grade": "重賞Ⅱ",
-    "name": "兵庫ジュベナイルカップ",
+    "venue": "金沢",
+    "grade": "JpnⅢ",
+    "name": "白山大賞典",
     "winner": ""
   },
   {
@@ -4278,8 +4269,17 @@
     "date": "2026-09-23",
     "time": "",
     "sport": "nar",
+    "venue": "園田",
+    "grade": "重賞Ⅱ",
+    "name": "兵庫ジュベナイルカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-23",
+    "time": "",
+    "sport": "nar",
     "venue": "門別",
-    "grade": "HⅡ",
+    "grade": "H2",
     "name": "瑞穂賞",
     "winner": ""
   },
@@ -4341,17 +4341,8 @@
     "date": "2026-09-27",
     "time": "",
     "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅡ",
-    "name": "銀河賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-27",
-    "time": "",
-    "sport": "nar",
     "venue": "水沢",
-    "grade": "MⅢ",
+    "grade": "M3",
     "name": "ヴィーナススプリント",
     "winner": ""
   },
@@ -4362,6 +4353,15 @@
     "venue": "高知",
     "grade": "",
     "name": "珊瑚冠賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-27",
+    "time": "",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG2",
+    "name": "銀河賞",
     "winner": ""
   },
   {
@@ -4404,27 +4404,27 @@
     "date": "2026-09-30",
     "time": "",
     "sport": "nar",
-    "venue": "船橋",
-    "grade": "JpnⅡ",
-    "name": "日本テレビ盃",
+    "venue": "門別",
+    "grade": "H1",
+    "name": "サンライズカップ",
     "winner": ""
   },
   {
     "date": "2026-09-30",
     "time": "",
     "sport": "nar",
-    "venue": "門別",
-    "grade": "HⅠ",
-    "name": "サンライズカップ",
+    "venue": "船橋",
+    "grade": "JpnⅡ",
+    "name": "日本テレビ盃",
     "winner": ""
   },
   {
     "date": "2026-10-01",
     "time": "",
     "sport": "nar",
-    "venue": "園田",
-    "grade": "重賞Ⅰ",
-    "name": "姫山菊花賞",
+    "venue": "門別",
+    "grade": "H1",
+    "name": "ネクストスター門別",
     "winner": ""
   },
   {
@@ -4440,9 +4440,9 @@
     "date": "2026-10-01",
     "time": "",
     "sport": "nar",
-    "venue": "門別",
-    "grade": "HⅠ",
-    "name": "ネクストスター門別",
+    "venue": "園田",
+    "grade": "重賞Ⅰ",
+    "name": "姫山菊花賞",
     "winner": ""
   },
   {
@@ -4477,7 +4477,7 @@
     "time": "",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅡ",
+    "grade": "M2",
     "name": "若駒賞",
     "winner": ""
   },
@@ -4530,27 +4530,27 @@
     "date": "2026-10-07",
     "time": "",
     "sport": "nar",
-    "venue": "大井",
-    "grade": "JpnⅠ",
-    "name": "ジャパンダートクラシック",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-07",
-    "time": "",
-    "sport": "nar",
     "venue": "笠松",
     "grade": "SPⅡ",
     "name": "オータムカップ",
     "winner": ""
   },
   {
-    "date": "2026-10-08",
+    "date": "2026-10-07",
     "time": "",
     "sport": "nar",
     "venue": "大井",
-    "grade": "JpnⅡ",
-    "name": "東京盃",
+    "grade": "JpnⅠ",
+    "name": "ジャパンダートクラシック",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-08",
+    "time": "",
+    "sport": "nar",
+    "venue": "門別",
+    "grade": "H3",
+    "name": "グランシャリオクイーンズ",
     "winner": ""
   },
   {
@@ -4566,9 +4566,9 @@
     "date": "2026-10-08",
     "time": "",
     "sport": "nar",
-    "venue": "門別",
-    "grade": "HⅢ",
-    "name": "グランシャリオクイーンズ",
+    "venue": "大井",
+    "grade": "JpnⅡ",
+    "name": "東京盃",
     "winner": ""
   },
   {
@@ -4603,7 +4603,7 @@
     "time": "",
     "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅢ",
+    "grade": "BG3",
     "name": "ナナカマド賞",
     "winner": ""
   },
@@ -4620,18 +4620,18 @@
     "date": "2026-10-12",
     "time": "",
     "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "ネクストスター佐賀",
+    "venue": "盛岡",
+    "grade": "M2",
+    "name": "トパーズカップ",
     "winner": ""
   },
   {
     "date": "2026-10-12",
     "time": "",
     "sport": "nar",
-    "venue": "盛岡",
-    "grade": "MⅡ",
-    "name": "トパーズカップ",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "ネクストスター佐賀",
     "winner": ""
   },
   {
@@ -4701,6 +4701,15 @@
     "date": "2026-10-18",
     "time": "",
     "sport": "jra",
+    "venue": "東京",
+    "grade": "J・GⅡ",
+    "name": "東京ハイジャンプ",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-18",
+    "time": "",
+    "sport": "jra",
     "venue": "京都",
     "grade": "GⅠ",
     "name": "秋華賞",
@@ -4709,10 +4718,10 @@
   {
     "date": "2026-10-18",
     "time": "",
-    "sport": "jra",
-    "venue": "東京",
-    "grade": "J・GⅡ",
-    "name": "東京ハイジャンプ",
+    "sport": "nar",
+    "venue": "盛岡",
+    "grade": "M1",
+    "name": "ネクストスター盛岡",
     "winner": ""
   },
   {
@@ -4722,15 +4731,6 @@
     "venue": "佐賀",
     "grade": "",
     "name": "佐賀オータムスプリント",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-18",
-    "time": "",
-    "sport": "nar",
-    "venue": "盛岡",
-    "grade": "MⅠ",
-    "name": "ネクストスター盛岡",
     "winner": ""
   },
   {
@@ -4782,18 +4782,18 @@
     "date": "2026-10-22",
     "time": "",
     "sport": "nar",
-    "venue": "笠松",
-    "grade": "SPⅠ",
-    "name": "岐阜金賞",
+    "venue": "門別",
+    "grade": "H2",
+    "name": "ブロッサムカップ",
     "winner": ""
   },
   {
     "date": "2026-10-22",
     "time": "",
     "sport": "nar",
-    "venue": "門別",
-    "grade": "HⅡ",
-    "name": "ブロッサムカップ",
+    "venue": "笠松",
+    "grade": "SPⅠ",
+    "name": "岐阜金賞",
     "winner": ""
   },
   {
@@ -4854,24 +4854,6 @@
     "date": "2026-10-25",
     "time": "",
     "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅡ",
-    "name": "北見記念",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-25",
-    "time": "",
-    "sport": "nar",
-    "venue": "盛岡",
-    "grade": "MⅡ",
-    "name": "絆カップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-25",
-    "time": "",
-    "sport": "nar",
     "venue": "金沢",
     "grade": "",
     "name": "かがやきスプリント",
@@ -4884,6 +4866,24 @@
     "venue": "高知",
     "grade": "",
     "name": "ネクストスター高知",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-25",
+    "time": "",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG2",
+    "name": "北見記念",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-25",
+    "time": "",
+    "sport": "nar",
+    "venue": "盛岡",
+    "grade": "M2",
+    "name": "絆カップ",
     "winner": ""
   },
   {
@@ -4917,6 +4917,15 @@
     "date": "2026-10-29",
     "time": "",
     "sport": "nar",
+    "venue": "門別",
+    "grade": "JpnⅢ",
+    "name": "エーデルワイス賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-29",
+    "time": "",
+    "sport": "nar",
     "venue": "名古屋",
     "grade": "",
     "name": "ネクストスター名古屋",
@@ -4929,15 +4938,6 @@
     "venue": "園田",
     "grade": "重賞Ⅰ",
     "name": "ネクストスター園田",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-29",
-    "time": "",
-    "sport": "nar",
-    "venue": "門別",
-    "grade": "JpnⅢ",
-    "name": "エーデルワイス賞",
     "winner": ""
   },
   {
@@ -4971,17 +4971,8 @@
     "date": "2026-11-01",
     "time": "",
     "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "九州大賞典",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-01",
-    "time": "",
-    "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅡ",
+    "grade": "BG2",
     "name": "ばんえい菊花賞",
     "winner": ""
   },
@@ -4990,8 +4981,17 @@
     "time": "",
     "sport": "nar",
     "venue": "盛岡",
-    "grade": "MⅠ",
+    "grade": "M1",
     "name": "プリンセスカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-01",
+    "time": "",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "九州大賞典",
     "winner": ""
   },
   {
@@ -5010,6 +5010,15 @@
     "venue": "尼崎",
     "grade": "SG",
     "name": "ボートレースダービー",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-03",
+    "time": "",
+    "sport": "nar",
+    "venue": "門別",
+    "grade": "JpnⅢ",
+    "name": "JBC2歳優駿",
     "winner": ""
   },
   {
@@ -5044,16 +5053,7 @@
     "time": "",
     "sport": "nar",
     "venue": "門別",
-    "grade": "JpnⅢ",
-    "name": "JBC2歳優駿",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-03",
-    "time": "",
-    "sport": "nar",
-    "venue": "門別",
-    "grade": "HⅠ",
+    "grade": "H1",
     "name": "北海道2歳スプリント",
     "winner": ""
   },
@@ -5079,15 +5079,6 @@
     "date": "2026-11-04",
     "time": "",
     "sport": "nar",
-    "venue": "園田",
-    "grade": "重賞Ⅰ",
-    "name": "楠賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-04",
-    "time": "",
-    "sport": "nar",
     "venue": "船橋",
     "grade": "SⅡ",
     "name": "平和賞",
@@ -5097,8 +5088,17 @@
     "date": "2026-11-04",
     "time": "",
     "sport": "nar",
+    "venue": "園田",
+    "grade": "重賞Ⅰ",
+    "name": "楠賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-04",
+    "time": "",
+    "sport": "nar",
     "venue": "門別",
-    "grade": "HⅠ",
+    "grade": "H1",
     "name": "道営スプリント",
     "winner": ""
   },
@@ -5116,7 +5116,7 @@
     "time": "",
     "sport": "nar",
     "venue": "門別",
-    "grade": "HⅠ",
+    "grade": "H1",
     "name": "道営記念",
     "winner": ""
   },
@@ -5133,18 +5133,18 @@
     "date": "2026-11-07",
     "time": "",
     "sport": "jra",
-    "venue": "京都",
-    "grade": "J・GⅢ",
-    "name": "京都ジャンプステークス",
+    "venue": "東京",
+    "grade": "GⅡ",
+    "name": "京王杯2歳ステークス",
     "winner": ""
   },
   {
     "date": "2026-11-07",
     "time": "",
     "sport": "jra",
-    "venue": "東京",
-    "grade": "GⅡ",
-    "name": "京王杯2歳ステークス",
+    "venue": "京都",
+    "grade": "J・GⅢ",
+    "name": "京都ジャンプステークス",
     "winner": ""
   },
   {
@@ -5169,6 +5169,15 @@
     "date": "2026-11-08",
     "time": "",
     "sport": "nar",
+    "venue": "盛岡",
+    "grade": "M3",
+    "name": "すずらん賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-08",
+    "time": "",
+    "sport": "nar",
     "venue": "佐賀",
     "grade": "",
     "name": "カペラ賞",
@@ -5179,17 +5188,8 @@
     "time": "",
     "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅢ",
+    "grade": "BG3",
     "name": "クインカップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-08",
-    "time": "",
-    "sport": "nar",
-    "venue": "盛岡",
-    "grade": "MⅢ",
-    "name": "すずらん賞",
     "winner": ""
   },
   {
@@ -5241,18 +5241,18 @@
     "date": "2026-11-12",
     "time": "",
     "sport": "nar",
-    "venue": "名古屋",
-    "grade": "SPⅠ",
-    "name": "東海菊花賞",
+    "venue": "川崎",
+    "grade": "SⅡ",
+    "name": "ローレル賞",
     "winner": ""
   },
   {
     "date": "2026-11-12",
     "time": "",
     "sport": "nar",
-    "venue": "川崎",
-    "grade": "SⅡ",
-    "name": "ローレル賞",
+    "venue": "名古屋",
+    "grade": "SPⅠ",
+    "name": "東海菊花賞",
     "winner": ""
   },
   {
@@ -5295,18 +5295,18 @@
     "date": "2026-11-15",
     "time": "",
     "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅠ",
-    "name": "南部駒賞",
+    "venue": "金沢",
+    "grade": "",
+    "name": "北國王冠",
     "winner": ""
   },
   {
     "date": "2026-11-15",
     "time": "",
     "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "北國王冠",
+    "venue": "水沢",
+    "grade": "M1",
+    "name": "南部駒賞",
     "winner": ""
   },
   {
@@ -5395,7 +5395,7 @@
     "time": "",
     "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅢ",
+    "grade": "BG3",
     "name": "ドリームエイジカップ",
     "winner": ""
   },
@@ -5412,18 +5412,18 @@
     "date": "2026-11-23",
     "time": "",
     "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅡ",
-    "name": "トウケイニセイ記念",
+    "venue": "金沢",
+    "grade": "",
+    "name": "MRO金賞",
     "winner": ""
   },
   {
     "date": "2026-11-23",
     "time": "",
     "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "MRO金賞",
+    "venue": "水沢",
+    "grade": "M2",
+    "name": "トウケイニセイ記念",
     "winner": ""
   },
   {
@@ -5466,18 +5466,18 @@
     "date": "2026-11-26",
     "time": "",
     "sport": "nar",
-    "venue": "園田",
-    "grade": "JpnⅡ",
-    "name": "兵庫ジュニアグランプリ",
+    "venue": "浦和",
+    "grade": "SⅢ",
+    "name": "サザンスタースプリント",
     "winner": ""
   },
   {
     "date": "2026-11-26",
     "time": "",
     "sport": "nar",
-    "venue": "浦和",
-    "grade": "SⅢ",
-    "name": "サザンスタースプリント",
+    "venue": "園田",
+    "grade": "JpnⅡ",
+    "name": "兵庫ジュニアグランプリ",
     "winner": ""
   },
   {
@@ -5502,15 +5502,6 @@
     "date": "2026-11-29",
     "time": "",
     "sport": "jra",
-    "venue": "京都",
-    "grade": "GⅢ",
-    "name": "京阪杯",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-29",
-    "time": "",
-    "sport": "jra",
     "venue": "東京",
     "grade": "GⅠ",
     "name": "ジャパンカップ",
@@ -5519,10 +5510,10 @@
   {
     "date": "2026-11-29",
     "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "鳥栖大賞",
+    "sport": "jra",
+    "venue": "京都",
+    "grade": "GⅢ",
+    "name": "京阪杯",
     "winner": ""
   },
   {
@@ -5530,7 +5521,7 @@
     "time": "",
     "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅠ",
+    "grade": "BG1",
     "name": "ばんえいオークス",
     "winner": ""
   },
@@ -5539,7 +5530,7 @@
     "time": "",
     "sport": "nar",
     "venue": "水沢",
-    "grade": "MⅢ",
+    "grade": "M3",
     "name": "寒菊賞",
     "winner": ""
   },
@@ -5550,6 +5541,15 @@
     "venue": "金沢",
     "grade": "",
     "name": "徽軫賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-29",
+    "time": "",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "鳥栖大賞",
     "winner": ""
   },
   {
@@ -5665,7 +5665,7 @@
     "time": "",
     "sport": "nar",
     "venue": "水沢",
-    "grade": "MⅡ",
+    "grade": "M2",
     "name": "北上川大賞典",
     "winner": ""
   },
@@ -5736,18 +5736,18 @@
     "date": "2026-12-13",
     "time": "",
     "sport": "nar",
-    "venue": "佐賀",
+    "venue": "金沢",
     "grade": "",
-    "name": "九州産グランプリ",
+    "name": "中日杯",
     "winner": ""
   },
   {
     "date": "2026-12-13",
     "time": "",
     "sport": "nar",
-    "venue": "金沢",
+    "venue": "佐賀",
     "grade": "",
-    "name": "中日杯",
+    "name": "九州産グランプリ",
     "winner": ""
   },
   {
@@ -5835,18 +5835,18 @@
     "date": "2026-12-23",
     "time": "",
     "sport": "nar",
-    "venue": "名古屋",
-    "grade": "JpnⅢ",
-    "name": "名古屋大賞典",
+    "venue": "浦和",
+    "grade": "SⅠ",
+    "name": "ゴールドカップ",
     "winner": ""
   },
   {
     "date": "2026-12-23",
     "time": "",
     "sport": "nar",
-    "venue": "浦和",
-    "grade": "SⅠ",
-    "name": "ゴールドカップ",
+    "venue": "名古屋",
+    "grade": "JpnⅢ",
+    "name": "名古屋大賞典",
     "winner": ""
   },
   {
@@ -5926,7 +5926,7 @@
     "time": "",
     "sport": "nar",
     "venue": "水沢",
-    "grade": "MⅡ",
+    "grade": "M2",
     "name": "金杯",
     "winner": ""
   },
@@ -5943,27 +5943,18 @@
     "date": "2026-12-29",
     "time": "",
     "sport": "nar",
-    "venue": "大井",
-    "grade": "GⅠ",
-    "name": "東京大賞典",
+    "venue": "帯広",
+    "grade": "BG2",
+    "name": "ヤングチャンピオンシップ",
     "winner": ""
   },
   {
     "date": "2026-12-29",
     "time": "",
     "sport": "nar",
-    "venue": "帯広",
-    "grade": "BGⅡ",
-    "name": "ヤングチャンピオンシップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-12-30",
-    "time": "",
-    "sport": "nar",
     "venue": "大井",
-    "grade": "SⅢ",
-    "name": "東京シンデレラマイル",
+    "grade": "GⅠ",
+    "name": "東京大賞典",
     "winner": ""
   },
   {
@@ -5971,7 +5962,7 @@
     "time": "",
     "sport": "nar",
     "venue": "帯広",
-    "grade": "BGⅠ",
+    "grade": "BG1",
     "name": "ばんえいダービー",
     "winner": ""
   },
@@ -5982,6 +5973,15 @@
     "venue": "笠松",
     "grade": "SPⅠ",
     "name": "ライデンリーダー記念",
+    "winner": ""
+  },
+  {
+    "date": "2026-12-30",
+    "time": "",
+    "sport": "nar",
+    "venue": "大井",
+    "grade": "SⅢ",
+    "name": "東京シンデレラマイル",
     "winner": ""
   },
   {
@@ -6015,18 +6015,18 @@
     "date": "2026-12-31",
     "time": "",
     "sport": "nar",
-    "venue": "水沢",
-    "grade": "MⅠ",
-    "name": "桐花賞",
+    "venue": "笠松",
+    "grade": "SPⅠ",
+    "name": "東海ゴールドカップ",
     "winner": ""
   },
   {
     "date": "2026-12-31",
     "time": "",
     "sport": "nar",
-    "venue": "笠松",
-    "grade": "SPⅠ",
-    "name": "東海ゴールドカップ",
+    "venue": "水沢",
+    "grade": "M1",
+    "name": "桐花賞",
     "winner": ""
   },
   {
