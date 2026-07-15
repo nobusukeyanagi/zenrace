@@ -1,5 +1,5 @@
 :root{
-  --category-menu-h:56px;
+  --category-menu-h:52px;
   --category-menu-safe-top:env(safe-area-inset-top,0px);
   --category-menu-total-h:calc(var(--category-menu-h) + var(--category-menu-safe-top));
   --header-total-h:var(--category-menu-total-h);
@@ -23,5 +23,5 @@ zenrace-category-menu{
   touch-action:none;
   overscroll-behavior:none;
 }
-@media(max-width:430px){:root{--category-menu-h:54px}}
+@media(max-width:430px){:root{--category-menu-h:50px}}
 @media print{zenrace-category-menu{display:none!important}}

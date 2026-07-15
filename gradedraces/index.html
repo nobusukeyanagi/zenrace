@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>グレードレース | ZENRACE</title>
-<link rel="stylesheet" href="../shared/category-menu.css?v=33">
+<link rel="stylesheet" href="../shared/category-menu.css?v=34">
 <link rel="stylesheet" href="../shared/page-shell.css?v=19">
 <style>
 :root{--month-toolbar-h:46px;--header-total-h:calc(var(--category-menu-total-h) + var(--month-toolbar-h));--bg:#e9edf3;--panel:#fff;--line:#dce1e8;--text:#17202b;--muted:#788493;--gold:#d3a638;--jra:#23834a;--nar:#8b5a2b;--boat:#1876c9;--keirin:#d8661d;--auto:#7545af}
@@ -19,7 +19,7 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .month-arrow{width:32px;height:32px;border:0;color:#f0cc70;background:transparent;font-size:25px;line-height:1}
 .month-title{text-align:center;color:#fff;font-size:15px;font-weight:950;letter-spacing:.04em;white-space:nowrap}
 .month-spacer{min-width:0}
-.today-btn{height:30px;padding:0 11px;border:1px solid rgba(240,204,112,.36);border-radius:8px;color:#f3dda1;background:rgba(255,255,255,.05);font-size:10px;font-weight:900}
+.today-btn{min-width:58px;height:30px;padding:0 15px;border:1px solid rgba(240,204,112,.36);border-radius:8px;color:#f3dda1;background:rgba(255,255,255,.05);font-size:10px;font-weight:900}
 .schedule-page{width:min(100%,760px);margin:0 auto;padding:7px 6px 24px}
 .day-block{display:grid;grid-template-columns:41px minmax(0,1fr);margin-bottom:4px;overflow:hidden;border:1px solid var(--line);border-radius:8px;background:var(--panel);box-shadow:0 2px 6px rgba(15,23,42,.055)}
 .day-block.today{border-color:#c89a25;box-shadow:0 0 0 1px rgba(200,154,37,.16)}
@@ -28,7 +28,7 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .date-number{font-size:17px;line-height:1;font-weight:1000}.weekday{margin-top:2px;color:var(--muted);font-size:7px;font-weight:900}
 .day-block.sat .date-number,.day-block.sat .weekday{color:#1769aa}.day-block.sun .date-number,.day-block.sun .weekday{color:#c23d3d}
 .race-list{min-width:0;overflow:hidden}
-.race-row{--sport:#555;display:grid;grid-template-columns:43px 29px 48px 43px minmax(190px,1fr) 92px;align-items:stretch;min-width:445px;min-height:32px;border-bottom:1px solid #e9edf2;font-size:10.5px;background:#fff}
+.race-row{--sport:#555;display:grid;grid-template-columns:42px 28px 44px 39px minmax(0,1fr) clamp(70px,18vw,92px);align-items:stretch;width:100%;min-width:0;min-height:32px;border-bottom:1px solid #e9edf2;font-size:10.5px;background:#fff}
 .race-row:last-child{border-bottom:0}.race-row.jra{--sport:var(--jra)}.race-row.nar{--sport:var(--nar)}.race-row.boat{--sport:var(--boat)}.race-row.keirin{--sport:var(--keirin)}.race-row.auto{--sport:var(--auto)}
 .cell{min-width:0;display:flex;align-items:center;padding:3px 4px;line-height:1.15;white-space:nowrap}
 .time{justify-content:center;font-weight:900;font-variant-numeric:tabular-nums;border-right:1px solid #edf0f4}.time.pending{color:#9aa3af;font-size:9px}
@@ -38,9 +38,9 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .grade{justify-content:center;border-right:1px solid #edf0f4;font-weight:900;overflow:hidden}
 .name{position:relative;overflow:hidden;font-weight:850}.name-text{display:inline-block;min-width:max-content;white-space:nowrap;will-change:transform}.name.scrolling .name-text{animation:racePan var(--race-pan-duration,11s) ease-in-out infinite alternate}
 @keyframes racePan{0%,18%{transform:translateX(0)}82%,100%{transform:translateX(calc(-1 * var(--race-pan-distance,0px)))}}
-.winner{justify-content:center;border-left:1px solid #edf0f4;font-weight:800;overflow:hidden}.winner span{overflow:hidden;text-overflow:ellipsis}
+.winner{justify-content:center;border-left:1px solid #edf0f4;font-weight:800;overflow:hidden}.winner span{display:block;width:100%;overflow:hidden;text-align:center;text-overflow:ellipsis}
 .empty{margin:18px 8px;padding:48px 18px;border:1px dashed #c5ccd6;border-radius:12px;color:#84909e;background:rgba(255,255,255,.72);text-align:center;font-size:12px;font-weight:800}
-@media(max-width:430px){:root{--month-toolbar-h:44px}.month-toolbar{grid-template-columns:29px minmax(100px,auto) 29px 1fr auto;padding-inline:5px}.month-title{font-size:14px}.today-btn{height:28px;padding-inline:9px}.schedule-page{padding:5px 4px 20px}.day-block{grid-template-columns:38px minmax(0,1fr)}}
+@media(max-width:430px){:root{--month-toolbar-h:44px}.month-toolbar{grid-template-columns:29px minmax(100px,auto) 29px 1fr auto;padding-inline:5px}.month-title{font-size:14px}.today-btn{min-width:56px;height:28px;padding-inline:12px}.schedule-page{padding:5px 4px 20px}.day-block{grid-template-columns:38px minmax(0,1fr)}.race-row{grid-template-columns:39px 27px 42px 36px minmax(0,1fr) 72px;font-size:10px}.cell{padding-inline:3px}.winner{font-size:9.5px}}
 @media print{zenrace-category-menu,.month-toolbar,zenrace-bottom-nav{display:none!important}.zenrace-content-shell{position:static!important}}
 </style>
 <script src="../shared/category-menu.js?v=33" defer></script>
