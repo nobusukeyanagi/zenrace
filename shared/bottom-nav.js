@@ -20,7 +20,7 @@
     {
       id: "schedule",
       label: "開催情報",
-      path: "gradedraces/",
+      path: "schedule/",
       icon: `
         <svg viewBox="0 0 96 96" aria-hidden="true">
           <rect x="15" y="17" width="66" height="64" rx="8" fill="none" stroke="currentColor" stroke-width="8"/>
@@ -76,16 +76,17 @@
 
   const inferActiveRoute = () => {
     const currentPath = normalizePath(window.location.pathname);
-    const homePath = normalizePath(appRoot.pathname);
+    const rootPath = normalizePath(appRoot.pathname);
+    const relative = currentPath.startsWith(rootPath)
+      ? currentPath.slice(rootPath.length)
+      : currentPath.replace(/^\/+/, "");
+    const first = relative.split("/").filter(Boolean)[0] || "";
 
-    for (const route of ROUTES) {
-      const routePath = normalizePath(new URL(route.path, appRoot).pathname);
-      if (route.id === "home") {
-        if (currentPath === homePath) return route.id;
-      } else if (currentPath === routePath || currentPath.startsWith(routePath)) {
-        return route.id;
-      }
-    }
+    if (["settings", "guide", "about"].includes(first) || first === "") return "home";
+    if (["schedule", "timetable", "monthly", "gradedraces"].includes(first)) return "schedule";
+    if (first === "vote") return "vote";
+    if (first === "onair") return "onair";
+    if (first === "mypage") return "mypage";
     return "home";
   };
 

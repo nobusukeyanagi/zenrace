@@ -1,47 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-  <meta name="theme-color" content="#090909">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>投票 | ZENRACE</title>
-  <link rel="stylesheet" href="../shared/header.css?v=19">
-  <link rel="stylesheet" href="../shared/page-shell.css?v=19">
-  <style>
-    :root{color-scheme:dark;font-family:"Noto Sans JP","Yu Gothic UI","Yu Gothic",sans-serif}
-    *{box-sizing:border-box}
-    html{background:#030712}
-    body{color:#f8fafc;background:radial-gradient(circle at 82% 10%,rgba(212,175,55,.18),transparent 24rem),linear-gradient(145deg,#111827,#030712)}
-    main{min-height:100%;display:grid;place-items:center;padding:28px 20px}
-    .placeholder{width:min(100%,520px);padding:42px 24px;text-align:center;border:1px solid rgba(255,255,255,.13);border-radius:22px;background:rgba(255,255,255,.055);box-shadow:0 18px 50px rgba(0,0,0,.28)}
-    .placeholder h2{margin:0 0 12px;color:#fff;font-size:22px}
-    .placeholder p{margin:0;color:#aeb8c8;font-size:13px;line-height:1.8}
-  </style>
-  <script src="../shared/fixed-layout.js?v=19" defer></script>
-  <script src="../shared/bottom-nav.js?v=28" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#090909">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>投票 | ZENRACE</title>
+<link rel="stylesheet" href="../shared/category-menu.css?v=33">
+<link rel="stylesheet" href="../shared/page-shell.css?v=19">
+<style>
+:root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;--gold:#f0cc70;--gold2:#fff0bd}
+*{box-sizing:border-box}
+html{background:#050608}
+body{color:#f7f8fa;background:radial-gradient(circle at 88% 6%,rgba(240,204,112,.17),transparent 28rem),linear-gradient(145deg,#171717,#050608 60%,#0e0b06)}
+button,select,input{font:inherit}
+.vote-page{width:min(calc(100% - 22px),760px);margin:0 auto;padding:14px 0 34px}
+.race-hero{position:relative;overflow:hidden;padding:18px 17px 17px;border:1px solid rgba(240,204,112,.35);border-radius:18px;background:linear-gradient(135deg,#17191f,#08090c 62%,#211908);box-shadow:0 17px 45px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.08)}
+.race-hero::after{content:"";position:absolute;right:-45px;top:-70px;width:190px;height:190px;border-radius:50%;border:1px solid rgba(240,204,112,.13);box-shadow:0 0 60px rgba(240,204,112,.08)}
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#c9ced7;font-size:11px;font-weight:800;letter-spacing:.05em}
+.sg{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:25px;padding:0 9px;border-radius:999px;color:#15110a;background:linear-gradient(180deg,#fff2b6,#d6a837);font-weight:1000;box-shadow:0 3px 12px rgba(240,204,112,.24)}
+.race-hero h1{position:relative;z-index:1;margin:13px 0 6px;font-size:clamp(20px,5.8vw,31px);line-height:1.28;font-weight:950;letter-spacing:.015em}
+.race-sub{position:relative;z-index:1;margin:0;color:#aeb6c2;font-size:12px;font-weight:750}
+.race-meta{position:relative;z-index:1;margin-top:16px;display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(255,255,255,.10)}
+.meta{padding:12px 4px 0;text-align:center;border-right:1px solid rgba(255,255,255,.08)}.meta:last-child{border-right:0}
+.meta small{display:block;color:#8f98a6;font-size:9px;font-weight:800;letter-spacing:.1em}.meta strong{display:block;margin-top:4px;color:#fff;font-size:16px;font-weight:950}
+.panel{margin-top:12px;overflow:hidden;border:1px solid rgba(240,204,112,.22);border-radius:17px;background:rgba(10,11,14,.88);box-shadow:0 14px 38px rgba(0,0,0,.3)}
+.panel-title{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 14px;color:#fff;background:linear-gradient(90deg,rgba(240,204,112,.13),transparent);border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;font-weight:950}
+.panel-title span{color:#aeb6c2;font-size:10px;font-weight:750}
+.entry-head,.entrant-row{display:grid;grid-template-columns:48px minmax(0,1fr) 58px 60px;align-items:center}
+.entry-head{min-height:31px;color:#87919f;background:#0b0d11;font-size:9px;font-weight:850;text-align:center}
+.entry-head div:nth-child(2){text-align:left}
+.entrant-row{min-height:52px;border-top:1px solid rgba(255,255,255,.065);background:linear-gradient(180deg,rgba(255,255,255,.025),transparent)}
+.car{width:31px;height:31px;margin:auto;display:grid;place-items:center;border-radius:50%;font-size:16px;font-weight:1000;box-shadow:inset 0 2px 0 rgba(255,255,255,.25),inset 0 -3px 0 rgba(0,0,0,.22),0 3px 8px rgba(0,0,0,.35)}
+.car-1{background:#f4f5f7;color:#111;border:2px solid #d4d7dc}.car-2{background:#171717;color:#fff;border:2px solid #333}.car-3{background:#e51125;color:#fff}.car-4{background:#0877bd;color:#fff}.car-5{background:#f2d819;color:#111}.car-6{background:#07914a;color:#fff}.car-7{background:#ee8b10;color:#111}.car-8{background:#efa8c9;color:#111}
+.rider{min-width:0;color:#fff;font-size:14px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.handicap,.trial{text-align:center;font-variant-numeric:tabular-nums;font-size:12px;font-weight:850}.handicap{color:#aeb6c2}.trial{color:var(--gold2)}
+.bet-types{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;padding:12px}
+.bet-types button{min-width:0;height:38px;border:1px solid rgba(240,204,112,.2);border-radius:9px;color:#dfe3e8;background:#13151a;font-size:11px;font-weight:900}
+.bet-types button.active{color:#171108;border-color:#f0cc70;background:linear-gradient(180deg,#ffeaa7,#d8ab3c);box-shadow:0 0 14px rgba(240,204,112,.18)}
+.selections{padding:0 12px 12px;display:grid;gap:9px}
+.selection-line{display:grid;grid-template-columns:42px minmax(0,1fr);align-items:center;gap:8px}
+.selection-line label{color:#c7cdd6;font-size:11px;font-weight:900}
+.number-buttons{display:grid;grid-template-columns:repeat(8,1fr);gap:4px}
+.number-buttons button{aspect-ratio:1;border:1px solid rgba(255,255,255,.13);border-radius:50%;color:#fff;background:#15171c;font-size:12px;font-weight:950}
+.number-buttons button.selected{color:#171108;border-color:#f0cc70;background:var(--gold);box-shadow:0 0 10px rgba(240,204,112,.28)}
+.purchase{display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:9px;padding:13px;border-top:1px solid rgba(255,255,255,.08);background:#090a0d}
+.purchase-summary{min-width:0;display:flex;flex-direction:column;justify-content:center;color:#8f98a6;font-size:10px;line-height:1.55}.purchase-summary strong{color:#fff;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.amount{display:flex;align-items:center;gap:5px;margin-top:5px;color:#aeb6c2}.amount select{height:30px;min-width:88px;border:1px solid rgba(240,204,112,.25);border-radius:7px;color:#fff;background:#17191e;padding:0 7px}
+.confirm{grid-column:1/-1;height:48px;border:1px solid #ffe89c;border-radius:12px;color:#171108;background:linear-gradient(180deg,#ffeaa7,#d3a438);font-size:14px;font-weight:1000;box-shadow:0 8px 20px rgba(213,164,56,.2)}
+.notice{min-height:18px;margin:8px 13px 0;color:#f0cc70;font-size:10px;font-weight:800;text-align:center}
+@media(max-width:360px){.race-hero h1{font-size:19px}.entrant-row{min-height:49px}.rider{font-size:13px}.number-buttons{gap:3px}.selection-line{grid-template-columns:38px minmax(0,1fr)}}
+</style>
+<script src="../shared/category-menu.js?v=33" defer></script>
+<script src="../shared/fixed-layout.js?v=19" defer></script>
+<script src="../shared/bottom-nav.js?v=33" defer></script>
 </head>
 <body>
-  <header class="topbar">
-    <div class="header-side left"></div>
-    <div class="header-center"><h1 class="header-title">投票</h1></div>
-    <div class="header-side right"></div>
-  </header>
-
-  <div class="zenrace-content-shell" data-zenrace-pinch-shell>
-    <div class="zenrace-content-sizer" data-zenrace-pinch-sizer>
-      <div class="zenrace-content-stage" data-zenrace-pinch-stage>
-        <main>
-          <section class="placeholder">
-            <h2>投票</h2>
-            <p>このページは現在準備中です。</p>
-          </section>
-        </main>
-      </div>
+<zenrace-category-menu category="vote" active="vote"></zenrace-category-menu>
+<div class="zenrace-content-shell" data-zenrace-pinch-shell>
+  <div class="zenrace-content-sizer" data-zenrace-pinch-sizer>
+    <div class="zenrace-content-stage" data-zenrace-pinch-stage>
+      <main class="vote-page">
+        <section class="race-hero">
+          <div class="hero-top"><span>2026.02.23 MON</span><span class="sg">SG</span></div>
+          <h1>第39回 全日本選抜オートレース<br>優勝戦</h1>
+          <p class="race-sub">浜松オートレース場・12R</p>
+          <div class="race-meta"><div class="meta"><small>開催</small><strong>浜松</strong></div><div class="meta"><small>レース</small><strong>12R</strong></div><div class="meta"><small>発走</small><strong>16:40</strong></div></div>
+        </section>
+        <section class="panel">
+          <div class="panel-title">出走表 <span>ハンデ／試走タイム</span></div>
+          <div class="entry-head"><div>車番</div><div>選手名</div><div>ハンデ</div><div>試走</div></div>
+          <div class="entrant-row" data-car="1">
+  <div class="car car-1">1</div><div class="rider">黒川 京介</div><div class="handicap">0m</div><div class="trial">3.28</div>
+</div>
+<div class="entrant-row" data-car="2">
+  <div class="car car-2">2</div><div class="rider">鈴木 圭一郎</div><div class="handicap">0m</div><div class="trial">3.31</div>
+</div>
+<div class="entrant-row" data-car="3">
+  <div class="car car-3">3</div><div class="rider">青山 周平</div><div class="handicap">0m</div><div class="trial">3.28</div>
+</div>
+<div class="entrant-row" data-car="4">
+  <div class="car car-4">4</div><div class="rider">金子 大輔</div><div class="handicap">0m</div><div class="trial">3.27</div>
+</div>
+<div class="entrant-row" data-car="5">
+  <div class="car car-5">5</div><div class="rider">長田 稚也</div><div class="handicap">0m</div><div class="trial">3.27</div>
+</div>
+<div class="entrant-row" data-car="6">
+  <div class="car car-6">6</div><div class="rider">佐藤 励</div><div class="handicap">0m</div><div class="trial">3.28</div>
+</div>
+<div class="entrant-row" data-car="7">
+  <div class="car car-7">7</div><div class="rider">鈴木 宏和</div><div class="handicap">0m</div><div class="trial">3.29</div>
+</div>
+<div class="entrant-row" data-car="8">
+  <div class="car car-8">8</div><div class="rider">佐藤 摩弥</div><div class="handicap">0m</div><div class="trial">3.31</div>
+</div>
+        </section>
+        <section class="panel">
+          <div class="panel-title">買い目を選択 <span>デモ画面</span></div>
+          <div class="bet-types" id="betTypes"><button class="active" data-type="3連単">3連単</button><button data-type="3連複">3連複</button><button data-type="2連単">2連単</button><button data-type="2連複">2連複</button></div>
+          <div class="selections">
+            <div class="selection-line" data-slot="first"><label>1着</label><div class="number-buttons"><button type="button" data-car="1">1</button><button type="button" data-car="2">2</button><button type="button" data-car="3">3</button><button type="button" data-car="4">4</button><button type="button" data-car="5">5</button><button type="button" data-car="6">6</button><button type="button" data-car="7">7</button><button type="button" data-car="8">8</button></div></div>
+            <div class="selection-line" data-slot="second"><label>2着</label><div class="number-buttons"><button type="button" data-car="1">1</button><button type="button" data-car="2">2</button><button type="button" data-car="3">3</button><button type="button" data-car="4">4</button><button type="button" data-car="5">5</button><button type="button" data-car="6">6</button><button type="button" data-car="7">7</button><button type="button" data-car="8">8</button></div></div>
+            <div class="selection-line" data-slot="third"><label>3着</label><div class="number-buttons"><button type="button" data-car="1">1</button><button type="button" data-car="2">2</button><button type="button" data-car="3">3</button><button type="button" data-car="4">4</button><button type="button" data-car="5">5</button><button type="button" data-car="6">6</button><button type="button" data-car="7">7</button><button type="button" data-car="8">8</button></div></div>
+          </div>
+          <div class="purchase">
+            <div class="purchase-summary"><strong id="summary">車番を選択してください</strong><div class="amount">1点あたり <select id="amount"><option>100円</option><option>500円</option><option>1,000円</option><option>5,000円</option></select></div></div>
+            <div></div><button type="button" class="confirm" id="confirm">投票内容を確認</button>
+          </div>
+          <p class="notice" id="notice"></p>
+        </section>
+      </main>
     </div>
   </div>
-
-  <zenrace-bottom-nav active="vote"></zenrace-bottom-nav>
+</div>
+<zenrace-bottom-nav active="vote"></zenrace-bottom-nav>
+<script>
+(() => {
+  const state = { type: "3連単", first: null, second: null, third: null };
+  const summary = document.getElementById("summary");
+  const notice = document.getElementById("notice");
+  const thirdLine = document.querySelector('[data-slot="third"]');
+  const update = () => {
+    document.querySelectorAll('.selection-line').forEach(line => {
+      const slot = line.dataset.slot;
+      line.querySelectorAll('button').forEach(button => button.classList.toggle('selected', Number(button.dataset.car) === state[slot]));
+    });
+    const needed = state.type.startsWith('2') ? ['first','second'] : ['first','second','third'];
+    const values = needed.map(key => state[key]);
+    summary.textContent = values.every(Boolean) ? `${state.type}　${values.join(' - ')}` : '車番を選択してください';
+  };
+  document.getElementById('betTypes').addEventListener('click', event => {
+    const button = event.target.closest('button[data-type]'); if (!button) return;
+    state.type = button.dataset.type;
+    document.querySelectorAll('#betTypes button').forEach(item => item.classList.toggle('active', item === button));
+    const two = state.type.startsWith('2');
+    thirdLine.hidden = two; if (two) state.third = null;
+    notice.textContent = ''; update();
+  });
+  document.querySelector('.selections').addEventListener('click', event => {
+    const button = event.target.closest('button[data-car]'); if (!button) return;
+    const line = button.closest('.selection-line'); const slot = line.dataset.slot; const car = Number(button.dataset.car);
+    for (const key of ['first','second','third']) if (key !== slot && state[key] === car) state[key] = null;
+    state[slot] = state[slot] === car ? null : car; notice.textContent = ''; update();
+  });
+  document.getElementById('confirm').addEventListener('click', () => {
+    const needed = state.type.startsWith('2') ? ['first','second'] : ['first','second','third'];
+    notice.textContent = needed.every(key => state[key]) ? 'デモ画面のため、実際の投票は行われません。' : '必要な車番を選択してください。';
+  });
+  update();
+})();
+</script>
 </body>
 </html>

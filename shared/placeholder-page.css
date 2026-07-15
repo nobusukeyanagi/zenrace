@@ -1,0 +1,16 @@
+:root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif}
+*{box-sizing:border-box}
+html{background:#050608}
+body{color:#f8fafc;background:
+  radial-gradient(circle at 82% 7%,rgba(213,171,67,.19),transparent 24rem),
+  radial-gradient(circle at 8% 84%,rgba(213,171,67,.07),transparent 22rem),
+  linear-gradient(145deg,#161616,#050608 58%,#0d0b07)}
+.placeholder-main{width:min(calc(100% - 32px),720px);min-height:calc(100dvh - var(--header-total-h,56px) - var(--bottom-nav-total-h,62px));margin:0 auto;display:grid;place-items:center;padding:34px 0}
+.placeholder-card{position:relative;width:min(100%,520px);overflow:hidden;padding:52px 24px;text-align:center;border:1px solid rgba(240,204,112,.25);border-radius:22px;background:
+  linear-gradient(135deg,rgba(255,255,255,.065),rgba(255,255,255,.018)),
+  rgba(9,9,9,.78);box-shadow:0 22px 65px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.08)}
+.placeholder-card::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,rgba(240,204,112,.08) 50%,transparent 80%);transform:translateX(-80%);pointer-events:none}
+.placeholder-label{margin:0 0 12px;color:#f0cc70;font-size:12px;font-weight:900;letter-spacing:.20em}
+.placeholder-title{margin:0;color:#fff;font-size:clamp(24px,7vw,36px);font-weight:950;letter-spacing:.04em}
+.placeholder-status{display:inline-flex;align-items:center;gap:8px;margin-top:22px;color:#d7dbe2;font-size:14px;font-weight:800}
+.placeholder-status::before{content:"";width:7px;height:7px;border-radius:50%;background:#f0cc70;box-shadow:0 0 10px rgba(240,204,112,.7)}
