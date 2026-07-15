@@ -6,13 +6,13 @@
 <title>TikTok風コメントオーバーレイ 12行固定版</title>
 <style>
 :root {
-  --left: 30px;
+  --left: 20px;
   --bottom: 0px;
-  --width: 820px;
-  --height: 740px;
+  --width: 960px;
+  --height: 900px;
   --font-size: 36px;
   --line-height: 1.20;
-  --gap: 25px;
+  --gap: 15px;
   --rows: 12;
 }
 * { box-sizing: border-box; }
@@ -53,8 +53,8 @@ body { pointer-events: none; }
   line-height: var(--line-height);
   letter-spacing: .02em;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: visible;
+  text-overflow: clip;
   text-shadow:
     0 2px 3px rgba(0,0,0,.95),
     0 0 7px rgba(0,0,0,.75),
