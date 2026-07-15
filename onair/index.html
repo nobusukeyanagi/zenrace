@@ -7,602 +7,72 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>ONAIR | ZENRACE</title>
 <style>
-:root {
-  --w: 1080px;
-  --h: 2148px;
-  --fade: 300ms;
-}
-* { box-sizing: border-box; }
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: #000;
-  overscroll-behavior: none;
-  touch-action: manipulation;
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
-}
-body { position: relative; }
-#appViewport {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: var(--visual-top, 0px);
-  bottom: calc(var(--visual-bottom, 0px) + var(--bottom-nav-total-h, 62px));
-  overflow: hidden;
-  background: #000;
-}
-#stage {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: var(--w);
-  height: var(--h);
-  overflow: hidden;
-  background: #000;
-}
-.layer {
-  position: absolute;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity var(--fade) linear;
-}
-.layer.show {
-  opacity: 1;
-}
-.layer.no-fade {
-  transition: none;
-}
-iframe.layer {
-  background: transparent;
-}
-img.layer {
-  object-fit: fill;
-}
-.bg {
-  left: 0;
-  top: 0;
-  width: 1080px;
-  height: 2148px;
-  z-index: 0;
-}
-.status-live {
-  left: 0;
-  top: 0;
-  width: 1080px;
-  height: 128px;
-  z-index: 50;
-}
-.banner {
-  left: 0;
-  top: 130px;
-  width: 1080px;
-  height: 550px;
-  z-index: 30;
-}
-
-.vote-button-layer {
-  left: 60px;
-  top: 768px;
-  width: 300px;
-  height: 300px;
-  z-index: 45;
-}
-.chat {
-  left: 0;
-  top: 0;
-  width: 1080px;
-  height: 1500px;
-  z-index: 42;
-}
-.comment-stream {
-  left: 0;
-  top: 1150px;
-  width: 860px;
-  height: 740px;
-  z-index: 60;
-}
-.transition-screen {
-  left: 0;
-  top: 0;
-  width: 1080px;
-  height: 2148px;
-  z-index: 65;
-}
-.input {
-  left: 0;
-  top: 1850px;
-  width: 1080px;
-  height: 220px;
-  z-index: 70;
-}
-.menu-button {
-  left: 820px;
-  top: 1690px;
-  width: 200px;
-  height: 200px;
-  z-index: 75;
-  transition:
-    opacity var(--fade) linear,
-    filter .12s ease,
-    transform .12s ease;
-}
-.menu-button.press {
-  filter:
-    brightness(1.35)
-    drop-shadow(0 0 18px rgba(255, 215, 106, .95))
-    drop-shadow(0 0 34px rgba(255, 190, 78, .62));
-  transform: scale(.97);
-}
-.avatar-custom {
-  left: -153px;
-  top: 460px;
-  width: 1610px;
-  height: 3300px;
-  z-index: 20;
-}
-.hidden-media {
-  position: absolute;
-  left: 4px;
-  top: 4px;
-  width: 6px;
-  height: 6px;
-  opacity: 0.003;
-  pointer-events: none;
-  z-index: -1;
-}
-#debug {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-  z-index: 10000;
-  color: rgba(255,255,255,.8);
-  background: rgba(0,0,0,.4);
-  padding: 6px 10px;
-  border-radius: 8px;
-  font: 12px/1.2 monospace;
-  display: none;
-}
+:root{--w:540px;--h:1074px;--fade:260ms}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;overscroll-behavior:none;touch-action:manipulation;font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+#appViewport{position:fixed;left:0;right:0;top:var(--visual-top,0px);bottom:calc(var(--visual-bottom,0px) + var(--bottom-nav-total-h,62px));overflow:hidden;background:#000;contain:strict}
+#stage{position:absolute;left:0;top:0;width:var(--w);height:var(--h);overflow:hidden;background:#000;isolation:isolate}
+.layer{position:absolute;border:0;margin:0;padding:0;overflow:hidden;pointer-events:none;opacity:0;transition:opacity var(--fade) linear}
+.layer.show{opacity:1}.layer.no-fade{transition:none}iframe.layer{background:transparent}.bg{left:0;top:0;width:540px;height:1074px;z-index:0}
+.personality-bg{background:url("assets/personality_bg_mobile.webp") center/cover no-repeat}
+.personality-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 18%,rgba(4,10,30,.16),transparent 34%),linear-gradient(180deg,rgba(0,0,0,.08),transparent 45%,rgba(0,0,0,.10))}
+.status-live{left:0;top:0;width:540px;height:64px;z-index:50}.banner{left:0;top:65px;width:540px;height:275px;z-index:30}
+.vote-button-layer{left:30px;top:384px;width:150px;height:150px;z-index:45}.chat{left:0;top:0;width:540px;height:750px;z-index:42}
+.comment-stream{left:0;top:575px;width:430px;height:370px;z-index:60}.input{left:0;top:925px;width:540px;height:110px;z-index:70}
+.menu-button{left:410px;top:845px;width:100px;height:100px;z-index:75;transition:opacity var(--fade) linear,filter .12s ease,transform .12s ease}
+.menu-button.press{filter:brightness(1.25) drop-shadow(0 0 9px rgba(255,215,106,.85));transform:scale(.97)}
+.avatar-custom{left:-76.5px;top:230px;width:805px;height:1650px;z-index:20}
+.transition-screen{left:0;top:0;width:540px;height:1074px;z-index:65;background:radial-gradient(circle at 50% 42%,rgba(255,214,111,.30),transparent 24%),linear-gradient(135deg,#070b16,#241704 48%,#070b16);display:grid;place-items:center;color:#ffe29a;font-size:24px;font-weight:900;letter-spacing:.08em;text-shadow:0 0 18px rgba(255,205,90,.55)}
+.transition-screen::before{content:"MODE CHANGE";padding:18px 26px;border:1px solid rgba(255,224,154,.52);border-radius:16px;background:rgba(4,7,12,.68);box-shadow:0 0 28px rgba(255,200,75,.18)}
+.hidden-media{position:absolute;width:1px;height:1px;opacity:.001;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.layer{transition:none!important}}
 </style>
 </head>
 <body>
 <div id="appViewport"><div id="stage">
-  <!-- 背景 -->
-  <iframe id="bgPersonality" loading="eager" scrolling="no" class="layer bg" src="assets/personality_bg.html"></iframe>
-  <iframe id="bgConcierge" loading="eager" scrolling="no" class="layer bg" src="assets/concierge_bg.html"></iframe>
-  <iframe id="transitionScreen" loading="eager" scrolling="no" class="layer transition-screen" src="assets/transition_screen.html"></iframe>
-
-  <!-- アバター（Live2D） -->
+  <div id="bgPersonality" class="layer bg personality-bg"></div>
+  <iframe id="bgConcierge" class="layer bg" data-src="assets/concierge_bg.html" scrolling="no"></iframe>
+  <div id="transitionScreen" class="layer transition-screen"></div>
   <iframe id="avatarCustom" loading="eager" scrolling="no" class="layer avatar-custom" src="assets/avatar_live2d.html"></iframe>
-
-  <!-- 上部UI：iPhone風ステータスバーは非表示、LIVE行のみ表示 -->
-  <iframe id="statusLive" loading="eager" scrolling="no" class="layer status-live" src="assets/status_live_row.html" scrolling="no"></iframe>
-
-  <!-- バナー・チャット -->
+  <iframe id="statusLive" loading="eager" scrolling="no" class="layer status-live" src="assets/status_live_row.html"></iframe>
   <iframe id="bannerRace" loading="eager" scrolling="no" class="layer banner" src="assets/banner_race.html"></iframe>
-  <iframe id="bannerAddiction" loading="eager" scrolling="no" class="layer banner" src="assets/banner_addiction.html"></iframe>
+  <iframe id="bannerAddiction" class="layer banner" data-src="assets/banner_addiction.html" scrolling="no"></iframe>
   <iframe id="voteButton" loading="eager" scrolling="no" class="layer vote-button-layer" src="assets/vote_button.html"></iframe>
-  <iframe id="chatBot" loading="eager" scrolling="no" class="layer chat" src="assets/chat.html"></iframe>
-
-  <!-- コメント・入力欄・ボタン・ボトムナビ -->
+  <iframe id="chatBot" class="layer chat" data-src="assets/chat.html" scrolling="no"></iframe>
   <iframe id="commentStream" loading="eager" scrolling="no" class="layer comment-stream" src="assets/comment_stream.html"></iframe>
   <iframe id="sharedInput" loading="eager" scrolling="no" class="layer input" src="assets/shared_input.html"></iframe>
   <iframe id="personalityButton" loading="eager" scrolling="no" class="layer menu-button" src="assets/personality_button.html"></iframe>
-  <iframe id="conciergeButton" loading="eager" scrolling="no" class="layer menu-button" src="assets/concierge_button.html"></iframe>
-
-  <!-- 音声 -->
-  <audio id="bgm" class="hidden-media" src="assets/bgm.mp3" preload="metadata" loop></audio>
-  <audio id="voiceRace" class="hidden-media" src="assets/voice_race.wav" preload="metadata" playsinline></audio>
-  <audio id="voiceAddiction" class="hidden-media" src="assets/voice_addiction.wav" preload="metadata" playsinline></audio>
-  <div id="debug"></div>
+  <iframe id="conciergeButton" class="layer menu-button" data-src="assets/concierge_button.html" scrolling="no"></iframe>
+  <audio id="bgm" class="hidden-media" src="assets/bgm_demo.m4a" preload="metadata" playsinline></audio>
+  <audio id="voiceRace" class="hidden-media" src="assets/voice_race.m4a" preload="metadata" playsinline></audio>
+  <audio id="voiceAddiction" class="hidden-media" data-src="assets/voice_addiction.m4a" preload="none" playsinline></audio>
 </div></div>
 <zenrace-bottom-nav active="onair"></zenrace-bottom-nav>
-<script src="../shared/bottom-nav.js?v=17"></script>
-
+<script src="../shared/bottom-nav.js?v=18"></script>
 <script>
-const CONFIG = {
-  width: 1080,
-  height: 2148,
-
-  // OBSで録画するときの音量。必要に応じてここだけ変更してください。
-  bgmVolume: 0.18,
-  voiceVolume: 1.0,
-
-  // GitHubデモ用タイムライン（開始・終了画面なし）
-  // 0:00〜1:00   パーソナリティ：出走表
-  // 1:00〜1:03   切替演出
-  // 1:03〜2:20   コンシェルジュ
-  // 2:20〜2:23   切替演出
-  // 2:23〜2:45   パーソナリティ：出走表
-  // 2:45〜3:56   パーソナリティ：依存症対策
-  tStart: 0,
-  tPersonality2: 0.000,
-  tConcierge: 60.000,
-  tPersonality2Return: 140.000,
-  tPersonality2End: 165.000,
-  tPersonality: 165.000,
-  tPersonalityEnd: 236.000,
-  tFinalStart: 236.000,
-  tEnd: 236.000,
-  transitionDuration: 3.0,
-  preSwitchFlash: 0.3,
-
-  // 表示時計は実時刻ではなく、HTML再生開始時に15:30:30から進めます。
-  clockStartSeconds: 15 * 3600 + 30 * 60 + 30
-};
-
-const $ = (id) => document.getElementById(id);
-const layers = {
-  bgPersonality: $('bgPersonality'),
-  bgConcierge: $('bgConcierge'),
-  transitionScreen: $('transitionScreen'),
-  statusLive: $('statusLive'),
-  bannerRace: $('bannerRace'),
-  bannerAddiction: $('bannerAddiction'),
-  voteButton: $('voteButton'),
-  chatBot: $('chatBot'),
-  commentStream: $('commentStream'),
-  sharedInput: $('sharedInput'),
-  personalityButton: $('personalityButton'),
-  conciergeButton: $('conciergeButton'),
-  avatarCustom: $('avatarCustom')
-};
-
-const bgm = $('bgm');
-const voiceRace = $('voiceRace');
-const voiceAddiction = $('voiceAddiction');
-const debug = $('debug');
-const IS_IOS_SAFARI = /iP(?:hone|ad|od)/.test(navigator.userAgent) && /WebKit/.test(navigator.userAgent) && !/(CriOS|FxiOS|EdgiOS)/.test(navigator.userAgent);
-
-bgm.volume = CONFIG.bgmVolume;
-voiceRace.volume = CONFIG.voiceVolume;
-voiceAddiction.volume = CONFIG.voiceVolume;
-
-let startTime = null;
-let raceVoiceStarted = false;
-let addictionVoiceStarted = false;
-let finished = false;
-let currentScene = '';
-let previousScene = '';
-let conciergeChatStarted = false;
-let voiceAudioContext = null;
-let voiceAnalyserItems = [];
-let voiceAnalysisReady = false;
-let voiceLevelSmooth = 0;
-let conciergeAvatarSpeaking = false;
-let conciergeAvatarLevel = 0;
-let conciergeAvatarSpeakingAt = 0;
-
-function setupVoiceAudioAnalysis() {
-  if (voiceAnalysisReady || IS_IOS_SAFARI) return;
-
-  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-  if (!AudioContextClass) return;
-
-  try {
-    voiceAudioContext = voiceAudioContext || new AudioContextClass();
-    voiceAnalyserItems = [voiceRace, voiceAddiction].map((audio) => {
-      const source = voiceAudioContext.createMediaElementSource(audio);
-      const analyser = voiceAudioContext.createAnalyser();
-      analyser.fftSize = 1024;
-      analyser.smoothingTimeConstant = 0.35;
-      source.connect(analyser);
-      analyser.connect(voiceAudioContext.destination);
-      return {
-        audio,
-        analyser,
-        data: new Uint8Array(analyser.fftSize)
-      };
-    });
-    voiceAnalysisReady = true;
-  } catch (e) {
-    // すでに接続済み・環境制約などの場合は、口パクを安全側で止めます。
-    voiceAnalysisReady = false;
-  }
-}
-
-function resumeVoiceAudioAnalysis() {
-  try {
-    if (voiceAudioContext && voiceAudioContext.state !== 'running') {
-      voiceAudioContext.resume().catch(() => {});
-    }
-  } catch (e) {}
-}
-
-function getVoiceRmsLevel() {
-  if (!voiceAnalysisReady || !voiceAnalyserItems.length) {
-    const activeVoice = [voiceRace, voiceAddiction].some((audio) => audio && !audio.paused && !audio.ended);
-    const phase = performance.now() / 105;
-    const target = activeVoice ? 0.025 + 0.018 * (0.5 + 0.5 * Math.sin(phase)) : 0;
-    voiceLevelSmooth = voiceLevelSmooth * 0.72 + target * 0.28;
-    return voiceLevelSmooth;
-  }
-
-  let maxLevel = 0;
-  for (const item of voiceAnalyserItems) {
-    const audio = item.audio;
-    if (!audio || audio.paused || audio.ended) continue;
-
-    item.analyser.getByteTimeDomainData(item.data);
-    let sum = 0;
-    for (let i = 0; i < item.data.length; i++) {
-      const v = (item.data[i] - 128) / 128;
-      sum += v * v;
-    }
-    const rms = Math.sqrt(sum / item.data.length);
-    if (rms > maxLevel) maxLevel = rms;
-  }
-
-  // 音量のばらつきを軽く平滑化し、無音時はすぐ閉じすぎない程度に減衰します。
-  voiceLevelSmooth = voiceLevelSmooth * 0.62 + maxLevel * 0.38;
-  if (maxLevel < 0.006) voiceLevelSmooth *= 0.72;
-  return voiceLevelSmooth;
-}
-
-window.addEventListener('message', (event) => {
-  const data = event.data || {};
-  if (data.type === 'conciergeAvatarSpeaking') {
-    conciergeAvatarSpeaking = !!data.speaking;
-    conciergeAvatarLevel = conciergeAvatarSpeaking
-      ? Math.max(0, Math.min(1, Number(data.level) || 0.82))
-      : 0;
-    if (conciergeAvatarSpeaking) {
-      conciergeAvatarSpeakingAt = performance.now();
-    }
-  }
-});
-
-function setVisible(el, visible) {
-  if (!el) return;
-  el.classList.toggle('show', !!visible);
-}
-
-function flashButton(el) {
-  if (!el) return;
-  el.classList.remove('press');
-  void el.offsetWidth;
-  el.classList.add('press');
-  setTimeout(() => el.classList.remove('press'), 300);
-}
-
-function getScene(t) {
-  const d = CONFIG.transitionDuration;
-  if (t < CONFIG.tConcierge) return 'personality2';
-  if (t < CONFIG.tConcierge + d) return 'transitionToConcierge';
-  if (t < CONFIG.tPersonality2Return) return 'concierge';
-  if (t < CONFIG.tPersonality2Return + d) return 'transitionToPersonality';
-  if (t < CONFIG.tPersonality2End) return 'personality2';
-  return 'personality';
-}
-
-function restartConciergeChat() {
-  // チャット.htmlは、③コンシェルジュ画面に入ったタイミングで読み直して、
-  // 画面開始時からアニメーションが始まるようにします。
-  conciergeAvatarSpeaking = false;
-  conciergeAvatarLevel = 0;
-  conciergeAvatarSpeakingAt = 0;
-  layers.chatBot.src = `assets/chat.html?start=${Date.now()}`;
-  try {
-    layers.sharedInput.contentWindow.postMessage({ type: 'clearChatInput' }, '*');
-  } catch (e) {}
-}
-
-function applyScene(scene) {
-  if (scene === currentScene) return;
-  previousScene = currentScene;
-  currentScene = scene;
-
-  const isP2 = scene === 'personality2';
-  const isPersonality = scene === 'personality';
-  const isConcierge = scene === 'concierge';
-  const isTransition = scene === 'transitionToConcierge' || scene === 'transitionToPersonality';
-  const isAnyPersonality = isP2 || isPersonality;
-
-  setVisible(layers.bgPersonality, isAnyPersonality);
-  setVisible(layers.bgConcierge, isConcierge);
-  setVisible(layers.transitionScreen, isTransition);
-  setVisible(layers.statusLive, isAnyPersonality);
-
-  setVisible(layers.bannerRace, isP2);
-  setVisible(layers.bannerAddiction, isPersonality);
-  setVisible(layers.voteButton, isAnyPersonality);
-  setVisible(layers.chatBot, isConcierge);
-
-  setVisible(layers.commentStream, isAnyPersonality);
-  setVisible(layers.sharedInput, isAnyPersonality || isConcierge);
-
-  try {
-    if (isAnyPersonality) {
-      layers.sharedInput.contentWindow.postMessage({ type: 'setInputMode', mode: 'personality', text: 'コメントを入力…' }, '*');
-    } else if (isConcierge) {
-      layers.sharedInput.contentWindow.postMessage({ type: 'setInputMode', mode: 'concierge', text: 'チャットを入力...' }, '*');
-    }
-  } catch (e) {}
-
-  setVisible(layers.personalityButton, isAnyPersonality);
-  setVisible(layers.conciergeButton, isConcierge);
-  setVisible(layers.avatarCustom, isAnyPersonality || isConcierge);
-
-  if (previousScene && previousScene !== currentScene) {
-    const cameFromPersonality = previousScene === 'personality2' || previousScene === 'personality';
-    const goingToPersonality = isP2 || isPersonality;
-    if (cameFromPersonality && isConcierge) flashButton(layers.conciergeButton);
-    if (previousScene === 'concierge' && goingToPersonality) flashButton(layers.personalityButton);
-  }
-
-  if (isConcierge && !conciergeChatStarted) {
-    conciergeChatStarted = true;
-    restartConciergeChat();
-  }
-
-  // Live2Dアバターの横位置は固定。
-  layers.avatarCustom.style.left = '-153px';
-}
-
-async function startPlayback() {
-  if (startTime !== null) return;
-  startTime = performance.now();
-  setupVoiceAudioAnalysis();
-  applyScene('personality2');
-  requestAnimationFrame(tick);
-
-  bgm.currentTime = 1;
-  bgm.play().then(resumeVoiceAudioAnalysis).catch(() => {});
-}
-
-function unlockAudio() {
-  if (startTime === null) return;
-  const elapsed = Math.max(0, (performance.now() - startTime) / 1000);
-  setupVoiceAudioAnalysis();
-  resumeVoiceAudioAnalysis();
-  if (bgm.paused) {
-    try { bgm.currentTime = 1 + (elapsed % Math.max(1, bgm.duration || 9999)); } catch (e) {}
-    bgm.play().catch(() => {});
-  }
-  if (elapsed < CONFIG.tConcierge && voiceRace.paused) {
-    try { voiceRace.currentTime = Math.min(elapsed, Math.max(0, (voiceRace.duration || elapsed) - .05)); } catch (e) {}
-    voiceRace.play().catch(() => {});
-  }
-  if (elapsed >= CONFIG.tPersonality && elapsed < CONFIG.tEnd && voiceAddiction.paused) {
-    try { voiceAddiction.currentTime = Math.min(elapsed - CONFIG.tPersonality, Math.max(0, (voiceAddiction.duration || elapsed) - .05)); } catch (e) {}
-    voiceAddiction.play().catch(() => {});
-  }
-}
-
-['pointerdown','touchstart','click'].forEach(type => {
-  window.addEventListener(type, unlockAudio, { once: true, passive: true });
-});
-
-
-const preSwitchFlashState = {
-  toConcierge: false,
-  toPersonality: false
-};
-
-function maybeFlashPreSwitch(t) {
-  const lead = CONFIG.preSwitchFlash;
-  if (!preSwitchFlashState.toConcierge && t >= CONFIG.tConcierge - lead && t < CONFIG.tConcierge) {
-    preSwitchFlashState.toConcierge = true;
-    flashButton(layers.personalityButton);
-  }
-  if (!preSwitchFlashState.toPersonality && t >= CONFIG.tPersonality2Return - lead && t < CONFIG.tPersonality2Return) {
-    preSwitchFlashState.toPersonality = true;
-    flashButton(layers.conciergeButton);
-  }
-}
-
-
-let lastAvatarStateSent = 0;
-function updateCustomAvatar(t, scene, now) {
-  if (!layers.avatarCustom || now - lastAvatarStateSent < 80) return;
-  lastAvatarStateSent = now;
-
-  const isPersonalityScene = scene === 'personality2' || scene === 'personality';
-  const isConciergeScene = scene === 'concierge';
-  const voiceLevel = getVoiceRmsLevel();
-
-  // パーソナリティ：ボイス音声の実音量が一定以上のときだけ口パク。
-  // コンシェルジュ：応答チャットがタイプ表示されている間だけ口パク。
-  // BGMは解析対象に含めません。
-  const personalitySpeaking = isPersonalityScene && voiceLevel > 0.014;
-  // コンシェルジュはチャット応答のタイプ表示中に口パクします。
-  // postMessageの瞬間的な取りこぼしを防ぐため、直近の発話通知から短い余韻を持たせます。
-  const conciergeSpeaking = isConciergeScene && (
-    conciergeAvatarSpeaking || (now - conciergeAvatarSpeakingAt < 450)
-  );
-  const speaking = personalitySpeaking || conciergeSpeaking;
-  const mouthLevel = personalitySpeaking
-    ? Math.max(0, Math.min(1, (voiceLevel - 0.010) * 8.0))
-    : (conciergeSpeaking ? Math.max(0.68, conciergeAvatarLevel || 0.82) : 0);
-
-  try {
-    layers.avatarCustom.contentWindow.postMessage({
-      type: 'avatarState',
-      scene,
-      speaking,
-      level: mouthLevel
-    }, '*');
-  } catch (e) {}
-}
-
-function tick(now) {
-  if (startTime === null) return;
-  const t = (now - startTime) / 1000;
-  const scene = getScene(t);
-  applyScene(scene);
-  maybeFlashPreSwitch(t);
-  updateCustomAvatar(t, scene, now);
-
-  if (!raceVoiceStarted && t >= CONFIG.tPersonality2) {
-    raceVoiceStarted = true;
-    resumeVoiceAudioAnalysis();
-    voiceRace.currentTime = 0;
-    voiceRace.play().catch(() => {});
-  }
-
-  if (!addictionVoiceStarted && t >= CONFIG.tPersonality) {
-    addictionVoiceStarted = true;
-    resumeVoiceAudioAnalysis();
-    voiceAddiction.currentTime = 0;
-    voiceAddiction.play().catch(() => {});
-  }
-
-  if (!finished && t >= CONFIG.tEnd) {
-    finished = true;
-    bgm.pause();
-    voiceRace.pause();
-    voiceAddiction.pause();
-    window.__AITUBER_DONE__ = true;
-  }
-
-  debug.textContent = `${t.toFixed(1)}s / ${scene}`;
-  if (!finished) requestAnimationFrame(tick);
-}
-
-function syncViewport() {
-  const root = document.documentElement;
-  const vv = window.visualViewport;
-  const layoutHeight = Math.max(root.clientHeight, window.innerHeight || 0);
-  const top = vv ? Math.max(0, vv.offsetTop) : 0;
-  const visibleHeight = vv ? vv.height : (window.innerHeight || layoutHeight);
-  const bottom = vv ? Math.max(0, layoutHeight - visibleHeight - top) : 0;
-  root.style.setProperty('--visual-top', `${Math.round(top)}px`);
-  root.style.setProperty('--visual-bottom', `${Math.round(bottom)}px`);
-
-  const viewport = document.getElementById('appViewport');
-  const stage = document.getElementById('stage');
-  if (!viewport || !stage) return;
-  const scale = Math.min(viewport.clientWidth / CONFIG.width, viewport.clientHeight / CONFIG.height);
-  stage.style.transformOrigin = '0 0';
-  stage.style.transform = `scale(${scale})`;
-  stage.style.left = `${Math.max(0, (viewport.clientWidth - CONFIG.width * scale) / 2)}px`;
-  stage.style.top = `${Math.max(0, (viewport.clientHeight - CONFIG.height * scale) / 2)}px`;
-}
-
-window.addEventListener('load', () => {
-  syncViewport();
-  setTimeout(startPlayback, 180);
-});
-
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) {
-    try { bgm.pause(); voiceRace.pause(); voiceAddiction.pause(); } catch (e) {}
-  } else if (startTime !== null && !finished) {
-    unlockAudio();
-  }
-}, { passive: true });
-window.addEventListener('resize', syncViewport, { passive: true });
-window.addEventListener('orientationchange', () => setTimeout(syncViewport, 100), { passive: true });
-if (window.visualViewport) {
-  window.visualViewport.addEventListener('resize', syncViewport, { passive: true });
-  window.visualViewport.addEventListener('scroll', syncViewport, { passive: true });
-}
+const CONFIG={width:540,height:1074,bgmVolume:.18,voiceVolume:1,tConcierge:60,tPersonality2Return:140,tPersonality2End:165,tPersonality:165,tEnd:236,transitionDuration:3,preSwitchFlash:.3};
+const $=id=>document.getElementById(id);
+const layers={bgPersonality:$("bgPersonality"),bgConcierge:$("bgConcierge"),transitionScreen:$("transitionScreen"),statusLive:$("statusLive"),bannerRace:$("bannerRace"),bannerAddiction:$("bannerAddiction"),voteButton:$("voteButton"),chatBot:$("chatBot"),commentStream:$("commentStream"),sharedInput:$("sharedInput"),personalityButton:$("personalityButton"),conciergeButton:$("conciergeButton"),avatarCustom:$("avatarCustom")};
+const bgm=$("bgm"),voiceRace=$("voiceRace"),voiceAddiction=$("voiceAddiction");
+bgm.volume=CONFIG.bgmVolume;voiceRace.volume=CONFIG.voiceVolume;voiceAddiction.volume=CONFIG.voiceVolume;
+let startTime=null,raceVoiceStarted=false,addictionVoiceStarted=false,finished=false,currentScene="",previousScene="",conciergeChatStarted=false,voiceLevelSmooth=0,conciergeAvatarSpeaking=false,conciergeAvatarLevel=0,conciergeAvatarSpeakingAt=0,conciergeReleased=false,raceReleased=false;
+function ensureLoaded(el){if(!el||el.dataset.loaded==="1")return;const src=el.dataset.src;if(src){el.src=src;el.dataset.loaded="1"}}
+function releaseFrame(el){if(!el)return;try{el.src="about:blank";delete el.dataset.loaded}catch(e){}}
+function warmConcierge(){ensureLoaded(layers.bgConcierge);ensureLoaded(layers.chatBot);ensureLoaded(layers.conciergeButton)}
+function warmFinal(){ensureLoaded(layers.bannerAddiction);if(!voiceAddiction.src&&voiceAddiction.dataset.src)voiceAddiction.src=voiceAddiction.dataset.src}
+function setVisible(el,v){if(el)el.classList.toggle("show",!!v)}
+function flashButton(el){if(!el)return;el.classList.remove("press");void el.offsetWidth;el.classList.add("press");setTimeout(()=>el.classList.remove("press"),300)}
+function getScene(t){const d=CONFIG.transitionDuration;if(t<CONFIG.tConcierge)return"personality2";if(t<CONFIG.tConcierge+d)return"transitionToConcierge";if(t<CONFIG.tPersonality2Return)return"concierge";if(t<CONFIG.tPersonality2Return+d)return"transitionToPersonality";if(t<CONFIG.tPersonality2End)return"personality2";return"personality"}
+function restartConciergeChat(){ensureLoaded(layers.chatBot);conciergeAvatarSpeaking=false;conciergeAvatarLevel=0;conciergeAvatarSpeakingAt=0;layers.chatBot.src=`assets/chat.html?start=${Date.now()}`;try{layers.sharedInput.contentWindow.postMessage({type:"clearChatInput"},"*")}catch(e){}}
+function applyScene(scene){if(scene===currentScene)return;previousScene=currentScene;currentScene=scene;const p2=scene==="personality2",p=scene==="personality",c=scene==="concierge",tr=scene.startsWith("transition"),any=p2||p;setVisible(layers.bgPersonality,any);setVisible(layers.bgConcierge,c);setVisible(layers.transitionScreen,tr);setVisible(layers.statusLive,any);setVisible(layers.bannerRace,p2);setVisible(layers.bannerAddiction,p);setVisible(layers.voteButton,any);setVisible(layers.chatBot,c);setVisible(layers.commentStream,any);setVisible(layers.sharedInput,any||c);setVisible(layers.personalityButton,any);setVisible(layers.conciergeButton,c);setVisible(layers.avatarCustom,any||c);try{layers.sharedInput.contentWindow.postMessage({type:"setInputMode",mode:any?"personality":"concierge",text:any?"コメントを入力…":"チャットを入力..."},"*")}catch(e){}if(previousScene&&previousScene!==scene){const fromP=previousScene==="personality2"||previousScene==="personality";if(fromP&&c)flashButton(layers.conciergeButton);if(previousScene==="concierge"&&any)flashButton(layers.personalityButton)}if(c&&!conciergeChatStarted){conciergeChatStarted=true;restartConciergeChat()}}
+window.addEventListener("message",e=>{const d=e.data||{};if(d.type==="conciergeAvatarSpeaking"){conciergeAvatarSpeaking=!!d.speaking;conciergeAvatarLevel=conciergeAvatarSpeaking?Math.max(0,Math.min(1,Number(d.level)||.82)):0;if(conciergeAvatarSpeaking)conciergeAvatarSpeakingAt=performance.now()}});
+function activeVoiceLevel(){const active=[voiceRace,voiceAddiction].some(a=>a&&!a.paused&&!a.ended);const target=active?.045:0;voiceLevelSmooth=voiceLevelSmooth*.72+target*.28;return voiceLevelSmooth}
+let lastAvatar=0;function updateAvatar(scene,now){if(now-lastAvatar<100)return;lastAvatar=now;const pv=scene==="personality2"||scene==="personality",cv=scene==="concierge",level=activeVoiceLevel(),ps=pv&&level>.014,cs=cv&&(conciergeAvatarSpeaking||now-conciergeAvatarSpeakingAt<450);try{layers.avatarCustom.contentWindow.postMessage({type:"avatarState",scene,speaking:ps||cs,level:ps?Math.min(1,level*12):(cs?Math.max(.68,conciergeAvatarLevel||.82):0)},"*")}catch(e){}}
+async function startPlayback(){if(startTime!==null)return;startTime=performance.now();applyScene("personality2");requestAnimationFrame(tick);bgm.currentTime=0;bgm.play().catch(()=>{})}
+function unlockAudio(){if(startTime===null)return;const t=Math.max(0,(performance.now()-startTime)/1000);if(bgm.paused){try{bgm.currentTime=Math.min(t,bgm.duration||t)}catch(e){}bgm.play().catch(()=>{})}if(t<CONFIG.tConcierge&&voiceRace.paused){try{voiceRace.currentTime=Math.min(t,Math.max(0,(voiceRace.duration||t)-.05))}catch(e){}voiceRace.play().catch(()=>{})}if(t>=CONFIG.tPersonality&&t<CONFIG.tEnd){warmFinal();if(voiceAddiction.paused){try{voiceAddiction.currentTime=Math.min(t-CONFIG.tPersonality,Math.max(0,(voiceAddiction.duration||t)-.05))}catch(e){}voiceAddiction.play().catch(()=>{})}}}
+["pointerdown","touchstart","click"].forEach(type=>window.addEventListener(type,unlockAudio,{once:true,passive:true}));
+let flashC=false,flashP=false;function tick(now){if(startTime===null)return;const t=(now-startTime)/1000;if(t>54)warmConcierge();if(t>156)warmFinal();const scene=getScene(t);applyScene(scene);if(!flashC&&t>=CONFIG.tConcierge-CONFIG.preSwitchFlash&&t<CONFIG.tConcierge){flashC=true;flashButton(layers.personalityButton)}if(!flashP&&t>=CONFIG.tPersonality2Return-CONFIG.preSwitchFlash&&t<CONFIG.tPersonality2Return){flashP=true;flashButton(layers.conciergeButton)}updateAvatar(scene,now);if(!raceVoiceStarted){raceVoiceStarted=true;voiceRace.currentTime=0;voiceRace.play().catch(()=>{})}if(!addictionVoiceStarted&&t>=CONFIG.tPersonality){addictionVoiceStarted=true;warmFinal();voiceAddiction.currentTime=0;voiceAddiction.play().catch(()=>{})}if(!conciergeReleased&&t>146){conciergeReleased=true;setTimeout(()=>{releaseFrame(layers.bgConcierge);releaseFrame(layers.chatBot);releaseFrame(layers.conciergeButton)},500)}if(!raceReleased&&t>167){raceReleased=true;setTimeout(()=>releaseFrame(layers.bannerRace),500)}if(!finished&&t>=CONFIG.tEnd){finished=true;[bgm,voiceRace,voiceAddiction].forEach(a=>{try{a.pause();a.removeAttribute("src");a.load()}catch(e){}});try{layers.avatarCustom.contentWindow.postMessage({type:"freezeAvatar"},"*")}catch(e){}window.__AITUBER_DONE__=true}if(!finished)requestAnimationFrame(tick)}
+function syncViewport(){const root=document.documentElement,vv=window.visualViewport,layout=Math.max(root.clientHeight,window.innerHeight||0),top=vv?Math.max(0,vv.offsetTop):0,visible=vv?vv.height:(window.innerHeight||layout),bottom=vv?Math.max(0,layout-visible-top):0;root.style.setProperty("--visual-top",`${Math.round(top)}px`);root.style.setProperty("--visual-bottom",`${Math.round(bottom)}px`);const vp=$("appViewport"),stage=$("stage");if(!vp||!stage)return;const scale=Math.min(vp.clientWidth/CONFIG.width,vp.clientHeight/CONFIG.height);stage.style.transformOrigin="0 0";stage.style.transform=`scale(${scale})`;stage.style.left=`${Math.max(0,(vp.clientWidth-CONFIG.width*scale)/2)}px`;stage.style.top=`${Math.max(0,(vp.clientHeight-CONFIG.height*scale)/2)}px`}
+window.addEventListener("load",()=>{syncViewport();setTimeout(startPlayback,160)});document.addEventListener("visibilitychange",()=>{if(document.hidden){[bgm,voiceRace,voiceAddiction].forEach(a=>{try{a.pause()}catch(e){}})}else if(startTime!==null&&!finished)unlockAudio()},{passive:true});window.addEventListener("resize",syncViewport,{passive:true});window.addEventListener("orientationchange",()=>setTimeout(syncViewport,100),{passive:true});if(window.visualViewport){visualViewport.addEventListener("resize",syncViewport,{passive:true});visualViewport.addEventListener("scroll",syncViewport,{passive:true})}
 </script>
-</body>
-</html>
+</body></html>

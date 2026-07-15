@@ -6,8 +6,8 @@
 <title>Live2D Avatar Haru</title>
 <style>
 :root {
-  --w: 1610px;
-  --h: 3300px;
+  --w: 805px;
+  --h: 1650px;
 }
 * { box-sizing: border-box; }
 html, body {
@@ -42,9 +42,9 @@ body {
   height: var(--h);
   z-index: 2;
   filter:
-    drop-shadow(0 28px 36px rgba(0,0,0,.20))
-    drop-shadow(13px 12px 22px rgba(0,0,0,.13))
-    drop-shadow(-5px 0 12px rgba(255,255,255,.06));
+    drop-shadow(0 14px 18px rgba(0,0,0,.18))
+    drop-shadow(7px 6px 11px rgba(0,0,0,.11))
+    drop-shadow(-3px 0 6px rgba(255,255,255,.05));
   transform-origin: 58% 84%;
   animation: subtleSway 6.2s ease-in-out infinite;
 }
@@ -80,8 +80,8 @@ body {
   <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.4.0/dist/cubism4.min.js"></script>
   <script>
-    const W = 1610;
-    const H = 3300;
+    const W = 805;
+    const H = 1650;
     const canvas = document.getElementById('avatarCanvas');
     const fallback = document.getElementById('fallback');
 
@@ -154,13 +154,13 @@ body {
       // いったん等倍に戻してから、表示エリアに合わせてスケールを決めます。
       model.scale.set(1);
       const rawH = model.height || 1;
-      const targetH = 3274;
+      const targetH = 1637;
       const s = targetH / rawH;
       model.scale.set(s);
 
       // 頭が上部の出走表に少しかぶる位置感を狙う。
-      model.x = (W - model.width) / 2 + 72;
-      model.y = Math.max(42, H - model.height + 42);
+      model.x = (W - model.width) / 2 + 36;
+      model.y = Math.max(21, H - model.height + 21);
     }
 
     function playIdle() {
@@ -212,11 +212,15 @@ body {
           height: H,
           transparent: true,
           backgroundAlpha: 0,
-          antialias: true,
+          antialias: false,
           autoStart: true,
-          resolution: Math.min(window.devicePixelRatio || 1, 2)
+          resolution: 1,
+          powerPreference: 'low-power',
+          preserveDrawingBuffer: false
         });
 
+        app.ticker.maxFPS = 24;
+        app.ticker.minFPS = 8;
         try {
           app.renderer.background.alpha = 0;
           app.renderer.view.style.background = 'transparent';
@@ -238,7 +242,7 @@ body {
         // Live2D本体の自然な物理演算とアイドルを活かしつつ、反応は控えめに。
         idleTimer = setInterval(() => {
           if (!shouldLipSync && Math.random() < 0.35) playSmallReaction();
-        }, 12000);
+        }, 18000);
 
         window.addEventListener('resize', fitModel);
       } catch (e) {
@@ -247,8 +251,17 @@ body {
       }
     }
 
+
+    let frozen = false;
+    function setRendererRunning(running) {
+      if (!app || frozen) return;
+      try { running ? app.start() : app.stop(); } catch (e) {}
+    }
+    document.addEventListener('visibilitychange', () => setRendererRunning(!document.hidden), {passive:true});
+
     window.addEventListener('message', (event) => {
       const data = event.data || {};
+      if (data.type === 'freezeAvatar') { frozen = true; try { app && app.stop(); } catch(e) {} if (idleTimer) clearInterval(idleTimer); return; }
       if (data.type === 'avatarState') {
         shouldLipSync = !!data.speaking;
         mouthLevelTarget = shouldLipSync ? Math.max(0, Math.min(1, Number(data.level) || 0)) : 0;

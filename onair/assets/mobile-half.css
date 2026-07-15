@@ -1,0 +1,10 @@
+
+/* ONAIR mobile low-memory rendering */
+html{overflow:hidden!important;background:transparent!important}
+body{transform:scale(.5)!important;transform-origin:0 0!important}
+@supports (-webkit-touch-callout:none){
+  *,*::before,*::after{
+    -webkit-backdrop-filter:none!important;
+    backdrop-filter:none!important;
+  }
+}
