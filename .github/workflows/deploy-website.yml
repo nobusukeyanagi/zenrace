@@ -1,0 +1,135 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  workflow_call:
+
+concurrency:
+  group: zenrace-pages-deployment
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    name: Prepare website
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Prepare Pages files
+        env:
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          rm -rf _site
+          mkdir -p _site
+
+          # Web公開に不要な管理・開発ファイルを除き、サイト一式を複製する。
+          rsync -a ./ _site/ \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='_site/' \
+            --exclude='tests/' \
+            --exclude='**/__pycache__/' \
+            --exclude='*.py' \
+            --exclude='*.pyc' \
+            --exclude='requirements.txt' \
+            --exclude='README*' \
+            --exclude='*.md' \
+            --exclude='gradedraces/config.json' \
+            --exclude='gradedraces/changes.json' \
+            --exclude='gradedraces/source_status.json' \
+            --exclude='gradedraces/discord_notification_state.json' \
+            --exclude='gradedraces/*_report.json' \
+            --exclude='gradedraces/*_verification.json'
+
+          # 共通ボトムナビは通常ページの入口だけへ補完する。
+          python - <<'PY'
+          from pathlib import Path
+          import os
+
+          site = Path('_site')
+          entry_points = [
+              site / 'index.html',
+              site / 'gradedraces' / 'index.html',
+              site / 'gradedraces' / 'graded_races_schedule.html',
+              site / 'vote' / 'index.html',
+              site / 'onair' / 'index.html',
+              site / 'mypage' / 'index.html',
+          ]
+
+          for html in entry_points:
+              if not html.exists():
+                  continue
+
+              text = html.read_text(encoding='utf-8')
+              relative_root = os.path.relpath(site, html.parent).replace(os.sep, '/')
+              prefix = '' if relative_root == '.' else f'{relative_root}/'
+              script = (
+                  f'<script src="{prefix}shared/bottom-nav.js?v=deploy" '
+                  'defer></script>'
+              )
+
+              if 'bottom-nav.js' not in text and '</head>' in text:
+                  text = text.replace('</head>', f'  {script}\n</head>', 1)
+
+              if '<zenrace-bottom-nav' not in text and '</body>' in text:
+                  text = text.replace(
+                      '</body>',
+                      '  <zenrace-bottom-nav></zenrace-bottom-nav>\n</body>',
+                      1,
+                  )
+
+              html.write_text(text, encoding='utf-8')
+          PY
+
+          touch _site/.nojekyll
+
+          export DEPLOYED_SHA="$(git rev-parse HEAD)"
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          marker = {
+              'run_id': os.environ['RUN_ID'],
+              'commit_sha': os.environ['DEPLOYED_SHA'],
+              'deployed_at': datetime.now(timezone.utc).isoformat(),
+          }
+          Path('_site/deployment.json').write_text(
+              json.dumps(marker, ensure_ascii=False, separators=(',', ':')),
+              encoding='utf-8',
+          )
+          PY
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy website
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

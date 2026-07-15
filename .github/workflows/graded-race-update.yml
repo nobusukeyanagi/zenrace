@@ -1,0 +1,196 @@
+name: Graded-race Update
+
+on:
+  schedule:
+    # 毎日 日本時間2:17（UTCでは前日17:17）
+    - cron: '17 17 * * *'
+    # 3か月に1回：1・4・7・10月8日 日本時間3:17
+    # UTCでは同月7日18:17。
+    - cron: '17 18 7 1,4,7,10 *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: '更新範囲'
+        required: true
+        default: daily
+        type: choice
+        options:
+          - daily
+          - quarterly
+      base_date:
+        description: 'dailyの基準日 YYYY-MM-DD（空欄なら日本時間の当日）'
+        required: false
+        type: string
+      start_date:
+        description: 'quarterlyの開始日 YYYY-MM-DD（空欄なら当年1月1日）'
+        required: false
+        type: string
+      end_date:
+        description: 'quarterlyの終了日 YYYY-MM-DD（空欄なら翌年12月31日）'
+        required: false
+        type: string
+      chunk_days:
+        description: 'quarterlyで1回に処理する日数'
+        required: false
+        default: '31'
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: graded-race-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Update graded-race data
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: gradedraces/requirements.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r gradedraces/requirements.txt
+
+      - name: Resolve update mode and dates
+        id: plan
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+          INPUT_MODE: ${{ inputs.mode }}
+          INPUT_BASE_DATE: ${{ inputs.base_date }}
+          INPUT_START_DATE: ${{ inputs.start_date }}
+          INPUT_END_DATE: ${{ inputs.end_date }}
+          INPUT_CHUNK_DAYS: ${{ inputs.chunk_days }}
+        run: |
+          python - <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          event_name = os.environ.get('EVENT_NAME', '')
+          event_schedule = os.environ.get('EVENT_SCHEDULE', '')
+
+          if event_name == 'workflow_dispatch':
+              mode = os.environ.get('INPUT_MODE', '').strip() or 'daily'
+          elif event_schedule == '17 18 7 1,4,7,10 *':
+              mode = 'quarterly'
+          else:
+              mode = 'daily'
+
+          now = datetime.now(ZoneInfo('Asia/Tokyo'))
+          base_date = os.environ.get('INPUT_BASE_DATE', '').strip()
+          start_date = os.environ.get('INPUT_START_DATE', '').strip()
+          end_date = os.environ.get('INPUT_END_DATE', '').strip()
+          chunk_days = os.environ.get('INPUT_CHUNK_DAYS', '').strip() or '31'
+
+          if mode == 'quarterly':
+              start_date = start_date or f'{now.year}-01-01'
+              end_date = end_date or f'{now.year + 1}-12-31'
+
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
+              output.write(f'mode={mode}\n')
+              output.write(f'base_date={base_date}\n')
+              output.write(f'start_date={start_date}\n')
+              output.write(f'end_date={end_date}\n')
+              output.write(f'chunk_days={chunk_days}\n')
+          PY
+
+      - name: Update past 2 days through future 14 days
+        if: steps.plan.outputs.mode == 'daily'
+        working-directory: gradedraces
+        env:
+          BASE_DATE: ${{ steps.plan.outputs.base_date }}
+        run: |
+          if [ -n "$BASE_DATE" ]; then
+            python -m scripts.update_races \
+              --date "$BASE_DATE" \
+              --before 2 \
+              --after 14 \
+              --fail-if-all-sources-fail
+          else
+            python -m scripts.update_races \
+              --before 2 \
+              --after 14 \
+              --fail-if-all-sources-fail
+          fi
+
+      - name: Update through the end of next year
+        if: steps.plan.outputs.mode == 'quarterly'
+        working-directory: gradedraces
+        run: |
+          python -m scripts.audit_range \
+            --start '${{ steps.plan.outputs.start_date }}' \
+            --end '${{ steps.plan.outputs.end_date }}' \
+            --chunk-days '${{ steps.plan.outputs.chunk_days }}' \
+            --fail-if-any-chunk-fails
+
+      - name: Validate races.json
+        working-directory: gradedraces
+        run: python -m scripts.validate_races races.json
+
+      - name: Embed JSON into HTML
+        working-directory: gradedraces
+        run: |
+          python -m scripts.sync_html \
+            --json races.json \
+            --html graded_races_schedule.html
+          cp graded_races_schedule.html index.html
+
+      - name: Commit updated data
+        run: |
+          git config user.name 'graded-races-bot'
+          git config user.email 'graded-races-bot@users.noreply.github.com'
+
+          git add \
+            gradedraces/races.json \
+            gradedraces/graded_races_schedule.html \
+            gradedraces/index.html
+
+          [ -f gradedraces/changes.json ] && git add gradedraces/changes.json || true
+          [ -f gradedraces/source_status.json ] && git add gradedraces/source_status.json || true
+          [ -f gradedraces/range_update_report.json ] && git add gradedraces/range_update_report.json || true
+          [ -f gradedraces/grade_normalization_report.json ] && git add gradedraces/grade_normalization_report.json || true
+
+          if git diff --cached --quiet; then
+            echo 'グレードレース情報の変更はありません。'
+          else
+            git commit -m "Update graded races (${{ steps.plan.outputs.mode }})"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Upload update reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: graded-race-update-report
+          path: |
+            gradedraces/changes.json
+            gradedraces/source_status.json
+            gradedraces/range_update_report.json
+            gradedraces/grade_normalization_report.json
+          if-no-files-found: ignore
+          retention-days: 30
+
+  deploy:
+    name: Deploy updated website
+    needs: update
+    uses: ./.github/workflows/deploy-website.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
