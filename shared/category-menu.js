@@ -19,7 +19,9 @@
       { id: "grade", label: "グレード", path: "gradedraces/" },
     ],
     vote: [
-      { id: "vote", label: "投票", path: "vote/" },
+      { id: "racecard", label: "出走表", path: "vote/" },
+      { id: "bet", label: "投票", path: "vote/bet/" },
+      { id: "introduction", label: "紹介", path: "vote/introduction/" },
     ],
     mypage: [
       { id: "profile", label: "プロフィール", path: "mypage/" },
