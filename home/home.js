@@ -71,10 +71,36 @@
     window.setTimeout(() => { isProgrammaticScroll = false; }, behavior === "smooth" ? 360 : 0);
   };
 
+  let wrapResetTimer = 0;
+
+  const resetAfterWrap = (physicalIndex) => {
+    window.clearTimeout(wrapResetTimer);
+    wrapResetTimer = window.setTimeout(() => {
+      centerPhysical(physicalIndex, "auto");
+    }, 460);
+  };
+
   const goTo = (index, userInitiated = false) => {
-    current = (index + originalSlides.length) % originalSlides.length;
-    updateDots();
-    centerPhysical(physicalIndexFor(current), "smooth");
+    const count = originalSlides.length;
+
+    // 8枚目→1枚目、1枚目→8枚目も、ほかの移動と同じ方向へ
+    // 1枚分だけアニメーションさせ、複製スライド到達後に無動作で正規位置へ戻す。
+    if (count > 1 && current === count - 1 && index === count) {
+      current = 0;
+      updateDots();
+      centerPhysical(allSlides.length - 1, "smooth");
+      resetAfterWrap(physicalIndexFor(0));
+    } else if (count > 1 && current === 0 && index === -1) {
+      current = count - 1;
+      updateDots();
+      centerPhysical(0, "smooth");
+      resetAfterWrap(physicalIndexFor(current));
+    } else {
+      current = (index + count) % count;
+      updateDots();
+      centerPhysical(physicalIndexFor(current), "smooth");
+    }
+
     if (userInitiated) restartAutoPlay();
   };
 
