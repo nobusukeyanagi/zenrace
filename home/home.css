@@ -88,7 +88,7 @@ button{font:inherit}
   white-space:nowrap;
 }
 .balance-number{min-width:0;text-align:right}
-.balance-unit{display:block;width:2em;margin-left:0;text-align:left;font-size:.55em;color:#555}
+.balance-unit{display:block;width:2em;margin-left:0;text-align:left;font-size:.55em;color:#555;transform:translateX(10px)}
 .wallet-actions{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -129,16 +129,16 @@ button{font:inherit}
   display:flex;
   gap:12px;
   overflow-x:auto;
-  padding:3px calc((100% - min(72vw,320px))/2) 10px;
+  padding:3px calc((100% - min(68vw,300px))/2) 10px;
   scroll-behavior:smooth;
   scroll-snap-type:x mandatory;
-  scroll-padding-inline:calc((100% - min(72vw,320px))/2);
+  scroll-padding-inline:calc((100% - min(68vw,300px))/2);
   scrollbar-width:none;
   overscroll-behavior-x:contain;
 }
 .campaign-track::-webkit-scrollbar{display:none}
 .campaign-slide{
-  flex:0 0 min(72vw,320px);
+  flex:0 0 min(68vw,300px);
   aspect-ratio:1;
   overflow:hidden;
   border:1px solid rgba(232,195,101,.42);
