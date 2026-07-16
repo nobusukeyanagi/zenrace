@@ -276,6 +276,8 @@
       height: 40px;
       display: block;
       object-fit: contain;
+      filter: brightness(0) invert(1);
+      -webkit-filter: brightness(0) invert(1);
     }
 
     .deadline-notice .venue {
@@ -390,7 +392,7 @@
       const venue = venues[Math.floor(Math.random() * venues.length)];
       const raceNo = 1 + Math.floor(Math.random() * 12);
       deadlineEl.classList.remove("show");
-      deadlineEl.innerHTML = `<span class="deadline-icon" aria-hidden="true"><img src="../../gradedraces/icons/keirin.png?v=32" alt=""></span><span class="venue">${venue}</span><span class="race-no">${raceNo}R</span><span class="deadline-text">締切10分前</span>`;
+      deadlineEl.innerHTML = `<span class="deadline-icon" aria-hidden="true"><img src="../../gradedraces/icons/keirin.png?v=41" alt=""></span><span class="venue">${venue}</span><span class="race-no">${raceNo}R</span><span class="deadline-text">締切10分前</span>`;
       void deadlineEl.offsetWidth;
       deadlineEl.classList.add("show");
     }

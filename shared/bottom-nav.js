@@ -48,7 +48,7 @@
     },
     {
       id: "onair",
-      label: "ONAIR",
+      label: "LIVE",
       path: "onair/",
       icon: `
         <svg viewBox="0 0 112 96" aria-hidden="true">
