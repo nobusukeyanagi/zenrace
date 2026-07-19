@@ -3129,7 +3129,7 @@
     "venue": "函館",
     "grade": "GIII",
     "name": "函館2歳S",
-    "winner": ""
+    "winner": "フェリチタ"
   },
   {
     "date": "2026-07-19",
@@ -3138,7 +3138,7 @@
     "venue": "小倉",
     "grade": "GIII",
     "name": "小倉記念",
-    "winner": ""
+    "winner": "ゼンダンハヤブサ"
   },
   {
     "date": "2026-07-19",
@@ -3147,7 +3147,7 @@
     "venue": "盛岡",
     "grade": "M3",
     "name": "いしがきマイラーズ",
-    "winner": ""
+    "winner": "モズマーヴェリック"
   },
   {
     "date": "2026-07-19",
@@ -3156,7 +3156,7 @@
     "venue": "高知",
     "grade": "",
     "name": "トレノ賞",
-    "winner": ""
+    "winner": "ニクソンテソーロ"
   },
   {
     "date": "2026-07-19",
@@ -3165,7 +3165,7 @@
     "venue": "金沢",
     "grade": "",
     "name": "金沢城鼠多門賞",
-    "winner": ""
+    "winner": "アメジストロード"
   },
   {
     "date": "2026-07-19",
@@ -3174,7 +3174,7 @@
     "venue": "帯広",
     "grade": "BG3",
     "name": "ばんえい大賞典",
-    "winner": ""
+    "winner": "ヤマトテンショウ"
   },
   {
     "date": "2026-07-20",
@@ -3214,20 +3214,20 @@
   },
   {
     "date": "2026-07-22",
+    "time": "20:15",
+    "sport": "nar",
+    "venue": "大井",
+    "grade": "SⅢ",
+    "name": "サンタアニタトロフィー",
+    "winner": ""
+  },
+  {
+    "date": "2026-07-22",
     "time": "20:35",
     "sport": "nar",
     "venue": "門別",
     "grade": "H3",
     "name": "リリーカップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-07-22",
-    "time": "",
-    "sport": "nar",
-    "venue": "大井",
-    "grade": "SⅢ",
-    "name": "サンタアニタトロフィー",
     "winner": ""
   },
   {
@@ -3376,20 +3376,20 @@
   },
   {
     "date": "2026-08-02",
+    "time": "14:20",
+    "sport": "jra",
+    "venue": "札幌",
+    "grade": "GIII",
+    "name": "クイーンS",
+    "winner": ""
+  },
+  {
+    "date": "2026-08-02",
     "time": "15:35",
     "sport": "jra",
     "venue": "新潟",
     "grade": "GIII",
     "name": "アイビスサマーダッシュ",
-    "winner": ""
-  },
-  {
-    "date": "2026-08-02",
-    "time": "16:00",
-    "sport": "jra",
-    "venue": "札幌",
-    "grade": "GIII",
-    "name": "クイーンS",
     "winner": ""
   },
   {

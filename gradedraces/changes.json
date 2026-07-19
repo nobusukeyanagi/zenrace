@@ -1,35 +1,62 @@
 {
-  "generated_at": "2026-07-19T05:12:17.807139+09:00",
-  "center_date": "2026-07-19",
+  "generated_at": "2026-07-20T05:16:29.560394+09:00",
+  "center_date": "2026-07-20",
   "window": {
-    "start": "2026-07-17",
-    "end": "2026-08-02"
+    "start": "2026-07-18",
+    "end": "2026-08-03"
   },
   "target_count": 36,
-  "change_count": 6,
+  "change_count": 8,
   "changes": [
     {
-      "date": "2026-08-02",
+      "date": "2026-07-19",
       "sport": "jra",
-      "venue": "新潟",
-      "name": "アイビスサマーダッシュ",
+      "venue": "小倉",
+      "name": "小倉記念",
       "before": {
-        "date": "2026-08-02",
-        "time": "",
+        "date": "2026-07-19",
+        "time": "15:20",
         "sport": "jra",
-        "venue": "新潟",
-        "grade": "GⅢ",
-        "name": "アイビスサマーダッシュ",
+        "venue": "小倉",
+        "grade": "GIII",
+        "name": "小倉記念",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-02",
-        "time": "",
+        "date": "2026-07-19",
+        "time": "15:20",
         "sport": "jra",
-        "venue": "新潟",
+        "venue": "小倉",
         "grade": "GIII",
-        "name": "アイビスサマーダッシュ",
+        "name": "小倉記念",
+        "winner": "ゼンダンハヤブサ"
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-07-19",
+      "sport": "jra",
+      "venue": "函館",
+      "name": "函館2歳S",
+      "before": {
+        "date": "2026-07-19",
+        "time": "14:10",
+        "sport": "jra",
+        "venue": "函館",
+        "grade": "GIII",
+        "name": "函館2歳S",
         "winner": ""
+      },
+      "after": {
+        "date": "2026-07-19",
+        "time": "14:10",
+        "sport": "jra",
+        "venue": "函館",
+        "grade": "GIII",
+        "name": "函館2歳S",
+        "winner": "フェリチタ"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -41,69 +68,6 @@
       "venue": "札幌",
       "name": "クイーンS",
       "before": {
-        "date": "2026-08-02",
-        "time": "",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GⅢ",
-        "name": "クイーンステークス",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-02",
-        "time": "",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GIII",
-        "name": "クイーンS",
-        "winner": ""
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-08-02",
-      "sport": "jra",
-      "venue": "新潟",
-      "name": "アイビスサマーダッシュ",
-      "before": {
-        "date": "2026-08-02",
-        "time": "",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GIII",
-        "name": "アイビスサマーダッシュ",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-02",
-        "time": "15:35",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GIII",
-        "name": "アイビスサマーダッシュ",
-        "winner": ""
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/8/0802.html",
-      "note": "JRA競馬番組"
-    },
-    {
-      "date": "2026-08-02",
-      "sport": "jra",
-      "venue": "札幌",
-      "name": "クイーンS",
-      "before": {
-        "date": "2026-08-02",
-        "time": "",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GIII",
-        "name": "クイーンS",
-        "winner": ""
-      },
-      "after": {
         "date": "2026-08-02",
         "time": "16:00",
         "sport": "jra",
@@ -112,62 +76,152 @@
         "name": "クイーンS",
         "winner": ""
       },
+      "after": {
+        "date": "2026-08-02",
+        "time": "14:20",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GIII",
+        "name": "クイーンS",
+        "winner": ""
+      },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/8/0802.html",
       "note": "JRA競馬番組"
     },
     {
-      "date": "2026-07-22",
+      "date": "2026-07-19",
       "sport": "nar",
-      "venue": "門別",
-      "name": "リリーカップ",
+      "venue": "盛岡",
+      "name": "いしがきマイラーズ",
       "before": {
-        "date": "2026-07-22",
-        "time": "",
+        "date": "2026-07-19",
+        "time": "17:25",
         "sport": "nar",
-        "venue": "門別",
-        "grade": "H3",
-        "name": "リリーカップ",
+        "venue": "盛岡",
+        "grade": "M3",
+        "name": "いしがきマイラーズ",
         "winner": ""
       },
       "after": {
-        "date": "2026-07-22",
-        "time": "20:35",
+        "date": "2026-07-19",
+        "time": "17:25",
         "sport": "nar",
-        "venue": "門別",
-        "grade": "H3",
-        "name": "リリーカップ",
-        "winner": ""
+        "venue": "盛岡",
+        "grade": "M3",
+        "name": "いしがきマイラーズ",
+        "winner": "モズマーヴェリック"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F22&k_babaCode=36",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F19&k_babaCode=10",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-07-23",
+      "date": "2026-07-19",
       "sport": "nar",
-      "venue": "門別",
-      "name": "王冠賞",
+      "venue": "高知",
+      "name": "トレノ賞",
       "before": {
-        "date": "2026-07-23",
-        "time": "",
+        "date": "2026-07-19",
+        "time": "18:05",
         "sport": "nar",
-        "venue": "門別",
-        "grade": "H2",
-        "name": "王冠賞",
+        "venue": "高知",
+        "grade": "",
+        "name": "トレノ賞",
         "winner": ""
       },
       "after": {
-        "date": "2026-07-23",
-        "time": "20:35",
+        "date": "2026-07-19",
+        "time": "18:05",
         "sport": "nar",
-        "venue": "門別",
-        "grade": "H2",
-        "name": "王冠賞",
+        "venue": "高知",
+        "grade": "",
+        "name": "トレノ賞",
+        "winner": "ニクソンテソーロ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F19&k_babaCode=31",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-07-19",
+      "sport": "nar",
+      "venue": "金沢",
+      "name": "金沢城鼠多門賞",
+      "before": {
+        "date": "2026-07-19",
+        "time": "18:15",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢城鼠多門賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-07-19",
+        "time": "18:15",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢城鼠多門賞",
+        "winner": "アメジストロード"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F19&k_babaCode=22",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-07-19",
+      "sport": "nar",
+      "venue": "帯広",
+      "name": "ばんえい大賞典",
+      "before": {
+        "date": "2026-07-19",
+        "time": "20:00",
+        "sport": "nar",
+        "venue": "帯広",
+        "grade": "BG3",
+        "name": "ばんえい大賞典",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-07-19",
+        "time": "20:00",
+        "sport": "nar",
+        "venue": "帯広",
+        "grade": "BG3",
+        "name": "ばんえい大賞典",
+        "winner": "ヤマトテンショウ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F19&k_babaCode=03",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-07-22",
+      "sport": "nar",
+      "venue": "大井",
+      "name": "サンタアニタトロフィー",
+      "before": {
+        "date": "2026-07-22",
+        "time": "",
+        "sport": "nar",
+        "venue": "大井",
+        "grade": "SⅢ",
+        "name": "サンタアニタトロフィー",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-07-22",
+        "time": "20:15",
+        "sport": "nar",
+        "venue": "大井",
+        "grade": "SⅢ",
+        "name": "サンタアニタトロフィー",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F23&k_babaCode=36",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F22&k_babaCode=20",
       "note": "地方競馬公式レース情報"
     }
   ]
