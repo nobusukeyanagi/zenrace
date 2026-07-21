@@ -7,6 +7,7 @@
   const REFERENCE_MINUTES = 16 * 60 + 40;
   const FOCUS_SLOT_INDEX = 1;
   const WEEKDAY = ["日", "月", "火", "水", "木", "金", "土"];
+  const VENUE_ORDER = ["松戸", "京王閣", "平塚", "豊橋", "玉野", "防府", "高知", "浜松", "飯塚"];
 
   const races = Array.isArray(window.ZENRACE_RACES) ? window.ZENRACE_RACES : [];
 
@@ -60,10 +61,13 @@
         minutes: timeToMinutes(race.time),
       });
     }
-    return [...grouped.values()].map((row) => ({
-      ...row,
-      races: row.races.sort((a, b) => a.minutes - b.minutes),
-    }));
+    const venueRank = new Map(VENUE_ORDER.map((venue, index) => [venue, index]));
+    return [...grouped.values()]
+      .map((row) => ({
+        ...row,
+        races: row.races.sort((a, b) => a.minutes - b.minutes),
+      }))
+      .sort((a, b) => (venueRank.get(a.venue) ?? 99) - (venueRank.get(b.venue) ?? 99));
   };
 
   const createCard = (race, className = "") => {
@@ -92,6 +96,9 @@
       if (index === nextIndex) className = "current";
       cards.push(createCard(race, className));
     });
+    if (nextIndex === row.races.length - 1) {
+      cards.push(createCard(null), createCard(null), createCard(null));
+    }
     return { mode: "active", cards: cards.join("") };
   };
 
@@ -137,7 +144,7 @@
       return;
     }
     const styles = getComputedStyle(document.documentElement);
-    const slotWidth = parseFloat(styles.getPropertyValue("--race-card-w")) || focusCard.offsetWidth || 92;
+    const slotWidth = parseFloat(styles.getPropertyValue("--race-card-w")) || focusCard.offsetWidth || 76;
     const slotGap = parseFloat(styles.getPropertyValue("--track-gap")) || 7;
     const trackPad = parseFloat(styles.getPropertyValue("--track-pad-x")) || 8;
     const target = focusCard.offsetLeft - trackPad - (FOCUS_SLOT_INDEX * (slotWidth + slotGap));
