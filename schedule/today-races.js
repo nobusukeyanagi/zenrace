@@ -17,6 +17,7 @@
 
   const races = Array.isArray(window.ZENRACE_RACES) ? window.ZENRACE_RACES : [];
   const venueOrder = Array.isArray(window.ZENRACE_VENUE_ORDER) ? window.ZENRACE_VENUE_ORDER : [];
+  const venueGrades = Array.isArray(window.ZENRACE_VENUE_GRADES) ? window.ZENRACE_VENUE_GRADES : [];
 
   const showPreparingToast = () => {
     let toast = document.querySelector(".today-race-toast");
@@ -48,10 +49,13 @@
     return `${value.getFullYear()}年 ${value.getMonth() + 1}月 ${value.getDate()}日 <span class="${classes.join(" ")}">(${WEEKDAY[weekday]})</span>`;
   };
   const timeToMinutes = (time) => {
+    if (!/^\d{1,2}:\d{2}$/.test(String(time))) return Number.NaN;
     const [hour, minute] = String(time).split(":").map(Number);
     return (hour * 60) + minute;
   };
+  const raceNumber = (race) => Number.parseInt(String(race.race), 10) || 0;
   const groupKey = (sport, venue) => `${sport}:${venue}`;
+  const venueGradeMap = new Map(venueGrades.map((item) => [groupKey(item.sport, item.venue), item]));
 
 
 
@@ -60,14 +64,24 @@
     for (const race of races) {
       const key = groupKey(race.sport, race.venue);
       if (!grouped.has(key)) {
-        grouped.set(key, { venue: race.venue, sport: race.sport, races: [] });
+        grouped.set(key, { venue: race.venue, sport: race.sport, grade: venueGradeMap.get(key) || null, races: [] });
       }
       grouped.get(key).races.push({ ...race, minutes: timeToMinutes(race.time) });
     }
 
     const venueRank = new Map(venueOrder.map((item, index) => [groupKey(item.sport, item.venue), index]));
     return [...grouped.entries()]
-      .map(([key, row]) => ({ ...row, key, races: row.races.sort((a, b) => a.minutes - b.minutes) }))
+      .map(([key, row]) => ({
+        ...row,
+        key,
+        races: row.races.sort((a, b) => {
+          const aValid = Number.isFinite(a.minutes);
+          const bValid = Number.isFinite(b.minutes);
+          if (aValid && bValid) return (a.minutes - b.minutes) || (raceNumber(a) - raceNumber(b));
+          if (aValid !== bValid) return aValid ? -1 : 1;
+          return raceNumber(a) - raceNumber(b);
+        }),
+      }))
       .sort((a, b) => (venueRank.get(a.key) ?? 999) - (venueRank.get(b.key) ?? 999));
   };
 
@@ -75,8 +89,9 @@
     if (!race) {
       return `<span class="race-card placeholder ${className}" aria-hidden="true"><span class="race-no">--</span><span class="race-time">--:--</span></span>`;
     }
-    const label = `${race.venue} ${race.race} 締切${race.time}`;
-    return `<a href="#" class="race-card ${className}" aria-label="${label}"><span class="race-no">${race.race}</span><span class="race-time">${race.time}</span></a>`;
+    const cancelled = race.time === "中止";
+    const label = `${race.venue} ${race.race} ${cancelled ? "中止" : `締切${race.time}`}`;
+    return `<a href="#" class="race-card ${className}${cancelled ? " cancelled" : ""}" aria-label="${label}"><span class="race-no">${race.race}</span><span class="race-time">${race.time}</span></a>`;
   };
 
   const buildCurrentTrack = (row) => {
@@ -150,7 +165,10 @@
       <article class="venue-row" data-mode="${track.mode}">
         <div class="venue-card sport-${row.sport}">
           <div class="venue-name">${row.venue}</div>
-          <span class="venue-sport-icon ${row.sport}" aria-hidden="true"></span>
+          <div class="venue-icons">
+            <span class="venue-sport-icon ${row.sport}" aria-hidden="true"></span>
+            ${row.grade ? `<span class="venue-grade-icon ${row.grade.accent ? "accent" : "muted"}" aria-label="格 ${row.grade.label}">${row.grade.label}</span>` : ""}
+          </div>
         </div>
         <div class="venue-track-shell">
           <div class="venue-track" data-mode="${track.mode}" data-anchor="${track.anchor}">${track.cards}</div>
