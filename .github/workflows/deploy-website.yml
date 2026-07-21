@@ -46,6 +46,9 @@ jobs:
             --exclude='gradedraces/config.json' \
             --exclude='gradedraces/changes.json' \
             --exclude='gradedraces/source_status.json' \
+            --exclude='gradedraces/schedule_sync_state.json' \
+            --exclude='gradedraces/master_schedule_report.json' \
+            --exclude='gradedraces/daily_update_report.json' \
             --exclude='gradedraces/discord_notification_state.json' \
             --exclude='gradedraces/*_report.json' \
             --exclude='gradedraces/*_verification.json'
