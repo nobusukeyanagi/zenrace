@@ -149,7 +149,8 @@
       }
       const styles = getComputedStyle(document.documentElement);
       const trackPad = parseFloat(styles.getPropertyValue("--track-pad-x")) || 8;
-      track.scrollLeft = Math.max(0, finalCard.offsetLeft - trackPad);
+      const bandShift = parseFloat(styles.getPropertyValue("--focus-band-shift")) || 0;
+      track.scrollLeft = Math.max(0, finalCard.offsetLeft - trackPad - bandShift);
       return;
     }
     const focusCard = track.querySelector(".race-card.current");
