@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T15:17:26.886917+09:00",
+  "generated_at": "2026-07-21T15:49:20.299375+09:00",
   "base_date": "2026-07-21",
   "steps": [
     {
@@ -45,8 +45,8 @@
   ],
   "summary": {
     "master_official_records": 205,
-    "master_added": 45,
-    "master_updated": 91,
+    "master_added": 0,
+    "master_updated": 6,
     "master_review_required": 6,
     "master_duplicates": 0,
     "detail_targets": 35,
