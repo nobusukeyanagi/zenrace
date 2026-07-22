@@ -146,9 +146,11 @@
       const featured = FEATURED.has(`${entry.venue}:${race}`) ? " featured" : "";
       return `<tr class="${featured}">
         <td class="race-col">${race}</td>
-        <td class="finish-cell win">${first}</td>
-        <td class="finish-cell">${second}</td>
-        <td class="finish-cell">${third}</td>
+        <td class="finish-cell">
+          <span class="bike-no bike-${first}">${first}</span>
+          <span class="bike-no bike-${second}">${second}</span>
+          <span class="bike-no bike-${third}">${third}</span>
+        </td>
         <td class="payout-cell">${payout}</td>
         <td class="pop-cell">${popularity}</td>
       </tr>`;
@@ -158,18 +160,8 @@
       <div class="result-table-wrap">
         <table class="result-table" aria-label="${entry.venue} 結果一覧">
           <colgroup>
-            <col class="r-col"><col class="finish-col"><col class="finish-col"><col class="finish-col"><col class="payout-col"><col class="pop-col">
+            <col class="r-col"><col class="finish-col"><col class="payout-col"><col class="pop-col">
           </colgroup>
-          <thead>
-            <tr>
-              <th>R</th>
-              <th>1着</th>
-              <th>2着</th>
-              <th>3着</th>
-              <th>三連単</th>
-              <th>人気</th>
-            </tr>
-          </thead>
           <tbody>${rows}</tbody>
         </table>
       </div>`;
