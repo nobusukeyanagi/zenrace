@@ -4,6 +4,8 @@
   // 添付データセットの基準日・表示基準時刻。
   const todayBase = new Date(2026, 1, 23);
   const selectedDate = new Date(todayBase);
+  const minDate = new Date(2026, 1, 22);
+  const maxDate = new Date(2026, 1, 24);
   const REFERENCE_MINUTES = 16 * 60 + 40;
   const FOCUS_SLOT_INDEX = 1;
   const WEEKDAY = ["日", "月", "火", "水", "木", "金", "土"];
@@ -15,11 +17,14 @@
     "2026-11-03", "2026-11-23",
   ]);
 
-  const races = Array.isArray(window.ZENRACE_RACES) ? window.ZENRACE_RACES : [];
-  const venueOrder = Array.isArray(window.ZENRACE_VENUE_ORDER) ? window.ZENRACE_VENUE_ORDER : [];
-  const venueGrades = Array.isArray(window.ZENRACE_VENUE_GRADES) ? window.ZENRACE_VENUE_GRADES : [];
+  const baseRaces = Array.isArray(window.ZENRACE_RACES) ? window.ZENRACE_RACES : [];
+  const baseVenueOrder = Array.isArray(window.ZENRACE_VENUE_ORDER) ? window.ZENRACE_VENUE_ORDER : [];
+  const baseVenueGrades = Array.isArray(window.ZENRACE_VENUE_GRADES) ? window.ZENRACE_VENUE_GRADES : [];
+  const extraRaceDays = window.ZENRACE_RACE_DAYS && typeof window.ZENRACE_RACE_DAYS === "object"
+    ? window.ZENRACE_RACE_DAYS
+    : {};
 
-  const showPreparingToast = () => {
+  const showPreparingToast = (message = "遷移先ページは準備中です") => {
     let toast = document.querySelector(".today-race-toast");
     if (!toast) {
       toast = document.createElement("div");
@@ -28,7 +33,7 @@
       toast.setAttribute("aria-live", "polite");
       document.body.append(toast);
     }
-    toast.textContent = "遷移先ページは準備中です";
+    toast.textContent = message;
     toast.classList.add("is-visible");
     window.clearTimeout(Number(toast.dataset.timer || 0));
     const timer = window.setTimeout(() => toast.classList.remove("is-visible"), 1800);
@@ -55,8 +60,7 @@
   };
   const raceNumber = (race) => Number.parseInt(String(race.race), 10) || 0;
   const groupKey = (sport, venue) => `${sport}:${venue}`;
-  const venueGradeMap = new Map(venueGrades.map((item) => [groupKey(item.sport, item.venue), item]));
-  const venueDayMap = new Map([
+  const baseVenueDayMap = new Map([
     [groupKey("keirin", "京王閣"), "初日"],
     [groupKey("keirin", "松戸"), "2日目"],
     [groupKey("keirin", "平塚"), "初日"],
@@ -84,7 +88,7 @@
     [groupKey("boat", "大村"), "最終日"],
   ]);
 
-  const venueSessionMap = new Map([
+  const baseVenueSessionMap = new Map([
     [groupKey("keirin", "京王閣"), "midnight"],
     [groupKey("keirin", "松戸"), "morning"],
     [groupKey("keirin", "平塚"), "midnight"],
@@ -102,23 +106,48 @@
     [groupKey("nar", "名古屋"), "night"],
     [groupKey("nar", "高知"), "night"],
   ]);
-  const girlsVenueSet = new Set([
+  const baseGirlsVenueSet = new Set([
     groupKey("keirin", "高知"),
     groupKey("boat", "福岡"),
   ]);
 
 
-  const groupRacesByVenue = () => {
+  const makeMap = (value) => new Map(Object.entries(value || {}));
+  const currentDayData = () => {
+    const key = dateKey(selectedDate);
+    if (key === dateKey(todayBase)) {
+      return {
+        races: baseRaces,
+        venueOrder: baseVenueOrder,
+        venueGrades: baseVenueGrades,
+        venueDayMap: baseVenueDayMap,
+        venueSessionMap: baseVenueSessionMap,
+        girlsVenueSet: baseGirlsVenueSet,
+      };
+    }
+    const source = extraRaceDays[key] || {};
+    return {
+      races: Array.isArray(source.races) ? source.races : [],
+      venueOrder: Array.isArray(source.venueOrder) ? source.venueOrder : [],
+      venueGrades: Array.isArray(source.venueGrades) ? source.venueGrades : [],
+      venueDayMap: makeMap(source.venueDays),
+      venueSessionMap: makeMap(source.venueSessions),
+      girlsVenueSet: new Set(Array.isArray(source.girlsVenues) ? source.girlsVenues : []),
+    };
+  };
+
+  const groupRacesByVenue = (dayData) => {
     const grouped = new Map();
-    for (const race of races) {
+    const gradeMap = new Map(dayData.venueGrades.map((item) => [groupKey(item.sport, item.venue), item]));
+    for (const race of dayData.races) {
       const key = groupKey(race.sport, race.venue);
       if (!grouped.has(key)) {
-        grouped.set(key, { venue: race.venue, sport: race.sport, grade: venueGradeMap.get(key) || null, races: [] });
+        grouped.set(key, { venue: race.venue, sport: race.sport, grade: gradeMap.get(key) || null, races: [] });
       }
       grouped.get(key).races.push({ ...race, minutes: timeToMinutes(race.time) });
     }
 
-    const venueRank = new Map(venueOrder.map((item, index) => [groupKey(item.sport, item.venue), index]));
+    const venueRank = new Map(dayData.venueOrder.map((item, index) => [groupKey(item.sport, item.venue), index]));
     return [...grouped.entries()]
       .map(([key, row]) => ({
         ...row,
@@ -205,14 +234,14 @@
     )).join(""),
   });
 
-  const renderRow = (row, dayDiff) => {
+  const renderRow = (row, dayDiff, dayData) => {
     let track = buildCurrentTrack(row);
     if (dayDiff < 0) track = buildPastTrack(row);
     if (dayDiff > 0) track = buildFutureTrack(row);
 
-    const venueDay = venueDayMap.get(row.key) || "";
-    const session = venueSessionMap.get(row.key) || "";
-    const hasGirls = girlsVenueSet.has(row.key);
+    const venueDay = dayData.venueDayMap.get(row.key) || "";
+    const session = dayData.venueSessionMap.get(row.key) || "";
+    const hasGirls = dayData.girlsVenueSet.has(row.key);
     const gradeIcon = row.grade
       ? `<span class="venue-grade-icon ${row.grade.accent ? "accent" : "muted"}" aria-label="格 ${row.grade.label}">${row.grade.label}</span>`
       : "";
@@ -367,8 +396,11 @@
     todayBtn.disabled = isCurrentDay;
 
     board.dataset.dayMode = dayDiff < 0 ? "past" : dayDiff > 0 ? "future" : "today";
-    const rows = groupRacesByVenue();
-    board.innerHTML = rows.map((row) => renderRow(row, dayDiff)).join("");
+    const dayData = currentDayData();
+    const rows = groupRacesByVenue(dayData);
+    board.innerHTML = rows.length
+      ? rows.map((row) => renderRow(row, dayDiff, dayData)).join("")
+      : '<div class="today-empty">この日の開催データは準備中です</div>';
     board.querySelectorAll(".venue-track").forEach((track) => {
       bindEndClamp(track);
       if (dayDiff === 0) bindTodayClamp(track);
@@ -393,10 +425,18 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("prevDate")?.addEventListener("click", () => {
+      if (startOfDay(selectedDate) <= startOfDay(minDate)) {
+        showPreparingToast("遷移先ページは準備中");
+        return;
+      }
       selectedDate.setDate(selectedDate.getDate() - 1);
       render();
     });
     document.getElementById("nextDate")?.addEventListener("click", () => {
+      if (startOfDay(selectedDate) >= startOfDay(maxDate)) {
+        showPreparingToast("遷移先ページは準備中");
+        return;
+      }
       selectedDate.setDate(selectedDate.getDate() + 1);
       render();
     });
@@ -404,6 +444,7 @@
       selectedDate.setTime(todayBase.getTime());
       render();
     });
+    document.getElementById("refreshRaces")?.addEventListener("click", () => render());
 
     const realignVisibleTracks = () => document.querySelectorAll(".venue-track").forEach(alignTrack);
     render();

@@ -15,19 +15,39 @@
 
   const pad = (value) => String(value).padStart(2, "0");
   const dateKey = (value) => `${value.getFullYear()}-${pad(value.getMonth() + 1)}-${pad(value.getDate())}`;
-  const parseDate = (value) => {
+  const parseDate = (value, fallback = new Date()) => {
     const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value || "");
     return match
       ? new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]))
-      : new Date();
+      : new Date(fallback);
   };
+  const startOfDay = (value) => new Date(value.getFullYear(), value.getMonth(), value.getDate());
 
   const baseDate = parseDate(toolbar.dataset.baseDate || "");
+  const minDate = parseDate(toolbar.dataset.minDate || "", baseDate);
+  const maxDate = parseDate(toolbar.dataset.maxDate || "", baseDate);
   const selectedDate = new Date(baseDate);
   const title = toolbar.querySelector("[data-date-title]");
   const previous = toolbar.querySelector("[data-date-prev]");
   const next = toolbar.querySelector("[data-date-next]");
   const today = toolbar.querySelector("[data-date-today]");
+  const refresh = toolbar.querySelector("[data-date-refresh]");
+
+  const showPreparingToast = () => {
+    let toast = document.querySelector(".date-selector-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.className = "date-selector-toast";
+      toast.setAttribute("role", "status");
+      toast.setAttribute("aria-live", "polite");
+      document.body.append(toast);
+    }
+    toast.textContent = "遷移先ページは準備中";
+    toast.classList.add("is-visible");
+    window.clearTimeout(Number(toast.dataset.timer || 0));
+    const timer = window.setTimeout(() => toast.classList.remove("is-visible"), 1800);
+    toast.dataset.timer = String(timer);
+  };
 
   const formatTitle = (value) => {
     const weekday = value.getDay();
@@ -43,20 +63,37 @@
     const current = dateKey(selectedDate) === dateKey(baseDate);
     today?.classList.toggle("is-current", current);
     if (today) today.disabled = current;
+    toolbar.dataset.selectedDate = dateKey(selectedDate);
+  };
+
+  const notifyRefresh = () => {
+    render();
+    window.dispatchEvent(new CustomEvent("zenrace-date-refresh", {
+      detail: { date: dateKey(selectedDate) },
+    }));
   };
 
   previous?.addEventListener("click", () => {
+    if (startOfDay(selectedDate) <= startOfDay(minDate)) {
+      showPreparingToast();
+      return;
+    }
     selectedDate.setDate(selectedDate.getDate() - 1);
-    render();
+    notifyRefresh();
   });
   next?.addEventListener("click", () => {
+    if (startOfDay(selectedDate) >= startOfDay(maxDate)) {
+      showPreparingToast();
+      return;
+    }
     selectedDate.setDate(selectedDate.getDate() + 1);
-    render();
+    notifyRefresh();
   });
   today?.addEventListener("click", () => {
     selectedDate.setTime(baseDate.getTime());
-    render();
+    notifyRefresh();
   });
+  refresh?.addEventListener("click", notifyRefresh);
 
   render();
 })();

@@ -27,8 +27,9 @@
 .date-weekday.sunday,.date-weekday.holiday{color:#ff7676}
 .date-weekday.saturday{color:#75b8ff}
 .date-toolbar-side{display:flex;align-items:center;min-width:0}
+.date-toolbar-side.left{justify-content:flex-start}
 .date-toolbar-side.right{justify-content:flex-end}
-.today-btn{
+.update-btn,.today-btn{
   min-width:66px;
   height:32px;
   padding:0 13px;
@@ -40,6 +41,7 @@
   font-weight:850;
   cursor:pointer;
 }
+.update-btn:active{color:#171108;border-color:#ffe6a1;background:#f0cc70}
 .today-btn.is-current{
   color:#171108;
   border-color:#ffe6a1;
@@ -54,5 +56,14 @@
   .date-nav{grid-template-columns:29px minmax(140px,auto) 29px}
   .date-arrow{width:29px}
   .date-title{font-size:15px}
-  .today-btn{min-width:60px;height:30px;padding-inline:9px}
+  .update-btn,.today-btn{min-width:60px;height:30px;padding-inline:9px}
 }
+
+.date-selector-toast{
+  position:fixed;left:50%;bottom:calc(var(--bottom-nav-total-h,62px) + 16px);z-index:12000;
+  max-width:min(88vw,420px);padding:10px 16px;color:#18130a;border:1px solid rgba(255,255,255,.42);
+  border-radius:999px;background:linear-gradient(135deg,#f2da8e,#c28c25);box-shadow:0 10px 28px rgba(0,0,0,.28);
+  font-size:13px;font-weight:850;opacity:0;pointer-events:none;transform:translate(-50%,12px);
+  transition:opacity .18s ease,transform .18s ease
+}
+.date-selector-toast.is-visible{opacity:1;transform:translate(-50%,0)}
