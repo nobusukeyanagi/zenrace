@@ -47,6 +47,9 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .venue-meta-row{display:flex;align-items:center;justify-content:center;gap:3px;min-height:20px;flex-wrap:nowrap}
 .venue-sport-icon{flex:0 0 19px;width:19px;height:19px;display:block;background:#fff;filter:drop-shadow(0 1px 1px rgba(0,0,0,.16))}
 .venue-sport-icon.keirin{-webkit-mask:url('../gradedraces/icons/keirin.png') center / contain no-repeat;mask:url('../gradedraces/icons/keirin.png') center / contain no-repeat}
+.venue-sport-icon.auto{-webkit-mask:url('../gradedraces/icons/auto.png') center / contain no-repeat;mask:url('../gradedraces/icons/auto.png') center / contain no-repeat}
+.venue-sport-icon.boat{-webkit-mask:url('../gradedraces/icons/boat.png') center / contain no-repeat;mask:url('../gradedraces/icons/boat.png') center / contain no-repeat}
+.venue-sport-icon.nar{-webkit-mask:url('../gradedraces/icons/nar.png') center / contain no-repeat;mask:url('../gradedraces/icons/nar.png') center / contain no-repeat}
 .venue-grade-icon{min-width:25px;height:18px;display:inline-flex;align-items:center;justify-content:center;padding:0 4px;border-radius:5px;color:#fff;font-size:9px;font-weight:1000;line-height:1;letter-spacing:-.03em;white-space:nowrap;box-shadow:inset 0 1px 0 rgba(255,255,255,.24),0 1px 2px rgba(0,0,0,.2)}
 .venue-grade-icon.accent{background:#d4232b}.venue-grade-icon.muted{background:#707782}
 .venue-status-icon{width:16px;height:16px;display:block;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.22)}
@@ -64,18 +67,22 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .result-table tbody tr.featured td{background:#fff0f1}
 .result-table .race-col{color:#8b6817;font-weight:950;white-space:nowrap}
 .result-table .finish-cell{padding-inline:2px;text-align:left;white-space:nowrap}
-.bike-no{width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;margin:0 1px;border:1px solid rgba(0,0,0,.30);border-radius:5px;font-size:14px;font-weight:1000;line-height:1;vertical-align:middle;box-shadow:inset 0 1px 0 rgba(255,255,255,.38),0 1px 2px rgba(0,0,0,.14)}
-.bike-1{color:#111;background:#fff;border-color:#8f949a}
-.bike-2{color:#fff;background:#202226;border-color:#050506}
-.bike-3{color:#fff;background:#d4232b;border-color:#9b1118}
-.bike-4{color:#fff;background:#2468c7;border-color:#174c98}
-.bike-5{color:#171108;background:#f0cf24;border-color:#b69b14}
-.bike-6{color:#fff;background:#2e9a4b;border-color:#1e7135}
-.bike-7{color:#fff;background:#e47b22;border-color:#aa5514}
-.bike-8{color:#fff;background:#e85b9e;border-color:#aa3970}
-.bike-9{color:#fff;background:#7648aa;border-color:#523178}
+.entry-no{width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;margin:0 1px;border:1px solid rgba(0,0,0,.30);border-radius:5px;font-size:14px;font-weight:1000;line-height:1;vertical-align:middle;box-shadow:inset 0 1px 0 rgba(255,255,255,.38),0 1px 2px rgba(0,0,0,.14)}
+.entry-1{color:#111;background:#fff;border-color:#8f949a}
+.entry-2{color:#fff;background:#202226;border-color:#050506}
+.entry-3{color:#fff;background:#d4232b;border-color:#9b1118}
+.entry-4{color:#fff;background:#2468c7;border-color:#174c98}
+.entry-5{color:#171108;background:#f0cf24;border-color:#b69b14}
+.entry-6{color:#fff;background:#2e9a4b;border-color:#1e7135}
+.entry-7{color:#fff;background:#e47b22;border-color:#aa5514}
+.entry-8{color:#fff;background:#e85b9e;border-color:#aa3970}
+.entry-9{color:#fff;background:#7648aa;border-color:#523178}
+.entry-10{color:#fff;background:#138d91;border-color:#0b676b;font-size:12px}
+.entry-11{color:#fff;background:#795548;border-color:#51362f;font-size:12px}
+.entry-12{color:#fff;background:#59636f;border-color:#343b43;font-size:12px}
 .result-table .payout-cell{width:110px;font-size:13px;font-weight:850;text-align:right;padding-right:8px;color:#17191d;white-space:nowrap}
 .result-table .pop-cell{width:68px;font-size:12px;font-weight:800;text-align:right;padding-right:8px;color:#5f6670;white-space:nowrap}
+.result-table .pop-cell.refund{color:#a05418}
 .results-placeholder{padding:56px 16px;color:#c0c6cf;text-align:center}
 .results-placeholder h2{margin:0 0 10px;color:#f0cc70;font-size:18px;font-weight:900}
 .results-placeholder p{margin:0;font-size:13px;font-weight:800;line-height:1.6}
@@ -87,5 +94,5 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
   .results-page{padding:5px}
   .venue-name{font-size:16px}.venue-title-line{gap:.45em}.venue-sport-icon{flex-basis:16px;width:16px;height:16px}.venue-meta-row{min-height:17px;gap:2px}.venue-grade-icon{height:17px;min-width:22px;padding-inline:3px;font-size:8px}.venue-status-icon{width:14px;height:14px}.venue-day-label{font-size:8px}
   .result-table col.r-col{width:34px}.result-table col.finish-col{width:75px}.result-table col.payout-col{width:98px}.result-table col.pop-col{width:60px}
-  .result-table tbody td{height:36px;font-size:12px;padding:5px 3px}.bike-no{width:21px;height:21px;margin-inline:1px;font-size:13px}.result-table .payout-cell{font-size:12px;padding-right:5px}.result-table .pop-cell{font-size:11px;padding-right:5px}
+  .result-table tbody td{height:36px;font-size:12px;padding:5px 3px}.entry-no{width:21px;height:21px;margin-inline:1px;font-size:13px}.entry-10,.entry-11,.entry-12{font-size:11px}.result-table .payout-cell{font-size:12px;padding-right:5px}.result-table .pop-cell{font-size:11px;padding-right:5px}
 }
