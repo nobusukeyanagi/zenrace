@@ -49,6 +49,7 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .venue-sport-icon.auto{-webkit-mask:url('../gradedraces/icons/auto.png') center / contain no-repeat;mask:url('../gradedraces/icons/auto.png') center / contain no-repeat}
 .venue-sport-icon.boat{-webkit-mask:url('../gradedraces/icons/boat.png') center / contain no-repeat;mask:url('../gradedraces/icons/boat.png') center / contain no-repeat}
 .venue-sport-icon.nar{-webkit-mask:url('../gradedraces/icons/nar.png') center / contain no-repeat;mask:url('../gradedraces/icons/nar.png') center / contain no-repeat}
+.venue-sport-icon.jra{-webkit-mask:url('../gradedraces/icons/jra.png') center / contain no-repeat;mask:url('../gradedraces/icons/jra.png') center / contain no-repeat}
 .venue-grade-icon{min-width:25px;height:18px;display:inline-flex;align-items:center;justify-content:center;padding:0 4px;border-radius:5px;color:#fff;font-size:9px;font-weight:1000;line-height:1;letter-spacing:-.03em;white-space:nowrap;box-shadow:inset 0 1px 0 rgba(255,255,255,.24),0 1px 2px rgba(0,0,0,.2)}
 .venue-grade-icon.accent{background:#d4232b}.venue-grade-icon.muted{background:#707782}
 .venue-status-icon{width:16px;height:16px;display:block;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.22)}
@@ -83,6 +84,12 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .result-table .payout-cell{width:110px;font-size:14px;font-weight:850;text-align:right;padding-right:8px;color:#17191d;white-space:nowrap}
 .result-table .pop-cell{width:68px;border-radius:0!important;font-size:13px;font-weight:800;text-align:right;padding-right:8px;color:#5f6670;white-space:nowrap}
 .result-table .pop-cell.refund{color:#a05418}
+.outcome-stack{display:grid;align-items:center;gap:0;min-height:24px}
+.outcome-line{min-height:24px;display:flex;align-items:center}
+.finish-cell .outcome-line{justify-content:flex-start}
+.payout-cell .outcome-line,.pop-cell .outcome-line{justify-content:flex-end}
+.multiple-outcomes .outcome-line+ .outcome-line{border-top:1px dashed #d6d9de;padding-top:4px;margin-top:4px}
+.multiple-outcomes .race-col{vertical-align:middle}
 .results-placeholder{padding:56px 16px;color:#c0c6cf;text-align:center}
 .results-placeholder h2{margin:0 0 10px;color:#f0cc70;font-size:18px;font-weight:900}
 .results-placeholder p{margin:0;font-size:13px;font-weight:800;line-height:1.6}
