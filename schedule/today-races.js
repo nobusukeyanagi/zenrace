@@ -145,38 +145,40 @@
 
   const buildCurrentTrack = (row) => {
     const nextIndex = row.races.findIndex((race) => race.minutes > REFERENCE_MINUTES);
+    const leadingSpacers = [createCard(null, "spacer"), createCard(null, "spacer")];
+
     if (nextIndex < 0) {
       return {
         mode: "ended",
         anchor: "previous",
         cards: [
-          ...row.races.map((race, index) => createCard(
-            race,
-            index === row.races.length - 1 ? "finished final anchor-card" : "finished",
-          )),
+          ...leadingSpacers,
+          ...row.races.map((race, index) => {
+            const classes = ["finished"];
+            if (index === 0) classes.push("first-race");
+            if (index === row.races.length - 1) classes.push("final", "anchor-card");
+            return createCard(race, classes.join(" "));
+          }),
           '<span class="race-scroll-tail" aria-hidden="true"></span>',
         ].join(""),
       };
     }
 
-    const cards = [];
-    // まだ1Rが発走していない開催は、1Rを金帯の次の列へ統一する。
-    // 実レースのない左側に透明スロットを2つ置くことで、PC・iPhoneとも
-    // 開催中の「金帯の次レース」と同じX座標に固定する。
+    // 本日は全開催で、1Rを金帯右列まで戻せるよう先頭に透明スロットを置く。
+    const cards = [...leadingSpacers];
     const anchor = nextIndex === 0 ? "after-focus" : "focus";
-    if (nextIndex === 0) {
-      cards.push(createCard(null, "spacer"), createCard(null, "spacer"));
-    }
 
     row.races.forEach((race, index) => {
-      let className = "upcoming";
-      if (index < nextIndex) className = "finished";
+      const classes = [];
+      if (index < nextIndex) classes.push("finished");
+      else if (index === nextIndex && anchor === "focus") classes.push("current");
+      else classes.push("upcoming");
+      if (index === 0) classes.push("first-race");
       if (index === nextIndex) {
-        className = anchor === "after-focus"
-          ? "upcoming prestart anchor-card"
-          : "current anchor-card";
+        classes.push("anchor-card");
+        if (anchor === "after-focus") classes.push("prestart");
       }
-      cards.push(createCard(race, className));
+      cards.push(createCard(race, classes.join(" ")));
     });
     cards.push('<span class="race-scroll-tail" aria-hidden="true"></span>');
 
@@ -299,6 +301,43 @@
     setScrollLeftExactly(track, target);
   };
 
+  const calculateTodayBounds = (track) => {
+    const raceCards = [...track.querySelectorAll(".race-card[href='#']")];
+    if (!raceCards.length) return { min: 0, max: 0 };
+
+    const firstRace = raceCards[0];
+    const finalRace = raceCards[raceCards.length - 1];
+    const firstPositions = getAnchorPositions(track, firstRace);
+    const finalPositions = getAnchorPositions(track, finalRace);
+    const nativeMax = Math.max(0, track.scrollWidth - track.clientWidth);
+    const min = Math.min(nativeMax, Math.max(0, firstRace.offsetLeft - firstPositions.afterFocus));
+    const max = Math.min(nativeMax, Math.max(min, finalRace.offsetLeft - finalPositions.previous));
+    return { min, max };
+  };
+
+  const clampTodayTrack = (track) => {
+    const { min, max } = calculateTodayBounds(track);
+    track.dataset.minScroll = String(min);
+    track.dataset.maxScroll = String(max);
+    if (track.scrollLeft < min) track.scrollLeft = min;
+    else if (track.scrollLeft > max) track.scrollLeft = max;
+  };
+
+  const bindTodayClamp = (track) => {
+    if (!track || !["active", "ended"].includes(track.dataset.mode) || track.dataset.todayClampBound === "true") return;
+    track.dataset.todayClampBound = "true";
+    let frame = 0;
+    const clamp = () => {
+      frame = 0;
+      clampTodayTrack(track);
+    };
+    track.addEventListener("scroll", () => {
+      if (!frame) frame = requestAnimationFrame(clamp);
+    }, { passive: true });
+    track.addEventListener("touchend", clamp, { passive: true });
+    track.addEventListener("pointerup", clamp, { passive: true });
+  };
+
   const bindEndClamp = (track) => {
     if (!track || !["past", "future"].includes(track.dataset.mode) || track.dataset.endClampBound === "true") return;
     track.dataset.endClampBound = "true";
@@ -330,7 +369,10 @@
     board.dataset.dayMode = dayDiff < 0 ? "past" : dayDiff > 0 ? "future" : "today";
     const rows = groupRacesByVenue();
     board.innerHTML = rows.map((row) => renderRow(row, dayDiff)).join("");
-    board.querySelectorAll(".venue-track").forEach(bindEndClamp);
+    board.querySelectorAll(".venue-track").forEach((track) => {
+      bindEndClamp(track);
+      if (dayDiff === 0) bindTodayClamp(track);
+    });
 
     board.querySelectorAll(".race-card[href='#']").forEach((card) => {
       card.addEventListener("click", (event) => {
@@ -339,7 +381,10 @@
       });
     });
 
-    const alignAllTracks = () => board.querySelectorAll(".venue-track").forEach(alignTrack);
+    const alignAllTracks = () => board.querySelectorAll(".venue-track").forEach((track) => {
+      alignTrack(track);
+      if (dayDiff === 0) clampTodayTrack(track);
+    });
     requestAnimationFrame(() => requestAnimationFrame(alignAllTracks));
     window.setTimeout(alignAllTracks, 60);
     window.setTimeout(alignAllTracks, 180);
