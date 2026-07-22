@@ -6,23 +6,27 @@
   const board = document.getElementById("timetableBoard");
   const toolbar = document.querySelector("[data-zenrace-date-selector]");
   const shell = document.querySelector(".zenrace-content-shell");
+  const baseRaces = Array.isArray(window.ZENRACE_RACES) ? window.ZENRACE_RACES : [];
   const raceDays = window.ZENRACE_RACE_DAYS && typeof window.ZENRACE_RACE_DAYS === "object"
     ? window.ZENRACE_RACE_DAYS
     : {};
-  const fallbackRaces = Array.isArray(window.ZENRACE_RACES) ? window.ZENRACE_RACES : [];
-
+  const featuredRaceKey = (date, sport, venue, race) => `${date}:${sport}:${venue}:${race}`;
   const FEATURED_RACES = new Set([
-    "2026-02-22:jra:東京:11R",
-    "2026-02-22:jra:小倉:11R",
-    "2026-02-22:nar:帯広:11R",
-    "2026-02-22:nar:高知:4R",
-    "2026-02-23:keirin:熊本:12R",
-    "2026-02-23:auto:浜松:12R",
-    "2026-02-23:nar:名古屋:7R",
-    "2026-02-24:boat:江戸川:12R",
+    featuredRaceKey("2026-02-22", "jra", "東京", "11R"),
+    featuredRaceKey("2026-02-22", "jra", "小倉", "11R"),
+    featuredRaceKey("2026-02-22", "nar", "帯広", "11R"),
+    featuredRaceKey("2026-02-22", "nar", "高知", "4R"),
+    featuredRaceKey("2026-02-23", "keirin", "熊本", "12R"),
+    featuredRaceKey("2026-02-23", "auto", "浜松", "12R"),
+    featuredRaceKey("2026-02-23", "nar", "名古屋", "7R"),
+    featuredRaceKey("2026-02-24", "boat", "江戸川", "12R"),
   ]);
-  const isFeaturedRace = (date, race) => (
-    FEATURED_RACES.has(`${date}:${race.sport}:${race.venue}:${race.race}`)
+  const getRacesForDate = (date) => {
+    if (date === BASE_DATE) return baseRaces;
+    return Array.isArray(raceDays[date]?.races) ? raceDays[date].races : [];
+  };
+  const isFeaturedRace = (date, race) => FEATURED_RACES.has(
+    featuredRaceKey(date, race.sport, race.venue, race.race),
   );
 
   const timeParts = (value) => {
@@ -35,12 +39,6 @@
   const raceMinutes = (race) => {
     const parts = timeParts(race.time);
     return parts ? (parts.hour * 60) + parts.minute : Number.POSITIVE_INFINITY;
-  };
-
-  const racesForDate = (date) => {
-    const dayRaces = raceDays[date]?.races;
-    if (Array.isArray(dayRaces)) return dayRaces;
-    return date === BASE_DATE ? fallbackRaces : [];
   };
 
   const showPreparingToast = () => {
@@ -83,14 +81,16 @@
       grouped.get(hour).push(race);
     });
 
-    return [...grouped.entries()]
+    const hourMarkup = [...grouped.entries()]
       .sort(([a], [b]) => a - b)
       .map(([hour, hourRaces]) => `
-        <section class="hour-group${hour === TARGET_HOUR ? " current-hour" : ""}" data-hour="${hour}" aria-label="${hour}時台">
+        <section class="hour-group${date === BASE_DATE && hour === TARGET_HOUR ? " current-hour" : ""}" data-hour="${hour}" aria-label="${hour}時台">
           <div class="hour-label">${hour}</div>
           <div class="hour-races">${hourRaces.map((race) => raceCard(date, race)).join("")}</div>
         </section>`)
       .join("");
+
+    return hourMarkup;
   };
 
   const scrollToCurrentHour = () => {
@@ -113,7 +113,7 @@
 
   const render = (date, resetPosition = true) => {
     if (!board) return;
-    const races = racesForDate(date);
+    const races = getRacesForDate(date);
     if (!races.length) {
       const [, month, day] = date.split("-").map(Number);
       board.innerHTML = `
@@ -144,7 +144,7 @@
 
     window.addEventListener("resize", () => {
       const date = toolbar?.dataset.selectedDate || BASE_DATE;
-      if (racesForDate(date).length) window.setTimeout(scrollToCurrentHour, 60);
+      if (getRacesForDate(date).length) window.setTimeout(scrollToCurrentHour, 60);
     }, { passive: true });
   });
 })();
