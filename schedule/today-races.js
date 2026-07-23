@@ -4,6 +4,8 @@
   // 添付データセットの基準日・表示基準時刻。
   const todayBase = new Date(2026, 1, 23);
   const selectedDate = new Date(todayBase);
+  const minDate = new Date(2026, 1, 22);
+  const maxDate = new Date(2026, 1, 24);
   const REFERENCE_MINUTES = 16 * 60 + 40;
   const FOCUS_SLOT_INDEX = 1;
   const WEEKDAY = ["日", "月", "火", "水", "木", "金", "土"];
@@ -15,11 +17,14 @@
     "2026-11-03", "2026-11-23",
   ]);
 
-  const races = Array.isArray(window.ZENRACE_RACES) ? window.ZENRACE_RACES : [];
-  const venueOrder = Array.isArray(window.ZENRACE_VENUE_ORDER) ? window.ZENRACE_VENUE_ORDER : [];
-  const venueGrades = Array.isArray(window.ZENRACE_VENUE_GRADES) ? window.ZENRACE_VENUE_GRADES : [];
+  const baseRaces = Array.isArray(window.ZENRACE_RACES) ? window.ZENRACE_RACES : [];
+  const baseVenueOrder = Array.isArray(window.ZENRACE_VENUE_ORDER) ? window.ZENRACE_VENUE_ORDER : [];
+  const baseVenueGrades = Array.isArray(window.ZENRACE_VENUE_GRADES) ? window.ZENRACE_VENUE_GRADES : [];
+  const extraRaceDays = window.ZENRACE_RACE_DAYS && typeof window.ZENRACE_RACE_DAYS === "object"
+    ? window.ZENRACE_RACE_DAYS
+    : {};
 
-  const showPreparingToast = () => {
+  const showPreparingToast = (message = "遷移先ページは準備中です") => {
     let toast = document.querySelector(".today-race-toast");
     if (!toast) {
       toast = document.createElement("div");
@@ -28,7 +33,7 @@
       toast.setAttribute("aria-live", "polite");
       document.body.append(toast);
     }
-    toast.textContent = "遷移先ページは準備中です";
+    toast.textContent = message;
     toast.classList.add("is-visible");
     window.clearTimeout(Number(toast.dataset.timer || 0));
     const timer = window.setTimeout(() => toast.classList.remove("is-visible"), 1800);
@@ -55,21 +60,108 @@
   };
   const raceNumber = (race) => Number.parseInt(String(race.race), 10) || 0;
   const groupKey = (sport, venue) => `${sport}:${venue}`;
-  const venueGradeMap = new Map(venueGrades.map((item) => [groupKey(item.sport, item.venue), item]));
+  const featuredRaceKey = (date, sport, venue, race) => `${date}:${sport}:${venue}:${race}`;
+  const FEATURED_RACES = new Set([
+    featuredRaceKey("2026-02-22", "jra", "東京", "11R"),
+    featuredRaceKey("2026-02-22", "jra", "小倉", "11R"),
+    featuredRaceKey("2026-02-22", "nar", "帯広", "11R"),
+    featuredRaceKey("2026-02-22", "nar", "高知", "4R"),
+    featuredRaceKey("2026-02-23", "keirin", "熊本", "12R"),
+    featuredRaceKey("2026-02-23", "auto", "浜松", "12R"),
+    featuredRaceKey("2026-02-23", "nar", "名古屋", "7R"),
+    featuredRaceKey("2026-02-24", "boat", "江戸川", "12R"),
+  ]);
+  const isFeaturedRace = (race) => FEATURED_RACES.has(
+    featuredRaceKey(dateKey(selectedDate), race.sport, race.venue, race.race),
+  );
+  const baseVenueDayMap = new Map([
+    [groupKey("keirin", "京王閣"), "初日"],
+    [groupKey("keirin", "松戸"), "2日目"],
+    [groupKey("keirin", "平塚"), "初日"],
+    [groupKey("keirin", "豊橋"), "初日"],
+    [groupKey("keirin", "玉野"), "初日"],
+    [groupKey("keirin", "防府"), "最終日"],
+    [groupKey("keirin", "高知"), "2日目"],
+    [groupKey("keirin", "熊本"), "最終日"],
+    [groupKey("auto", "浜松"), "最終日"],
+    [groupKey("auto", "飯塚"), "最終日"],
+    [groupKey("boat", "江戸川"), "最終日"],
+    [groupKey("boat", "平和島"), "3日目"],
+    [groupKey("boat", "多摩川"), "2日目"],
+    [groupKey("boat", "浜名湖"), "5日目"],
+    [groupKey("boat", "蒲郡"), "3日目"],
+    [groupKey("boat", "びわこ"), "2日目"],
+    [groupKey("boat", "住之江"), "2日目"],
+    [groupKey("boat", "丸亀"), "3日目"],
+    [groupKey("boat", "児島"), "初日"],
+    [groupKey("boat", "宮島"), "4日目"],
+    [groupKey("boat", "徳山"), "最終日"],
+    [groupKey("boat", "芦屋"), "3日目"],
+    [groupKey("boat", "福岡"), "最終日"],
+    [groupKey("boat", "唐津"), "初日"],
+    [groupKey("boat", "大村"), "最終日"],
+  ]);
+
+  const baseVenueSessionMap = new Map([
+    [groupKey("keirin", "京王閣"), "midnight"],
+    [groupKey("keirin", "松戸"), "morning"],
+    [groupKey("keirin", "平塚"), "midnight"],
+    [groupKey("keirin", "豊橋"), "night"],
+    [groupKey("keirin", "玉野"), "midnight"],
+    [groupKey("keirin", "高知"), "night"],
+    [groupKey("auto", "飯塚"), "midnight"],
+    [groupKey("boat", "蒲郡"), "night"],
+    [groupKey("boat", "住之江"), "night"],
+    [groupKey("boat", "丸亀"), "night"],
+    [groupKey("boat", "徳山"), "morning"],
+    [groupKey("boat", "芦屋"), "morning"],
+    [groupKey("boat", "唐津"), "morning"],
+    [groupKey("boat", "大村"), "night"],
+    [groupKey("nar", "名古屋"), "night"],
+    [groupKey("nar", "高知"), "night"],
+  ]);
+  const baseGirlsVenueSet = new Set([
+    groupKey("keirin", "高知"),
+    groupKey("boat", "福岡"),
+  ]);
 
 
+  const makeMap = (value) => new Map(Object.entries(value || {}));
+  const currentDayData = () => {
+    const key = dateKey(selectedDate);
+    if (key === dateKey(todayBase)) {
+      return {
+        races: baseRaces,
+        venueOrder: baseVenueOrder,
+        venueGrades: baseVenueGrades,
+        venueDayMap: baseVenueDayMap,
+        venueSessionMap: baseVenueSessionMap,
+        girlsVenueSet: baseGirlsVenueSet,
+      };
+    }
+    const source = extraRaceDays[key] || {};
+    return {
+      races: Array.isArray(source.races) ? source.races : [],
+      venueOrder: Array.isArray(source.venueOrder) ? source.venueOrder : [],
+      venueGrades: Array.isArray(source.venueGrades) ? source.venueGrades : [],
+      venueDayMap: makeMap(source.venueDays),
+      venueSessionMap: makeMap(source.venueSessions),
+      girlsVenueSet: new Set(Array.isArray(source.girlsVenues) ? source.girlsVenues : []),
+    };
+  };
 
-  const groupRacesByVenue = () => {
+  const groupRacesByVenue = (dayData) => {
     const grouped = new Map();
-    for (const race of races) {
+    const gradeMap = new Map(dayData.venueGrades.map((item) => [groupKey(item.sport, item.venue), item]));
+    for (const race of dayData.races) {
       const key = groupKey(race.sport, race.venue);
       if (!grouped.has(key)) {
-        grouped.set(key, { venue: race.venue, sport: race.sport, grade: venueGradeMap.get(key) || null, races: [] });
+        grouped.set(key, { venue: race.venue, sport: race.sport, grade: gradeMap.get(key) || null, races: [] });
       }
       grouped.get(key).races.push({ ...race, minutes: timeToMinutes(race.time) });
     }
 
-    const venueRank = new Map(venueOrder.map((item, index) => [groupKey(item.sport, item.venue), index]));
+    const venueRank = new Map(dayData.venueOrder.map((item, index) => [groupKey(item.sport, item.venue), index]));
     return [...grouped.entries()]
       .map(([key, row]) => ({
         ...row,
@@ -90,44 +182,48 @@
       return `<span class="race-card placeholder ${className}" aria-hidden="true"><span class="race-no">--</span><span class="race-time">--:--</span></span>`;
     }
     const cancelled = race.time === "中止";
-    const label = `${race.venue} ${race.race} ${cancelled ? "中止" : `締切${race.time}`}`;
-    return `<a href="#" class="race-card ${className}${cancelled ? " cancelled" : ""}" aria-label="${label}"><span class="race-no">${race.race}</span><span class="race-time">${race.time}</span></a>`;
+    const featured = isFeaturedRace(race);
+    const label = `${race.venue} ${race.race} ${cancelled ? "中止" : `締切${race.time}`}${featured ? " 注目レース" : ""}`;
+    const stateClasses = `${cancelled ? " cancelled" : ""}${featured ? " featured-race" : ""}`;
+    return `<a href="#" class="race-card ${className}${stateClasses}" aria-label="${label}"><span class="race-no">${race.race}</span><span class="race-time">${race.time}</span></a>`;
   };
 
   const buildCurrentTrack = (row) => {
     const nextIndex = row.races.findIndex((race) => race.minutes > REFERENCE_MINUTES);
+    const leadingSpacers = [createCard(null, "spacer"), createCard(null, "spacer")];
+
     if (nextIndex < 0) {
       return {
         mode: "ended",
         anchor: "previous",
         cards: [
-          ...row.races.map((race, index) => createCard(
-            race,
-            index === row.races.length - 1 ? "finished final anchor-card" : "finished",
-          )),
+          ...leadingSpacers,
+          ...row.races.map((race, index) => {
+            const classes = ["finished"];
+            if (index === 0) classes.push("first-race");
+            if (index === row.races.length - 1) classes.push("final", "anchor-card");
+            return createCard(race, classes.join(" "));
+          }),
           '<span class="race-scroll-tail" aria-hidden="true"></span>',
         ].join(""),
       };
     }
 
-    const cards = [];
-    // まだ1Rが発走していない開催は、1Rを金帯の次の列へ統一する。
-    // 実レースのない左側に透明スロットを2つ置くことで、PC・iPhoneとも
-    // 開催中の「金帯の次レース」と同じX座標に固定する。
+    // 本日は全開催で、1Rを金帯右列まで戻せるよう先頭に透明スロットを置く。
+    const cards = [...leadingSpacers];
     const anchor = nextIndex === 0 ? "after-focus" : "focus";
-    if (nextIndex === 0) {
-      cards.push(createCard(null, "spacer"), createCard(null, "spacer"));
-    }
 
     row.races.forEach((race, index) => {
-      let className = "upcoming";
-      if (index < nextIndex) className = "finished";
+      const classes = [];
+      if (index < nextIndex) classes.push("finished");
+      else if (index === nextIndex && anchor === "focus") classes.push("current");
+      else classes.push("upcoming");
+      if (index === 0) classes.push("first-race");
       if (index === nextIndex) {
-        className = anchor === "after-focus"
-          ? "upcoming prestart anchor-card"
-          : "current anchor-card";
+        classes.push("anchor-card");
+        if (anchor === "after-focus") classes.push("prestart");
       }
-      cards.push(createCard(race, className));
+      cards.push(createCard(race, classes.join(" ")));
     });
     cards.push('<span class="race-scroll-tail" aria-hidden="true"></span>');
 
@@ -154,10 +250,27 @@
     )).join(""),
   });
 
-  const renderRow = (row, dayDiff) => {
+  const renderRow = (row, dayDiff, dayData) => {
     let track = buildCurrentTrack(row);
     if (dayDiff < 0) track = buildPastTrack(row);
     if (dayDiff > 0) track = buildFutureTrack(row);
+
+    const venueDay = dayData.venueDayMap.get(row.key) || "";
+    const session = dayData.venueSessionMap.get(row.key) || "";
+    const hasGirls = dayData.girlsVenueSet.has(row.key);
+    const gradeIcon = row.grade
+      ? `<span class="venue-grade-icon ${row.grade.accent ? "accent" : "muted"}" aria-label="格 ${row.grade.label}">${row.grade.label}</span>`
+      : "";
+    const sessionIcon = session
+      ? `<img class="venue-status-icon" src="icons/${session}.png" alt="" aria-hidden="true">`
+      : "";
+    const girlsIcon = hasGirls
+      ? `<img class="venue-status-icon girls" src="icons/girls.png" alt="" aria-hidden="true">`
+      : "";
+    const dayLabel = venueDay ? `<span class="venue-day-label">${venueDay}</span>` : "";
+    const metaLine = gradeIcon || sessionIcon || girlsIcon || dayLabel
+      ? `<div class="venue-meta-row">${gradeIcon}${sessionIcon}${girlsIcon}${dayLabel}</div>`
+      : "";
 
     return `
       <article class="venue-row" data-mode="${track.mode}">
@@ -166,7 +279,7 @@
             <div class="venue-name">${row.venue}</div>
             <span class="venue-sport-icon ${row.sport}" aria-hidden="true"></span>
           </div>
-          ${row.grade ? `<div class="venue-grade-row"><span class="venue-grade-icon ${row.grade.accent ? "accent" : "muted"}" aria-label="格 ${row.grade.label}">${row.grade.label}</span></div>` : ""}
+          ${metaLine}
         </div>
         <div class="venue-track-shell">
           <div class="venue-track" data-mode="${track.mode}" data-anchor="${track.anchor}">${track.cards}</div>
@@ -233,6 +346,43 @@
     setScrollLeftExactly(track, target);
   };
 
+  const calculateTodayBounds = (track) => {
+    const raceCards = [...track.querySelectorAll(".race-card[href='#']")];
+    if (!raceCards.length) return { min: 0, max: 0 };
+
+    const firstRace = raceCards[0];
+    const finalRace = raceCards[raceCards.length - 1];
+    const firstPositions = getAnchorPositions(track, firstRace);
+    const finalPositions = getAnchorPositions(track, finalRace);
+    const nativeMax = Math.max(0, track.scrollWidth - track.clientWidth);
+    const min = Math.min(nativeMax, Math.max(0, firstRace.offsetLeft - firstPositions.afterFocus));
+    const max = Math.min(nativeMax, Math.max(min, finalRace.offsetLeft - finalPositions.previous));
+    return { min, max };
+  };
+
+  const clampTodayTrack = (track) => {
+    const { min, max } = calculateTodayBounds(track);
+    track.dataset.minScroll = String(min);
+    track.dataset.maxScroll = String(max);
+    if (track.scrollLeft < min) track.scrollLeft = min;
+    else if (track.scrollLeft > max) track.scrollLeft = max;
+  };
+
+  const bindTodayClamp = (track) => {
+    if (!track || !["active", "ended"].includes(track.dataset.mode) || track.dataset.todayClampBound === "true") return;
+    track.dataset.todayClampBound = "true";
+    let frame = 0;
+    const clamp = () => {
+      frame = 0;
+      clampTodayTrack(track);
+    };
+    track.addEventListener("scroll", () => {
+      if (!frame) frame = requestAnimationFrame(clamp);
+    }, { passive: true });
+    track.addEventListener("touchend", clamp, { passive: true });
+    track.addEventListener("pointerup", clamp, { passive: true });
+  };
+
   const bindEndClamp = (track) => {
     if (!track || !["past", "future"].includes(track.dataset.mode) || track.dataset.endClampBound === "true") return;
     track.dataset.endClampBound = "true";
@@ -262,9 +412,15 @@
     todayBtn.disabled = isCurrentDay;
 
     board.dataset.dayMode = dayDiff < 0 ? "past" : dayDiff > 0 ? "future" : "today";
-    const rows = groupRacesByVenue();
-    board.innerHTML = rows.map((row) => renderRow(row, dayDiff)).join("");
-    board.querySelectorAll(".venue-track").forEach(bindEndClamp);
+    const dayData = currentDayData();
+    const rows = groupRacesByVenue(dayData);
+    board.innerHTML = rows.length
+      ? rows.map((row) => renderRow(row, dayDiff, dayData)).join("")
+      : '<div class="today-empty">この日の開催データは準備中です</div>';
+    board.querySelectorAll(".venue-track").forEach((track) => {
+      bindEndClamp(track);
+      if (dayDiff === 0) bindTodayClamp(track);
+    });
 
     board.querySelectorAll(".race-card[href='#']").forEach((card) => {
       card.addEventListener("click", (event) => {
@@ -273,7 +429,10 @@
       });
     });
 
-    const alignAllTracks = () => board.querySelectorAll(".venue-track").forEach(alignTrack);
+    const alignAllTracks = () => board.querySelectorAll(".venue-track").forEach((track) => {
+      alignTrack(track);
+      if (dayDiff === 0) clampTodayTrack(track);
+    });
     requestAnimationFrame(() => requestAnimationFrame(alignAllTracks));
     window.setTimeout(alignAllTracks, 60);
     window.setTimeout(alignAllTracks, 180);
@@ -282,10 +441,18 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("prevDate")?.addEventListener("click", () => {
+      if (startOfDay(selectedDate) <= startOfDay(minDate)) {
+        showPreparingToast("遷移先ページは準備中");
+        return;
+      }
       selectedDate.setDate(selectedDate.getDate() - 1);
       render();
     });
     document.getElementById("nextDate")?.addEventListener("click", () => {
+      if (startOfDay(selectedDate) >= startOfDay(maxDate)) {
+        showPreparingToast("遷移先ページは準備中");
+        return;
+      }
       selectedDate.setDate(selectedDate.getDate() + 1);
       render();
     });
@@ -293,8 +460,15 @@
       selectedDate.setTime(todayBase.getTime());
       render();
     });
+    document.getElementById("refreshRaces")?.addEventListener("click", () => render());
 
-    const realignVisibleTracks = () => document.querySelectorAll(".venue-track").forEach(alignTrack);
+    const realignVisibleTracks = () => {
+      const isCurrentDay = dateKey(selectedDate) === dateKey(todayBase);
+      document.querySelectorAll(".venue-track").forEach((track) => {
+        alignTrack(track);
+        if (isCurrentDay) clampTodayTrack(track);
+      });
+    };
     render();
     window.addEventListener("resize", realignVisibleTracks);
     window.addEventListener("orientationchange", () => window.setTimeout(realignVisibleTracks, 120));
