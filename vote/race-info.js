@@ -7,12 +7,13 @@
       this.dataset.ready = "true";
       const videoId = `race-live-${Math.random().toString(36).slice(2)}`;
       this.innerHTML = `
-        <section class="shared-race-info" aria-label="浜松12R レース情報">
+        <section class="shared-race-info featured-race" aria-label="浜松12R レース情報">
           <div class="race-info-primary">
             <strong class="race-info-venue">浜松</strong>
             <span class="race-info-number">12R</span>
             <span class="race-info-icon auto" aria-label="オートレース"></span>
             <span class="race-info-icon sg" aria-label="SG">SG</span>
+            <span class="race-info-icon final-day" aria-label="最終日">終</span>
             <button class="race-live-button" type="button" aria-expanded="false" aria-controls="${videoId}"><span aria-hidden="true">▶</span>ライブ映像</button>
           </div>
           <h1 class="race-info-title">第39回全日本選抜オートレース</h1>
@@ -21,7 +22,7 @@
             <span class="race-info-time"><span class="race-info-time-label">投票締切</span><time datetime="2026-02-23T16:43:00+09:00">16:43</time></span>
             <span class="race-info-time"><span class="race-info-time-label">発走</span><time datetime="2026-02-23T16:45:00+09:00">16:45</time></span>
           </div>
-          <p class="race-info-date">2026年2月23日(月祝)　最終日　5100m</p>
+          <p class="race-info-date">2026年2月23日(月)　5100m　晴　良走路57.0℃　気温20.0℃　湿度43.0%</p>
           <div class="race-info-video" id="${videoId}" hidden>
             <div class="race-info-video-frame" data-video-frame></div>
           </div>
