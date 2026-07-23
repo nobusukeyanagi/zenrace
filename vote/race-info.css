@@ -1,6 +1,5 @@
 zenrace-race-info{display:block;width:min(100%,760px);margin:0 auto}
 .shared-race-info{position:relative;margin:10px 8px 0;padding:13px 14px 12px;overflow:hidden;border:1px solid rgba(240,204,112,.38);border-radius:14px;color:#fff;background:linear-gradient(135deg,#121924,#07090d 63%,#211708);box-shadow:0 10px 27px rgba(0,0,0,.32)}
-.shared-race-info.featured-race{border:2px solid #d4232b;box-shadow:0 0 0 1px rgba(255,226,143,.28),0 10px 27px rgba(0,0,0,.32)}
 .shared-race-info::after{content:"";position:absolute;right:-54px;top:-86px;width:190px;height:190px;border:1px solid rgba(240,204,112,.13);border-radius:50%;pointer-events:none}
 .race-info-primary,.race-info-status{position:relative;z-index:1;display:flex;align-items:center;min-width:0}
 .race-info-primary{gap:7px;line-height:1}
@@ -20,8 +19,12 @@ zenrace-race-info{display:block;width:min(100%,760px);margin:0 auto}
 .race-info-time{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
 .race-info-time-label{display:inline-flex;align-items:center;justify-content:center;min-height:21px;padding:2px 7px;border:1px solid rgba(255,255,255,.45);border-radius:5px;color:#fff;background:rgba(255,255,255,.08);font-size:.82em;font-weight:1000;line-height:1}
 .race-info-time time{color:#fff;font-size:1em;font-weight:1000;font-variant-numeric:tabular-nums}
-.race-info-date{position:relative;z-index:1;margin:7px 0 0;color:#c5cbd3;font-size:12px;font-weight:850;line-height:1.35;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
-.race-info-date::-webkit-scrollbar{display:none}
+.race-info-date{position:relative;z-index:1;margin:7px 0 0;overflow:hidden;color:#c5cbd3;font-size:12px;font-weight:850;line-height:1.35;white-space:nowrap}
+.race-info-date-track{display:flex;width:max-content;min-width:100%;gap:2.5em;will-change:transform}
+.race-info-date-copy{display:block;flex:0 0 auto}
+.race-info-date.is-overflowing .race-info-date-track{animation:race-info-marquee 15s linear infinite}
+@keyframes race-info-marquee{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 1.25em))}}
+@media(prefers-reduced-motion:reduce){.race-info-date.is-overflowing .race-info-date-track{animation:none}.race-info-date{overflow-x:auto;scrollbar-width:none}.race-info-date::-webkit-scrollbar{display:none}}
 .race-info-video{position:relative;z-index:2;margin:11px -14px -12px;padding:10px 14px 14px;border-top:1px solid rgba(240,204,112,.25);background:#030405}
 .race-info-video[hidden]{display:none}
 .race-info-video-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border:1px solid rgba(240,204,112,.3);border-radius:10px;background:#000;box-shadow:0 8px 20px rgba(0,0,0,.32)}

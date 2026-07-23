@@ -7,7 +7,7 @@
       this.dataset.ready = "true";
       const videoId = `race-live-${Math.random().toString(36).slice(2)}`;
       this.innerHTML = `
-        <section class="shared-race-info featured-race" aria-label="浜松12R レース情報">
+        <section class="shared-race-info" aria-label="浜松12R レース情報">
           <div class="race-info-primary">
             <strong class="race-info-venue">浜松</strong>
             <span class="race-info-number">12R</span>
@@ -22,11 +22,20 @@
             <span class="race-info-time"><span class="race-info-time-label">投票締切</span><time datetime="2026-02-23T16:43:00+09:00">16:43</time></span>
             <span class="race-info-time"><span class="race-info-time-label">発走</span><time datetime="2026-02-23T16:45:00+09:00">16:45</time></span>
           </div>
-          <p class="race-info-date">2026年2月23日(月)　5100m　晴　良走路57.0℃　気温20.0℃　湿度43.0%</p>
+          <p class="race-info-date" aria-label="2026年2月23日(月)　晴　良走路57.0℃　気温20.0℃　湿度43.0%　5100m"><span class="race-info-date-track"><span class="race-info-date-copy">2026年2月23日(月)　晴　良走路57.0℃　気温20.0℃　湿度43.0%　5100m</span><span class="race-info-date-copy" aria-hidden="true">2026年2月23日(月)　晴　良走路57.0℃　気温20.0℃　湿度43.0%　5100m</span></span></p>
           <div class="race-info-video" id="${videoId}" hidden>
             <div class="race-info-video-frame" data-video-frame></div>
           </div>
         </section>`;
+
+      const dateLine = this.querySelector('.race-info-date');
+      const dateCopy = this.querySelector('.race-info-date-copy');
+      const updateDateMarquee = () => {
+        if (!dateLine || !dateCopy) return;
+        dateLine.classList.toggle('is-overflowing', dateCopy.scrollWidth > dateLine.clientWidth + 1);
+      };
+      requestAnimationFrame(() => requestAnimationFrame(updateDateMarquee));
+      window.addEventListener('resize', updateDateMarquee, { passive: true });
 
       const button = this.querySelector('.race-live-button');
       const video = this.querySelector('.race-info-video');
