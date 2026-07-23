@@ -129,6 +129,13 @@ def strip_edition(value: str) -> str:
     return re.sub(r"第[0-9０-９]+回", "", clean_text(value)).strip()
 
 
+def sanitize_winner_name(value: Any) -> str:
+    """Remove registration numbers accidentally captured with a winner name."""
+    text = clean_text(value)
+    text = re.sub(r"^(?:登録\s*)?(?:第\s*)?\d{4}\s*(?:号)?\s*", "", text)
+    return clean_text(text)
+
+
 def same_name(left: str, right: str) -> bool:
     a, b = normalize(strip_edition(left)), normalize(strip_edition(right))
     return bool(a and b and (a == b or a in b or b in a))
@@ -202,7 +209,7 @@ def choose_first_place_name(rows: Iterable[list[str]]) -> str:
             if 2 <= len(value) <= 30:
                 candidates.append(value)
         if candidates:
-            return candidates[0]
+            return sanitize_winner_name(candidates[0])
     return ""
 
 
@@ -258,6 +265,8 @@ def merge_patches(
                 continue
             if field == "name":
                 value = strip_edition(value)
+            elif field == "winner":
+                value = sanitize_winner_name(value)
             record[field] = value
         if record != before:
             changes.append(

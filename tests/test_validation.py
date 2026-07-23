@@ -69,6 +69,31 @@ def test_smart_selection_retries_unresolved_instead_of_only_fixed_lookback() -> 
     assert "upcoming" in reasons[3]
 
 
+def test_boatrace_winner_registration_number_is_removed() -> None:
+    parsed = parse_official_result_page(
+        soup(
+            """
+            <div>締切予定時刻 17:50</div>
+            <h3>優勝戦</h3>
+            <table>
+              <tr><th>着</th><th>枠</th><th>選手</th></tr>
+              <tr><td>1着</td><td>1</td><td>4166 吉田 拡郎</td></tr>
+            </table>
+            """
+        )
+    )
+    assert parsed["winner"] == "吉田 拡郎"
+
+
+def test_winner_patch_registration_number_is_removed() -> None:
+    records = [{"date": "2026-07-22", "sport": "boat", "venue": "児島", "winner": ""}]
+    patched, _ = merge_patches(
+        records,
+        [Patch(0, {"winner": "4166 吉田 拡郎"}, "test", "https://example.com")],
+    )
+    assert patched[0]["winner"] == "吉田 拡郎"
+
+
 def test_boatrace_official_result_parser() -> None:
     parsed = parse_official_result_page(
         soup(

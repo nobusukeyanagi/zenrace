@@ -23,6 +23,7 @@ from scripts.common import (
     parse_grade_and_name,
     save_json,
     same_name,
+    sanitize_winner_name,
     sort_key,
     soup_from,
     strip_edition,
@@ -70,7 +71,7 @@ class MasterRecord:
             "venue": self.venue,
             "grade": normalize_master_grade(self.sport, self.grade),
             "name": strip_edition(self.name),
-            "winner": clean_text(self.winner),
+            "winner": sanitize_winner_name(self.winner),
         }
 
 
