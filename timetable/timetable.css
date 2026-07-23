@@ -65,7 +65,7 @@ button{font:inherit}
 .timetable-race{
   position:relative;
   min-width:0;
-  height:78px;
+  height:72px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -174,7 +174,7 @@ button{font:inherit}
   .hour-group{min-height:84px}
   .hour-label{min-height:84px;font-size:34px}
   .hour-races{gap:6px;padding:6px}
-  .timetable-race{height:70px;gap:3px;padding:4px 3px;border-radius:7px}
+  .timetable-race{height:64px;gap:3px;padding:4px 3px;border-radius:7px}
   .race-minute{font-size:32px}
   .race-sport-line{width:calc(100% - 10px);height:4px;flex-basis:4px}
   .race-detail{font-size:12px;letter-spacing:-.055em}

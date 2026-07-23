@@ -38,8 +38,8 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
   border-bottom:1px solid rgba(213,171,67,.34);box-shadow:0 4px 13px rgba(0,0,0,.20);touch-action:none
 }
 .date-nav{display:grid;grid-template-columns:36px minmax(152px,auto) 36px;align-items:center;gap:2px}
-.date-arrow{display:grid;width:36px;height:36px;place-items:center;padding:0 0 2px;color:#ead181;border:1px solid rgba(222,184,87,.36);border-radius:50%;background:#141414;box-shadow:0 2px 7px rgba(0,0,0,.30);font-size:28px;line-height:1;cursor:pointer}
-.date-arrow:active{color:#fff1b5;border-color:rgba(240,204,112,.70);background:#1d1d1d;transform:translateY(1px)}
+.date-arrow{display:grid;width:36px;height:36px;place-items:center;padding:0 0 2px;color:#ead181;border:0;border-radius:0;background:transparent;box-shadow:none;font-size:28px;line-height:1;cursor:pointer}
+.date-arrow:active{color:#fff1b5;border-color:transparent;background:transparent;transform:translateY(1px)}
 .date-title{text-align:center;color:#fff;font-size:17px;font-weight:900;letter-spacing:.045em;white-space:nowrap;text-shadow:0 1px 8px rgba(0,0,0,.28)}
 .date-weekday{color:inherit}
 .date-weekday.holiday,.date-weekday.sunday{color:#ff7676;text-shadow:0 1px 6px rgba(0,0,0,.72),0 0 8px rgba(255,118,118,.18)}
@@ -59,7 +59,7 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .today-page{width:min(100%,760px);margin:0 auto;padding:7px 5px 10px}
 .today-board{
   position:relative;isolation:isolate;overflow:hidden;
-  border:1px solid rgba(213,171,67,.24);border-radius:8px;
+  border:1px solid #8f6a18;border-radius:8px;
   background:linear-gradient(180deg,#181818,#090909)
 }
 .today-board::before{

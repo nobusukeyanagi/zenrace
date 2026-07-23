@@ -20,8 +20,8 @@
   touch-action:none;
 }
 .month-nav{display:grid;grid-template-columns:36px minmax(112px,auto) 36px;align-items:center;gap:2px}
-.month-arrow{display:grid;width:36px;height:36px;place-items:center;padding:0 0 2px;color:#ead181;border:1px solid rgba(222,184,87,.36);border-radius:50%;background:#141414;box-shadow:0 2px 7px rgba(0,0,0,.30);font-size:28px;line-height:1;cursor:pointer}
-.month-arrow:active{color:#fff1b5;border-color:rgba(240,204,112,.70);background:#1d1d1d;transform:translateY(1px)}
+.month-arrow{display:grid;width:36px;height:36px;place-items:center;padding:0 0 2px;color:#ead181;border:0;border-radius:0;background:transparent;box-shadow:none;font-size:28px;line-height:1;cursor:pointer}
+.month-arrow:active{color:#fff1b5;border-color:transparent;background:transparent;transform:translateY(1px)}
 .month-title{text-align:center;color:#fff;font-size:17px;font-weight:900;letter-spacing:.045em;white-space:nowrap;text-shadow:0 1px 8px rgba(0,0,0,.28)}
 .month-toolbar-side{display:flex;align-items:center;min-width:0}
 .month-toolbar-side.right{justify-content:flex-end}

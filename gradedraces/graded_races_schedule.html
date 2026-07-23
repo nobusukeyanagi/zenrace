@@ -42,8 +42,8 @@ button{-webkit-tap-highlight-color:transparent}
   border-bottom:1px solid rgba(213,171,67,.34);box-shadow:0 4px 13px rgba(0,0,0,.20);touch-action:none
 }
 .month-nav{display:grid;grid-template-columns:36px minmax(112px,auto) 36px;align-items:center;gap:2px}
-.month-arrow{display:grid;width:36px;height:36px;place-items:center;padding:0 0 2px;color:#ead181;border:1px solid rgba(222,184,87,.36);border-radius:50%;background:#141414;box-shadow:0 2px 7px rgba(0,0,0,.30);font-size:28px;line-height:1;cursor:pointer}
-.month-arrow:active{color:#fff1b5;border-color:rgba(240,204,112,.70);background:#1d1d1d;transform:translateY(1px)}
+.month-arrow{display:grid;width:36px;height:36px;place-items:center;padding:0 0 2px;color:#ead181;border:0;border-radius:0;background:transparent;box-shadow:none;font-size:28px;line-height:1;cursor:pointer}
+.month-arrow:active{color:#fff1b5;border-color:transparent;background:transparent;transform:translateY(1px)}
 .month-title{text-align:center;color:#fff;font-size:17px;font-weight:900;letter-spacing:.045em;white-space:nowrap;text-shadow:0 1px 8px rgba(0,0,0,.28)}
 .month-toolbar-side{display:flex;align-items:center;min-width:0}.month-toolbar-side.right{justify-content:flex-end}
 .today-btn{min-width:66px;height:32px;padding:0 13px;border:1px solid rgba(242,216,137,.42);border-radius:8px;color:#f8e8b8;background:rgba(255,255,255,.055);font-size:12px;font-weight:850;cursor:pointer}
@@ -65,9 +65,9 @@ zenrace-bottom-nav{touch-action:none;overscroll-behavior:none}
 .schedule{padding:7px 8px 6px}
 .day-block{
   display:grid;grid-template-columns:38px minmax(0,1fr);margin-bottom:3px;overflow:hidden;
-  border:1px solid rgba(213,171,67,.24);border-radius:8px;background:var(--panel);box-shadow:0 2px 7px rgba(0,0,0,.09)
+  border:1px solid #8f6a18;border-radius:8px;background:var(--panel);box-shadow:0 2px 7px rgba(0,0,0,.09)
 }
-.day-block.today{border-color:#d2a52e;box-shadow:0 0 0 1px rgba(210,165,46,.17)}
+.day-block.today{border-color:#8f6a18;box-shadow:0 0 0 1px rgba(210,165,46,.17)}
 .date-cell{
   display:flex;align-items:center;justify-content:center;gap:2px;min-height:30px;padding:1px 2px;
   border-right:1px solid var(--line);background:#f8fafc;white-space:nowrap
@@ -343,7 +343,7 @@ function render(){
     const classes=["day-block",dow===6?"sat":"",dow===0?"sun":"",HOLIDAYS.has(key)?"holiday":"",key===today?"today":""].filter(Boolean).join(" ");
     return `<article class="${classes}" data-date="${key}"><div class="date-cell"><span class="date-number">${d.getDate()}</span><span class="weekday">${WEEKDAYS[dow]}</span></div><div class="race-list">${list.map(rowHtml).join("")}</div></article>`;
   }).join("");
-  requestAnimationFrame(()=>{initializeRaceNameMarquees();updateZoomMetrics(true);if(y===new Date().getFullYear()&&m===new Date().getMonth()){const el=document.querySelector(`[data-date="${today}"]`);if(el)$("contentShell").scrollTop=Math.max(0,el.offsetTop*zoom.scale-8)}});
+  requestAnimationFrame(()=>{initializeRaceNameMarquees();updateZoomMetrics(true);if(y===new Date().getFullYear()&&m===new Date().getMonth()){const scrollTodayIntoFirstView=()=>{const el=document.querySelector(`[data-date="${today}"]`);if(!el)return;const shell=$("contentShell");shell.scrollLeft=0;shell.scrollTop=Math.max(0,el.offsetTop*zoom.scale-6)};requestAnimationFrame(()=>{scrollTodayIntoFirstView();setTimeout(scrollTodayIntoFirstView,80)})}});
 }
 function changeMonth(delta){viewDate.setMonth(viewDate.getMonth()+delta);render();$("contentShell").scrollTo({top:0,left:0,behavior:"instant"})}
 
