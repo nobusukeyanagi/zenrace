@@ -16,10 +16,10 @@
 .rider-name-main{display:block;overflow:hidden;font-size:14px;font-weight:1000;line-height:1.15;text-overflow:ellipsis;white-space:nowrap}
 .rider-profile{display:block;margin-top:2px;overflow:hidden;color:#66707c;font-size:11px;font-weight:850;line-height:1;letter-spacing:-.02em;text-overflow:ellipsis;white-space:nowrap}
 .female-mark{color:#d51568;font-size:.95em}
-.race-table tbody td:nth-child(n+3){color:#111!important;font-size:15px!important}
+.race-table tbody td:nth-child(n+3){color:#111!important;font-size:13px!important}
 .data-stack{vertical-align:middle;font-variant-numeric:tabular-nums}
-.data-stack>span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#111;font-size:15px;font-weight:850;line-height:1}
-.data-stack>span+span{margin-top:2px;color:#111;font-size:15px;font-weight:850}
+.data-stack>span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#111;font-size:13px;font-weight:850;line-height:1}
+.data-stack>span+span{margin-top:2px;color:#111;font-size:13px;font-weight:850}
 .surface-stat{padding-inline:4px!important}
 .stat-line{display:grid!important;grid-template-columns:1em 4.2ch .8em;align-items:center;justify-content:center;column-gap:0;overflow:visible!important;text-overflow:clip!important}
 .surface-label{text-align:left}.surface-value{text-align:right}.surface-unit{text-align:left}
@@ -27,8 +27,9 @@
 .result-line{display:grid!important;grid-template-columns:1em 2.5ch .7ch 2.5ch .7ch 2.5ch .7ch 2.5ch .7ch 2.7ch;align-items:center;justify-content:center;column-gap:0;overflow:visible!important;text-overflow:clip!important}
 .result-label{text-align:left}.result-number,.result-separator{text-align:center}.result-total{text-align:center}
 .rank-cell>span{font-weight:950}
+.rank-cell>span+span{color:#66707c!important;font-size:11px!important;font-weight:850!important;line-height:1;letter-spacing:-.02em}
 .race-table .machine-name{padding-inline:5px;text-align:left;font-weight:900;overflow:hidden}
-.machine-name>span:first-child,.machine-name>span:last-child{font-size:15px;font-weight:900}
+.machine-name>span:first-child,.machine-name>span:last-child{font-size:13px;font-weight:900}
 .car-number{font-size:15px!important;font-weight:1000!important;text-align:center!important;vertical-align:middle!important;font-variant-numeric:tabular-nums}
 .car-number-value{display:block;line-height:1}
 .table-scroll.rider-name-hidden .race-table td.car-number{padding:3px 0!important;vertical-align:middle!important}
