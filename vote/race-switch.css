@@ -1,8 +1,8 @@
-zenrace-race-switch{display:block;width:min(100%,760px);margin:0 auto}
-.race-switch-wrap{width:100%;height:55px;margin:0;padding:0;overflow:hidden;color:#fff;background:linear-gradient(180deg,#181818,#090909);border-top:1px solid rgba(213,171,67,.34);border-bottom:1px solid rgba(213,171,67,.34);border-radius:0;box-shadow:0 4px 13px rgba(0,0,0,.20);touch-action:pan-x;overscroll-behavior-y:none}
-.race-switch{display:flex;align-items:center;width:100%;height:100%;gap:6px;overflow-x:auto;overflow-y:hidden;padding:4px 10px;scroll-padding-inline:10px;scrollbar-width:none;scroll-snap-type:x proximity;touch-action:pan-x;overscroll-behavior-x:contain;overscroll-behavior-y:none;-webkit-overflow-scrolling:touch}
+zenrace-race-switch{display:block;width:min(100%,760px);margin:0 auto;box-sizing:border-box}
+.race-switch-wrap{box-sizing:border-box;width:100%;height:55px;margin:0;padding:0;overflow:hidden;color:#fff;background:linear-gradient(180deg,#181818,#090909);border-top:1px solid rgba(213,171,67,.34);border-bottom:1px solid rgba(213,171,67,.34);border-radius:0;box-shadow:0 4px 13px rgba(0,0,0,.20);touch-action:pan-x;overscroll-behavior-y:none}
+.race-switch{box-sizing:border-box;display:flex;align-items:center;width:100%;height:100%;gap:6px;overflow-x:auto;overflow-y:hidden;padding:5px 10px 3px;scroll-padding-inline:10px;scrollbar-width:none;scroll-snap-type:x proximity;touch-action:pan-x;overscroll-behavior-x:contain;overscroll-behavior-y:none;-webkit-overflow-scrolling:touch}
 .race-switch::-webkit-scrollbar{display:none}
-.race-tab{--sport-color:#7545af;flex:0 0 80px;height:47px;min-height:47px;padding:4px 5px;border:1px solid #d8dbe0;border-radius:8px;color:#101114;background:#f7f7f7;text-decoration:none;text-align:center;scroll-snap-align:start;box-shadow:0 3px 8px rgba(0,0,0,.22);-webkit-tap-highlight-color:transparent}
+.race-tab{box-sizing:border-box;--sport-color:#7545af;flex:0 0 80px;height:47px;min-height:47px;padding:4px 5px;border:1px solid #d8dbe0;border-radius:8px;color:#101114;background:#f7f7f7;text-decoration:none;text-align:center;scroll-snap-align:start;box-shadow:0 3px 8px rgba(0,0,0,.22);-webkit-tap-highlight-color:transparent}
 .race-tab.sport-keirin{--sport-color:#d8661d}
 .race-tab.sport-boat{--sport-color:#1876c9}
 .race-tab.sport-nar{--sport-color:#8b5a2b}
