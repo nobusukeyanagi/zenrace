@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-07-24T05:22:13.396531+09:00",
+  "generated_at": "2026-07-24T10:20:59.508175+09:00",
   "center_date": "2026-07-24",
   "selection_mode": "smart",
   "selection_counts": {
     "recent_verification": 5,
-    "unresolved": 2,
     "upcoming": 23
   },
   "target_count": 28,
-  "change_count": 10,
+  "change_count": 4,
   "changes": [
     {
       "date": "2026-07-26",
@@ -117,168 +116,6 @@
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-07-23",
-      "sport": "nar",
-      "venue": "門別",
-      "name": "王冠賞",
-      "before": {
-        "date": "2026-07-23",
-        "time": "20:35",
-        "sport": "nar",
-        "venue": "門別",
-        "grade": "H2",
-        "name": "王冠賞",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-07-23",
-        "time": "20:35",
-        "sport": "nar",
-        "venue": "門別",
-        "grade": "H2",
-        "name": "王冠賞",
-        "winner": "マロンソレイユ"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F23&k_babaCode=36",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-07-22",
-      "sport": "boat",
-      "venue": "児島",
-      "name": "シモデンカップ",
-      "before": {
-        "date": "2026-07-22",
-        "time": "17:50",
-        "sport": "boat",
-        "venue": "児島",
-        "grade": "GⅢ",
-        "name": "シモデンカップ",
-        "winner": "4166 吉田 拡郎"
-      },
-      "after": {
-        "date": "2026-07-22",
-        "time": "17:50",
-        "sport": "boat",
-        "venue": "児島",
-        "grade": "GⅢ",
-        "name": "シモデンカップ",
-        "winner": "吉田 拡郎"
-      },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=16&hd=20260722&rno=12",
-      "note": "BOAT RACE公式12R結果"
-    },
-    {
-      "date": "2026-07-23",
-      "sport": "boat",
-      "venue": "津",
-      "name": "イースタンヤング",
-      "before": {
-        "date": "2026-07-23",
-        "time": "16:25",
-        "sport": "boat",
-        "venue": "津",
-        "grade": "GⅢ",
-        "name": "イースタンヤング",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-07-23",
-        "time": "16:27",
-        "sport": "boat",
-        "venue": "津",
-        "grade": "GⅢ",
-        "name": "イースタンヤング",
-        "winner": "中山 翔太"
-      },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=09&hd=20260723&rno=12",
-      "note": "BOAT RACE公式12R結果"
-    },
-    {
-      "date": "2026-07-24",
-      "sport": "boat",
-      "venue": "下関",
-      "name": "オールレディース",
-      "before": {
-        "date": "2026-07-24",
-        "time": "",
-        "sport": "boat",
-        "venue": "下関",
-        "grade": "GⅢ",
-        "name": "オールレディース",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-07-24",
-        "time": "20:45",
-        "sport": "boat",
-        "venue": "下関",
-        "grade": "GⅢ",
-        "name": "オールレディース",
-        "winner": ""
-      },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=19&hd=20260724&rno=12",
-      "note": "BOAT RACE公式12R結果"
-    },
-    {
-      "date": "2026-07-24",
-      "sport": "boat",
-      "venue": "福岡",
-      "name": "ウエスタンヤング",
-      "before": {
-        "date": "2026-07-24",
-        "time": "",
-        "sport": "boat",
-        "venue": "福岡",
-        "grade": "GⅢ",
-        "name": "ウエスタンヤング",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-07-24",
-        "time": "18:00",
-        "sport": "boat",
-        "venue": "福岡",
-        "grade": "GⅢ",
-        "name": "ウエスタンヤング",
-        "winner": ""
-      },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=22&hd=20260724&rno=12",
-      "note": "BOAT RACE公式12R結果"
-    },
-    {
-      "date": "2026-07-24",
-      "sport": "keirin",
-      "venue": "前橋",
-      "name": "ドームスーパーナイトレース",
-      "before": {
-        "date": "2026-07-24",
-        "time": "",
-        "sport": "keirin",
-        "venue": "前橋",
-        "grade": "GⅢ",
-        "name": "ドームスーパーナイトレース",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-07-24",
-        "time": "20:30",
-        "sport": "keirin",
-        "venue": "前橋",
-        "grade": "GⅢ",
-        "name": "ドームスーパーナイトレース",
-        "winner": ""
-      },
-      "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceList.do?joCode=22&kaisaiBi=20260724&raceNo=11",
-      "note": "公開出走表によるKEIRIN.JP補完（11R発走時間）"
     }
   ]
 }

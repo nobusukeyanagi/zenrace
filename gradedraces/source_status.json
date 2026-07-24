@@ -1,9 +1,8 @@
 {
-  "generated_at": "2026-07-24T05:22:13.396552+09:00",
+  "generated_at": "2026-07-24T10:20:59.508191+09:00",
   "selection_mode": "smart",
   "selection_counts": {
     "recent_verification": 5,
-    "unresolved": 2,
     "upcoming": 23
   },
   "sources": [
@@ -62,8 +61,8 @@
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=03",
         "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=16&hd=20260722&rno=12",
         "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=09&hd=20260723&rno=12",
-        "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=19&hd=20260724&rno=12",
         "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=22&hd=20260724&rno=12",
+        "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=19&hd=20260724&rno=12",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=03&hd=20260728",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=11&hd=20260802",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=01&hd=20260805"
@@ -74,10 +73,9 @@
     {
       "name": "競輪",
       "ok": true,
-      "patch_count": 1,
+      "patch_count": 0,
       "fetched_urls": [
-        "https://keirin.jp/pc/graderaceschedule",
-        "https://www.oddspark.com/keirin/RaceList.do?joCode=22&kaisaiBi=20260724&raceNo=11"
+        "https://keirin.jp/pc/graderaceschedule"
       ],
       "warnings": [
         "2026-08-04 小田原: 発走時刻を特定できませんでした"

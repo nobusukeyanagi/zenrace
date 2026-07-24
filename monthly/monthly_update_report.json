@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-24T05:25:02.916238+09:00",
+  "generated_at": "2026-07-24T10:23:41.675482+09:00",
   "target_date": "2026-07-24",
-  "before_count": 29,
+  "before_count": 33,
   "after_count": 33,
-  "changed": true,
+  "changed": false,
   "before": [
     {
       "sport": "keirin",
@@ -78,10 +78,34 @@
     },
     {
       "sport": "auto",
+      "venue": "川口",
+      "grade": "普通",
+      "session": "midnight"
+    },
+    {
+      "sport": "auto",
+      "venue": "伊勢崎",
+      "grade": "普通",
+      "session": "midnight"
+    },
+    {
+      "sport": "auto",
+      "venue": "浜松",
+      "grade": "普通",
+      "session": "midnight"
+    },
+    {
+      "sport": "auto",
       "venue": "飯塚",
       "grade": "普通",
-      "session": "night",
+      "session": "midnight",
       "day": "初日"
+    },
+    {
+      "sport": "auto",
+      "venue": "山陽",
+      "grade": "普通",
+      "session": "midnight"
     },
     {
       "sport": "boat",
@@ -99,7 +123,7 @@
     {
       "sport": "boat",
       "venue": "江戸川",
-      "grade": "G3",
+      "grade": "一般",
       "day": "2日目"
     },
     {
@@ -434,7 +458,7 @@
     {
       "sport": "auto",
       "ok": true,
-      "entry_count": 5,
+      "entry_count": 0,
       "fetched_urls": [
         "https://autorace.jp/race_info/Program/kawaguchi/2026-07-24_01",
         "https://autorace.jp/race_info/Program/isesaki/2026-07-24_01",
@@ -442,7 +466,9 @@
         "https://autorace.jp/race_info/Program/iizuka/2026-07-24_01",
         "https://autorace.jp/race_info/Program/sanyo/2026-07-24_01"
       ],
-      "warnings": [],
+      "warnings": [
+        "取得結果が0件だったため、既存データを保全しました。"
+      ],
       "error": ""
     },
     {
