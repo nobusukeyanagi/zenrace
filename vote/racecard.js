@@ -13,7 +13,8 @@
         const carCell = row.querySelector("td.car-number");
         const riderCell = row.querySelector("td.rider-name");
         if (!carCell || !riderCell) return;
-        const shortName = String(riderCell.textContent || "").replace(/[\s　]+/g, "").slice(0, 3);
+        const nameSource = riderCell.querySelector(".rider-name-main")?.textContent || riderCell.textContent || "";
+        const shortName = String(nameSource).replace(/[\s　]+/g, "").slice(0, 3);
         carCell.dataset.riderShort = shortName;
         if (!carCell.querySelector(".car-number-value")) {
           const value = document.createElement("span");

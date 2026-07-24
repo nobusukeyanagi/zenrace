@@ -95,12 +95,37 @@
 @media(prefers-reduced-motion:reduce){
   :is(.race-card,.timetable-race,.venue-button,.race-tab){transition:none}
 }
-/* 出走表系レースボタン: 上端4pxラインと開催場名が干渉しないよう上下を均等化 */
+/* 上端4pxの競技色ラインを避け、4ページの文字ブロックを視覚的に中央へ揃える。 */
+.race-card{
+  padding:7px 5px 3px;
+  gap:3px;
+}
+.timetable-race{
+  padding:7px 4px 2px;
+  gap:1px;
+}
+.venue-button{
+  padding:8px 4px 4px;
+  row-gap:4px;
+}
 .race-tab{
   display:flex;
   flex-direction:column;
   justify-content:center;
-  padding:7px 5px 3px;
+  padding:8px 5px 3px;
 }
 .race-tab strong{flex:0 0 auto;min-height:16px}
 .race-tab>span{margin-top:2px}
+
+/* 出走表の注目レースは金枠を維持し、赤文字と赤い外周光で強調する。 */
+.race-tab.featured-race{
+  border-color:var(--race-button-border);
+  box-shadow:0 0 0 3px rgba(212,35,43,.38),0 2px 5px rgba(0,0,0,.20);
+}
+.race-tab.featured-race .race-tab-name,
+.race-tab.featured-race>span{color:#b91620}
+.race-tab.featured-race.active,
+.race-tab.featured-race[aria-current="true"]{
+  background:var(--race-button-active);
+  box-shadow:0 0 0 3px rgba(212,35,43,.42),0 4px 11px rgba(0,0,0,.26);
+}

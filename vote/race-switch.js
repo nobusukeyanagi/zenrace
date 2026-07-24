@@ -14,12 +14,13 @@
   // 投票系ページでは、全レース中止の江戸川をレース選択に表示しない。
   const DISPLAY_RACES = RACES.filter((race) => !(race.sport === "boat" && race.venue === "江戸川"));
   const DEFAULT_ACTIVE = "浜松-12R-16:45";
-  const FEATURED_RACES = new Set([
-    "熊本-12R-16:30",
-    "浜松-12R-16:45",
-    "名古屋-7R-17:50",
-  ]);
   const keyOf = (race) => `${race.venue}-${race.race}-${race.time}`;
+  const FEATURED_RACE_KEYS = new Set([
+    "keirin:熊本:12R",
+    "auto:浜松:12R",
+    "nar:名古屋:7R",
+  ]);
+  const isFeaturedRace = (race) => FEATURED_RACE_KEYS.has(`${race.sport}:${race.venue}:${race.race}`);
   const showPreparingToast = () => {
     let toast = document.querySelector(".race-switch-toast");
     if (!toast) {
@@ -44,9 +45,8 @@
       const tabs = DISPLAY_RACES.map((race) => {
         const key = keyOf(race);
         const active = key === activeKey;
-        const featured = FEATURED_RACES.has(key);
-        const ariaLabel = `${race.venue} ${race.race} ${race.time}${featured ? " 注目レース" : ""}`;
-        return `<a class="race-tab sport-${race.sport}${featured ? " featured-race" : ""}${active ? " active" : ""}" href="#" data-race-key="${key}" data-race-time="${race.time}" data-race-venue="${race.venue}" aria-label="${ariaLabel}"${active ? ' aria-current="true"' : ""}><strong><span class="race-tab-name">${race.venue}</span><span class="race-tab-icon ${race.sport}" aria-hidden="true"></span></strong><span>${race.race} ${race.time}</span></a>`;
+        const featured = isFeaturedRace(race);
+        return `<a class="race-tab sport-${race.sport}${featured ? " featured-race" : ""}${active ? " active" : ""}" href="#" data-race-key="${key}" data-race-time="${race.time}"${active ? ' aria-current="true"' : ""}><strong><span class="race-tab-name">${race.venue}</span><span class="race-tab-icon ${race.sport}" aria-hidden="true"></span></strong><span>${race.race} ${race.time}</span></a>`;
       }).join("");
       this.innerHTML = `<section class="race-switch-wrap" aria-label="レース切り替え"><div class="race-switch">${tabs}</div></section>`;
 
@@ -60,39 +60,17 @@
         track.scrollLeft = target;
       };
 
-      const raceTabs = [...this.querySelectorAll(".race-tab")];
-      raceTabs.forEach((tab) => {
+      this.querySelectorAll(".race-tab").forEach((tab) => {
         tab.addEventListener("click", (event) => {
           event.preventDefault();
           showPreparingToast();
         });
       });
 
-      const applyVenueFilter = (venue, enabled) => {
-        raceTabs.forEach((tab) => {
-          tab.hidden = Boolean(enabled && tab.dataset.raceVenue !== venue);
-        });
-        track?.classList.toggle("is-venue-filtered", Boolean(enabled));
-        if (track) track.scrollLeft = 0;
-        requestAnimationFrame(() => requestAnimationFrame(alignActive));
-      };
-      this._venueFilterHandler = (event) => {
-        const venue = event.detail?.venue;
-        if (!venue) return;
-        applyVenueFilter(venue, Boolean(event.detail?.enabled));
-      };
-      document.addEventListener("zenrace:race-venue-filter", this._venueFilterHandler);
-
       requestAnimationFrame(() => requestAnimationFrame(alignActive));
       setTimeout(alignActive, 120);
       window.addEventListener("pageshow", alignActive);
       if ("ResizeObserver" in window) new ResizeObserver(alignActive).observe(track);
-    }
-
-    disconnectedCallback() {
-      if (this._venueFilterHandler) {
-        document.removeEventListener("zenrace:race-venue-filter", this._venueFilterHandler);
-      }
     }
   }
 
