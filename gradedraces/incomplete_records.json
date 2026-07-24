@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-24T11:00:17.605033+09:00",
-  "center_date": "2026-07-24",
+  "generated_at": "2026-07-25T05:50:00.554890+09:00",
+  "center_date": "2026-07-25",
   "past_unresolved_count": 0,
-  "upcoming_missing_time_count": 13,
+  "upcoming_missing_time_count": 14,
   "past_unresolved": [],
   "upcoming_missing_time": [
     {
@@ -131,6 +131,16 @@
       "venue": "門別",
       "grade": "H3",
       "name": "サッポロクラシックカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "sport": "boat",
+      "venue": "平和島",
+      "grade": "GⅢ",
+      "name": "キリンカップ",
       "missing": [
         "time"
       ]

@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-07-24T11:00:17.738525+09:00",
-  "base_date": "2026-07-24",
+  "generated_at": "2026-07-25T05:50:00.687452+09:00",
+  "base_date": "2026-07-25",
   "steps": [
     {
       "command": [
         "/opt/hostedtoolcache/Python/3.12.13/x64/bin/python",
         "-m",
         "scripts.master_schedule",
-        "--date",
-        "2026-07-24",
         "--fail-if-all-sources-fail"
       ],
       "returncode": 0
@@ -18,8 +16,6 @@
         "/opt/hostedtoolcache/Python/3.12.13/x64/bin/python",
         "-m",
         "scripts.update_races",
-        "--date",
-        "2026-07-24",
         "--smart",
         "--fail-if-all-sources-fail"
       ],
@@ -53,10 +49,10 @@
     "master_updated": 4,
     "master_review_required": 7,
     "master_duplicates": 0,
-    "detail_targets": 28,
-    "detail_changes": 4,
+    "detail_targets": 27,
+    "detail_changes": 10,
     "past_unresolved": 0,
-    "upcoming_missing_time": 13,
+    "upcoming_missing_time": 14,
     "detail_source_failures": 0
   }
 }
