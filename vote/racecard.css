@@ -3,8 +3,8 @@
 .vote-racecard{width:min(100%,760px);margin:0 auto;padding:0 0 34px}
 .section{margin:10px 8px 0;overflow:hidden;border:1px solid rgba(213,171,67,.34);border-radius:10px;background:#fff;box-shadow:none}
 .zenrace-content-shell{overflow-x:hidden!important;overflow-y:auto}.zenrace-content-sizer{width:100%!important;max-width:100%;overflow-x:clip}.zenrace-content-stage{width:100%!important;max-width:100%;overflow-x:clip}.table-scroll{position:relative;width:100%;min-width:0;max-width:100%;overflow-x:auto;overflow-y:hidden;background:#fff;-webkit-overflow-scrolling:touch;scrollbar-color:#7545af #eee;overscroll-behavior-x:none;touch-action:pan-x pan-y}
-.race-table{width:898px;border-collapse:separate;border-spacing:0;table-layout:fixed;background:#fff;color:#15171a}
-.race-table col.col-car{width:38px}.race-table col.col-rider{width:116px}.race-table col.col-hst{width:64px}.race-table col.col-trial{width:64px}.race-table col.col-win-rate,.race-table col.col-quinella-rate,.race-table col.col-place-rate{width:80px}.race-table col.col-results{width:176px}.race-table col.col-rank{width:78px}.race-table col.col-machine{width:122px}
+.race-table{width:1052px;border-collapse:separate;border-spacing:0;table-layout:fixed;background:#fff;color:#15171a}
+.race-table col.col-car{width:38px}.race-table col.col-rider{width:116px}.race-table col.col-hst{width:64px}.race-table col.col-trial{width:64px}.race-table col.col-win-rate,.race-table col.col-quinella-rate,.race-table col.col-place-rate{width:80px}.race-table col.col-results{width:176px}.race-table col.col-recent-ten{width:154px}.race-table col.col-rank{width:78px}.race-table col.col-machine{width:122px}
 .race-table th,.race-table td{padding:2px 5px;border-right:1px solid #d2d3d7;border-bottom:1px solid #d2d3d7;text-align:center;white-space:nowrap}
 .race-table th{height:28px;color:#fff;background:var(--auto-purple);font-size:13px;font-weight:1000;line-height:1.05}
 .race-table td{height:44px;color:#15171a;background:#fff;font-size:13px;font-weight:700;line-height:1}
@@ -32,6 +32,10 @@
 .race-results{padding-inline:5px!important;text-align:center!important}
 .result-line{display:grid!important;width:100%;grid-template-columns:1em minmax(2ch,1fr) .7ch minmax(2ch,1fr) .7ch minmax(2ch,1fr) .7ch minmax(2ch,1fr) .7ch minmax(2.2ch,1fr);align-items:center;justify-content:stretch;column-gap:0;overflow:visible!important;text-overflow:clip!important}
 .result-label{text-align:left}.result-number,.result-separator{text-align:center}.result-total{text-align:center}
+.recent-ten{padding-inline:5px!important;text-align:center!important}
+.recent-ten-list{display:grid!important;width:100%;grid-template-columns:repeat(10,13px);align-items:center;justify-content:center;column-gap:1px;overflow:visible!important;text-overflow:clip!important}
+.recent-place{display:inline-flex!important;flex:0 0 13px;height:18px;align-items:center;justify-content:center;overflow:visible!important;color:#111!important;font-size:13px!important;font-weight:700!important;line-height:18px!important;text-align:center}
+.recent-place.finish-1{background:#fff0b8!important}.recent-place.finish-2{background:#e4f5b4!important}.recent-place.finish-3{background:#cfeeff!important}
 .rank-cell>span{font-weight:700}
 .rank-cell>span+span{color:#66707c!important;font-size:11px!important;font-weight:850!important;line-height:1;letter-spacing:-.02em}
 .race-table .machine-name{padding-inline:5px;text-align:left;font-weight:900;overflow:hidden}
