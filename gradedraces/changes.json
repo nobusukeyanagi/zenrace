@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-07-25T05:50:00.554324+09:00",
-  "center_date": "2026-07-25",
+  "generated_at": "2026-07-26T05:17:56.773580+09:00",
+  "center_date": "2026-07-26",
   "selection_mode": "smart",
   "selection_counts": {
-    "recent_verification": 5,
-    "unresolved": 3,
-    "upcoming": 22
+    "recent_verification": 3,
+    "upcoming": 27
   },
-  "target_count": 27,
-  "change_count": 10,
+  "target_count": 30,
+  "change_count": 12,
   "changes": [
     {
       "date": "2026-07-26",
@@ -125,37 +124,10 @@
       "name": "エルムS",
       "before": {
         "date": "2026-08-08",
-        "time": "",
+        "time": "14:20",
         "sport": "jra",
         "venue": "札幌",
         "grade": "GⅢ",
-        "name": "エルムS",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-08",
-        "time": "",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GIII",
-        "name": "エルムS",
-        "winner": ""
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-08-08",
-      "sport": "jra",
-      "venue": "札幌",
-      "name": "エルムS",
-      "before": {
-        "date": "2026-08-08",
-        "time": "",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GIII",
         "name": "エルムS",
         "winner": ""
       },
@@ -169,116 +141,197 @@
         "winner": ""
       },
       "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/8/0808.html",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-08-09",
+      "sport": "jra",
+      "venue": "新潟",
+      "name": "レパードS",
+      "before": {
+        "date": "2026-08-09",
+        "time": "",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GⅢ",
+        "name": "レパードS",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-09",
+        "time": "",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GIII",
+        "name": "レパードS",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-08-09",
+      "sport": "jra",
+      "venue": "中京",
+      "name": "CBC賞",
+      "before": {
+        "date": "2026-08-09",
+        "time": "",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GⅢ",
+        "name": "CBC賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-09",
+        "time": "",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GIII",
+        "name": "CBC賞",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-08-09",
+      "sport": "jra",
+      "venue": "中京",
+      "name": "CBC賞",
+      "before": {
+        "date": "2026-08-09",
+        "time": "",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GIII",
+        "name": "CBC賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-09",
+        "time": "13:50",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GIII",
+        "name": "CBC賞",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/8/0809.html",
       "note": "JRA競馬番組"
     },
     {
-      "date": "2026-07-26",
-      "sport": "nar",
-      "venue": "盛岡",
-      "name": "若鮎賞",
+      "date": "2026-08-09",
+      "sport": "jra",
+      "venue": "新潟",
+      "name": "レパードS",
       "before": {
-        "date": "2026-07-26",
-        "time": "18:55",
-        "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M3",
-        "name": "若鮎賞",
+        "date": "2026-08-09",
+        "time": "",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GIII",
+        "name": "レパードS",
         "winner": ""
       },
       "after": {
-        "date": "2026-07-26",
-        "time": "18:20",
+        "date": "2026-08-09",
+        "time": "17:20",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GIII",
+        "name": "レパードS",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/8/0809.html",
+      "note": "JRA競馬番組"
+    },
+    {
+      "date": "2026-07-28",
+      "sport": "nar",
+      "venue": "名古屋",
+      "name": "名港盃",
+      "before": {
+        "date": "2026-07-28",
+        "time": "",
         "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M3",
-        "name": "若鮎賞",
+        "venue": "名古屋",
+        "grade": "SPⅠ",
+        "name": "名港盃",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-07-28",
+        "time": "19:55",
+        "sport": "nar",
+        "venue": "名古屋",
+        "grade": "SPⅠ",
+        "name": "名港盃",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F26&k_babaCode=10",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F28&k_babaCode=24",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-07-24",
-      "sport": "boat",
-      "venue": "福岡",
-      "name": "ウエスタンヤング",
+      "date": "2026-07-29",
+      "sport": "nar",
+      "venue": "門別",
+      "name": "旭岳賞",
       "before": {
-        "date": "2026-07-24",
-        "time": "18:00",
-        "sport": "boat",
-        "venue": "福岡",
-        "grade": "GⅢ",
-        "name": "ウエスタンヤング",
+        "date": "2026-07-29",
+        "time": "",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "旭岳賞",
         "winner": ""
       },
       "after": {
-        "date": "2026-07-24",
-        "time": "18:00",
-        "sport": "boat",
-        "venue": "福岡",
-        "grade": "GⅢ",
-        "name": "ウエスタンヤング",
-        "winner": "中 亮太"
+        "date": "2026-07-29",
+        "time": "20:35",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "旭岳賞",
+        "winner": ""
       },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=22&hd=20260724&rno=12",
-      "note": "BOAT RACE公式12R結果"
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F29&k_babaCode=36",
+      "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-07-24",
-      "sport": "boat",
-      "venue": "下関",
-      "name": "オールレディース",
+      "date": "2026-07-30",
+      "sport": "nar",
+      "venue": "門別",
+      "name": "ポラリスサマースプリント",
       "before": {
-        "date": "2026-07-24",
-        "time": "20:45",
-        "sport": "boat",
-        "venue": "下関",
-        "grade": "GⅢ",
-        "name": "オールレディース",
+        "date": "2026-07-30",
+        "time": "",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "ポラリスサマースプリント",
         "winner": ""
       },
       "after": {
-        "date": "2026-07-24",
-        "time": "20:45",
-        "sport": "boat",
-        "venue": "下関",
-        "grade": "GⅢ",
-        "name": "オールレディース",
-        "winner": "田口 節子"
-      },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=19&hd=20260724&rno=12",
-      "note": "BOAT RACE公式12R結果"
-    },
-    {
-      "date": "2026-07-24",
-      "sport": "keirin",
-      "venue": "前橋",
-      "name": "ドームスーパーナイトレース",
-      "before": {
-        "date": "2026-07-24",
-        "time": "20:30",
-        "sport": "keirin",
-        "venue": "前橋",
-        "grade": "GⅢ",
-        "name": "ドームスーパーナイトレース",
+        "date": "2026-07-30",
+        "time": "20:35",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "ポラリスサマースプリント",
         "winner": ""
       },
-      "after": {
-        "date": "2026-07-24",
-        "time": "20:30",
-        "sport": "keirin",
-        "venue": "前橋",
-        "grade": "GⅢ",
-        "name": "ドームスーパーナイトレース",
-        "winner": "谷口 遼平 32歳/103期"
-      },
-      "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=22&kaisaiBi=20260724&raceNo=11",
-      "note": "公開結果によるKEIRIN.JP補完（11R）"
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F30&k_babaCode=36",
+      "note": "地方競馬公式レース情報"
     }
   ]
 }

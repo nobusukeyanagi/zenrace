@@ -3340,7 +3340,7 @@
   },
   {
     "date": "2026-07-28",
-    "time": "",
+    "time": "19:55",
     "sport": "nar",
     "venue": "名古屋",
     "grade": "SPⅠ",
@@ -3358,7 +3358,7 @@
   },
   {
     "date": "2026-07-29",
-    "time": "",
+    "time": "20:35",
     "sport": "nar",
     "venue": "門別",
     "grade": "H3",
@@ -3367,7 +3367,7 @@
   },
   {
     "date": "2026-07-30",
-    "time": "",
+    "time": "20:35",
     "sport": "nar",
     "venue": "門別",
     "grade": "H3",
@@ -3484,19 +3484,19 @@
   },
   {
     "date": "2026-08-09",
-    "time": "",
+    "time": "13:50",
     "sport": "jra",
     "venue": "中京",
-    "grade": "GⅢ",
+    "grade": "GIII",
     "name": "CBC賞",
     "winner": ""
   },
   {
     "date": "2026-08-09",
-    "time": "",
+    "time": "17:20",
     "sport": "jra",
     "venue": "新潟",
-    "grade": "GⅢ",
+    "grade": "GIII",
     "name": "レパードS",
     "winner": ""
   },

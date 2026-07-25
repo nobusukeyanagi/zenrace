@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-25T05:50:00.554890+09:00",
-  "center_date": "2026-07-25",
+  "generated_at": "2026-07-26T05:17:56.774131+09:00",
+  "center_date": "2026-07-26",
   "past_unresolved_count": 0,
   "upcoming_missing_time_count": 14,
   "past_unresolved": [],
@@ -17,40 +17,10 @@
     },
     {
       "date": "2026-07-28",
-      "sport": "nar",
-      "venue": "名古屋",
-      "grade": "SPⅠ",
-      "name": "名港盃",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-07-28",
       "sport": "boat",
       "venue": "江戸川",
       "grade": "GⅢ",
       "name": "アサヒビールカップ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-07-29",
-      "sport": "nar",
-      "venue": "門別",
-      "grade": "H3",
-      "name": "旭岳賞",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-07-30",
-      "sport": "nar",
-      "venue": "門別",
-      "grade": "H3",
-      "name": "ポラリスサマースプリント",
       "missing": [
         "time"
       ]
@@ -141,6 +111,36 @@
       "venue": "平和島",
       "grade": "GⅢ",
       "name": "キリンカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-09",
+      "sport": "nar",
+      "venue": "盛岡",
+      "grade": "M1",
+      "name": "ひまわり賞（オークス）",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-09",
+      "sport": "keirin",
+      "venue": "佐世保",
+      "grade": "GⅠ",
+      "name": "毎日新聞社杯女子オールスター競輪",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-09",
+      "sport": "keirin",
+      "venue": "和歌山",
+      "grade": "GⅢ",
+      "name": "ワールドサイクリスト支援競輪",
       "missing": [
         "time"
       ]

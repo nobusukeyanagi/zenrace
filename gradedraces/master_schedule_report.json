@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-25T05:47:26.864152+09:00",
-  "base_date": "2026-07-25",
+  "generated_at": "2026-07-26T05:15:16.992366+09:00",
+  "base_date": "2026-07-26",
   "calendar_years": [
     2026,
     2027
@@ -11,7 +11,7 @@
   ],
   "official_record_count": 204,
   "added_count": 0,
-  "updated_count": 4,
+  "updated_count": 5,
   "registered_only_count": 7,
   "duplicate_count": 0,
   "additions": [],
@@ -111,6 +111,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-08-02:クイーンs"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-08-08",
+        "time": "14:20",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GIII",
+        "name": "エルムS",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-08",
+        "time": "14:20",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GⅢ",
+        "name": "エルムS",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-08-08:エルムs"
     }
   ],
   "registered_only": [
