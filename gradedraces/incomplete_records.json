@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-07-26T05:17:56.774131+09:00",
-  "center_date": "2026-07-26",
-  "past_unresolved_count": 0,
-  "upcoming_missing_time_count": 14,
-  "past_unresolved": [],
-  "upcoming_missing_time": [
+  "generated_at": "2026-07-27T05:06:11.315639+09:00",
+  "center_date": "2026-07-27",
+  "past_unresolved_count": 1,
+  "upcoming_missing_time_count": 13,
+  "past_unresolved": [
     {
       "date": "2026-07-26",
       "sport": "nar",
@@ -12,9 +11,12 @@
       "grade": "",
       "name": "能登復興祈念百万石かがやきナイター賞",
       "missing": [
-        "time"
+        "time",
+        "winner"
       ]
-    },
+    }
+  ],
+  "upcoming_missing_time": [
     {
       "date": "2026-07-28",
       "sport": "boat",
