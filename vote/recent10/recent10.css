@@ -257,3 +257,11 @@
 .recent-race-metric-label-h{
   color:#66707c!important;
 }
+
+/* v8: compact equal-width race columns; H20 ends just before the standard right padding. */
+.recent-detail-table{width:2534px}
+.recent-detail-table col.col-race-result{width:238px}
+.recent-race-bottom{
+  grid-template-columns:62px 53px 40px 29px!important;
+  column-gap:2px!important;
+}
