@@ -48,3 +48,22 @@
   background-color:transparent!important;
   background-image:none!important;
 }
+
+
+/* v4: recent head-to-head race history and strict matchup-rate coloring. */
+.matchups-table{width:1652px}
+.matchups-table col.col-history{width:154px}
+.matchups-table .history-heading{padding-inline:5px;font-size:11px;font-weight:850;letter-spacing:-.02em;white-space:nowrap}
+.matchups-table .matchup-history-cell{height:44px!important;padding:2px 5px!important;vertical-align:middle!important;text-align:left!important;overflow:hidden;white-space:nowrap}
+.matchups-table .matchup-history-card{grid-template-columns:32px minmax(0,1fr);height:35px}
+.matchups-table .matchup-history-top{display:flex;align-items:center;gap:0;height:16px;overflow:visible}
+.matchups-table .matchup-history-bottom{display:grid!important;grid-template-columns:42px 32px!important;column-gap:2px!important;align-items:center!important;justify-content:start!important;height:16px}
+.matchups-table .matchup-history-top .recent-race-metric,
+.matchups-table .matchup-history-bottom .recent-race-metric{display:inline-flex!important;width:max-content!important;min-width:0!important;align-items:baseline!important;justify-self:start!important;gap:0!important;margin:0!important;padding:0!important}
+.matchups-table .matchup-history-top .recent-race-metric[data-rank],
+.matchups-table .matchup-history-bottom .recent-race-metric[data-rank]{padding:1px 2px!important}
+.matchups-table .matchup-history-empty{background:#fff!important}
+.matchups-table .matchup-cell:not(.sp-cell) .matchup-main:not(.matchup-gold),
+.matchups-table .matchup-cell:not(.sp-cell) .matchup-main:not(.matchup-gold)[data-rank],
+.matchups-table .matchup-cell:not(.sp-cell) .matchup-main:not(.matchup-gold)[class*="rank-"]{background:transparent!important;background-color:transparent!important;background-image:none!important;box-shadow:none!important}
+@media(max-width:430px){.matchups-table .matchup-history-cell{height:42px!important}}

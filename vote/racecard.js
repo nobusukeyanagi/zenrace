@@ -75,7 +75,11 @@
     [...(element?.children || [])].filter((child) => child.matches(selector));
 
   const applyAllRaceRanks = () => {
-    const rows = [...document.querySelectorAll(".race-table tbody tr")];
+    const supportCell = document.querySelector(".race-table .support-rate-cell");
+    const basicTable = supportCell?.closest(".race-table");
+    if (!basicTable) return;
+
+    const rows = [...basicTable.querySelectorAll("tbody tr")];
     if (!rows.length) return;
 
     const cells = rows.map((row) => [...row.children].filter((child) => child.matches("td")));
