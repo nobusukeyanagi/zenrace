@@ -121,3 +121,62 @@
 .recent-race-metric[data-rank="1"],.recent-race-metric[data-rank="1"]>*{background:#f6de8d!important}
 .recent-race-metric[data-rank="2"],.recent-race-metric[data-rank="2"]>*{background:#d9e6ee!important}
 .recent-race-metric[data-rank="3"],.recent-race-metric[data-rank="3"]>*{background:#e3c6a3!important}
+
+/* v2: finalized near-10 detail typography, finish square and aligned metric columns. */
+.recent-race-card{
+  grid-template-columns:32px minmax(0,1fr);
+  column-gap:.35em;
+}
+.recent-finish-badge{
+  width:32px;
+  height:32px;
+  min-height:32px;
+  align-self:center;
+  border-radius:6px;
+}
+.recent-finish-badge.is-nonnumeric{
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:-.08em;
+  line-height:1;
+}
+
+/* The whole first line uses normal-weight black text. */
+.recent-race-top,
+.recent-race-date,
+.recent-race-venue,
+.recent-race-grade,
+.recent-race-name,
+.recent-race-track{
+  color:#15171a!important;
+  font-weight:400!important;
+}
+
+/* Fixed columns keep 競・試・ST・H aligned in every race cell. */
+.recent-race-bottom{
+  display:grid;
+  grid-template-columns:68px 60px 42px 32px;
+  column-gap:.35em;
+  align-items:center;
+}
+.recent-race-bottom .recent-race-metric{
+  width:100%;
+  min-width:0;
+  justify-content:flex-start;
+  box-sizing:border-box;
+  padding:1px 2px;
+}
+.recent-race-bottom .recent-race-metric:nth-child(1),
+.recent-race-bottom .recent-race-metric:nth-child(2){
+  display:grid;
+  grid-template-columns:1em minmax(0,1fr);
+  column-gap:.35em;
+  align-items:baseline;
+}
+.recent-race-bottom .recent-race-metric:nth-child(3),
+.recent-race-bottom .recent-race-metric:nth-child(4){
+  display:flex;
+  align-items:baseline;
+}
+.recent-race-metric-label{margin-right:0!important}
+
