@@ -125,6 +125,7 @@
     const detailToast = document.querySelector(".racecard-detail-toast");
     let detailToastTimer = 0;
     document.querySelectorAll(".racecard-detail-tab:not(.active)").forEach((button) => {
+      if (button.matches("a[href]")) return;
       button.addEventListener("click", () => {
         if (!detailToast) return;
         window.clearTimeout(detailToastTimer);

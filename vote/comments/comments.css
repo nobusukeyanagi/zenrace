@@ -1,0 +1,52 @@
+/* コメントページ：車番・選手列は基本情報と同じ幅、コメント列は残り幅に収める */
+.comment-page .section{overflow:hidden}
+.comment-page .comment-table-wrap{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  overflow-y:visible;
+  touch-action:pan-y;
+}
+.comment-page .comment-table{
+  width:100%;
+  min-width:0;
+  table-layout:fixed;
+}
+.comment-page .comment-table col.col-car{width:38px}
+.comment-page .comment-table col.col-rider{width:116px}
+.comment-page .comment-table col.col-comment{width:auto}
+.comment-page .comment-table th,
+.comment-page .comment-table td{
+  vertical-align:middle;
+}
+.comment-page .comment-table td{
+  height:auto;
+}
+.comment-page .comment-table .rider-name{
+  padding:8px 7px;
+  vertical-align:middle;
+}
+.comment-page .comment-table .comment-cell{
+  padding:10px 9px;
+  color:#15171a!important;
+  background:#fff;
+  font-size:13px!important;
+  font-weight:600!important;
+  line-height:1.62;
+  text-align:left;
+  vertical-align:middle;
+  white-space:normal;
+  word-break:normal;
+  overflow-wrap:anywhere;
+}
+.comment-page .comment-cell p{
+  margin:0;
+  color:inherit;
+  font:inherit;
+  line-height:inherit;
+  white-space:normal;
+}
+.comment-page .comment-table th:first-child,
+.comment-page .comment-table td:first-child{
+  position:static;
+}
