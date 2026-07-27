@@ -67,3 +67,18 @@
 .matchups-table .matchup-cell:not(.sp-cell) .matchup-main:not(.matchup-gold)[data-rank],
 .matchups-table .matchup-cell:not(.sp-cell) .matchup-main:not(.matchup-gold)[class*="rank-"]{background:transparent!important;background-color:transparent!important;background-image:none!important;box-shadow:none!important}
 @media(max-width:430px){.matchups-table .matchup-history-cell{height:42px!important}}
+
+
+/* v5: compact recent-match headers without target-car annotations. */
+.matchups-table{width:1218px}
+.matchups-table col.col-history{width:92px}
+.matchups-table .history-heading{
+  padding:2px 5px!important;
+  color:#fff!important;
+  font-size:13px!important;
+  font-weight:1000!important;
+  line-height:1.05!important;
+  letter-spacing:normal!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+}
