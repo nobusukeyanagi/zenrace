@@ -3,8 +3,8 @@
 .vote-racecard{width:min(100%,760px);margin:0 auto;padding:0 0 34px}
 .section{margin:10px 8px 0;overflow:hidden;border:1px solid rgba(240,204,112,.38);border-radius:14px;background:#fff;box-shadow:none;outline:0;filter:none}
 .zenrace-content-shell{overflow-x:hidden!important;overflow-y:auto}.zenrace-content-sizer{width:100%!important;max-width:100%;overflow-x:clip}.zenrace-content-stage{width:100%!important;max-width:100%;overflow-x:clip}.table-scroll{position:relative;width:100%;min-width:0;max-width:100%;overflow-x:auto;overflow-y:hidden;background:#fff;-webkit-overflow-scrolling:touch;scrollbar-color:#7545af #eee;overscroll-behavior-x:none;touch-action:pan-x pan-y}
-.race-table{width:1188px;border-collapse:separate;border-spacing:0;table-layout:fixed;background:#fff;color:#15171a}
-.race-table col.col-car{width:38px}.race-table col.col-rider{width:116px}.race-table col.col-support-rate{width:72px}.race-table col.col-hst{width:58px}.race-table col.col-trial{width:64px}.race-table col.col-good-ten-time{width:92px}.race-table col.col-recent-ten{width:154px}.race-table col.col-win-rate,.race-table col.col-quinella-rate,.race-table col.col-place-rate{width:80px}.race-table col.col-results{width:176px}.race-table col.col-rank{width:70px}.race-table col.col-machine{width:108px}
+.race-table{width:1174px;border-collapse:separate;border-spacing:0;table-layout:fixed;background:#fff;color:#15171a}
+.race-table col.col-car{width:38px}.race-table col.col-rider{width:116px}.race-table col.col-support-rate{width:58px}.race-table col.col-hst{width:58px}.race-table col.col-trial{width:64px}.race-table col.col-good-ten-time{width:92px}.race-table col.col-recent-ten{width:154px}.race-table col.col-win-rate,.race-table col.col-quinella-rate,.race-table col.col-place-rate{width:80px}.race-table col.col-results{width:176px}.race-table col.col-rank{width:70px}.race-table col.col-machine{width:108px}
 .race-table th,.race-table td{padding:2px 5px;border-right:1px solid #d2d3d7;border-bottom:1px solid #d2d3d7;text-align:center;white-space:nowrap}
 .race-table th{height:28px;color:#fff;background:var(--auto-purple);font-size:13px;font-weight:1000;line-height:1.05}
 .race-table td{height:44px;color:#15171a;background:#fff;font-size:13px;font-weight:700;line-height:1}
@@ -94,3 +94,62 @@
   background-image:linear-gradient(#e3c6a3,#e3c6a3)!important;
 }
 .race-table [data-rank]{border-radius:0!important;box-shadow:none!important;background-clip:border-box!important}
+
+
+/* v83: racecard detail menu and compact support-rate column */
+.racecard-detail-menu{
+  width:min(100%,760px);
+  margin:10px auto 0;
+  padding:0 8px;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:0;
+}
+.racecard-detail-tab{
+  min-width:0;
+  height:38px;
+  padding:0 4px;
+  border:1px solid rgba(213,171,67,.34);
+  border-right:0;
+  border-radius:0;
+  color:#eef1f5;
+  background:linear-gradient(180deg,#1a1a1b,#090909);
+  font-family:inherit;
+  font-size:12px;
+  font-weight:850;
+  line-height:1;
+  white-space:nowrap;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.racecard-detail-tab:first-child{border-radius:9px 0 0 9px}
+.racecard-detail-tab:last-child{border-right:1px solid rgba(213,171,67,.34);border-radius:0 9px 9px 0}
+.racecard-detail-tab.active,
+.racecard-detail-tab[aria-current="page"]{
+  color:#171108;
+  border-color:#b68b27;
+  background:#f0cc70;
+  font-weight:950;
+}
+.racecard-detail-tab:focus-visible{position:relative;z-index:1;outline:2px solid #fff0ad;outline-offset:-2px}
+.racecard-detail-toast{
+  position:fixed;
+  left:50%;
+  bottom:calc(var(--bottom-nav-total-h,62px) + 16px);
+  z-index:12000;
+  max-width:min(88vw,420px);
+  padding:10px 16px;
+  color:#18130a;
+  border:1px solid rgba(255,255,255,.42);
+  border-radius:999px;
+  background:linear-gradient(135deg,#f2da8e,#c28c25);
+  box-shadow:0 10px 28px rgba(0,0,0,.28);
+  font-size:13px;
+  font-weight:850;
+  opacity:0;
+  pointer-events:none;
+  transform:translate(-50%,12px);
+  transition:opacity .18s ease,transform .18s ease;
+}
+.racecard-detail-toast.is-visible{opacity:1;transform:translate(-50%,0)}
+@media(max-width:380px){.racecard-detail-tab{font-size:11px;padding-inline:2px}}

@@ -122,6 +122,17 @@
   const init = () => {
     applyAllRaceRanks();
 
+    const detailToast = document.querySelector(".racecard-detail-toast");
+    let detailToastTimer = 0;
+    document.querySelectorAll(".racecard-detail-tab:not(.active)").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (!detailToast) return;
+        window.clearTimeout(detailToastTimer);
+        detailToast.classList.add("is-visible");
+        detailToastTimer = window.setTimeout(() => detailToast.classList.remove("is-visible"), 1800);
+      });
+    });
+
     document.querySelectorAll(".table-scroll").forEach((scroller) => {
       let startX = 0;
       let startY = 0;
