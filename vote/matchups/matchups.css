@@ -21,3 +21,23 @@
 .matchups-table .self-match .matchup-main{font-size:16px;font-weight:700}
 .matchups-table .sp-cell .matchup-main{line-height:1.2}
 @media(max-width:430px){.matchups-table th,.matchups-table td{height:42px}.matchups-table th{height:28px}}
+
+
+/* v2: compact opponent cells, gold >50%, and medal-ranked SP. */
+.matchups-table{width:558px}
+.matchups-table col.col-opponent{width:44px}
+.matchups-table col.col-sp{width:52px}
+.matchup-main.matchup-gold,
+.sp-cell .matchup-main.sp-rank-first,
+.sp-cell .matchup-main.sp-rank-second,
+.sp-cell .matchup-main.sp-rank-third{
+  display:block;
+  width:100%;
+  padding:1px 0;
+  color:#15171a!important;
+  border-radius:0;
+}
+.matchup-main.matchup-gold,
+.sp-cell .matchup-main.sp-rank-first{background:#f6de8d!important}
+.sp-cell .matchup-main.sp-rank-second{background:#d9e6ee!important}
+.sp-cell .matchup-main.sp-rank-third{background:#e3c6a3!important}

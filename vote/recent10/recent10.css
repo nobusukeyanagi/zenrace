@@ -265,3 +265,7 @@
   grid-template-columns:62px 53px 40px 29px!important;
   column-gap:2px!important;
 }
+
+/* v9: minimal width increase so the longest first-line item remains fully visible. */
+.recent-detail-table{width:2614px}
+.recent-detail-table col.col-race-result{width:246px}
