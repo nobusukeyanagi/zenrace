@@ -16,7 +16,7 @@
 .rider-name-main{display:block;overflow:hidden;font-size:16px;font-weight:1000;line-height:1.15;text-overflow:ellipsis;white-space:nowrap}
 .rider-profile{display:block;margin-top:3px;overflow:hidden;color:#66707c;font-size:11px;font-weight:850;line-height:1;letter-spacing:-.02em;text-overflow:ellipsis;white-space:nowrap}
 .photo-cell{padding:2px!important;vertical-align:middle!important;background:#fff!important}
-.rider-photo{display:block;width:100%;height:40px;object-fit:cover;object-position:center top;border-radius:4px;background:#f2f3f5}
+.rider-photo{display:block;width:100%;height:39px;max-height:39px;object-fit:cover;object-position:center top;border-radius:4px;background:#f2f3f5}
 
 .support-rate-cell{padding-inline:5px!important;text-align:center!important}
 .support-rate-main{display:block;width:100%;overflow:hidden;color:#111;font-size:13px;font-weight:700;line-height:1;text-overflow:clip;white-space:nowrap;font-variant-numeric:tabular-nums}
@@ -163,3 +163,10 @@
 
 .race-table tbody td.photo-cell{padding:2px!important;color:transparent!important;font-size:0!important;line-height:0!important}
 .photo-heading{text-align:center!important}
+
+/* v87: keep basic-information rows equal to the near-10 detail row height after adding photos. */
+.race-table tbody td.photo-cell{height:44px!important}
+@media(max-width:430px){
+  .race-table tbody td.photo-cell{height:42px!important}
+  .rider-photo{height:37px;max-height:37px}
+}
