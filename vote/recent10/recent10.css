@@ -12,7 +12,7 @@
 /* The finish badge spans both information rows. The second row starts under the date. */
 .recent-race-card{
   display:grid;
-  grid-template-columns:28px max-content max-content max-content minmax(0,1fr);
+  grid-template-columns:28px max-content max-content max-content minmax(0,1fr) max-content;
   grid-template-rows:16px 16px;
   column-gap:.35em;
   row-gap:3px;
@@ -42,7 +42,7 @@
   font-weight:1000;
   line-height:1;
 }
-.recent-race-date,.recent-race-venue,.recent-race-grade,.recent-race-name{
+.recent-race-date,.recent-race-venue,.recent-race-grade,.recent-race-name,.recent-race-track{
   display:block;
   align-self:center;
   min-width:0;
@@ -58,8 +58,9 @@
 .recent-race-venue{grid-column:3;grid-row:1}
 .recent-race-grade{grid-column:4;grid-row:1;font-weight:850;text-align:center}
 .recent-race-name{grid-column:5;grid-row:1;font-weight:700}
+.recent-race-track{grid-column:6;grid-row:1;color:#66707c;font-weight:700}
 .recent-race-bottom{
-  grid-column:2 / 6;
+  grid-column:2 / 7;
   grid-row:2;
   display:flex;
   align-items:center;
@@ -90,3 +91,14 @@
   .recent-detail-result{height:42px!important}
   .recent-race-card{height:35px}
 }
+
+
+/* v3: road condition, finish medal palette and metric rank highlights. */
+.recent-finish-badge.finish-1{background:#f6de8d!important}
+.recent-finish-badge.finish-2{background:#d9e6ee!important}
+.recent-finish-badge.finish-3{background:#e3c6a3!important}
+.recent-finish-badge.finish-other{background:#d9dde2!important;color:#34383d!important}
+.recent-race-metric[data-rank]{padding:1px 2px;border-radius:0!important;box-shadow:none!important;background-clip:border-box!important}
+.recent-race-metric[data-rank="1"],.recent-race-metric[data-rank="1"]>*{background:#f6de8d!important}
+.recent-race-metric[data-rank="2"],.recent-race-metric[data-rank="2"]>*{background:#d9e6ee!important}
+.recent-race-metric[data-rank="3"],.recent-race-metric[data-rank="3"]>*{background:#e3c6a3!important}
