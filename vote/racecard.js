@@ -2,9 +2,9 @@
   "use strict";
 
   const RANK_COLORS = {
-    1: "#fff0b8",
-    2: "#e4f5b4",
-    3: "#cfeeff",
+    1: "#f6de8d",
+    2: "#d9e6ee",
+    3: "#e3c6a3",
   };
 
   const RANK_CLASSES = ["rank-highlight", "rank-first", "rank-second", "rank-third"];

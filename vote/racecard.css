@@ -23,20 +23,20 @@
 .surface-stat{padding-inline:5px!important}
 .stat-line{display:grid!important;width:100%;grid-template-columns:1.1em 1fr .8em;align-items:center;justify-content:stretch;column-gap:0;overflow:visible!important;text-overflow:clip!important}
 .surface-label{text-align:left}.surface-value{text-align:right}.surface-unit{text-align:left}
-.rank-first{border-radius:0!important;background:#fff0b8!important;box-shadow:none!important}
-.rank-second{border-radius:0!important;background:#e4f5b4!important;box-shadow:none!important}
-.rank-third{border-radius:0!important;background:#cfeeff!important;box-shadow:none!important}
+.rank-first{border-radius:0!important;background:#f6de8d!important;box-shadow:none!important}
+.rank-second{border-radius:0!important;background:#d9e6ee!important;box-shadow:none!important}
+.rank-third{border-radius:0!important;background:#e3c6a3!important;box-shadow:none!important}
 .stat-line.rank-first,.stat-line.rank-second,.stat-line.rank-third{font-weight:800}
 .stat-line.rank-first .surface-value,.stat-line.rank-second .surface-value,.stat-line.rank-third .surface-value{font-weight:800}
 .data-stack>span.rank-first,.data-stack>span.rank-second,.data-stack>span.rank-third{font-weight:800}
-.good-ten-time{padding-inline:5px!important}.good-ten-line{display:grid!important;width:100%;grid-template-columns:auto auto;align-items:center;justify-content:center;column-gap:.5em;overflow:visible!important;text-overflow:clip!important}.good-ten-label,.good-ten-value{text-align:left}.good-ten-value{font-variant-numeric:tabular-nums}.good-ten-line.rank-first,.stat-line.rank-first{background:#fff0b8!important}.good-ten-line.rank-second,.stat-line.rank-second{background:#e4f5b4!important}.good-ten-line.rank-third,.stat-line.rank-third{background:#cfeeff!important}
+.good-ten-time{padding-inline:5px!important}.good-ten-line{display:grid!important;width:100%;grid-template-columns:auto auto;align-items:center;justify-content:center;column-gap:.5em;overflow:visible!important;text-overflow:clip!important}.good-ten-label,.good-ten-value{text-align:left}.good-ten-value{font-variant-numeric:tabular-nums}.good-ten-line.rank-first,.stat-line.rank-first{background:#f6de8d!important}.good-ten-line.rank-second,.stat-line.rank-second{background:#d9e6ee!important}.good-ten-line.rank-third,.stat-line.rank-third{background:#e3c6a3!important}
 .race-results{padding-inline:5px!important;text-align:center!important}
 .result-line{display:grid!important;width:100%;grid-template-columns:1em minmax(2ch,1fr) .7ch minmax(2ch,1fr) .7ch minmax(2ch,1fr) .7ch minmax(2ch,1fr) .7ch minmax(2.2ch,1fr);align-items:center;justify-content:stretch;column-gap:0;overflow:visible!important;text-overflow:clip!important}
 .result-label{text-align:left}.result-number,.result-separator{text-align:center}.result-total{text-align:center}
 .recent-ten{padding-inline:5px!important;text-align:center!important}
 .recent-ten-list{display:grid!important;width:100%;grid-template-columns:repeat(10,13px);align-items:center;justify-content:center;column-gap:1px;overflow:visible!important;text-overflow:clip!important}
 .recent-place{display:inline-flex!important;flex:0 0 13px;height:18px;align-items:center;justify-content:center;overflow:visible!important;color:#111!important;font-size:13px!important;font-weight:700!important;line-height:18px!important;text-align:center}
-.recent-place.finish-1{background:#fff0b8!important}.recent-place.finish-2{background:#e4f5b4!important}.recent-place.finish-3{background:#cfeeff!important}
+.recent-place.finish-1{background:#f6de8d!important}.recent-place.finish-2{background:#d9e6ee!important}.recent-place.finish-3{background:#e3c6a3!important}
 .rank-cell{padding-inline:5px!important}.rank-cell>span{font-weight:700}
 .rank-cell>span+span{color:#66707c!important;font-size:11px!important;font-weight:850!important;line-height:1;letter-spacing:-.02em}
 .race-table .machine-name{padding-inline:5px!important;text-align:left;font-weight:900;overflow:hidden}
@@ -49,9 +49,9 @@
 @media(max-width:430px){.vote-racecard{padding-top:0}.section{margin-inline:8px}.race-table td{height:42px}}
 
 /* v78: force ranked row backgrounds to render after cached revisions */
-.good-ten-time .good-ten-line.rank-first,.surface-stat .stat-line.rank-first{background-color:#fff0b8!important}
-.good-ten-time .good-ten-line.rank-second,.surface-stat .stat-line.rank-second{background-color:#e4f5b4!important}
-.good-ten-time .good-ten-line.rank-third,.surface-stat .stat-line.rank-third{background-color:#cfeeff!important}
+.good-ten-time .good-ten-line.rank-first,.surface-stat .stat-line.rank-first{background-color:#f6de8d!important}
+.good-ten-time .good-ten-line.rank-second,.surface-stat .stat-line.rank-second{background-color:#d9e6ee!important}
+.good-ten-time .good-ten-line.rank-third,.surface-stat .stat-line.rank-third{background-color:#e3c6a3!important}
 .good-ten-time .good-ten-line[class*="rank-"],.surface-stat .stat-line[class*="rank-"]{display:grid!important;width:100%!important;border-radius:0!important;box-shadow:none!important}
 
 
@@ -68,26 +68,26 @@
 }
 .good-ten-line.rank-highlight>* ,.surface-stat .stat-line.rank-highlight>*{position:relative;z-index:1}
 .good-ten-line[data-rank="1"],.surface-stat .stat-line[data-rank="1"],
-.good-ten-line[data-rank="1"]>*,.surface-stat .stat-line[data-rank="1"]>*{background-color:#fff0b8!important}
+.good-ten-line[data-rank="1"]>*,.surface-stat .stat-line[data-rank="1"]>*{background-color:#f6de8d!important}
 .good-ten-line[data-rank="2"],.surface-stat .stat-line[data-rank="2"],
-.good-ten-line[data-rank="2"]>*,.surface-stat .stat-line[data-rank="2"]>*{background-color:#e4f5b4!important}
+.good-ten-line[data-rank="2"]>*,.surface-stat .stat-line[data-rank="2"]>*{background-color:#d9e6ee!important}
 .good-ten-line[data-rank="3"],.surface-stat .stat-line[data-rank="3"],
-.good-ten-line[data-rank="3"]>*,.surface-stat .stat-line[data-rank="3"]>*{background-color:#cfeeff!important}
+.good-ten-line[data-rank="3"]>*,.surface-stat .stat-line[data-rank="3"]>*{background-color:#e3c6a3!important}
 
 /* v80: one ranking palette for ST, trial time, good-10 time and all rate columns */
 .race-table [data-rank="1"],
 .race-table [data-rank="1"] > * {
-  background-color:#fff0b8!important;
-  background-image:linear-gradient(#fff0b8,#fff0b8)!important;
+  background-color:#f6de8d!important;
+  background-image:linear-gradient(#f6de8d,#f6de8d)!important;
 }
 .race-table [data-rank="2"],
 .race-table [data-rank="2"] > * {
-  background-color:#e4f5b4!important;
-  background-image:linear-gradient(#e4f5b4,#e4f5b4)!important;
+  background-color:#d9e6ee!important;
+  background-image:linear-gradient(#d9e6ee,#d9e6ee)!important;
 }
 .race-table [data-rank="3"],
 .race-table [data-rank="3"] > * {
-  background-color:#cfeeff!important;
-  background-image:linear-gradient(#cfeeff,#cfeeff)!important;
+  background-color:#e3c6a3!important;
+  background-image:linear-gradient(#e3c6a3,#e3c6a3)!important;
 }
 .race-table [data-rank]{border-radius:0!important;box-shadow:none!important;background-clip:border-box!important}
