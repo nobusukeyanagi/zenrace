@@ -88,7 +88,7 @@
 
     // ST: smaller is better.
     applyDenseRanks(cells.map((tds) => {
-      const element = directChildren(tds[3])[1];
+      const element = directChildren(tds[3])[0];
       return { element, value: parseNumber(element?.textContent) };
     }));
 
