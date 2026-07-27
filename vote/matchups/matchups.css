@@ -24,8 +24,8 @@
 
 
 /* v2: compact opponent cells, gold >50%, and medal-ranked SP. */
-.matchups-table{width:558px}
-.matchups-table col.col-opponent{width:44px}
+.matchups-table{width:574px}
+.matchups-table col.col-opponent{width:46px}
 .matchups-table col.col-sp{width:52px}
 .matchup-main.matchup-gold,
 .sp-cell .matchup-main.sp-rank-first,
@@ -41,3 +41,10 @@
 .sp-cell .matchup-main.sp-rank-first{background:#f6de8d!important}
 .sp-cell .matchup-main.sp-rank-second{background:#d9e6ee!important}
 .sp-cell .matchup-main.sp-rank-third{background:#e3c6a3!important}
+
+
+/* v3: 100% minimum-fit width and explicit no-fill for non-gold matchup rates. */
+.matchups-table .matchup-cell:not(.sp-cell) .matchup-main:not(.matchup-gold){
+  background-color:transparent!important;
+  background-image:none!important;
+}
