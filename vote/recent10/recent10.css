@@ -1,31 +1,40 @@
 /* Near-10 race detail: car/rider geometry and cell padding match basic information. */
 .recent10-page .section{margin-top:10px}
-.recent-detail-table{width:2614px}
+.recent-detail-table{width:3154px}
 .recent-detail-table col.col-car{width:38px}
 .recent-detail-table col.col-rider{width:116px}
-.recent-detail-table col.col-race-result{width:246px}
+.recent-detail-table col.col-race-result{width:300px}
 .recent-detail-table th,.recent-detail-table td{padding:2px 5px}
 .recent-detail-table th:first-child,.recent-detail-table td:first-child{padding:0}
 .recent-detail-table .rider-name{padding:2px 7px}
-.recent-detail-result{height:44px!important;padding:2px 5px!important;text-align:left!important;vertical-align:middle!important;overflow:hidden}
+.recent-detail-result{
+  height:44px!important;
+  padding:2px 5px!important;
+  text-align:left!important;
+  vertical-align:middle!important;
+  overflow:hidden;
+  white-space:nowrap;
+}
 
-/* The finish badge spans both information rows. The second row starts under the date. */
+/* The finish badge spans both rows. All information stays on exactly two unwrapped rows. */
 .recent-race-card{
   display:grid;
-  grid-template-columns:28px max-content max-content max-content minmax(0,1fr) max-content;
+  grid-template-columns:28px minmax(0,1fr);
   grid-template-rows:16px 16px;
   column-gap:.35em;
   row-gap:3px;
   align-content:center;
+  width:100%;
   min-width:0;
   height:35px;
+  overflow:hidden;
   color:#15171a;
   font-size:13px;
   font-weight:700;
   line-height:1;
+  white-space:nowrap;
   font-variant-numeric:tabular-nums;
 }
-.recent-race-top{display:contents}
 .recent-finish-badge{
   grid-column:1;
   grid-row:1 / 3;
@@ -36,48 +45,57 @@
   width:28px;
   min-height:35px;
   color:#050505;
-  background:#ffd766;
+  background:#d9dde2;
   border-radius:6px;
   font-size:16px;
   font-weight:1000;
   line-height:1;
 }
-.recent-race-date,.recent-race-venue,.recent-race-grade,.recent-race-name,.recent-race-track{
-  display:block;
-  align-self:center;
+.recent-finish-badge.is-nonnumeric{font-size:10px;letter-spacing:-.04em}
+.recent-race-top{
+  grid-column:2;
+  grid-row:1;
+  display:flex;
+  align-items:center;
+  gap:.35em;
   min-width:0;
-  overflow:hidden;
+  height:16px;
+  overflow:visible;
+  white-space:nowrap;
+}
+.recent-race-date,.recent-race-venue,.recent-race-grade,.recent-race-name,.recent-race-track{
+  display:inline-block;
+  flex:0 0 auto;
+  min-width:0;
   color:#15171a;
   font-size:13px;
   font-weight:700;
   line-height:16px;
-  text-overflow:ellipsis;
   white-space:nowrap;
 }
-.recent-race-date{grid-column:2;grid-row:1;text-align:left}
-.recent-race-venue{grid-column:3;grid-row:1}
-.recent-race-grade{grid-column:4;grid-row:1;font-weight:850;text-align:center}
-.recent-race-name{grid-column:5;grid-row:1;font-weight:700}
-.recent-race-track{grid-column:6;grid-row:1;color:#66707c;font-weight:700}
+.recent-race-grade{font-weight:850;text-align:center}
+.recent-race-track{color:#66707c;font-weight:700}
 .recent-race-bottom{
-  grid-column:2 / 7;
+  grid-column:2;
   grid-row:2;
   display:flex;
   align-items:center;
   gap:.35em;
   min-width:0;
   height:16px;
-  overflow:hidden;
+  overflow:visible;
   white-space:nowrap;
 }
 .recent-race-metric{
   display:inline-flex;
+  flex:0 0 auto;
   align-items:baseline;
   min-width:0;
   color:#15171a;
   font-size:13px;
   font-weight:700;
   line-height:16px;
+  white-space:nowrap;
 }
 .recent-race-metric-label{
   margin-right:.35em;
@@ -92,12 +110,13 @@
   .recent-race-card{height:35px}
 }
 
-
-/* v3: road condition, finish medal palette and metric rank highlights. */
+/* Medal palette: 1st gold, 2nd blue-tinted silver, 3rd subdued bronze, all others gray. */
 .recent-finish-badge.finish-1{background:#f6de8d!important}
 .recent-finish-badge.finish-2{background:#d9e6ee!important}
 .recent-finish-badge.finish-3{background:#e3c6a3!important}
 .recent-finish-badge.finish-other{background:#d9dde2!important;color:#34383d!important}
+
+/* Race time, trial time and ST are colored only when ranked in the top three of that race. */
 .recent-race-metric[data-rank]{padding:1px 2px;border-radius:0!important;box-shadow:none!important;background-clip:border-box!important}
 .recent-race-metric[data-rank="1"],.recent-race-metric[data-rank="1"]>*{background:#f6de8d!important}
 .recent-race-metric[data-rank="2"],.recent-race-metric[data-rank="2"]>*{background:#d9e6ee!important}
