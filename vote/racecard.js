@@ -80,29 +80,35 @@
 
     const cells = rows.map((row) => [...row.children].filter((child) => child.matches("td")));
 
+    // Support rate: larger is better.
+    applyDenseRanks(cells.map((tds) => {
+      const element = tds[2]?.querySelector(".support-rate-main");
+      return { element, value: parseNumber(element?.textContent) };
+    }), { higherIsBetter: true });
+
     // ST: smaller is better.
     applyDenseRanks(cells.map((tds) => {
-      const element = directChildren(tds[2])[1];
+      const element = directChildren(tds[3])[1];
       return { element, value: parseNumber(element?.textContent) };
     }));
 
     // Trial time: smaller is better.
     applyDenseRanks(cells.map((tds) => {
-      const element = directChildren(tds[3])[0];
+      const element = directChildren(tds[4])[0];
       return { element, value: parseNumber(element?.textContent) };
     }));
 
     // Good-track last-10 average and best times: smaller is better, ranked separately.
     [0, 1].forEach((lineIndex) => {
       applyDenseRanks(cells.map((tds) => {
-        const element = tds[4]?.querySelectorAll(".good-ten-line")[lineIndex];
+        const element = tds[5]?.querySelectorAll(".good-ten-line")[lineIndex];
         const valueElement = element?.querySelector(".good-ten-value");
         return { element, value: parseNumber(valueElement?.textContent) };
       }));
     });
 
     // Win, exacta-place and trifecta-place rates: good/wet ranked separately; larger is better.
-    [6, 7, 8].forEach((cellIndex) => {
+    [7, 8, 9].forEach((cellIndex) => {
       [0, 1].forEach((lineIndex) => {
         applyDenseRanks(cells.map((tds) => {
           const element = tds[cellIndex]?.querySelectorAll(".stat-line")[lineIndex];
