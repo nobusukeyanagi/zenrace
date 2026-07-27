@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-27T05:06:11.315639+09:00",
-  "center_date": "2026-07-27",
+  "generated_at": "2026-07-28T05:55:16.393180+09:00",
+  "center_date": "2026-07-28",
   "past_unresolved_count": 1,
-  "upcoming_missing_time_count": 13,
+  "upcoming_missing_time_count": 16,
   "past_unresolved": [
     {
       "date": "2026-07-26",
@@ -17,16 +17,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-07-28",
-      "sport": "boat",
-      "venue": "江戸川",
-      "grade": "GⅢ",
-      "name": "アサヒビールカップ",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-08-02",
       "sport": "nar",
@@ -143,6 +133,46 @@
       "venue": "和歌山",
       "grade": "GⅢ",
       "name": "ワールドサイクリスト支援競輪",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "sport": "nar",
+      "venue": "浦和",
+      "grade": "SⅢ",
+      "name": "ルーキーズサマーカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "sport": "nar",
+      "venue": "盛岡",
+      "grade": "JpnⅢ",
+      "name": "クラスターカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "sport": "nar",
+      "venue": "金沢",
+      "grade": "",
+      "name": "読売レディス杯",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "sport": "boat",
+      "venue": "徳山",
+      "grade": "PGⅠ",
+      "name": "レディースチャンピオン",
       "missing": [
         "time"
       ]

@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-27T05:06:11.315110+09:00",
-  "center_date": "2026-07-27",
+  "generated_at": "2026-07-28T05:55:16.392653+09:00",
+  "center_date": "2026-07-28",
   "selection_mode": "smart",
   "selection_counts": {
     "recent_verification": 4,
-    "unresolved": 2,
-    "upcoming": 23
+    "unresolved": 1,
+    "upcoming": 27
   },
-  "target_count": 27,
+  "target_count": 31,
   "change_count": 8,
   "changes": [
     {
@@ -200,31 +200,31 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-07-26",
-      "sport": "nar",
-      "venue": "盛岡",
-      "name": "若鮎賞",
+      "date": "2026-07-28",
+      "sport": "boat",
+      "venue": "江戸川",
+      "name": "アサヒビールカップ",
       "before": {
-        "date": "2026-07-26",
-        "time": "18:20",
-        "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M3",
-        "name": "若鮎賞",
+        "date": "2026-07-28",
+        "time": "",
+        "sport": "boat",
+        "venue": "江戸川",
+        "grade": "GⅢ",
+        "name": "アサヒビールカップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-07-26",
-        "time": "18:20",
-        "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M3",
-        "name": "若鮎賞",
-        "winner": "セイカールトン"
+        "date": "2026-07-28",
+        "time": "16:25",
+        "sport": "boat",
+        "venue": "江戸川",
+        "grade": "GⅢ",
+        "name": "アサヒビールカップ",
+        "winner": ""
       },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F26&k_babaCode=10",
-      "note": "地方競馬公式レース情報"
+      "source": "ボートレース",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=03&hd=20260728&rno=12",
+      "note": "BOAT RACE公式12R結果"
     }
   ]
 }

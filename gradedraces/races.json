@@ -3323,6 +3323,15 @@
   {
     "date": "2026-07-28",
     "time": "16:25",
+    "sport": "boat",
+    "venue": "江戸川",
+    "grade": "GⅢ",
+    "name": "アサヒビールカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-07-28",
+    "time": "16:25",
     "sport": "keirin",
     "venue": "豊橋",
     "grade": "GⅢ",
@@ -3345,15 +3354,6 @@
     "venue": "名古屋",
     "grade": "SPⅠ",
     "name": "名港盃",
-    "winner": ""
-  },
-  {
-    "date": "2026-07-28",
-    "time": "",
-    "sport": "boat",
-    "venue": "江戸川",
-    "grade": "GⅢ",
-    "name": "アサヒビールカップ",
     "winner": ""
   },
   {
