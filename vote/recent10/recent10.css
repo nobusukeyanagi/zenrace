@@ -1,12 +1,25 @@
-/* Near-10 race detail: keep car/rider geometry identical to basic information. */
+/* Near-10 race detail: car/rider geometry remains identical to basic information. */
 .recent10-page .section{margin-top:10px}
-.recent-detail-table{width:794px}
+.recent-detail-table{width:2614px}
 .recent-detail-table col.col-car{width:38px}
 .recent-detail-table col.col-rider{width:116px}
-.recent-detail-table col.col-race-result{width:64px}
+.recent-detail-table col.col-race-result{width:246px}
 .recent-detail-table th,.recent-detail-table td{padding-inline:5px}
 .recent-detail-table th:first-child,.recent-detail-table td:first-child{padding:0}
 .recent-detail-table .rider-name{padding:2px 7px}
-.recent-detail-result{padding:2px 5px!important;text-align:center!important;vertical-align:middle!important}
-.recent-detail-badge{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;color:#050505;background:#ffd766;border-radius:7px;font-size:22px;font-weight:1000;line-height:1;font-variant-numeric:tabular-nums}
-@media(max-width:430px){.recent-detail-badge{width:28px;height:28px;border-radius:7px;font-size:21px}}
+.recent-detail-result{height:44px!important;padding:2px 5px!important;text-align:left!important;vertical-align:middle!important;overflow:hidden}
+.recent-race-card{display:grid;height:38px;grid-template-rows:24px 12px;row-gap:2px;align-content:center;min-width:0;color:#15171a;font-variant-numeric:tabular-nums}
+.recent-race-top{display:grid;grid-template-columns:24px 31px 54px 22px minmax(0,1fr);column-gap:3px;align-items:center;min-width:0;height:24px;white-space:nowrap}
+.recent-finish-badge{display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;color:#050505;background:#ffd766;border-radius:6px;font-size:17px;font-weight:1000;line-height:1}
+.recent-race-date,.recent-race-venue,.recent-race-grade,.recent-race-name{display:block;min-width:0;overflow:hidden;color:#15171a;font-size:10px;font-weight:800;line-height:1;text-overflow:ellipsis;white-space:nowrap}
+.recent-race-date{text-align:center}
+.recent-race-grade{font-weight:1000;text-align:center}
+.recent-race-name{font-weight:900}
+.recent-race-bottom{display:grid;grid-template-columns:max-content max-content max-content max-content;column-gap:8px;align-items:center;min-width:0;height:12px;overflow:hidden;white-space:nowrap}
+.recent-race-metric{display:inline-flex;align-items:baseline;min-width:0;color:#15171a;font-size:10px;font-weight:800;line-height:12px}
+.recent-race-metric-label{margin-right:2px;color:#66707c;font-size:9px;font-weight:850}
+.recent-race-metric-value{color:#15171a;font-size:10px;font-weight:850}
+@media(max-width:430px){
+  .recent-detail-result{height:42px!important}
+  .recent-race-card{height:38px}
+}
