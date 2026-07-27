@@ -309,3 +309,8 @@
 .recent-race-entry.entry-6{color:#fff;background:#2e9a4b;border-color:#1e7135}
 .recent-race-entry.entry-7{color:#fff;background:#e47b22;border-color:#aa5514}
 .recent-race-entry.entry-8{color:#fff;background:#e85b9e;border-color:#aa3970}
+
+
+/* v11: equal minimum-fit race columns after field-size and entry-number additions. */
+.recent-detail-table{width:2734px}
+.recent-detail-table col.col-race-result{width:258px}

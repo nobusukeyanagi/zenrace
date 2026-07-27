@@ -82,3 +82,12 @@
   text-align:center!important;
   white-space:nowrap!important;
 }
+
+
+/* v6: equal minimum-fit history columns with the full ST and H values visible. */
+.matchups-table{width:1358px}
+.matchups-table col.col-history{width:112px}
+.matchups-table .matchup-history-bottom{
+  grid-template-columns:max-content max-content!important;
+  column-gap:2px!important;
+}
