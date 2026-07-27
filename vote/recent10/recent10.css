@@ -269,3 +269,43 @@
 /* v9: minimal width increase so the longest first-line item remains fully visible. */
 .recent-detail-table{width:2614px}
 .recent-detail-table col.col-race-result{width:246px}
+
+
+/* v10: abbreviated race types and verified field-size / entry-number display. */
+.recent-detail-table{width:3154px}
+.recent-detail-table col.col-race-result{width:300px}
+.recent-race-top{gap:.28em}
+.recent-race-field-size{
+  display:inline-block;
+  flex:0 0 auto;
+  color:#15171a;
+  font-size:13px;
+  font-weight:700;
+  line-height:16px;
+  white-space:nowrap;
+}
+.recent-race-entry.entry-no{
+  width:16px;
+  height:16px;
+  min-width:16px;
+  display:inline-flex;
+  flex:0 0 16px;
+  align-items:center;
+  justify-content:center;
+  margin:0;
+  border:1px solid rgba(0,0,0,.30);
+  border-radius:4px;
+  font-size:11px;
+  font-weight:1000;
+  line-height:1;
+  vertical-align:middle;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.38),0 1px 2px rgba(0,0,0,.14);
+}
+.recent-race-entry.entry-1{color:#111;background:#fff;border-color:#8f949a}
+.recent-race-entry.entry-2{color:#fff;background:#202226;border-color:#050506}
+.recent-race-entry.entry-3{color:#fff;background:#d4232b;border-color:#9b1118}
+.recent-race-entry.entry-4{color:#fff;background:#2468c7;border-color:#174c98}
+.recent-race-entry.entry-5{color:#171108;background:#f0cf24;border-color:#b69b14}
+.recent-race-entry.entry-6{color:#fff;background:#2e9a4b;border-color:#1e7135}
+.recent-race-entry.entry-7{color:#fff;background:#e47b22;border-color:#aa5514}
+.recent-race-entry.entry-8{color:#fff;background:#e85b9e;border-color:#aa3970}
