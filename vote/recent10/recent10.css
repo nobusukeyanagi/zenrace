@@ -180,3 +180,45 @@
 }
 .recent-race-metric-label{margin-right:0!important}
 
+
+/* v6: compact two-line result layout. */
+.recent-race-top,
+.recent-race-date,
+.recent-race-venue,
+.recent-race-grade,
+.recent-race-name,
+.recent-race-track{
+  font-weight:700!important;
+}
+.recent-race-bottom{
+  display:flex!important;
+  align-items:center;
+  justify-content:flex-start;
+  gap:.5em!important;
+}
+.recent-race-bottom .recent-race-metric,
+.recent-race-bottom .recent-race-metric:nth-child(1),
+.recent-race-bottom .recent-race-metric:nth-child(2),
+.recent-race-bottom .recent-race-metric:nth-child(3),
+.recent-race-bottom .recent-race-metric:nth-child(4){
+  display:inline-flex!important;
+  flex:0 0 auto!important;
+  width:auto!important;
+  min-width:0!important;
+  grid-template-columns:none!important;
+  column-gap:0!important;
+  align-items:baseline;
+  justify-content:flex-start;
+  padding:0!important;
+}
+.recent-race-bottom .recent-race-metric[data-rank]{
+  padding:1px 2px!important;
+}
+.recent-race-metric-label{
+  margin:0!important;
+  padding:0!important;
+}
+.recent-race-metric-value{
+  margin:0!important;
+  padding:0!important;
+}
