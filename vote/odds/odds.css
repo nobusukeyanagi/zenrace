@@ -1,0 +1,230 @@
+:root{
+  color-scheme:dark;
+  --odds-gold:#f0cc70;
+  --odds-gold-dark:#9f741e;
+  --odds-purple:#7545af;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+}
+*{box-sizing:border-box}
+html{background:#030405}
+body{color:#f6f7f8;background:linear-gradient(180deg,#050607,#020304)}
+button{font:inherit}
+
+.odds-type-menu{
+  width:min(100%,760px);
+  margin:10px auto 0;
+  padding:0 8px;
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:0;
+}
+.odds-type-tab{
+  min-width:0;
+  height:38px;
+  padding:0 2px;
+  border:1px solid rgba(213,171,67,.34);
+  border-right:0;
+  border-radius:0;
+  -webkit-appearance:none;
+  appearance:none;
+  color:#eef1f5;
+  background:linear-gradient(180deg,#1a1a1b,#090909);
+  font-family:inherit;
+  font-size:12px;
+  font-weight:900;
+  line-height:1;
+  white-space:nowrap;
+  -webkit-tap-highlight-color:transparent;
+}
+.odds-type-tab:first-child{border-radius:8px 0 0 8px}
+.odds-type-tab:last-child{border-right:1px solid rgba(213,171,67,.34);border-radius:0 8px 8px 0}
+.odds-type-tab.active,.odds-type-tab[aria-pressed="true"]{
+  position:relative;
+  z-index:1;
+  color:#171108;
+  border-color:#d1a539;
+  background:linear-gradient(180deg,#f8e7a8,#d6aa42);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55);
+}
+
+.odds-page{width:min(100%,760px);margin:0 auto;padding:0 0 34px}
+.odds-section{
+  margin:10px 8px 0;
+  overflow:hidden;
+  border:1px solid rgba(240,204,112,.42);
+  border-radius:14px;
+  background:#fff;
+  color:#15171a;
+  box-shadow:none;
+}
+.odds-section-head{
+  height:34px;
+  padding:0 10px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  color:#fff;
+  background:linear-gradient(180deg,#5f3494,#472471);
+  border-bottom:1px solid rgba(255,255,255,.24);
+}
+.odds-section-head h1,.odds-section-head h2{margin:0;font-size:13px;font-weight:1000;line-height:1}
+.odds-section-note{color:rgba(255,255,255,.78);font-size:11px;font-weight:850;white-space:nowrap}
+
+.odds-popular-list{
+  height:174px;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+  scrollbar-color:#8b63b4 #ece7f1;
+  background:#fff;
+}
+.odds-popular-row{
+  min-height:34px;
+  padding:3px 9px;
+  display:grid;
+  grid-template-columns:30px minmax(0,1fr) auto;
+  align-items:center;
+  gap:7px;
+  border-bottom:1px solid #d9dadd;
+  font-variant-numeric:tabular-nums;
+}
+.odds-popular-row:last-child{border-bottom:0}
+.odds-popular-rank{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:22px;
+  height:22px;
+  border-radius:5px;
+  color:#555d68;
+  background:#eceef1;
+  font-size:12px;
+  font-weight:1000;
+}
+.odds-popular-row:nth-child(1) .odds-popular-rank{color:#171108;background:#f6de8d}
+.odds-popular-row:nth-child(2) .odds-popular-rank{color:#172029;background:#d9e6ee}
+.odds-popular-row:nth-child(3) .odds-popular-rank{color:#382719;background:#e3c6a3}
+.odds-popular-combination{display:flex;align-items:center;gap:4px;min-width:0}
+.odds-popular-arrow{color:#777f89;font-size:11px;font-weight:1000}
+.odds-popular-value{min-width:4.8em;text-align:right;color:#111;font-size:14px;font-weight:1000}
+.odds-empty-message{min-height:100%;padding:28px 14px;display:grid;place-items:center;color:#646d78;font-size:13px;font-weight:850;text-align:center;line-height:1.65}
+
+.odds-anchor{
+  padding:7px 8px;
+  display:grid;
+  grid-template-columns:auto repeat(8,minmax(0,1fr));
+  align-items:center;
+  gap:3px;
+  border-bottom:1px solid #d3d5d9;
+  background:#f3f4f6;
+}
+.odds-anchor-label{padding-inline:2px;color:#333b45;font-size:11px;font-weight:1000;white-space:nowrap}
+.odds-anchor-button{
+  width:100%;
+  min-width:0;
+  height:28px;
+  padding:0;
+  border:1px solid #c4c8ce;
+  border-radius:6px;
+  -webkit-appearance:none;
+  appearance:none;
+  background:#fff;
+  display:grid;
+  place-items:center;
+  -webkit-tap-highlight-color:transparent;
+}
+.odds-anchor-button.active{border:2px solid #9a6f17;background:#fff7cf;box-shadow:0 1px 4px rgba(0,0,0,.13)}
+
+.odds-board{width:100%;max-width:100%;overflow:hidden;background:#fff}
+.odds-matrix{
+  width:100%;
+  display:grid;
+  gap:0;
+  background:#d2d3d7;
+  border:0;
+}
+.odds-matrix.matrix-8{grid-template-columns:minmax(31px,.76fr) repeat(7,minmax(0,1fr))}
+.odds-matrix.matrix-9{grid-template-columns:minmax(31px,.76fr) repeat(8,minmax(0,1fr))}
+.odds-matrix-cell{
+  min-width:0;
+  min-height:38px;
+  margin:0 1px 1px 0;
+  padding:2px 1px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  color:#111;
+  background:#fff;
+  font-size:clamp(8.5px,2.75vw,12px);
+  font-weight:850;
+  line-height:1.05;
+  text-align:center;
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+}
+.odds-matrix-corner{color:#fff;background:var(--odds-purple);font-size:clamp(8px,2.35vw,11px);font-weight:1000;line-height:1.15;white-space:normal}
+.odds-matrix-head,.odds-matrix-row-head{background:#f0f1f3}
+.odds-matrix-row-head{min-height:38px}
+.odds-matrix-cell.is-invalid{color:transparent;background:#f3f4f5}
+.odds-matrix-cell.is-low{background:#fff6ce;font-weight:1000}
+.odds-matrix-cell.is-very-low{background:#f6de8d;font-weight:1000}
+.odds-wide-value{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;line-height:1}
+.odds-wide-value small{color:#6d7580;font-size:.82em;font-weight:900}
+
+.odds-single-list{width:100%;display:grid;background:#d2d3d7;grid-template-columns:38px minmax(0,1fr) 82px}
+.odds-single-cell{min-height:40px;margin:0 1px 1px 0;padding:4px 7px;display:flex;align-items:center;background:#fff;font-size:13px;font-weight:850}
+.odds-single-head{min-height:30px;justify-content:center;color:#fff;background:var(--odds-purple);font-size:12px;font-weight:1000}
+.odds-single-name{justify-content:flex-start}
+.odds-single-odds{justify-content:flex-end;font-variant-numeric:tabular-nums}
+.odds-single-note{grid-column:1/-1;padding:13px;color:#606974;background:#f7f8f9;font-size:12px;font-weight:850;text-align:center;line-height:1.55}
+
+.odds-car-badge{
+  flex:0 0 23px;
+  width:23px;
+  height:23px;
+  display:inline-grid;
+  place-items:center;
+  border:1px solid rgba(0,0,0,.15);
+  border-radius:50%;
+  font-size:13px;
+  font-weight:1000;
+  line-height:1;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.32);
+}
+.car-1{color:#111;background:#f3f4f5}
+.car-2{color:#fff;background:#171717}
+.car-3{color:#fff;background:#e51125}
+.car-4{color:#fff;background:#0877bd}
+.car-5{color:#111;background:#f2d819}
+.car-6{color:#fff;background:#07914a}
+.car-7{color:#111;background:#ee8b10}
+.car-8{color:#fff;background:#d9008f}
+.odds-matrix-head .odds-car-badge,.odds-matrix-row-head .odds-car-badge{width:22px;height:22px;font-size:12px}
+
+@media(max-width:430px){
+  .odds-type-tab{height:36px;font-size:11px}
+  .odds-section{margin-top:8px}
+  .odds-popular-list{height:170px}
+  .odds-anchor{grid-template-columns:auto repeat(8,minmax(0,1fr));padding-inline:5px;gap:2px}
+  .odds-anchor-label{font-size:10px}
+  .odds-anchor-button{height:27px}
+  .odds-anchor-button .odds-car-badge{width:21px;height:21px;font-size:12px}
+  .odds-matrix-cell{min-height:36px;padding-inline:0}
+  .odds-matrix-row-head{min-height:36px}
+}
+@media(max-width:360px){
+  .odds-type-tab{font-size:10px;padding-inline:0}
+  .odds-popular-row{padding-inline:7px;gap:5px}
+  .odds-popular-value{font-size:13px}
+  .odds-matrix-cell{font-size:8.3px}
+  .odds-matrix-head .odds-car-badge,.odds-matrix-row-head .odds-car-badge{width:20px;height:20px;font-size:11px}
+}
+
+/* Column headers follow the reference layout: vehicle badge above a compact rider name. */
+.odds-column-label{width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;overflow:hidden}
+.odds-column-label small{display:block;width:100%;overflow:hidden;color:#303740;font-size:8.5px;font-weight:1000;line-height:1;letter-spacing:-.08em;text-align:center;white-space:nowrap;text-overflow:clip}
+.odds-matrix-head{min-height:47px}
+@media(max-width:360px){.odds-column-label small{font-size:7.8px}}

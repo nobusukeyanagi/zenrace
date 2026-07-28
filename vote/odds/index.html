@@ -1,7 +1,66 @@
 <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#090909">
+  <link rel="apple-touch-icon" sizes="180x180" href="/zenrace/apple-touch-icon.png?v=3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/zenrace/favicon-32x32.png?v=3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/zenrace/favicon-16x16.png?v=3">
+  <link rel="shortcut icon" type="image/x-icon" href="/zenrace/favicon.ico?v=3">
+  <title>オッズ | ZENRACE</title>
+  <link href="../../shared/category-menu.css?v=57" rel="stylesheet">
+  <link href="../../shared/page-shell.css?v=19" rel="stylesheet">
+  <link href="../race-switch.css?v=65" rel="stylesheet">
+  <link href="../race-info.css?v=58" rel="stylesheet">
+  <link href="../../shared/race-button-style.css?v=6" rel="stylesheet">
+  <link href="odds.css?v=1" rel="stylesheet">
+  <script defer src="../race-info.js?v=60"></script>
+  <script defer src="../live-state.js?v=1"></script>
+  <script defer src="../../shared/category-menu.js?v=50"></script>
+  <script defer src="../../shared/fixed-layout.js?v=21"></script>
+  <script defer src="../../shared/bottom-nav.js?v=61"></script>
+  <script defer src="../race-switch.js?v=67"></script>
+  <script defer src="odds.js?v=1"></script>
+</head>
+<body>
+  <zenrace-category-menu active="odds" category="vote"></zenrace-category-menu>
+  <div class="zenrace-content-shell" data-zenrace-pinch-shell>
+    <div class="zenrace-content-sizer" data-zenrace-pinch-sizer>
+      <div class="zenrace-content-stage" data-zenrace-pinch-stage>
+        <zenrace-race-switch active-key="浜松-12R-16:45"></zenrace-race-switch>
+        <zenrace-race-info></zenrace-race-info>
 
-<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport"/><meta content="#090909" name="theme-color"/><link rel="apple-touch-icon" sizes="180x180" href="/zenrace/apple-touch-icon.png?v=3">
-<link rel="icon" type="image/png" sizes="32x32" href="/zenrace/favicon-32x32.png?v=3">
-<link rel="icon" type="image/png" sizes="16x16" href="/zenrace/favicon-16x16.png?v=3">
-<link rel="shortcut icon" type="image/x-icon" href="/zenrace/favicon.ico?v=3">
-<title>オッズ | ZENRACE</title><link href="../../shared/category-menu.css?v=57" rel="stylesheet"/><link href="../../shared/page-shell.css?v=19" rel="stylesheet"/><link href="../race-switch.css?v=66" rel="stylesheet"/><link href="../../shared/placeholder-page.css?v=33" rel="stylesheet"/><link href="../race-info.css?v=59" rel="stylesheet"/><link href="../../shared/race-button-style.css?v=6" rel="stylesheet"/><script defer="" src="../race-info.js?v=60"></script><script defer="" src="../live-state.js?v=1"></script><script defer="" src="../../shared/category-menu.js?v=50"></script><script defer="" src="../../shared/fixed-layout.js?v=22"></script><script defer="" src="../../shared/bottom-nav.js?v=61"></script><script defer="" src="../race-switch.js?v=67"></script></head><body><zenrace-category-menu active="odds" category="vote"></zenrace-category-menu><div class="zenrace-content-shell" data-zenrace-pinch-shell=""><div class="zenrace-content-sizer" data-zenrace-pinch-sizer=""><div class="zenrace-content-stage" data-zenrace-pinch-stage=""><zenrace-race-switch active-key="浜松-12R-16:45"></zenrace-race-switch><zenrace-race-info></zenrace-race-info><main class="placeholder-page"><section class="placeholder-card"><p class="eyebrow">ODDS</p><h1>オッズ</h1><p>作成中</p></section></main></div></div></div><zenrace-bottom-nav active="vote"></zenrace-bottom-nav></body></html>
+        <nav class="odds-type-menu" aria-label="賭式選択">
+          <button class="odds-type-tab active" type="button" data-odds-type="3連単" aria-pressed="true">3連単</button>
+          <button class="odds-type-tab" type="button" data-odds-type="3連複" aria-pressed="false">3連複</button>
+          <button class="odds-type-tab" type="button" data-odds-type="2連単" aria-pressed="false">2連単</button>
+          <button class="odds-type-tab" type="button" data-odds-type="2連複" aria-pressed="false">2連複</button>
+          <button class="odds-type-tab" type="button" data-odds-type="ワイド" aria-pressed="false">ワイド</button>
+          <button class="odds-type-tab" type="button" data-odds-type="単勝" aria-pressed="false">単勝</button>
+        </nav>
+
+        <main class="odds-page">
+          <section class="odds-section odds-popular-section" aria-labelledby="popular-title">
+            <header class="odds-section-head">
+              <h1 id="popular-title">人気上位10</h1>
+              <span class="odds-section-note" id="popular-note">3連単</span>
+            </header>
+            <div class="odds-popular-list" id="popular-list" tabindex="0" aria-live="polite"></div>
+          </section>
+
+          <section class="odds-section odds-board-section" aria-labelledby="odds-board-title">
+            <header class="odds-section-head">
+              <h2 id="odds-board-title">3連単オッズ</h2>
+              <span class="odds-section-note">最終オッズ</span>
+            </header>
+            <div id="odds-anchor" class="odds-anchor" hidden></div>
+            <div id="odds-board" class="odds-board" aria-live="polite"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+  <zenrace-bottom-nav active="vote"></zenrace-bottom-nav>
+</body>
+</html>
