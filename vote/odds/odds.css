@@ -431,3 +431,75 @@ button,select{font:inherit}
   .odds-popular-nav{width:25px;min-width:25px;font-size:22px}
   .odds-axis-controls{grid-template-columns:minmax(72px,.58fr) minmax(145px,1.42fr);padding-inline:4px}
 }
+
+
+/* v5: trifecta board matches supplied compact matrix layout. */
+.odds-axis-controls{
+  min-height:42px;
+  padding:0;
+  display:grid;
+  grid-template-columns:minmax(88px,.56fr) minmax(0,1.44fr);
+  align-items:stretch;
+  gap:0;
+  border-bottom:2px solid #22262b;
+  background:#fff;
+}
+.odds-axis-select-wrap{height:42px;border-left:1px solid #dfe2e6}
+.odds-axis-select-wrap:first-child{border-left:0}
+.odds-axis-select{
+  width:100%;
+  height:100%;
+  padding:0 28px 0 12px;
+  color:#333b45;
+  background:#fff;
+  font-size:14px;
+  font-weight:1000;
+  line-height:42px;
+}
+.odds-trifecta-grid{
+  width:100%;
+  display:grid;
+  grid-template-columns:34px 40px repeat(7,minmax(0,1fr));
+  grid-template-rows:22px 28px repeat(7,38px);
+  background:var(--odds-grid);
+}
+.odds-trifecta-cell{
+  min-width:0;
+  min-height:0;
+  margin:0 1px 1px 0;
+  padding:2px 4px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  color:#111;
+  background:#fff;
+  font-size:clamp(9px,2.85vw,12px);
+  font-weight:850;
+  line-height:1;
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+}
+.odds-trifecta-empty,.odds-trifecta-header-spacer{background:#fff}
+.odds-trifecta-super-header,.odds-trifecta-side-title{
+  color:#3f4853;
+  background:#fff;
+  font-size:12px;
+  font-weight:1000;
+}
+.odds-trifecta-side-title{writing-mode:horizontal-tb}
+.odds-trifecta-car-cell{padding:0;border-radius:0;box-shadow:none;font-size:15px;font-weight:1000}
+.odds-trifecta-value{justify-content:flex-end;padding-right:6px;text-align:right}
+
+@media(max-width:430px){
+  .odds-axis-controls{grid-template-columns:minmax(82px,.56fr) minmax(0,1.44fr)}
+  .odds-axis-select-wrap{height:40px}
+  .odds-axis-select{padding-left:10px;font-size:13px;line-height:40px}
+  .odds-trifecta-grid{grid-template-columns:31px 36px repeat(7,minmax(0,1fr));grid-template-rows:21px 26px repeat(7,36px)}
+  .odds-trifecta-car-cell{font-size:14px}
+  .odds-trifecta-value{padding-right:5px}
+}
+@media(max-width:360px){
+  .odds-trifecta-grid{grid-template-columns:29px 34px repeat(7,minmax(0,1fr))}
+  .odds-trifecta-value{padding-right:4px}
+}

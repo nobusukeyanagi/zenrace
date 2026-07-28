@@ -182,22 +182,28 @@
         </label>
       </div>
       <div class="odds-trifecta-grid">
-        ${trifectaCell(`${order.column}着`," odds-trifecta-axis-label odds-trifecta-column-label")}
-        ${candidates.map(car => trifectaCell(String(car),` odds-trifecta-car-cell entry-${car}`)).join("")}
-        ${trifectaCell(`${order.row}着`," odds-trifecta-row-axis")}
+        <div class="odds-trifecta-cell odds-trifecta-empty" style="grid-column:1;grid-row:1;"></div>
+        <div class="odds-trifecta-cell odds-trifecta-empty" style="grid-column:2;grid-row:1;"></div>
+        <div class="odds-trifecta-cell odds-trifecta-super-header" style="grid-column:3 / span 7;grid-row:1;">${order.column}着</div>
+        <div class="odds-trifecta-cell odds-trifecta-side-title" style="grid-column:1;grid-row:2 / span 8;">${order.row}着</div>
+        <div class="odds-trifecta-cell odds-trifecta-header-spacer" style="grid-column:2;grid-row:2;"></div>
     `;
 
-    candidates.forEach(rowCar => {
-      html += trifectaCell(String(rowCar),` odds-trifecta-car-cell entry-${rowCar}`);
-      candidates.forEach(columnCar => {
-        if (rowCar === columnCar) {
-          html += trifectaCell(""," is-invalid");
-          return;
-        }
-        const value = lookup.get(trifectaKey(columnCar,rowCar));
-        html += trifectaCell(formatOdds(value),` odds-trifecta-value${oddsClass(value)}`);
+    candidates.forEach((car, index) => {
+      html += `<div class="odds-trifecta-cell odds-trifecta-car-cell entry-${car}" style="grid-column:${index + 3};grid-row:2;">${car}</div>`;
+    });
+
+    candidates.forEach((rowCar, rowIndex) => {
+      const gridRow = rowIndex + 3;
+      html += `<div class="odds-trifecta-cell odds-trifecta-car-cell odds-trifecta-row-car entry-${rowCar}" style="grid-column:2;grid-row:${gridRow};">${rowCar}</div>`;
+      candidates.forEach((columnCar, colIndex) => {
+        const key = trifectaKey(columnCar,rowCar);
+        const value = rowCar === columnCar ? null : lookup.get(key);
+        const invalidClass = rowCar === columnCar ? " is-invalid" : oddsClass(value);
+        html += `<div class="odds-trifecta-cell odds-trifecta-value${invalidClass}" style="grid-column:${colIndex + 3};grid-row:${gridRow};">${rowCar === columnCar ? "" : formatOdds(value)}</div>`;
       });
     });
+
     html += "</div>";
     board.innerHTML = html;
 
