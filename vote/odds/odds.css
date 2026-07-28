@@ -767,3 +767,15 @@ button,select{font:inherit}
 .odds-wide-separator{color:#6d7580!important}
 .odds-wide-popular{display:inline-flex;align-items:center;justify-content:flex-end;gap:0;color:#111!important}
 .odds-wide-popular > span:not(.odds-wide-separator){color:#111!important}
+
+
+/* v13: single-page popular navigation and duplicate-pair tone hierarchy. */
+.odds-popular-nav.is-hidden{
+  visibility:hidden;
+  pointer-events:none;
+}
+.odds-upper-duplicate{color:#6d7580!important}
+.odds-upper-duplicate .odds-wide-value > span,
+.odds-upper-duplicate .odds-wide-value small,
+.odds-upper-duplicate .odds-wide-upper{color:#6d7580!important}
+.odds-wide-cell .odds-wide-upper{color:#6d7580!important}

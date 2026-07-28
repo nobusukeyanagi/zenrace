@@ -24,6 +24,7 @@
   const popularViewport = document.getElementById("popular-viewport");
   const popularPrev = document.getElementById("popular-prev");
   const popularNext = document.getElementById("popular-next");
+  const popularSection = popularViewport.closest(".odds-popular-section");
   const board = document.getElementById("odds-board");
   const boardSection = board.closest(".odds-board-section");
   const anchor = document.getElementById("odds-anchor");
@@ -72,10 +73,19 @@
   function renderPopular() {
     const records = ODDS_DATA[state.type] || [];
     const hasRecords = records.length > 0;
-    popularPrev.disabled = !hasRecords;
-    popularNext.disabled = !hasRecords;
-    popularPrev.setAttribute("aria-disabled", String(!hasRecords));
-    popularNext.setAttribute("aria-disabled", String(!hasRecords));
+    const hasMultiplePages = records.length > 10;
+    const navUnavailable = !hasRecords || !hasMultiplePages;
+    popularPrev.disabled = navUnavailable;
+    popularNext.disabled = navUnavailable;
+    popularPrev.classList.toggle("is-hidden", !hasMultiplePages);
+    popularNext.classList.toggle("is-hidden", !hasMultiplePages);
+    popularPrev.setAttribute("aria-disabled", String(navUnavailable));
+    popularNext.setAttribute("aria-disabled", String(navUnavailable));
+    popularPrev.setAttribute("aria-hidden", String(!hasMultiplePages));
+    popularNext.setAttribute("aria-hidden", String(!hasMultiplePages));
+    popularPrev.tabIndex = hasMultiplePages ? 0 : -1;
+    popularNext.tabIndex = hasMultiplePages ? 0 : -1;
+    if (popularSection) popularSection.classList.toggle("is-single-page", !hasMultiplePages);
 
     if (!hasRecords) {
       state.popularPage = 0;
@@ -278,8 +288,11 @@
       candidates.forEach((colCar,colIndex) => {
         const key = [fixed,rowCar,colCar].sort((a,b)=>a-b).join("-");
         const value = lookup.get(key);
+        const rankTone = rankClass(rankLookup.get(key));
+        const redTone = oddsClass(value);
         const unavailable = colCar === rowCar || value === null || value === undefined;
-        const className = unavailable ? " is-invalid" : `${rankClass(rankLookup.get(key))}${oddsClass(value)}`;
+        const duplicateTone = colIndex > rowIndex && !rankTone && !redTone ? " odds-upper-duplicate" : "";
+        const className = unavailable ? " is-invalid" : `${rankTone}${redTone}${duplicateTone}`;
         html += `<div class="odds-trifecta-cell odds-trifecta-value${className}" style="grid-column:${colIndex + 2};grid-row:${gridRow};">${unavailable ? "" : formatOdds(value)}</div>`;
       });
     });
@@ -324,10 +337,13 @@
       CARS.forEach((colCar,colIndex) => {
         const key = [rowCar,colCar].sort((a,b)=>a-b).join("-");
         const value = lookup.get(key);
+        const rankTone = rankClass(rankLookup.get(key));
+        const redTone = type === "ワイド" ? "" : oddsClass(value);
         const unavailable = colCar === rowCar || value === null || value === undefined;
+        const duplicateTone = colIndex > rowIndex && !rankTone && !redTone ? " odds-upper-duplicate" : "";
         const className = unavailable
           ? " is-invalid"
-          : `${rankClass(rankLookup.get(key))}${type === "ワイド" ? " odds-wide-cell" : oddsClass(value)}`;
+          : `${rankTone}${type === "ワイド" ? " odds-wide-cell" : redTone}${duplicateTone}`;
         let content = "";
         if (!unavailable && type === "ワイド" && Array.isArray(value)) {
           content = `<span class="odds-wide-value"><span>${formatOdds(value[0])}</span><small><span class="odds-wide-separator">〜</span><span class="odds-wide-upper">${formatOdds(value[1])}</span></small></span>`;
