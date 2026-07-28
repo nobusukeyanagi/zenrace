@@ -6,7 +6,7 @@
 .prediction-page{padding-top:0}
 .prediction-summary{
   margin:10px 8px 0;
-  padding:8px 12px;
+  padding:8px 10px;
   overflow:hidden;
   border:1px solid rgba(213,171,67,.58);
   border-radius:12px;
@@ -14,21 +14,22 @@
   box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
 }
 .prediction-summary-row{
-  min-height:26px;
+  min-height:25px;
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:8px;
   color:#f4f5f7;
   font-size:14px;
   font-weight:900;
-  line-height:1;
+  line-height:1.2;
   white-space:nowrap;
 }
-.prediction-summary-row + .prediction-summary-row{
+.prediction-summary-main + .prediction-bets-row{
   margin-top:4px;
-  padding-top:7px;
+  padding-top:6px;
   border-top:1px solid rgba(213,171,67,.24);
 }
+.prediction-previous-row{margin-top:2px}
 .prediction-summary-label{flex:0 0 auto}
 .prediction-confidence{
   color:var(--prediction-gold);
@@ -36,34 +37,48 @@
   font-weight:1000;
   letter-spacing:2px;
 }
-.prediction-bets-row{gap:12px}
-.prediction-bet{display:inline-flex;align-items:center;gap:3px}
-.prediction-separator{color:#e8e9ec;font-size:14px;font-weight:1000}
+.prediction-bets-row{
+  gap:6px;
+  color:#c5cbd3;
+  font-size:14px;
+  font-weight:850;
+  line-height:1.35;
+}
+.prediction-forecast-label,.prediction-wager-label{flex:0 0 auto}
+.prediction-forecast-arrow{flex:0 0 auto;color:var(--prediction-gold);font-size:11px}
+.prediction-bet{display:inline-flex;align-items:center;gap:2px;flex:0 0 auto}
+.prediction-separator{color:#c5cbd3;font-size:11px;font-weight:1000}
 .prediction-car{
-  width:24px;
-  height:24px;
-  flex:0 0 24px;
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   border:1px solid rgba(0,0,0,.32);
-  border-radius:5px;
-  font-size:14px;
+  border-radius:4px;
+  font-size:11px;
   font-weight:1000;
   line-height:1;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.34);
 }
 .prediction-table-section{margin-top:8px}
-.prediction-table{width:1326px}
+.prediction-table{width:1036px}
 .prediction-table col.col-car{width:38px}
 .prediction-table col.col-rider{width:116px}
 .prediction-table col.col-immediate,
 .prediction-table col.col-previous,
-.prediction-table col.col-condition{width:54px}
-.prediction-table col.col-predicted{width:92px}
-.prediction-table col.col-score{width:78px}
-.prediction-table col.col-factor{width:76px}
-.prediction-table th{padding-inline:4px}
+.prediction-table col.col-condition{width:44px}
+.prediction-table col.col-predicted{width:72px}
+.prediction-table col.col-score{width:58px}
+.prediction-table col.col-score:nth-of-type(9){width:78px}
+.prediction-table col.col-factor{width:54px}
+.prediction-table col:nth-of-type(10),
+.prediction-table col:nth-of-type(11){width:68px}
+.prediction-table col:nth-of-type(12),
+.prediction-table col:nth-of-type(16),
+.prediction-table col:nth-of-type(18){width:44px}
+.prediction-table th{padding-inline:5px}
 .race-table.prediction-table tbody td.prediction-data{
   padding-inline:5px!important;
   color:#111!important;
@@ -73,10 +88,28 @@
   text-align:center;
   font-variant-numeric:tabular-nums;
 }
-.race-table.prediction-table tbody td.prediction-symbol{
-  font-size:17px!important;
-  font-weight:1000!important;
+.race-table.prediction-table tbody td.rank-first{background:#f6de8d!important}
+.race-table.prediction-table tbody td.rank-second{background:#d9e6ee!important}
+.race-table.prediction-table tbody td.rank-third{background:#e3c6a3!important}
+.prediction-mark,.condition-arrow{
+  width:24px;
+  height:24px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid transparent;
+  border-radius:6px;
+  font-size:17px;
+  font-weight:1000;
+  line-height:1;
 }
+.prediction-mark.mark-double{color:#cf1628;background:#fdebed;border-color:#efc2c9}
+.prediction-mark.mark-circle{color:#086eaa;background:#e8f3f9;border-color:#bedce9}
+.prediction-mark.mark-triangle{color:#a96000;background:#fff1d2;border-color:#efd29b}
+.prediction-mark.mark-cross{color:#5f6873;background:#eceef1;border-color:#d1d5da}
+.condition-arrow{font-size:18px}
+.condition-flat{color:#535d68;background:#eef0f2;border-color:#d6dade}
+.condition-up{color:#d7172c;background:#fdebed;border-color:#efc2c9}
 .prediction-table .prediction-finish>span:first-child{
   font-size:14px;
   font-weight:1000;
@@ -88,15 +121,17 @@
   font-weight:900;
 }
 @media(max-width:430px){
-  .prediction-summary{padding:7px 9px}
-  .prediction-summary-row{gap:8px;font-size:13px}
-  .prediction-bets-row{gap:9px}
+  .prediction-summary{padding:7px 8px}
+  .prediction-summary-row{gap:6px}
+  .prediction-bets-row{gap:5px;font-size:13px}
   .prediction-confidence{font-size:17px}
-  .prediction-car{width:22px;height:22px;flex-basis:22px;font-size:13px}
-  .race-table.prediction-table tbody td.prediction-symbol{font-size:16px!important}
+  .prediction-car{width:17px;height:17px;flex-basis:17px;font-size:10px}
+  .prediction-mark,.condition-arrow{width:23px;height:23px;font-size:16px}
+  .condition-arrow{font-size:17px}
 }
 @media(max-width:360px){
-  .prediction-summary-row{font-size:12px}
-  .prediction-bets-row{gap:6px}
-  .prediction-car{width:20px;height:20px;flex-basis:20px;font-size:12px}
+  .prediction-summary{padding-inline:6px}
+  .prediction-summary-row{gap:4px}
+  .prediction-bets-row{gap:4px;font-size:12px}
+  .prediction-car{width:16px;height:16px;flex-basis:16px;font-size:10px}
 }
