@@ -157,3 +157,39 @@
 .prediction-finish>.prediction-rank-badge>span:first-child{font-size:14px;font-weight:1000}
 .prediction-finish>.prediction-rank-badge>span+span{margin-top:4px;color:#505966;font-size:11px;font-weight:900}
 .race-table.prediction-table tbody td.prediction-data{background:#fff!important}
+
+
+/* v4: summary copy, uniform data widths, and place-only medal highlights. */
+.prediction-summary-label{white-space:nowrap}
+.prediction-forecast-label,
+.prediction-wager-label{color:#fff}
+.prediction-bet + .prediction-bet{margin-left:.5em}
+.prediction-table{width:1246px}
+.prediction-table col.col-score{width:68px}
+.prediction-table col.col-score:nth-of-type(9){width:68px}
+.prediction-finish{
+  align-items:center!important;
+  justify-content:center!important;
+  flex-direction:column!important;
+  white-space:nowrap!important;
+}
+.prediction-finish .prediction-rank-badge,
+.prediction-finish .prediction-place{
+  min-width:30px;
+  padding:2px 4px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:2px;
+  font-size:14px;
+  font-weight:1000;
+  line-height:1.05;
+}
+.prediction-finish .prediction-time{
+  display:block;
+  margin-top:4px;
+  color:#505966;
+  font-size:11px;
+  font-weight:900;
+  line-height:1;
+}
