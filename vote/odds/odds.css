@@ -657,3 +657,38 @@ button,select{font:inherit}
 @media(max-width:360px){
   .odds-trifecta-header-label small{font-size:9.5px;letter-spacing:0}
 }
+
+/* v9: popularity medals, sub-10 red odds, and fixed-car badge. */
+.odds-rank-gold{background:#f6de8d!important}
+.odds-rank-silver{background:#d9e6ee!important}
+.odds-rank-bronze{background:#e3c6a3!important}
+.odds-under-ten{color:#d70018!important}
+.odds-under-ten .odds-wide-value,
+.odds-under-ten .odds-wide-value small{color:#d70018!important}
+
+.odds-axis-car-select-wrap{position:relative}
+.odds-axis-selected-car{
+  position:absolute;
+  z-index:2;
+  top:50%;
+  left:8px;
+  width:22px;
+  height:22px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(0,0,0,.30);
+  border-radius:5px;
+  font-size:14px;
+  font-weight:1000;
+  line-height:1;
+  transform:translateY(-50%);
+  pointer-events:none;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.38);
+}
+.odds-axis-car-select{padding-left:38px}
+
+@media(max-width:430px){
+  .odds-axis-selected-car{left:7px;width:20px;height:20px;font-size:13px}
+  .odds-axis-car-select{padding-left:34px}
+}
