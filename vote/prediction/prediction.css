@@ -63,21 +63,17 @@
   box-shadow:inset 0 1px 0 rgba(255,255,255,.34);
 }
 .prediction-table-section{margin-top:8px}
-.prediction-table{width:1036px}
+.prediction-table{width:1236px}
 .prediction-table col.col-car{width:38px}
 .prediction-table col.col-rider{width:116px}
 .prediction-table col.col-immediate,
 .prediction-table col.col-previous,
-.prediction-table col.col-condition{width:44px}
+.prediction-table col.col-condition{width:68px}
 .prediction-table col.col-predicted{width:72px}
 .prediction-table col.col-score{width:58px}
 .prediction-table col.col-score:nth-of-type(9){width:78px}
-.prediction-table col.col-factor{width:54px}
-.prediction-table col:nth-of-type(10),
-.prediction-table col:nth-of-type(11){width:68px}
-.prediction-table col:nth-of-type(12),
-.prediction-table col:nth-of-type(16),
-.prediction-table col:nth-of-type(18){width:44px}
+.prediction-table col.col-factor{width:68px}
+.prediction-table col:nth-of-type(n+10){width:68px}
 .prediction-table th{padding-inline:5px}
 .race-table.prediction-table tbody td.prediction-data{
   padding-inline:5px!important;
@@ -88,9 +84,25 @@
   text-align:center;
   font-variant-numeric:tabular-nums;
 }
-.race-table.prediction-table tbody td.rank-first{background:#f6de8d!important}
-.race-table.prediction-table tbody td.rank-second{background:#d9e6ee!important}
-.race-table.prediction-table tbody td.rank-third{background:#e3c6a3!important}
+.prediction-rank-badge{
+  min-width:30px;
+  padding:2px 4px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#111!important;
+  border-radius:2px;
+  font-weight:1000;
+  line-height:1.05;
+}
+.prediction-finish .prediction-rank-badge{
+  min-width:54px;
+  padding:3px 5px;
+  flex-direction:column;
+}
+.prediction-rank-badge.rank-first{background:#f6de8d!important}
+.prediction-rank-badge.rank-second{background:#d9e6ee!important}
+.prediction-rank-badge.rank-third{background:#e3c6a3!important}
 .prediction-mark,.condition-arrow{
   width:24px;
   height:24px;
@@ -103,9 +115,9 @@
   font-weight:1000;
   line-height:1;
 }
-.prediction-mark.mark-double{color:#cf1628;background:#fdebed;border-color:#efc2c9}
-.prediction-mark.mark-circle{color:#086eaa;background:#e8f3f9;border-color:#bedce9}
-.prediction-mark.mark-triangle{color:#a96000;background:#fff1d2;border-color:#efd29b}
+.prediction-mark.mark-double{color:#171108;background:#f6de8d;border-color:#d7b653}
+.prediction-mark.mark-circle{color:#172029;background:#d9e6ee;border-color:#b7c8d2}
+.prediction-mark.mark-triangle{color:#382719;background:#e3c6a3;border-color:#c7a47d}
 .prediction-mark.mark-cross{color:#5f6873;background:#eceef1;border-color:#d1d5da}
 .condition-arrow{font-size:18px}
 .condition-flat{color:#535d68;background:#eef0f2;border-color:#d6dade}
@@ -135,3 +147,13 @@
   .prediction-bets-row{gap:4px;font-size:12px}
   .prediction-car{width:16px;height:16px;flex-basis:16px;font-size:10px}
 }
+
+
+/* v3: text-only medal highlights and unified prediction column widths. */
+.prediction-table th:nth-child(3),
+.prediction-table th:nth-child(5),
+.prediction-table th:nth-child(6),
+.prediction-table th:nth-child(n+10){white-space:nowrap}
+.prediction-finish>.prediction-rank-badge>span:first-child{font-size:14px;font-weight:1000}
+.prediction-finish>.prediction-rank-badge>span+span{margin-top:4px;color:#505966;font-size:11px;font-weight:900}
+.race-table.prediction-table tbody td.prediction-data{background:#fff!important}
