@@ -291,7 +291,7 @@
         const rankTone = rankClass(rankLookup.get(key));
         const redTone = oddsClass(value);
         const unavailable = colCar === rowCar || value === null || value === undefined;
-        const duplicateTone = colIndex > rowIndex && !rankTone && !redTone ? " odds-upper-duplicate" : "";
+        const duplicateTone = colIndex > rowIndex ? " odds-upper-duplicate" : "";
         const className = unavailable ? " is-invalid" : `${rankTone}${redTone}${duplicateTone}`;
         html += `<div class="odds-trifecta-cell odds-trifecta-value${className}" style="grid-column:${colIndex + 2};grid-row:${gridRow};">${unavailable ? "" : formatOdds(value)}</div>`;
       });
@@ -340,7 +340,7 @@
         const rankTone = rankClass(rankLookup.get(key));
         const redTone = type === "ワイド" ? "" : oddsClass(value);
         const unavailable = colCar === rowCar || value === null || value === undefined;
-        const duplicateTone = colIndex > rowIndex && !rankTone && !redTone ? " odds-upper-duplicate" : "";
+        const duplicateTone = colIndex > rowIndex ? " odds-upper-duplicate" : "";
         const className = unavailable
           ? " is-invalid"
           : `${rankTone}${type === "ワイド" ? " odds-wide-cell" : redTone}${duplicateTone}`;
