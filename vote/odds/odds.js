@@ -189,17 +189,15 @@
         </label>
       </div>
       <div class="odds-trifecta-grid">
-        <div class="odds-trifecta-cell odds-trifecta-empty" style="grid-column:1;grid-row:1;"></div>
-        <div class="odds-trifecta-cell odds-trifecta-super-header" style="grid-column:2 / span 7;grid-row:1;">${order.column}着</div>
-        <div class="odds-trifecta-cell odds-trifecta-header-spacer" style="grid-column:1;grid-row:2;"></div>
+        <div class="odds-trifecta-cell odds-trifecta-column-axis" style="grid-column:1;grid-row:1;"><span>${order.column}着</span><span aria-hidden="true">→</span></div>
     `;
 
     candidates.forEach((car, index) => {
-      html += `<div class="odds-trifecta-cell odds-trifecta-car-cell entry-${car}" style="grid-column:${index + 2};grid-row:2;" aria-label="${car}号車 ${escapeHtml(RIDERS[car])}"><span class="odds-trifecta-header-label"><strong>${car}</strong><small>${RIDER_ABBR3[car]}</small></span></div>`;
+      html += `<div class="odds-trifecta-cell odds-trifecta-car-cell entry-${car}" style="grid-column:${index + 2};grid-row:1;" aria-label="${car}号車 ${escapeHtml(RIDERS[car])}"><span class="odds-trifecta-header-label"><strong>${car}</strong><small>${RIDER_ABBR3[car]}</small></span></div>`;
     });
 
     candidates.forEach((rowCar, rowIndex) => {
-      const gridRow = rowIndex + 3;
+      const gridRow = rowIndex + 2;
       html += `<div class="odds-trifecta-cell odds-trifecta-car-cell odds-trifecta-row-car entry-${rowCar}" style="grid-column:1;grid-row:${gridRow};">${rowCar}</div>`;
       candidates.forEach((columnCar, colIndex) => {
         const value = rowCar === columnCar ? null : lookup.get(trifectaKey(columnCar,rowCar));
