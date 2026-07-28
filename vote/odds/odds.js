@@ -25,6 +25,7 @@
   const popularPrev = document.getElementById("popular-prev");
   const popularNext = document.getElementById("popular-next");
   const board = document.getElementById("odds-board");
+  const boardSection = board.closest(".odds-board-section");
   const anchor = document.getElementById("odds-anchor");
 
   function escapeHtml(value) {
@@ -86,7 +87,7 @@
     const pageSlots = Array.from({length:10}, (_, index) => pageRecords[index] || null);
     popularList.innerHTML = pageSlots.map(item => item ? `
       <div class="odds-popular-row">
-        <span class="odds-popular-rank${rankClass(item.rank)}">${item.rank}</span>
+        <span class="odds-popular-rank${popularRankClass(state.type,item.rank)}">${item.rank}</span>
         <span class="odds-popular-combination">${combinationHtml(state.type,item.cars)}</span>
         <strong class="odds-popular-value${oddsClass(item.odds)}">${oddsText(state.type,item)}</strong>
       </div>` : `
@@ -139,6 +140,18 @@
     return "";
   }
 
+  function popularRankClass(type, rank) {
+    const value = Number(rank);
+    if (!Number.isFinite(value)) return "";
+    if (type === "単勝") {
+      if (value === 1) return " odds-rank-gold";
+      if (value === 2) return " odds-rank-silver";
+      if (value === 3) return " odds-rank-bronze";
+      return "";
+    }
+    return rankClass(value);
+  }
+
   function oddsClass(value) {
     const base = Array.isArray(value) ? Number(value[0]) : Number(value);
     return Number.isFinite(base) && base < 10 ? " odds-under-ten" : "";
@@ -148,22 +161,9 @@
     return `<div class="odds-matrix-cell${className}">${content}</div>`;
   }
 
-  function renderAnchor(type) {
-    if (type !== "3連複") {
-      anchor.hidden = true;
-      anchor.innerHTML = "";
-      return;
-    }
-    anchor.hidden = false;
-    const selected = state.anchors[type];
-    anchor.innerHTML = `<span class="odds-anchor-label">軸車</span>` + CARS.map(car => `
-      <button type="button" class="odds-anchor-button${car===selected?" active":""}" data-anchor-car="${car}" aria-label="軸車 ${car}号車" aria-pressed="${car===selected}">${carBadge(car)}</button>`).join("");
-    anchor.querySelectorAll("[data-anchor-car]").forEach(button => {
-      button.addEventListener("click", () => {
-        state.anchors[type] = Number(button.dataset.anchorCar);
-        renderBoard();
-      });
-    });
+  function renderAnchor() {
+    anchor.hidden = true;
+    anchor.innerHTML = "";
   }
 
   function trifectaOrder() {
@@ -184,6 +184,27 @@
 
   function trifectaCell(content,className="") {
     return `<div class="odds-trifecta-cell${className}">${content}</div>`;
+  }
+
+  function axisCarControls(label, selectedCar, selectId) {
+    return `
+      <div class="odds-axis-controls">
+        <div class="odds-axis-static">${escapeHtml(label)}</div>
+        <label class="odds-axis-select-wrap odds-axis-car-select-wrap">
+          <span class="entry-no entry-${selectedCar} odds-axis-selected-car" aria-hidden="true">${selectedCar}</span>
+          <select class="odds-axis-select odds-axis-car-select" id="${selectId}" aria-label="${escapeHtml(label)}にする選手">
+            ${CARS.map(car => `<option value="${car}"${car===selectedCar?" selected":""}>${escapeHtml(RIDERS[car])}</option>`).join("")}
+          </select>
+        </label>
+      </div>`;
+  }
+
+  function compactHeaderCell(car, column, row=1) {
+    return `<div class="odds-trifecta-cell odds-trifecta-car-cell entry-${car}" style="grid-column:${column};grid-row:${row};" aria-label="${car}号車 ${escapeHtml(RIDERS[car])}"><span class="odds-trifecta-header-label"><strong>${car}</strong><small>${RIDER_ABBR3[car]}</small></span></div>`;
+  }
+
+  function compactRowCar(car, row) {
+    return `<div class="odds-trifecta-cell odds-trifecta-car-cell odds-trifecta-row-car entry-${car}" style="grid-column:1;grid-row:${row};">${car}</div>`;
   }
 
   function renderTrifecta() {
@@ -212,12 +233,12 @@
     `;
 
     candidates.forEach((car, index) => {
-      html += `<div class="odds-trifecta-cell odds-trifecta-car-cell entry-${car}" style="grid-column:${index + 2};grid-row:1;" aria-label="${car}号車 ${escapeHtml(RIDERS[car])}"><span class="odds-trifecta-header-label"><strong>${car}</strong><small>${RIDER_ABBR3[car]}</small></span></div>`;
+      html += compactHeaderCell(car, index + 2);
     });
 
     candidates.forEach((rowCar, rowIndex) => {
       const gridRow = rowIndex + 2;
-      html += `<div class="odds-trifecta-cell odds-trifecta-car-cell odds-trifecta-row-car entry-${rowCar}" style="grid-column:1;grid-row:${gridRow};">${rowCar}</div>`;
+      html += compactRowCar(rowCar, gridRow);
       candidates.forEach((columnCar, colIndex) => {
         const key = trifectaKey(columnCar,rowCar);
         const value = rowCar === columnCar ? null : lookup.get(key);
@@ -245,35 +266,44 @@
     const rankLookup = createRankLookup("3連複");
     const fixed = state.anchors["3連複"];
     const candidates = CARS.filter(car => car !== fixed);
-    let html = '<div class="odds-matrix matrix-8">';
-    html += matrixCell("相手車"," odds-matrix-corner");
-    candidates.forEach(car => { html += matrixCell(columnHeader(car),` odds-matrix-head odds-car-cell entry-${car}`); });
+    let html = axisCarControls("軸", fixed, "trio-car");
+    html += '<div class="odds-trifecta-grid">';
+    html += '<div class="odds-trifecta-cell odds-trifecta-column-axis odds-trifecta-corner-label" style="grid-column:1;grid-row:1;"><span>相手</span></div>';
+    candidates.forEach((car,index) => { html += compactHeaderCell(car,index + 2); });
     candidates.forEach((rowCar,rowIndex) => {
-      html += matrixCell(String(rowCar),` odds-matrix-row-head odds-car-cell entry-${rowCar}`);
+      const gridRow = rowIndex + 2;
+      html += compactRowCar(rowCar,gridRow);
       candidates.forEach((colCar,colIndex) => {
-        if (colIndex <= rowIndex) { html += matrixCell(""," is-invalid"); return; }
         const key = [fixed,rowCar,colCar].sort((a,b)=>a-b).join("-");
         const value = lookup.get(key);
-        html += matrixCell(formatOdds(value),` odds-value-cell${rankClass(rankLookup.get(key))}${oddsClass(value)}`);
+        const unavailable = colIndex <= rowIndex || value === null || value === undefined;
+        const className = unavailable ? " is-invalid" : `${rankClass(rankLookup.get(key))}${oddsClass(value)}`;
+        html += `<div class="odds-trifecta-cell odds-trifecta-value${className}" style="grid-column:${colIndex + 2};grid-row:${gridRow};">${unavailable ? "" : formatOdds(value)}</div>`;
       });
     });
     html += "</div>";
     board.innerHTML = html;
+    document.getElementById("trio-car").addEventListener("change", event => {
+      state.anchors["3連複"] = Number(event.target.value);
+      renderTrio();
+    });
   }
 
   function renderExacta() {
     const lookup = createLookup("2連単");
     const rankLookup = createRankLookup("2連単");
-    let html = '<div class="odds-matrix matrix-9">';
-    html += matrixCell("1着＼2着"," odds-matrix-corner");
-    CARS.forEach(car => { html += matrixCell(columnHeader(car),` odds-matrix-head odds-car-cell entry-${car}`); });
-    CARS.forEach(first => {
-      html += matrixCell(String(first),` odds-matrix-row-head odds-car-cell entry-${first}`);
-      CARS.forEach(second => {
-        if (first === second) { html += matrixCell(""," is-invalid"); return; }
+    let html = '<div class="odds-trifecta-grid odds-compact-grid-8">';
+    html += '<div class="odds-trifecta-cell odds-trifecta-column-axis" style="grid-column:1;grid-row:1;"><span>1着</span><span aria-hidden="true">→</span></div>';
+    CARS.forEach((car,index) => { html += compactHeaderCell(car,index + 2); });
+    CARS.forEach((first,rowIndex) => {
+      const gridRow = rowIndex + 2;
+      html += compactRowCar(first,gridRow);
+      CARS.forEach((second,colIndex) => {
         const key = `${first}-${second}`;
         const value = lookup.get(key);
-        html += matrixCell(formatOdds(value),` odds-value-cell${rankClass(rankLookup.get(key))}${oddsClass(value)}`);
+        const unavailable = first === second || value === null || value === undefined;
+        const className = unavailable ? " is-invalid" : `${rankClass(rankLookup.get(key))}${oddsClass(value)}`;
+        html += `<div class="odds-trifecta-cell odds-trifecta-value${className}" style="grid-column:${colIndex + 2};grid-row:${gridRow};">${unavailable ? "" : formatOdds(value)}</div>`;
       });
     });
     html += "</div>";
@@ -283,22 +313,24 @@
   function renderPair(type) {
     const lookup = createLookup(type);
     const rankLookup = createRankLookup(type);
-    let html = '<div class="odds-matrix matrix-9">';
-    html += matrixCell("車番"," odds-matrix-corner");
-    CARS.forEach(car => { html += matrixCell(columnHeader(car),` odds-matrix-head odds-car-cell entry-${car}`); });
+    let html = '<div class="odds-trifecta-grid odds-compact-grid-8">';
+    html += '<div class="odds-trifecta-cell odds-trifecta-column-axis odds-trifecta-corner-blank" style="grid-column:1;grid-row:1;"></div>';
+    CARS.forEach((car,index) => { html += compactHeaderCell(car,index + 2); });
     CARS.forEach((rowCar,rowIndex) => {
-      html += matrixCell(String(rowCar),` odds-matrix-row-head odds-car-cell entry-${rowCar}`);
+      const gridRow = rowIndex + 2;
+      html += compactRowCar(rowCar,gridRow);
       CARS.forEach((colCar,colIndex) => {
-        if (colIndex <= rowIndex) { html += matrixCell(""," is-invalid"); return; }
         const key = [rowCar,colCar].sort((a,b)=>a-b).join("-");
         const value = lookup.get(key);
-        const cellClass = `${rankClass(rankLookup.get(key))}${oddsClass(value)}`;
-        if (type === "ワイド" && Array.isArray(value)) {
-          const content = `<span class="odds-wide-value"><span>${formatOdds(value[0])}</span><small>〜${formatOdds(value[1])}</small></span>`;
-          html += matrixCell(content,` odds-value-cell${cellClass}`);
-        } else {
-          html += matrixCell(formatOdds(value),` odds-value-cell${cellClass}`);
+        const unavailable = colIndex <= rowIndex || value === null || value === undefined;
+        const className = unavailable ? " is-invalid" : `${rankClass(rankLookup.get(key))}${oddsClass(value)}`;
+        let content = "";
+        if (!unavailable && type === "ワイド" && Array.isArray(value)) {
+          content = `<span class="odds-wide-value"><span>${formatOdds(value[0])}</span><small>〜${formatOdds(value[1])}</small></span>`;
+        } else if (!unavailable) {
+          content = formatOdds(value);
         }
+        html += `<div class="odds-trifecta-cell odds-trifecta-value${className}" style="grid-column:${colIndex + 2};grid-row:${gridRow};">${content}</div>`;
       });
     });
     html += "</div>";
@@ -306,26 +338,21 @@
   }
 
   function renderSingle() {
-    const records = ODDS_DATA["単勝"] || [];
-    const lookup = new Map(records.map(item => [item.cars[0], item]));
-    let html = '<div class="odds-single-list">';
-    html += '<div class="odds-single-cell odds-single-head">車番</div><div class="odds-single-cell odds-single-head">選手</div><div class="odds-single-cell odds-single-head">オッズ</div>';
-    CARS.forEach(car => {
-      const item = lookup.get(car);
-      const value = item?.odds;
-      html += `<div class="odds-single-cell odds-single-car entry-${car}">${car}</div><div class="odds-single-cell odds-single-name">${escapeHtml(RIDERS[car])}</div><div class="odds-single-cell odds-single-odds${rankClass(item?.rank)}${oddsClass(value)}">${formatOdds(value)}</div>`;
-    });
-    html += '</div>';
-    board.innerHTML = html;
+    board.innerHTML = "";
   }
 
   function renderBoard() {
-    renderAnchor(state.type);
+    renderAnchor();
+    const single = state.type === "単勝";
+    if (boardSection) boardSection.hidden = single;
+    if (single) {
+      renderSingle();
+      return;
+    }
     if (state.type === "3連単") renderTrifecta();
     else if (state.type === "3連複") renderTrio();
     else if (state.type === "2連単") renderExacta();
-    else if (state.type === "2連複" || state.type === "ワイド") renderPair(state.type);
-    else renderSingle();
+    else renderPair(state.type);
   }
 
   function setType(type, persist=true) {
