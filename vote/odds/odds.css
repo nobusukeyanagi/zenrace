@@ -749,3 +749,21 @@ button,select{font:inherit}
 @media(max-width:430px){
   .odds-axis-position-select{padding-left:24px}
 }
+
+
+/* v12: wide odds stay black/gray and compact axis labels are larger. */
+.odds-wide-cell{color:#111!important}
+.odds-wide-cell .odds-wide-value > span{color:#111!important}
+.odds-wide-cell .odds-wide-value small{color:#6d7580!important}
+.odds-trifecta-column-axis span:last-child{font-size:inherit;line-height:1}
+.odds-trifecta-column-axis:not(.odds-trifecta-corner-label):not(.odds-trifecta-corner-blank){font-size:12px}
+.odds-trifecta-column-axis span + span{font-size:16px;line-height:.85}
+@media(max-width:430px){
+  .odds-trifecta-column-axis:not(.odds-trifecta-corner-label):not(.odds-trifecta-corner-blank){font-size:11px}
+  .odds-trifecta-column-axis span + span{font-size:15px}
+}
+
+.odds-wide-cell .odds-wide-upper{color:#111!important}
+.odds-wide-separator{color:#6d7580!important}
+.odds-wide-popular{display:inline-flex;align-items:center;justify-content:flex-end;gap:0;color:#111!important}
+.odds-wide-popular > span:not(.odds-wide-separator){color:#111!important}

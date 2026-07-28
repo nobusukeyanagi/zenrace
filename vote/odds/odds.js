@@ -53,7 +53,9 @@
   }
 
   function oddsText(type, item) {
-    if (type === "ワイド") return `${formatOdds(item.odds[0])}〜${formatOdds(item.odds[1])}`;
+    if (type === "ワイド") {
+      return `<span class="odds-wide-popular"><span>${formatOdds(item.odds[0])}</span><span class="odds-wide-separator">〜</span><span>${formatOdds(item.odds[1])}</span></span>`;
+    }
     return formatOdds(item.odds);
   }
 
@@ -89,7 +91,7 @@
       <div class="odds-popular-row">
         <span class="odds-popular-rank${popularRankClass(state.type,item.rank)}">${item.rank}</span>
         <span class="odds-popular-combination">${combinationHtml(state.type,item.cars)}</span>
-        <strong class="odds-popular-value${oddsClass(item.odds)}">${oddsText(state.type,item)}</strong>
+        <strong class="odds-popular-value${state.type === "ワイド" ? " odds-wide-cell" : oddsClass(item.odds)}">${oddsText(state.type,item)}</strong>
       </div>` : `
       <div class="odds-popular-row odds-popular-row-empty" aria-hidden="true">
         <span class="odds-popular-rank"></span>
@@ -323,10 +325,12 @@
         const key = [rowCar,colCar].sort((a,b)=>a-b).join("-");
         const value = lookup.get(key);
         const unavailable = colCar === rowCar || value === null || value === undefined;
-        const className = unavailable ? " is-invalid" : `${rankClass(rankLookup.get(key))}${oddsClass(value)}`;
+        const className = unavailable
+          ? " is-invalid"
+          : `${rankClass(rankLookup.get(key))}${type === "ワイド" ? " odds-wide-cell" : oddsClass(value)}`;
         let content = "";
         if (!unavailable && type === "ワイド" && Array.isArray(value)) {
-          content = `<span class="odds-wide-value"><span>${formatOdds(value[0])}</span><small>〜${formatOdds(value[1])}</small></span>`;
+          content = `<span class="odds-wide-value"><span>${formatOdds(value[0])}</span><small><span class="odds-wide-separator">〜</span><span class="odds-wide-upper">${formatOdds(value[1])}</span></small></span>`;
         } else if (!unavailable) {
           content = formatOdds(value);
         }
