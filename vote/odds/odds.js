@@ -14,8 +14,6 @@
 
   const tabs = Array.from(document.querySelectorAll(".odds-type-tab"));
   const popularList = document.getElementById("popular-list");
-  const popularNote = document.getElementById("popular-note");
-  const boardTitle = document.getElementById("odds-board-title");
   const board = document.getElementById("odds-board");
   const anchor = document.getElementById("odds-anchor");
 
@@ -24,11 +22,11 @@
   }
 
   function carBadge(car) {
-    return `<span class="odds-car-badge car-${car}" aria-label="${car}号車">${car}</span>`;
+    return `<span class="entry-no entry-${car} odds-car-badge" aria-label="${car}号車">${car}</span>`;
   }
 
   function columnHeader(car) {
-    return `<span class="odds-column-label">${carBadge(car)}<small>${SHORT_RIDERS[car]}</small></span>`;
+    return `<span class="odds-column-label"><strong>${car}</strong><small>${SHORT_RIDERS[car]}</small></span>`;
   }
 
   function formatOdds(value) {
@@ -50,7 +48,6 @@
   }
 
   function renderPopular() {
-    popularNote.textContent = state.type;
     const records = ODDS_DATA[state.type] || [];
     if (!records.length) {
       popularList.innerHTML = '<div class="odds-empty-message">添付データに単勝オッズが収録されていないため、表示できません。</div>';
@@ -114,9 +111,9 @@
     const candidates = CARS.filter(car => car !== first);
     let html = '<div class="odds-matrix matrix-8">';
     html += matrixCell("2着＼3着"," odds-matrix-corner");
-    candidates.forEach(car => { html += matrixCell(columnHeader(car)," odds-matrix-head"); });
+    candidates.forEach(car => { html += matrixCell(columnHeader(car),` odds-matrix-head odds-car-cell entry-${car}`); });
     candidates.forEach(second => {
-      html += matrixCell(carBadge(second)," odds-matrix-row-head");
+      html += matrixCell(String(second),` odds-matrix-row-head odds-car-cell entry-${second}`);
       candidates.forEach(third => {
         if (second === third) { html += matrixCell(""," is-invalid"); return; }
         const value = lookup.get(`${first}-${second}-${third}`);
@@ -133,9 +130,9 @@
     const candidates = CARS.filter(car => car !== fixed);
     let html = '<div class="odds-matrix matrix-8">';
     html += matrixCell("相手車"," odds-matrix-corner");
-    candidates.forEach(car => { html += matrixCell(columnHeader(car)," odds-matrix-head"); });
+    candidates.forEach(car => { html += matrixCell(columnHeader(car),` odds-matrix-head odds-car-cell entry-${car}`); });
     candidates.forEach((rowCar,rowIndex) => {
-      html += matrixCell(carBadge(rowCar)," odds-matrix-row-head");
+      html += matrixCell(String(rowCar),` odds-matrix-row-head odds-car-cell entry-${rowCar}`);
       candidates.forEach((colCar,colIndex) => {
         if (colIndex <= rowIndex) { html += matrixCell(""," is-invalid"); return; }
         const key = [fixed,rowCar,colCar].sort((a,b)=>a-b).join("-");
@@ -151,9 +148,9 @@
     const lookup = createLookup("2連単");
     let html = '<div class="odds-matrix matrix-9">';
     html += matrixCell("1着＼2着"," odds-matrix-corner");
-    CARS.forEach(car => { html += matrixCell(columnHeader(car)," odds-matrix-head"); });
+    CARS.forEach(car => { html += matrixCell(columnHeader(car),` odds-matrix-head odds-car-cell entry-${car}`); });
     CARS.forEach(first => {
-      html += matrixCell(carBadge(first)," odds-matrix-row-head");
+      html += matrixCell(String(first),` odds-matrix-row-head odds-car-cell entry-${first}`);
       CARS.forEach(second => {
         if (first === second) { html += matrixCell(""," is-invalid"); return; }
         const value = lookup.get(`${first}-${second}`);
@@ -168,9 +165,9 @@
     const lookup = createLookup(type);
     let html = '<div class="odds-matrix matrix-9">';
     html += matrixCell("車番"," odds-matrix-corner");
-    CARS.forEach(car => { html += matrixCell(columnHeader(car)," odds-matrix-head"); });
+    CARS.forEach(car => { html += matrixCell(columnHeader(car),` odds-matrix-head odds-car-cell entry-${car}`); });
     CARS.forEach((rowCar,rowIndex) => {
-      html += matrixCell(carBadge(rowCar)," odds-matrix-row-head");
+      html += matrixCell(String(rowCar),` odds-matrix-row-head odds-car-cell entry-${rowCar}`);
       CARS.forEach((colCar,colIndex) => {
         if (colIndex <= rowIndex) { html += matrixCell(""," is-invalid"); return; }
         const value = lookup.get([rowCar,colCar].sort((a,b)=>a-b).join("-"));
@@ -190,14 +187,13 @@
     let html = '<div class="odds-single-list">';
     html += '<div class="odds-single-cell odds-single-head">車番</div><div class="odds-single-cell odds-single-head">選手</div><div class="odds-single-cell odds-single-head">オッズ</div>';
     CARS.forEach(car => {
-      html += `<div class="odds-single-cell">${carBadge(car)}</div><div class="odds-single-cell odds-single-name">${escapeHtml(RIDERS[car])}</div><div class="odds-single-cell odds-single-odds">－</div>`;
+      html += `<div class="odds-single-cell odds-single-car entry-${car}">${car}</div><div class="odds-single-cell odds-single-name">${escapeHtml(RIDERS[car])}</div><div class="odds-single-cell odds-single-odds">－</div>`;
     });
     html += '<div class="odds-single-note">添付の「全日本選抜オートレース_オッズ整理.xlsx」には単勝データが含まれていません。</div></div>';
     board.innerHTML = html;
   }
 
   function renderBoard() {
-    boardTitle.textContent = `${state.type}オッズ`;
     renderAnchor(state.type);
     if (state.type === "3連単") renderTrifecta();
     else if (state.type === "3連複") renderTrio();

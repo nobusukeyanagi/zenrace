@@ -228,3 +228,70 @@ button{font:inherit}
 .odds-column-label small{display:block;width:100%;overflow:hidden;color:#303740;font-size:8.5px;font-weight:1000;line-height:1;letter-spacing:-.08em;text-align:center;white-space:nowrap;text-overflow:clip}
 .odds-matrix-head{min-height:47px}
 @media(max-width:360px){.odds-column-label small{font-size:7.8px}}
+
+
+/* v2: compact first view and vehicle-color cells */
+.odds-section-head{display:none!important}
+.odds-popular-section{margin-top:8px}
+.odds-popular-list{
+  height:323px;
+  scroll-snap-type:y proximity;
+  scrollbar-gutter:stable;
+}
+.odds-popular-row{
+  height:34px;
+  min-height:34px;
+  scroll-snap-align:start;
+}
+
+/* Match the rounded-square vehicle-number icon used by Results / Recent 10. */
+.odds-car-badge.entry-no{
+  flex:0 0 24px;
+  width:24px;
+  height:24px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 1px;
+  border:1px solid rgba(0,0,0,.30);
+  border-radius:5px;
+  font-size:15px;
+  font-weight:1000;
+  line-height:1;
+  vertical-align:middle;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.38),0 1px 2px rgba(0,0,0,.14);
+}
+.entry-1{color:#111!important;background:#fff!important;border-color:#8f949a!important}
+.entry-2{color:#fff!important;background:#171717!important;border-color:#050505!important}
+.entry-3{color:#fff!important;background:#e51125!important;border-color:#a80a19!important}
+.entry-4{color:#fff!important;background:#0877bd!important;border-color:#07598d!important}
+.entry-5{color:#111!important;background:#f2d819!important;border-color:#bca900!important}
+.entry-6{color:#fff!important;background:#07914a!important;border-color:#056a37!important}
+.entry-7{color:#111!important;background:#ee8b10!important;border-color:#b76500!important}
+.entry-8{color:#fff!important;background:#d9008f!important;border-color:#9e0068!important}
+.odds-anchor-button .odds-car-badge{width:24px;height:24px;font-size:15px}
+
+/* Vehicle-number header/row cells are filled edge-to-edge instead of using a badge on gray. */
+.odds-matrix-cell.odds-car-cell{
+  padding:2px 0;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  font-size:15px;
+  font-weight:1000;
+}
+.odds-matrix-head.odds-car-cell{min-height:47px}
+.odds-matrix-row-head.odds-car-cell{min-height:38px}
+.odds-column-label{color:inherit}
+.odds-column-label strong{display:block;color:inherit;font-size:15px;font-weight:1000;line-height:1}
+.odds-column-label small{color:inherit;opacity:.92}
+.odds-single-car{justify-content:center;padding-inline:0;font-size:16px;font-weight:1000}
+
+@media(max-width:430px){
+  .odds-popular-list{height:323px}
+  .odds-car-badge.entry-no{width:21px;height:21px;font-size:14px}
+  .odds-anchor-button .odds-car-badge{width:21px;height:21px;font-size:14px}
+  .odds-matrix-cell.odds-car-cell{font-size:14px}
+  .odds-column-label strong{font-size:14px}
+  .odds-matrix-row-head.odds-car-cell{min-height:36px}
+}
