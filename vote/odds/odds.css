@@ -779,3 +779,6 @@ button,select{font:inherit}
 .odds-upper-duplicate .odds-wide-value small,
 .odds-upper-duplicate .odds-wide-upper{color:#6d7580!important}
 .odds-wide-cell .odds-wide-upper{color:#6d7580!important}
+
+/* v14: restore sub-10 red text in the upper duplicate half for 3連複 and 2連複. */
+.odds-upper-duplicate.odds-under-ten{color:#d70018!important}
