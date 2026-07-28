@@ -12,6 +12,7 @@
   const VALID_TYPES = ["3連単","3連複","2連単","2連複","ワイド","単勝"];
   const state = {
     type:"3連単",
+    popularPage:0,
     trifectaPosition:1,
     trifectaCar:1,
     anchors:{"3連複":1}
@@ -19,6 +20,9 @@
 
   const tabs = Array.from(document.querySelectorAll(".odds-type-tab"));
   const popularList = document.getElementById("popular-list");
+  const popularViewport = document.getElementById("popular-viewport");
+  const popularPrev = document.getElementById("popular-prev");
+  const popularNext = document.getElementById("popular-next");
   const board = document.getElementById("odds-board");
   const anchor = document.getElementById("odds-anchor");
 
@@ -43,8 +47,7 @@
   }
 
   function combinationHtml(type, cars) {
-    const separator = type === "3連単" || type === "2連単" ? "›" : "–";
-    return cars.map((car,index) => `${index ? `<span class="odds-popular-arrow">${separator}</span>` : ""}${carBadge(car)}`).join("");
+    return cars.map(car => carBadge(car)).join("");
   }
 
   function oddsText(type, item) {
@@ -52,18 +55,50 @@
     return formatOdds(item.odds);
   }
 
+  function popularPageCount(records) {
+    return Math.max(1, Math.ceil(records.length / 10));
+  }
+
+  function normalizePopularPage(records) {
+    const count = popularPageCount(records);
+    state.popularPage = ((state.popularPage % count) + count) % count;
+    return count;
+  }
+
   function renderPopular() {
     const records = ODDS_DATA[state.type] || [];
-    if (!records.length) {
+    const hasRecords = records.length > 0;
+    popularPrev.disabled = !hasRecords;
+    popularNext.disabled = !hasRecords;
+    popularPrev.setAttribute("aria-disabled", String(!hasRecords));
+    popularNext.setAttribute("aria-disabled", String(!hasRecords));
+
+    if (!hasRecords) {
+      state.popularPage = 0;
       popularList.innerHTML = '<div class="odds-empty-message">添付データに単勝オッズが収録されていないため、表示できません。</div>';
       return;
     }
-    popularList.innerHTML = records.slice(0,10).map((item,index) => `
-      <div class="odds-popular-row rank-${Math.min(index + 1,4)}">
-        <span class="odds-popular-rank">${index + 1}</span>
+
+    const pageCount = normalizePopularPage(records);
+    const start = state.popularPage * 10;
+    const pageRecords = records.slice(start, start + 10);
+    popularList.innerHTML = pageRecords.map(item => `
+      <div class="odds-popular-row rank-${Math.min(Number(item.rank) || 4,4)}">
+        <span class="odds-popular-rank">${item.rank}</span>
         <span class="odds-popular-combination">${combinationHtml(state.type,item.cars)}</span>
         <strong class="odds-popular-value">${oddsText(state.type,item)}</strong>
       </div>`).join("");
+    popularList.setAttribute("aria-label", `${start + 1}位から${Math.min(start + 10, records.length)}位、全${records.length}件中`);
+    popularPrev.setAttribute("aria-label", `前の人気順を表示（${state.popularPage + 1}/${pageCount}）`);
+    popularNext.setAttribute("aria-label", `次の人気順を表示（${state.popularPage + 1}/${pageCount}）`);
+  }
+
+  function movePopularPage(delta) {
+    const records = ODDS_DATA[state.type] || [];
+    if (!records.length) return;
+    state.popularPage += delta;
+    normalizePopularPage(records);
+    renderPopular();
   }
 
   function createLookup(type) {
@@ -135,7 +170,6 @@
 
     let html = `
       <div class="odds-axis-controls">
-        <span class="odds-axis-caption">軸</span>
         <label class="odds-axis-select-wrap">
           <select class="odds-axis-select" id="trifecta-position" aria-label="固定する着順">
             ${[1,2,3].map(position => `<option value="${position}"${position===state.trifectaPosition?" selected":""}>${position}着</option>`).join("")}
@@ -148,8 +182,6 @@
         </label>
       </div>
       <div class="odds-trifecta-grid">
-        ${trifectaCell(`${state.trifectaPosition}着`," odds-trifecta-axis-label odds-trifecta-fixed-label")}
-        ${trifectaCell(String(fixedCar)," odds-trifecta-fixed-car")}
         ${trifectaCell(`${order.column}着`," odds-trifecta-axis-label odds-trifecta-column-label")}
         ${candidates.map(car => trifectaCell(String(car),` odds-trifecta-car-cell entry-${car}`)).join("")}
         ${trifectaCell(`${order.row}着`," odds-trifecta-row-axis")}
@@ -259,7 +291,9 @@
 
   function setType(type, persist=true) {
     if (!VALID_TYPES.includes(type)) type = "3連単";
+    const typeChanged = state.type !== type;
     state.type = type;
+    if (typeChanged) state.popularPage = 0;
     tabs.forEach(tab => {
       const active = tab.dataset.oddsType === type;
       tab.classList.toggle("active", active);
@@ -271,6 +305,27 @@
     renderPopular();
     renderBoard();
   }
+
+  popularPrev.addEventListener("click", () => movePopularPage(-1));
+  popularNext.addEventListener("click", () => movePopularPage(1));
+
+  let swipeStartX = null;
+  let swipeStartY = null;
+  popularViewport.addEventListener("touchstart", event => {
+    const touch = event.changedTouches[0];
+    swipeStartX = touch.clientX;
+    swipeStartY = touch.clientY;
+  }, {passive:true});
+  popularViewport.addEventListener("touchend", event => {
+    if (swipeStartX === null || swipeStartY === null) return;
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - swipeStartX;
+    const deltaY = touch.clientY - swipeStartY;
+    swipeStartX = null;
+    swipeStartY = null;
+    if (Math.abs(deltaX) < 35 || Math.abs(deltaX) <= Math.abs(deltaY)) return;
+    movePopularPage(deltaX < 0 ? 1 : -1);
+  }, {passive:true});
 
   tabs.forEach(tab => tab.addEventListener("click", () => setType(tab.dataset.oddsType)));
   let initial = "3連単";
