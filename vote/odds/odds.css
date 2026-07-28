@@ -738,3 +738,14 @@ button,select{font:inherit}
     grid-template-columns:24px repeat(8,minmax(0,1fr));
   }
 }
+
+
+/* v11: correct matrix axes and center the fixed-position selector. */
+.odds-axis-position-select{
+  padding-left:28px;
+  text-align:center;
+  text-align-last:center;
+}
+@media(max-width:430px){
+  .odds-axis-position-select{padding-left:24px}
+}

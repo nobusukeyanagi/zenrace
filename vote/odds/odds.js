@@ -217,7 +217,7 @@
     let html = `
       <div class="odds-axis-controls">
         <label class="odds-axis-select-wrap">
-          <select class="odds-axis-select" id="trifecta-position" aria-label="固定する着順">
+          <select class="odds-axis-select odds-axis-position-select" id="trifecta-position" aria-label="固定する着順">
             ${[1,2,3].map(position => `<option value="${position}"${position===state.trifectaPosition?" selected":""}>${position}着</option>`).join("")}
           </select>
         </label>
@@ -276,7 +276,7 @@
       candidates.forEach((colCar,colIndex) => {
         const key = [fixed,rowCar,colCar].sort((a,b)=>a-b).join("-");
         const value = lookup.get(key);
-        const unavailable = colIndex <= rowIndex || value === null || value === undefined;
+        const unavailable = colCar === rowCar || value === null || value === undefined;
         const className = unavailable ? " is-invalid" : `${rankClass(rankLookup.get(key))}${oddsClass(value)}`;
         html += `<div class="odds-trifecta-cell odds-trifecta-value${className}" style="grid-column:${colIndex + 2};grid-row:${gridRow};">${unavailable ? "" : formatOdds(value)}</div>`;
       });
@@ -295,10 +295,10 @@
     let html = '<div class="odds-trifecta-grid odds-compact-grid-8">';
     html += '<div class="odds-trifecta-cell odds-trifecta-column-axis" style="grid-column:1;grid-row:1;"><span>1着</span><span aria-hidden="true">→</span></div>';
     CARS.forEach((car,index) => { html += compactHeaderCell(car,index + 2); });
-    CARS.forEach((first,rowIndex) => {
+    CARS.forEach((second,rowIndex) => {
       const gridRow = rowIndex + 2;
-      html += compactRowCar(first,gridRow);
-      CARS.forEach((second,colIndex) => {
+      html += compactRowCar(second,gridRow);
+      CARS.forEach((first,colIndex) => {
         const key = `${first}-${second}`;
         const value = lookup.get(key);
         const unavailable = first === second || value === null || value === undefined;
@@ -322,7 +322,7 @@
       CARS.forEach((colCar,colIndex) => {
         const key = [rowCar,colCar].sort((a,b)=>a-b).join("-");
         const value = lookup.get(key);
-        const unavailable = colIndex <= rowIndex || value === null || value === undefined;
+        const unavailable = colCar === rowCar || value === null || value === undefined;
         const className = unavailable ? " is-invalid" : `${rankClass(rankLookup.get(key))}${oddsClass(value)}`;
         let content = "";
         if (!unavailable && type === "ワイド" && Array.isArray(value)) {
