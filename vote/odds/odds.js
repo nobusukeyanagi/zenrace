@@ -10,7 +10,12 @@
   const SHORT_RIDERS = {1:"黒川",2:"鈴木圭",3:"青山",4:"金子",5:"長田",6:"佐藤励",7:"鈴木宏",8:"佐藤摩"};
   const TYPE_STORAGE_KEY = "zenrace.odds.type";
   const VALID_TYPES = ["3連単","3連複","2連単","2連複","ワイド","単勝"];
-  const state = { type:"3連単", anchors:{"3連単":1,"3連複":1} };
+  const state = {
+    type:"3連単",
+    trifectaPosition:1,
+    trifectaCar:1,
+    anchors:{"3連複":1}
+  };
 
   const tabs = Array.from(document.querySelectorAll(".odds-type-tab"));
   const popularList = document.getElementById("popular-list");
@@ -34,7 +39,7 @@
     const number = Number(value);
     if (!Number.isFinite(number)) return "－";
     if (number >= 1000) return String(Math.round(number));
-    return Number.isInteger(number) ? String(number) : number.toFixed(1).replace(/\.0$/, "");
+    return number.toFixed(1);
   }
 
   function combinationHtml(type, cars) {
@@ -51,16 +56,14 @@
     const records = ODDS_DATA[state.type] || [];
     if (!records.length) {
       popularList.innerHTML = '<div class="odds-empty-message">添付データに単勝オッズが収録されていないため、表示できません。</div>';
-      popularList.scrollTop = 0;
       return;
     }
-    popularList.innerHTML = records.slice(0,10).map(item => `
-      <div class="odds-popular-row">
-        <span class="odds-popular-rank">${item.rank}</span>
+    popularList.innerHTML = records.slice(0,10).map((item,index) => `
+      <div class="odds-popular-row rank-${Math.min(index + 1,4)}">
+        <span class="odds-popular-rank">${index + 1}</span>
         <span class="odds-popular-combination">${combinationHtml(state.type,item.cars)}</span>
         <strong class="odds-popular-value">${oddsText(state.type,item)}</strong>
       </div>`).join("");
-    popularList.scrollTop = 0;
   }
 
   function createLookup(type) {
@@ -87,16 +90,15 @@
   }
 
   function renderAnchor(type) {
-    if (type !== "3連単" && type !== "3連複") {
+    if (type !== "3連複") {
       anchor.hidden = true;
       anchor.innerHTML = "";
       return;
     }
     anchor.hidden = false;
-    const label = type === "3連単" ? "1着" : "軸車";
     const selected = state.anchors[type];
-    anchor.innerHTML = `<span class="odds-anchor-label">${label}</span>` + CARS.map(car => `
-      <button type="button" class="odds-anchor-button${car===selected?" active":""}" data-anchor-car="${car}" aria-label="${label} ${car}号車" aria-pressed="${car===selected}">${carBadge(car)}</button>`).join("");
+    anchor.innerHTML = `<span class="odds-anchor-label">軸車</span>` + CARS.map(car => `
+      <button type="button" class="odds-anchor-button${car===selected?" active":""}" data-anchor-car="${car}" aria-label="軸車 ${car}号車" aria-pressed="${car===selected}">${carBadge(car)}</button>`).join("");
     anchor.querySelectorAll("[data-anchor-car]").forEach(button => {
       button.addEventListener("click", () => {
         state.anchors[type] = Number(button.dataset.anchorCar);
@@ -105,23 +107,76 @@
     });
   }
 
+  function trifectaOrder() {
+    const fixed = state.trifectaPosition;
+    if (fixed === 1) return {column:2,row:3};
+    if (fixed === 2) return {column:1,row:3};
+    return {column:1,row:2};
+  }
+
+  function trifectaKey(columnCar,rowCar) {
+    const order = trifectaOrder();
+    const cars = [];
+    cars[state.trifectaPosition - 1] = state.trifectaCar;
+    cars[order.column - 1] = columnCar;
+    cars[order.row - 1] = rowCar;
+    return cars.join("-");
+  }
+
+  function trifectaCell(content,className="") {
+    return `<div class="odds-trifecta-cell${className}">${content}</div>`;
+  }
+
   function renderTrifecta() {
     const lookup = createLookup("3連単");
-    const first = state.anchors["3連単"];
-    const candidates = CARS.filter(car => car !== first);
-    let html = '<div class="odds-matrix matrix-8">';
-    html += matrixCell("2着＼3着"," odds-matrix-corner");
-    candidates.forEach(car => { html += matrixCell(columnHeader(car),` odds-matrix-head odds-car-cell entry-${car}`); });
-    candidates.forEach(second => {
-      html += matrixCell(String(second),` odds-matrix-row-head odds-car-cell entry-${second}`);
-      candidates.forEach(third => {
-        if (second === third) { html += matrixCell(""," is-invalid"); return; }
-        const value = lookup.get(`${first}-${second}-${third}`);
-        html += matrixCell(formatOdds(value), oddsClass(value));
+    const fixedCar = state.trifectaCar;
+    const order = trifectaOrder();
+    const candidates = CARS.filter(car => car !== fixedCar);
+
+    let html = `
+      <div class="odds-axis-controls">
+        <span class="odds-axis-caption">軸</span>
+        <label class="odds-axis-select-wrap">
+          <select class="odds-axis-select" id="trifecta-position" aria-label="固定する着順">
+            ${[1,2,3].map(position => `<option value="${position}"${position===state.trifectaPosition?" selected":""}>${position}着</option>`).join("")}
+          </select>
+        </label>
+        <label class="odds-axis-select-wrap">
+          <select class="odds-axis-select" id="trifecta-car" aria-label="固定する選手">
+            ${CARS.map(car => `<option value="${car}"${car===fixedCar?" selected":""}>${car} ${escapeHtml(RIDERS[car])}</option>`).join("")}
+          </select>
+        </label>
+      </div>
+      <div class="odds-trifecta-grid">
+        ${trifectaCell(`${state.trifectaPosition}着`," odds-trifecta-axis-label odds-trifecta-fixed-label")}
+        ${trifectaCell(String(fixedCar)," odds-trifecta-fixed-car")}
+        ${trifectaCell(`${order.column}着`," odds-trifecta-axis-label odds-trifecta-column-label")}
+        ${candidates.map(car => trifectaCell(String(car),` odds-trifecta-car-cell entry-${car}`)).join("")}
+        ${trifectaCell(`${order.row}着`," odds-trifecta-row-axis")}
+    `;
+
+    candidates.forEach(rowCar => {
+      html += trifectaCell(String(rowCar),` odds-trifecta-car-cell entry-${rowCar}`);
+      candidates.forEach(columnCar => {
+        if (rowCar === columnCar) {
+          html += trifectaCell(""," is-invalid");
+          return;
+        }
+        const value = lookup.get(trifectaKey(columnCar,rowCar));
+        html += trifectaCell(formatOdds(value),` odds-trifecta-value${oddsClass(value)}`);
       });
     });
     html += "</div>";
     board.innerHTML = html;
+
+    document.getElementById("trifecta-position").addEventListener("change", event => {
+      state.trifectaPosition = Number(event.target.value);
+      renderTrifecta();
+    });
+    document.getElementById("trifecta-car").addEventListener("change", event => {
+      state.trifectaCar = Number(event.target.value);
+      renderTrifecta();
+    });
   }
 
   function renderTrio() {
@@ -137,7 +192,7 @@
         if (colIndex <= rowIndex) { html += matrixCell(""," is-invalid"); return; }
         const key = [fixed,rowCar,colCar].sort((a,b)=>a-b).join("-");
         const value = lookup.get(key);
-        html += matrixCell(formatOdds(value), oddsClass(value));
+        html += matrixCell(formatOdds(value),` odds-value-cell${oddsClass(value)}`);
       });
     });
     html += "</div>";
@@ -154,7 +209,7 @@
       CARS.forEach(second => {
         if (first === second) { html += matrixCell(""," is-invalid"); return; }
         const value = lookup.get(`${first}-${second}`);
-        html += matrixCell(formatOdds(value), oddsClass(value));
+        html += matrixCell(formatOdds(value),` odds-value-cell${oddsClass(value)}`);
       });
     });
     html += "</div>";
@@ -173,9 +228,9 @@
         const value = lookup.get([rowCar,colCar].sort((a,b)=>a-b).join("-"));
         if (type === "ワイド" && Array.isArray(value)) {
           const content = `<span class="odds-wide-value"><span>${formatOdds(value[0])}</span><small>〜${formatOdds(value[1])}</small></span>`;
-          html += matrixCell(content, oddsClass(value));
+          html += matrixCell(content,` odds-value-cell${oddsClass(value)}`);
         } else {
-          html += matrixCell(formatOdds(value), oddsClass(value));
+          html += matrixCell(formatOdds(value),` odds-value-cell${oddsClass(value)}`);
         }
       });
     });
