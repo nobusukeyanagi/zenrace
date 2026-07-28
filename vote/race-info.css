@@ -1,7 +1,10 @@
-zenrace-race-info{display:block;width:min(100%,760px);margin:0 auto}
+zenrace-race-info{display:block;width:min(100%,760px);margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;font-size:16px;line-height:normal;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+zenrace-race-info *,zenrace-race-info *::before,zenrace-race-info *::after{box-sizing:border-box}
+zenrace-race-info button{-webkit-appearance:none;appearance:none;font-family:inherit;font-style:normal;text-transform:none}
 .shared-race-info{position:relative;margin:10px 8px 0;padding:13px 14px 12px;overflow:hidden;border:1px solid rgba(240,204,112,.38);border-radius:14px;color:#fff;background:linear-gradient(135deg,#121924,#07090d 63%,#211708);box-shadow:0 10px 27px rgba(0,0,0,.32)}
 .shared-race-info::after{content:"";position:absolute;right:-54px;top:-86px;width:190px;height:190px;border:1px solid rgba(240,204,112,.13);border-radius:50%;pointer-events:none}
 .race-info-primary,.race-info-status{position:relative;z-index:1;display:flex;align-items:center;min-width:0}
+.race-info-primary{height:30px}
 .race-info-primary{gap:7px;line-height:1}
 .race-info-filter-toggle{display:inline-flex;align-items:center;gap:7px;margin:0;padding:0;border:0;border-radius:5px;color:inherit;background:transparent;line-height:1;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .race-info-filter-toggle:focus-visible{outline:2px solid #f0cc70;outline-offset:3px}
@@ -12,7 +15,7 @@ zenrace-race-info{display:block;width:min(100%,760px);margin:0 auto}
 .race-info-icon.auto::before{content:"";width:16px;height:16px;background:#fff;-webkit-mask:url("../gradedraces/icons/auto.png") center/contain no-repeat;mask:url("../gradedraces/icons/auto.png") center/contain no-repeat}
 .race-info-icon.sg{color:#fff;background:#d4232b;font-size:9px;font-weight:1000;letter-spacing:-.02em}
 .race-info-icon.final-day{color:#17191d;background:#fff;border:1px solid rgba(255,255,255,.55);font-size:11px;font-weight:1000;box-shadow:0 2px 7px rgba(0,0,0,.28)}
-.race-live-button{position:relative;z-index:2;margin-left:auto;min-height:30px;padding:0 10px;border:1px solid rgba(240,204,112,.62);border-radius:8px;color:#fff;background:rgba(12,13,16,.84);font-size:13px;font-weight:1000;white-space:nowrap;box-shadow:0 3px 10px rgba(0,0,0,.28);-webkit-tap-highlight-color:transparent}
+.race-live-button{position:relative;z-index:2;margin-left:auto;height:30px;min-height:30px;line-height:1;padding:0 10px;border:1px solid rgba(240,204,112,.62);border-radius:8px;color:#fff;background:rgba(12,13,16,.84);font-size:13px;font-weight:1000;white-space:nowrap;box-shadow:0 3px 10px rgba(0,0,0,.28);-webkit-tap-highlight-color:transparent}
 .race-live-button span{margin-right:4px;color:#f0cc70;font-size:11px}
 .race-live-button.active{color:#171108;background:#f0cc70;border-color:#ffe6a1}
 .race-live-button.active span{color:#171108}
@@ -37,4 +40,4 @@ zenrace-race-info{display:block;width:min(100%,760px);margin:0 auto}
 .race-info-video[hidden]{display:none}
 .race-info-video-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border:0;border-radius:0;background:#000;box-shadow:none}
 .race-info-video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-@media(max-width:380px){.shared-race-info{padding-inline:12px}.race-info-primary{gap:6px}.race-info-icon{flex-basis:20px;width:20px;height:20px}.race-info-icon.auto::before{width:14px;height:14px}.race-live-button{min-height:28px;padding-inline:7px;font-size:13px}.race-info-status-copy{gap:6px}.race-info-time{gap:4px}.race-info-time-label{padding-inline:5px}.race-info-video{margin-inline:-12px;padding-inline:0}}
+@media(max-width:380px){.shared-race-info{padding-inline:12px}.race-info-primary{height:28px}.race-info-primary{gap:6px}.race-info-icon{flex-basis:20px;width:20px;height:20px}.race-info-icon.auto::before{width:14px;height:14px}.race-live-button{height:28px;min-height:28px;padding-inline:7px;font-size:13px}.race-info-status-copy{gap:6px}.race-info-time{gap:4px}.race-info-time-label{padding-inline:5px}.race-info-video{margin-inline:-12px;padding-inline:0}}

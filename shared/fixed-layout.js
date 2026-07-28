@@ -63,14 +63,26 @@
   }
   root.style.setProperty("--page-content-scale", "1");
 
+  const normalizeViewportInset = (value) => {
+    const safeValue = Number.isFinite(value) ? Math.max(0, value) : 0;
+    // iOS Safari can briefly report a fractional offset around 0px while
+    // switching pages. Rounding that value made otherwise identical pages
+    // alternate between 0px and 1px. Treat tiny offsets as zero and snap
+    // larger values to a stable device-independent pixel.
+    if (safeValue < 1.5) return 0;
+    return Math.round(safeValue);
+  };
+
   const syncVisualViewport = () => {
     const viewport = window.visualViewport;
     const layoutHeight = Math.max(root.clientHeight, window.innerHeight || 0);
-    const top = viewport ? Math.max(0, viewport.offsetTop) : 0;
+    const rawTop = viewport ? viewport.offsetTop : 0;
+    const top = normalizeViewportInset(rawTop);
     const visibleHeight = viewport ? viewport.height : (window.innerHeight || layoutHeight);
-    const bottom = viewport ? Math.max(0, layoutHeight - visibleHeight - top) : 0;
-    root.style.setProperty("--visual-top", `${Math.round(top)}px`);
-    root.style.setProperty("--visual-bottom", `${Math.round(bottom)}px`);
+    const rawBottom = viewport ? Math.max(0, layoutHeight - visibleHeight - Math.max(0, rawTop)) : 0;
+    const bottom = normalizeViewportInset(rawBottom);
+    root.style.setProperty("--visual-top", `${top}px`);
+    root.style.setProperty("--visual-bottom", `${bottom}px`);
   };
 
   syncVisualViewport();
