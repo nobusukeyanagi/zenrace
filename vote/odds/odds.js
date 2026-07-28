@@ -8,6 +8,7 @@
     5:"長田 稚也",6:"佐藤 励",7:"鈴木 宏和",8:"佐藤 摩弥"
   };
   const SHORT_RIDERS = {1:"黒川",2:"鈴木圭",3:"青山",4:"金子",5:"長田",6:"佐藤励",7:"鈴木宏",8:"佐藤摩"};
+  const RIDER_ABBR3 = {1:"黒川京",2:"鈴木圭",3:"青山周",4:"金子大",5:"長田稚",6:"佐藤励",7:"鈴木宏",8:"佐藤摩"};
   const TYPE_STORAGE_KEY = "zenrace.odds.type";
   const VALID_TYPES = ["3連単","3連複","2連単","2連複","ワイド","単勝"];
   const state = {
@@ -82,11 +83,17 @@
     const pageCount = normalizePopularPage(records);
     const start = state.popularPage * 10;
     const pageRecords = records.slice(start, start + 10);
-    popularList.innerHTML = pageRecords.map(item => `
+    const pageSlots = Array.from({length:10}, (_, index) => pageRecords[index] || null);
+    popularList.innerHTML = pageSlots.map(item => item ? `
       <div class="odds-popular-row rank-${Math.min(Number(item.rank) || 4,4)}">
         <span class="odds-popular-rank">${item.rank}</span>
         <span class="odds-popular-combination">${combinationHtml(state.type,item.cars)}</span>
         <strong class="odds-popular-value">${oddsText(state.type,item)}</strong>
+      </div>` : `
+      <div class="odds-popular-row odds-popular-row-empty" aria-hidden="true">
+        <span class="odds-popular-rank"></span>
+        <span class="odds-popular-combination"></span>
+        <strong class="odds-popular-value"></strong>
       </div>`).join("");
     popularList.setAttribute("aria-label", `${start + 1}位から${Math.min(start + 10, records.length)}位、全${records.length}件中`);
     popularPrev.setAttribute("aria-label", `前の人気順を表示（${state.popularPage + 1}/${pageCount}）`);
@@ -190,7 +197,7 @@
     `;
 
     candidates.forEach((car, index) => {
-      html += `<div class="odds-trifecta-cell odds-trifecta-car-cell entry-${car}" style="grid-column:${index + 3};grid-row:2;">${car}</div>`;
+      html += `<div class="odds-trifecta-cell odds-trifecta-car-cell entry-${car}" style="grid-column:${index + 3};grid-row:2;" aria-label="${car}号車 ${escapeHtml(RIDERS[car])}"><span class="odds-trifecta-header-label"><strong>${car}</strong><small>${RIDER_ABBR3[car]}</small></span></div>`;
     });
 
     candidates.forEach((rowCar, rowIndex) => {
