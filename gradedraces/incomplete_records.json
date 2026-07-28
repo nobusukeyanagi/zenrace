@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-28T05:55:16.393180+09:00",
-  "center_date": "2026-07-28",
+  "generated_at": "2026-07-29T05:40:34.461071+09:00",
+  "center_date": "2026-07-29",
   "past_unresolved_count": 1,
-  "upcoming_missing_time_count": 16,
+  "upcoming_missing_time_count": 17,
   "past_unresolved": [
     {
       "date": "2026-07-26",
@@ -173,6 +173,16 @@
       "venue": "徳山",
       "grade": "PGⅠ",
       "name": "レディースチャンピオン",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "sport": "nar",
+      "venue": "笠松",
+      "grade": "SPⅠ",
+      "name": "くろゆり賞",
       "missing": [
         "time"
       ]

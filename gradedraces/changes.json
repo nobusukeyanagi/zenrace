@@ -1,69 +1,15 @@
 {
-  "generated_at": "2026-07-28T05:55:16.392653+09:00",
-  "center_date": "2026-07-28",
+  "generated_at": "2026-07-29T05:40:34.460500+09:00",
+  "center_date": "2026-07-29",
   "selection_mode": "smart",
   "selection_counts": {
+    "unresolved": 5,
     "recent_verification": 4,
-    "unresolved": 1,
-    "upcoming": 27
+    "upcoming": 24
   },
-  "target_count": 31,
-  "change_count": 8,
+  "target_count": 29,
+  "change_count": 9,
   "changes": [
-    {
-      "date": "2026-07-26",
-      "sport": "jra",
-      "venue": "新潟",
-      "name": "関屋記念",
-      "before": {
-        "date": "2026-07-26",
-        "time": "15:35",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GⅢ",
-        "name": "関屋記念",
-        "winner": "アンパドゥ"
-      },
-      "after": {
-        "date": "2026-07-26",
-        "time": "15:35",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GIII",
-        "name": "関屋記念",
-        "winner": "アンパドゥ"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-07-26",
-      "sport": "jra",
-      "venue": "中京",
-      "name": "東海S",
-      "before": {
-        "date": "2026-07-26",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GⅢ",
-        "name": "東海S",
-        "winner": "マテンロウコマンド"
-      },
-      "after": {
-        "date": "2026-07-26",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GIII",
-        "name": "東海S",
-        "winner": "マテンロウコマンド"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
     {
       "date": "2026-08-02",
       "sport": "jra",
@@ -201,12 +147,66 @@
     },
     {
       "date": "2026-07-28",
+      "sport": "nar",
+      "venue": "盛岡",
+      "name": "オパールカップ",
+      "before": {
+        "date": "2026-07-28",
+        "time": "18:15",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M2",
+        "name": "オパールカップ",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-07-28",
+        "time": "18:15",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M2",
+        "name": "オパールカップ",
+        "winner": "ローザレイア"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F28&k_babaCode=10",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-07-28",
+      "sport": "nar",
+      "venue": "名古屋",
+      "name": "名港盃",
+      "before": {
+        "date": "2026-07-28",
+        "time": "19:55",
+        "sport": "nar",
+        "venue": "名古屋",
+        "grade": "SPⅠ",
+        "name": "名港盃",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-07-28",
+        "time": "19:55",
+        "sport": "nar",
+        "venue": "名古屋",
+        "grade": "SPⅠ",
+        "name": "名港盃",
+        "winner": "ベント"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F28&k_babaCode=24",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-07-28",
       "sport": "boat",
       "venue": "江戸川",
       "name": "アサヒビールカップ",
       "before": {
         "date": "2026-07-28",
-        "time": "",
+        "time": "16:25",
         "sport": "boat",
         "venue": "江戸川",
         "grade": "GⅢ",
@@ -220,11 +220,38 @@
         "venue": "江戸川",
         "grade": "GⅢ",
         "name": "アサヒビールカップ",
-        "winner": ""
+        "winner": "石倉 洋行"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=03&hd=20260728&rno=12",
       "note": "BOAT RACE公式12R結果"
+    },
+    {
+      "date": "2026-07-28",
+      "sport": "keirin",
+      "venue": "豊橋",
+      "name": "開設77周年記念ちぎり賞争奪戦",
+      "before": {
+        "date": "2026-07-28",
+        "time": "16:25",
+        "sport": "keirin",
+        "venue": "豊橋",
+        "grade": "GⅢ",
+        "name": "開設77周年記念ちぎり賞争奪戦",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-07-28",
+        "time": "16:25",
+        "sport": "keirin",
+        "venue": "豊橋",
+        "grade": "GⅢ",
+        "name": "開設77周年記念ちぎり賞争奪戦",
+        "winner": "深谷 知広 36歳/96期"
+      },
+      "source": "競輪",
+      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=45&kaisaiBi=20260728&raceNo=12",
+      "note": "公開結果によるKEIRIN.JP補完（12R）"
     }
   ]
 }
