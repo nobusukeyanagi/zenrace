@@ -70,20 +70,32 @@
   }
   function selectionOdds(type,record){
     if(!record) return "－";
-    if(type==="ワイド") return `${formatOdds(Array.isArray(record.odds)?record.odds[0]:record.odds)}～`;
+    if(type==="ワイド"){
+      const values=Array.isArray(record.odds)?record.odds:[record.odds,record.odds];
+      return `${formatOdds(values[0])}～${formatOdds(values[1])}`;
+    }
     return formatOdds(record.odds);
   }
   function carBadge(car){return `<span class="selection-car car-${car}">${car}</span>`;}
   function renderSelections(){
-    const entries=[];
-    activeTypes.forEach(type=>dedupe(combosFor(type)).forEach(cars=>{
-      const record=oddsRecord(type,cars);
-      entries.push({type,cars,record});
+    const groups=[];
+    activeTypes.forEach(type=>{
+      const entries=dedupe(combosFor(type)).map(cars=>({type,cars,record:oddsRecord(type,cars)}));
+      if(entries.length) groups.push({type,entries});
+    });
+    const total=groups.reduce((sum,group)=>sum+group.entries.length,0);
+    count.textContent=`${total}点`;confirm.hidden=total===0;
+    if(!total){list.innerHTML='<div class="selection-empty">買い目を選択してください</div>';return;}
+    let index=0;
+    list.innerHTML=groups.map(group=>`<section class="selection-group" data-selection-type="${group.type}" aria-label="${group.type}の選択一覧">${group.entries.map(entry=>`<div class="selection-row" data-selection-index="${index++}"><span class="selection-type">${entry.type}</span><span class="selection-combo">${entry.cars.map(carBadge).join("")}</span><span class="selection-odds">${selectionOdds(entry.type,entry.record)}</span><span class="selection-popularity">${entry.record?`${entry.record.rank}人気`:"－"}</span><button class="selection-remove" type="button" data-remove-index="${index-1}">消</button></div>`).join("")}</section>`).join("");
+    list.querySelectorAll("[data-remove-index]").forEach(button=>button.addEventListener("click",()=>{
+      const group=button.closest(".selection-group");
+      button.closest(".selection-row").remove();
+      if(group&&!group.querySelector(".selection-row")) group.remove();
+      const left=list.querySelectorAll(".selection-row").length;
+      count.textContent=`${left}点`;confirm.hidden=left===0;
+      if(!left) list.innerHTML='<div class="selection-empty">買い目を選択してください</div>';
     }));
-    count.textContent=`${entries.length}点`;confirm.hidden=entries.length===0;
-    if(!entries.length){list.innerHTML='<div class="selection-empty">買い目を選択してください</div>';return;}
-    list.innerHTML=entries.map((entry,index)=>`<div class="selection-row" data-selection-index="${index}"><span class="selection-type">${entry.type}</span><span class="selection-combo">${entry.cars.map(carBadge).join("")}</span><span class="selection-odds">${selectionOdds(entry.type,entry.record)}</span><span class="selection-popularity">${entry.record?`${entry.record.rank}番人気`:"－"}</span><button class="selection-remove" type="button" data-remove-index="${index}">消</button></div>`).join("");
-    list.querySelectorAll("[data-remove-index]").forEach(button=>button.addEventListener("click",()=>{button.closest(".selection-row").remove();const left=list.querySelectorAll(".selection-row").length;count.textContent=`${left}点`;confirm.hidden=left===0;if(!left)list.innerHTML='<div class="selection-empty">買い目を選択してください</div>';}));
   }
   function syncButton(button){const key=button.dataset.column,car=Number(button.dataset.car),on=selected[key].has(car);button.classList.toggle("selected",on);button.setAttribute("aria-pressed",String(on));}
   function syncCar(car){body.querySelectorAll(`[data-car="${car}"]`).forEach(syncButton);}

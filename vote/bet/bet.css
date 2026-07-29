@@ -335,3 +335,32 @@
 @media(max-width:430px){
   .selection-popularity{font-size:11px}
 }
+
+
+/* v11: compact popularity labels, full wide-odds ranges, larger set action, and wager-type grouping. */
+.bet-confirm-float{
+  font-size:15px;
+  line-height:1.02;
+}
+.selection-list{
+  padding:6px;
+  background:#eef0f3;
+}
+.selection-group{
+  overflow:hidden;
+  border:1px solid rgba(167,126,35,.58);
+  border-radius:8px;
+  background:#fff;
+  box-shadow:0 1px 3px rgba(0,0,0,.08);
+}
+.selection-group + .selection-group{margin-top:7px}
+.selection-group .selection-row:last-child{border-bottom:0}
+.selection-empty{
+  border-radius:7px;
+  background:#fff;
+}
+@media(max-width:430px){
+  .bet-confirm-float{font-size:14px}
+  .selection-list{padding:5px}
+  .selection-group + .selection-group{margin-top:6px}
+}
