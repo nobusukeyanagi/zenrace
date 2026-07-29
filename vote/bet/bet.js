@@ -4,7 +4,7 @@
     {car:1,name:"黒川 京介",profile:"川口 33期 27歳"},{car:2,name:"鈴木 圭一郎",profile:"浜松 32期 31歳"},
     {car:3,name:"青山 周平",profile:"伊勢崎 31期 41歳"},{car:4,name:"金子 大輔",profile:"浜松 29期 45歳"},
     {car:5,name:"長田 稚也",profile:"飯塚 34期 25歳"},{car:6,name:"佐藤 励",profile:"川口 35期 25歳"},
-    {car:7,name:"鈴木 宏和",profile:"浜松 32期 39歳"},{car:8,name:"佐藤 摩弥",profile:"川口 31期 33歳 ♥"}
+    {car:7,name:"鈴木 宏和",profile:"浜松 32期 39歳"},{car:8,name:"佐藤 摩弥",profile:"川口 31期 33歳 <span aria-label=\"女子選手\" class=\"female-mark\">♥</span>"}
   ];
   const columns = ["first","second","third","box"];
   const selected = Object.fromEntries(columns.map(key => [key,new Set()]));
@@ -66,9 +66,46 @@
     list.querySelectorAll("[data-remove-index]").forEach((button,index)=>button.addEventListener("click",()=>{button.closest(".selection-row").remove();const left=list.querySelectorAll(".selection-row").length;count.textContent=`${left}点`;confirm.hidden=left===0;if(!left)list.innerHTML='<div class="selection-empty">買い目を選択してください</div>';}));
   }
   function syncButton(button){const key=button.dataset.column,car=Number(button.dataset.car),on=selected[key].has(car);button.classList.toggle("selected",on);button.setAttribute("aria-pressed",String(on));}
-  body.querySelectorAll(".pick-button").forEach(button=>button.addEventListener("click",()=>{const key=button.dataset.column,car=Number(button.dataset.car);selected[key].has(car)?selected[key].delete(car):selected[key].add(car);syncButton(button);renderSelections();}));
-  document.querySelectorAll("[data-column-all]").forEach(button=>button.addEventListener("click",()=>{const key=button.dataset.columnAll;riders.forEach(r=>selected[key].add(r.car));body.querySelectorAll(`[data-column="${key}"]`).forEach(syncButton);renderSelections();}));
-  document.querySelectorAll("[data-column-clear]").forEach(button=>button.addEventListener("click",()=>{const key=button.dataset.columnClear;selected[key].clear();body.querySelectorAll(`[data-column="${key}"]`).forEach(syncButton);renderSelections();}));
+  function syncCar(car){body.querySelectorAll(`[data-car="${car}"]`).forEach(syncButton);}
+  function syncAllButtons(){body.querySelectorAll(".pick-button").forEach(syncButton);}
+  function selectBoxCar(car,on){
+    if(on){
+      selected.box.add(car);
+      selected.first.add(car);
+      selected.second.add(car);
+      selected.third.add(car);
+    }else{
+      selected.box.delete(car);
+      selected.first.delete(car);
+      selected.second.delete(car);
+      selected.third.delete(car);
+    }
+  }
+  body.querySelectorAll(".pick-button").forEach(button=>button.addEventListener("click",()=>{
+    const key=button.dataset.column,car=Number(button.dataset.car);
+    if(key==="box"){
+      selectBoxCar(car,!selected.box.has(car));
+    }else{
+      selected[key].has(car)?selected[key].delete(car):selected[key].add(car);
+      if(!selected[key].has(car)) selected.box.delete(car);
+    }
+    syncCar(car);
+    renderSelections();
+  }));
+  document.querySelectorAll("[data-column-all]").forEach(button=>button.addEventListener("click",()=>{
+    const key=button.dataset.columnAll;
+    if(key==="box") riders.forEach(r=>selectBoxCar(r.car,true));
+    else riders.forEach(r=>selected[key].add(r.car));
+    syncAllButtons();
+    renderSelections();
+  }));
+  document.querySelectorAll("[data-column-clear]").forEach(button=>button.addEventListener("click",()=>{
+    const key=button.dataset.columnClear;
+    if(key==="box") riders.forEach(r=>selectBoxCar(r.car,false));
+    else{selected[key].clear();selected.box.clear();}
+    syncAllButtons();
+    renderSelections();
+  }));
   document.querySelectorAll(".bet-type-tab").forEach(tab=>tab.addEventListener("click",()=>{const type=tab.dataset.betType;activeTypes.has(type)?activeTypes.delete(type):activeTypes.add(type);if(!activeTypes.size)activeTypes.add("3連単");document.querySelectorAll(".bet-type-tab").forEach(item=>{const on=activeTypes.has(item.dataset.betType);item.classList.toggle("active",on);item.setAttribute("aria-pressed",String(on));});renderSelections();}));
   document.getElementById("multi-reverse-option").addEventListener("change",renderSelections);
 })();

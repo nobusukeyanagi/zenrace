@@ -72,7 +72,7 @@ button,select{font:inherit}
 .odds-popular-list{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  grid-template-rows:repeat(5,32px);
+  grid-template-rows:repeat(5,40px);
   grid-auto-flow:column;
   background:#fff;
 }
@@ -347,7 +347,7 @@ button,select{font:inherit}
   .odds-type-tab{height:36px;font-size:11px}
   .odds-meta-row{font-size:11px}
   .odds-section{margin-top:7px}
-  .odds-popular-list{grid-template-rows:repeat(5,30px)}
+  .odds-popular-list{grid-template-rows:repeat(5,38px)}
   .odds-popular-row{padding-inline:4px;grid-template-columns:18px minmax(0,1fr) minmax(34px,auto);gap:2px}
   .odds-popular-rank{width:18px;height:18px;font-size:10px}
   .odds-popular-value{font-size:11px}
