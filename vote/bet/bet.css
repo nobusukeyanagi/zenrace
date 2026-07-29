@@ -364,3 +364,29 @@
   .selection-list{padding:5px}
   .selection-group + .selection-group{margin-top:6px}
 }
+
+/* v12: use the wager-type frame as the outer card instead of nesting gold frames. */
+.selection-section{
+  overflow:visible;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+.selection-list{
+  padding:0;
+  background:transparent;
+}
+.selection-group{
+  border:1px solid rgba(213,171,67,.42);
+  border-radius:10px;
+  background:#fff;
+  box-shadow:none;
+}
+.selection-empty{
+  border:1px solid rgba(213,171,67,.42);
+  border-radius:10px;
+  background:#fff;
+}
+@media(max-width:430px){
+  .selection-list{padding:0}
+}

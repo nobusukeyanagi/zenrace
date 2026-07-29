@@ -171,3 +171,13 @@
   .race-table tbody td.photo-cell{height:42px!important}
   .rider-photo{height:37px;max-height:37px}
 }
+
+/* v91: match support popularity and previous-rank labels to the table's other second lines. */
+.support-rate-cell .support-rate-popularity,
+.rank-cell > span + span{
+  color:#111!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  line-height:1!important;
+  letter-spacing:normal!important;
+}
