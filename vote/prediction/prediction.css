@@ -226,3 +226,57 @@
 .race-table.prediction-table tbody td.prediction-column-highlight{
   background:var(--race-button-active,#fff6c8)!important;
 }
+
+
+/* v8: stronger forecast marks, double separators, and clearer empty confidence stars. */
+.prediction-mark,.condition-arrow{
+  font-weight:1000;
+  -webkit-text-stroke:.62px currentColor;
+  text-shadow:
+    .32px 0 0 currentColor,
+    -.32px 0 0 currentColor,
+    0 .32px 0 currentColor,
+    0 -.32px 0 currentColor;
+}
+.prediction-confidence{
+  display:inline-flex;
+  align-items:center;
+  letter-spacing:0;
+}
+.prediction-confidence-filled{
+  color:var(--prediction-gold);
+  letter-spacing:2px;
+}
+.prediction-confidence-empty{
+  margin-left:1px;
+  color:#d3d8df;
+  letter-spacing:2px;
+  -webkit-text-stroke:.28px #f4f6f8;
+  text-shadow:0 0 2px rgba(255,255,255,.28);
+}
+.prediction-table th:nth-child(2),
+.prediction-table td:nth-child(2),
+.prediction-table th:nth-child(4),
+.prediction-table td:nth-child(4),
+.prediction-table th:nth-child(9),
+.prediction-table td:nth-child(9){
+  border-right:0!important;
+}
+.prediction-table th:nth-child(3),
+.prediction-table td:nth-child(3),
+.prediction-table th:nth-child(5),
+.prediction-table td:nth-child(5),
+.prediction-table th:nth-child(10),
+.prediction-table td:nth-child(10){
+  border-left:3px double #9ba1a9!important;
+}
+@media(max-width:430px){
+  .prediction-mark,.condition-arrow{
+    -webkit-text-stroke:.56px currentColor;
+    text-shadow:
+      .28px 0 0 currentColor,
+      -.28px 0 0 currentColor,
+      0 .28px 0 currentColor,
+      0 -.28px 0 currentColor;
+  }
+}
