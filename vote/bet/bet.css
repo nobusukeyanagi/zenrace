@@ -319,3 +319,19 @@
     grid-template-columns:64px minmax(0,1fr) 48px repeat(2,calc((100% - 154px) / 4));
   }
 }
+
+/* v10: replace stake input with the official odds-page popularity rank. */
+.selection-popularity{
+  width:100%;
+  padding:0 2px;
+  color:#7b838e;
+  text-align:right;
+  font-size:12px;
+  font-weight:850;
+  line-height:1.1;
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+}
+@media(max-width:430px){
+  .selection-popularity{font-size:11px}
+}

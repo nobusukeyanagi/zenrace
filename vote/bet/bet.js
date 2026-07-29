@@ -1,5 +1,6 @@
 (() => {
   "use strict";
+  const ODDS_DATA = window.ZENRACE_ODDS_DATA || {};
   const riders = [
     {car:1,name:"黒川 京介",profile:"川口 33期 27歳"},{car:2,name:"鈴木 圭一郎",profile:"浜松 32期 31歳"},
     {car:3,name:"青山 周平",profile:"伊勢崎 31期 41歳"},{car:4,name:"金子 大輔",profile:"浜松 29期 45歳"},
@@ -55,15 +56,34 @@
     return rows;
   }
   function dedupe(rows){const seen=new Set();return rows.filter(row=>{const key=row.join("-");if(seen.has(key))return false;seen.add(key);return true;});}
-  function fakeOdds(type,cars){const base=cars.reduce((sum,v,i)=>sum+v*(i+2),0)+(type.length*3);return Math.max(1.1,Number((base*1.37).toFixed(1)));}
+  function oddsKey(type,cars){
+    const values=cars.slice();
+    if(type==="3連複"||type==="2連複"||type==="ワイド") values.sort((a,b)=>a-b);
+    return values.join("-");
+  }
+  const oddsLookup=Object.fromEntries(Object.entries(ODDS_DATA).map(([type,records])=>[type,new Map((records||[]).map(record=>[oddsKey(type,record.cars),record]))]));
+  function oddsRecord(type,cars){return oddsLookup[type]?.get(oddsKey(type,cars))||null;}
+  function formatOdds(value){
+    const number=Number(value);
+    if(!Number.isFinite(number)) return "－";
+    return number>=1000?String(Math.round(number)):number.toFixed(1);
+  }
+  function selectionOdds(type,record){
+    if(!record) return "－";
+    if(type==="ワイド") return `${formatOdds(Array.isArray(record.odds)?record.odds[0]:record.odds)}～`;
+    return formatOdds(record.odds);
+  }
   function carBadge(car){return `<span class="selection-car car-${car}">${car}</span>`;}
   function renderSelections(){
     const entries=[];
-    activeTypes.forEach(type=>dedupe(combosFor(type)).forEach(cars=>entries.push({type,cars,odds:fakeOdds(type,cars)})));
+    activeTypes.forEach(type=>dedupe(combosFor(type)).forEach(cars=>{
+      const record=oddsRecord(type,cars);
+      entries.push({type,cars,record});
+    }));
     count.textContent=`${entries.length}点`;confirm.hidden=entries.length===0;
     if(!entries.length){list.innerHTML='<div class="selection-empty">買い目を選択してください</div>';return;}
-    list.innerHTML=entries.map((entry,index)=>`<div class="selection-row" data-selection-index="${index}"><span class="selection-type">${entry.type}</span><span class="selection-combo">${entry.cars.map(carBadge).join("")}</span><span class="selection-odds">${entry.odds.toFixed(1)}</span><span class="selection-amount"><input type="number" min="100" step="100" value="100" aria-label="投票金額"></span><button class="selection-remove" type="button" data-remove-index="${index}">消</button></div>`).join("");
-    list.querySelectorAll("[data-remove-index]").forEach((button,index)=>button.addEventListener("click",()=>{button.closest(".selection-row").remove();const left=list.querySelectorAll(".selection-row").length;count.textContent=`${left}点`;confirm.hidden=left===0;if(!left)list.innerHTML='<div class="selection-empty">買い目を選択してください</div>';}));
+    list.innerHTML=entries.map((entry,index)=>`<div class="selection-row" data-selection-index="${index}"><span class="selection-type">${entry.type}</span><span class="selection-combo">${entry.cars.map(carBadge).join("")}</span><span class="selection-odds">${selectionOdds(entry.type,entry.record)}</span><span class="selection-popularity">${entry.record?`${entry.record.rank}番人気`:"－"}</span><button class="selection-remove" type="button" data-remove-index="${index}">消</button></div>`).join("");
+    list.querySelectorAll("[data-remove-index]").forEach(button=>button.addEventListener("click",()=>{button.closest(".selection-row").remove();const left=list.querySelectorAll(".selection-row").length;count.textContent=`${left}点`;confirm.hidden=left===0;if(!left)list.innerHTML='<div class="selection-empty">買い目を選択してください</div>';}));
   }
   function syncButton(button){const key=button.dataset.column,car=Number(button.dataset.car),on=selected[key].has(car);button.classList.toggle("selected",on);button.setAttribute("aria-pressed",String(on));}
   function syncCar(car){body.querySelectorAll(`[data-car="${car}"]`).forEach(syncButton);}
