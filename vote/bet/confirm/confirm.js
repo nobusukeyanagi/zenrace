@@ -173,14 +173,20 @@
     const roundedMin = Math.round(min);
     const roundedMax = Math.round(max);
     if (roundedMin === roundedMax) return `${formatNumber(roundedMin)}${suffix}`;
-    return `${formatNumber(roundedMin)}～${formatNumber(roundedMax)}${suffix}`;
+    return `${formatNumber(roundedMin)} ～ ${formatNumber(roundedMax)}${suffix}`;
   }
 
-  function signedRangeText(min, max) {
+  function signedValueHtml(value) {
+    const number = Math.round(Number(value) || 0);
+    const className = number > 0 ? "is-positive" : number < 0 ? "is-negative" : "";
+    return `<span class="${className}">${signedMoney(number)}</span>`;
+  }
+
+  function signedRangeHtml(min, max) {
     const roundedMin = Math.round(min);
     const roundedMax = Math.round(max);
-    if (roundedMin === roundedMax) return signedMoney(roundedMin);
-    return `${signedMoney(roundedMin)}～${signedMoney(roundedMax)}`;
+    if (roundedMin === roundedMax) return signedValueHtml(roundedMin);
+    return `${signedValueHtml(roundedMin)} ～ ${signedValueHtml(roundedMax)}`;
   }
 
   function groupMetrics(group) {
@@ -218,11 +224,11 @@
           </div>
           <div class="detail-value">
             <div class="detail-return">${rangeText(minReturn, maxReturn)}</div>
-            <div class="detail-profit ${profitClass(minProfit, maxProfit)}">${signedRangeText(minProfit, maxProfit)}</div>
+            <div class="detail-profit">${signedRangeHtml(minProfit, maxProfit)}</div>
           </div>
           <div class="point-stepper" aria-label="点数選択">
             <button type="button" data-step="-1" data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="点数を減らす">−</button>
-            <input type="number" min="1" max="99" value="${entry.units}" data-entry-units data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="点数">
+            <label class="detail-unit"><input type="number" min="1" max="99" value="${entry.units}" data-entry-units data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="点数"><span>00pt</span></label>
             <button type="button" data-step="1" data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="点数を増やす">＋</button>
           </div>
         </div>`;
@@ -241,7 +247,7 @@
       <section class="wager-card" data-group-index="${index}" aria-label="${group.type}の投票内容">
         <div class="wager-head">
           <strong class="wager-title">${group.type}</strong>
-          <strong class="wager-count">${group.entries.length}組</strong>
+          <strong class="wager-count">${group.entries.length}点</strong>
           <label class="wager-unit">各 <input type="number" min="1" max="99" value="${group.unit}" data-group-unit data-group-index="${index}" aria-label="各使用ポイント"> 00pt</label>
           <button class="wager-delete" type="button" data-delete-group="${index}" aria-label="${group.type}を消す">消</button>
         </div>
@@ -250,9 +256,9 @@
         <div class="wager-summary">
           <div class="summary-line"><span>合計</span><strong data-group-total>${formatNumber(metrics.stake)}pt</strong></div>
           <div class="summary-line"><span>想定払戻</span><strong data-group-return>${rangeText(metrics.minReturn, metrics.maxReturn)}</strong></div>
-          <div class="summary-line"><span>想定収支</span><strong class="${profitClass(minProfit, maxProfit)}" data-group-profit>${signedRangeText(minProfit, maxProfit)}</strong></div>
+          <div class="summary-line"><span>想定収支</span><strong data-group-profit>${signedRangeHtml(minProfit, maxProfit)}</strong></div>
         </div>
-        <button class="expand-button" type="button" data-toggle-details="${index}" aria-expanded="${group.expanded}">${group.expanded ? "閉じる" : "展開する"}</button>
+        <button class="expand-button" type="button" data-toggle-details="${index}" aria-expanded="${group.expanded}">${group.expanded ? "閉じる" : "買い目詳細"}</button>
         <div class="wager-details" data-details="${index}" ${group.expanded ? "" : "hidden"}>${detailRows(group, index)}</div>
       </section>`;
   }
@@ -281,8 +287,8 @@
     const maxProfit = maxReturn - totalStake;
     grandTotal.textContent = `${formatNumber(totalStake)}pt`;
     grandReturn.textContent = rangeText(minReturn, maxReturn);
-    grandProfit.textContent = signedRangeText(minProfit, maxProfit);
-    grandProfit.className = profitClass(minProfit, maxProfit);
+    grandProfit.innerHTML = signedRangeHtml(minProfit, maxProfit);
+    grandProfit.className = "";
   }
 
   function setEntryUnits(groupIndex, entryIndex, nextValue) {

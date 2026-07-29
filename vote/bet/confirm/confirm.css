@@ -57,9 +57,14 @@ html,body{
   white-space:nowrap;
 }
 
-.summary-line:first-child strong{font-size:15px}
-.summary-line .is-positive{color:var(--confirm-green)}
-.summary-line .is-negative{color:var(--confirm-red)}
+.confirm-summary .summary-line{min-height:31px}
+.confirm-summary .summary-line strong{font-size:22px;line-height:1.15}
+.summary-line .is-positive,
+.confirm-summary .summary-line strong.is-positive,
+.wager-summary .summary-line strong.is-positive{color:var(--confirm-green)!important}
+.summary-line .is-negative,
+.confirm-summary .summary-line strong.is-negative,
+.wager-summary .summary-line strong.is-negative{color:var(--confirm-red)!important}
 
 .wager-groups{margin-top:10px}
 
@@ -123,7 +128,7 @@ html,body{
   height:40px;
   padding:0;
   border:2px solid #bbc0c8;
-  border-radius:50%;
+  border-radius:10px;
   color:#69717b;
   background:#fff;
   font-size:13px;
@@ -157,25 +162,27 @@ html,body{
 }
 
 .confirm-car{
-  width:25px;
-  height:28px;
+  width:24px;
+  height:24px;
+  flex:0 0 24px;
+  margin:0 1px;
   display:grid;
   place-items:center;
-  border:1px solid rgba(0,0,0,.28);
-  border-radius:0;
+  border:1px solid rgba(0,0,0,.30);
+  border-radius:5px;
   font-size:15px;
   font-weight:1000;
   line-height:1;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.28);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.38),0 1px 2px rgba(0,0,0,.14);
 }
-.confirm-car.car-1{color:#111;background:#f3f4f6;border-color:#c4c8ce}
-.confirm-car.car-2{color:#fff;background:#202226}
-.confirm-car.car-3{color:#fff;background:#d4232b}
-.confirm-car.car-4{color:#fff;background:#155dcc}
-.confirm-car.car-5{color:#171108;background:#f0cf24}
-.confirm-car.car-6{color:#fff;background:#2e9a4b}
-.confirm-car.car-7{color:#fff;background:#e47b22}
-.confirm-car.car-8{color:#fff;background:#d84b93}
+.confirm-car.car-1{color:#111;background:#fff;border-color:#8f949a}
+.confirm-car.car-2{color:#fff;background:#202226;border-color:#050506}
+.confirm-car.car-3{color:#fff;background:#d4232b;border-color:#9b1118}
+.confirm-car.car-4{color:#fff;background:#2468c7;border-color:#174c98}
+.confirm-car.car-5{color:#171108;background:#f0cf24;border-color:#b69b14}
+.confirm-car.car-6{color:#fff;background:#2e9a4b;border-color:#1e7135}
+.confirm-car.car-7{color:#fff;background:#e47b22;border-color:#aa5514}
+.confirm-car.car-8{color:#fff;background:#e85b9e;border-color:#aa3970}
 
 .excluded-note{
   min-height:32px;
@@ -252,10 +259,10 @@ html,body{
   gap:2px;
 }
 .detail-combo .confirm-car{
-  width:23px;
-  height:25px;
-  font-size:14px;
-  border-radius:3px;
+  width:24px;
+  height:24px;
+  flex-basis:24px;
+  font-size:15px;
 }
 .detail-odds{
   width:100%;
@@ -268,12 +275,13 @@ html,body{
 
 .detail-value{text-align:right}
 .detail-return{color:#383d44;font-size:14px;font-weight:750;white-space:nowrap}
-.detail-profit{margin-top:2px;color:var(--confirm-green);font-size:14px;font-weight:850;white-space:nowrap}
-.detail-profit.is-negative{color:var(--confirm-red)}
+.detail-profit{margin-top:2px;color:#727984;font-size:14px;font-weight:850;white-space:nowrap}
+.detail-profit .is-positive{color:var(--confirm-green)}
+.detail-profit .is-negative{color:var(--confirm-red)}
 
 .point-stepper{
   display:grid;
-  grid-template-columns:38px 44px 38px;
+  grid-template-columns:38px auto 38px;
   align-items:center;
   gap:5px;
 }
@@ -282,15 +290,24 @@ html,body{
   height:38px;
   padding:0;
   border:2px solid #c2c6ce;
-  border-radius:50%;
+  border-radius:10px;
   color:#737b86;
   background:#fff;
   font-size:22px;
   font-weight:400;
   line-height:1;
 }
+.detail-unit{
+  display:flex;
+  align-items:center;
+  gap:3px;
+  color:#4f5660;
+  font-size:13px;
+  font-weight:750;
+  white-space:nowrap;
+}
 .point-stepper input{
-  width:44px;
+  width:42px;
   height:40px;
   padding:0 2px;
   border:1px solid #d3d6db;
@@ -322,41 +339,38 @@ html,body{
   height:53px;
   transform:translateX(-50%);
   overflow:hidden;
-  border:2px solid #fff0a9;
+  border:1px solid #8c671f;
   border-radius:17px;
-  color:#231704;
-  background:
-    radial-gradient(circle at 50% 25%,#fffbdc 0 12%,transparent 44%),
-    linear-gradient(180deg,#fff4a6 0%,#ffd43e 42%,#e8a610 100%);
+  color:#241b0d;
+  background:linear-gradient(180deg,#f8e8b8 0%,#e2c477 30%,#c59b43 68%,#a97825 100%);
   font-size:17px;
   font-weight:1000;
-  letter-spacing:.02em;
-  text-shadow:0 1px 0 rgba(255,255,255,.68);
+  letter-spacing:.03em;
+  text-shadow:0 1px 0 rgba(255,255,255,.55);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.95),
-    inset 0 -2px 0 rgba(125,75,0,.22),
-    0 0 10px rgba(255,222,82,.95),
-    0 0 25px rgba(255,192,22,.85),
-    0 0 46px rgba(255,231,96,.65);
-  animation:voteConfirmBlaze .82s ease-in-out infinite alternate;
+    inset 0 1px 0 rgba(255,255,255,.82),
+    inset 0 -1px 0 rgba(90,56,8,.28),
+    0 3px 10px rgba(64,39,4,.34),
+    0 0 0 1px rgba(255,232,169,.24);
   touch-action:manipulation;
 }
 .vote-submit-float > span:last-child{position:relative;z-index:2}
 .vote-submit-shine{
   position:absolute;
-  top:-60%;
-  left:-45%;
-  width:36%;
-  height:220%;
+  top:-75%;
+  left:-55%;
+  width:24%;
+  height:250%;
   transform:rotate(24deg);
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.96),transparent);
-  animation:voteConfirmSweep 1.15s linear infinite;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.58),transparent);
+  animation:voteConfirmSweep 3.8s ease-in-out infinite;
 }
-@keyframes voteConfirmBlaze{
-  from{filter:brightness(.98) saturate(1.03);transform:translateX(-50%) scale(1)}
-  to{filter:brightness(1.20) saturate(1.18);transform:translateX(-50%) scale(1.035)}
+@keyframes voteConfirmSweep{
+  0%,58%{left:-55%;opacity:0}
+  66%{opacity:.8}
+  86%{left:130%;opacity:.35}
+  100%{left:130%;opacity:0}
 }
-@keyframes voteConfirmSweep{to{left:120%}}
 
 .confirm-toast{
   position:fixed;
@@ -379,8 +393,8 @@ html,body{
 @media(max-width:430px){
   .confirm-page{padding-inline:7px}
   .confirm-summary{padding:9px 11px}
-  .summary-line,.summary-line strong{font-size:13px}
-  .summary-line:first-child strong{font-size:14px}
+  .summary-line{font-size:13px}
+  .confirm-summary .summary-line strong{font-size:22px}
   .wager-head{grid-template-columns:auto auto minmax(0,1fr) auto;gap:8px;padding-left:10px}
   .wager-title,.wager-count{font-size:16px}
   .wager-unit{font-size:12px}
@@ -388,13 +402,14 @@ html,body{
   .wager-delete{width:38px;height:38px}
   .position-row{grid-template-columns:56px minmax(0,1fr)}
   .position-label{padding-left:12px;font-size:12px}
-  .confirm-car{width:24px;height:27px;font-size:14px}
+  .confirm-car{width:24px;height:24px;font-size:15px}
   .detail-row{grid-template-columns:minmax(76px,1fr) minmax(76px,1fr) auto;padding-inline:8px;gap:5px}
-  .detail-combo .confirm-car{width:21px;height:24px;font-size:13px}
+  .detail-combo .confirm-car{width:22px;height:22px;flex-basis:22px;font-size:14px}
   .detail-odds,.detail-return,.detail-profit{font-size:13px}
-  .point-stepper{grid-template-columns:34px 40px 34px;gap:4px}
-  .point-stepper button{width:34px;height:34px;font-size:20px}
-  .point-stepper input{width:40px;height:37px;font-size:14px}
+  .point-stepper{grid-template-columns:34px auto 34px;gap:4px}
+  .point-stepper button{width:34px;height:34px;font-size:20px;border-radius:9px}
+  .detail-unit{gap:2px;font-size:12px}
+  .point-stepper input{width:38px;height:37px;font-size:14px}
   .vote-submit-float{font-size:16px}
 }
 
@@ -404,9 +419,10 @@ html,body{
   .wager-unit{font-size:11px}
   .wager-unit input{width:38px}
   .detail-row{grid-template-columns:minmax(68px,1fr) minmax(68px,1fr) auto;padding-left:7px;padding-right:6px}
-  .point-stepper{grid-template-columns:31px 37px 31px;gap:3px}
+  .point-stepper{grid-template-columns:31px auto 31px;gap:3px}
   .point-stepper button{width:31px;height:31px}
-  .point-stepper input{width:37px;height:34px}
+  .point-stepper input{width:35px;height:34px}
+  .detail-unit{font-size:11px}
   .vote-submit-float{width:calc((100vw - 8px) / 5 + 4px)}
 }
 
@@ -415,5 +431,5 @@ html,body{
 }
 
 @media(prefers-reduced-motion:reduce){
-  .vote-submit-float,.vote-submit-shine{animation:none}
+  .vote-submit-shine{animation:none}
 }
