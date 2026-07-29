@@ -60,35 +60,6 @@
   };
   const raceNumber = (race) => Number.parseInt(String(race.race), 10) || 0;
   const groupKey = (sport, venue) => `${sport}:${venue}`;
-  const EVENT_TITLES = {
-    "2026-02-23": new Map([
-      [groupKey("keirin", "京王閣"), "パチ・スロアプリ７７７リアル杯"],
-      [groupKey("keirin", "松戸"), "ロトプレイス杯"],
-      [groupKey("keirin", "平塚"), "競輪アプリウィンチケット杯"],
-      [groupKey("keirin", "豊橋"), "ＴＩＰＳＴＡＲ杯"],
-      [groupKey("keirin", "玉野"), "おトクにＰＬＡＹオッズパーク杯"],
-      [groupKey("keirin", "防府"), "山頭火賞争奪戦／ｙａｂ杯"],
-      [groupKey("keirin", "高知"), "第２回土佐酒肴四十五圓カップ"],
-      [groupKey("keirin", "熊本"), "読売新聞社杯全日本選抜競輪"],
-      [groupKey("auto", "浜松"), "第39回全日本選抜オートレース"],
-      [groupKey("auto", "飯塚"), "おトクにPLAY！オッズパーク杯飯塚ミッドナイトオートレース"],
-      [groupKey("boat", "江戸川"), "江戸川大賞　開設７０周年記念"],
-      [groupKey("boat", "平和島"), "マンスリーＢＯＡＴＲＡＣＥ杯"],
-      [groupKey("boat", "多摩川"), "淡水王選手権！第３１回ｔｖｋカップ"],
-      [groupKey("boat", "浜名湖"), "ＢＴＳ焼津７周年記念　ＨＯＴＥＬｎａｎｖａｎカップ"],
-      [groupKey("boat", "蒲郡"), "中日スポーツ賞　第４６回龍神杯"],
-      [groupKey("boat", "びわこ"), "奥村佃煮提供第３回びわこお魚０９２９ＣＵＰ"],
-      [groupKey("boat", "住之江"), "ＢＴＳ大和ごせ１２周年記念トランスワードトロフィー"],
-      [groupKey("boat", "丸亀"), "ＹｏｕＴｕｂｅ番組「ウチまる」５周年記念"],
-      [groupKey("boat", "児島"), "ＢＴＳ井原開設１２周年記念競走"],
-      [groupKey("boat", "宮島"), "ＰＡＬＢＯＡＴ宮島開設１１周年記念第６回週刊大衆杯"],
-      [groupKey("boat", "徳山"), "防長交通杯争奪戦"],
-      [groupKey("boat", "芦屋"), "ギラヴァンツ北九州カップ"],
-      [groupKey("boat", "福岡"), "ヴィーナスシリーズ第２２戦・マクール杯"],
-      [groupKey("boat", "唐津"), "創刊６０周年九州スポーツ杯"],
-      [groupKey("boat", "大村"), "にっぽん未来プロジェクト競走ｉｎ大村　２ｎｄ"],
-    ]),
-  };
   const normalizedGrade = (value) => String(value ?? "")
     .trim()
     .toUpperCase()
@@ -343,13 +314,9 @@
     const metaLine = gradeIcon || dayLabel || sessionIcon || girlsIcon
       ? `<div class="venue-meta-row">${gradeIcon}${dayLabel}${sessionIcon}${girlsIcon}</div>`
       : "";
-    const eventTitle = EVENT_TITLES[dateKey(selectedDate)]?.get(row.key) || "";
-    const eventTitleHtml = eventTitle
-      ? `<div class="venue-event-title" title="${escapeAttr(eventTitle)}">${escapeAttr(eventTitle)}</div>`
-      : "";
 
     return `
-      <article class="venue-row sport-${row.sport}${eventTitle ? " has-event-title" : ""}" data-mode="${track.mode}">
+      <article class="venue-row sport-${row.sport}" data-mode="${track.mode}">
         <div class="venue-card sport-${row.sport}">
           <div class="venue-title-line">
             <div class="venue-name">${row.venue}</div>
@@ -359,7 +326,6 @@
         </div>
         <div class="venue-track-shell">
           <span class="venue-focus-band" aria-hidden="true"></span>
-          ${eventTitleHtml}
           <div class="venue-track" data-mode="${track.mode}" data-anchor="${track.anchor}">${track.cards}</div>
         </div>
       </article>`;
