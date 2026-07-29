@@ -122,6 +122,53 @@
       groups
     };
   }
+  function savedPayload(){
+    try{
+      const raw=sessionStorage.getItem(CONFIRM_STORAGE_KEY);
+      if(!raw) return null;
+      const payload=JSON.parse(raw);
+      return payload&&typeof payload==="object"?payload:null;
+    }catch(error){
+      console.warn("買い目入力データを復元できませんでした。",error);
+      return null;
+    }
+  }
+  function restoredCars(values){
+    return [...new Set((values||[]).map(Number).filter(value=>Number.isInteger(value)&&value>=1&&value<=8))];
+  }
+  function syncTypeTabs(){
+    document.querySelectorAll(".bet-type-tab").forEach(item=>{
+      const on=activeTypes.has(item.dataset.betType);
+      item.classList.toggle("active",on);
+      item.setAttribute("aria-pressed",String(on));
+    });
+  }
+  function restoreSelections(){
+    const payload=savedPayload();
+    if(payload){
+      const fallbackSelections=payload.groups?.find(group=>group?.selections)?.selections||{};
+      const formation=payload.selections||fallbackSelections;
+      columns.forEach(key=>{
+        selected[key].clear();
+        restoredCars(formation?.[key]).forEach(car=>selected[key].add(car));
+      });
+      activeTypes.clear();
+      (payload.groups||[]).forEach(group=>{if(BET_TYPE_ORDER.includes(group?.type)) activeTypes.add(group.type);});
+      if(!activeTypes.size) activeTypes.add("3連単");
+      removedSelections.clear();
+      (payload.groups||[]).forEach(group=>{
+        if(!BET_TYPE_ORDER.includes(group?.type)) return;
+        (group.entries||[]).forEach(entry=>{
+          const cars=restoredCars(entry?.cars);
+          if(cars.length&&(entry?.removed||Number(entry?.units)===0)) removedSelections.add(selectionKey(group.type,cars));
+        });
+      });
+      document.getElementById("multi-reverse-option").checked=Boolean(payload.multiReverse);
+    }
+    syncAllButtons();
+    syncTypeTabs();
+    renderSelections();
+  }
   function syncButton(button){const key=button.dataset.column,car=Number(button.dataset.car),on=selected[key].has(car);button.classList.toggle("selected",on);button.setAttribute("aria-pressed",String(on));}
   function syncCar(car){body.querySelectorAll(`[data-car="${car}"]`).forEach(syncButton);}
   function syncAllButtons(){body.querySelectorAll(".pick-button").forEach(syncButton);}
@@ -163,7 +210,7 @@
     syncAllButtons();
     renderSelections();
   }));
-  document.querySelectorAll(".bet-type-tab").forEach(tab=>tab.addEventListener("click",()=>{const type=tab.dataset.betType;activeTypes.has(type)?activeTypes.delete(type):activeTypes.add(type);if(!activeTypes.size)activeTypes.add("3連単");document.querySelectorAll(".bet-type-tab").forEach(item=>{const on=activeTypes.has(item.dataset.betType);item.classList.toggle("active",on);item.setAttribute("aria-pressed",String(on));});renderSelections();}));
+  document.querySelectorAll(".bet-type-tab").forEach(tab=>tab.addEventListener("click",()=>{const type=tab.dataset.betType;activeTypes.has(type)?activeTypes.delete(type):activeTypes.add(type);if(!activeTypes.size)activeTypes.add("3連単");syncTypeTabs();renderSelections();}));
   document.getElementById("multi-reverse-option").addEventListener("change",renderSelections);
   confirm.addEventListener("click",()=>{
     const payload=confirmationPayload();
@@ -171,4 +218,5 @@
     try{sessionStorage.setItem(CONFIRM_STORAGE_KEY,JSON.stringify(payload));}catch(error){console.warn("投票確認データを保存できませんでした。",error);}
     window.location.href="confirm/";
   });
+  restoreSelections();
 })();

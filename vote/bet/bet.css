@@ -403,3 +403,18 @@
 .bet-type-tab{font-size:14px}
 @media(max-width:430px){.bet-type-tab{font-size:13px}}
 @media(max-width:350px){.bet-type-tab{font-size:12px}}
+
+
+/* v15: align selection remove controls with the boxed all-clear column and match car 1 to the racecard. */
+.car-number.car-1,
+.pick-button.selected.entry-1{
+  color:#111!important;
+  background:#f3f4f5!important;
+  border-color:#8f949a;
+}
+.selection-remove{
+  width:calc(100% - 7px);
+  margin-left:5px;
+  margin-right:2px;
+  justify-self:stretch;
+}

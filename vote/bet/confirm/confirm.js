@@ -11,7 +11,7 @@
   const grandProfit = document.getElementById("grand-profit");
 
   const BET_ORDER = ["3連単", "3連複", "2連単", "2連複", "ワイド", "単勝"];
-  const state = { groups: [] };
+  const state = { groups: [], selections: { first: [], second: [], third: [], box: [] }, multiReverse: false };
 
   function permutations(values, length) {
     const result = [];
@@ -112,8 +112,8 @@
           selections: groupSelections,
           generatedCount,
           removedCount,
-          unit: 1,
-          expanded: false,
+          unit: Math.min(99, Math.max(1, Number(group.unit) || 1)),
+          expanded: Boolean(group.expanded),
           entries,
         };
       })
@@ -282,7 +282,48 @@
       </section>`;
   }
 
+  function storedSelections(payload) {
+    const fallback = payload?.groups?.find((group) => group?.selections)?.selections || {};
+    const source = payload?.selections || fallback;
+    return {
+      first: numericCars(source?.first),
+      second: numericCars(source?.second),
+      third: numericCars(source?.third),
+      box: numericCars(source?.box),
+    };
+  }
+
+  function persistState() {
+    const payload = {
+      version: 1,
+      updatedAt: new Date().toISOString(),
+      selections: state.selections,
+      multiReverse: state.multiReverse,
+      groups: state.groups.map((group) => ({
+        type: group.type,
+        selections: group.selections,
+        generatedCount: group.generatedCount,
+        removedCount: group.entries.filter((entry) => entry.units === 0).length,
+        unit: group.unit,
+        expanded: group.expanded,
+        entries: group.entries.map((entry) => ({
+          cars: entry.cars.slice(),
+          rank: entry.rank,
+          odds: entry.odds,
+          units: entry.units,
+          removed: entry.units === 0,
+        })),
+      })),
+    };
+    try {
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+    } catch (error) {
+      console.warn("投票確認データを保存できませんでした。", error);
+    }
+  }
+
   function render() {
+    persistState();
     if (!state.groups.length) {
       groupsRoot.innerHTML = "";
       submitButton.hidden = true;
@@ -368,6 +409,9 @@
     window.__zenraceConfirmToastTimer = setTimeout(() => { toast.hidden = true; }, 2200);
   });
 
-  state.groups = normalizePayload(readPayload());
+  const initialPayload = readPayload();
+  state.selections = storedSelections(initialPayload);
+  state.multiReverse = Boolean(initialPayload?.multiReverse);
+  state.groups = normalizePayload(initialPayload);
   render();
 })();

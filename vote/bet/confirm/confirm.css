@@ -13,13 +13,17 @@ html,body{
   background:#bc8b25!important;
 }
 
-.confirm-gold-shell,
-.confirm-gold-shell .zenrace-content-sizer,
-.confirm-gold-shell .zenrace-content-stage{
+.confirm-gold-shell{
   background:
     radial-gradient(circle at 92% 3%,rgba(255,251,220,.56),transparent 24%),
     radial-gradient(circle at 5% 33%,rgba(255,236,164,.34),transparent 31%),
     linear-gradient(145deg,#f0d47e 0%,#d6aa41 45%,#b87d1b 100%)!important;
+  background-repeat:no-repeat!important;
+  background-size:100% 100%!important;
+}
+.confirm-gold-shell .zenrace-content-sizer,
+.confirm-gold-shell .zenrace-content-stage{
+  background:transparent!important;
 }
 
 .confirm-page{

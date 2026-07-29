@@ -23,7 +23,7 @@
       { id: "racecard", label: "出走表", path: "vote/" },
       { id: "prediction", label: "予想", path: "vote/prediction/" },
       { id: "odds", label: "オッズ", path: "vote/odds/" },
-      { id: "bet", label: "投票", path: "vote/bet/" },
+      { id: "bet", label: "買い目入力", path: "vote/bet/" },
       { id: "inquiry", label: "照会", path: "vote/introduction/" },
       { id: "results", label: "結果", path: "vote/results/" },
     ],
