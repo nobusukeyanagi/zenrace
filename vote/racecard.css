@@ -181,3 +181,10 @@
   line-height:1!important;
   letter-spacing:normal!important;
 }
+
+/* v92: use the shared gray secondary-line color for support, rank, and machine details. */
+.support-rate-cell .support-rate-popularity,
+.rank-cell > span + span,
+.machine-name > span + span{
+  color:#66707c!important;
+}

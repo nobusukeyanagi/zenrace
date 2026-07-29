@@ -176,3 +176,11 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
   :root{--row-h:62px}
   .venue-track{padding-block:3px}
 }
+
+/* v32: tighten each venue row by one more pixel without changing race-button height. */
+:root{--row-h:65px}
+.venue-track{padding-block:3.5px}
+@media(max-width:430px){
+  :root{--row-h:61px}
+  .venue-track{padding-block:2.5px}
+}

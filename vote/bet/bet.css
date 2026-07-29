@@ -390,3 +390,10 @@
 @media(max-width:430px){
   .selection-list{padding:0}
 }
+
+/* v13: keep wide odds on one line and match remove-button text to the odds text. */
+.selection-odds{white-space:nowrap}
+.selection-remove{font-size:14px}
+@media(max-width:430px){
+  .selection-remove{font-size:13px}
+}
