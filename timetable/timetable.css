@@ -200,3 +200,26 @@ button{font:inherit}
   .race-minute{font-size:25px}
   .race-detail{font-size:12px;letter-spacing:-.06em}
 }
+
+/* v14: keep venue/R text at one vertical position and one font style. */
+.race-detail{
+  height:14px;
+  min-height:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:inherit;
+  font-size:13px;
+  font-style:normal;
+  font-weight:950;
+  line-height:14px;
+}
+.race-venue,.race-no{
+  display:inline;
+  font:inherit;
+  line-height:inherit;
+}
+.timetable-race.featured-race{padding:2px 4px}
+@media(max-width:350px){
+  .race-detail{height:13px;min-height:13px;font-size:12px;line-height:13px}
+}

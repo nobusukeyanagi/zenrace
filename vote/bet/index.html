@@ -13,7 +13,7 @@
   <link href="../../shared/page-shell.css?v=19" rel="stylesheet">
   <link href="../race-info.css?v=59" rel="stylesheet">
   <link href="../../shared/race-button-style.css?v=6" rel="stylesheet">
-  <link href="bet.css?v=2" rel="stylesheet">
+  <link href="bet.css?v=3" rel="stylesheet">
   <script defer src="../race-info.js?v=60"></script>
   <script defer src="../live-state.js?v=1"></script>
   <script defer src="../../shared/category-menu.js?v=51"></script>
@@ -29,8 +29,8 @@
         <section class="delca-bar" aria-label="デルカ残高">
           <div class="delca-balance"><span>投票用デルカ</span><strong>123,456,789 <small>pt</small></strong></div>
           <div class="delca-actions">
-            <button type="button">デルカ入金</button>
-            <button type="button">デルカに交換</button>
+            <button type="button"><span>デルカ</span><span>入金</span></button>
+            <button type="button"><span>デルカ</span><span>に交換</span></button>
           </div>
         </section>
         <zenrace-race-info></zenrace-race-info>
@@ -69,8 +69,10 @@
             </div>
           </section>
 
+          <div class="selection-meta-row" aria-label="選択状況">
+            <span>選択一覧</span><span id="selection-count">0点</span>
+          </div>
           <section class="selection-section" aria-label="選択一覧">
-            <div class="selection-heading"><strong>選択一覧</strong><span id="selection-count">0点</span></div>
             <div class="selection-list" id="selection-list">
               <div class="selection-empty">買い目を選択してください</div>
             </div>

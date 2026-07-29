@@ -168,3 +168,11 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
   .venue-name{font-size:16px}.venue-title-line{gap:.45em}.venue-sport-icon{flex-basis:16px;width:16px;height:16px}.venue-meta-row{min-height:17px;gap:2px}.venue-grade-icon{min-width:16px;height:16px;padding:0 1px;border-radius:4px;font-size:7px}.venue-status-icon{width:16px;height:16px;border-radius:4px}.venue-day-label{min-width:16px;height:16px;padding:0;border-radius:4px;font-size:8px}.venue-day-label.multi-digit{min-width:16px;padding-inline:1px;font-size:7px;letter-spacing:-.05em}
   .race-card .race-no{font-size:16px}.race-card .race-time{font-size:14px}
 }
+
+/* v31: tighten venue rows by 2px without changing race-button height. */
+:root{--row-h:66px}
+.venue-track{padding-block:4px}
+@media(max-width:430px){
+  :root{--row-h:62px}
+  .venue-track{padding-block:3px}
+}
