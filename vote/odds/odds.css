@@ -791,3 +791,16 @@ button,select{font:inherit}
 @media(max-width:430px){
   .odds-meta-row{font-size:15px}
 }
+
+
+/* v17: larger popular odds values and wager-type labels. */
+.odds-popular-value{font-size:14px}
+.odds-type-tab{font-size:14px}
+@media(max-width:430px){
+  .odds-popular-value{font-size:13px}
+  .odds-type-tab{font-size:13px}
+}
+@media(max-width:350px){
+  .odds-popular-value{font-size:12px}
+  .odds-type-tab{font-size:12px}
+}

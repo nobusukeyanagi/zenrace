@@ -100,10 +100,12 @@
     }));
   }
   function confirmationPayload(){
+    const formation=Object.fromEntries(columns.map(key=>[key,[...selected[key]].sort((a,b)=>a-b)]));
     const groups=selectionGroups().filter(group=>group.entries.length).map(group=>({
       type:group.type,
       generatedCount:group.generatedCount,
       removedCount:group.removedCount,
+      selections:Object.fromEntries(columns.map(key=>[key,formation[key].slice()])),
       entries:group.entries.map(entry=>({
         cars:entry.cars.slice(),
         rank:entry.record?.rank??null,
@@ -113,7 +115,7 @@
     return {
       version:1,
       createdAt:new Date().toISOString(),
-      selections:Object.fromEntries(columns.map(key=>[key,[...selected[key]].sort((a,b)=>a-b)])),
+      selections:formation,
       multiReverse:document.getElementById("multi-reverse-option").checked,
       groups
     };

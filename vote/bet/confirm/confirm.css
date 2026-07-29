@@ -433,3 +433,44 @@ html,body{
 @media(prefers-reduced-motion:reduce){
   .vote-submit-shine{animation:none}
 }
+
+
+/* v3: summary hierarchy, fixed detail chevrons, and stable confirmation layout. */
+.confirm-summary .summary-line:first-child,
+.confirm-summary .summary-line:first-child strong{
+  font-size:22px;
+  line-height:1.15;
+}
+.confirm-summary .summary-line:nth-child(n+2),
+.confirm-summary .summary-line:nth-child(n+2) strong{
+  font-size:17px;
+  line-height:1.2;
+}
+.expand-button{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 48px;
+}
+.expand-button::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  right:20px;
+  width:9px;
+  height:9px;
+  margin-top:-6px;
+  border-right:2px solid currentColor;
+  border-bottom:2px solid currentColor;
+  transform:rotate(45deg);
+  transform-origin:center;
+  transition:none;
+}
+.expand-button[aria-expanded="true"]::after{transform:rotate(225deg)}
+@media(max-width:430px){
+  .confirm-summary .summary-line:first-child,
+  .confirm-summary .summary-line:first-child strong{font-size:22px}
+  .confirm-summary .summary-line:nth-child(n+2),
+  .confirm-summary .summary-line:nth-child(n+2) strong{font-size:17px}
+}

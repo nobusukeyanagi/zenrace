@@ -89,15 +89,26 @@
     };
     const groups = (payload.groups || [])
       .filter((group) => BET_ORDER.includes(group?.type))
-      .map((group) => ({
-        type: group.type,
-        selections,
-        generatedCount: Math.max(0, Number(group.generatedCount) || 0),
-        removedCount: Math.max(0, Number(group.removedCount) || 0),
-        unit: 1,
-        expanded: false,
-        entries: (group.entries || []).map((entry) => normalizeEntry(group.type, entry)).filter((entry) => entry.cars.length),
-      }))
+      .map((group) => {
+        const groupSelections = {
+          first: numericCars(group?.selections?.first ?? selections.first),
+          second: numericCars(group?.selections?.second ?? selections.second),
+          third: numericCars(group?.selections?.third ?? selections.third),
+          box: numericCars(group?.selections?.box ?? selections.box),
+        };
+        const entries = (group.entries || []).map((entry) => normalizeEntry(group.type, entry)).filter((entry) => entry.cars.length);
+        const generatedCount = Math.max(entries.length, Number(group.generatedCount) || 0);
+        const removedCount = Math.max(0, Number(group.removedCount) || generatedCount - entries.length);
+        return {
+          type: group.type,
+          selections: groupSelections,
+          generatedCount,
+          removedCount,
+          unit: 1,
+          expanded: false,
+          entries,
+        };
+      })
       .filter((group) => group.entries.length)
       .sort((a, b) => BET_ORDER.indexOf(a.type) - BET_ORDER.indexOf(b.type));
     return groups;
@@ -110,23 +121,18 @@
   function positionRows(group) {
     const { type, selections } = group;
     const entryCars = numericCars(group.entries.flatMap((entry) => entry.cars));
-    const box = selections.box.length ? selections.box : entryCars;
+    const carsAt = (position) => numericCars(group.entries.map((entry) => entry.cars[position]));
+    const selectedAt = (key, position) => selections[key].length ? selections[key] : carsAt(position);
     let rows;
     if (type === "単勝") {
       rows = [["1着", numericCars([...selections.first, ...selections.second, ...selections.third, ...selections.box, ...entryCars])]];
-    } else if (["2連複", "ワイド"].includes(type)) {
-      const source = box.length >= 2 ? box : entryCars;
-      rows = [["1着", source], ["2着", source]];
-    } else if (type === "3連複") {
-      const source = box.length >= 3 ? box : entryCars;
-      rows = [["1着", source], ["2着", source], ["3着", source]];
-    } else if (type === "2連単") {
-      rows = [["1着", selections.first.length ? selections.first : entryCars], ["2着", selections.second.length ? selections.second : entryCars]];
+    } else if (["2連単", "2連複", "ワイド"].includes(type)) {
+      rows = [["1着", selectedAt("first", 0)], ["2着", selectedAt("second", 1)]];
     } else {
       rows = [
-        ["1着", selections.first.length ? selections.first : entryCars],
-        ["2着", selections.second.length ? selections.second : entryCars],
-        ["3着", selections.third.length ? selections.third : entryCars],
+        ["1着", selectedAt("first", 0)],
+        ["2着", selectedAt("second", 1)],
+        ["3着", selectedAt("third", 2)],
       ];
     }
     return rows.map(([label, cars]) => `
@@ -158,7 +164,8 @@
   }
 
   function displayOdds(entry, type) {
-    const [min] = oddsRange(entry, type);
+    const [min, max] = oddsRange(entry, type);
+    if (type === "ワイド" && min !== max) return `${formatOddsValue(min)}～${formatOddsValue(max)}`;
     return formatOddsValue(min);
   }
 
@@ -212,10 +219,10 @@
     return group.entries.map((entry, entryIndex) => {
       const [minOdds, maxOdds] = oddsRange(entry, group.type);
       const minReturn = minOdds * entry.units * 100;
-      const maxReturn = maxOdds * entry.units * 100;
+      const maxReturn = group.type === "ワイド" ? minReturn : maxOdds * entry.units * 100;
       const totalStake = state.groups.reduce((sum, current) => sum + groupMetrics(current).stake, 0);
       const minProfit = minReturn - totalStake;
-      const maxProfit = maxReturn - totalStake;
+      const maxProfit = group.type === "ワイド" ? minProfit : maxReturn - totalStake;
       return `
         <div class="detail-row" data-entry-index="${entryIndex}">
           <div>
@@ -241,7 +248,7 @@
     const minProfit = metrics.minReturn - totalStake;
     const maxProfit = metrics.maxReturn - totalStake;
     const excluded = group.removedCount > 0
-      ? `<div class="excluded-note">このうち${group.removedCount}点を除く</div>`
+      ? `<div class="excluded-note">このうち${group.removedCount}件を除く</div>`
       : "";
     return `
       <section class="wager-card" data-group-index="${index}" aria-label="${group.type}の投票内容">
