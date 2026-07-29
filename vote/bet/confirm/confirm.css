@@ -1,0 +1,419 @@
+:root{
+  color-scheme:light;
+  --confirm-gold:#d5ab43;
+  --confirm-gold-deep:#9b6d16;
+  --confirm-ink:#17191d;
+  --confirm-muted:#6d7480;
+  --confirm-line:#dfe2e6;
+  --confirm-green:#008b74;
+  --confirm-red:#bf2130;
+}
+
+html,body{
+  background:#bc8b25!important;
+}
+
+.confirm-gold-shell,
+.confirm-gold-shell .zenrace-content-sizer,
+.confirm-gold-shell .zenrace-content-stage{
+  background:
+    radial-gradient(circle at 92% 3%,rgba(255,251,220,.56),transparent 24%),
+    radial-gradient(circle at 5% 33%,rgba(255,236,164,.34),transparent 31%),
+    linear-gradient(145deg,#f0d47e 0%,#d6aa41 45%,#b87d1b 100%)!important;
+}
+
+.confirm-page{
+  width:min(100%,760px);
+  margin:0 auto;
+  padding:10px 8px 118px;
+  color:var(--confirm-ink);
+}
+
+.confirm-summary{
+  padding:11px 13px;
+  border:1px solid rgba(83,56,12,.34);
+  border-radius:12px;
+  background:rgba(255,255,255,.96);
+  box-shadow:0 5px 15px rgba(78,48,5,.20),inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+.summary-line{
+  min-height:25px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:12px;
+  color:#535a64;
+  font-size:14px;
+  font-weight:750;
+  font-variant-numeric:tabular-nums;
+}
+
+.summary-line strong{
+  color:var(--confirm-ink);
+  font-size:14px;
+  font-weight:1000;
+  text-align:right;
+  white-space:nowrap;
+}
+
+.summary-line:first-child strong{font-size:15px}
+.summary-line .is-positive{color:var(--confirm-green)}
+.summary-line .is-negative{color:var(--confirm-red)}
+
+.wager-groups{margin-top:10px}
+
+.wager-card{
+  overflow:hidden;
+  border:1px solid rgba(71,48,8,.50);
+  border-radius:13px;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(69,43,4,.22),inset 0 1px 0 rgba(255,255,255,.75);
+}
+
+.wager-card + .wager-card{margin-top:10px}
+
+.wager-head{
+  min-height:52px;
+  padding:7px 8px 6px 12px;
+  display:grid;
+  grid-template-columns:auto auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:12px;
+  border-bottom:2px solid #4d5055;
+  background:linear-gradient(180deg,#fff,#fafafa);
+}
+
+.wager-title,
+.wager-count{
+  font-size:17px;
+  font-weight:1000;
+  white-space:nowrap;
+}
+
+.wager-unit{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:3px;
+  color:#3e434a;
+  font-size:13px;
+  font-weight:750;
+  white-space:nowrap;
+}
+
+.wager-unit input{
+  width:46px;
+  height:40px;
+  padding:0 3px;
+  border:1px solid #d2d5da;
+  border-radius:10px;
+  color:#343941;
+  background:#f1f2f5;
+  font-size:15px;
+  font-weight:800;
+  text-align:center;
+  font-variant-numeric:tabular-nums;
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.06);
+}
+
+.wager-delete{
+  width:40px;
+  height:40px;
+  padding:0;
+  border:2px solid #bbc0c8;
+  border-radius:50%;
+  color:#69717b;
+  background:#fff;
+  font-size:13px;
+  font-weight:1000;
+}
+
+.position-table{background:#fff}
+
+.position-row{
+  min-height:36px;
+  display:grid;
+  grid-template-columns:58px minmax(0,1fr);
+  align-items:center;
+  border-bottom:1px solid #63666b;
+}
+
+.position-label{
+  padding-left:14px;
+  color:#5f6670;
+  font-size:13px;
+  font-weight:800;
+}
+
+.position-cars{
+  min-height:35px;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:2px;
+  padding:4px 8px;
+}
+
+.confirm-car{
+  width:25px;
+  height:28px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(0,0,0,.28);
+  border-radius:0;
+  font-size:15px;
+  font-weight:1000;
+  line-height:1;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28);
+}
+.confirm-car.car-1{color:#111;background:#f3f4f6;border-color:#c4c8ce}
+.confirm-car.car-2{color:#fff;background:#202226}
+.confirm-car.car-3{color:#fff;background:#d4232b}
+.confirm-car.car-4{color:#fff;background:#155dcc}
+.confirm-car.car-5{color:#171108;background:#f0cf24}
+.confirm-car.car-6{color:#fff;background:#2e9a4b}
+.confirm-car.car-7{color:#fff;background:#e47b22}
+.confirm-car.car-8{color:#fff;background:#d84b93}
+
+.excluded-note{
+  min-height:32px;
+  padding:7px 14px;
+  border-bottom:1px solid var(--confirm-line);
+  color:#8a5b0c;
+  background:#fff9e8;
+  font-size:13px;
+  font-weight:900;
+}
+
+.wager-summary{
+  padding:9px 13px 8px;
+  background:#fff;
+}
+
+.wager-summary .summary-line{min-height:23px}
+.wager-summary .summary-line:first-child{
+  padding-bottom:3px;
+  margin-bottom:2px;
+  color:#343941;
+  font-size:15px;
+}
+.wager-summary .summary-line:first-child strong{font-size:17px}
+.wager-summary .summary-line:not(:first-child){color:#787f89;font-size:13px}
+.wager-summary .summary-line:not(:first-child) strong{color:#727984;font-size:13px;font-weight:750}
+
+.expand-button{
+  width:calc(100% - 24px);
+  height:42px;
+  margin:2px 12px 10px;
+  border:0;
+  border-radius:22px;
+  color:#fff;
+  background:#282a2e;
+  font-size:14px;
+  font-weight:1000;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.expand-button::after{
+  content:"⌄";
+  float:right;
+  margin-right:8px;
+  font-size:22px;
+  line-height:.65;
+  transition:transform .18s ease;
+}
+.expand-button[aria-expanded="true"]::after{transform:rotate(180deg)}
+
+.wager-details{
+  border-top:1px solid #d9dce1;
+  background:#fff;
+}
+.wager-details[hidden]{display:none}
+
+.detail-row{
+  min-height:72px;
+  padding:8px 9px 8px 12px;
+  display:grid;
+  grid-template-columns:minmax(84px,1fr) minmax(86px,1fr) auto;
+  align-items:center;
+  gap:8px;
+  border-bottom:1px solid #e6e8eb;
+  font-variant-numeric:tabular-nums;
+}
+.detail-row:last-child{border-bottom:0}
+
+.detail-combo{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:2px;
+}
+.detail-combo .confirm-car{
+  width:23px;
+  height:25px;
+  font-size:14px;
+  border-radius:3px;
+}
+.detail-odds{
+  width:100%;
+  margin-top:3px;
+  color:#30343a;
+  font-size:14px;
+  font-weight:1000;
+  white-space:nowrap;
+}
+
+.detail-value{text-align:right}
+.detail-return{color:#383d44;font-size:14px;font-weight:750;white-space:nowrap}
+.detail-profit{margin-top:2px;color:var(--confirm-green);font-size:14px;font-weight:850;white-space:nowrap}
+.detail-profit.is-negative{color:var(--confirm-red)}
+
+.point-stepper{
+  display:grid;
+  grid-template-columns:38px 44px 38px;
+  align-items:center;
+  gap:5px;
+}
+.point-stepper button{
+  width:38px;
+  height:38px;
+  padding:0;
+  border:2px solid #c2c6ce;
+  border-radius:50%;
+  color:#737b86;
+  background:#fff;
+  font-size:22px;
+  font-weight:400;
+  line-height:1;
+}
+.point-stepper input{
+  width:44px;
+  height:40px;
+  padding:0 2px;
+  border:1px solid #d3d6db;
+  border-radius:10px;
+  color:#4f5660;
+  background:#f1f2f5;
+  font-size:15px;
+  text-align:center;
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.05);
+}
+
+.confirm-empty{
+  margin-top:10px;
+  padding:22px 14px;
+  border:1px solid rgba(71,48,8,.45);
+  border-radius:13px;
+  background:#fff;
+  text-align:center;
+}
+.confirm-empty p{margin:0 0 12px;font-weight:850}
+.confirm-empty a{color:#6c4a0a;font-weight:1000}
+
+.vote-submit-float{
+  position:fixed;
+  z-index:9002;
+  left:50%;
+  bottom:calc(var(--visual-bottom,0px) + env(safe-area-inset-bottom,0px) + 3px);
+  width:calc((100vw - 8px) / 5 + 8px);
+  height:53px;
+  transform:translateX(-50%);
+  overflow:hidden;
+  border:2px solid #fff0a9;
+  border-radius:17px;
+  color:#231704;
+  background:
+    radial-gradient(circle at 50% 25%,#fffbdc 0 12%,transparent 44%),
+    linear-gradient(180deg,#fff4a6 0%,#ffd43e 42%,#e8a610 100%);
+  font-size:17px;
+  font-weight:1000;
+  letter-spacing:.02em;
+  text-shadow:0 1px 0 rgba(255,255,255,.68);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.95),
+    inset 0 -2px 0 rgba(125,75,0,.22),
+    0 0 10px rgba(255,222,82,.95),
+    0 0 25px rgba(255,192,22,.85),
+    0 0 46px rgba(255,231,96,.65);
+  animation:voteConfirmBlaze .82s ease-in-out infinite alternate;
+  touch-action:manipulation;
+}
+.vote-submit-float > span:last-child{position:relative;z-index:2}
+.vote-submit-shine{
+  position:absolute;
+  top:-60%;
+  left:-45%;
+  width:36%;
+  height:220%;
+  transform:rotate(24deg);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.96),transparent);
+  animation:voteConfirmSweep 1.15s linear infinite;
+}
+@keyframes voteConfirmBlaze{
+  from{filter:brightness(.98) saturate(1.03);transform:translateX(-50%) scale(1)}
+  to{filter:brightness(1.20) saturate(1.18);transform:translateX(-50%) scale(1.035)}
+}
+@keyframes voteConfirmSweep{to{left:120%}}
+
+.confirm-toast{
+  position:fixed;
+  z-index:12000;
+  left:50%;
+  bottom:calc(var(--bottom-nav-total-h,62px) + 18px);
+  transform:translateX(-50%);
+  width:max-content;
+  max-width:calc(100% - 28px);
+  padding:10px 18px;
+  border:1px solid #f0cc70;
+  border-radius:10px;
+  color:#fff;
+  background:rgba(15,15,15,.94);
+  font-size:14px;
+  font-weight:1000;
+  box-shadow:0 7px 22px rgba(0,0,0,.38);
+}
+
+@media(max-width:430px){
+  .confirm-page{padding-inline:7px}
+  .confirm-summary{padding:9px 11px}
+  .summary-line,.summary-line strong{font-size:13px}
+  .summary-line:first-child strong{font-size:14px}
+  .wager-head{grid-template-columns:auto auto minmax(0,1fr) auto;gap:8px;padding-left:10px}
+  .wager-title,.wager-count{font-size:16px}
+  .wager-unit{font-size:12px}
+  .wager-unit input{width:43px;height:38px}
+  .wager-delete{width:38px;height:38px}
+  .position-row{grid-template-columns:56px minmax(0,1fr)}
+  .position-label{padding-left:12px;font-size:12px}
+  .confirm-car{width:24px;height:27px;font-size:14px}
+  .detail-row{grid-template-columns:minmax(76px,1fr) minmax(76px,1fr) auto;padding-inline:8px;gap:5px}
+  .detail-combo .confirm-car{width:21px;height:24px;font-size:13px}
+  .detail-odds,.detail-return,.detail-profit{font-size:13px}
+  .point-stepper{grid-template-columns:34px 40px 34px;gap:4px}
+  .point-stepper button{width:34px;height:34px;font-size:20px}
+  .point-stepper input{width:40px;height:37px;font-size:14px}
+  .vote-submit-float{font-size:16px}
+}
+
+@media(max-width:380px){
+  .wager-head{gap:6px}
+  .wager-title,.wager-count{font-size:15px}
+  .wager-unit{font-size:11px}
+  .wager-unit input{width:38px}
+  .detail-row{grid-template-columns:minmax(68px,1fr) minmax(68px,1fr) auto;padding-left:7px;padding-right:6px}
+  .point-stepper{grid-template-columns:31px 37px 31px;gap:3px}
+  .point-stepper button{width:31px;height:31px}
+  .point-stepper input{width:37px;height:34px}
+  .vote-submit-float{width:calc((100vw - 8px) / 5 + 4px)}
+}
+
+@media(display-mode:standalone){
+  .vote-submit-float{height:49px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .vote-submit-float,.vote-submit-shine{animation:none}
+}
