@@ -193,3 +193,19 @@
   font-weight:900;
   line-height:1;
 }
+
+
+/* v5: unify and enlarge prediction/condition symbols. */
+.prediction-mark,.condition-arrow{
+  width:27px;
+  height:27px;
+  font-family:"Segoe UI Symbol","Yu Gothic UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  font-size:19px;
+  font-weight:800;
+  font-synthesis:none;
+}
+.condition-arrow{font-size:19px;font-weight:800}
+@media(max-width:430px){
+  .prediction-mark,.condition-arrow{width:26px;height:26px;font-size:18px;font-weight:800}
+  .condition-arrow{font-size:18px;font-weight:800}
+}
