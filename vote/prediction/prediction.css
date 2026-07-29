@@ -209,3 +209,14 @@
   .prediction-mark,.condition-arrow{width:26px;height:26px;font-size:18px;font-weight:800}
   .condition-arrow{font-size:18px;font-weight:800}
 }
+
+
+/* v6: restore the rising condition symbol and strengthen every forecast mark. */
+.prediction-mark,.condition-arrow{
+  font-weight:1000;
+  -webkit-text-stroke:.22px currentColor;
+  text-shadow:0 0 0 currentColor;
+}
+@media(max-width:430px){
+  .prediction-mark,.condition-arrow{font-weight:1000;-webkit-text-stroke:.2px currentColor}
+}
