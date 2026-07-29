@@ -220,3 +220,9 @@
 @media(max-width:430px){
   .prediction-mark,.condition-arrow{font-weight:1000;-webkit-text-stroke:.2px currentColor}
 }
+
+
+/* v7: move the data column beside start and emphasize forecast/data columns. */
+.race-table.prediction-table tbody td.prediction-column-highlight{
+  background:var(--race-button-active,#fff6c8)!important;
+}
