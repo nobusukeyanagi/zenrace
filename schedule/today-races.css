@@ -4,7 +4,7 @@
   --venue-card-w:100px;
   --race-card-w:76px;
   --race-card-h:58px;
-  --row-h:72px;
+  --row-h:78px;
   --track-gap:7px;
   --track-pad-x:8px;
   --focus-slot-index:1;
@@ -64,8 +64,8 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 }
 .venue-focus-band{
   position:absolute;z-index:0;top:0;bottom:0;left:var(--focus-band-left);width:var(--focus-band-w);
-  background:#d5ab43;
-  box-shadow:inset 1px 0 rgba(255,255,255,.24),inset -1px 0 rgba(84,56,8,.12);
+  background:linear-gradient(180deg,#9d7a28,#85631b);
+  box-shadow:inset 1px 0 rgba(255,255,255,.13),inset -1px 0 rgba(48,31,3,.22);
   pointer-events:none;transform:translate3d(0,0,0);will-change:transform
 }
 .venue-row[data-mode="past"] .venue-focus-band,
@@ -105,9 +105,15 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .venue-day-label.multi-digit{min-width:16px;padding-inline:1px;font-size:8px;letter-spacing:-.05em}
 
 .venue-track-shell{position:relative;min-height:var(--row-h);overflow:hidden;background:transparent;touch-action:pan-x pan-y}
+.venue-event-title{
+  position:absolute;z-index:3;top:2px;left:var(--track-pad-x);right:var(--track-pad-x);
+  min-width:0;overflow:hidden;color:#fff;font-size:15px;font-weight:900;line-height:15px;
+  white-space:nowrap;text-overflow:ellipsis;text-align:left;pointer-events:none;
+  text-shadow:0 1px 2px rgba(0,0,0,.98),0 0 5px rgba(0,0,0,.92)
+}
 .venue-track{
-  position:relative;z-index:1;display:flex;gap:var(--track-gap);align-items:center;min-height:var(--row-h);
-  padding:5px var(--track-pad-x);overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  position:relative;z-index:1;display:flex;gap:var(--track-gap);align-items:flex-end;min-height:var(--row-h);
+  padding:18px var(--track-pad-x) 2px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;
   touch-action:pan-x pan-y;overscroll-behavior-x:none;overscroll-behavior-y:auto;scroll-snap-type:none;
   scroll-behavior:auto
 }
@@ -159,11 +165,12 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .today-empty{padding:48px 16px;color:#aab1ba;text-align:center;font-size:13px;font-weight:800}
 
 @media(max-width:430px){
-  :root{--date-toolbar-h:44px;--venue-card-w:96px;--race-card-w:72px;--race-card-h:56px;--row-h:68px;--track-gap:6px;--track-pad-x:6px}
+  :root{--date-toolbar-h:44px;--venue-card-w:96px;--race-card-w:72px;--race-card-h:56px;--row-h:76px;--track-gap:6px;--track-pad-x:6px}
   .date-toolbar{grid-template-columns:62px auto 62px;padding-inline:5px}
   .date-nav{grid-template-columns:32px minmax(136px,auto) 32px}.date-arrow{width:32px;height:32px;font-size:25px}.date-title{font-size:15px}
   .update-btn,.today-btn{min-width:60px;height:30px;padding-inline:9px}
   .today-page{padding:5px}
   .venue-name{font-size:16px}.venue-title-line{gap:.45em}.venue-sport-icon{flex-basis:16px;width:16px;height:16px}.venue-meta-row{min-height:17px;gap:2px}.venue-grade-icon{min-width:16px;height:16px;padding:0 1px;border-radius:4px;font-size:7px}.venue-status-icon{width:16px;height:16px;border-radius:4px}.venue-day-label{min-width:16px;height:16px;padding:0;border-radius:4px;font-size:8px}.venue-day-label.multi-digit{min-width:16px;padding-inline:1px;font-size:7px;letter-spacing:-.05em}
+  .venue-event-title{font-size:14px;line-height:14px}
   .race-card .race-no{font-size:16px}.race-card .race-time{font-size:14px}
 }
