@@ -3363,7 +3363,7 @@
     "venue": "門別",
     "grade": "H3",
     "name": "旭岳賞",
-    "winner": ""
+    "winner": "ベルピット"
   },
   {
     "date": "2026-07-30",
@@ -3394,20 +3394,20 @@
   },
   {
     "date": "2026-08-02",
-    "time": "",
+    "time": "19:15",
     "sport": "nar",
-    "venue": "盛岡",
-    "grade": "M3",
-    "name": "フェアリーカップ",
+    "venue": "高知",
+    "grade": "",
+    "name": "黒潮菊花賞",
     "winner": ""
   },
   {
     "date": "2026-08-02",
     "time": "",
     "sport": "nar",
-    "venue": "高知",
-    "grade": "",
-    "name": "黒潮菊花賞",
+    "venue": "盛岡",
+    "grade": "M3",
+    "name": "フェアリーカップ",
     "winner": ""
   },
   {

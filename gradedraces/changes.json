@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-29T05:40:34.460500+09:00",
-  "center_date": "2026-07-29",
+  "generated_at": "2026-07-30T05:19:38.606664+09:00",
+  "center_date": "2026-07-30",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 5,
-    "recent_verification": 4,
-    "upcoming": 24
+    "unresolved": 2,
+    "recent_verification": 5,
+    "upcoming": 25
   },
-  "target_count": 29,
-  "change_count": 9,
+  "target_count": 31,
+  "change_count": 7,
   "changes": [
     {
       "date": "2026-08-02",
@@ -146,112 +146,58 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-07-28",
+      "date": "2026-07-29",
       "sport": "nar",
-      "venue": "盛岡",
-      "name": "オパールカップ",
+      "venue": "門別",
+      "name": "旭岳賞",
       "before": {
-        "date": "2026-07-28",
-        "time": "18:15",
+        "date": "2026-07-29",
+        "time": "20:35",
         "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M2",
-        "name": "オパールカップ",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "旭岳賞",
         "winner": ""
       },
       "after": {
-        "date": "2026-07-28",
-        "time": "18:15",
+        "date": "2026-07-29",
+        "time": "20:35",
         "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M2",
-        "name": "オパールカップ",
-        "winner": "ローザレイア"
+        "venue": "門別",
+        "grade": "H3",
+        "name": "旭岳賞",
+        "winner": "ベルピット"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F28&k_babaCode=10",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F29&k_babaCode=36",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-07-28",
+      "date": "2026-08-02",
       "sport": "nar",
-      "venue": "名古屋",
-      "name": "名港盃",
+      "venue": "高知",
+      "name": "黒潮菊花賞",
       "before": {
-        "date": "2026-07-28",
-        "time": "19:55",
+        "date": "2026-08-02",
+        "time": "",
         "sport": "nar",
-        "venue": "名古屋",
-        "grade": "SPⅠ",
-        "name": "名港盃",
+        "venue": "高知",
+        "grade": "",
+        "name": "黒潮菊花賞",
         "winner": ""
       },
       "after": {
-        "date": "2026-07-28",
-        "time": "19:55",
+        "date": "2026-08-02",
+        "time": "19:15",
         "sport": "nar",
-        "venue": "名古屋",
-        "grade": "SPⅠ",
-        "name": "名港盃",
-        "winner": "ベント"
+        "venue": "高知",
+        "grade": "",
+        "name": "黒潮菊花賞",
+        "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F28&k_babaCode=24",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=31",
       "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-07-28",
-      "sport": "boat",
-      "venue": "江戸川",
-      "name": "アサヒビールカップ",
-      "before": {
-        "date": "2026-07-28",
-        "time": "16:25",
-        "sport": "boat",
-        "venue": "江戸川",
-        "grade": "GⅢ",
-        "name": "アサヒビールカップ",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-07-28",
-        "time": "16:25",
-        "sport": "boat",
-        "venue": "江戸川",
-        "grade": "GⅢ",
-        "name": "アサヒビールカップ",
-        "winner": "石倉 洋行"
-      },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=03&hd=20260728&rno=12",
-      "note": "BOAT RACE公式12R結果"
-    },
-    {
-      "date": "2026-07-28",
-      "sport": "keirin",
-      "venue": "豊橋",
-      "name": "開設77周年記念ちぎり賞争奪戦",
-      "before": {
-        "date": "2026-07-28",
-        "time": "16:25",
-        "sport": "keirin",
-        "venue": "豊橋",
-        "grade": "GⅢ",
-        "name": "開設77周年記念ちぎり賞争奪戦",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-07-28",
-        "time": "16:25",
-        "sport": "keirin",
-        "venue": "豊橋",
-        "grade": "GⅢ",
-        "name": "開設77周年記念ちぎり賞争奪戦",
-        "winner": "深谷 知広 36歳/96期"
-      },
-      "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=45&kaisaiBi=20260728&raceNo=12",
-      "note": "公開結果によるKEIRIN.JP補完（12R）"
     }
   ]
 }

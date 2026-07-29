@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T05:38:04.485193+09:00",
-  "base_date": "2026-07-29",
+  "generated_at": "2026-07-30T05:17:04.389624+09:00",
+  "base_date": "2026-07-30",
   "calendar_years": [
     2026,
     2027
@@ -11,59 +11,11 @@
   ],
   "official_record_count": 204,
   "added_count": 0,
-  "updated_count": 7,
+  "updated_count": 5,
   "registered_only_count": 7,
   "duplicate_count": 0,
   "additions": [],
   "changes": [
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-07-26",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GIII",
-        "name": "東海S",
-        "winner": "マテンロウコマンド"
-      },
-      "after": {
-        "date": "2026-07-26",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GⅢ",
-        "name": "東海S",
-        "winner": "マテンロウコマンド"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-07-26:東海s"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-07-26",
-        "time": "15:35",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GIII",
-        "name": "関屋記念",
-        "winner": "アンパドゥ"
-      },
-      "after": {
-        "date": "2026-07-26",
-        "time": "15:35",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GⅢ",
-        "name": "関屋記念",
-        "winner": "アンパドゥ"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-07-26:関屋記念"
-    },
     {
       "type": "master_updated",
       "match_type": "exact",

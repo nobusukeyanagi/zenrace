@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-29T05:40:34.461071+09:00",
-  "center_date": "2026-07-29",
+  "generated_at": "2026-07-30T05:19:38.607175+09:00",
+  "center_date": "2026-07-30",
   "past_unresolved_count": 1,
-  "upcoming_missing_time_count": 17,
+  "upcoming_missing_time_count": 18,
   "past_unresolved": [
     {
       "date": "2026-07-26",
@@ -23,16 +23,6 @@
       "venue": "盛岡",
       "grade": "M3",
       "name": "フェアリーカップ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-02",
-      "sport": "nar",
-      "venue": "高知",
-      "grade": "",
-      "name": "黒潮菊花賞",
       "missing": [
         "time"
       ]
@@ -183,6 +173,26 @@
       "venue": "笠松",
       "grade": "SPⅠ",
       "name": "くろゆり賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "sport": "nar",
+      "venue": "大井",
+      "grade": "SⅢ",
+      "name": "黒潮盃",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "sport": "nar",
+      "venue": "門別",
+      "grade": "JpnⅢ",
+      "name": "北海道スプリントカップ",
       "missing": [
         "time"
       ]
