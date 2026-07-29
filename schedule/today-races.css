@@ -4,7 +4,7 @@
   --venue-card-w:100px;
   --race-card-w:76px;
   --race-card-h:58px;
-  --row-h:72px;
+  --row-h:68px;
   --track-gap:7px;
   --track-pad-x:8px;
   --focus-slot-index:1;
@@ -159,11 +159,12 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .today-empty{padding:48px 16px;color:#aab1ba;text-align:center;font-size:13px;font-weight:800}
 
 @media(max-width:430px){
-  :root{--date-toolbar-h:44px;--venue-card-w:96px;--race-card-w:72px;--race-card-h:56px;--row-h:68px;--track-gap:6px;--track-pad-x:6px}
+  :root{--date-toolbar-h:44px;--venue-card-w:96px;--race-card-w:72px;--race-card-h:56px;--row-h:64px;--track-gap:6px;--track-pad-x:6px}
   .date-toolbar{grid-template-columns:62px auto 62px;padding-inline:5px}
   .date-nav{grid-template-columns:32px minmax(136px,auto) 32px}.date-arrow{width:32px;height:32px;font-size:25px}.date-title{font-size:15px}
   .update-btn,.today-btn{min-width:60px;height:30px;padding-inline:9px}
   .today-page{padding:5px}
+  .venue-track{padding-block:4px}
   .venue-name{font-size:16px}.venue-title-line{gap:.45em}.venue-sport-icon{flex-basis:16px;width:16px;height:16px}.venue-meta-row{min-height:17px;gap:2px}.venue-grade-icon{min-width:16px;height:16px;padding:0 1px;border-radius:4px;font-size:7px}.venue-status-icon{width:16px;height:16px;border-radius:4px}.venue-day-label{min-width:16px;height:16px;padding:0;border-radius:4px;font-size:8px}.venue-day-label.multi-digit{min-width:16px;padding-inline:1px;font-size:7px;letter-spacing:-.05em}
   .race-card .race-no{font-size:16px}.race-card .race-time{font-size:14px}
 }

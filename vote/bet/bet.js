@@ -37,7 +37,7 @@
     if(type==="単勝") return [...new Set([...a,...b,...c,...box])].map(v=>[v]);
     if(type==="2連単") {
       let rows=distinctProduct([a,b]);
-      if(document.getElementById("reverse-option").checked) rows=rows.concat(rows.map(x=>[x[1],x[0]]));
+      if(document.getElementById("multi-reverse-option").checked) rows=rows.concat(rows.map(x=>[x[1],x[0]]));
       if(box.length>=2) rows=rows.concat(permutations(box,2));
       return rows;
     }
@@ -51,7 +51,7 @@
     }
     let rows=distinctProduct([a,b,c]);
     if(box.length>=3) rows=rows.concat(permutations(box,3));
-    if(document.getElementById("multi-option").checked) rows=rows.flatMap(row=>permutations(row,3));
+    if(document.getElementById("multi-reverse-option").checked) rows=rows.flatMap(row=>permutations(row,3));
     return rows;
   }
   function dedupe(rows){const seen=new Set();return rows.filter(row=>{const key=row.join("-");if(seen.has(key))return false;seen.add(key);return true;});}
@@ -70,6 +70,5 @@
   document.querySelectorAll("[data-column-all]").forEach(button=>button.addEventListener("click",()=>{const key=button.dataset.columnAll;riders.forEach(r=>selected[key].add(r.car));body.querySelectorAll(`[data-column="${key}"]`).forEach(syncButton);renderSelections();}));
   document.querySelectorAll("[data-column-clear]").forEach(button=>button.addEventListener("click",()=>{const key=button.dataset.columnClear;selected[key].clear();body.querySelectorAll(`[data-column="${key}"]`).forEach(syncButton);renderSelections();}));
   document.querySelectorAll(".bet-type-tab").forEach(tab=>tab.addEventListener("click",()=>{const type=tab.dataset.betType;activeTypes.has(type)?activeTypes.delete(type):activeTypes.add(type);if(!activeTypes.size)activeTypes.add("3連単");document.querySelectorAll(".bet-type-tab").forEach(item=>{const on=activeTypes.has(item.dataset.betType);item.classList.toggle("active",on);item.setAttribute("aria-pressed",String(on));});renderSelections();}));
-  document.getElementById("multi-option").addEventListener("change",renderSelections);
-  document.getElementById("reverse-option").addEventListener("change",renderSelections);
+  document.getElementById("multi-reverse-option").addEventListener("change",renderSelections);
 })();
