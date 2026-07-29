@@ -4,7 +4,6 @@
   const STORAGE_KEY = "zenrace:bet-confirmation:v1";
   const ODDS_DATA = window.ZENRACE_ODDS_DATA || {};
   const groupsRoot = document.getElementById("wager-groups");
-  const emptyState = document.getElementById("confirm-empty");
   const submitButton = document.getElementById("vote-submit");
   const toast = document.getElementById("confirm-toast");
   const grandTotal = document.getElementById("grand-total");
@@ -72,11 +71,16 @@
   function normalizeEntry(type, entry) {
     const cars = [...new Set((entry?.cars || []).map(Number).filter((value) => Number.isInteger(value) && value >= 1 && value <= 8))];
     const record = oddsLookup[type]?.get(oddsKey(type, cars));
+    const rawUnits = Number(entry?.units);
+    const units = Number.isFinite(rawUnits)
+      ? Math.min(99, Math.max(0, rawUnits))
+      : entry?.removed ? 0 : 1;
     return {
       cars,
       rank: Number(entry?.rank ?? record?.rank) || null,
       odds: entry?.odds ?? record?.odds ?? null,
-      units: Math.max(1, Number(entry?.units) || 1),
+      units,
+      removed: Boolean(entry?.removed) || units === 0,
     };
   }
 
@@ -98,7 +102,11 @@
         };
         const entries = (group.entries || []).map((entry) => normalizeEntry(group.type, entry)).filter((entry) => entry.cars.length);
         const generatedCount = Math.max(entries.length, Number(group.generatedCount) || 0);
-        const removedCount = Math.max(0, Number(group.removedCount) || generatedCount - entries.length);
+        const removedCount = Math.max(
+          entries.filter((entry) => entry.units === 0).length,
+          Number(group.removedCount) || 0,
+          generatedCount - entries.length,
+        );
         return {
           type: group.type,
           selections: groupSelections,
@@ -223,19 +231,20 @@
       const totalStake = state.groups.reduce((sum, current) => sum + groupMetrics(current).stake, 0);
       const minProfit = minReturn - totalStake;
       const maxProfit = group.type === "ワイド" ? minProfit : maxReturn - totalStake;
+      const profitHtml = entry.units > 0 ? signedRangeHtml(minProfit, maxProfit) : "";
       return `
-        <div class="detail-row" data-entry-index="${entryIndex}">
+        <div class="detail-row${entry.units === 0 ? " is-zero" : ""}" data-entry-index="${entryIndex}">
           <div>
             <div class="detail-combo">${entry.cars.map(carBadge).join("")}</div>
             <div class="detail-odds">${displayOdds(entry, group.type)}</div>
           </div>
           <div class="detail-value">
             <div class="detail-return">${rangeText(minReturn, maxReturn)}</div>
-            <div class="detail-profit">${signedRangeHtml(minProfit, maxProfit)}</div>
+            <div class="detail-profit"${entry.units > 0 ? "" : " hidden"}>${profitHtml}</div>
           </div>
           <div class="point-stepper" aria-label="点数選択">
             <button type="button" data-step="-1" data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="点数を減らす">−</button>
-            <label class="detail-unit"><input type="number" min="1" max="99" value="${entry.units}" data-entry-units data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="点数"><span>00pt</span></label>
+            <label class="detail-unit"><input type="number" min="0" max="99" value="${entry.units}" data-entry-units data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="点数"><span>00pt</span></label>
             <button type="button" data-step="1" data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="点数を増やす">＋</button>
           </div>
         </div>`;
@@ -247,14 +256,17 @@
     const totalStake = state.groups.reduce((sum, current) => sum + groupMetrics(current).stake, 0);
     const minProfit = metrics.minReturn - totalStake;
     const maxProfit = metrics.maxReturn - totalStake;
-    const excluded = group.removedCount > 0
-      ? `<div class="excluded-note">このうち${group.removedCount}件を除く</div>`
+    const activeCount = group.entries.filter((entry) => entry.units > 0).length;
+    const excludedCount = group.entries.filter((entry) => entry.units === 0).length;
+    const excluded = excludedCount > 0
+      ? `<div class="excluded-note">このうち${excludedCount}点を除く</div>`
       : "";
+    const groupProfit = metrics.stake > 0 ? signedRangeHtml(minProfit, maxProfit) : "";
     return `
       <section class="wager-card" data-group-index="${index}" aria-label="${group.type}の投票内容">
         <div class="wager-head">
           <strong class="wager-title">${group.type}</strong>
-          <strong class="wager-count">${group.entries.length}点</strong>
+          <strong class="wager-count">${activeCount}点</strong>
           <label class="wager-unit">各 <input type="number" min="1" max="99" value="${group.unit}" data-group-unit data-group-index="${index}" aria-label="各使用ポイント"> 00pt</label>
           <button class="wager-delete" type="button" data-delete-group="${index}" aria-label="${group.type}を消す">消</button>
         </div>
@@ -263,7 +275,7 @@
         <div class="wager-summary">
           <div class="summary-line"><span>合計</span><strong data-group-total>${formatNumber(metrics.stake)}pt</strong></div>
           <div class="summary-line"><span>想定払戻</span><strong data-group-return>${rangeText(metrics.minReturn, metrics.maxReturn)}</strong></div>
-          <div class="summary-line"><span>想定収支</span><strong data-group-profit>${signedRangeHtml(minProfit, maxProfit)}</strong></div>
+          <div class="summary-line"><span>想定収支</span><strong data-group-profit>${groupProfit}</strong></div>
         </div>
         <button class="expand-button" type="button" data-toggle-details="${index}" aria-expanded="${group.expanded}">${group.expanded ? "閉じる" : "買い目詳細"}</button>
         <div class="wager-details" data-details="${index}" ${group.expanded ? "" : "hidden"}>${detailRows(group, index)}</div>
@@ -273,12 +285,10 @@
   function render() {
     if (!state.groups.length) {
       groupsRoot.innerHTML = "";
-      emptyState.hidden = false;
       submitButton.hidden = true;
       updateGrandSummary();
       return;
     }
-    emptyState.hidden = true;
     submitButton.hidden = false;
     groupsRoot.innerHTML = state.groups.map(cardHtml).join("");
     bindControls();
@@ -294,7 +304,7 @@
     const maxProfit = maxReturn - totalStake;
     grandTotal.textContent = `${formatNumber(totalStake)}pt`;
     grandReturn.textContent = rangeText(minReturn, maxReturn);
-    grandProfit.innerHTML = signedRangeHtml(minProfit, maxProfit);
+    grandProfit.innerHTML = totalStake > 0 ? signedRangeHtml(minProfit, maxProfit) : "";
     grandProfit.className = "";
   }
 
@@ -302,7 +312,9 @@
     const group = state.groups[groupIndex];
     const entry = group?.entries[entryIndex];
     if (!entry) return;
-    entry.units = Math.min(99, Math.max(1, Number(nextValue) || 1));
+    const parsed = Number(nextValue);
+    entry.units = Math.min(99, Math.max(0, Number.isFinite(parsed) ? parsed : 0));
+    entry.removed = entry.units === 0;
     render();
   }
 

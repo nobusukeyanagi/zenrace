@@ -14,14 +14,14 @@
   <link href="../../race-info.css?v=59" rel="stylesheet">
   <link href="../../../shared/race-button-style.css?v=6" rel="stylesheet">
   <link href="../bet.css?v=14" rel="stylesheet">
-  <link href="confirm.css?v=3" rel="stylesheet">
+  <link href="confirm.css?v=4" rel="stylesheet">
   <script defer src="../../race-info.js?v=60"></script>
   <script defer src="../../live-state.js?v=1"></script>
   <script defer src="../../../shared/category-menu.js?v=51"></script>
   <script defer src="../../../shared/fixed-layout.js?v=22"></script>
   <script defer src="../../../shared/bottom-nav.js?v=61"></script>
   <script defer src="../../odds-data.js?v=1"></script>
-  <script defer src="confirm.js?v=3"></script>
+  <script defer src="confirm.js?v=4"></script>
 </head>
 <body>
   <zenrace-category-menu active="bet" category="vote"></zenrace-category-menu>
@@ -45,10 +45,7 @@
           </section>
 
           <div class="wager-groups" id="wager-groups" aria-live="polite"></div>
-          <section class="confirm-empty" id="confirm-empty" hidden>
-            <p>投票する買い目がありません。</p>
-            <a href="../">投票ページに戻る</a>
-          </section>
+          <a class="confirm-back-link" href="../">買い目入力に戻る</a>
         </main>
       </div>
     </div>

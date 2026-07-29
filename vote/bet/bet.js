@@ -85,7 +85,7 @@
     return BET_TYPE_ORDER.filter(type=>activeTypes.has(type)).map(type=>{
       const allEntries=dedupe(combosFor(type)).map(cars=>({type,cars,record:oddsRecord(type,cars),key:selectionKey(type,cars)}));
       const entries=allEntries.filter(entry=>!removedSelections.has(entry.key));
-      return {type,entries,generatedCount:allEntries.length,removedCount:allEntries.length-entries.length};
+      return {type,allEntries,entries,generatedCount:allEntries.length,removedCount:allEntries.length-entries.length};
     }).filter(group=>group.generatedCount);
   }
   function renderSelections(){
@@ -106,10 +106,12 @@
       generatedCount:group.generatedCount,
       removedCount:group.removedCount,
       selections:Object.fromEntries(columns.map(key=>[key,formation[key].slice()])),
-      entries:group.entries.map(entry=>({
+      entries:group.allEntries.map(entry=>({
         cars:entry.cars.slice(),
         rank:entry.record?.rank??null,
-        odds:entry.record?.odds??null
+        odds:entry.record?.odds??null,
+        units:removedSelections.has(entry.key)?0:1,
+        removed:removedSelections.has(entry.key)
       }))
     }));
     return {
