@@ -504,3 +504,42 @@
 .rider-profile{
   margin-top:3px;
 }
+
+/* v21: match both rider secondary lines to the racecard typography while preserving the v20 spacing. */
+.rider-profile,
+.rider-support{
+  color:#66707c;
+  font-size:11px;
+  font-weight:850;
+  line-height:1;
+  letter-spacing:-.02em;
+}
+.rider-profile{
+  margin-top:3px;
+}
+.rider-support{
+  margin-top:1px;
+}
+.rider-popularity,
+.rider-support-rate{
+  font:inherit;
+  letter-spacing:inherit;
+}
+
+/* v22: match the racecard secondary-line typography and add only the minimum row height needed for three readable lines. */
+.bet-table tbody td,
+.bet-table tbody td.pick-cell{
+  height:50px;
+}
+.bet-table tbody td.pick-cell .pick-button{
+  height:44px;
+}
+@media(max-width:430px){
+  .bet-table tbody td,
+  .bet-table tbody td.pick-cell{
+    height:50px;
+  }
+  .bet-table tbody td.pick-cell .pick-button{
+    height:44px;
+  }
+}
