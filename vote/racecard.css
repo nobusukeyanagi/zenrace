@@ -286,3 +286,38 @@
   .race-outlook-heading{font-size:22px}
   .race-outlook-card{padding:11px 12px;font-size:13px;line-height:1.62}
 }
+
+/* v95: add current-year, career, and review-point columns to basic information. */
+.race-table{width:1434px}
+.race-table col.col-year{width:68px}
+.race-table col.col-career{width:68px}
+.race-table col.col-review-points{width:76px}
+.season-record-cell{
+  padding-inline:5px!important;
+  vertical-align:middle!important;
+  text-align:left!important;
+  color:#111!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  font-variant-numeric:tabular-nums;
+}
+.season-record-line{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  align-items:center;
+  column-gap:6px;
+  width:100%;
+  line-height:1;
+  white-space:nowrap;
+}
+.season-record-line + .season-record-line{margin-top:4px}
+.season-record-label,.season-record-value{display:block;text-align:left}
+.review-points-cell{
+  padding-inline:5px!important;
+  vertical-align:middle!important;
+  text-align:center!important;
+  color:#111!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  font-variant-numeric:tabular-nums;
+}

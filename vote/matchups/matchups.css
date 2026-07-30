@@ -96,3 +96,11 @@
 /* v7: add a small safety margin so the H value never clips. */
 .matchups-table{width:1372px}
 .matchups-table col.col-history{width:114px}
+
+/* v8: replace diagonal dashes with the same pale-gray unavailable-cell fill used by odds. */
+.matchups-table .self-match{
+  color:transparent!important;
+  background:#f1f2f4!important;
+}
+.matchups-table .self-match::before,
+.matchups-table .self-match::after{content:none!important}

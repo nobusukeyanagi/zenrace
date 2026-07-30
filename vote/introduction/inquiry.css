@@ -560,3 +560,12 @@ html,body,button,input,select,textarea,table{
 @media(max-width:430px){
   .inquiry-wager-hit{font-size:16px}
 }
+
+
+/* v7: keep the acceptance message on one line and align receipt spacing. */
+.receipt-number{min-height:0;margin-bottom:6px}
+.vote-received-popup{width:210px;height:210px}
+.vote-received-text{white-space:nowrap}
+@media(max-width:430px){
+  .vote-received-popup{width:200px;height:200px}
+}

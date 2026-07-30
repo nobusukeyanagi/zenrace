@@ -911,3 +911,10 @@ button,select{font:inherit}
 @media(max-width:360px){
   .odds-combination-separator{flex-basis:9px;width:9px;min-width:9px;margin:0;padding-inline:1px}
 }
+
+/* v24: keep the popularity carousel navigation area frameless. */
+.odds-popular-section{
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+}
