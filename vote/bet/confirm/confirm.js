@@ -133,9 +133,17 @@
     const selectedAt = (key, position) => selections[key].length ? selections[key] : carsAt(position);
     let rows;
     if (type === "単勝") {
-      rows = [["1着", numericCars([...selections.first, ...selections.second, ...selections.third, ...selections.box, ...entryCars])]];
-    } else if (["2連単", "2連複", "ワイド"].includes(type)) {
+      rows = [["1着", selections.first.length ? selections.first : entryCars]];
+    } else if (type === "2連単") {
       rows = [["1着", selectedAt("first", 0)], ["2着", selectedAt("second", 1)]];
+    } else if (["2連複", "ワイド"].includes(type)) {
+      rows = [["1車目", selectedAt("first", 0)], ["2車目", selectedAt("second", 1)]];
+    } else if (type === "3連複") {
+      rows = [
+        ["1車目", selectedAt("first", 0)],
+        ["2車目", selectedAt("second", 1)],
+        ["3車目", selectedAt("third", 2)],
+      ];
     } else {
       rows = [
         ["1着", selectedAt("first", 0)],
@@ -204,6 +212,10 @@
     return `${signedValueHtml(roundedMin)} ～ ${signedValueHtml(roundedMax)}`;
   }
 
+  function profitHtml(min, max) {
+    return `<span class="profit-amount">${signedRangeHtml(min, max)}</span><span class="profit-unit">pt</span>`;
+  }
+
   function groupMetrics(group) {
     const stake = group.entries.reduce((sum, entry) => sum + entry.units * 100, 0);
     const payouts = group.entries
@@ -231,7 +243,7 @@
       const totalStake = state.groups.reduce((sum, current) => sum + groupMetrics(current).stake, 0);
       const minProfit = minReturn - totalStake;
       const maxProfit = group.type === "ワイド" ? minProfit : maxReturn - totalStake;
-      const profitHtml = entry.units > 0 ? signedRangeHtml(minProfit, maxProfit) : "";
+      const profitValueHtml = entry.units > 0 ? profitHtml(minProfit, maxProfit) : "";
       return `
         <div class="detail-row${entry.units === 0 ? " is-zero" : ""}" data-entry-index="${entryIndex}">
           <div>
@@ -240,7 +252,7 @@
           </div>
           <div class="detail-value">
             <div class="detail-return">${rangeText(minReturn, maxReturn)}</div>
-            <div class="detail-profit"${entry.units > 0 ? "" : " hidden"}>${profitHtml}</div>
+            <div class="detail-profit"${entry.units > 0 ? "" : " hidden"}>${profitValueHtml}</div>
           </div>
           <div class="point-stepper" aria-label="点数選択">
             <button type="button" data-step="-1" data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="点数を減らす">−</button>
@@ -261,7 +273,7 @@
     const excluded = excludedCount > 0
       ? `<div class="excluded-note">このうち${excludedCount}点を除く</div>`
       : "";
-    const groupProfit = metrics.stake > 0 ? signedRangeHtml(minProfit, maxProfit) : "";
+    const groupProfit = metrics.stake > 0 ? profitHtml(minProfit, maxProfit) : "";
     return `
       <section class="wager-card" data-group-index="${index}" aria-label="${group.type}の投票内容">
         <div class="wager-head">
@@ -274,7 +286,7 @@
         ${excluded}
         <div class="wager-summary">
           <div class="summary-line"><span>合計</span><strong data-group-total>${formatNumber(metrics.stake)}pt</strong></div>
-          <div class="summary-line"><span>想定払戻</span><strong data-group-return>${rangeText(metrics.minReturn, metrics.maxReturn)}</strong></div>
+          <div class="summary-line"><span>想定払戻金</span><strong data-group-return>${rangeText(metrics.minReturn, metrics.maxReturn)}</strong></div>
           <div class="summary-line"><span>想定収支</span><strong data-group-profit>${groupProfit}</strong></div>
         </div>
         <button class="expand-button" type="button" data-toggle-details="${index}" aria-expanded="${group.expanded}">${group.expanded ? "閉じる" : "買い目詳細"}</button>
@@ -345,7 +357,7 @@
     const maxProfit = maxReturn - totalStake;
     grandTotal.textContent = `${formatNumber(totalStake)}pt`;
     grandReturn.textContent = rangeText(minReturn, maxReturn);
-    grandProfit.innerHTML = totalStake > 0 ? signedRangeHtml(minProfit, maxProfit) : "";
+    grandProfit.innerHTML = totalStake > 0 ? profitHtml(minProfit, maxProfit) : "";
     grandProfit.className = "";
   }
 

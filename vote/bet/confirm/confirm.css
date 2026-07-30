@@ -244,8 +244,8 @@ html,body{
 .wager-details[hidden]{display:none}
 
 .detail-row{
-  min-height:72px;
-  padding:8px 9px 8px 12px;
+  min-height:64px;
+  padding:4px 9px 4px 12px;
   display:grid;
   grid-template-columns:minmax(84px,1fr) minmax(86px,1fr) auto;
   align-items:center;
@@ -282,6 +282,11 @@ html,body{
 .detail-profit{margin-top:2px;color:#727984;font-size:14px;font-weight:850;white-space:nowrap}
 .detail-profit .is-positive{color:var(--confirm-green)}
 .detail-profit .is-negative{color:var(--confirm-red)}
+.profit-unit{
+  margin-left:2px;
+  color:#111!important;
+  font:inherit;
+}
 
 .point-stepper{
   display:grid;
