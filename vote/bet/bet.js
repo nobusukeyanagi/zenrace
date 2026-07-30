@@ -179,7 +179,7 @@
       const payload=JSON.parse(raw);
       return payload&&typeof payload==="object"?payload:null;
     }catch(error){
-      console.warn("買い目入力データを復元できませんでした。",error);
+      console.warn("通常投票データを復元できませんでした。",error);
       return null;
     }
   }

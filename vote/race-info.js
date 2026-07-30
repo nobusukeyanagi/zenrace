@@ -1,6 +1,55 @@
 (() => {
   "use strict";
 
+  const RACE_SELECTION_KEY = "zenrace:vote-race-selection:v1";
+  const DEFAULT_RACE_KEY = "浜松-12R-16:45";
+
+  function readRaceSelection() {
+    try {
+      const raw = sessionStorage.getItem(RACE_SELECTION_KEY);
+      const parsed = raw ? JSON.parse(raw) : null;
+      return {
+        key: typeof parsed?.key === "string" && parsed.key ? parsed.key : DEFAULT_RACE_KEY,
+        venue: typeof parsed?.venue === "string" && parsed.venue ? parsed.venue : "浜松",
+        venueOnly: Boolean(parsed?.venueOnly),
+      };
+    } catch (error) {
+      console.warn("レース選択状態を読み込めませんでした。", error);
+      return { key: DEFAULT_RACE_KEY, venue: "浜松", venueOnly: false };
+    }
+  }
+
+  function writeRaceSelection(next) {
+    const current = readRaceSelection();
+    const state = { ...current, ...next, updatedAt: new Date().toISOString() };
+    try {
+      sessionStorage.setItem(RACE_SELECTION_KEY, JSON.stringify(state));
+    } catch (error) {
+      console.warn("レース選択状態を保存できませんでした。", error);
+    }
+    return state;
+  }
+
+  window.ZENRACE_VOTE_RACE_STATE = {
+    storageKey: RACE_SELECTION_KEY,
+    defaultRaceKey: DEFAULT_RACE_KEY,
+    read: readRaceSelection,
+    write: writeRaceSelection,
+  };
+
+  const persistCurrentRaceSelection = () => {
+    const current = readRaceSelection();
+    const activeRace = document.querySelector(".race-tab.active[data-race-key]")?.dataset.raceKey;
+    const key = activeRace || current.key || DEFAULT_RACE_KEY;
+    writeRaceSelection({
+      key,
+      venue: key.split("-")[0] || current.venue || "浜松",
+      venueOnly: Boolean(current.venueOnly),
+    });
+  };
+  window.addEventListener("pagehide", persistCurrentRaceSelection);
+  document.addEventListener("zenrace:before-vote-navigation", persistCurrentRaceSelection);
+
   class ZenraceRaceInfo extends HTMLElement {
     connectedCallback() {
       if (this.dataset.ready === "true") return;
@@ -40,21 +89,34 @@
         </section>`;
 
       const filterToggle = this.querySelector('.race-info-filter-toggle');
-      let venueOnly = false;
-      filterToggle?.addEventListener('click', () => {
-        venueOnly = !venueOnly;
-        filterToggle.setAttribute('aria-pressed', String(venueOnly));
-        filterToggle.setAttribute('aria-label', venueOnly ? '全開催場のレースを表示' : '浜松のレースだけ表示');
-        filterToggle.classList.toggle('is-active', venueOnly);
+      const storedRaceSelection = readRaceSelection();
+      let venueOnly = Boolean(storedRaceSelection.venueOnly && storedRaceSelection.venue === '浜松');
+
+      const syncFilterToggle = () => {
+        filterToggle?.setAttribute('aria-pressed', String(venueOnly));
+        filterToggle?.setAttribute('aria-label', venueOnly ? '全開催場のレースを表示' : '浜松のレースだけ表示');
+        filterToggle?.classList.toggle('is-active', venueOnly);
+      };
+
+      const applyVenueFilter = () => {
+        const detail = { venue: '浜松', enabled: venueOnly, raceKey: DEFAULT_RACE_KEY };
         const raceSwitch = document.querySelector('zenrace-race-switch');
         if (raceSwitch && typeof raceSwitch.setVenueFilter === 'function') {
-          raceSwitch.setVenueFilter('浜松', venueOnly);
-        } else {
-          document.dispatchEvent(new CustomEvent('zenrace:race-venue-filter', {
-            detail: { venue: '浜松', enabled: venueOnly },
-          }));
+          raceSwitch.setVenueFilter(detail.venue, detail.enabled);
         }
+        document.dispatchEvent(new CustomEvent('zenrace:race-venue-filter', { detail }));
+      };
+
+      syncFilterToggle();
+      filterToggle?.addEventListener('click', () => {
+        venueOnly = !venueOnly;
+        writeRaceSelection({ key: DEFAULT_RACE_KEY, venue: '浜松', venueOnly });
+        syncFilterToggle();
+        applyVenueFilter();
       });
+
+      requestAnimationFrame(() => requestAnimationFrame(applyVenueFilter));
+      window.addEventListener('pageshow', applyVenueFilter);
 
       const marqueeLines = [...this.querySelectorAll('[data-race-info-marquee]')];
       const updateMarquees = () => {

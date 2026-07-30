@@ -674,3 +674,19 @@ html,body{
 .detail-odds .confirm-odds-low{color:#d70018!important}
 .detail-odds .confirm-odds-high{color:#0068b7!important}
 .detail-odds-range{color:inherit}
+
+.position-row-odds-vote{
+  grid-template-columns:1fr;
+}
+.position-odds-vote{
+  display:flex;
+  align-items:center;
+  min-height:35px;
+  padding:4px 14px;
+  color:#343941;
+  font-size:13px;
+  font-weight:900;
+}
+@media(max-width:430px){
+  .position-odds-vote{padding-inline:12px;font-size:12px}
+}

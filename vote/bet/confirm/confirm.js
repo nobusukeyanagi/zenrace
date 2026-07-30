@@ -11,7 +11,7 @@
   const grandProfit = document.getElementById("grand-profit");
 
   const BET_ORDER = ["3連単", "3連複", "2連単", "2連複", "ワイド", "単勝"];
-  const state = { groups: [], selections: { first: [], second: [], third: [], box: [] }, multiReverse: false };
+  const state = { groups: [], selections: { first: [], second: [], third: [], box: [] }, multiReverse: false, source: "bet" };
 
   function permutations(values, length) {
     const result = [];
@@ -114,6 +114,7 @@
           removedCount,
           unit: Math.min(99, Math.max(1, Number(group.unit) || 1)),
           expanded: Boolean(group.expanded),
+          directSelection: Boolean(group.directSelection || payload?.source === "odds"),
           entries,
         };
       })
@@ -138,6 +139,9 @@
   }
 
   function positionRows(group) {
+    if (state.source === "odds" || group.directSelection) {
+      return `<div class="position-row position-row-odds-vote"><span class="position-odds-vote">オッズ投票</span></div>`;
+    }
     const { type, selections } = group;
     const entryCars = numericCars(group.entries.flatMap((entry) => entry.cars));
     const carsAt = (position) => numericCars(group.entries.map((entry) => entry.cars[position]));
@@ -339,6 +343,7 @@
   function persistState() {
     const payload = {
       version: 1,
+      source: state.source,
       updatedAt: new Date().toISOString(),
       selections: state.selections,
       multiReverse: state.multiReverse,
@@ -349,6 +354,7 @@
         removedCount: group.entries.filter((entry) => entry.units === 0).length,
         unit: group.unit,
         expanded: group.expanded,
+        directSelection: group.directSelection,
         entries: group.entries.map((entry) => ({
           cars: entry.cars.slice(),
           rank: entry.rank,
@@ -463,6 +469,55 @@
     });
   }
 
+
+  const HAMAMATSU_RACES = [
+    ["1R","10:37"],["2R","11:03"],["3R","11:29"],["4R","11:55"],
+    ["5R","12:23"],["6R","12:54"],["7R","13:25"],["8R","13:57"],
+    ["9R","14:33"],["10R","15:11"],["11R","15:51"],["12R","16:45"]
+  ];
+
+  function showRaceListToast() {
+    let toast = document.querySelector(".bet-race-list-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.className = "bet-race-list-toast";
+      toast.textContent = "遷移先ページは準備中です";
+      toast.setAttribute("role", "status");
+      document.body.appendChild(toast);
+    }
+    toast.classList.remove("is-visible");
+    requestAnimationFrame(() => toast.classList.add("is-visible"));
+    clearTimeout(showRaceListToast.timer);
+    showRaceListToast.timer = setTimeout(() => toast.classList.remove("is-visible"), 1800);
+  }
+
+  function initHamamatsuRaceList() {
+    const bar = document.querySelector(".delca-bar");
+    const raceList = bar?.querySelector("[data-bet-race-list]");
+    if (!bar || !raceList) return;
+    raceList.innerHTML = HAMAMATSU_RACES.map(([race, time]) => {
+      const isCurrent = race === "12R";
+      return `<button class="race-tab sport-auto${isCurrent ? " featured-race active" : ""}" type="button" data-race="${race}" data-race-venue="浜松"${isCurrent ? ' aria-current="true"' : ""}><strong><span class="race-tab-name">浜松</span><span class="race-tab-icon auto" aria-hidden="true"></span></strong><span>${race} ${time}</span></button>`;
+    }).join("");
+    raceList.querySelectorAll(".race-tab").forEach((tab) => tab.addEventListener("click", () => {
+      if (tab.dataset.race !== "12R") showRaceListToast();
+    }));
+    document.addEventListener("zenrace:race-venue-filter", (event) => {
+      const open = Boolean(event.detail?.enabled && event.detail?.venue === "浜松");
+      bar.classList.toggle("is-race-list-open", open);
+      raceList.hidden = !open;
+      if (open) {
+        const active = raceList.querySelector(".race-tab.active");
+        requestAnimationFrame(() => {
+          if (!active) return;
+          const leftPadding = Number.parseFloat(getComputedStyle(raceList).paddingLeft) || 0;
+          const maxScroll = Math.max(0, raceList.scrollWidth - raceList.clientWidth);
+          raceList.scrollLeft = Math.min(maxScroll, Math.max(0, active.offsetLeft - leftPadding));
+        });
+      }
+    });
+  }
+
   submitButton.addEventListener("click", () => {
     if (submitButton.disabled) return;
     submitButton.disabled = true;
@@ -477,7 +532,10 @@
     }, 120);
   });
 
+  initHamamatsuRaceList();
+
   const initialPayload = readPayload();
+  state.source = initialPayload?.source === "odds" ? "odds" : "bet";
   state.selections = storedSelections(initialPayload);
   state.multiReverse = Boolean(initialPayload?.multiReverse);
   state.groups = normalizePayload(initialPayload);
