@@ -9,12 +9,36 @@
   const profitElement = document.getElementById("inquiry-profit");
 
   const DEFINITIONS = [
-    { type: "3連単", combinations: [[3,1,4],[3,1,7],[3,4,1],[3,4,7],[3,7,1],[3,7,4]] },
-    { type: "3連複", combinations: [[1,3,4],[1,3,7],[3,4,7]] },
-    { type: "2連単", combinations: [[3,1],[3,4],[3,7]] },
-    { type: "2連複", combinations: [[1,3],[3,4],[3,7]] },
-    { type: "ワイド", combinations: [[1,3],[3,4],[3,7]] },
-    { type: "単勝", combinations: [[3]] },
+    {
+      type: "3連単",
+      combinations: [[3,1,4],[3,1,7],[3,4,1],[3,4,7],[3,7,1],[3,7,4]],
+      formation: [["1着",[3]],["2着",[1,4,7]],["3着",[1,4,7]]],
+    },
+    {
+      type: "3連複",
+      combinations: [[1,3,4],[1,3,7],[3,4,7]],
+      formation: [["1車目",[3]],["2車目",[1,4,7]],["3車目",[1,4,7]]],
+    },
+    {
+      type: "2連単",
+      combinations: [[3,1],[3,4],[3,7]],
+      formation: [["1着",[3]],["2着",[1,4,7]]],
+    },
+    {
+      type: "2連複",
+      combinations: [[1,3],[3,4],[3,7]],
+      formation: [["1車目",[3]],["2車目",[1,4,7]]],
+    },
+    {
+      type: "ワイド",
+      combinations: [[1,3],[3,4],[3,7]],
+      formation: [["1車目",[3]],["2車目",[1,4,7]]],
+    },
+    {
+      type: "単勝",
+      combinations: [[3]],
+      formation: [["1着",[3]]],
+    },
   ];
 
   function formatNumber(value) {
@@ -53,6 +77,14 @@
   function combinationHtml(type, cars) {
     const separator = separatorFor(type);
     return cars.map((car, index) => `${index && separator ? `<span class="inquiry-separator" aria-hidden="true">${separator}</span>` : ""}${carBadge(car)}`).join("");
+  }
+
+  function formationHtml(rows) {
+    return rows.map(([label, cars]) => `
+      <div class="inquiry-position-row">
+        <span class="inquiry-position-label">${label}</span>
+        <span class="inquiry-position-cars">${cars.map(carBadge).join("")}</span>
+      </div>`).join("");
   }
 
   function oddsRange(record, type) {
@@ -105,6 +137,7 @@
     });
     return {
       type: definition.type,
+      formation: definition.formation,
       entries: records,
       pointCount: records.length,
       subtotal: records.length * 100,
@@ -130,6 +163,7 @@
           <div class="inquiry-wager-title"><strong>${group.type}</strong><span>${group.pointCount}点</span></div>
           <div class="inquiry-wager-subtotal"><span>小計</span><strong>${formatNumber(group.subtotal)}pt</strong></div>
         </div>
+        <div class="inquiry-position-table">${formationHtml(group.formation)}</div>
         <button class="inquiry-expand-button" type="button" data-toggle-details="${index}" aria-expanded="${group.expanded}">${group.expanded ? "閉じる" : "買い目詳細"}</button>
         <div class="inquiry-details" data-details="${index}" ${group.expanded ? "" : "hidden"}>${detailRows(group)}</div>
       </section>`;

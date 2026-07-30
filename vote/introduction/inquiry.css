@@ -359,3 +359,133 @@ html,body,button,input,select,textarea,table{
   pointer-events:none!important;
 }
 
+
+/* v4: match the wager cards to the confirmation page, restore formation rows, and compact detail rows to the selection-list height. */
+.inquiry-wager-card{
+  border:1px solid rgba(71,48,8,.50);
+  border-radius:13px;
+  color:#17191d;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(69,43,4,.22),inset 0 1px 0 rgba(255,255,255,.75);
+}
+.inquiry-wager-card + .inquiry-wager-card{margin-top:10px}
+.inquiry-wager-head{
+  min-height:52px;
+  padding:7px 12px 6px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:12px;
+  border-bottom:2px solid #4d5055;
+  background:linear-gradient(180deg,#fff,#fafafa);
+}
+.inquiry-wager-title,
+.inquiry-wager-subtotal{
+  display:flex;
+  align-items:baseline;
+  gap:7px;
+  min-width:0;
+  color:#17191d;
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+.inquiry-wager-title strong,
+.inquiry-wager-title span{
+  color:#17191d;
+  font-size:17px;
+  font-weight:1000;
+  line-height:1.15;
+}
+.inquiry-wager-subtotal{justify-content:flex-end}
+.inquiry-wager-subtotal span{
+  color:#6d7480;
+  font-size:13px;
+  font-weight:750;
+}
+.inquiry-wager-subtotal strong{
+  color:#17191d;
+  font-size:17px;
+  font-weight:1000;
+  line-height:1.15;
+}
+.inquiry-position-table{background:#fff}
+.inquiry-position-row{
+  min-height:36px;
+  display:grid;
+  grid-template-columns:58px minmax(0,1fr);
+  align-items:center;
+  border-bottom:1px solid #63666b;
+}
+.inquiry-position-label{
+  padding-left:14px;
+  color:#5f6670;
+  font-size:13px;
+  font-weight:800;
+}
+.inquiry-position-cars{
+  min-height:35px;
+  padding:4px 8px;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:2px;
+}
+.inquiry-position-cars .inquiry-car{margin:0 1px}
+.inquiry-expand-button{
+  width:calc(100% - 24px);
+  height:42px;
+  margin:2px 12px 10px;
+  padding:0 48px;
+  border:0;
+  border-radius:22px;
+  color:#fff;
+  background:#282a2e;
+  font-size:14px;
+  font-weight:1000;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+}
+.inquiry-details{
+  border-top:1px solid #d9dce1;
+  background:#fff;
+}
+.inquiry-detail-row{
+  height:40px;
+  min-height:40px;
+  padding:5px 9px 5px 12px;
+  grid-template-columns:minmax(118px,1fr) minmax(82px,.72fr) 72px;
+  gap:8px;
+  border-bottom:1px solid #e1e3e7;
+  font-size:14px;
+  font-weight:750;
+  line-height:1.1;
+}
+.inquiry-combination{flex-wrap:nowrap}
+.inquiry-odds,
+.inquiry-points{
+  color:#30343a;
+  font-size:14px;
+  font-weight:850;
+  line-height:1.1;
+}
+@media(max-width:430px){
+  .inquiry-wager-head{min-height:52px;padding:7px 10px 6px;gap:8px}
+  .inquiry-wager-title strong,
+  .inquiry-wager-title span{font-size:16px}
+  .inquiry-wager-subtotal span{font-size:12px}
+  .inquiry-wager-subtotal strong{font-size:16px}
+  .inquiry-detail-row{
+    height:38px;
+    min-height:38px;
+    padding:5px 8px;
+    grid-template-columns:minmax(105px,1fr) minmax(70px,.68fr) 62px;
+    gap:6px;
+    font-size:13px;
+  }
+  .inquiry-detail-row .inquiry-car{width:21px;height:21px;flex-basis:21px;font-size:14px}
+  .inquiry-odds,.inquiry-points{font-size:13px}
+}
+@media(max-width:350px){
+  .inquiry-wager-title strong,
+  .inquiry-wager-title span{font-size:15px}
+  .inquiry-detail-row{grid-template-columns:minmax(96px,1fr) minmax(64px,.62fr) 58px;gap:5px}
+}
