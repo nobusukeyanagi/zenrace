@@ -98,6 +98,16 @@
   const stage = document.querySelector("[data-zenrace-pinch-stage]");
   if (!shell || !sizer || !stage) return;
 
+  const normalizeShellScrollTop = () => {
+    const currentTop = Number(shell.scrollTop) || 0;
+    // iOS Safari can leave a 1–2px residual offset in a nested scroll area
+    // after custom elements finish rendering. Snap only tiny offsets so
+    // genuine user scrolling is preserved.
+    if (currentTop > -3 && currentTop < 3) {
+      shell.scrollTop = 0;
+    }
+  };
+
   let baseWidth = 0;
   const measure = (resetWidth = false) => {
     if (resetWidth || !baseWidth) baseWidth = shell.clientWidth;
@@ -108,7 +118,9 @@
       sizer.style.width = `${Math.max(shell.clientWidth, contentWidth)}px`;
       sizer.style.height = `${Math.max(shell.clientHeight, contentHeight)}px`;
       shell.scrollLeft = Math.min(shell.scrollLeft, Math.max(0, sizer.scrollWidth - shell.clientWidth));
-      shell.scrollTop = Math.min(shell.scrollTop, Math.max(0, sizer.scrollHeight - shell.clientHeight));
+      const maxScrollTop = Math.max(0, sizer.scrollHeight - shell.clientHeight);
+      shell.scrollTop = Math.min(Math.max(0, shell.scrollTop), maxScrollTop);
+      normalizeShellScrollTop();
     });
   };
 
@@ -117,6 +129,18 @@
     observer.observe(stage);
   }
   window.addEventListener("resize", () => measure(true), { passive: true });
-  window.addEventListener("load", () => measure(true), { once: true });
+  window.addEventListener("load", () => {
+    measure(true);
+    requestAnimationFrame(() => {
+      normalizeShellScrollTop();
+      requestAnimationFrame(normalizeShellScrollTop);
+    });
+  }, { once: true });
+  window.addEventListener("pageshow", () => {
+    requestAnimationFrame(() => {
+      normalizeShellScrollTop();
+      requestAnimationFrame(normalizeShellScrollTop);
+    });
+  }, { passive: true });
   measure(true);
 })();
