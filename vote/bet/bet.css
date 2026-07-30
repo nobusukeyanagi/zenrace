@@ -480,3 +480,19 @@
     height:42px;
   }
 }
+
+/* v19: keep car/rider columns fixed, narrow the box column to about 80% of its former width, and distribute the freed width evenly across 1st-3rd. */
+.bet-table col.col-car{width:38px}
+.bet-table col.col-rider{width:116px}
+.bet-table col.col-pick{width:calc(26.666667% - 41.066667px)}
+.bet-table col.col-box{width:calc(20% - 30.8px)}
+.selection-row{
+  grid-template-columns:68px minmax(0,1fr) 55px calc(26.666667% - 41.066667px) calc(20% - 30.8px);
+}
+@media(max-width:430px){
+  .bet-table col.col-car{width:38px}
+  .bet-table col.col-rider{width:116px}
+  .selection-row{
+    grid-template-columns:64px minmax(0,1fr) 48px calc(26.666667% - 41.066667px) calc(20% - 30.8px);
+  }
+}
