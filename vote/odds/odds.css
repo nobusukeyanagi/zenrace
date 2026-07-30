@@ -950,3 +950,13 @@ button,select{font:inherit}
   line-height:1;
 }
 .odds-wide-popular-upper span{color:inherit!important}
+
+
+/* v26: color every displayed odds value by threshold. */
+.odds-over-thousand{color:#0068b7!important}
+.odds-wide-cell .odds-under-ten,
+.odds-wide-popular .odds-under-ten,
+.odds-wide-cell .odds-under-ten.odds-wide-upper{color:#d70018!important}
+.odds-wide-cell .odds-over-thousand,
+.odds-wide-popular .odds-over-thousand,
+.odds-wide-cell .odds-over-thousand.odds-wide-upper{color:#0068b7!important}

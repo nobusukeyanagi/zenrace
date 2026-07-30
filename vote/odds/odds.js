@@ -60,9 +60,18 @@
     return cars.map((car, index) => `${index && separator ? `<span class="odds-combination-separator" aria-hidden="true">${separator}</span>` : ""}${carBadge(car)}`).join("");
   }
 
+  function oddsValueClass(value) {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return "";
+    if (number < 10) return " odds-under-ten";
+    if (number >= 1000) return " odds-over-thousand";
+    return "";
+  }
+
   function oddsText(type, item) {
     if (type === "ワイド") {
-      return `<span class="odds-wide-popular"><span class="odds-wide-popular-lower">${formatOdds(item.odds[0])}</span><small class="odds-wide-popular-upper"><span class="odds-wide-separator">〜</span><span>${formatOdds(item.odds[1])}</span></small></span>`;
+      const values = Array.isArray(item.odds) ? item.odds : [item.odds, item.odds];
+      return `<span class="odds-wide-popular"><span class="odds-wide-popular-lower${oddsValueClass(values[0])}">${formatOdds(values[0])}</span><small class="odds-wide-popular-upper"><span class="odds-wide-separator">〜</span><span class="${oddsValueClass(values[1]).trim()}">${formatOdds(values[1])}</span></small></span>`;
     }
     return formatOdds(item.odds);
   }
@@ -172,8 +181,8 @@
   }
 
   function oddsClass(value) {
-    const base = Array.isArray(value) ? Number(value[0]) : Number(value);
-    return Number.isFinite(base) && base < 10 ? " odds-under-ten" : "";
+    const base = Array.isArray(value) ? value[0] : value;
+    return oddsValueClass(base);
   }
 
   function matrixCell(content, className="") {
@@ -353,7 +362,7 @@
           : `${rankTone}${type === "ワイド" ? " odds-wide-cell" : redTone}${duplicateTone}`;
         let content = "";
         if (!unavailable && type === "ワイド" && Array.isArray(value)) {
-          content = `<span class="odds-wide-value"><span>${formatOdds(value[0])}</span><small><span class="odds-wide-separator">〜</span><span class="odds-wide-upper">${formatOdds(value[1])}</span></small></span>`;
+          content = `<span class="odds-wide-value"><span class="${oddsValueClass(value[0]).trim()}">${formatOdds(value[0])}</span><small><span class="odds-wide-separator">〜</span><span class="odds-wide-upper${oddsValueClass(value[1])}">${formatOdds(value[1])}</span></small></span>`;
         } else if (!unavailable) {
           content = formatOdds(value);
         }

@@ -875,3 +875,9 @@
   background:transparent!important;
   box-shadow:none!important;
 }
+
+
+/* v38: color selection-list odds by threshold. */
+.selection-odds .bet-odds-low{color:#d70018!important}
+.selection-odds .bet-odds-high{color:#0068b7!important}
+.selection-odds-range{color:inherit}

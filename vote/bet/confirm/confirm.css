@@ -668,3 +668,9 @@ html,body{
   .wager-unit .group-point-stepper{grid-template-columns:31px auto auto 31px;gap:3px}
   .point-stepper-each{font-size:11px}
 }
+
+
+/* v18: color detailed odds by threshold. */
+.detail-odds .confirm-odds-low{color:#d70018!important}
+.detail-odds .confirm-odds-high{color:#0068b7!important}
+.detail-odds-range{color:inherit}

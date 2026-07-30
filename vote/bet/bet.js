@@ -97,6 +97,16 @@
     if(!Number.isFinite(number)) return "－";
     return number>=1000?String(Math.round(number)):number.toFixed(1);
   }
+  function oddsToneClass(value){
+    const number=Number(value);
+    if(!Number.isFinite(number)) return "";
+    if(number<10) return " bet-odds-low";
+    if(number>=1000) return " bet-odds-high";
+    return "";
+  }
+  function oddsValueHtml(value){
+    return `<span class="${oddsToneClass(value).trim()}">${formatOdds(value)}</span>`;
+  }
   function selectionOdds(type,record){
     if(!record) return "－";
     if(type==="ワイド"){
@@ -106,9 +116,9 @@
         .sort((a,b)=>a-b);
       if(!values.length) return "－";
       const min=values[0],max=values[values.length-1];
-      return `${formatOdds(min)}～${formatOdds(max)}`;
+      return `${oddsValueHtml(min)}<span class="selection-odds-range">～</span>${oddsValueHtml(max)}`;
     }
-    return formatOdds(record.odds);
+    return oddsValueHtml(record.odds);
   }
   function carBadge(car){return `<span class="selection-car car-${car}">${car}</span>`;}
   function combinationSeparator(type){

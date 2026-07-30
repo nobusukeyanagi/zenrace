@@ -190,10 +190,22 @@
     return [Number.isFinite(value) ? value : 0, Number.isFinite(value) ? value : 0];
   }
 
+  function oddsToneClass(value) {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return "";
+    if (number < 10) return " confirm-odds-low";
+    if (number >= 1000) return " confirm-odds-high";
+    return "";
+  }
+
+  function oddsValueHtml(value) {
+    return `<span class="${oddsToneClass(value).trim()}">${formatOddsValue(value)}</span>`;
+  }
+
   function displayOdds(entry, type) {
     const [min, max] = oddsRange(entry, type);
-    if (type === "ワイド" && min !== max) return `${formatOddsValue(min)}～${formatOddsValue(max)}`;
-    return formatOddsValue(min);
+    if (type === "ワイド" && min !== max) return `${oddsValueHtml(min)}<span class="detail-odds-range">～</span>${oddsValueHtml(max)}`;
+    return oddsValueHtml(min);
   }
 
   function signedMoney(value) {

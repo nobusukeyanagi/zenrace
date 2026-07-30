@@ -569,3 +569,9 @@ html,body,button,input,select,textarea,table{
 @media(max-width:430px){
   .vote-received-popup{width:200px;height:200px}
 }
+
+
+/* v8: color inquiry odds by threshold. */
+.inquiry-odds .inquiry-odds-low{color:#d70018!important}
+.inquiry-odds .inquiry-odds-high{color:#0068b7!important}
+.inquiry-odds-range{color:inherit}

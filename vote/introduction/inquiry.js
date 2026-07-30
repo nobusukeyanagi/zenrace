@@ -99,10 +99,22 @@
     return [Number.isFinite(value) ? value : 0, Number.isFinite(value) ? value : 0];
   }
 
+  function oddsToneClass(value) {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return "";
+    if (number < 10) return " inquiry-odds-low";
+    if (number >= 1000) return " inquiry-odds-high";
+    return "";
+  }
+
+  function oddsValueHtml(value) {
+    return `<span class="${oddsToneClass(value).trim()}">${formatOdds(value)}</span>`;
+  }
+
   function displayOdds(record, type) {
     const [min, max] = oddsRange(record, type);
-    if (type === "ワイド" && min !== max) return `${formatOdds(min)}～${formatOdds(max)}`;
-    return formatOdds(min);
+    if (type === "ワイド" && min !== max) return `${oddsValueHtml(min)}<span class="inquiry-odds-range">～</span>${oddsValueHtml(max)}`;
+    return oddsValueHtml(min);
   }
 
   function rangeText(min, max, suffix) {
