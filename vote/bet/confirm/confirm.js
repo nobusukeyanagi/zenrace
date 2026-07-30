@@ -126,6 +126,17 @@
     return `<span class="confirm-car car-${car}">${car}</span>`;
   }
 
+  function combinationSeparator(type) {
+    if (["3連単", "2連単"].includes(type)) return "-";
+    if (["3連複", "2連複", "ワイド"].includes(type)) return "=";
+    return "";
+  }
+
+  function detailCombinationHtml(type, cars) {
+    const separator = combinationSeparator(type);
+    return cars.map((car, index) => `${index && separator ? `<span class="detail-combination-separator" aria-hidden="true">${separator}</span>` : ""}${carBadge(car)}`).join("");
+  }
+
   function positionRows(group) {
     const { type, selections } = group;
     const entryCars = numericCars(group.entries.flatMap((entry) => entry.cars));
@@ -247,7 +258,7 @@
       return `
         <div class="detail-row${entry.units === 0 ? " is-zero" : ""}" data-entry-index="${entryIndex}">
           <div>
-            <div class="detail-combo">${entry.cars.map(carBadge).join("")}</div>
+            <div class="detail-combo">${detailCombinationHtml(group.type, entry.cars)}</div>
             <div class="detail-odds">${displayOdds(entry, group.type)}</div>
           </div>
           <div class="detail-value">

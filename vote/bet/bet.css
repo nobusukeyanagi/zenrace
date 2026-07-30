@@ -569,3 +569,18 @@
   .selection-meta-row,
   .selection-meta-row > span{font-size:22px}
 }
+
+/* v25: show wager-appropriate separators between car badges in the selection list. */
+.selection-combination-separator{
+  display:inline-block;
+  flex:0 0 17px;
+  min-width:17px;
+  color:#66707c;
+  font-size:14px;
+  font-weight:900;
+  line-height:1;
+  text-align:center;
+}
+@media(max-width:430px){
+  .selection-combination-separator{flex-basis:13px;min-width:13px;font-size:12px}
+}

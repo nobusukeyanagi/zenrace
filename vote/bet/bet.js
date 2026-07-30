@@ -106,6 +106,15 @@
     return formatOdds(record.odds);
   }
   function carBadge(car){return `<span class="selection-car car-${car}">${car}</span>`;}
+  function combinationSeparator(type){
+    if(["3連単","2連単"].includes(type)) return "-";
+    if(["3連複","2連複","ワイド"].includes(type)) return "=";
+    return "";
+  }
+  function selectionCombinationHtml(type,cars){
+    const separator=combinationSeparator(type);
+    return cars.map((car,index)=>`${index&&separator?`<span class="selection-combination-separator" aria-hidden="true">${separator}</span>`:""}${carBadge(car)}`).join("");
+  }
   function selectionKey(type,cars){return `${type}:${cars.join("-")}`;}
   function selectionGroups(){
     return BET_TYPE_ORDER.filter(type=>activeTypes.has(type)).map(type=>{
@@ -119,7 +128,7 @@
     const total=groups.reduce((sum,group)=>sum+group.entries.length,0);
     count.textContent=`${total}点`;confirm.hidden=total===0;
     if(!total){list.innerHTML='<div class="selection-empty">買い目を選択してください</div>';return;}
-    list.innerHTML=groups.filter(group=>group.entries.length).map(group=>`<section class="selection-group" data-selection-type="${group.type}" aria-label="${group.type}の選択一覧">${group.entries.map(entry=>`<div class="selection-row" data-selection-key="${entry.key}"><span class="selection-type">${entry.type}</span><span class="selection-combo">${entry.cars.map(carBadge).join("")}</span><span class="selection-odds">${selectionOdds(entry.type,entry.record)}</span><span class="selection-popularity">${entry.record?`${entry.record.rank}人気`:"－"}</span><button class="selection-remove" type="button" data-remove-key="${entry.key}">消</button></div>`).join("")}</section>`).join("");
+    list.innerHTML=groups.filter(group=>group.entries.length).map(group=>`<section class="selection-group" data-selection-type="${group.type}" aria-label="${group.type}の選択一覧">${group.entries.map(entry=>`<div class="selection-row" data-selection-key="${entry.key}"><span class="selection-type">${entry.type}</span><span class="selection-combo">${selectionCombinationHtml(entry.type,entry.cars)}</span><span class="selection-odds">${selectionOdds(entry.type,entry.record)}</span><span class="selection-popularity">${entry.record?`${entry.record.rank}人気`:"－"}</span><button class="selection-remove" type="button" data-remove-key="${entry.key}">消</button></div>`).join("")}</section>`).join("");
     list.querySelectorAll("[data-remove-key]").forEach(button=>button.addEventListener("click",()=>{
       removedSelections.add(button.dataset.removeKey);
       renderSelections();

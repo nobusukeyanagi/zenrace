@@ -813,3 +813,21 @@ button,select{font:inherit}
 @media(max-width:430px){
   .odds-meta-row{font-size:22px}
 }
+
+/* v19: show wager-appropriate separators between car badges in the popular-order list. */
+.odds-combination-separator{
+  display:inline-block;
+  flex:0 0 17px;
+  min-width:17px;
+  color:#66707c;
+  font-size:14px;
+  font-weight:900;
+  line-height:1;
+  text-align:center;
+}
+@media(max-width:430px){
+  .odds-combination-separator{flex-basis:13px;min-width:13px;font-size:12px}
+}
+@media(max-width:360px){
+  .odds-combination-separator{flex-basis:11px;min-width:11px;font-size:11px}
+}

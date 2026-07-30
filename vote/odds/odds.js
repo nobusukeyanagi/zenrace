@@ -49,8 +49,15 @@
     return number.toFixed(1);
   }
 
+  function combinationSeparator(type) {
+    if (["3連単", "2連単"].includes(type)) return "-";
+    if (["3連複", "2連複", "ワイド"].includes(type)) return "=";
+    return "";
+  }
+
   function combinationHtml(type, cars) {
-    return cars.map(car => carBadge(car)).join("");
+    const separator = combinationSeparator(type);
+    return cars.map((car, index) => `${index && separator ? `<span class="odds-combination-separator" aria-hidden="true">${separator}</span>` : ""}${carBadge(car)}`).join("");
   }
 
   function oddsText(type, item) {
