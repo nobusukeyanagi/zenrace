@@ -84,6 +84,16 @@
     };
   }
 
+  function compareEntriesByCars(a, b) {
+    const maxLength = Math.max(a.cars.length, b.cars.length);
+    for (let index = 0; index < maxLength; index += 1) {
+      const aCar = a.cars[index] ?? Number.POSITIVE_INFINITY;
+      const bCar = b.cars[index] ?? Number.POSITIVE_INFINITY;
+      if (aCar !== bCar) return aCar - bCar;
+    }
+    return 0;
+  }
+
   function normalizePayload(payload) {
     const selections = {
       first: numericCars(payload?.selections?.first),
@@ -100,7 +110,9 @@
           third: numericCars(group?.selections?.third ?? selections.third),
           box: numericCars(group?.selections?.box ?? selections.box),
         };
+        const directSelection = Boolean(group.directSelection || payload?.source === "odds");
         const entries = (group.entries || []).map((entry) => normalizeEntry(group.type, entry)).filter((entry) => entry.cars.length);
+        if (directSelection) entries.sort(compareEntriesByCars);
         const generatedCount = Math.max(entries.length, Number(group.generatedCount) || 0);
         const removedCount = Math.max(
           entries.filter((entry) => entry.units === 0).length,
@@ -114,7 +126,7 @@
           removedCount,
           unit: Math.min(99, Math.max(1, Number(group.unit) || 1)),
           expanded: Boolean(group.expanded),
-          directSelection: Boolean(group.directSelection || payload?.source === "odds"),
+          directSelection,
           entries,
         };
       })
