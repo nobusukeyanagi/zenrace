@@ -223,3 +223,156 @@
     init();
   }
 })();
+
+(() => {
+  "use strict";
+
+  const TERM_HELP = {
+    car: {
+      title: "車番",
+      description: "出走する競走車の番号です。1～8号車は、白・黒・赤・青・黄・緑・橙・桃の車番色で表示します。",
+    },
+    rider: {
+      title: "選手",
+      description: "選手名と、所属するレース場、期別、年齢を表示します。年齢の後ろにある「♥」は女子選手を示します。",
+    },
+    photo: {
+      title: "写真",
+      description: "出走選手の顔写真です。選手名や所属情報と合わせて、出走する選手を確認できます。",
+    },
+    support: {
+      title: "支持率",
+      description: "3連単の全投票のうち、その車番を含む買い目が占める割合です。人気順位も併記します。1票に3車が含まれるため、全選手の合計は100％になりません。",
+    },
+    "st-h": {
+      title: "ST・H",
+      description: "STはスタートタイミングで、ST10は0.10秒を表します。一般に数値が小さいほど発走合図に近いスタートです。Hはスタート位置のハンデ距離（m）です。",
+    },
+    trial: {
+      title: "試走T",
+      description: "試走で500mを全力走行したタイムを5で割った、100m当たりの平均秒数です。小さいほど速いタイムです。偏差は、良走路10走の平均競走Tと平均試走Tの差です。",
+    },
+    good10: {
+      title: "良10走T",
+      description: "直近90日以内の良走路における正常競走の近10走を対象に、平均競走タイムと最高競走タイムを表示します。小さいほど速いタイムです。",
+    },
+    recent10: {
+      title: "近10走着順",
+      description: "走路状況を問わず、直近90日以内に走った最大10走の着順を新しい順に表示します。1～3着は金・銀・銅系の背景で強調します。",
+    },
+    win: {
+      title: "勝率",
+      description: "近180日の競走成立回数に対する1着回数の割合です。良走路と湿走路に分けて表示します。",
+    },
+    quinella: {
+      title: "2連対率",
+      description: "近180日の競走成立回数に対する、1着または2着になった回数の割合です。良走路と湿走路に分けて表示します。",
+    },
+    place: {
+      title: "3連対率",
+      description: "近180日の競走成立回数に対する、1着・2着・3着になった回数の割合です。良走路と湿走路に分けて表示します。",
+    },
+    recent180: {
+      title: "近180日成績",
+      description: "直近180日の着回数を、良走路・湿走路別に「1着－2着－3着－着外／出走数」の順で表示します。",
+    },
+    year: {
+      title: "今年",
+      description: "今年の優勝回数と、優勝戦へ進出した回数（優出）を表示します。",
+    },
+    career: {
+      title: "通算",
+      description: "選手デビュー後から現在までの通算優勝回数を表示します。",
+    },
+    rank: {
+      title: "ランク",
+      description: "競走成績に基づく全国ランクです。S級・A級・B級と級内順位を表示し、2行目には前期ランクを併記します。",
+    },
+    points: {
+      title: "審査P",
+      description: "適用ランクを決める審査ポイントです。審査期間内の着順位やタイム順位などを得点化した競走成績を基に算出されます。",
+    },
+    machine: {
+      title: "車名",
+      description: "選手が所有する競走車の呼名と、競走車の級・排気量を表示します。例の「1級 600cc」は1級車の600ccエンジンを示します。",
+    },
+  };
+
+  const initRacecardTermHelp = () => {
+    const overlay = document.querySelector("[data-racecard-term-overlay]");
+    const title = overlay?.querySelector("[data-racecard-term-title]");
+    const description = overlay?.querySelector("[data-racecard-term-description]");
+    const closeButton = overlay?.querySelector("[data-racecard-term-close]");
+    const raceInfo = document.querySelector("zenrace-race-info .shared-race-info");
+    const stage = document.querySelector(".zenrace-content-stage");
+    const triggers = [...document.querySelectorAll("[data-racecard-term]")];
+    if (!overlay || !title || !description || !closeButton || !raceInfo || !stage || !triggers.length) return;
+
+    let activeTrigger = null;
+    let geometryFrame = 0;
+
+    const syncGeometry = () => {
+      geometryFrame = 0;
+      const infoRect = raceInfo.getBoundingClientRect();
+      const stageRect = stage.getBoundingClientRect();
+      overlay.style.left = `${infoRect.left - stageRect.left}px`;
+      overlay.style.top = `${infoRect.top - stageRect.top}px`;
+      overlay.style.width = `${infoRect.width}px`;
+      overlay.style.height = `${infoRect.height}px`;
+    };
+
+    const queueGeometry = () => {
+      if (geometryFrame) return;
+      geometryFrame = window.requestAnimationFrame(syncGeometry);
+    };
+
+    const close = ({ restoreFocus = false } = {}) => {
+      if (overlay.hidden) return;
+      overlay.hidden = true;
+      triggers.forEach((trigger) => trigger.setAttribute("aria-expanded", "false"));
+      const previousTrigger = activeTrigger;
+      activeTrigger = null;
+      if (restoreFocus) previousTrigger?.focus({ preventScroll: true });
+    };
+
+    const open = (trigger) => {
+      const help = TERM_HELP[trigger.dataset.racecardTerm];
+      if (!help) return;
+      activeTrigger = trigger;
+      title.textContent = help.title;
+      description.textContent = help.description;
+      triggers.forEach((button) => button.setAttribute("aria-expanded", String(button === trigger)));
+      overlay.hidden = false;
+      syncGeometry();
+      closeButton.focus({ preventScroll: true });
+    };
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        if (!overlay.hidden && activeTrigger === trigger) {
+          close();
+          return;
+        }
+        open(trigger);
+      });
+    });
+
+    closeButton.addEventListener("click", () => close({ restoreFocus: true }));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !overlay.hidden) close({ restoreFocus: true });
+    });
+
+    window.addEventListener("resize", queueGeometry, { passive: true });
+    window.addEventListener("pageshow", queueGeometry);
+    const resizeObserver = typeof ResizeObserver === "function" ? new ResizeObserver(queueGeometry) : null;
+    resizeObserver?.observe(raceInfo);
+    resizeObserver?.observe(stage);
+    queueGeometry();
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initRacecardTermHelp, { once: true });
+  } else {
+    initRacecardTermHelp();
+  }
+})();

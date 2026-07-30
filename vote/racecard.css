@@ -386,3 +386,98 @@
   font-size:.88em;
   vertical-align:text-bottom;
 }
+
+/* v101: racecard column help overlay. */
+.racecard-term-button{
+  width:100%;
+  height:100%;
+  min-width:0;
+  margin:0;
+  padding:0;
+  border:0;
+  color:inherit;
+  background:transparent;
+  font:inherit;
+  font-weight:inherit;
+  line-height:inherit;
+  text-align:center;
+  white-space:nowrap;
+  cursor:pointer;
+  -webkit-appearance:none;
+  appearance:none;
+  -webkit-tap-highlight-color:transparent;
+}
+.racecard-term-button:focus-visible{
+  outline:2px solid #fff4b8;
+  outline-offset:-2px;
+  border-radius:3px;
+}
+.racecard-term-button[aria-expanded="true"]{
+  color:#fff7c9;
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+  text-underline-offset:3px;
+}
+.racecard-term-overlay{
+  position:absolute;
+  z-index:500;
+  margin:0;
+  padding:15px 48px 13px 17px;
+  overflow:hidden;
+  border:2px solid var(--auto-purple);
+  border-left-width:7px;
+  border-radius:14px;
+  color:#17191d;
+  background:#fff;
+  box-shadow:0 12px 30px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.9);
+}
+.racecard-term-overlay[hidden]{display:none}
+.racecard-term-title{
+  margin:0;
+  padding:0 0 7px;
+  color:var(--auto-purple);
+  font-size:20px;
+  font-weight:1000;
+  line-height:1.15;
+  letter-spacing:.01em;
+}
+.racecard-term-description{
+  margin:0;
+  color:#22262b;
+  font-size:13.5px;
+  font-weight:750;
+  line-height:1.55;
+  overflow-wrap:anywhere;
+}
+.racecard-term-close{
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:2;
+  width:31px;
+  height:31px;
+  display:grid;
+  place-items:center;
+  margin:0;
+  padding:0 0 2px;
+  border:1px solid #633895;
+  border-radius:8px;
+  color:#fff;
+  background:linear-gradient(180deg,#8959bd,#693a9c);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.32);
+  font-family:inherit;
+  font-size:23px;
+  font-weight:700;
+  line-height:1;
+  cursor:pointer;
+  -webkit-appearance:none;
+  appearance:none;
+  -webkit-tap-highlight-color:transparent;
+}
+.racecard-term-close:focus-visible{outline:2px solid #342043;outline-offset:2px}
+@media(max-width:430px){
+  .racecard-term-overlay{padding:13px 43px 12px 14px;border-left-width:6px}
+  .racecard-term-title{padding-bottom:6px;font-size:18px}
+  .racecard-term-description{font-size:12.5px;line-height:1.5}
+  .racecard-term-close{top:8px;right:8px;width:29px;height:29px;font-size:21px}
+}
