@@ -15,6 +15,12 @@
   const DISPLAY_RACES = RACES.filter((race) => !(race.sport === "boat" && race.venue === "江戸川"));
   const DEFAULT_ACTIVE = "浜松-12R-16:45";
   const keyOf = (race) => `${race.venue}-${race.race}-${race.time}`;
+  const FEATURED_RACE_KEYS = new Set([
+    "keirin:熊本:12R",
+    "auto:浜松:12R",
+    "nar:名古屋:7R",
+  ]);
+  const isFeaturedRace = (race) => FEATURED_RACE_KEYS.has(`${race.sport}:${race.venue}:${race.race}`);
   const showPreparingToast = () => {
     let toast = document.querySelector(".race-switch-toast");
     if (!toast) {
@@ -32,38 +38,129 @@
   };
 
   class ZenraceRaceSwitch extends HTMLElement {
+    setActiveRace(raceKey, options = {}) {
+      const key = String(raceKey || DEFAULT_ACTIVE);
+      const tabs = [...this.querySelectorAll('.race-tab[data-race-key]')];
+      const target = tabs.find((tab) => tab.dataset.raceKey === key)
+        || tabs.find((tab) => tab.dataset.raceKey === DEFAULT_ACTIVE);
+      if (!target) return null;
+
+      this.querySelectorAll('.race-tab').forEach((tab) => {
+        const active = tab === target;
+        tab.classList.toggle('active', active);
+        if (active) tab.setAttribute('aria-current', 'true');
+        else tab.removeAttribute('aria-current');
+      });
+
+      if (options.persist !== false) {
+        const api = window.ZENRACE_VOTE_RACE_STATE;
+        api?.write?.({
+          key: target.dataset.raceKey || DEFAULT_ACTIVE,
+          venue: target.dataset.raceVenue || '浜松',
+        });
+      }
+
+      if (options.align !== false) this.alignActiveRace();
+      return target;
+    }
+
+    alignActiveRace() {
+      const track = this.querySelector('.race-switch');
+      const active = this.querySelector('.race-tab.active:not(.is-filtered-out)');
+      if (!track) return;
+      requestAnimationFrame(() => {
+        if (!active) {
+          track.scrollLeft = 0;
+          return;
+        }
+        const leftPadding = Number.parseFloat(getComputedStyle(track).paddingLeft) || 0;
+        const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+        track.scrollLeft = Math.min(maxScroll, Math.max(0, active.offsetLeft - leftPadding));
+      });
+    }
+
+    setVenueFilter(venue, enabled) {
+      const normalizedVenue = String(venue || '');
+      const shouldFilter = Boolean(enabled && normalizedVenue);
+      const track = this.querySelector('.race-switch');
+      const tabs = [...this.querySelectorAll('.race-tab')];
+
+      tabs.forEach((tab) => {
+        const filteredOut = shouldFilter && tab.dataset.raceVenue !== normalizedVenue;
+        tab.classList.toggle('is-filtered-out', filteredOut);
+        tab.setAttribute('aria-hidden', String(filteredOut));
+        tab.tabIndex = filteredOut ? -1 : 0;
+      });
+
+      track?.classList.toggle('is-venue-filtered', shouldFilter);
+      this.dataset.venueFilter = shouldFilter ? normalizedVenue : '';
+
+      this.alignActiveRace();
+    }
+
     connectedCallback() {
       if (this.dataset.ready === "true") return;
       this.dataset.ready = "true";
-      const activeKey = this.getAttribute("active-key") || DEFAULT_ACTIVE;
+      const storedRaceSelection = window.ZENRACE_VOTE_RACE_STATE?.read?.();
+      const requestedActiveKey = storedRaceSelection?.key || this.getAttribute("active-key") || DEFAULT_ACTIVE;
+      const activeKey = DISPLAY_RACES.some((race) => keyOf(race) === requestedActiveKey)
+        ? requestedActiveKey
+        : DEFAULT_ACTIVE;
       const tabs = DISPLAY_RACES.map((race) => {
         const key = keyOf(race);
         const active = key === activeKey;
-        return `<a class="race-tab sport-${race.sport}${active ? " active" : ""}" href="#" data-race-key="${key}" data-race-time="${race.time}"${active ? ' aria-current="true"' : ""}><strong><span class="race-tab-name">${race.venue}</span><span class="race-tab-icon ${race.sport}" aria-hidden="true"></span></strong><span>${race.race} ${race.time}</span></a>`;
+        const featured = isFeaturedRace(race);
+        return `<a class="race-tab sport-${race.sport}${featured ? " featured-race" : ""}${active ? " active" : ""}" href="#" data-race-key="${key}" data-race-time="${race.time}" data-race-venue="${race.venue}"${active ? ' aria-current="true"' : ""}><strong><span class="race-tab-name">${race.venue}</span><span class="race-tab-icon ${race.sport}" aria-hidden="true"></span></strong><span>${race.race} ${race.time}</span></a>`;
       }).join("");
       this.innerHTML = `<section class="race-switch-wrap" aria-label="レース切り替え"><div class="race-switch">${tabs}</div></section>`;
 
       const track = this.querySelector(".race-switch");
-      const active = this.querySelector(".race-tab.active");
-      const alignActive = () => {
-        if (!track || !active) return;
-        const leftPadding = Number.parseFloat(getComputedStyle(track).paddingLeft) || 0;
-        const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
-        const target = Math.min(maxScroll, Math.max(0, active.offsetLeft - leftPadding));
-        track.scrollLeft = target;
-      };
+      const alignActive = () => this.alignActiveRace();
 
       this.querySelectorAll(".race-tab").forEach((tab) => {
         tab.addEventListener("click", (event) => {
           event.preventDefault();
-          showPreparingToast();
+          const key = tab.dataset.raceKey || '';
+          if (key !== DEFAULT_ACTIVE) {
+            showPreparingToast();
+            return;
+          }
+          this.setActiveRace(key);
+          document.dispatchEvent(new CustomEvent('zenrace:race-selection-change', {
+            detail: { raceKey: key, venue: tab.dataset.raceVenue || '浜松' },
+          }));
         });
       });
 
-      requestAnimationFrame(() => requestAnimationFrame(alignActive));
-      setTimeout(alignActive, 120);
-      window.addEventListener("pageshow", alignActive);
-      if ("ResizeObserver" in window) new ResizeObserver(alignActive).observe(track);
+      this._venueFilterHandler = (event) => {
+        const venue = String(event.detail?.venue || '');
+        const raceKey = String(event.detail?.raceKey || DEFAULT_ACTIVE);
+        this.setActiveRace(raceKey, { persist: false, align: false });
+        this.setVenueFilter(venue, Boolean(event.detail?.enabled && venue));
+      };
+      document.addEventListener('zenrace:race-venue-filter', this._venueFilterHandler);
+
+      const restoreSelection = () => {
+        const stored = window.ZENRACE_VOTE_RACE_STATE?.read?.();
+        const key = stored?.key || activeKey;
+        this.setActiveRace(key, { persist: false, align: false });
+        this.setVenueFilter(stored?.venue || '浜松', Boolean(stored?.venueOnly));
+      };
+
+      requestAnimationFrame(() => requestAnimationFrame(restoreSelection));
+      setTimeout(restoreSelection, 120);
+      window.addEventListener("pageshow", restoreSelection);
+      if ('ResizeObserver' in window) {
+        this._resizeObserver = new ResizeObserver(alignActive);
+        this._resizeObserver.observe(track);
+      }
+    }
+
+    disconnectedCallback() {
+      if (this._venueFilterHandler) {
+        document.removeEventListener('zenrace:race-venue-filter', this._venueFilterHandler);
+      }
+      this._resizeObserver?.disconnect();
     }
   }
 

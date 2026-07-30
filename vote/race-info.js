@@ -89,11 +89,8 @@
         </section>`;
 
       const filterToggle = this.querySelector('.race-info-filter-toggle');
-      const storedRaceSelection = readRaceSelection();
       const raceFilterDisabled = this.hasAttribute('race-filter-disabled');
-      let venueOnly = raceFilterDisabled
-        ? false
-        : Boolean(storedRaceSelection.venueOnly && storedRaceSelection.venue === '浜松');
+      let venueOnly = false;
 
       const syncFilterToggle = () => {
         filterToggle?.setAttribute('aria-pressed', String(venueOnly));
@@ -106,15 +103,26 @@
       };
 
       const applyVenueFilter = () => {
-        const detail = { venue: '浜松', enabled: venueOnly, raceKey: DEFAULT_RACE_KEY };
+        const detail = { venue: '浜松', enabled: !raceFilterDisabled && venueOnly, raceKey: DEFAULT_RACE_KEY };
         const raceSwitch = document.querySelector('zenrace-race-switch');
+        if (raceSwitch && typeof raceSwitch.setActiveRace === 'function') {
+          raceSwitch.setActiveRace(detail.raceKey, { persist: false, align: false });
+        }
         if (raceSwitch && typeof raceSwitch.setVenueFilter === 'function') {
           raceSwitch.setVenueFilter(detail.venue, detail.enabled);
         }
         document.dispatchEvent(new CustomEvent('zenrace:race-venue-filter', { detail }));
       };
 
-      syncFilterToggle();
+      const restoreRaceSelection = () => {
+        const stored = readRaceSelection();
+        venueOnly = raceFilterDisabled
+          ? false
+          : Boolean(stored.venueOnly && stored.venue === '浜松');
+        syncFilterToggle();
+        applyVenueFilter();
+      };
+
       if (!raceFilterDisabled) {
         filterToggle?.addEventListener('click', () => {
           venueOnly = !venueOnly;
@@ -124,8 +132,9 @@
         });
       }
 
-      requestAnimationFrame(() => requestAnimationFrame(applyVenueFilter));
-      window.addEventListener('pageshow', applyVenueFilter);
+      requestAnimationFrame(() => requestAnimationFrame(restoreRaceSelection));
+      window.addEventListener('pageshow', restoreRaceSelection);
+      document.addEventListener('zenrace:vote-race-state-refresh', restoreRaceSelection);
 
       const marqueeLines = [...this.querySelectorAll('[data-race-info-marquee]')];
       const updateMarquees = () => {

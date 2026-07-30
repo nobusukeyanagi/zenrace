@@ -63,22 +63,6 @@
         <nav aria-label="ページ選択メニュー">${links}</nav>`;
 
       const nav = shadow.querySelector("nav");
-      if (category === "vote") {
-        nav.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
-            document.dispatchEvent(new CustomEvent("zenrace:before-vote-navigation"));
-            const api = window.ZENRACE_VOTE_RACE_STATE;
-            if (!api?.read || !api?.write) return;
-            const current = api.read();
-            const activeRace = document.querySelector(".race-tab.active[data-race-key]")?.dataset.raceKey;
-            api.write({
-              key: activeRace || current.key || api.defaultRaceKey,
-              venue: (activeRace || current.key || api.defaultRaceKey || "浜松").split("-")[0] || "浜松",
-              venueOnly: Boolean(current.venueOnly),
-            });
-          });
-        });
-      }
       const stop = (event) => event.preventDefault();
       for (const type of ["gesturestart", "gesturechange", "gestureend"]) {
         nav.addEventListener(type, stop, { passive: false });
