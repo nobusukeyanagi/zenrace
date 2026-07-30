@@ -44,9 +44,8 @@
     const body = document.getElementById("race-result-body");
     if (!body) return;
     body.innerHTML = RACE_RESULTS.map((row) => {
-      const podium = row.finish <= 3 ? ` podium podium-${row.finish}` : "";
-      return `<tr class="${row.finish === 1 ? "winner-row" : ""}">
-        <td class="finish-cell"><span class="finish-number${podium}">${row.finish}</span></td>
+      return `<tr>
+        <td class="finish-cell${row.finish <= 3 ? ` finish-rank-${row.finish}` : ""}">${row.finish}</td>
         <td>${carIcon(row.car)}</td>
         <td class="rider-cell">${row.rider}</td>
         <td>${row.handicap}</td>
