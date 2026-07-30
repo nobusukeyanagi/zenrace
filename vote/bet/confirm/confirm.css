@@ -509,3 +509,40 @@ html,body{
 @media(max-width:430px){
   .detail-combination-separator{flex-basis:13px;min-width:13px;font-size:12px}
 }
+
+/* v10: use the same point controls before and after detail expansion. */
+.wager-head{
+  grid-template-columns:auto auto minmax(0,1fr);
+}
+.wager-unit{
+  gap:7px;
+}
+.wager-unit .group-point-stepper{
+  flex:0 0 auto;
+}
+.wager-unit .point-stepper input{
+  width:42px;
+  height:40px;
+  padding:0 2px;
+  border:1px solid #d3d6db;
+  border-radius:10px;
+  color:#4f5660;
+  background:#f1f2f5;
+  font-size:15px;
+  font-weight:400;
+  text-align:center;
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.05);
+}
+.point-stepper button:disabled{
+  cursor:default;
+  opacity:.38;
+}
+@media(max-width:430px){
+  .wager-head{grid-template-columns:auto auto minmax(0,1fr)}
+  .wager-unit{gap:5px}
+  .wager-unit .point-stepper input{width:38px;height:37px;font-size:14px}
+}
+@media(max-width:380px){
+  .wager-unit{gap:4px}
+  .wager-unit .point-stepper input{width:35px;height:34px}
+}
