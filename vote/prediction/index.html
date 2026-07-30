@@ -18,7 +18,7 @@
 <link href="../race-switch.css?v=66" rel="stylesheet"/>
 <link href="../race-info.css?v=61" rel="stylesheet"/>
 <link href="../../shared/race-button-style.css?v=6" rel="stylesheet"/>
-<link href="prediction.css?v=10" rel="stylesheet"/>
+<link href="prediction.css?v=11" rel="stylesheet"/>
 <script defer="" src="../race-info.js?v=62"></script>
 <script defer="" src="../live-state.js?v=1"></script>
 <script defer="" src="../../shared/category-menu.js?v=54"></script>
@@ -26,6 +26,8 @@
 <script defer="" src="../../shared/bottom-nav.js?v=61"></script>
 <script defer="" src="../race-switch.js?v=68"></script>
 <script defer="" src="../racecard.js?v=71"></script>
+<script defer="" src="../odds-data.js?v=1"></script>
+<script defer="" src="prediction.js?v=1"></script>
 </head>
 <body>
 <zenrace-category-menu active="prediction" category="vote"></zenrace-category-menu>
@@ -34,25 +36,17 @@
 <div class="zenrace-content-stage" data-zenrace-pinch-stage="">
 <zenrace-race-switch active-key="浜松-12R-16:45"></zenrace-race-switch>
 <zenrace-race-info></zenrace-race-info>
+<nav class="prediction-forecast-menu odds-type-menu" aria-label="スパコン予想選択">
+<button class="prediction-forecast-tab odds-type-tab active" type="button" data-forecast="immediate" aria-pressed="true">スパコン直前予想</button>
+<button class="prediction-forecast-tab odds-type-tab" type="button" data-forecast="previous" aria-pressed="false">スパコン前日予想</button>
+</nav>
 <main class="vote-racecard prediction-page">
-<section aria-label="予想概要" class="prediction-summary">
-<div class="prediction-summary-row prediction-summary-main">
-<span class="prediction-summary-label">スパコン予想 自信度</span>
-<span aria-label="自信度 1つ星" class="prediction-confidence"><span class="prediction-confidence-filled" aria-hidden="true">★</span><span class="prediction-confidence-empty" aria-hidden="true">☆☆☆☆</span></span>
+<section aria-label="スパコン予想買い目" class="prediction-summary prediction-ticket-panel">
+<div class="prediction-ticket-topline">
+<span class="prediction-wager-title">2連単</span>
+<span class="prediction-confidence-wrap" id="prediction-confidence"><span class="prediction-confidence-label">自信度</span><span aria-label="自信度 1つ星" class="prediction-confidence"><span class="prediction-confidence-filled" aria-hidden="true">★</span><span class="prediction-confidence-empty" aria-hidden="true">☆☆☆☆</span></span></span>
 </div>
-<div class="prediction-summary-row prediction-bets-row">
-<span class="prediction-forecast-label">直前予想</span><span class="prediction-forecast-arrow">▶</span><span class="prediction-wager-label">2連単</span>
-<span class="prediction-bet"><span aria-label="5号車" class="prediction-car car-5">5</span><span class="prediction-separator">-</span><span aria-label="4号車" class="prediction-car car-4">4</span></span>
-<span class="prediction-bet"><span aria-label="4号車" class="prediction-car car-4">4</span><span class="prediction-separator">-</span><span aria-label="5号車" class="prediction-car car-5">5</span></span>
-<span class="prediction-bet"><span aria-label="5号車" class="prediction-car car-5">5</span><span class="prediction-separator">-</span><span aria-label="1号車" class="prediction-car car-1">1</span></span>
-</div>
-<div class="prediction-summary-row prediction-bets-row prediction-previous-row">
-<span class="prediction-forecast-label">前日予想</span><span class="prediction-forecast-arrow">▶</span><span class="prediction-wager-label">2連単</span>
-<span class="prediction-bet"><span aria-label="1号車" class="prediction-car car-1">1</span><span class="prediction-separator">-</span><span aria-label="3号車" class="prediction-car car-3">3</span></span>
-<span class="prediction-bet"><span aria-label="1号車" class="prediction-car car-1">1</span><span class="prediction-separator">-</span><span aria-label="6号車" class="prediction-car car-6">6</span></span>
-<span class="prediction-bet"><span aria-label="1号車" class="prediction-car car-1">1</span><span class="prediction-separator">-</span><span aria-label="2号車" class="prediction-car car-2">2</span></span>
-<span class="prediction-bet"><span aria-label="3号車" class="prediction-car car-3">3</span><span class="prediction-separator">-</span><span aria-label="6号車" class="prediction-car car-6">6</span></span>
-</div>
+<div class="prediction-ticket-list" id="prediction-ticket-list" aria-live="polite"></div>
 </section>
 <section aria-label="浜松12R 予想表" class="section prediction-table-section">
 <div class="table-scroll">
@@ -105,6 +99,7 @@
 </div>
 </div>
 </div>
+<button class="prediction-confirm-float" id="prediction-confirm" type="button" hidden><span>選択内容</span><span>セット</span></button>
 <zenrace-bottom-nav active="vote"></zenrace-bottom-nav>
 </body>
 </html>

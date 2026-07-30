@@ -326,3 +326,139 @@
 
 /* v10: use the same black stroke for the cross mark as the other forecast marks. */
 .prediction-mark.mark-cross{color:#171108}
+
+
+/* v11: switchable supercomputer picks with direct confirmation selection. */
+.prediction-forecast-menu{display:flex}
+.prediction-ticket-panel{
+  margin:8px 8px 0;
+  padding:10px 12px 12px;
+  border:1px solid var(--zenrace-standard-frame-color,rgba(213,171,67,.34));
+  border-radius:12px;
+  background:linear-gradient(180deg,#171717,#090909);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+}
+.prediction-ticket-topline{
+  min-height:25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  color:#fff;
+  font-size:15px;
+  font-weight:1000;
+  line-height:1;
+}
+.prediction-wager-title{white-space:nowrap}
+.prediction-confidence-wrap{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.prediction-confidence-label{color:#fff;font-size:14px;font-weight:900}
+.prediction-ticket-list{
+  margin-top:9px;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.prediction-ticket{
+  min-width:82px;
+  min-height:44px;
+  padding:5px 9px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:3px;
+  border:1px solid var(--zenrace-standard-frame-color,rgba(213,171,67,.34));
+  border-radius:8px;
+  color:#fff;
+  background:linear-gradient(180deg,#171719,#090909);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+  font-family:inherit;
+  cursor:pointer;
+  -webkit-appearance:none;
+  appearance:none;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+}
+.prediction-ticket.is-selected,
+.prediction-ticket[aria-pressed="true"]{
+  color:#171108;
+  border-color:#d1a539;
+  background:linear-gradient(180deg,#f8e7a8,#d6aa42);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.58),0 0 0 1px rgba(240,204,112,.16);
+}
+.prediction-ticket .prediction-car{
+  width:29px;
+  height:29px;
+  flex:0 0 29px;
+  border-radius:6px;
+  font-size:16px;
+}
+.prediction-ticket .prediction-separator{
+  width:8px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#c5cbd3;
+  font-size:14px;
+  font-weight:1000;
+}
+.prediction-ticket.is-selected .prediction-separator,
+.prediction-ticket[aria-pressed="true"] .prediction-separator{color:#171108}
+.prediction-ticket-panel.is-previous .prediction-confidence-wrap{display:none}
+.has-prediction-selection .prediction-page{padding-bottom:112px}
+.prediction-confirm-float{
+  position:fixed;
+  z-index:9001;
+  left:50%;
+  bottom:calc(var(--visual-bottom,0px) + env(safe-area-inset-bottom,0px) + 3px);
+  width:calc((100vw - 8px) / 5 + 8px);
+  height:53px;
+  padding:0 8px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+  overflow:hidden;
+  transform:translateX(-50%);
+  border:1px solid #8c671f;
+  border-radius:17px;
+  color:#241b0d;
+  background:linear-gradient(180deg,#f8e8b8 0%,#e2c477 30%,#c59b43 68%,#a97825 100%);
+  font-family:inherit;
+  font-size:15px;
+  font-weight:1000;
+  line-height:.98;
+  letter-spacing:.03em;
+  text-align:center;
+  text-shadow:0 1px 0 rgba(255,255,255,.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.94),
+    inset 0 -1px 0 rgba(90,56,8,.30),
+    0 4px 13px rgba(64,39,4,.42),
+    0 0 0 1px rgba(255,239,191,.46),
+    0 0 15px rgba(255,218,117,.56),
+    0 0 30px rgba(218,166,55,.30);
+  -webkit-appearance:none;
+  appearance:none;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+}
+.prediction-confirm-float[hidden]{display:none!important}
+.prediction-confirm-float span{display:block;line-height:.98}
+.prediction-confirm-float:active{transform:translateX(-50%) translateY(1px);filter:brightness(.97)}
+@media(max-width:430px){
+  .prediction-ticket-panel{padding:9px 10px 11px}
+  .prediction-ticket-topline{font-size:14px}
+  .prediction-confidence-label{font-size:13px}
+  .prediction-ticket-list{gap:7px}
+  .prediction-ticket{min-width:76px;min-height:42px;padding-inline:7px}
+  .prediction-ticket .prediction-car{width:27px;height:27px;flex-basis:27px;font-size:15px}
+  .prediction-confirm-float{font-size:14px}
+}
+@media(max-width:380px){
+  .prediction-ticket-list{gap:6px}
+  .prediction-ticket{min-width:72px;padding-inline:6px}
+  .prediction-confirm-float{width:calc((100vw - 8px) / 5 + 4px)}
+}
+@media(display-mode:standalone){.prediction-confirm-float{height:49px}}

@@ -151,6 +151,9 @@
   }
 
   function positionRows(group) {
+    if (state.source === "prediction") {
+      return `<div class="position-row position-row-odds-vote"><span class="position-odds-vote">予想投票</span></div>`;
+    }
     if (state.source === "odds" || group.directSelection) {
       return `<div class="position-row position-row-odds-vote"><span class="position-odds-vote">オッズ投票</span></div>`;
     }
@@ -547,7 +550,7 @@
   initHamamatsuRaceList();
 
   const initialPayload = readPayload();
-  state.source = initialPayload?.source === "odds" ? "odds" : "bet";
+  state.source = ["odds", "prediction"].includes(initialPayload?.source) ? initialPayload.source : "bet";
   state.selections = storedSelections(initialPayload);
   state.multiReverse = Boolean(initialPayload?.multiReverse);
   state.groups = normalizePayload(initialPayload);
