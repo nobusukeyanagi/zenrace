@@ -290,8 +290,11 @@
     const bar=document.querySelector(".delca-bar");
     const raceList=bar?.querySelector("[data-bet-race-list]");
     if(!bar||!raceList) return;
-    raceList.innerHTML=HAMAMATSU_RACES.map(([race,time])=>`<button class="bet-race-tab${race==="12R"?" active":""}" type="button" data-race="${race}"${race==="12R"?' aria-current="true"':""}><strong><span>浜松</span><span class="bet-race-tab-icon" aria-hidden="true"></span></strong><span>${race} ${time}</span></button>`).join("");
-    raceList.querySelectorAll(".bet-race-tab").forEach(tab=>tab.addEventListener("click",()=>{
+    raceList.innerHTML=HAMAMATSU_RACES.map(([race,time])=>{
+      const isCurrent=race==="12R";
+      return `<button class="race-tab sport-auto${isCurrent?" featured-race active":""}" type="button" data-race="${race}" data-race-venue="浜松"${isCurrent?' aria-current="true"':""}><strong><span class="race-tab-name">浜松</span><span class="race-tab-icon auto" aria-hidden="true"></span></strong><span>${race} ${time}</span></button>`;
+    }).join("");
+    raceList.querySelectorAll(".race-tab").forEach(tab=>tab.addEventListener("click",()=>{
       if(tab.dataset.race!=="12R") showRaceListToast();
     }));
     document.addEventListener("zenrace:race-venue-filter",event=>{
@@ -299,7 +302,7 @@
       bar.classList.toggle("is-race-list-open",open);
       raceList.hidden=!open;
       if(open){
-        const active=raceList.querySelector(".bet-race-tab.active");
+        const active=raceList.querySelector(".race-tab.active");
         requestAnimationFrame(()=>{
           if(!active) return;
           const leftPadding=Number.parseFloat(getComputedStyle(raceList).paddingLeft)||0;

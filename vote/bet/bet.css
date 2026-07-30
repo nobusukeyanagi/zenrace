@@ -881,3 +881,28 @@
 .selection-odds .bet-odds-low{color:#d70018!important}
 .selection-odds .bet-odds-high{color:#0068b7!important}
 .selection-odds-range{color:inherit}
+
+/* v39: match the filtered Hamamatsu race list to the latest shared race-switch design. */
+.delca-bar.is-race-list-open{
+  background-color:#090909;
+  background-image:linear-gradient(180deg,#181818 0%,#090909 100%);
+}
+.bet-race-list{
+  height:52px;
+  gap:6px;
+  padding:3px 10px 2px;
+  scroll-padding-inline:10px;
+  background:transparent;
+}
+.bet-race-list .race-tab{
+  flex:0 0 80px;
+  height:47px;
+  min-height:47px;
+}
+.bet-table th:first-child,
+.bet-table td.car-number{
+  border-right:1px solid var(--grid)!important;
+}
+@media(max-width:430px){
+  .bet-race-list .race-tab{flex-basis:78px}
+}
