@@ -452,3 +452,31 @@
 .rider-popularity.support-rank-1{color:#111;background:#f6de8d}
 .rider-popularity.support-rank-2{color:#111;background:#d9e6ee}
 .rider-popularity.support-rank-3{color:#111;background:#e3c6a3}
+
+
+/* v18: slightly enlarge rider rows without shrinking either secondary line; let pick buttons grow with the cells. */
+.rider-profile,
+.rider-support{
+  font-size:10px;
+}
+.bet-table tbody td{
+  height:48px;
+}
+.bet-table tbody td.pick-cell{
+  height:48px;
+  padding:3px!important;
+}
+.bet-table tbody td.pick-cell .pick-button{
+  display:block;
+  width:100%;
+  height:42px;
+}
+@media(max-width:430px){
+  .bet-table tbody td,
+  .bet-table tbody td.pick-cell{
+    height:48px;
+  }
+  .bet-table tbody td.pick-cell .pick-button{
+    height:42px;
+  }
+}
