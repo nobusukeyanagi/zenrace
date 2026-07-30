@@ -50,7 +50,7 @@
     const multiReverse=document.getElementById("multi-reverse-option").checked;
 
     if(type==="単勝"){
-      return [...new Set([...first,...second,...third,...box])].sort((a,b)=>a-b).map(car=>[car]);
+      return first.map(car=>[car]);
     }
     if(type==="2連単"){
       const base=distinctProduct([first,second]);
