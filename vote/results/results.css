@@ -125,3 +125,77 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
   .payout-table tbody th.payout-type,
   .payout-table td.payout-popularity{font-size:14px!important}
 }
+
+/* v4: unify payout/grand-note car icons and unavailable payout typography. */
+.payout-combination .result-entry,
+.grand-note-table .result-entry{
+  width:26px;
+  height:26px;
+  flex-basis:26px;
+  border-radius:6px;
+  font-size:16px;
+}
+.unavailable{
+  font-size:15px!important;
+}
+@media(max-width:600px){
+  .payout-combination .result-entry,
+  .grand-note-table .result-entry{
+    width:24px;
+    height:24px;
+    flex-basis:24px;
+    border-radius:5px;
+    font-size:14px;
+  }
+  .unavailable{font-size:14px!important}
+}
+
+/* v5: match all result-table inner grid lines to the racecard table. */
+.race-result-table th,
+.payout-table thead th,
+.grand-note-table thead th{
+  border-right:1px solid #d2d3d7;
+  border-bottom:1px solid #d2d3d7;
+}
+.race-result-table td,
+.payout-table tbody th,
+.payout-table tbody td,
+.grand-note-table tbody th,
+.grand-note-table tbody td{
+  border-top:0;
+  border-right:1px solid #d2d3d7;
+  border-bottom:1px solid #d2d3d7;
+}
+.race-result-table th:last-child,
+.race-result-table td:last-child,
+.payout-table thead th:last-child,
+.payout-table tbody td:last-child,
+.grand-note-table thead th:last-child,
+.grand-note-table tbody td:last-child{
+  border-right:0;
+}
+.race-result-table tbody tr:last-child td,
+.payout-table tbody tr:last-child th,
+.payout-table tbody tr:last-child td,
+.grand-note-table tbody tr:last-child th,
+.grand-note-table tbody tr:last-child td{
+  border-bottom:0;
+}
+
+/* v6: align all result body-row heights with odds popular rows. */
+.race-result-table td,
+.payout-table tbody th,
+.payout-table tbody td,
+.grand-note-table tbody th,
+.grand-note-table tbody td{
+  height:40px;
+}
+@media(max-width:600px){
+  .race-result-table td,
+  .payout-table tbody th,
+  .payout-table tbody td,
+  .grand-note-table tbody th,
+  .grand-note-table tbody td{
+    height:38px;
+  }
+}
