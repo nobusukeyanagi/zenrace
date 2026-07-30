@@ -804,3 +804,12 @@ button,select{font:inherit}
   .odds-popular-value{font-size:12px}
   .odds-type-tab{font-size:12px}
 }
+
+/* v18: match black-background meta labels to the shared race venue/number typography. */
+.odds-meta-row{
+  color:#fff;
+  font-size:22px;
+}
+@media(max-width:430px){
+  .odds-meta-row{font-size:22px}
+}

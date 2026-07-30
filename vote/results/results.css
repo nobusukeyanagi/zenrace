@@ -199,3 +199,12 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
     height:38px;
   }
 }
+
+/* v7: match black-background section headings to the shared race venue/number typography. */
+.result-section-heading{
+  color:#fff;
+  font-size:22px;
+}
+@media(max-width:600px){
+  .result-section-heading{font-size:22px}
+}

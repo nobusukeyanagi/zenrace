@@ -558,3 +558,14 @@
   justify-self:stretch;
   box-sizing:border-box;
 }
+
+/* v24: match the selection-list heading and point count to the shared race venue/number typography. */
+.selection-meta-row,
+.selection-meta-row > span{
+  color:#fff;
+  font-size:22px;
+}
+@media(max-width:430px){
+  .selection-meta-row,
+  .selection-meta-row > span{font-size:22px}
+}

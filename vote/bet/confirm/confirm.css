@@ -489,3 +489,8 @@ html,body{
   .confirm-summary .summary-line:nth-child(n+2),
   .confirm-summary .summary-line:nth-child(n+2) strong{font-size:17px}
 }
+
+/* v8: match the return link to the shared race venue/number typography while retaining its existing color. */
+.confirm-back-link{
+  font-size:22px;
+}
