@@ -831,3 +831,18 @@ button,select{font:inherit}
 @media(max-width:360px){
   .odds-combination-separator{flex-basis:11px;min-width:11px;font-size:11px}
 }
+
+/* v20: tighten wager separators so the car badges read as one compact combination. */
+.odds-popular-combination{gap:0}
+.odds-combination-separator{
+  flex-basis:7px;
+  min-width:7px;
+  font-size:12px;
+  letter-spacing:-.08em;
+}
+@media(max-width:430px){
+  .odds-combination-separator{flex-basis:6px;min-width:6px;font-size:11px}
+}
+@media(max-width:360px){
+  .odds-combination-separator{flex-basis:6px;min-width:6px;font-size:10px}
+}

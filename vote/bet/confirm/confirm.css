@@ -546,3 +546,15 @@ html,body{
   .wager-unit{gap:4px}
   .wager-unit .point-stepper input{width:35px;height:34px}
 }
+
+/* v11: tighten wager separators so the car badges read as one compact combination. */
+.detail-combo{gap:0}
+.detail-combination-separator{
+  flex-basis:7px;
+  min-width:7px;
+  font-size:12px;
+  letter-spacing:-.08em;
+}
+@media(max-width:430px){
+  .detail-combination-separator{flex-basis:6px;min-width:6px;font-size:11px}
+}
