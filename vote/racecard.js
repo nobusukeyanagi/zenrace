@@ -296,6 +296,22 @@
       title: "車名",
       description: "選手が所有する競走車の呼名と、競走車の級・排気量を表示します。例の「1級 600cc」は1級車の600ccエンジンを示します。",
     },
+    "recent-run": {
+      title: "前走～10走前",
+      description: "各選手の直近10走を、新しいレースから順に表示します。上段は月日・場名R・グレード・レース種別・走路・出走車数・当時の車番、左の大きな数字は着順です。下段は競走T・試走T・ST・ハンデを示します。",
+    },
+    "matchup-sp": {
+      title: "SP",
+      description: "今回の出走選手同士の過去の直接対戦結果を基に、対戦優位度を数値化したZENRACE独自指標です。数値が高いほど、掲載している相手関係で優位な実績が多いことを示します。",
+    },
+    "matchup-opponent": {
+      title: "対戦相手（1～8）",
+      description: "行の選手と、列の車番の選手が同じレースに出走した際の直接対戦成績です。上段は行の選手の勝率、下段は「先着回数－後着回数」を表示します。勝率が50％を超える場合は金色で強調し、同一選手の交差欄は表示しません。",
+    },
+    comment: {
+      title: "コメント",
+      description: "レース前に発表された選手コメントです。エンジン調整、タイヤ、試走やスタートの感触、当日の作業予定などを掲載します。発表時点の内容であり、その後の整備や気象・走路状況により状態が変わる場合があります。",
+    },
   };
 
   const initRacecardTermHelp = () => {
@@ -306,10 +322,13 @@
     const raceInfo = document.querySelector("zenrace-race-info .shared-race-info");
     const stage = document.querySelector(".zenrace-content-stage");
     const triggers = [...document.querySelectorAll("[data-racecard-term]")];
+    const preparedTriggers = [...document.querySelectorAll("[data-racecard-prepared]")];
+    const detailToast = document.querySelector(".racecard-detail-toast");
     if (!overlay || !title || !description || !closeButton || !raceInfo || !stage || !triggers.length) return;
 
     let activeTrigger = null;
     let geometryFrame = 0;
+    let detailToastTimer = 0;
 
     const syncGeometry = () => {
       geometryFrame = 0;
@@ -354,6 +373,16 @@
           return;
         }
         open(trigger);
+      });
+    });
+
+    preparedTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        close();
+        if (!detailToast) return;
+        window.clearTimeout(detailToastTimer);
+        detailToast.classList.add("is-visible");
+        detailToastTimer = window.setTimeout(() => detailToast.classList.remove("is-visible"), 1800);
       });
     });
 

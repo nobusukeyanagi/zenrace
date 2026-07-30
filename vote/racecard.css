@@ -481,3 +481,11 @@
   .racecard-term-description{font-size:12.5px;line-height:1.5}
   .racecard-term-close{top:8px;right:8px;width:29px;height:29px;font-size:21px}
 }
+
+/* v102: shared term help on detail tables and prepared race-result header links. */
+.racecard-result-link-button{
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:2px;
+}
+.racecard-result-link-button:active{opacity:.78}
