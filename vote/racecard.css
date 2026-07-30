@@ -210,3 +210,79 @@
   line-height:1!important;
   font-variant-numeric:tabular-nums;
 }
+
+/* v94: race outlook below the basic-information table. */
+.race-outlook-section{
+  margin:10px 8px 0;
+}
+.race-outlook-heading{
+  min-height:30px;
+  margin:0;
+  padding:0 4px 6px;
+  display:flex;
+  align-items:center;
+  color:#fff;
+  background:transparent;
+  border:0;
+  font-size:22px;
+  font-weight:1000;
+  line-height:1;
+  letter-spacing:.02em;
+}
+.race-outlook-card{
+  padding:12px 13px;
+  color:#15171a;
+  background:#fff;
+  border:1px solid rgba(213,171,67,.34);
+  border-radius:14px;
+  font-size:13px;
+  font-weight:600;
+  line-height:1.62;
+  text-align:left;
+  overflow-wrap:anywhere;
+}
+.race-outlook-card p{
+  margin:0 0 12px;
+  color:inherit;
+  font:inherit;
+  line-height:inherit;
+}
+.race-outlook-card p:last-child{margin-bottom:0}
+.race-outlook-focus{
+  font-weight:1000!important;
+}
+.race-outlook-rider{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  margin:0 1px;
+  vertical-align:-5px;
+  white-space:nowrap;
+}
+.race-outlook-entry{
+  width:22px;
+  height:22px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 22px;
+  border:1px solid rgba(0,0,0,.30);
+  border-radius:5px;
+  font-size:13px;
+  font-weight:1000;
+  line-height:1;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.38),0 1px 2px rgba(0,0,0,.14);
+}
+.race-outlook-name{font-weight:900}
+.race-outlook-entry-1{color:#111;background:#f3f4f5;border-color:#8f949a}
+.race-outlook-entry-2{color:#fff;background:#171717;border-color:#050505}
+.race-outlook-entry-3{color:#fff;background:#e51125;border-color:#a80a19}
+.race-outlook-entry-4{color:#fff;background:#0877bd;border-color:#07598d}
+.race-outlook-entry-5{color:#111;background:#f2d819;border-color:#bca900}
+.race-outlook-entry-6{color:#fff;background:#07914a;border-color:#056a37}
+.race-outlook-entry-7{color:#111;background:#ee8b10;border-color:#b76500}
+.race-outlook-entry-8{color:#fff;background:#d9008f;border-color:#9e0068}
+@media(max-width:430px){
+  .race-outlook-heading{font-size:22px}
+  .race-outlook-card{padding:11px 12px;font-size:13px;line-height:1.62}
+}
