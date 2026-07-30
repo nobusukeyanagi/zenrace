@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-30T05:19:38.607175+09:00",
-  "center_date": "2026-07-30",
+  "generated_at": "2026-07-31T05:41:17.349370+09:00",
+  "center_date": "2026-07-31",
   "past_unresolved_count": 1,
-  "upcoming_missing_time_count": 18,
+  "upcoming_missing_time_count": 19,
   "past_unresolved": [
     {
       "date": "2026-07-26",
@@ -193,6 +193,16 @@
       "venue": "門別",
       "grade": "JpnⅢ",
       "name": "北海道スプリントカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "sport": "nar",
+      "venue": "園田",
+      "grade": "重賞Ⅰ",
+      "name": "摂津盃",
       "missing": [
         "time"
       ]
