@@ -329,9 +329,10 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
 .result-replay-tab.active,
 .result-replay-tab[aria-pressed="true"]{
   color:#171108;
-  border-color:var(--race-button-border,#8f6a18);
-  background:var(--race-button-active,#fff6c8);
-  box-shadow:inset 0 0 0 1px rgba(143,106,24,.16);
+  border-color:#b68b27;
+  background:#f0cc70;
+  font-weight:950;
+  box-shadow:none;
 }
 .result-replay-panel{
   width:min(100%,760px);

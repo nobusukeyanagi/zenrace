@@ -293,9 +293,11 @@
           <div class="wager-unit">
             <span>各</span>
             <div class="point-stepper group-point-stepper" aria-label="各使用ポイント">
-              <button class="group-trash-button" type="button" data-remove-group="${index}" aria-label="${group.type}を削除">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13M10 11v5m4-5v5"/></svg>
-              </button>
+              ${group.unit === 1
+                ? `<button class="group-trash-button" type="button" data-remove-group="${index}" aria-label="${group.type}を削除">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13M10 11v5m4-5v5"/></svg>
+                  </button>`
+                : `<button type="button" data-group-step="-1" data-group-index="${index}" aria-label="各使用ポイントを減らす">－</button>`}
               <label class="detail-unit"><input type="number" min="1" max="99" value="${group.unit}" data-group-unit data-group-index="${index}" aria-label="各使用ポイント"><span>00pt</span></label>
               <button type="button" data-group-step="1" data-group-index="${index}" aria-label="各使用ポイントを増やす">＋</button>
             </div>

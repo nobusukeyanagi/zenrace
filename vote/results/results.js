@@ -119,6 +119,16 @@
 
     tabs.forEach((tab) => {
       tab.addEventListener("click", () => {
+        const isActive = tab.getAttribute("aria-pressed") === "true";
+        if (isActive) {
+          tab.classList.remove("active");
+          tab.setAttribute("aria-pressed", "false");
+          frame.setAttribute("src", "about:blank");
+          frame.title = "リプレイ";
+          panel.hidden = true;
+          return;
+        }
+
         const url = tab.dataset.replayUrl;
         if (!url) return;
         frame.title = tab.dataset.replayTitle || "リプレイ";
