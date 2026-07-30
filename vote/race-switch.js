@@ -15,12 +15,6 @@
   const DISPLAY_RACES = RACES.filter((race) => !(race.sport === "boat" && race.venue === "江戸川"));
   const DEFAULT_ACTIVE = "浜松-12R-16:45";
   const keyOf = (race) => `${race.venue}-${race.race}-${race.time}`;
-  const FEATURED_RACE_KEYS = new Set([
-    "keirin:熊本:12R",
-    "auto:浜松:12R",
-    "nar:名古屋:7R",
-  ]);
-  const isFeaturedRace = (race) => FEATURED_RACE_KEYS.has(`${race.sport}:${race.venue}:${race.race}`);
   const showPreparingToast = () => {
     let toast = document.querySelector(".race-switch-toast");
     if (!toast) {
@@ -38,35 +32,6 @@
   };
 
   class ZenraceRaceSwitch extends HTMLElement {
-    setVenueFilter(venue, enabled) {
-      const normalizedVenue = String(venue || '');
-      const shouldFilter = Boolean(enabled && normalizedVenue);
-      const track = this.querySelector('.race-switch');
-      const tabs = [...this.querySelectorAll('.race-tab')];
-
-      tabs.forEach((tab) => {
-        const filteredOut = shouldFilter && tab.dataset.raceVenue !== normalizedVenue;
-        tab.classList.toggle('is-filtered-out', filteredOut);
-        tab.setAttribute('aria-hidden', String(filteredOut));
-        tab.tabIndex = filteredOut ? -1 : 0;
-      });
-
-      track?.classList.toggle('is-venue-filtered', shouldFilter);
-      this.dataset.venueFilter = shouldFilter ? normalizedVenue : '';
-
-      const active = this.querySelector('.race-tab.active:not(.is-filtered-out)');
-      requestAnimationFrame(() => {
-        if (!track) return;
-        if (!active) {
-          track.scrollLeft = 0;
-          return;
-        }
-        const leftPadding = Number.parseFloat(getComputedStyle(track).paddingLeft) || 0;
-        const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
-        track.scrollLeft = Math.min(maxScroll, Math.max(0, active.offsetLeft - leftPadding));
-      });
-    }
-
     connectedCallback() {
       if (this.dataset.ready === "true") return;
       this.dataset.ready = "true";
@@ -74,8 +39,7 @@
       const tabs = DISPLAY_RACES.map((race) => {
         const key = keyOf(race);
         const active = key === activeKey;
-        const featured = isFeaturedRace(race);
-        return `<a class="race-tab sport-${race.sport}${featured ? " featured-race" : ""}${active ? " active" : ""}" href="#" data-race-key="${key}" data-race-time="${race.time}" data-race-venue="${race.venue}"${active ? ' aria-current="true"' : ""}><strong><span class="race-tab-name">${race.venue}</span><span class="race-tab-icon ${race.sport}" aria-hidden="true"></span></strong><span>${race.race} ${race.time}</span></a>`;
+        return `<a class="race-tab sport-${race.sport}${active ? " active" : ""}" href="#" data-race-key="${key}" data-race-time="${race.time}"${active ? ' aria-current="true"' : ""}><strong><span class="race-tab-name">${race.venue}</span><span class="race-tab-icon ${race.sport}" aria-hidden="true"></span></strong><span>${race.race} ${race.time}</span></a>`;
       }).join("");
       this.innerHTML = `<section class="race-switch-wrap" aria-label="レース切り替え"><div class="race-switch">${tabs}</div></section>`;
 
@@ -96,26 +60,10 @@
         });
       });
 
-      this._venueFilterHandler = (event) => {
-        const venue = String(event.detail?.venue || '');
-        this.setVenueFilter(venue, Boolean(event.detail?.enabled && venue));
-      };
-      document.addEventListener('zenrace:race-venue-filter', this._venueFilterHandler);
-
       requestAnimationFrame(() => requestAnimationFrame(alignActive));
       setTimeout(alignActive, 120);
       window.addEventListener("pageshow", alignActive);
-      if ('ResizeObserver' in window) {
-        this._resizeObserver = new ResizeObserver(alignActive);
-        this._resizeObserver.observe(track);
-      }
-    }
-
-    disconnectedCallback() {
-      if (this._venueFilterHandler) {
-        document.removeEventListener('zenrace:race-venue-filter', this._venueFilterHandler);
-      }
-      this._resizeObserver?.disconnect();
+      if ("ResizeObserver" in window) new ResizeObserver(alignActive).observe(track);
     }
   }
 

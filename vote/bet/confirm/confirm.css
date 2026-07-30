@@ -690,3 +690,146 @@ html,body{
 @media(max-width:430px){
   .position-odds-vote{padding-inline:12px;font-size:12px}
 }
+
+/* v21: require PIN approval before accepting a confirmed vote. */
+body.pin-approval-open{
+  overflow:hidden;
+  overscroll-behavior:none;
+}
+.pin-approval-overlay{
+  position:fixed;
+  z-index:12000;
+  inset:0;
+  display:grid;
+  place-items:center;
+  padding:20px 14px calc(20px + env(safe-area-inset-bottom,0px));
+  background:rgba(0,0,0,.64);
+  backdrop-filter:blur(2px);
+  -webkit-backdrop-filter:blur(2px);
+}
+.pin-approval-overlay[hidden]{display:none}
+.pin-approval-dialog{
+  position:relative;
+  width:min(100%,430px);
+  min-height:260px;
+  padding:56px 24px 28px;
+  border:1px solid rgba(71,48,8,.58);
+  border-radius:16px;
+  color:var(--confirm-ink);
+  background:#fff;
+  box-shadow:0 18px 48px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.92);
+}
+.pin-approval-dialog::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:7px;
+  border-radius:15px 15px 0 0;
+  background:linear-gradient(90deg,#a97825,#e5ca7d,#a97825);
+}
+.pin-approval-back{
+  position:absolute;
+  top:17px;
+  right:16px;
+  min-width:76px;
+  height:36px;
+  padding:0 12px;
+  border:1px solid #b7bcc4;
+  border-radius:9px;
+  color:#555d68;
+  background:#fff;
+  font-size:13px;
+  font-weight:1000;
+  line-height:1;
+}
+.pin-approval-title{
+  margin:0;
+  color:#2d3137;
+  font-size:21px;
+  font-weight:1000;
+  line-height:1.35;
+  text-align:center;
+}
+.pin-approval-body{
+  width:min(100%,290px);
+  margin:22px auto 0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.pin-approval-field{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:7px;
+  color:#4f5660;
+  font-size:13px;
+  font-weight:900;
+}
+.pin-approval-field input{
+  width:min(100%,220px);
+  height:50px;
+  padding:0 16px;
+  border:2px solid #b7bcc4;
+  border-radius:11px;
+  color:#202328;
+  background:#f5f6f8;
+  font-size:24px;
+  font-weight:1000;
+  letter-spacing:.28em;
+  text-align:center;
+  font-variant-numeric:tabular-nums;
+  outline:none;
+  box-shadow:inset 0 2px 5px rgba(0,0,0,.07);
+}
+.pin-approval-field input:focus{
+  border-color:#b88728;
+  background:#fffdf7;
+  box-shadow:0 0 0 3px rgba(213,171,67,.22),inset 0 1px 3px rgba(0,0,0,.05);
+}
+.pin-approval-note{
+  margin:9px 0 18px;
+  color:#747b85;
+  font-size:12px;
+  font-weight:650;
+  line-height:1.5;
+  text-align:center;
+}
+.pin-approval-submit{
+  width:min(100%,240px);
+  height:50px;
+  border:1px solid #8c671f;
+  border-radius:13px;
+  color:#241b0d;
+  background:linear-gradient(180deg,#f8e8b8 0%,#e2c477 30%,#c59b43 68%,#a97825 100%);
+  font-size:16px;
+  font-weight:1000;
+  letter-spacing:.02em;
+  text-shadow:0 1px 0 rgba(255,255,255,.55);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 4px 12px rgba(85,53,5,.25);
+}
+.pin-approval-submit:disabled{
+  cursor:not-allowed;
+  color:#8c9096;
+  border-color:#c7c9cd;
+  background:#e2e3e6;
+  text-shadow:none;
+  box-shadow:none;
+}
+.pin-approval-submit.is-submitting{
+  cursor:wait;
+  filter:brightness(1.05);
+}
+@media(max-width:430px){
+  .pin-approval-overlay{padding-inline:12px}
+  .pin-approval-dialog{min-height:248px;padding:53px 18px 24px}
+  .pin-approval-title{font-size:20px}
+  .pin-approval-back{top:15px;right:13px;min-width:72px;height:34px;font-size:12px}
+  .pin-approval-body{margin-top:19px}
+  .pin-approval-field input{height:48px;font-size:22px}
+  .pin-approval-submit{height:48px;font-size:15px}
+}
+

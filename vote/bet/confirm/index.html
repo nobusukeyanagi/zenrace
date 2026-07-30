@@ -14,14 +14,14 @@
   <link href="../../race-info.css?v=61" rel="stylesheet">
   <link href="../../../shared/race-button-style.css?v=6" rel="stylesheet">
   <link href="../bet.css?v=39" rel="stylesheet">
-  <link href="confirm.css?v=20" rel="stylesheet">
+  <link href="confirm.css?v=21" rel="stylesheet">
   <script defer src="../../race-info.js?v=63"></script>
   <script defer src="../../live-state.js?v=1"></script>
   <script defer src="../../../shared/category-menu.js?v=54"></script>
   <script defer src="../../../shared/fixed-layout.js?v=23"></script>
   <script defer src="../../../shared/bottom-nav.js?v=61"></script>
   <script defer src="../../odds-data.js?v=1"></script>
-  <script defer src="confirm.js?v=21"></script>
+  <script defer src="confirm.js?v=22"></script>
 </head>
 <body>
   <zenrace-category-menu active="bet" category="vote"></zenrace-category-menu>
@@ -57,6 +57,22 @@
     <span class="vote-submit-shine" aria-hidden="true"></span>
     <span>投票確定</span>
   </button>
+
+  <div class="pin-approval-overlay" id="pin-approval-overlay" hidden>
+    <section class="pin-approval-dialog" role="dialog" aria-modal="true" aria-labelledby="pin-approval-title">
+      <button class="pin-approval-back" id="pin-approval-back" type="button" aria-label="暗証番号入力を閉じて投票確認へ戻る">×戻る</button>
+      <h2 class="pin-approval-title" id="pin-approval-title">暗証番号を入力</h2>
+      <div class="pin-approval-body">
+        <label class="pin-approval-field">
+          <span>暗証番号</span>
+          <input id="pin-approval-input" type="password" inputmode="numeric" autocomplete="off" maxlength="8" pattern="[0-9]*" aria-describedby="pin-approval-note">
+        </label>
+        <p class="pin-approval-note" id="pin-approval-note">暗証番号を入力して投票を承認してください。</p>
+        <button class="pin-approval-submit" id="pin-approval-submit" type="button" disabled>承認して投票</button>
+      </div>
+    </section>
+  </div>
+
   <zenrace-bottom-nav active="vote"></zenrace-bottom-nav>
 </body>
 </html>

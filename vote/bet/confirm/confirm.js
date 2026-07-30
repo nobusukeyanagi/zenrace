@@ -9,6 +9,11 @@
   const grandTotal = document.getElementById("grand-total");
   const grandReturn = document.getElementById("grand-return");
   const grandProfit = document.getElementById("grand-profit");
+  const pinOverlay = document.getElementById("pin-approval-overlay");
+  const pinDialog = pinOverlay?.querySelector(".pin-approval-dialog");
+  const pinInput = document.getElementById("pin-approval-input");
+  const pinBackButton = document.getElementById("pin-approval-back");
+  const pinSubmitButton = document.getElementById("pin-approval-submit");
 
   const BET_ORDER = ["3連単", "3連複", "2連単", "2連複", "ワイド", "単勝"];
   const state = { groups: [], selections: { first: [], second: [], third: [], box: [] }, multiReverse: false, source: "bet" };
@@ -533,10 +538,39 @@
     });
   }
 
-  submitButton.addEventListener("click", () => {
-    if (submitButton.disabled) return;
-    submitButton.disabled = true;
-    submitButton.classList.add("is-submitting");
+  let pinReturnFocus = null;
+
+  function updatePinApprovalState() {
+    if (!pinInput || !pinSubmitButton) return;
+    const numericValue = pinInput.value.replace(/\D/g, "").slice(0, 8);
+    if (pinInput.value !== numericValue) pinInput.value = numericValue;
+    pinSubmitButton.disabled = numericValue.length === 0;
+  }
+
+  function openPinApproval() {
+    if (!pinOverlay || !pinInput || !pinSubmitButton) return;
+    pinReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : submitButton;
+    pinInput.value = "";
+    pinSubmitButton.disabled = true;
+    pinOverlay.hidden = false;
+    document.body.classList.add("pin-approval-open");
+    requestAnimationFrame(() => pinInput.focus({ preventScroll: true }));
+  }
+
+  function closePinApproval() {
+    if (!pinOverlay || pinOverlay.hidden) return;
+    pinOverlay.hidden = true;
+    document.body.classList.remove("pin-approval-open");
+    pinInput.value = "";
+    pinSubmitButton.disabled = true;
+    pinReturnFocus?.focus?.({ preventScroll: true });
+    pinReturnFocus = null;
+  }
+
+  function acceptVote() {
+    if (!pinInput || !pinSubmitButton || pinSubmitButton.disabled) return;
+    pinSubmitButton.disabled = true;
+    pinSubmitButton.classList.add("is-submitting");
     try {
       sessionStorage.setItem(RECEIVED_KEY, JSON.stringify({ acceptedAt: new Date().toISOString() }));
     } catch (error) {
@@ -545,6 +579,38 @@
     window.setTimeout(() => {
       window.location.href = "../../introduction/?vote=accepted";
     }, 120);
+  }
+
+  submitButton.addEventListener("click", () => {
+    if (submitButton.disabled) return;
+    openPinApproval();
+  });
+
+  pinInput?.addEventListener("input", updatePinApprovalState);
+  pinBackButton?.addEventListener("click", closePinApproval);
+  pinSubmitButton?.addEventListener("click", acceptVote);
+  pinInput?.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" && !pinSubmitButton.disabled) {
+      event.preventDefault();
+      acceptVote();
+    }
+  });
+  pinDialog?.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") return;
+    const focusable = [pinBackButton, pinInput, pinSubmitButton].filter((element) => element && !element.disabled);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && pinOverlay && !pinOverlay.hidden) closePinApproval();
   });
 
   initHamamatsuRaceList();
