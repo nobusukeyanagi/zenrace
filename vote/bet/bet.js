@@ -33,32 +33,53 @@
   }
   function distinctProduct(groups){
     let rows=[[]];
-    groups.forEach(group=>{rows=rows.flatMap(row=>group.filter(v=>!row.includes(v)).map(v=>row.concat(v)));});
+    groups.forEach(group=>{
+      rows=rows.flatMap(row=>group.filter(value=>!row.includes(value)).map(value=>row.concat(value)));
+    });
     return rows;
+  }
+  function normalizeUnordered(rows){
+    return rows.map(row=>row.slice().sort((left,right)=>left-right));
   }
   function combosFor(type){
-    const a=[...selected.first],b=[...selected.second],c=[...selected.third],box=[...selected.box];
-    if(type==="単勝") return [...new Set([...a,...b,...c,...box])].map(v=>[v]);
-    if(type==="2連単") {
-      let rows=distinctProduct([a,b]);
-      if(document.getElementById("multi-reverse-option").checked) rows=rows.concat(rows.map(x=>[x[1],x[0]]));
-      if(box.length>=2) rows=rows.concat(permutations(box,2));
-      return rows;
+    const box=[...selected.box].sort((a,b)=>a-b);
+    const pool=(values)=>[...new Set([...values,...box])].sort((a,b)=>a-b);
+    const first=pool(selected.first);
+    const second=pool(selected.second);
+    const third=pool(selected.third);
+    const multiReverse=document.getElementById("multi-reverse-option").checked;
+
+    if(type==="単勝"){
+      return [...new Set([...first,...second,...third,...box])].sort((a,b)=>a-b).map(car=>[car]);
+    }
+    if(type==="2連単"){
+      const base=distinctProduct([first,second]);
+      return multiReverse?base.concat(base.map(row=>[row[1],row[0]])):base;
     }
     if(type==="2連複"||type==="ワイド"){
-      const source=box.length>=2?box:[...new Set([...a,...b])];
-      const out=[];for(let i=0;i<source.length;i++)for(let j=i+1;j<source.length;j++)out.push([source[i],source[j]]);return out;
+      return normalizeUnordered(distinctProduct([first,second]));
     }
     if(type==="3連複"){
-      const source=box.length>=3?box:[...new Set([...a,...b,...c])];
-      const out=[];for(let i=0;i<source.length;i++)for(let j=i+1;j<source.length;j++)for(let k=j+1;k<source.length;k++)out.push([source[i],source[j],source[k]]);return out;
+      return normalizeUnordered(distinctProduct([first,second,third]));
     }
-    let rows=distinctProduct([a,b,c]);
-    if(box.length>=3) rows=rows.concat(permutations(box,3));
-    if(document.getElementById("multi-reverse-option").checked) rows=rows.flatMap(row=>permutations(row,3));
-    return rows;
+    const base=distinctProduct([first,second,third]);
+    return multiReverse?base.flatMap(row=>permutations(row,3)):base;
   }
-  function dedupe(rows){const seen=new Set();return rows.filter(row=>{const key=row.join("-");if(seen.has(key))return false;seen.add(key);return true;});}
+  function dedupe(rows){
+    const seen=new Set();
+    return rows.filter(row=>{
+      const key=row.join("-");
+      if(seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    }).sort((left,right)=>{
+      for(let index=0;index<Math.max(left.length,right.length);index+=1){
+        const difference=(left[index]??-1)-(right[index]??-1);
+        if(difference) return difference;
+      }
+      return left.length-right.length;
+    });
+  }
   function oddsKey(type,cars){
     const values=cars.slice();
     if(type==="3連複"||type==="2連複"||type==="ワイド") values.sort((a,b)=>a-b);
