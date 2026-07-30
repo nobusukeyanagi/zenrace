@@ -90,12 +90,19 @@
 
       const filterToggle = this.querySelector('.race-info-filter-toggle');
       const storedRaceSelection = readRaceSelection();
-      let venueOnly = Boolean(storedRaceSelection.venueOnly && storedRaceSelection.venue === '浜松');
+      const raceFilterDisabled = this.hasAttribute('race-filter-disabled');
+      let venueOnly = raceFilterDisabled
+        ? false
+        : Boolean(storedRaceSelection.venueOnly && storedRaceSelection.venue === '浜松');
 
       const syncFilterToggle = () => {
         filterToggle?.setAttribute('aria-pressed', String(venueOnly));
-        filterToggle?.setAttribute('aria-label', venueOnly ? '全開催場のレースを表示' : '浜松のレースだけ表示');
-        filterToggle?.classList.toggle('is-active', venueOnly);
+        filterToggle?.setAttribute('aria-label', raceFilterDisabled
+          ? '浜松12R'
+          : (venueOnly ? '全開催場のレースを表示' : '浜松のレースだけ表示'));
+        filterToggle?.setAttribute('aria-disabled', String(raceFilterDisabled));
+        if (filterToggle) filterToggle.tabIndex = raceFilterDisabled ? -1 : 0;
+        filterToggle?.classList.toggle('is-active', !raceFilterDisabled && venueOnly);
       };
 
       const applyVenueFilter = () => {
@@ -108,12 +115,14 @@
       };
 
       syncFilterToggle();
-      filterToggle?.addEventListener('click', () => {
-        venueOnly = !venueOnly;
-        writeRaceSelection({ key: DEFAULT_RACE_KEY, venue: '浜松', venueOnly });
-        syncFilterToggle();
-        applyVenueFilter();
-      });
+      if (!raceFilterDisabled) {
+        filterToggle?.addEventListener('click', () => {
+          venueOnly = !venueOnly;
+          writeRaceSelection({ key: DEFAULT_RACE_KEY, venue: '浜松', venueOnly });
+          syncFilterToggle();
+          applyVenueFilter();
+        });
+      }
 
       requestAnimationFrame(() => requestAnimationFrame(applyVenueFilter));
       window.addEventListener('pageshow', applyVenueFilter);
