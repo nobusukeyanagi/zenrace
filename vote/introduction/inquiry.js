@@ -147,21 +147,37 @@
     };
   });
 
+  function isHitWager(type) {
+    return ["2連単", "2連複", "ワイド", "単勝"].includes(type);
+  }
+
+  function isHitEntry(type, cars) {
+    const key = cars.join("-");
+    if (type === "2連単") return key === "3-1";
+    if (type === "2連複" || type === "ワイド") return key === "1-3";
+    if (type === "単勝") return key === "3";
+    return false;
+  }
+
   function detailRows(group) {
-    return group.entries.map(({ cars, record }) => `
-      <div class="inquiry-detail-row">
+    return group.entries.map(({ cars, record }) => {
+      const hitClass = isHitEntry(group.type, cars) ? " is-hit" : "";
+      return `
+      <div class="inquiry-detail-row${hitClass}">
         <div class="inquiry-combination">${combinationHtml(group.type, cars)}</div>
         <div class="inquiry-odds">${displayOdds(record, group.type)}</div>
         <div class="inquiry-points">100pt</div>
-      </div>`).join("");
+      </div>`;
+    }).join("");
   }
 
   function cardHtml(group, index) {
+    const statusHtml = isHitWager(group.type) ? '<div class="inquiry-wager-hit">的中</div>' : "";
     return `
       <section class="inquiry-wager-card" aria-label="${group.type}の投票照会">
         <div class="inquiry-wager-head">
           <div class="inquiry-wager-title"><strong>${group.type}</strong><span>${group.pointCount}点</span></div>
-          <div class="inquiry-wager-subtotal"><span>小計</span><strong>${formatNumber(group.subtotal)}pt</strong></div>
+          ${statusHtml}
         </div>
         <div class="inquiry-position-table">${formationHtml(group.formation)}</div>
         <button class="inquiry-expand-button" type="button" data-toggle-details="${index}" aria-expanded="${group.expanded}">${group.expanded ? "閉じる" : "買い目詳細"}</button>
@@ -184,13 +200,9 @@
 
   function renderSummary() {
     const total = groups.reduce((sum, group) => sum + group.subtotal, 0);
-    const minReturn = groups.reduce((sum, group) => sum + group.minReturn, 0);
-    const maxReturn = groups.reduce((sum, group) => sum + group.maxReturn, 0);
-    const minProfit = minReturn - total;
-    const maxProfit = maxReturn - total;
     totalElement.textContent = `${formatNumber(total)}pt`;
-    returnElement.textContent = rangeText(minReturn, maxReturn, "円");
-    profitElement.innerHTML = `${signedRangeHtml(minProfit, maxProfit)}<span class="profit-unit">pt</span>`;
+    returnElement.textContent = "1,440円";
+    profitElement.innerHTML = '<span class="is-negative">−560</span>円';
   }
 
   function showReceiptPopup() {

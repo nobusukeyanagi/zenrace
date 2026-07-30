@@ -736,3 +736,13 @@
   .selection-odds.is-wide{font-size:11px;letter-spacing:-.04em}
   .bet-confirm-float{font-size:14px}
 }
+
+
+/* v32: keep wide odds at the same size as every other wager in the selection list. */
+.selection-odds.is-wide{
+  font-size:14px;
+  letter-spacing:0;
+}
+@media(max-width:430px){
+  .selection-odds.is-wide{font-size:13px;letter-spacing:0}
+}

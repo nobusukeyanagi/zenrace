@@ -536,3 +536,27 @@ html,body,button,input,select,textarea,table{
   .vote-received-popup{width:160px;height:160px;padding:15px;gap:10px;font-size:16px}
   .vote-received-check{width:56px;height:56px}
 }
+
+
+/* v6: show settled results, remove subtotals, and highlight winning selections. */
+.inquiry-wager-head{
+  grid-template-columns:minmax(0,1fr) auto;
+}
+.inquiry-wager-hit{
+  align-self:center;
+  color:#c51d2b;
+  font-size:17px;
+  font-weight:1000;
+  line-height:1.15;
+  white-space:nowrap;
+}
+.inquiry-detail-row.is-hit{
+  background:#f0cc70;
+}
+.inquiry-detail-row.is-hit .inquiry-odds,
+.inquiry-detail-row.is-hit .inquiry-points{
+  color:#171108;
+}
+@media(max-width:430px){
+  .inquiry-wager-hit{font-size:16px}
+}
