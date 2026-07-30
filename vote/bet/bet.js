@@ -189,7 +189,6 @@
       });
       activeTypes.clear();
       (payload.groups||[]).forEach(group=>{if(BET_TYPE_ORDER.includes(group?.type)) activeTypes.add(group.type);});
-      if(!activeTypes.size) activeTypes.add("3連単");
       removedSelections.clear();
       (payload.groups||[]).forEach(group=>{
         if(!BET_TYPE_ORDER.includes(group?.type)) return;
@@ -245,7 +244,7 @@
     syncAllButtons();
     renderSelections();
   }));
-  document.querySelectorAll(".bet-type-tab").forEach(tab=>tab.addEventListener("click",()=>{const type=tab.dataset.betType;activeTypes.has(type)?activeTypes.delete(type):activeTypes.add(type);if(!activeTypes.size)activeTypes.add("3連単");syncTypeTabs();renderSelections();}));
+  document.querySelectorAll(".bet-type-tab").forEach(tab=>tab.addEventListener("click",()=>{const type=tab.dataset.betType;activeTypes.has(type)?activeTypes.delete(type):activeTypes.add(type);syncTypeTabs();renderSelections();}));
   document.getElementById("multi-reverse-option").addEventListener("change",renderSelections);
   confirm.addEventListener("click",()=>{
     const payload=confirmationPayload();

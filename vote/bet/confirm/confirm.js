@@ -2,10 +2,10 @@
   "use strict";
 
   const STORAGE_KEY = "zenrace:bet-confirmation:v1";
+  const RECEIVED_KEY = "zenrace:vote-received:v1";
   const ODDS_DATA = window.ZENRACE_ODDS_DATA || {};
   const groupsRoot = document.getElementById("wager-groups");
   const submitButton = document.getElementById("vote-submit");
-  const toast = document.getElementById("confirm-toast");
   const grandTotal = document.getElementById("grand-total");
   const grandReturn = document.getElementById("grand-return");
   const grandProfit = document.getElementById("grand-profit");
@@ -293,7 +293,9 @@
           <div class="wager-unit">
             <span>各</span>
             <div class="point-stepper group-point-stepper" aria-label="各使用ポイント">
-              <button type="button" data-group-step="-1" data-group-index="${index}" aria-label="各使用ポイントを減らす">－</button>
+              <button class="group-trash-button" type="button" data-remove-group="${index}" aria-label="${group.type}を削除">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13M10 11v5m4-5v5"/></svg>
+              </button>
               <label class="detail-unit"><input type="number" min="1" max="99" value="${group.unit}" data-group-unit data-group-index="${index}" aria-label="各使用ポイント"><span>00pt</span></label>
               <button type="button" data-group-step="1" data-group-index="${index}" aria-label="各使用ポイントを増やす">＋</button>
             </div>
@@ -406,18 +408,21 @@
         const groupIndex = Number(button.dataset.groupIndex);
         const group = state.groups[groupIndex];
         if (!group) return;
-        const step = Number(button.dataset.groupStep);
-        if (step < 0 && group.unit === 1) {
-          state.groups.splice(groupIndex, 1);
-          render();
-          return;
-        }
-        const value = Math.min(99, Math.max(1, group.unit + step));
+        const value = Math.min(99, Math.max(1, group.unit + Number(button.dataset.groupStep)));
         group.unit = value;
         group.entries.forEach((entry) => {
           entry.units = value;
           entry.removed = false;
         });
+        render();
+      });
+    });
+
+    groupsRoot.querySelectorAll("[data-remove-group]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const groupIndex = Number(button.dataset.removeGroup);
+        if (!state.groups[groupIndex]) return;
+        state.groups.splice(groupIndex, 1);
         render();
       });
     });
@@ -447,9 +452,17 @@
   }
 
   submitButton.addEventListener("click", () => {
-    toast.hidden = false;
-    clearTimeout(window.__zenraceConfirmToastTimer);
-    window.__zenraceConfirmToastTimer = setTimeout(() => { toast.hidden = true; }, 2200);
+    if (submitButton.disabled) return;
+    submitButton.disabled = true;
+    submitButton.classList.add("is-submitting");
+    try {
+      sessionStorage.setItem(RECEIVED_KEY, JSON.stringify({ acceptedAt: new Date().toISOString() }));
+    } catch (error) {
+      console.warn("投票受付表示を保存できませんでした。", error);
+    }
+    window.setTimeout(() => {
+      window.location.href = "../../introduction/?vote=accepted";
+    }, 120);
   });
 
   const initialPayload = readPayload();

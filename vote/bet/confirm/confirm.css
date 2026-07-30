@@ -363,10 +363,13 @@ html,body{
   letter-spacing:.03em;
   text-shadow:0 1px 0 rgba(255,255,255,.55);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.82),
-    inset 0 -1px 0 rgba(90,56,8,.28),
-    0 3px 10px rgba(64,39,4,.34),
-    0 0 0 1px rgba(255,232,169,.24);
+    inset 0 1px 0 rgba(255,255,255,.94),
+    inset 0 -1px 0 rgba(90,56,8,.30),
+    0 4px 13px rgba(64,39,4,.42),
+    0 0 0 1px rgba(255,239,191,.46),
+    0 0 15px rgba(255,218,117,.56),
+    0 0 30px rgba(218,166,55,.30);
+  animation:voteConfirmGlow 2.4s ease-in-out infinite;
   touch-action:manipulation;
 }
 .vote-submit-float > span:last-child{position:relative;z-index:2}
@@ -377,8 +380,9 @@ html,body{
   width:24%;
   height:250%;
   transform:rotate(24deg);
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.58),transparent);
-  animation:voteConfirmSweep 3.8s ease-in-out infinite;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.82),transparent);
+  filter:blur(.2px);
+  animation:voteConfirmSweep 3.1s ease-in-out infinite;
 }
 @keyframes voteConfirmSweep{
   0%,58%{left:-55%;opacity:0}
@@ -386,23 +390,18 @@ html,body{
   86%{left:130%;opacity:.35}
   100%{left:130%;opacity:0}
 }
-
-.confirm-toast{
-  position:fixed;
-  z-index:12000;
-  left:50%;
-  bottom:calc(var(--bottom-nav-total-h,62px) + 18px);
-  transform:translateX(-50%);
-  width:max-content;
-  max-width:calc(100% - 28px);
-  padding:10px 18px;
-  border:1px solid #f0cc70;
-  border-radius:10px;
-  color:#fff;
-  background:rgba(15,15,15,.94);
-  font-size:14px;
-  font-weight:1000;
-  box-shadow:0 7px 22px rgba(0,0,0,.38);
+@keyframes voteConfirmGlow{
+  0%,100%{
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.94),inset 0 -1px 0 rgba(90,56,8,.30),0 4px 13px rgba(64,39,4,.42),0 0 0 1px rgba(255,239,191,.46),0 0 13px rgba(255,218,117,.48),0 0 25px rgba(218,166,55,.24);
+  }
+  50%{
+    box-shadow:inset 0 1px 0 rgba(255,255,255,1),inset 0 -1px 0 rgba(90,56,8,.24),0 5px 15px rgba(64,39,4,.46),0 0 0 2px rgba(255,243,207,.58),0 0 23px rgba(255,224,139,.78),0 0 42px rgba(218,166,55,.40);
+  }
+}
+.vote-submit-float.is-submitting,
+.vote-submit-float:disabled{
+  cursor:wait;
+  filter:brightness(1.08);
 }
 
 @media(max-width:430px){
@@ -446,7 +445,7 @@ html,body{
 }
 
 @media(prefers-reduced-motion:reduce){
-  .vote-submit-shine{animation:none}
+  .vote-submit-float,.vote-submit-shine{animation:none}
 }
 
 
@@ -609,3 +608,29 @@ html,body{
 @media(max-width:430px){
   .detail-combination-separator{flex-basis:9px;width:9px;min-width:9px;margin:0;padding-inline:1px}
 }
+
+
+/* v15: use a trash icon only for the pre-detail wager-group removal control. */
+.point-stepper .group-trash-button{
+  color:#6b737e;
+}
+.point-stepper .group-trash-button svg{
+  width:19px;
+  height:19px;
+  display:block;
+  margin:auto;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  pointer-events:none;
+}
+.point-stepper .group-trash-button:active{
+  color:#9b1f27;
+  background:#fff1f2;
+  border-color:#d6a8ac;
+}
+
+
+/* v16: strengthen the confirmation glow and hand off the accepted state to inquiry. */

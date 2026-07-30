@@ -14,14 +14,14 @@
   <link href="../race-switch.css?v=66" rel="stylesheet">
   <link href="../race-info.css?v=59" rel="stylesheet">
   <link href="../../shared/race-button-style.css?v=6" rel="stylesheet">
-  <link href="results.css?v=10" rel="stylesheet">
+  <link href="results.css?v=11" rel="stylesheet">
   <script defer src="../race-info.js?v=60"></script>
   <script defer src="../live-state.js?v=1"></script>
   <script defer src="../../shared/category-menu.js?v=53"></script>
   <script defer src="../../shared/fixed-layout.js?v=22"></script>
   <script defer src="../../shared/bottom-nav.js?v=61"></script>
   <script defer src="../race-switch.js?v=67"></script>
-  <script defer src="results.js?v=4"></script>
+  <script defer src="results.js?v=5"></script>
 </head>
 <body>
   <zenrace-category-menu active="results" category="vote"></zenrace-category-menu>
@@ -31,9 +31,12 @@
         <zenrace-race-switch active-key="浜松-12R-16:45"></zenrace-race-switch>
         <zenrace-race-info></zenrace-race-info>
         <nav class="result-replay-menu" aria-label="リプレイメニュー">
-          <a class="result-replay-tab" href="https://autorace.jp/race_info/Ondemand/asx/hamamatsu/2026-02-23_12" target="_blank" rel="noopener noreferrer">レースリプレイ</a>
-          <a class="result-replay-tab" href="https://autorace.jp/race_info/Ondemand/asx/hamamatsu/2026-02-23_12/1" target="_blank" rel="noopener noreferrer">試走リプレイ</a>
+          <button class="result-replay-tab" type="button" data-replay-url="https://autorace.jp/race_info/Ondemand/asx/hamamatsu/2026-02-23_12" data-replay-title="レースリプレイ" aria-pressed="false">レースリプレイ</button>
+          <button class="result-replay-tab" type="button" data-replay-url="https://autorace.jp/race_info/Ondemand/asx/hamamatsu/2026-02-23_12/1" data-replay-title="試走リプレイ" aria-pressed="false">試走リプレイ</button>
         </nav>
+        <div class="result-replay-panel" id="result-replay-panel" hidden>
+          <iframe id="result-replay-frame" title="リプレイ" src="about:blank" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
         <main class="vote-results-page">
           <section class="result-section" aria-labelledby="race-result-heading">

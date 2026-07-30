@@ -86,8 +86,13 @@
       if (row.unavailable) {
         return `<tr><th scope="row" class="payout-type">${row.type}</th><td class="unavailable" colspan="3">未発売</td></tr>`;
       }
+      const typeCell = row.type === "ワイド"
+        ? `<th scope="row" class="payout-type payout-type-wide" rowspan="3">ワイド</th>`
+        : row.continuation
+          ? ""
+          : `<th scope="row" class="payout-type">${row.type}</th>`;
       return `<tr class="${row.continuation ? "payout-continuation" : ""}">
-        <th scope="row" class="payout-type">${row.type}</th>
+        ${typeCell}
         <td class="payout-combination">${renderCombination(row.cars, row.separator)}</td>
         <td class="payout-value">${row.payout}</td>
         <td class="payout-popularity">${row.popularity}</td>
@@ -106,10 +111,33 @@
     </tr>`).join("");
   };
 
+  const initializeReplay = () => {
+    const panel = document.getElementById("result-replay-panel");
+    const frame = document.getElementById("result-replay-frame");
+    const tabs = [...document.querySelectorAll("[data-replay-url]")];
+    if (!panel || !frame || !tabs.length) return;
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const url = tab.dataset.replayUrl;
+        if (!url) return;
+        frame.title = tab.dataset.replayTitle || "リプレイ";
+        if (frame.getAttribute("src") !== url) frame.setAttribute("src", url);
+        panel.hidden = false;
+        tabs.forEach((item) => {
+          const active = item === tab;
+          item.classList.toggle("active", active);
+          item.setAttribute("aria-pressed", String(active));
+        });
+      });
+    });
+  };
+
   const initialize = () => {
     renderRaceResults();
     renderPayouts();
     renderGrandNote();
+    initializeReplay();
   };
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initialize, { once: true });
