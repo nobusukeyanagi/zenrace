@@ -962,6 +962,7 @@ button,select{font:inherit}
 .odds-wide-cell .odds-over-thousand.odds-wide-upper{color:#0068b7!important}
 
 /* v27: allow direct odds selection and hand the chosen bets to the confirmation page. */
+/* v28: place the selection-set action directly over the featured Vote bottom-nav frame. */
 .odds-selectable{
   cursor:pointer;
   -webkit-tap-highlight-color:transparent;
@@ -989,10 +990,15 @@ button,select{font:inherit}
   position:fixed;
   z-index:9001;
   left:50%;
-  bottom:calc(var(--bottom-nav-total-h,62px) + 3px);
-  width:clamp(96px,calc(20vw - 8px),144px);
-  height:44px;
+  bottom:calc(var(--visual-bottom,0px) + env(safe-area-inset-bottom,0px) + 3px);
+  width:calc((100vw - 8px) / 5 + 8px);
+  height:53px;
   padding:0 8px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:0;
   overflow:hidden;
   transform:translateX(-50%);
   border:1px solid #8c671f;
