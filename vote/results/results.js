@@ -40,18 +40,34 @@
 
   const carIcon = (number, extraClass = "") => `<span class="result-entry result-entry-${number}${extraClass ? ` ${extraClass}` : ""}">${number}</span>`;
 
+  const rankIndexes = (valueGetter) => new Map(
+    RACE_RESULTS
+      .map((row, index) => ({ index, value: valueGetter(row) }))
+      .sort((a, b) => a.value - b.value || a.index - b.index)
+      .slice(0, 3)
+      .map((item, rankIndex) => [item.index, rankIndex + 1]),
+  );
+
+  const METRIC_RANKS = {
+    trial: rankIndexes((row) => Number.parseFloat(row.trial)),
+    raceTime: rankIndexes((row) => Number.parseFloat(row.raceTime)),
+    start: rankIndexes((row) => Number.parseInt(row.start.replace(/\D/g, ""), 10)),
+  };
+
+  const metricValue = (value, rank) => `<span class="result-metric${rank ? ` result-metric-rank-${rank}` : ""}">${value}</span>`;
+
   const renderRaceResults = () => {
     const body = document.getElementById("race-result-body");
     if (!body) return;
-    body.innerHTML = RACE_RESULTS.map((row) => {
+    body.innerHTML = RACE_RESULTS.map((row, index) => {
       return `<tr>
         <td class="finish-cell${row.finish <= 3 ? ` finish-rank-${row.finish}` : ""}">${row.finish}</td>
         <td>${carIcon(row.car)}</td>
         <td class="rider-cell">${row.rider}</td>
         <td>${row.handicap}</td>
-        <td>${row.trial}</td>
-        <td>${row.raceTime}</td>
-        <td>${row.start}</td>
+        <td>${metricValue(row.trial, METRIC_RANKS.trial.get(index))}</td>
+        <td>${metricValue(row.raceTime, METRIC_RANKS.raceTime.get(index))}</td>
+        <td>${metricValue(row.start, METRIC_RANKS.start.get(index))}</td>
         <td>${row.incident || ""}</td>
       </tr>`;
     }).join("");

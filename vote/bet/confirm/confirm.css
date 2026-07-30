@@ -558,3 +558,16 @@ html,body{
 @media(max-width:430px){
   .detail-combination-separator{flex-basis:6px;min-width:6px;font-size:11px}
 }
+
+/* v12: use exactly 1px of horizontal spacing on each side of combination separators. */
+.detail-combo{gap:0}
+.detail-combination-separator{
+  flex:0 0 auto;
+  min-width:0;
+  margin:0 1px;
+  font-size:12px;
+  letter-spacing:0;
+}
+@media(max-width:430px){
+  .detail-combination-separator{flex-basis:auto;min-width:0;margin:0 1px;font-size:11px}
+}

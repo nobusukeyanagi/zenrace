@@ -208,3 +208,15 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
 @media(max-width:600px){
   .result-section-heading{font-size:22px}
 }
+
+/* v8: highlight the top three trial, race and start metrics behind the text. */
+.result-metric{
+  display:inline-block;
+  min-width:3.2em;
+  padding:2px 3px;
+  line-height:1;
+  text-align:center;
+}
+.result-metric-rank-1{color:#171108;background:#f6de8d}
+.result-metric-rank-2{color:#172029;background:#d9e6ee}
+.result-metric-rank-3{color:#382719;background:#e3c6a3}
