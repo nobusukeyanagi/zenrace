@@ -357,3 +357,62 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
   color:#171108;
   background:var(--race-button-active,#fff6c8)!important;
 }
+
+/* v13: race-review block below payouts, matching the race-outlook presentation. */
+.race-review-section{margin-bottom:12px}
+.race-review-heading{font-size:22px}
+.race-review-card{
+  padding:12px 13px;
+  color:#15171a;
+  background:#fff;
+  border:1px solid rgba(213,171,67,.34);
+  border-radius:14px;
+  font-size:13px;
+  font-weight:600;
+  line-height:1.62;
+  text-align:left;
+  overflow-wrap:anywhere;
+}
+.race-review-card p{margin:0;color:inherit;font:inherit;line-height:inherit}
+.race-review-rider{
+  display:inline-flex;
+  align-items:center;
+  gap:3px;
+  margin:0 1px;
+  vertical-align:-.14em;
+  line-height:1;
+  white-space:nowrap;
+}
+.race-review-entry.result-entry{
+  width:1.18em;
+  height:1.18em;
+  flex:0 0 1.18em;
+  border-radius:3px;
+  font-size:.82em;
+  line-height:1;
+}
+.race-review-name{font-weight:900;line-height:1}
+@media(max-width:600px){
+  .race-review-section{margin-bottom:9px}
+  .race-review-heading{font-size:22px}
+  .race-review-card{padding:11px 12px;font-size:13px;line-height:1.62}
+}
+
+
+/* v14: keep the race-review icon height and every line box identical to the outlook copy. */
+.race-review-card,
+.race-review-card p{
+  line-height:1.62;
+}
+.race-review-rider{
+  height:1em;
+  line-height:1;
+  vertical-align:-.08em;
+}
+.race-review-entry.result-entry{
+  width:1em;
+  height:1em;
+  flex:0 0 1em;
+  font-size:.72em;
+}
+.race-review-name{line-height:1}

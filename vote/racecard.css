@@ -242,38 +242,38 @@
   overflow-wrap:anywhere;
 }
 .race-outlook-card p{
-  margin:0 0 12px;
+  margin:0;
   color:inherit;
   font:inherit;
   line-height:inherit;
 }
-.race-outlook-card p:last-child{margin-bottom:0}
 .race-outlook-focus{
   font-weight:1000!important;
 }
 .race-outlook-rider{
   display:inline-flex;
   align-items:center;
-  gap:4px;
+  gap:3px;
   margin:0 1px;
-  vertical-align:-5px;
+  vertical-align:-.14em;
+  line-height:1;
   white-space:nowrap;
 }
 .race-outlook-entry{
-  width:22px;
-  height:22px;
+  width:1.18em;
+  height:1.18em;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  flex:0 0 22px;
+  flex:0 0 1.18em;
   border:1px solid rgba(0,0,0,.30);
-  border-radius:5px;
-  font-size:13px;
+  border-radius:3px;
+  font-size:.82em;
   font-weight:1000;
   line-height:1;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.38),0 1px 2px rgba(0,0,0,.14);
 }
-.race-outlook-name{font-weight:900}
+.race-outlook-name{font-weight:900;line-height:1}
 .race-outlook-entry-1{color:#111;background:#f3f4f5;border-color:#8f949a}
 .race-outlook-entry-2{color:#fff;background:#171717;border-color:#050505}
 .race-outlook-entry-3{color:#fff;background:#e51125;border-color:#a80a19}
@@ -321,3 +321,26 @@
   font-weight:700!important;
   font-variant-numeric:tabular-nums;
 }
+
+/* v96: keep outlook inline car icons within the body line box and make every text line use one rhythm. */
+.race-outlook-card{line-height:1.62}
+.race-outlook-card p,.race-outlook-card p + p{margin-block:0}
+
+
+/* v97: align race-outlook entry icons to the body text without changing line spacing. */
+.race-outlook-card,
+.race-outlook-card p{
+  line-height:1.62;
+}
+.race-outlook-rider{
+  height:1em;
+  line-height:1;
+  vertical-align:-.08em;
+}
+.race-outlook-entry{
+  width:1em;
+  height:1em;
+  flex:0 0 1em;
+  font-size:.72em;
+}
+.race-outlook-name{line-height:1}
