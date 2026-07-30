@@ -496,3 +496,11 @@
     grid-template-columns:64px minmax(0,1fr) 48px calc(26.666667% - 41.066667px) calc(20% - 30.8px);
   }
 }
+
+/* v20: match the racecard spacing between the rider name and the second line. */
+.rider-main{
+  line-height:1.15;
+}
+.rider-profile{
+  margin-top:3px;
+}
