@@ -543,3 +543,18 @@
     height:44px;
   }
 }
+
+/* v23: align selection controls with the upper table columns. */
+.selection-odds{
+  width:100%;
+  padding-left:4px;
+  padding-right:0;
+  text-align:left;
+  justify-self:stretch;
+}
+.selection-remove{
+  width:auto;
+  margin:0 2px 0 5px;
+  justify-self:stretch;
+  box-sizing:border-box;
+}
