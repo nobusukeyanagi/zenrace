@@ -62,7 +62,7 @@
 
   function oddsText(type, item) {
     if (type === "ワイド") {
-      return `<span class="odds-wide-popular"><span>${formatOdds(item.odds[0])}</span><span class="odds-wide-separator">〜</span><span>${formatOdds(item.odds[1])}</span></span>`;
+      return `<span class="odds-wide-popular"><span class="odds-wide-popular-lower">${formatOdds(item.odds[0])}</span><small class="odds-wide-popular-upper"><span class="odds-wide-separator">〜</span><span>${formatOdds(item.odds[1])}</span></small></span>`;
     }
     return formatOdds(item.odds);
   }

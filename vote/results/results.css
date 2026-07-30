@@ -416,3 +416,26 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
   font-size:.72em;
 }
 .race-review-name{line-height:1}
+
+
+/* v15: align review rider names with body text and align larger entry-icon bottoms to the text bottom. */
+.race-review-rider{
+  display:inline;
+  height:auto;
+  line-height:inherit;
+  vertical-align:baseline;
+  white-space:nowrap;
+}
+.race-review-entry.result-entry{
+  width:1.12em;
+  height:1.12em;
+  flex:0 0 1.12em;
+  margin-right:3px;
+  font-size:.78em;
+  vertical-align:text-bottom;
+}
+.race-review-name{
+  display:inline;
+  line-height:inherit;
+  vertical-align:baseline;
+}

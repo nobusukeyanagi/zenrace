@@ -323,3 +323,6 @@
 @media(max-width:430px){
   .prediction-mark::before{width:20px;height:20px}
 }
+
+/* v10: use the same black stroke for the cross mark as the other forecast marks. */
+.prediction-mark.mark-cross{color:#171108}

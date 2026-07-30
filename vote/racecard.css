@@ -344,3 +344,26 @@
   font-size:.72em;
 }
 .race-outlook-name{line-height:1}
+
+
+/* v98: align rider names with body text and align larger entry-icon bottoms to the text bottom. */
+.race-outlook-rider{
+  display:inline;
+  height:auto;
+  line-height:inherit;
+  vertical-align:baseline;
+  white-space:nowrap;
+}
+.race-outlook-entry{
+  width:1.12em;
+  height:1.12em;
+  flex:0 0 1.12em;
+  margin-right:3px;
+  font-size:.78em;
+  vertical-align:text-bottom;
+}
+.race-outlook-name{
+  display:inline;
+  line-height:inherit;
+  vertical-align:baseline;
+}
