@@ -24,7 +24,7 @@
 
   function rowHtml(rider){
     const rankClass=rider.popularity<=3?` support-rank-${rider.popularity}`:"";
-    return `<tr><td class="car-number car-${rider.car}">${rider.car}</td><td class="rider-cell"><span class="rider-main">${rider.name}</span><span class="rider-profile">${rider.profile}</span><span class="rider-support"><span class="rider-popularity${rankClass}">${rider.popularity}人気</span><span class="rider-support-rate">支持率${rider.supportRate.toFixed(1)}</span></span></td>${columns.map((key,index)=>`<td class="pick-cell${index===3?" box-divider":""}"><button class="pick-button entry-${rider.car}" type="button" data-column="${key}" data-car="${rider.car}" aria-pressed="false">${rider.car}</button></td>`).join("")}</tr>`;
+    return `<tr><td class="car-number car-${rider.car}">${rider.car}</td><td class="rider-cell"><span class="rider-main">${rider.name}</span><span class="rider-profile">${rider.profile}</span><span class="rider-support"><span class="rider-popularity${rankClass}">${rider.popularity}人気</span><span class="rider-support-rate">支${rider.supportRate.toFixed(1)}</span></span></td>${columns.map((key,index)=>`<td class="pick-cell${index===3?" box-divider":""}"><button class="pick-button entry-${rider.car}" type="button" data-column="${key}" data-car="${rider.car}" aria-pressed="false">${rider.car}</button></td>`).join("")}</tr>`;
   }
   body.innerHTML = riders.map(rowHtml).join("");
 

@@ -866,3 +866,12 @@
   .delca-default{gap:5px}
   .bet-race-tab{flex-basis:78px}
 }
+
+/* v37: remove only the frame surrounding the complete wager selection list. */
+.selection-section,
+.selection-list{
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
