@@ -266,7 +266,7 @@
             <div class="detail-profit"${entry.units > 0 ? "" : " hidden"}>${profitValueHtml}</div>
           </div>
           <div class="point-stepper" aria-label="点数選択">
-            <button type="button" data-step="-1" data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="${entry.units === 1 ? "買い目を消す" : "点数を減らす"}"${entry.units === 0 ? " disabled" : ""}>${entry.units === 1 ? "消" : "−"}</button>
+            <button type="button" data-step="-1" data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="点数を減らす"${entry.units === 0 ? " disabled" : ""}>－</button>
             <label class="detail-unit"><input type="number" min="0" max="99" value="${entry.units}" data-entry-units data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="点数"><span>00pt</span></label>
             <button type="button" data-step="1" data-group-index="${groupIndex}" data-entry-index="${entryIndex}" aria-label="点数を増やす">＋</button>
           </div>
@@ -293,7 +293,7 @@
           <div class="wager-unit">
             <span>各</span>
             <div class="point-stepper group-point-stepper" aria-label="各使用ポイント">
-              <button type="button" data-group-step="-1" data-group-index="${index}" aria-label="${group.unit === 1 ? `${group.type}を消す` : "各使用ポイントを減らす"}">${group.unit === 1 ? "消" : "−"}</button>
+              <button type="button" data-group-step="-1" data-group-index="${index}" aria-label="各使用ポイントを減らす">－</button>
               <label class="detail-unit"><input type="number" min="1" max="99" value="${group.unit}" data-group-unit data-group-index="${index}" aria-label="各使用ポイント"><span>00pt</span></label>
               <button type="button" data-group-step="1" data-group-index="${index}" aria-label="各使用ポイントを増やす">＋</button>
             </div>

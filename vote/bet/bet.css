@@ -609,3 +609,91 @@
 @media(max-width:430px){
   .selection-combination-separator{flex-basis:auto;min-width:0;margin:0 1px;font-size:11px}
 }
+
+
+/* v29: equalize all four pick columns, align selection actions, use fixed separator slots, and simplify the Delca field. */
+.delca-bar{
+  background:#0a2a38;
+}
+.bet-table col.col-car{width:38px}
+.bet-table col.col-rider{width:116px}
+.bet-table col.col-pick,
+.bet-table col.col-box{width:auto}
+.selection-row{
+  grid-template-columns:68px minmax(0,1fr) 55px calc(25% - 35.5px) calc(25% - 35.5px);
+}
+.selection-odds{
+  padding-left:0;
+  padding-right:4px;
+  text-align:right;
+}
+.selection-remove{
+  width:calc(100% - 6px);
+  margin:0 3px;
+}
+.selection-combination-separator{
+  box-sizing:content-box;
+  flex:0 0 7px;
+  width:7px;
+  min-width:7px;
+  margin:0 1px;
+  text-align:center;
+}
+@media(max-width:430px){
+  .bet-table col.col-car{width:38px}
+  .bet-table col.col-rider{width:116px}
+  .bet-table col.col-pick,
+  .bet-table col.col-box{width:auto}
+  .selection-row{
+    grid-template-columns:64px minmax(0,1fr) 48px calc(25% - 37px) calc(25% - 37px);
+  }
+  .selection-combination-separator{
+    flex-basis:7px;
+    width:7px;
+    min-width:7px;
+    margin:0 1px;
+  }
+}
+
+/* v30: finalize equal pick columns, compact aligned separators and the dark Delca field. */
+.delca-bar{
+  background-color:#0a2a38;
+  background-image:none;
+}
+.bet-table col.col-car{width:38px}
+.bet-table col.col-rider{width:116px}
+.bet-table col.col-pick,
+.bet-table col.col-box{width:auto}
+.selection-odds{
+  padding-left:0;
+  padding-right:4px;
+  text-align:right;
+  justify-self:stretch;
+}
+.selection-remove{
+  width:calc(100% - 9px);
+  margin:0 3px 0 6px;
+  justify-self:stretch;
+  box-sizing:border-box;
+}
+.selection-combo{gap:0}
+.selection-combination-separator{
+  box-sizing:border-box;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 9px;
+  width:9px;
+  min-width:9px;
+  margin:0;
+  padding:0 1px;
+  line-height:1;
+  text-align:center;
+}
+@media(max-width:430px){
+  .bet-table col.col-car{width:38px}
+  .bet-table col.col-rider{width:116px}
+  .bet-table col.col-pick,
+  .bet-table col.col-box{width:auto}
+  .selection-combination-separator{flex-basis:9px;width:9px;min-width:9px;margin:0;padding-inline:1px}
+}

@@ -40,13 +40,17 @@
 
   const carIcon = (number, extraClass = "") => `<span class="result-entry result-entry-${number}${extraClass ? ` ${extraClass}` : ""}">${number}</span>`;
 
-  const rankIndexes = (valueGetter) => new Map(
-    RACE_RESULTS
-      .map((row, index) => ({ index, value: valueGetter(row) }))
-      .sort((a, b) => a.value - b.value || a.index - b.index)
-      .slice(0, 3)
-      .map((item, rankIndex) => [item.index, rankIndex + 1]),
-  );
+  const rankIndexes = (valueGetter) => {
+    const values = RACE_RESULTS
+      .map((row) => valueGetter(row))
+      .filter((value) => Number.isFinite(value));
+    const rankedValues = [...new Set(values)].sort((a, b) => a - b).slice(0, 3);
+    return new Map(
+      RACE_RESULTS
+        .map((row, index) => ({ index, rank: rankedValues.indexOf(valueGetter(row)) + 1 }))
+        .filter((item) => item.rank >= 1),
+    );
+  };
 
   const METRIC_RANKS = {
     trial: rankIndexes((row) => Number.parseFloat(row.trial)),

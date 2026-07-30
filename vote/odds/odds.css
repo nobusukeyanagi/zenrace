@@ -862,3 +862,52 @@ button,select{font:inherit}
 @media(max-width:360px){
   .odds-combination-separator{flex-basis:auto;min-width:0;margin:0 1px;font-size:10px}
 }
+
+
+/* v22: give ordered and unordered separators the same fixed slot width. */
+.odds-combination-separator{
+  box-sizing:content-box;
+  flex:0 0 7px;
+  width:7px;
+  min-width:7px;
+  margin:0 1px;
+  text-align:center;
+}
+@media(max-width:430px){
+  .odds-combination-separator{
+    flex-basis:7px;
+    width:7px;
+    min-width:7px;
+    margin:0 1px;
+  }
+}
+@media(max-width:360px){
+  .odds-combination-separator{
+    flex-basis:7px;
+    width:7px;
+    min-width:7px;
+    margin:0 1px;
+  }
+}
+
+/* v23: reserve one identical compact slot for ordered and unordered separators. */
+.odds-popular-combination{gap:0}
+.odds-combination-separator{
+  box-sizing:border-box;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 9px;
+  width:9px;
+  min-width:9px;
+  margin:0;
+  padding:0 1px;
+  line-height:1;
+  text-align:center;
+}
+@media(max-width:430px){
+  .odds-combination-separator{flex-basis:9px;width:9px;min-width:9px;margin:0;padding-inline:1px}
+}
+@media(max-width:360px){
+  .odds-combination-separator{flex-basis:9px;width:9px;min-width:9px;margin:0;padding-inline:1px}
+}

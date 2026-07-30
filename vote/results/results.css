@@ -220,3 +220,102 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
 .result-metric-rank-1{color:#171108;background:#f6de8d}
 .result-metric-rank-2{color:#172029;background:#d9e6ee}
 .result-metric-rank-3{color:#382719;background:#e3c6a3}
+
+
+/* v9: use the same separate 1px grid model as the racecard table. */
+.race-result-table,
+.payout-table,
+.grand-note-table{
+  border-collapse:separate;
+  border-spacing:0;
+}
+.race-result-table th,
+.payout-table thead th,
+.grand-note-table thead th,
+.race-result-table td,
+.payout-table tbody th,
+.payout-table tbody td,
+.grand-note-table tbody th,
+.grand-note-table tbody td{
+  border-top:0;
+  border-left:0;
+  border-right:1px solid #d2d3d7;
+  border-bottom:1px solid #d2d3d7;
+  box-shadow:none;
+}
+.race-result-table th:last-child,
+.race-result-table td:last-child,
+.payout-table thead th:last-child,
+.payout-table tbody td:last-child,
+.grand-note-table thead th:last-child,
+.grand-note-table tbody td:last-child{border-right:0}
+.race-result-table tbody tr:last-child td,
+.payout-table tbody tr:last-child th,
+.payout-table tbody tr:last-child td,
+.grand-note-table tbody tr:last-child th,
+.grand-note-table tbody tr:last-child td{border-bottom:0}
+
+/* v10: add replay actions at the racecard detail-menu position and finalize racecard-thin grids. */
+.result-replay-menu{
+  width:min(100%,760px);
+  margin:10px auto 0;
+  padding:0 8px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0;
+}
+.result-replay-tab{
+  min-width:0;
+  height:38px;
+  padding:0 4px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(213,171,67,.34);
+  border-right:0;
+  border-radius:0;
+  color:#eef1f5;
+  background:linear-gradient(180deg,#1a1a1b,#090909);
+  font-size:13px;
+  font-weight:850;
+  line-height:1;
+  text-decoration:none;
+  white-space:nowrap;
+  -webkit-tap-highlight-color:transparent;
+}
+.result-replay-tab:first-child{border-radius:9px 0 0 9px}
+.result-replay-tab:last-child{border-right:1px solid rgba(213,171,67,.34);border-radius:0 9px 9px 0}
+.result-replay-tab:focus-visible{position:relative;z-index:1;outline:2px solid #fff0ad;outline-offset:-2px}
+@media(max-width:430px){.result-replay-tab{font-size:12px}}
+
+.race-result-table,
+.payout-table,
+.grand-note-table{
+  border-collapse:separate;
+  border-spacing:0;
+}
+.race-result-table th,
+.payout-table thead th,
+.grand-note-table thead th,
+.race-result-table td,
+.payout-table tbody th,
+.payout-table tbody td,
+.grand-note-table tbody th,
+.grand-note-table tbody td{
+  border-top:0!important;
+  border-left:0!important;
+  border-right:1px solid #d2d3d7!important;
+  border-bottom:1px solid #d2d3d7!important;
+  box-shadow:none!important;
+}
+.race-result-table th:last-child,
+.race-result-table td:last-child,
+.payout-table thead th:last-child,
+.payout-table tbody td:last-child,
+.grand-note-table thead th:last-child,
+.grand-note-table tbody td:last-child{border-right:0!important}
+.race-result-table tbody tr:last-child td,
+.payout-table tbody tr:last-child th,
+.payout-table tbody tr:last-child td,
+.grand-note-table tbody tr:last-child th,
+.grand-note-table tbody tr:last-child td{border-bottom:0!important}
