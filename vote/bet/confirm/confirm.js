@@ -302,9 +302,9 @@
         <div class="position-table">${positionRows(group)}</div>
         ${excluded}
         <div class="wager-summary">
-          <div class="summary-line"><span>合計</span><strong data-group-total>${formatNumber(metrics.stake)}pt</strong></div>
+          <div class="summary-line"><span>小計</span><strong data-group-total>${formatNumber(metrics.stake)}pt</strong></div>
           <div class="summary-line"><span>想定払戻金</span><strong data-group-return>${rangeText(metrics.minReturn, metrics.maxReturn)}</strong></div>
-          <div class="summary-line"><span>想定収支</span><strong data-group-profit>${groupProfit}</strong></div>
+          <div class="summary-line"><span>合計に対する収支</span><strong data-group-profit>${groupProfit}</strong></div>
         </div>
         <button class="expand-button" type="button" data-toggle-details="${index}" aria-expanded="${group.expanded}">${group.expanded ? "閉じる" : "買い目詳細"}</button>
         <div class="wager-details" data-details="${index}" ${group.expanded ? "" : "hidden"}>${detailRows(group, index)}</div>
