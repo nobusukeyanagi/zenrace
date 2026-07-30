@@ -418,3 +418,37 @@
   margin-right:2px;
   justify-self:stretch;
 }
+
+
+/* v16: add popularity and support rate as the rider cell's third line. */
+.rider-cell{vertical-align:middle!important}
+.rider-main{line-height:1.05}
+.rider-profile{margin-top:1px;line-height:1}
+.rider-support{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  min-width:0;
+  margin-top:1px;
+  overflow:hidden;
+  color:#68717c;
+  font-size:10px;
+  font-weight:850;
+  line-height:1;
+  white-space:nowrap;
+}
+.rider-popularity{
+  display:inline-block;
+  flex:0 0 auto;
+  padding:0 1px;
+  color:#68717c;
+}
+.rider-support-rate{
+  min-width:0;
+  overflow:hidden;
+  color:#68717c;
+  text-overflow:ellipsis;
+}
+.rider-popularity.support-rank-1{color:#111;background:#f6de8d}
+.rider-popularity.support-rank-2{color:#111;background:#d9e6ee}
+.rider-popularity.support-rank-3{color:#111;background:#e3c6a3}

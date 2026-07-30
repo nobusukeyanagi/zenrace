@@ -84,10 +84,12 @@
 
     const cells = rows.map((row) => [...row.children].filter((child) => child.matches("td")));
 
-    // Support rate: larger is better.
+    // Support rate: rank by the numeric rate, but highlight the popularity line.
     applyDenseRanks(cells.map((tds) => {
-      const element = tds[3]?.querySelector(".support-rate-main");
-      return { element, value: parseNumber(element?.textContent) };
+      const cell = tds[3];
+      const element = cell?.querySelector(".support-rate-popularity");
+      const valueElement = cell?.querySelector(".support-rate-main");
+      return { element, value: parseNumber(valueElement?.textContent) };
     }), { higherIsBetter: true });
 
     // ST: smaller is better.

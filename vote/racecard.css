@@ -188,3 +188,25 @@
 .machine-name > span + span{
   color:#66707c!important;
 }
+
+
+/* v93: show popularity first and support rate second; only popularity receives top-three highlighting. */
+.support-rate-cell .support-rate-popularity{
+  display:block;
+  margin-top:0!important;
+  color:#111!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  line-height:1!important;
+  letter-spacing:normal!important;
+}
+.support-rate-cell .support-rate-main{
+  display:block;
+  width:100%;
+  margin-top:4px;
+  color:#66707c!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  line-height:1!important;
+  font-variant-numeric:tabular-nums;
+}

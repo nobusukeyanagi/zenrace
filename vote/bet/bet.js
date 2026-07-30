@@ -2,10 +2,14 @@
   "use strict";
   const ODDS_DATA = window.ZENRACE_ODDS_DATA || {};
   const riders = [
-    {car:1,name:"黒川 京介",profile:"川口 33期 27歳"},{car:2,name:"鈴木 圭一郎",profile:"浜松 32期 31歳"},
-    {car:3,name:"青山 周平",profile:"伊勢崎 31期 41歳"},{car:4,name:"金子 大輔",profile:"浜松 29期 45歳"},
-    {car:5,name:"長田 稚也",profile:"飯塚 34期 25歳"},{car:6,name:"佐藤 励",profile:"川口 35期 25歳"},
-    {car:7,name:"鈴木 宏和",profile:"浜松 32期 39歳"},{car:8,name:"佐藤 摩弥",profile:"川口 31期 33歳 <span aria-label=\"女子選手\" class=\"female-mark\">♥</span>"}
+    {car:1,name:"黒川 京介",profile:"川口 33期 27歳",popularity:1,supportRate:84.1},
+    {car:2,name:"鈴木 圭一郎",profile:"浜松 32期 31歳",popularity:4,supportRate:33.9},
+    {car:3,name:"青山 周平",profile:"伊勢崎 31期 41歳",popularity:2,supportRate:74.5},
+    {car:4,name:"金子 大輔",profile:"浜松 29期 45歳",popularity:3,supportRate:51.0},
+    {car:5,name:"長田 稚也",profile:"飯塚 34期 25歳",popularity:5,supportRate:29.3},
+    {car:6,name:"佐藤 励",profile:"川口 35期 25歳",popularity:6,supportRate:14.6},
+    {car:7,name:"鈴木 宏和",profile:"浜松 32期 39歳",popularity:7,supportRate:9.5},
+    {car:8,name:"佐藤 摩弥",profile:"川口 31期 33歳 <span aria-label=\"女子選手\" class=\"female-mark\">♥</span>",popularity:8,supportRate:3.2}
   ];
   const columns = ["first","second","third","box"];
   const selected = Object.fromEntries(columns.map(key => [key,new Set()]));
@@ -19,7 +23,8 @@
   const confirm = document.getElementById("bet-confirm");
 
   function rowHtml(rider){
-    return `<tr><td class="car-number car-${rider.car}">${rider.car}</td><td class="rider-cell"><span class="rider-main">${rider.name}</span><span class="rider-profile">${rider.profile}</span></td>${columns.map((key,index)=>`<td class="pick-cell${index===3?" box-divider":""}"><button class="pick-button entry-${rider.car}" type="button" data-column="${key}" data-car="${rider.car}" aria-pressed="false">${rider.car}</button></td>`).join("")}</tr>`;
+    const rankClass=rider.popularity<=3?` support-rank-${rider.popularity}`:"";
+    return `<tr><td class="car-number car-${rider.car}">${rider.car}</td><td class="rider-cell"><span class="rider-main">${rider.name}</span><span class="rider-profile">${rider.profile}</span><span class="rider-support"><span class="rider-popularity${rankClass}">${rider.popularity}人気</span><span class="rider-support-rate">支持率${rider.supportRate.toFixed(1)}</span></span></td>${columns.map((key,index)=>`<td class="pick-cell${index===3?" box-divider":""}"><button class="pick-button entry-${rider.car}" type="button" data-column="${key}" data-car="${rider.car}" aria-pressed="false">${rider.car}</button></td>`).join("")}</tr>`;
   }
   body.innerHTML = riders.map(rowHtml).join("");
 
