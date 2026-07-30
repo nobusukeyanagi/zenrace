@@ -439,3 +439,22 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
   line-height:inherit;
   vertical-align:baseline;
 }
+
+
+/* v16: enlarge review car icons while keeping their lower edge aligned to the body text. */
+.race-review-entry.result-entry{
+  width:1.24em;
+  height:1.24em;
+  flex-basis:1.24em;
+  font-size:.84em;
+  vertical-align:text-bottom;
+}
+
+/* v17: enlarge review car badges again while preserving text-bottom alignment. */
+.race-review-entry.result-entry{
+  width:1.34em;
+  height:1.34em;
+  flex-basis:1.34em;
+  font-size:.88em;
+  vertical-align:text-bottom;
+}

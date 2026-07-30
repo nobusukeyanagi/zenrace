@@ -63,3 +63,88 @@ zenrace-race-info button{-webkit-appearance:none;appearance:none;font-family:inh
 .result-replay-tab{
   border-color:var(--zenrace-standard-frame-color)!important;
 }
+
+/* v61: use one shared post-race-info menu style, matching the odds wager tabs. */
+.racecard-detail-menu,
+.odds-type-menu,
+.bet-type-menu,
+.result-replay-menu{
+  width:min(100%,760px)!important;
+  margin:10px auto 0!important;
+  padding:0 8px!important;
+  gap:0!important;
+}
+.racecard-detail-tab,
+.odds-type-tab,
+.bet-type-tab,
+.result-replay-tab{
+  box-sizing:border-box!important;
+  min-width:0!important;
+  height:38px!important;
+  padding:0 2px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border:1px solid var(--zenrace-standard-frame-color)!important;
+  border-right:0!important;
+  border-radius:0!important;
+  color:#eef1f5!important;
+  background:linear-gradient(180deg,#1a1a1b,#090909)!important;
+  box-shadow:none!important;
+  font-family:inherit!important;
+  font-size:14px!important;
+  font-weight:900!important;
+  line-height:1!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+  -webkit-appearance:none!important;
+  appearance:none!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+.racecard-detail-tab:first-child,
+.odds-type-tab:first-child,
+.bet-type-tab:first-child,
+.result-replay-tab:first-child{
+  border-radius:8px 0 0 8px!important;
+}
+.racecard-detail-tab:last-child,
+.odds-type-tab:last-child,
+.bet-type-tab:last-child,
+.result-replay-tab:last-child{
+  border-right:1px solid var(--zenrace-standard-frame-color)!important;
+  border-radius:0 8px 8px 0!important;
+}
+.racecard-detail-tab.active,
+.racecard-detail-tab[aria-current="page"],
+.odds-type-tab.active,
+.odds-type-tab[aria-pressed="true"],
+.bet-type-tab.active,
+.bet-type-tab[aria-pressed="true"],
+.result-replay-tab.active,
+.result-replay-tab[aria-pressed="true"]{
+  position:relative!important;
+  z-index:1!important;
+  color:#171108!important;
+  border-color:#d1a539!important;
+  background:linear-gradient(180deg,#f8e7a8,#d6aa42)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55)!important;
+  font-weight:900!important;
+}
+@media(max-width:430px){
+  .racecard-detail-tab,
+  .odds-type-tab,
+  .bet-type-tab,
+  .result-replay-tab{
+    height:36px!important;
+    font-size:13px!important;
+  }
+}
+@media(max-width:350px){
+  .racecard-detail-tab,
+  .odds-type-tab,
+  .bet-type-tab,
+  .result-replay-tab{
+    padding-inline:0!important;
+    font-size:12px!important;
+  }
+}
