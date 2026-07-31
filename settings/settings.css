@@ -133,17 +133,38 @@ button{-webkit-tap-highlight-color:transparent}
   outline-offset:3px;
 }
 .sport-setting-icon{
+  --sport-color:#555;
+  position:relative;
   display:block;
-  width:27px;
-  height:27px;
-  background:#fff;
-  filter:drop-shadow(0 1px 1px rgba(0,0,0,.25));
+  width:30px;
+  height:30px;
+  overflow:hidden;
+  border-radius:7px;
+  background:var(--sport-color);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 1px 3px rgba(0,0,0,.34);
 }
-.sport-setting-icon.keirin{-webkit-mask:url('../gradedraces/icons/keirin.png') center/contain no-repeat;mask:url('../gradedraces/icons/keirin.png') center/contain no-repeat}
-.sport-setting-icon.auto{-webkit-mask:url('../gradedraces/icons/auto.png') center/contain no-repeat;mask:url('../gradedraces/icons/auto.png') center/contain no-repeat}
-.sport-setting-icon.boat{-webkit-mask:url('../gradedraces/icons/boat.png') center/contain no-repeat;mask:url('../gradedraces/icons/boat.png') center/contain no-repeat}
-.sport-setting-icon.nar{-webkit-mask:url('../gradedraces/icons/nar.png') center/contain no-repeat;mask:url('../gradedraces/icons/nar.png') center/contain no-repeat}
-.sport-setting-icon.jra{-webkit-mask:url('../gradedraces/icons/jra.png') center/contain no-repeat;mask:url('../gradedraces/icons/jra.png') center/contain no-repeat}
+.sport-setting-icon::before{
+  content:"";
+  position:absolute;
+  inset:4px;
+  background:#fff;
+  -webkit-mask-position:center;
+  -webkit-mask-size:contain;
+  -webkit-mask-repeat:no-repeat;
+  mask-position:center;
+  mask-size:contain;
+  mask-repeat:no-repeat;
+}
+.sport-setting-icon.keirin{--sport-color:#d8661d}
+.sport-setting-icon.auto{--sport-color:#7545af}
+.sport-setting-icon.boat{--sport-color:#1876c9}
+.sport-setting-icon.nar{--sport-color:#8b5a2b}
+.sport-setting-icon.jra{--sport-color:#23834a}
+.sport-setting-icon.keirin::before{-webkit-mask-image:url('../gradedraces/icons/keirin.png');mask-image:url('../gradedraces/icons/keirin.png')}
+.sport-setting-icon.auto::before{-webkit-mask-image:url('../gradedraces/icons/auto.png');mask-image:url('../gradedraces/icons/auto.png')}
+.sport-setting-icon.boat::before{-webkit-mask-image:url('../gradedraces/icons/boat.png');mask-image:url('../gradedraces/icons/boat.png')}
+.sport-setting-icon.nar::before{-webkit-mask-image:url('../gradedraces/icons/nar.png');mask-image:url('../gradedraces/icons/nar.png')}
+.sport-setting-icon.jra::before{-webkit-mask-image:url('../gradedraces/icons/jra.png');mask-image:url('../gradedraces/icons/jra.png')}
 .sport-setting-name{
   min-width:0;
   padding-left:11px;
@@ -191,15 +212,6 @@ button{-webkit-tap-highlight-color:transparent}
 .sport-drag-handle span::after{content:"";position:absolute;left:0}
 .sport-drag-handle span::before{top:-8px}
 .sport-drag-handle span::after{top:8px}
-.sport-order-help{
-  margin:0;
-  padding:10px 14px 12px;
-  color:#8f9095;
-  border-top:1px solid var(--settings-line);
-  font-size:11px;
-  font-weight:700;
-  line-height:1.55;
-}
 .sport-setting-placeholder{
   width:100%;
   min-height:66px;

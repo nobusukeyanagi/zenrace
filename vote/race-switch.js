@@ -14,7 +14,23 @@
   // 投票系ページでは、全レース中止の江戸川をレース選択に表示しない。
   const DISPLAY_RACES = RACES.filter((race) => !(race.sport === "boat" && race.venue === "江戸川"));
   const sportPreferences = window.ZENRACE_SPORT_PREFERENCES;
-  const enabledDisplayRaces = () => sportPreferences?.filter(DISPLAY_RACES) || [...DISPLAY_RACES];
+  const raceTimeValue = (time) => {
+    const [hour, minute] = String(time || "").split(":").map(Number);
+    return Number.isFinite(hour) && Number.isFinite(minute)
+      ? hour * 60 + minute
+      : Number.MAX_SAFE_INTEGER;
+  };
+  const enabledDisplayRaces = () => {
+    const enabledSports = sportPreferences?.read?.();
+    const races = Array.isArray(enabledSports)
+      ? DISPLAY_RACES.filter((race) => enabledSports.includes(race.sport))
+      : [...DISPLAY_RACES];
+
+    return races
+      .map((race, index) => ({ race, index }))
+      .sort((left, right) => raceTimeValue(left.race.time) - raceTimeValue(right.race.time) || left.index - right.index)
+      .map(({ race }) => race);
+  };
   const DEFAULT_ACTIVE = "浜松-12R-16:45";
   const keyOf = (race) => `${race.venue}-${race.race}-${race.time}`;
   const FEATURED_RACE_KEYS = new Set([
