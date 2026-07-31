@@ -116,7 +116,7 @@
   text-decoration:none;
   height:38px;
   padding:0 4px;
-  border:1px solid rgba(213,171,67,.34);
+  border:1px solid #d5ab43;
   border-right:0;
   border-radius:0;
   color:#eef1f5;
@@ -130,7 +130,7 @@
   -webkit-tap-highlight-color:transparent;
 }
 .racecard-detail-tab:first-child{border-radius:9px 0 0 9px}
-.racecard-detail-tab:last-child{border-right:1px solid rgba(213,171,67,.34);border-radius:0 9px 9px 0}
+.racecard-detail-tab:last-child{border-right:1px solid #d5ab43;border-radius:0 9px 9px 0}
 .racecard-detail-tab.active,
 .racecard-detail-tab[aria-current="page"]{
   color:#171108;
@@ -233,7 +233,7 @@
   padding:12px 13px;
   color:#15171a;
   background:#fff;
-  border:1px solid rgba(213,171,67,.34);
+  border:1px solid #d5ab43;
   border-radius:14px;
   font-size:13px;
   font-weight:600;

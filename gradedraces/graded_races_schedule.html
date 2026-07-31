@@ -12,7 +12,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/zenrace/favicon-16x16.png?v=3">
 <link rel="shortcut icon" type="image/x-icon" href="/zenrace/favicon.ico?v=3">
 <title>グレード | ZENRACE</title>
-<link rel="stylesheet" href="../shared/category-menu.css?v=58">
+<link rel="stylesheet" href="../shared/category-menu.css?v=59">
 <style>
 :root{
   --nav-content-h:62px;
@@ -43,7 +43,7 @@ button{-webkit-tap-highlight-color:transparent}
   position:fixed;left:0;right:0;top:calc(var(--visual-top) + var(--category-menu-total-h));z-index:9990;
   height:var(--month-toolbar-h);display:grid;grid-template-columns:minmax(70px,1fr) auto minmax(70px,1fr);align-items:center;
   padding:0 8px;color:#fff;background:linear-gradient(180deg,#181818,#090909);
-  border-bottom:1px solid rgba(213,171,67,.34);box-shadow:0 4px 13px rgba(0,0,0,.20);touch-action:none
+  border-bottom:1px solid #d5ab43;box-shadow:0 4px 13px rgba(0,0,0,.20);touch-action:none
 }
 .month-nav{display:grid;grid-template-columns:36px minmax(112px,auto) 36px;align-items:center;gap:2px}
 .month-arrow{display:grid;width:36px;height:36px;place-items:center;padding:0 0 2px;color:#ead181;border:0;border-radius:0;background:transparent;box-shadow:none;font-size:28px;line-height:1;cursor:pointer}
@@ -69,9 +69,9 @@ zenrace-bottom-nav{touch-action:none;overscroll-behavior:none}
 .schedule{padding:7px 8px 6px}
 .day-block{
   display:grid;grid-template-columns:38px minmax(0,1fr);margin-bottom:3px;overflow:hidden;
-  border:1px solid #5d4d28;border-radius:8px;background:var(--panel);box-shadow:0 2px 7px rgba(0,0,0,.09)
+  border:1px solid #d5ab43;border-radius:8px;background:var(--panel);box-shadow:0 2px 7px rgba(0,0,0,.09)
 }
-.day-block.today{border-color:#5d4d28;box-shadow:0 2px 7px rgba(0,0,0,.09)}
+.day-block.today{border-color:#d5ab43;box-shadow:0 2px 7px rgba(0,0,0,.09)}
 .date-cell{
   display:flex;align-items:center;justify-content:center;gap:2px;min-height:30px;padding:1px 2px;
   border-right:1px solid var(--line);background:#f8fafc;white-space:nowrap
@@ -129,9 +129,9 @@ zenrace-bottom-nav{touch-action:none;overscroll-behavior:none}
   .schedule{padding:4px}.day-block{page-break-inside:avoid;box-shadow:none}.data-note{display:none}
 }
 </style>
-<link rel="stylesheet" href="../shared/month-selector.css?v=6">
+<link rel="stylesheet" href="../shared/month-selector.css?v=7">
 <script src="../shared/category-menu.js?v=56" defer></script>
-<script src="../shared/bottom-nav.js?v=62" defer></script>
+<script src="../shared/bottom-nav.js?v=63" defer></script>
 </head>
 <body>
 <zenrace-category-menu category="schedule" active="grade"></zenrace-category-menu>

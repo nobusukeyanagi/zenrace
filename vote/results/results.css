@@ -271,7 +271,7 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
   display:flex;
   align-items:center;
   justify-content:center;
-  border:1px solid rgba(213,171,67,.34);
+  border:1px solid #d5ab43;
   border-right:0;
   border-radius:0;
   color:#eef1f5;
@@ -284,7 +284,7 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
   -webkit-tap-highlight-color:transparent;
 }
 .result-replay-tab:first-child{border-radius:9px 0 0 9px}
-.result-replay-tab:last-child{border-right:1px solid rgba(213,171,67,.34);border-radius:0 9px 9px 0}
+.result-replay-tab:last-child{border-right:1px solid #d5ab43;border-radius:0 9px 9px 0}
 .result-replay-tab:focus-visible{position:relative;z-index:1;outline:2px solid #fff0ad;outline-offset:-2px}
 @media(max-width:430px){.result-replay-tab{font-size:12px}}
 
@@ -344,7 +344,7 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
   width:100%;
   aspect-ratio:16/9;
   display:block;
-  border:1px solid rgba(213,171,67,.44);
+  border:1px solid #d5ab43;
   border-radius:10px;
   background:#000;
   box-shadow:0 4px 14px rgba(0,0,0,.28);
@@ -365,7 +365,7 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
   padding:12px 13px;
   color:#15171a;
   background:#fff;
-  border:1px solid rgba(213,171,67,.34);
+  border:1px solid #d5ab43;
   border-radius:14px;
   font-size:13px;
   font-weight:600;
