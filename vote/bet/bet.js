@@ -104,8 +104,9 @@
     if(number>=1000) return " bet-odds-high";
     return "";
   }
-  function oddsValueHtml(value){
-    return `<span class="${oddsToneClass(value).trim()}">${formatOdds(value)}</span>`;
+  function oddsValueHtml(value,{suppressLow=false}={}){
+    const tone=suppressLow&&Number(value)<10?"":oddsToneClass(value).trim();
+    return `<span class="${tone}">${formatOdds(value)}</span>`;
   }
   function selectionOdds(type,record){
     if(!record) return "－";
@@ -116,7 +117,7 @@
         .sort((a,b)=>a-b);
       if(!values.length) return "－";
       const min=values[0],max=values[values.length-1];
-      return `${oddsValueHtml(min)}<span class="selection-odds-range">～</span>${oddsValueHtml(max)}`;
+      return `${oddsValueHtml(min)}<span class="selection-odds-range">～</span>${oddsValueHtml(max,{suppressLow:true})}`;
     }
     return oddsValueHtml(record.odds);
   }
