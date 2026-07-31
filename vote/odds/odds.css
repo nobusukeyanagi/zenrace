@@ -1053,3 +1053,9 @@ button,select{font:inherit}
 .odds-wide-cell .odds-wide-value .odds-wide-upper.odds-under-ten{
   color:#d70018!important;
 }
+
+
+/* v34: keep the minimum value red in wide popularity rows when it is below 10. */
+.odds-popular-value.odds-wide-cell .odds-wide-popular .odds-wide-popular-lower.odds-under-ten{
+  color:#d70018!important;
+}
