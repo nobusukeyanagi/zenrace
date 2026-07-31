@@ -1,23 +1,24 @@
 {
-  "generated_at": "2026-07-31T05:41:17.348820+09:00",
+  "generated_at": "2026-08-01T05:52:41.734666+09:00",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 2,
-    "recent_verification": 2,
-    "upcoming": 25
+    "unresolved": 1,
+    "recent_verification": 1,
+    "upcoming": 26
   },
   "sources": [
     {
       "name": "JRA",
       "ok": true,
-      "patch_count": 10,
+      "patch_count": 11,
       "fetched_urls": [
         "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0802.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0802.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0808.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0809.html",
-        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0809.html"
+        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0809.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0815.html"
       ],
       "warnings": [],
       "error": ""
@@ -30,7 +31,6 @@
         "https://www.keiba.go.jp/gradedrace/schedule.html",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F26&k_babaCode=22",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=22&k_nenndo=2026",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F29&k_babaCode=36",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F30&k_babaCode=36",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=31",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=31&k_nenndo=2026",

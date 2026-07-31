@@ -3394,20 +3394,20 @@
   },
   {
     "date": "2026-08-02",
+    "time": "19:05",
+    "sport": "nar",
+    "venue": "盛岡",
+    "grade": "M3",
+    "name": "フェアリーカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-08-02",
     "time": "19:15",
     "sport": "nar",
     "venue": "高知",
     "grade": "",
     "name": "黒潮菊花賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-08-02",
-    "time": "",
-    "sport": "nar",
-    "venue": "盛岡",
-    "grade": "M3",
-    "name": "フェアリーカップ",
     "winner": ""
   },
   {
