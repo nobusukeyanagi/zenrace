@@ -17,7 +17,7 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
   position:fixed;left:0;right:0;top:calc(var(--visual-top) + var(--category-menu-total-h));z-index:9990;
   width:100%;height:var(--date-toolbar-h);display:grid;grid-template-columns:minmax(70px,1fr) auto minmax(70px,1fr);align-items:center;
   padding:0 8px;color:#fff;background:linear-gradient(180deg,#181818,#090909);
-  border-bottom:1px solid #d5ab43;box-shadow:0 4px 13px rgba(0,0,0,.20);touch-action:none
+  border-bottom:1px solid #51411D;box-shadow:0 4px 13px rgba(0,0,0,.20);touch-action:none
 }
 .date-nav{display:grid;grid-template-columns:36px minmax(152px,auto) 36px;align-items:center;gap:2px}
 .date-arrow{display:grid;width:36px;height:36px;place-items:center;padding:0 0 2px;color:#ead181;border:0;border-radius:0;background:transparent;box-shadow:none;font-size:28px;line-height:1;cursor:pointer}
@@ -35,7 +35,7 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .zenrace-content-shell{overflow-x:hidden!important;overflow-y:auto!important;touch-action:pan-x pan-y!important;-webkit-overflow-scrolling:touch}
 .results-page{width:min(100%,760px);margin:0 auto;padding:7px 5px 12px}
 .results-board{display:flex;flex-direction:column;gap:4px;border:0;border-radius:0;overflow:visible;background:transparent;box-shadow:none}
-.results-group{display:grid;grid-template-columns:var(--venue-card-w) minmax(0,1fr);align-items:stretch;overflow:hidden;border:1px solid #d5ab43;border-radius:8px;background:#fff;box-shadow:0 2px 7px rgba(0,0,0,.09)}
+.results-group{display:grid;grid-template-columns:var(--venue-card-w) minmax(0,1fr);align-items:stretch;overflow:hidden;border:1px solid #51411D;border-radius:8px;background:#fff;box-shadow:0 2px 7px rgba(0,0,0,.09)}
 .venue-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:6px 5px;border-right:1px solid rgba(0,0,0,.12);color:#fff}
 .venue-card.sport-keirin{background:linear-gradient(180deg,#d66c1d,#bd5510)}
 .venue-card.sport-auto{background:linear-gradient(180deg,#7e47af,#683397)}

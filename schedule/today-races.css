@@ -35,7 +35,7 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
   position:fixed;left:0;right:0;top:calc(var(--visual-top) + var(--category-menu-total-h));z-index:9990;
   width:100%;height:var(--date-toolbar-h);display:grid;grid-template-columns:minmax(70px,1fr) auto minmax(70px,1fr);align-items:center;
   padding:0 8px;color:#fff;background:linear-gradient(180deg,#181818,#090909);
-  border-bottom:1px solid #d5ab43;box-shadow:0 4px 13px rgba(0,0,0,.20);touch-action:none
+  border-bottom:1px solid #51411D;box-shadow:0 4px 13px rgba(0,0,0,.20);touch-action:none
 }
 .date-nav{display:grid;grid-template-columns:36px minmax(152px,auto) 36px;align-items:center;gap:2px}
 .date-arrow{display:grid;width:36px;height:36px;place-items:center;padding:0 0 2px;color:#ead181;border:0;border-radius:0;background:transparent;box-shadow:none;font-size:28px;line-height:1;cursor:pointer}
@@ -59,7 +59,7 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 .today-page{width:min(100%,760px);margin:0 auto;padding:7px 5px 10px}
 .today-board{
   position:relative;isolation:isolate;overflow:hidden;
-  border:1px solid #d5ab43;border-radius:8px;
+  border:1px solid #51411D;border-radius:8px;
   background:linear-gradient(180deg,#181818,#090909)
 }
 .venue-focus-band{

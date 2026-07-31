@@ -237,7 +237,7 @@
             background:
               linear-gradient(110deg, rgba(213,171,67,.08), transparent 27%, transparent 72%, rgba(213,171,67,.07)),
               linear-gradient(180deg, #151515, #070707);
-            border-top: 1px solid #d5ab43;
+            border-top: 1px solid #51411D;
             box-shadow: 0 -5px 18px rgba(0,0,0,.25);
             touch-action: none;
             overscroll-behavior: none;
