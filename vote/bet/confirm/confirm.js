@@ -224,14 +224,14 @@
     return "";
   }
 
-  function oddsValueHtml(value, { suppressLow = false } = {}) {
-    const tone = suppressLow && Number(value) < 10 ? "" : oddsToneClass(value).trim();
+  function oddsValueHtml(value) {
+    const tone = oddsToneClass(value).trim();
     return `<span class="${tone}">${formatOddsValue(value)}</span>`;
   }
 
   function displayOdds(entry, type) {
     const [min, max] = oddsRange(entry, type);
-    if (type === "ワイド" && min !== max) return `${oddsValueHtml(min)}<span class="detail-odds-range">～</span>${oddsValueHtml(max, { suppressLow: true })}`;
+    if (type === "ワイド" && min !== max) return `${oddsValueHtml(min)}<span class="detail-odds-range">～</span>${oddsValueHtml(max)}`;
     return oddsValueHtml(min);
   }
 

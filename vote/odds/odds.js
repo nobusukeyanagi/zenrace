@@ -183,10 +183,10 @@
     return cars.map((car, index) => `${index && separator ? `<span class="odds-combination-separator" aria-hidden="true">${separator}</span>` : ""}${carBadge(car)}`).join("");
   }
 
-  function oddsValueClass(value, { suppressLow = false } = {}) {
+  function oddsValueClass(value) {
     const number = Number(value);
     if (!Number.isFinite(number)) return "";
-    if (!suppressLow && number < 10) return " odds-under-ten";
+    if (number < 10) return " odds-under-ten";
     if (number >= 1000) return " odds-over-thousand";
     return "";
   }
@@ -203,7 +203,7 @@
   function oddsText(type, item) {
     if (type === "ワイド") {
       const [min, max] = normalizedWideOdds(item.odds);
-      return `<span class="odds-wide-popular"><span class="odds-wide-popular-lower${oddsValueClass(min)}">${formatOdds(min)}</span><small class="odds-wide-popular-upper"><span class="odds-wide-separator">〜</span><span class="${oddsValueClass(max, { suppressLow: true }).trim()}">${formatOdds(max)}</span></small></span>`;
+      return `<span class="odds-wide-popular"><span class="odds-wide-popular-lower${oddsValueClass(min)}">${formatOdds(min)}</span><small class="odds-wide-popular-upper"><span class="odds-wide-separator">〜</span><span class="${oddsValueClass(max).trim()}">${formatOdds(max)}</span></small></span>`;
     }
     return formatOdds(item.odds);
   }
@@ -499,7 +499,7 @@
         let content = "";
         if (!unavailable && type === "ワイド" && Array.isArray(value)) {
           const [min, max] = normalizedWideOdds(value);
-          content = `<span class="odds-wide-value"><span class="${oddsValueClass(min).trim()}">${formatOdds(min)}</span><small><span class="odds-wide-separator">〜</span><span class="odds-wide-upper${oddsValueClass(max, { suppressLow: true })}">${formatOdds(max)}</span></small></span>`;
+          content = `<span class="odds-wide-value"><span class="${oddsValueClass(min).trim()}">${formatOdds(min)}</span><small><span class="odds-wide-separator">〜</span><span class="odds-wide-upper${oddsValueClass(max)}">${formatOdds(max)}</span></small></span>`;
         } else if (!unavailable) {
           content = formatOdds(value);
         }

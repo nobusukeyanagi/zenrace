@@ -109,14 +109,14 @@
     return "";
   }
 
-  function oddsValueHtml(value, { suppressLow = false } = {}) {
-    const tone = suppressLow && Number(value) < 10 ? "" : oddsToneClass(value).trim();
+  function oddsValueHtml(value) {
+    const tone = oddsToneClass(value).trim();
     return `<span class="${tone}">${formatOdds(value)}</span>`;
   }
 
   function displayOdds(record, type) {
     const [min, max] = oddsRange(record, type);
-    if (type === "ワイド" && min !== max) return `${oddsValueHtml(min)}<span class="inquiry-odds-range">～</span>${oddsValueHtml(max, { suppressLow: true })}`;
+    if (type === "ワイド" && min !== max) return `${oddsValueHtml(min)}<span class="inquiry-odds-range">～</span>${oddsValueHtml(max)}`;
     return oddsValueHtml(min);
   }
 

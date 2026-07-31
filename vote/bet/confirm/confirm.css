@@ -861,3 +861,8 @@ body.pin-approval-open{
   .pin-approval-body{margin-top:19px}
   .pin-approval-field{margin-bottom:16px}
 }
+
+
+/* v23: match the PIN-dialog back label size to the approval action. */
+.pin-approval-back{font-size:16px}
+@media(max-width:430px){.pin-approval-back{font-size:15px}}

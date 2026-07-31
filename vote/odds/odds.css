@@ -1046,3 +1046,10 @@ button,select{font:inherit}
   background:#e4e6e9!important;
   background-image:none!important;
 }
+
+
+/* v33: color each wide-odds endpoint independently in every matrix cell. */
+.odds-wide-cell .odds-wide-value > .odds-under-ten,
+.odds-wide-cell .odds-wide-value .odds-wide-upper.odds-under-ten{
+  color:#d70018!important;
+}
