@@ -183,18 +183,27 @@
     return cars.map((car, index) => `${index && separator ? `<span class="odds-combination-separator" aria-hidden="true">${separator}</span>` : ""}${carBadge(car)}`).join("");
   }
 
-  function oddsValueClass(value) {
+  function oddsValueClass(value, { suppressLow = false } = {}) {
     const number = Number(value);
     if (!Number.isFinite(number)) return "";
-    if (number < 10) return " odds-under-ten";
+    if (!suppressLow && number < 10) return " odds-under-ten";
     if (number >= 1000) return " odds-over-thousand";
     return "";
   }
 
+  function normalizedWideOdds(value) {
+    const values = (Array.isArray(value) ? value : [value, value])
+      .map(Number)
+      .filter(Number.isFinite)
+      .sort((a, b) => a - b);
+    if (!values.length) return [0, 0];
+    return [values[0], values[values.length - 1]];
+  }
+
   function oddsText(type, item) {
     if (type === "ワイド") {
-      const values = Array.isArray(item.odds) ? item.odds : [item.odds, item.odds];
-      return `<span class="odds-wide-popular"><span class="odds-wide-popular-lower${oddsValueClass(values[0])}">${formatOdds(values[0])}</span><small class="odds-wide-popular-upper"><span class="odds-wide-separator">〜</span><span class="${oddsValueClass(values[1]).trim()}">${formatOdds(values[1])}</span></small></span>`;
+      const [min, max] = normalizedWideOdds(item.odds);
+      return `<span class="odds-wide-popular"><span class="odds-wide-popular-lower${oddsValueClass(min)}">${formatOdds(min)}</span><small class="odds-wide-popular-upper"><span class="odds-wide-separator">〜</span><span class="${oddsValueClass(max, { suppressLow: true }).trim()}">${formatOdds(max)}</span></small></span>`;
     }
     return formatOdds(item.odds);
   }
@@ -489,7 +498,8 @@
           : `${rankTone}${type === "ワイド" ? " odds-wide-cell" : redTone}${duplicateTone}`;
         let content = "";
         if (!unavailable && type === "ワイド" && Array.isArray(value)) {
-          content = `<span class="odds-wide-value"><span class="${oddsValueClass(value[0]).trim()}">${formatOdds(value[0])}</span><small><span class="odds-wide-separator">〜</span><span class="odds-wide-upper${oddsValueClass(value[1])}">${formatOdds(value[1])}</span></small></span>`;
+          const [min, max] = normalizedWideOdds(value);
+          content = `<span class="odds-wide-value"><span class="${oddsValueClass(min).trim()}">${formatOdds(min)}</span><small><span class="odds-wide-separator">〜</span><span class="odds-wide-upper${oddsValueClass(max, { suppressLow: true })}">${formatOdds(max)}</span></small></span>`;
         } else if (!unavailable) {
           content = formatOdds(value);
         }

@@ -205,10 +205,12 @@
 
   function oddsRange(entry, type) {
     if (type === "ワイド") {
-      const values = Array.isArray(entry.odds) ? entry.odds : [entry.odds, entry.odds];
-      const min = Number(values[0]);
-      const max = Number(values[1] ?? values[0]);
-      return [Number.isFinite(min) ? min : 0, Number.isFinite(max) ? max : 0];
+      const values = (Array.isArray(entry.odds) ? entry.odds : [entry.odds, entry.odds])
+        .map(Number)
+        .filter(Number.isFinite)
+        .sort((a, b) => a - b);
+      if (!values.length) return [0, 0];
+      return [values[0], values[values.length - 1]];
     }
     const value = Number(entry.odds);
     return [Number.isFinite(value) ? value : 0, Number.isFinite(value) ? value : 0];
@@ -222,13 +224,14 @@
     return "";
   }
 
-  function oddsValueHtml(value) {
-    return `<span class="${oddsToneClass(value).trim()}">${formatOddsValue(value)}</span>`;
+  function oddsValueHtml(value, { suppressLow = false } = {}) {
+    const tone = suppressLow && Number(value) < 10 ? "" : oddsToneClass(value).trim();
+    return `<span class="${tone}">${formatOddsValue(value)}</span>`;
   }
 
   function displayOdds(entry, type) {
     const [min, max] = oddsRange(entry, type);
-    if (type === "ワイド" && min !== max) return `${oddsValueHtml(min)}<span class="detail-odds-range">～</span>${oddsValueHtml(max)}`;
+    if (type === "ワイド" && min !== max) return `${oddsValueHtml(min)}<span class="detail-odds-range">～</span>${oddsValueHtml(max, { suppressLow: true })}`;
     return oddsValueHtml(min);
   }
 
