@@ -13,21 +13,31 @@
 <title>設定 | ZENRACE</title>
 <link rel="stylesheet" href="../shared/category-menu.css?v=60">
 <link rel="stylesheet" href="../shared/page-shell.css?v=19">
-<link rel="stylesheet" href="../shared/placeholder-page.css?v=35">
+<link rel="stylesheet" href="settings.css?v=1">
+<script src="../shared/sport-preferences.js?v=1"></script>
 <script src="../shared/category-menu.js?v=39" defer></script>
 <script src="../shared/fixed-layout.js?v=21" defer></script>
 <script src="../shared/bottom-nav.js?v=64" defer></script>
+<script src="settings.js?v=1" defer></script>
 </head>
 <body>
 <zenrace-category-menu category="home" active="settings"></zenrace-category-menu>
 <div class="zenrace-content-shell" data-zenrace-pinch-shell>
   <div class="zenrace-content-sizer" data-zenrace-pinch-sizer>
     <div class="zenrace-content-stage" data-zenrace-pinch-stage>
-      <main class="placeholder-main">
-        <section class="placeholder-card">
-          <p class="placeholder-label">ZENRACE</p>
-          <h1 class="placeholder-title">設定</h1>
-          <div class="placeholder-status">作成中</div>
+      <main class="settings-main">
+        <section class="settings-section" aria-labelledby="sport-settings-title">
+          <div class="settings-section-header">
+            <h1 class="settings-title" id="sport-settings-title">表示する競技</h1>
+            <p class="settings-description">スケジュールと投票ページのレース選択に表示する競技を選択します。変更は自動で保存されます。</p>
+          </div>
+          <fieldset class="sport-setting-list">
+            <label class="sport-setting-option"><input type="checkbox" value="keirin" data-sport-preference checked><span>競輪</span></label>
+            <label class="sport-setting-option"><input type="checkbox" value="auto" data-sport-preference checked><span>オートレース</span></label>
+            <label class="sport-setting-option"><input type="checkbox" value="boat" data-sport-preference checked><span>ボートレース</span></label>
+            <label class="sport-setting-option"><input type="checkbox" value="nar" data-sport-preference checked><span>地方競馬</span></label>
+            <label class="sport-setting-option"><input type="checkbox" value="jra" data-sport-preference checked><span>JRA</span></label>
+          </fieldset>
         </section>
       </main>
     </div>

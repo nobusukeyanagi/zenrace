@@ -23,6 +23,8 @@
   const extraRaceDays = window.ZENRACE_RACE_DAYS && typeof window.ZENRACE_RACE_DAYS === "object"
     ? window.ZENRACE_RACE_DAYS
     : {};
+  const sportPreferences = window.ZENRACE_SPORT_PREFERENCES;
+  const filterSports = (items) => sportPreferences?.filter(items) || [...items];
 
   const showPreparingToast = (message = "遷移先ページは準備中です") => {
     let toast = document.querySelector(".today-race-toast");
@@ -174,9 +176,9 @@
     const key = dateKey(selectedDate);
     if (key === dateKey(todayBase)) {
       return {
-        races: baseRaces,
-        venueOrder: baseVenueOrder,
-        venueGrades: baseVenueGrades,
+        races: filterSports(baseRaces),
+        venueOrder: filterSports(baseVenueOrder),
+        venueGrades: filterSports(baseVenueGrades),
         venueDayMap: baseVenueDayMap,
         venueSessionMap: baseVenueSessionMap,
         girlsVenueSet: baseGirlsVenueSet,
@@ -184,9 +186,9 @@
     }
     const source = extraRaceDays[key] || {};
     return {
-      races: Array.isArray(source.races) ? source.races : [],
-      venueOrder: Array.isArray(source.venueOrder) ? source.venueOrder : [],
-      venueGrades: Array.isArray(source.venueGrades) ? source.venueGrades : [],
+      races: filterSports(Array.isArray(source.races) ? source.races : []),
+      venueOrder: filterSports(Array.isArray(source.venueOrder) ? source.venueOrder : []),
+      venueGrades: filterSports(Array.isArray(source.venueGrades) ? source.venueGrades : []),
       venueDayMap: makeMap(source.venueDays),
       venueSessionMap: makeMap(source.venueSessions),
       girlsVenueSet: new Set(Array.isArray(source.girlsVenues) ? source.girlsVenues : []),
@@ -551,7 +553,11 @@
     render();
     window.addEventListener("resize", realignVisibleTracks);
     window.addEventListener("orientationchange", () => window.setTimeout(realignVisibleTracks, 120));
-    window.addEventListener("pageshow", () => window.setTimeout(realignVisibleTracks, 80));
+    window.addEventListener("pageshow", () => {
+      render();
+      window.setTimeout(realignVisibleTracks, 80);
+    });
     window.visualViewport?.addEventListener("resize", () => window.setTimeout(realignVisibleTracks, 40));
+    window.addEventListener("zenrace:sport-preferences-change", render);
   });
 })();

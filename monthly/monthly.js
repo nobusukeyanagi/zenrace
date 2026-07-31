@@ -14,6 +14,8 @@
   const HOLIDAYS = new Set(["2026-01-01", "2026-01-12", "2026-02-11", "2026-02-23", "2026-03-20", "2026-04-29", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-07-20", "2026-08-11", "2026-09-21", "2026-09-22", "2026-09-23", "2026-10-12", "2026-11-03", "2026-11-23"]);
   const schedule = document.getElementById("monthlySchedule");
   if (!schedule) return;
+  const sportPreferences = window.ZENRACE_SPORT_PREFERENCES;
+  const filterSports = (items) => sportPreferences?.filter(items) || [...items];
 
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, (char) => ({
     "&": "&amp;",
@@ -147,7 +149,7 @@
         <span class="date-number">${date.getDate()}</span>
         <span class="date-weekday">${WEEKDAY[date.getDay()]}</span>
       </div>
-      <div class="venue-grid">${venueGroupsHtml(day.venues)}</div>
+      <div class="venue-grid">${venueGroupsHtml(filterSports(day.venues))}</div>
     </article>`;
   };
 
@@ -163,7 +165,9 @@
   };
 
   const render = (monthKey) => {
-    const days = MONTHLY_DATA[monthKey] || [];
+    const days = (MONTHLY_DATA[monthKey] || [])
+      .map((day) => ({ ...day, venues: filterSports(day.venues) }))
+      .filter((day) => day.venues.length);
     schedule.innerHTML = days.length
       ? days.map(dayHtml).join("")
       : '<div class="monthly-empty">この月の開催日程は準備中です</div>';
@@ -175,6 +179,14 @@
 
   window.addEventListener("zenrace-month-change", (event) => {
     render(event.detail?.month || todayKey.slice(0, 7));
+  });
+  window.addEventListener("zenrace:sport-preferences-change", () => {
+    const selectedMonth = document.querySelector("[data-zenrace-month-selector]")?.dataset.selectedMonth || todayKey.slice(0, 7);
+    render(selectedMonth);
+  });
+  window.addEventListener("pageshow", () => {
+    const selectedMonth = document.querySelector("[data-zenrace-month-selector]")?.dataset.selectedMonth || todayKey.slice(0, 7);
+    render(selectedMonth);
   });
 
   document.addEventListener("DOMContentLoaded", () => {

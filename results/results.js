@@ -26,6 +26,8 @@
 
   const board = document.getElementById("resultsBoard");
   if (!board) return;
+  const sportPreferences = window.ZENRACE_SPORT_PREFERENCES;
+  const filterSports = (items) => sportPreferences?.filter(items) || [...items];
 
   const venueKey = (entry) => `${entry.sport}:${entry.venue}`;
   const normalizedGrade = (value) => String(value ?? "")
@@ -74,7 +76,7 @@
   };
 
   const buildVenues = (dateKey) => {
-    if (dateKey === "2026-02-23") return VENUES_20260223;
+    if (dateKey === "2026-02-23") return filterSports(VENUES_20260223);
     const source = window.ZENRACE_RACE_DAYS?.[dateKey];
     if (!source) return [];
     const results = RESULTS_BY_DATE[dateKey] || {};
@@ -82,7 +84,7 @@
     const days = source.venueDays || {};
     const sessions = source.venueSessions || {};
     const girls = new Set(source.girlsVenues || []);
-    return (source.venueOrder || [])
+    return filterSports(source.venueOrder || [])
       .filter((entry) => Array.isArray(results[venueKey(entry)]))
       .map((entry) => {
         const key = venueKey(entry);
@@ -192,6 +194,10 @@
     }
     const results = RESULTS_BY_DATE[dateKey] || {};
     const venues = buildVenues(dateKey);
+    if (!venues.length) {
+      board.innerHTML = '<section class="results-placeholder"><h2>結果早見</h2><p>表示対象の競技はありません。</p></section>';
+      return;
+    }
     board.innerHTML = venues.map((entry) => `
       <article class="results-group">
         ${renderVenueMeta(entry)}
@@ -207,6 +213,8 @@
   window.addEventListener("zenrace-date-refresh", (event) => {
     render(event.detail?.date || "2026-02-23");
   });
+  window.addEventListener("zenrace:sport-preferences-change", initialRender);
+  window.addEventListener("pageshow", initialRender);
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initialRender, { once: true });

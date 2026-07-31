@@ -10,6 +10,8 @@
   const raceDays = window.ZENRACE_RACE_DAYS && typeof window.ZENRACE_RACE_DAYS === "object"
     ? window.ZENRACE_RACE_DAYS
     : {};
+  const sportPreferences = window.ZENRACE_SPORT_PREFERENCES;
+  const filterSports = (items) => sportPreferences?.filter(items) || [...items];
   const featuredRaceKey = (date, sport, venue, race) => `${date}:${sport}:${venue}:${race}`;
   const FEATURED_RACES = new Set([
     featuredRaceKey("2026-02-22", "jra", "東京", "11R"),
@@ -22,8 +24,8 @@
     featuredRaceKey("2026-02-24", "boat", "江戸川", "12R"),
   ]);
   const getRacesForDate = (date) => {
-    if (date === BASE_DATE) return baseRaces;
-    return Array.isArray(raceDays[date]?.races) ? raceDays[date].races : [];
+    if (date === BASE_DATE) return filterSports(baseRaces);
+    return filterSports(Array.isArray(raceDays[date]?.races) ? raceDays[date].races : []);
   };
   const isFeaturedRace = (date, race) => FEATURED_RACES.has(
     featuredRaceKey(date, race.sport, race.venue, race.race),
@@ -152,5 +154,12 @@
       const date = toolbar?.dataset.selectedDate || BASE_DATE;
       if (getRacesForDate(date).length) window.setTimeout(scrollToCurrentHour, 60);
     }, { passive: true });
+
+    window.addEventListener("zenrace:sport-preferences-change", () => {
+      render(toolbar?.dataset.selectedDate || BASE_DATE, false);
+    });
+    window.addEventListener("pageshow", () => {
+      render(toolbar?.dataset.selectedDate || BASE_DATE, false);
+    });
   });
 })();

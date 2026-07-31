@@ -13,6 +13,8 @@
 
   // 投票系ページでは、全レース中止の江戸川をレース選択に表示しない。
   const DISPLAY_RACES = RACES.filter((race) => !(race.sport === "boat" && race.venue === "江戸川"));
+  const sportPreferences = window.ZENRACE_SPORT_PREFERENCES;
+  const enabledDisplayRaces = () => sportPreferences?.filter(DISPLAY_RACES) || [...DISPLAY_RACES];
   const DEFAULT_ACTIVE = "浜松-12R-16:45";
   const keyOf = (race) => `${race.venue}-${race.race}-${race.time}`;
   const FEATURED_RACE_KEYS = new Set([
@@ -101,12 +103,16 @@
     connectedCallback() {
       if (this.dataset.ready === "true") return;
       this.dataset.ready = "true";
+      const displayedRaces = enabledDisplayRaces();
+      this.dataset.sportPreferenceSignature = sportPreferences?.read?.().join(",") || "";
       const storedRaceSelection = window.ZENRACE_VOTE_RACE_STATE?.read?.();
       const requestedActiveKey = storedRaceSelection?.key || this.getAttribute("active-key") || DEFAULT_ACTIVE;
-      const activeKey = DISPLAY_RACES.some((race) => keyOf(race) === requestedActiveKey)
+      const activeKey = displayedRaces.some((race) => keyOf(race) === requestedActiveKey)
         ? requestedActiveKey
-        : DEFAULT_ACTIVE;
-      const tabs = DISPLAY_RACES.map((race) => {
+        : displayedRaces.some((race) => keyOf(race) === DEFAULT_ACTIVE)
+          ? DEFAULT_ACTIVE
+          : "";
+      const tabs = displayedRaces.map((race) => {
         const key = keyOf(race);
         const active = key === activeKey;
         const featured = isFeaturedRace(race);
@@ -143,13 +149,22 @@
       const restoreSelection = () => {
         const stored = window.ZENRACE_VOTE_RACE_STATE?.read?.();
         const key = stored?.key || activeKey;
-        this.setActiveRace(key, { persist: false, align: false });
-        this.setVenueFilter(stored?.venue || '浜松', Boolean(stored?.venueOnly));
+        const selected = this.setActiveRace(key, { persist: false, align: false });
+        this.setVenueFilter(stored?.venue || '浜松', Boolean(selected && stored?.venueOnly));
       };
 
+      const restorePage = () => {
+        const signature = sportPreferences?.read?.().join(",") || "";
+        if (signature !== this.dataset.sportPreferenceSignature) {
+          window.location.reload();
+          return;
+        }
+        restoreSelection();
+      };
       requestAnimationFrame(() => requestAnimationFrame(restoreSelection));
       setTimeout(restoreSelection, 120);
-      window.addEventListener("pageshow", restoreSelection);
+      this._pageShowHandler = restorePage;
+      window.addEventListener("pageshow", this._pageShowHandler);
       if ('ResizeObserver' in window) {
         this._resizeObserver = new ResizeObserver(alignActive);
         this._resizeObserver.observe(track);
@@ -160,6 +175,7 @@
       if (this._venueFilterHandler) {
         document.removeEventListener('zenrace:race-venue-filter', this._venueFilterHandler);
       }
+      if (this._pageShowHandler) window.removeEventListener("pageshow", this._pageShowHandler);
       this._resizeObserver?.disconnect();
     }
   }
