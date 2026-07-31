@@ -458,3 +458,18 @@ table{border-collapse:collapse;border-spacing:0;font-variant-numeric:tabular-num
   font-size:.88em;
   vertical-align:text-bottom;
 }
+
+
+/* v18: restore top-three coloring for trial T, race T and ST. */
+.race-result-table .result-metric.result-metric-rank-1{
+  color:#171108!important;
+  background:#f6de8d!important;
+}
+.race-result-table .result-metric.result-metric-rank-2{
+  color:#172029!important;
+  background:#d9e6ee!important;
+}
+.race-result-table .result-metric.result-metric-rank-3{
+  color:#382719!important;
+  background:#e3c6a3!important;
+}

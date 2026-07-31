@@ -1036,3 +1036,12 @@ button,select{font:inherit}
 @media(display-mode:standalone){
   .odds-confirm-float{height:49px}
 }
+
+
+/* v29: make invalid diagonal cells clearly darker than car No. 1. */
+.odds-matrix-cell.is-invalid,
+.odds-trifecta-cell.is-invalid{
+  color:transparent!important;
+  background:#e4e6e9!important;
+  background-image:none!important;
+}

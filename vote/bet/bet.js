@@ -179,7 +179,7 @@
       const payload=JSON.parse(raw);
       return payload&&typeof payload==="object"?payload:null;
     }catch(error){
-      console.warn("通常投票データを復元できませんでした。",error);
+      console.warn("投票入力データを復元できませんでした。",error);
       return null;
     }
   }
@@ -267,51 +267,5 @@
     try{sessionStorage.setItem(CONFIRM_STORAGE_KEY,JSON.stringify(payload));}catch(error){console.warn("投票確認データを保存できませんでした。",error);}
     window.location.href="confirm/";
   });
-  const HAMAMATSU_RACES = [
-    ["1R","10:37"],["2R","11:03"],["3R","11:29"],["4R","11:55"],
-    ["5R","12:23"],["6R","12:54"],["7R","13:25"],["8R","13:57"],
-    ["9R","14:33"],["10R","15:11"],["11R","15:51"],["12R","16:45"]
-  ];
-  function showRaceListToast(){
-    let toast=document.querySelector(".bet-race-list-toast");
-    if(!toast){
-      toast=document.createElement("div");
-      toast.className="bet-race-list-toast";
-      toast.textContent="遷移先ページは準備中です";
-      toast.setAttribute("role","status");
-      document.body.appendChild(toast);
-    }
-    toast.classList.remove("is-visible");
-    requestAnimationFrame(()=>toast.classList.add("is-visible"));
-    clearTimeout(showRaceListToast.timer);
-    showRaceListToast.timer=setTimeout(()=>toast.classList.remove("is-visible"),1800);
-  }
-  function initHamamatsuRaceList(){
-    const bar=document.querySelector(".delca-bar");
-    const raceList=bar?.querySelector("[data-bet-race-list]");
-    if(!bar||!raceList) return;
-    raceList.innerHTML=HAMAMATSU_RACES.map(([race,time])=>{
-      const isCurrent=race==="12R";
-      return `<button class="race-tab sport-auto${isCurrent?" featured-race active":""}" type="button" data-race="${race}" data-race-venue="浜松"${isCurrent?' aria-current="true"':""}><strong><span class="race-tab-name">浜松</span><span class="race-tab-icon auto" aria-hidden="true"></span></strong><span>${race} ${time}</span></button>`;
-    }).join("");
-    raceList.querySelectorAll(".race-tab").forEach(tab=>tab.addEventListener("click",()=>{
-      if(tab.dataset.race!=="12R") showRaceListToast();
-    }));
-    document.addEventListener("zenrace:race-venue-filter",event=>{
-      const open=Boolean(event.detail?.enabled&&event.detail?.venue==="浜松");
-      bar.classList.toggle("is-race-list-open",open);
-      raceList.hidden=!open;
-      if(open){
-        const active=raceList.querySelector(".race-tab.active");
-        requestAnimationFrame(()=>{
-          if(!active) return;
-          const leftPadding=Number.parseFloat(getComputedStyle(raceList).paddingLeft)||0;
-          const maxScroll=Math.max(0,raceList.scrollWidth-raceList.clientWidth);
-          raceList.scrollLeft=Math.min(maxScroll,Math.max(0,active.offsetLeft-leftPadding));
-        });
-      }
-    });
-  }
-  initHamamatsuRaceList();
   restoreSelections();
 })();

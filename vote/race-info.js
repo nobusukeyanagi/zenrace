@@ -157,7 +157,7 @@
         button.classList.toggle('active', opening);
         if (opening && frame && !frame.firstElementChild) {
           const iframe = document.createElement('iframe');
-          iframe.src = 'https://www.youtube.com/embed/6K-6KhGE238?rel=0&playsinline=1';
+          iframe.src = 'https://www.youtube.com/embed/wYygIxOlwcs?rel=0&playsinline=1';
           iframe.title = '浜松オートレース ライブ映像';
           iframe.loading = 'lazy';
           iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';

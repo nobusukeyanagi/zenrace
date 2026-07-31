@@ -8,27 +8,27 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/zenrace/favicon-32x32.png?v=3">
   <link rel="icon" type="image/png" sizes="16x16" href="/zenrace/favicon-16x16.png?v=3">
   <link rel="shortcut icon" type="image/x-icon" href="/zenrace/favicon.ico?v=3">
-  <title>通常投票 | ZENRACE</title>
+  <title>投票入力 | ZENRACE</title>
   <link href="../../shared/category-menu.css?v=57" rel="stylesheet">
   <link href="../../shared/page-shell.css?v=20" rel="stylesheet">
   <link href="../race-info.css?v=61" rel="stylesheet">
   <link href="../race-switch.css?v=66" rel="stylesheet">
   <link href="../../shared/race-button-style.css?v=6" rel="stylesheet">
   <link href="bet.css?v=39" rel="stylesheet">
-  <script defer src="../race-info.js?v=64"></script>
+  <script defer src="../race-info.js?v=65"></script>
   <script defer src="../live-state.js?v=1"></script>
-  <script defer src="../../shared/category-menu.js?v=55"></script>
+  <script defer src="../../shared/category-menu.js?v=57"></script>
   <script defer src="../../shared/fixed-layout.js?v=23"></script>
   <script defer src="../../shared/bottom-nav.js?v=61"></script>
   <script defer src="../odds-data.js?v=1"></script>
-  <script defer src="bet.js?v=22"></script>
+  <script defer src="bet.js?v=23"></script>
 </head>
 <body>
   <zenrace-category-menu active="bet" category="vote"></zenrace-category-menu>
   <div class="zenrace-content-shell" data-zenrace-pinch-shell>
     <div class="zenrace-content-sizer" data-zenrace-pinch-sizer>
       <div class="zenrace-content-stage" data-zenrace-pinch-stage>
-        <section class="delca-bar" aria-label="デルカ残高・レース選択">
+        <section class="delca-bar" aria-label="デルカ残高">
           <div class="delca-default" data-delca-default>
             <div class="delca-balance"><span>投票用デルカ</span><strong>123,456,789 <small>pt</small></strong></div>
             <div class="delca-actions">
@@ -36,9 +36,8 @@
               <button type="button"><span>デルカ</span><span>に交換</span></button>
             </div>
           </div>
-          <div class="bet-race-list" data-bet-race-list hidden aria-label="浜松のレース一覧"></div>
         </section>
-        <zenrace-race-info></zenrace-race-info>
+        <zenrace-race-info race-filter-disabled></zenrace-race-info>
 
         <nav class="bet-type-menu" aria-label="賭式選択">
           <button class="bet-type-tab active" type="button" data-bet-type="3連単" aria-pressed="true">3連単</button>
@@ -50,7 +49,7 @@
         </nav>
 
         <main class="bet-page">
-          <section class="bet-table-section" aria-label="通常投票表">
+          <section class="bet-table-section" aria-label="投票入力表">
             <div class="bet-table-scroll">
               <table class="bet-table">
                 <colgroup>

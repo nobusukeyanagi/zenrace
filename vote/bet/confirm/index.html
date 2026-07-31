@@ -14,10 +14,10 @@
   <link href="../../race-info.css?v=61" rel="stylesheet">
   <link href="../../../shared/race-button-style.css?v=6" rel="stylesheet">
   <link href="../bet.css?v=39" rel="stylesheet">
-  <link href="confirm.css?v=21" rel="stylesheet">
-  <script defer src="../../race-info.js?v=64"></script>
+  <link href="confirm.css?v=22" rel="stylesheet">
+  <script defer src="../../race-info.js?v=65"></script>
   <script defer src="../../live-state.js?v=1"></script>
-  <script defer src="../../../shared/category-menu.js?v=55"></script>
+  <script defer src="../../../shared/category-menu.js?v=57"></script>
   <script defer src="../../../shared/fixed-layout.js?v=23"></script>
   <script defer src="../../../shared/bottom-nav.js?v=61"></script>
   <script defer src="../../odds-data.js?v=1"></script>
@@ -28,7 +28,7 @@
   <div class="zenrace-content-shell confirm-gold-shell" data-zenrace-pinch-shell>
     <div class="zenrace-content-sizer" data-zenrace-pinch-sizer>
       <div class="zenrace-content-stage" data-zenrace-pinch-stage>
-        <section class="delca-bar" aria-label="デルカ残高・レース選択">
+        <section class="delca-bar" aria-label="デルカ残高">
           <div class="delca-default" data-delca-default>
             <div class="delca-balance"><span>投票用デルカ</span><strong>123,456,789 <small>pt</small></strong></div>
             <div class="delca-actions">
@@ -47,7 +47,7 @@
           </section>
 
           <div class="wager-groups" id="wager-groups" aria-live="polite"></div>
-          <a class="confirm-back-link" href="../">通常投票に戻る</a>
+          <a class="confirm-back-link" href="../">投票入力に戻る</a>
         </main>
       </div>
     </div>
@@ -65,9 +65,8 @@
       <div class="pin-approval-body">
         <label class="pin-approval-field">
           <span>暗証番号</span>
-          <input id="pin-approval-input" type="password" inputmode="numeric" autocomplete="off" maxlength="8" pattern="[0-9]*" aria-describedby="pin-approval-note">
+          <input id="pin-approval-input" type="password" inputmode="numeric" autocomplete="off" maxlength="8" pattern="[0-9]*">
         </label>
-        <p class="pin-approval-note" id="pin-approval-note">暗証番号を入力して投票を承認してください。</p>
         <button class="pin-approval-submit" id="pin-approval-submit" type="button" disabled>承認して投票</button>
       </div>
     </section>
