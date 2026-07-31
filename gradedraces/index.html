@@ -130,7 +130,7 @@ zenrace-bottom-nav{touch-action:none;overscroll-behavior:none}
 }
 </style>
 <link rel="stylesheet" href="../shared/month-selector.css?v=8">
-<script src="../shared/sport-preferences.js?v=1"></script>
+<script src="../shared/sport-preferences.js?v=2"></script>
 <script src="../shared/category-menu.js?v=56" defer></script>
 <script src="../shared/bottom-nav.js?v=64" defer></script>
 </head>
@@ -340,10 +340,12 @@ function render(){
   const currentMonthButton=$("todayBtn");
   if(currentMonthButton){currentMonthButton.classList.toggle("is-current",isCurrentMonth);currentMonthButton.disabled=isCurrentMonth;}
   const monthPrefix=`${y}-${String(m+1).padStart(2,"0")}`;
-  const enabledSports=window.ZENRACE_SPORT_PREFERENCES?.read?.();
+  const sportPreferences=window.ZENRACE_SPORT_PREFERENCES;
+  const enabledSports=sportPreferences?.read?.();
   const monthRecords=records.filter(r=>r.date.startsWith(monthPrefix)&&(enabledSports?enabledSports.includes(r.sport):true));
   if(!monthRecords.length){$("schedule").innerHTML='<div class="empty-month">この月の登録レースはありません</div>';updateZoomMetrics(true);return}
   const grouped=new Map();monthRecords.forEach(r=>{if(!grouped.has(r.date))grouped.set(r.date,[]);grouped.get(r.date).push(r)});
+  if(sportPreferences?.order)grouped.forEach((list,key)=>grouped.set(key,sportPreferences.order(list)));
   const today=dateKey(new Date());
   $("schedule").innerHTML=[...grouped.entries()].map(([key,list])=>{
     const d=new Date(`${key}T00:00:00`),dow=d.getDay();

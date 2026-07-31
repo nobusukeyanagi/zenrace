@@ -1,65 +1,240 @@
+:root{
+  color-scheme:dark;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic UI","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  --settings-gold:#d7b65a;
+  --settings-gold-light:#f0cc70;
+  --settings-line:rgba(226,185,81,.30);
+}
+*{box-sizing:border-box}
+html{background:#050505}
+body{
+  margin:0;
+  color:#f7f4eb;
+  background:#050505;
+  font-family:inherit;
+}
+button,input{font:inherit}
+button{-webkit-tap-highlight-color:transparent}
+.visually-hidden{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
 .settings-main{
-  width:min(100%,760px);
+  width:min(100%,720px);
+  min-width:0;
   margin:0 auto;
-  padding:16px 12px 28px;
+  padding:12px 12px 30px;
+  overflow:hidden;
 }
 .settings-section{
+  width:100%;
+  min-width:0;
   overflow:hidden;
   border:1px solid rgba(138,112,47,.58);
-  border-radius:12px;
-  background:linear-gradient(180deg,rgba(26,26,26,.98),rgba(10,10,10,.98));
-  box-shadow:0 10px 28px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.035);
+  border-radius:14px;
+  background:
+    linear-gradient(120deg,rgba(215,172,68,.055),transparent 42%),
+    linear-gradient(180deg,#171719,#0b0b0d);
+  box-shadow:0 8px 22px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.04);
 }
 .settings-section-header{
-  padding:15px 16px 13px;
-  border-bottom:1px solid rgba(138,112,47,.42);
+  min-width:0;
+  padding:14px 15px 13px;
+  border-bottom:1px solid var(--settings-line);
 }
 .settings-title{
   margin:0;
-  color:#f0cc70;
-  font-size:18px;
+  color:var(--settings-gold-light);
+  font-size:clamp(17px,4.2vw,20px);
   font-weight:900;
-  letter-spacing:.03em;
+  line-height:1.35;
+  letter-spacing:.02em;
 }
 .settings-description{
   margin:7px 0 0;
-  color:#aeb4bd;
-  font-size:12px;
-  font-weight:650;
+  color:#aaa7a0;
+  font-size:clamp(12px,3.15vw,14px);
+  font-weight:700;
   line-height:1.65;
 }
 .sport-setting-list{
+  width:100%;
+  min-width:0;
   margin:0;
   padding:0;
   border:0;
 }
 .sport-setting-option{
-  min-height:52px;
-  display:flex;
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 58px;
+  width:100%;
+  min-width:0;
+  min-height:66px;
+  color:#f7f4eb;
+  background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,0));
+  border-top:1px solid rgba(255,255,255,.075);
+  user-select:none;
+  -webkit-user-select:none;
+}
+.sport-setting-option:first-of-type{border-top:0}
+.sport-setting-control{
+  display:grid;
+  grid-template-columns:50px 30px minmax(0,1fr);
   align-items:center;
-  gap:12px;
-  padding:0 16px;
-  color:#f4f5f7;
-  font-size:15px;
-  font-weight:800;
+  min-width:0;
+  min-height:66px;
+  padding:0 4px 0 8px;
   cursor:pointer;
   -webkit-tap-highlight-color:transparent;
 }
-.sport-setting-option+.sport-setting-option{
-  border-top:1px solid rgba(255,255,255,.08);
+.sport-setting-control input{
+  position:absolute;
+  width:1px;
+  height:1px;
+  opacity:0;
+  pointer-events:none;
 }
-.sport-setting-option input{
-  width:20px;
-  height:20px;
-  margin:0;
-  accent-color:#d7b65a;
-  flex:0 0 auto;
+.sport-checkbox{
+  position:relative;
+  display:grid;
+  place-items:center;
+  width:32px;
+  height:32px;
+  margin:auto;
+  border:2px solid #7d7d80;
+  border-radius:8px;
+  background:#101113;
+  box-shadow:inset 0 1px 2px rgba(0,0,0,.48),0 0 0 0 rgba(215,182,90,0);
+  transition:border-color .15s ease,background-color .15s ease,box-shadow .15s ease;
 }
-.sport-setting-option span{
+.sport-setting-control input:checked+.sport-checkbox{
+  border-color:var(--settings-gold);
+  background:linear-gradient(180deg,#e7c66f,#bd8b29);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.36),0 0 0 3px rgba(215,182,90,.13);
+}
+.sport-setting-control input:checked+.sport-checkbox::after{
+  content:"";
+  width:14px;
+  height:8px;
+  border-left:3px solid #1b1508;
+  border-bottom:3px solid #1b1508;
+  transform:translateY(-2px) rotate(-45deg);
+}
+.sport-setting-control input:focus-visible+.sport-checkbox{
+  outline:2px solid #fff;
+  outline-offset:3px;
+}
+.sport-setting-icon{
+  display:block;
+  width:27px;
+  height:27px;
+  background:#fff;
+  filter:drop-shadow(0 1px 1px rgba(0,0,0,.25));
+}
+.sport-setting-icon.keirin{-webkit-mask:url('../gradedraces/icons/keirin.png') center/contain no-repeat;mask:url('../gradedraces/icons/keirin.png') center/contain no-repeat}
+.sport-setting-icon.auto{-webkit-mask:url('../gradedraces/icons/auto.png') center/contain no-repeat;mask:url('../gradedraces/icons/auto.png') center/contain no-repeat}
+.sport-setting-icon.boat{-webkit-mask:url('../gradedraces/icons/boat.png') center/contain no-repeat;mask:url('../gradedraces/icons/boat.png') center/contain no-repeat}
+.sport-setting-icon.nar{-webkit-mask:url('../gradedraces/icons/nar.png') center/contain no-repeat;mask:url('../gradedraces/icons/nar.png') center/contain no-repeat}
+.sport-setting-icon.jra{-webkit-mask:url('../gradedraces/icons/jra.png') center/contain no-repeat;mask:url('../gradedraces/icons/jra.png') center/contain no-repeat}
+.sport-setting-name{
   min-width:0;
+  padding-left:11px;
+  overflow:hidden;
+  color:#f7f4eb;
+  font-size:clamp(15px,3.9vw,18px);
+  font-weight:850;
+  line-height:1.25;
+  letter-spacing:.01em;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
+.sport-drag-handle{
+  position:relative;
+  display:grid;
+  width:58px;
+  min-width:0;
+  min-height:66px;
+  place-items:center;
+  padding:0;
+  color:#c9c4b8;
+  border:0;
+  border-left:1px solid rgba(255,255,255,.065);
+  background:transparent;
+  cursor:grab;
+  touch-action:none;
+}
+.sport-drag-handle:active{cursor:grabbing}
+.sport-drag-handle:focus-visible{
+  outline:2px solid var(--settings-gold-light);
+  outline-offset:-5px;
+}
+.sport-drag-handle span,
+.sport-drag-handle span::before,
+.sport-drag-handle span::after{
+  display:block;
+  width:23px;
+  height:3px;
+  border-radius:99px;
+  background:currentColor;
+  box-shadow:0 1px 1px rgba(0,0,0,.45);
+}
+.sport-drag-handle span{position:relative}
+.sport-drag-handle span::before,
+.sport-drag-handle span::after{content:"";position:absolute;left:0}
+.sport-drag-handle span::before{top:-8px}
+.sport-drag-handle span::after{top:8px}
+.sport-order-help{
+  margin:0;
+  padding:10px 14px 12px;
+  color:#8f9095;
+  border-top:1px solid var(--settings-line);
+  font-size:11px;
+  font-weight:700;
+  line-height:1.55;
+}
+.sport-setting-placeholder{
+  width:100%;
+  min-height:66px;
+  border-top:1px solid rgba(255,255,255,.075);
+  background:rgba(215,182,90,.055);
+}
+.sport-setting-option.is-dragging{
+  position:fixed!important;
+  z-index:10000;
+  margin:0;
+  overflow:hidden;
+  border:1px solid rgba(240,204,112,.72)!important;
+  border-radius:10px;
+  background:linear-gradient(180deg,#28241a,#111113);
+  box-shadow:0 14px 32px rgba(0,0,0,.58),0 0 0 3px rgba(215,182,90,.12);
+  pointer-events:none;
+}
+.sport-setting-option.is-dragging .sport-drag-handle{color:var(--settings-gold-light)}
 @media(max-width:430px){
-  .settings-main{padding:12px 8px 24px}
-  .settings-section-header{padding-inline:14px}
-  .sport-setting-option{padding-inline:14px}
+  .settings-main{padding:10px 8px 26px}
+  .settings-section-header{padding-inline:13px}
+  .sport-setting-option{grid-template-columns:minmax(0,1fr) 54px}
+  .sport-setting-control{grid-template-columns:48px 27px minmax(0,1fr);padding-left:5px}
+  .sport-checkbox{width:31px;height:31px}
+  .sport-setting-icon{width:25px;height:25px}
+  .sport-setting-name{padding-left:9px}
+  .sport-drag-handle{width:54px}
+}
+@media(max-width:330px){
+  .settings-main{padding-inline:6px}
+  .sport-setting-option{grid-template-columns:minmax(0,1fr) 48px}
+  .sport-setting-control{grid-template-columns:44px 24px minmax(0,1fr);padding-left:2px}
+  .sport-checkbox{width:29px;height:29px;border-radius:7px}
+  .sport-setting-icon{width:23px;height:23px}
+  .sport-setting-name{padding-left:7px;font-size:14px}
+  .sport-drag-handle{width:48px}
+  .sport-drag-handle span,.sport-drag-handle span::before,.sport-drag-handle span::after{width:20px}
 }
