@@ -28,7 +28,50 @@
   if (!board) return;
 
   const venueKey = (entry) => `${entry.sport}:${entry.venue}`;
+  const normalizedGrade = (value) => String(value ?? "")
+    .trim()
+    .toUpperCase()
+    .replace(/\s+/g, "")
+    .replace(/Ⅲ/g, "3")
+    .replace(/Ⅱ/g, "2")
+    .replace(/Ⅰ/g, "1")
+    .replace(/III/g, "3")
+    .replace(/II/g, "2")
+    .replace(/I/g, "1");
+  const isAccentGrade = (sport, grade) => {
+    if (!grade) return false;
+    const normalized = normalizedGrade(grade);
+    if (sport === "keirin") return normalized === "GP" || /^G[123]$/.test(normalized);
+    if (sport === "auto") return normalized === "SG" || /^G[12]$/.test(normalized);
+    if (sport === "boat") return normalized === "SG" || normalized === "PG1" || /^G[123]$/.test(normalized);
+    if (sport === "nar" || sport === "jra") return true;
+    return false;
+  };
+
   const isHorseRace = (sport) => sport === "nar" || sport === "jra";
+
+  const DAY_BADGE_DIGITS = { "0": "０", "1": "１", "2": "２", "3": "３", "4": "４", "5": "５", "6": "６", "7": "７", "8": "８", "9": "９" };
+  const escapeAttr = (value) => String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+  const toFullWidthDigits = (value) => String(value).replace(/\d/g, (digit) => DAY_BADGE_DIGITS[digit] || digit);
+  const dayBadgeText = (value) => {
+    if (!value) return "";
+    if (value === "初日") return "初";
+    if (value === "最終日") return "終";
+    const match = String(value).match(/^(\d+)日目$/);
+    if (!match) return String(value);
+    const numeric = Number(match[1]);
+    return numeric <= 9 ? toFullWidthDigits(match[1]) : match[1];
+  };
+  const renderVenueDayLabel = (value) => {
+    if (!value) return "";
+    const text = dayBadgeText(value);
+    const multiDigit = String(text).length > 1 ? " multi-digit" : "";
+    return `<span class="venue-day-label${multiDigit}" aria-label="${escapeAttr(value)}" title="${escapeAttr(value)}">${escapeAttr(text)}</span>`;
+  };
 
   const buildVenues = (dateKey) => {
     if (dateKey === "2026-02-23") return VENUES_20260223;
@@ -63,7 +106,7 @@
 
   const renderVenueMeta = (entry) => {
     const gradeHtml = entry.grade
-      ? `<span class="venue-grade-icon ${entry.grade.accent ? "accent" : "muted"}">${entry.grade.label}</span>`
+      ? `<span class="venue-grade-icon ${isAccentGrade(entry.sport, entry.grade.label) ? "accent" : "muted"}">${entry.grade.label}</span>`
       : "";
     const sessionHtml = entry.session
       ? `<img class="venue-status-icon" src="${SESSION_ICON[entry.session]}" alt="" aria-hidden="true">`
@@ -71,7 +114,7 @@
     const girlsHtml = entry.girls
       ? `<img class="venue-status-icon girls" src="../schedule/icons/girls.png" alt="" aria-hidden="true">`
       : "";
-    const dayHtml = entry.day ? `<span class="venue-day-label">${entry.day}</span>` : "";
+    const dayHtml = renderVenueDayLabel(entry.day);
 
     return `
       <div class="venue-card sport-${entry.sport}">
@@ -79,7 +122,7 @@
           <div class="venue-name">${entry.venue}</div>
           <span class="venue-sport-icon ${entry.sport}" aria-hidden="true"></span>
         </div>
-        <div class="venue-meta-row">${gradeHtml}${sessionHtml}${girlsHtml}${dayHtml}</div>
+        <div class="venue-meta-row">${gradeHtml}${dayHtml}${sessionHtml}${girlsHtml}</div>
       </div>`;
   };
 
