@@ -1,16 +1,15 @@
 {
-  "generated_at": "2026-08-01T05:52:41.734666+09:00",
+  "generated_at": "2026-08-02T05:17:03.967451+09:00",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 1,
-    "recent_verification": 1,
-    "upcoming": 26
+    "upcoming": 31
   },
   "sources": [
     {
       "name": "JRA",
       "ok": true,
-      "patch_count": 11,
+      "patch_count": 15,
       "fetched_urls": [
         "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0802.html",
@@ -18,7 +17,9 @@
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0808.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0809.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0809.html",
-        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0815.html"
+        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0815.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0816.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0816.html"
       ],
       "warnings": [],
       "error": ""
@@ -31,11 +32,10 @@
         "https://www.keiba.go.jp/gradedrace/schedule.html",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F26&k_babaCode=22",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=22&k_nenndo=2026",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F07%2F30&k_babaCode=36",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=31",
-        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=31&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=10",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=10&k_nenndo=2026",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=31",
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=31&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F06&k_babaCode=19",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=19&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F06&k_babaCode=36",
@@ -51,7 +51,9 @@
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=20&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F13&k_babaCode=36",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F14&k_babaCode=27",
-        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=27&k_nenndo=2026"
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=27&k_nenndo=2026",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F16&k_babaCode=03",
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=03&k_nenndo=2026"
       ],
       "warnings": [
         "地方競馬重賞一覧の本文を十分に確認できませんでした。個別レース情報の取得は継続します。"
@@ -61,12 +63,12 @@
     {
       "name": "ボートレース",
       "ok": true,
-      "patch_count": 0,
+      "patch_count": 1,
       "fetched_urls": [
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=01",
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=02",
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=03",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=11&hd=20260802",
+        "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=11&hd=20260802&rno=12",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=01&hd=20260805",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=04&hd=20260808",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=18&hd=20260811"
@@ -84,7 +86,8 @@
       "warnings": [
         "2026-08-04 小田原: 発走時刻を特定できませんでした",
         "2026-08-09 佐世保: 発走時刻を特定できませんでした",
-        "2026-08-09 和歌山: 発走時刻を特定できませんでした"
+        "2026-08-09 和歌山: 発走時刻を特定できませんでした",
+        "2026-08-16 松山: 発走時刻を特定できませんでした"
       ],
       "error": ""
     },
@@ -101,10 +104,19 @@
         "https://autorace.jp/race_info/Program/hamamatsu/2026-08-02_12",
         "https://autorace.jp/race_info/Program/hamamatsu/2026-08-02_11",
         "https://autorace.jp/race_info/Program/hamamatsu/2026-08-02_10",
-        "https://autorace.jp/race_info/Program/hamamatsu/2026-08-02_09"
+        "https://autorace.jp/race_info/Program/hamamatsu/2026-08-02_09",
+        "https://autorace.jp/race_info/RaceResult/isesaki/2026-08-16_12",
+        "https://autorace.jp/race_info/RaceResult/isesaki/2026-08-16_11",
+        "https://autorace.jp/race_info/RaceResult/isesaki/2026-08-16_10",
+        "https://autorace.jp/race_info/RaceResult/isesaki/2026-08-16_09",
+        "https://autorace.jp/race_info/Program/isesaki/2026-08-16_12",
+        "https://autorace.jp/race_info/Program/isesaki/2026-08-16_11",
+        "https://autorace.jp/race_info/Program/isesaki/2026-08-16_10",
+        "https://autorace.jp/race_info/Program/isesaki/2026-08-16_09"
       ],
       "warnings": [
-        "2026-08-02 浜松: 優勝戦ページを特定できませんでした"
+        "2026-08-02 浜松: 優勝戦ページを特定できませんでした",
+        "2026-08-16 伊勢崎: 優勝戦ページを特定できませんでした"
       ],
       "error": ""
     }

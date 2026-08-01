@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-01T05:52:41.735197+09:00",
-  "center_date": "2026-08-01",
+  "generated_at": "2026-08-02T05:17:03.967837+09:00",
+  "center_date": "2026-08-02",
   "past_unresolved_count": 1,
-  "upcoming_missing_time_count": 19,
+  "upcoming_missing_time_count": 20,
   "past_unresolved": [
     {
       "date": "2026-07-26",
@@ -17,16 +17,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-08-02",
-      "sport": "boat",
-      "venue": "びわこ",
-      "grade": "SG",
-      "name": "オーシャンカップ",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-08-02",
       "sport": "auto",
@@ -63,16 +53,6 @@
       "venue": "船橋",
       "grade": "SⅡ",
       "name": "習志野きらっとスプリント",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-06",
-      "sport": "nar",
-      "venue": "門別",
-      "grade": "H3",
-      "name": "サッポロクラシックカップ",
       "missing": [
         "time"
       ]
@@ -203,6 +183,36 @@
       "venue": "新潟",
       "grade": "J・GⅢ",
       "name": "J ・ GIII 新潟ジャンプS",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-16",
+      "sport": "nar",
+      "venue": "帯広",
+      "grade": "BG2",
+      "name": "ばんえいグランプリ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-16",
+      "sport": "keirin",
+      "venue": "松山",
+      "grade": "GⅠ",
+      "name": "オールスター競輪",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-16",
+      "sport": "auto",
+      "venue": "伊勢崎",
+      "grade": "SG",
+      "name": "オートレースグランプリ",
       "missing": [
         "time"
       ]

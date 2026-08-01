@@ -3394,6 +3394,15 @@
   },
   {
     "date": "2026-08-02",
+    "time": "16:35",
+    "sport": "boat",
+    "venue": "びわこ",
+    "grade": "SG",
+    "name": "オーシャンカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-08-02",
     "time": "19:05",
     "sport": "nar",
     "venue": "盛岡",
@@ -3408,15 +3417,6 @@
     "venue": "高知",
     "grade": "",
     "name": "黒潮菊花賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-08-02",
-    "time": "",
-    "sport": "boat",
-    "venue": "びわこ",
-    "grade": "SG",
-    "name": "オーシャンカップ",
     "winner": ""
   },
   {
@@ -3448,20 +3448,20 @@
   },
   {
     "date": "2026-08-06",
-    "time": "",
+    "time": "20:30",
     "sport": "nar",
-    "venue": "船橋",
-    "grade": "SⅡ",
-    "name": "習志野きらっとスプリント",
+    "venue": "門別",
+    "grade": "H3",
+    "name": "サッポロクラシックカップ",
     "winner": ""
   },
   {
     "date": "2026-08-06",
     "time": "",
     "sport": "nar",
-    "venue": "門別",
-    "grade": "H3",
-    "name": "サッポロクラシックカップ",
+    "venue": "船橋",
+    "grade": "SⅡ",
+    "name": "習志野きらっとスプリント",
     "winner": ""
   },
   {
@@ -3610,19 +3610,19 @@
   },
   {
     "date": "2026-08-16",
-    "time": "",
+    "time": "14:00",
     "sport": "jra",
     "venue": "中京",
-    "grade": "GⅢ",
+    "grade": "GIII",
     "name": "中京記念",
     "winner": ""
   },
   {
     "date": "2026-08-16",
-    "time": "",
+    "time": "16:30",
     "sport": "jra",
     "venue": "札幌",
-    "grade": "GⅡ",
+    "grade": "GII",
     "name": "札幌記念",
     "winner": ""
   },

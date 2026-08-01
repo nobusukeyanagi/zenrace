@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-01T05:55:18.876144+09:00",
-  "target_date": "2026-08-01",
+  "generated_at": "2026-08-02T05:19:22.557030+09:00",
+  "target_date": "2026-08-02",
   "before_count": 21,
-  "after_count": 28,
+  "after_count": 29,
   "changed": true,
   "before": [
     {
       "sport": "keirin",
       "venue": "小田原",
       "grade": "GⅢ",
-      "day": "初日"
+      "day": "2日目"
     },
     {
       "sport": "auto",
       "venue": "浜松",
       "grade": "GⅡ",
-      "day": "4日目"
+      "day": "最終日"
     },
     {
       "sport": "boat",
@@ -23,49 +23,37 @@
       "grade": "G3",
       "session": "night",
       "girls": true,
-      "day": "2日目"
+      "day": "3日目"
     },
     {
       "sport": "boat",
       "venue": "多摩川",
       "grade": "一般",
-      "day": "2日目"
+      "day": "3日目"
     },
     {
       "sport": "boat",
       "venue": "浜名湖",
       "grade": "G3",
-      "day": "2日目"
+      "day": "3日目"
     },
     {
       "sport": "boat",
       "venue": "常滑",
       "grade": "一般",
-      "day": "3日目"
-    },
-    {
-      "sport": "boat",
-      "venue": "津",
-      "grade": "一般",
-      "day": "最終日"
-    },
-    {
-      "sport": "boat",
-      "venue": "三国",
-      "grade": "一般",
-      "day": "最終日"
+      "day": "4日目"
     },
     {
       "sport": "boat",
       "venue": "びわこ",
       "grade": "SG",
-      "day": "5日目"
+      "day": "最終日"
     },
     {
       "sport": "boat",
       "venue": "尼崎",
       "grade": "一般",
-      "day": "2日目"
+      "day": "3日目"
     },
     {
       "sport": "boat",
@@ -73,17 +61,11 @@
       "grade": "一般",
       "session": "night",
       "girls": true,
-      "day": "5日目"
+      "day": "最終日"
     },
     {
       "sport": "boat",
       "venue": "児島",
-      "grade": "一般",
-      "day": "5日目"
-    },
-    {
-      "sport": "boat",
-      "venue": "徳山",
       "grade": "一般",
       "day": "最終日"
     },
@@ -92,27 +74,35 @@
       "venue": "若松",
       "grade": "一般",
       "session": "night",
-      "day": "2日目"
+      "day": "3日目"
+    },
+    {
+      "sport": "boat",
+      "venue": "芦屋",
+      "grade": "一般",
+      "day": "初日"
     },
     {
       "sport": "boat",
       "venue": "福岡",
       "grade": "一般",
-      "day": "4日目"
+      "day": "5日目"
     },
     {
       "sport": "boat",
       "venue": "唐津",
       "grade": "一般",
-      "day": "4日目"
+      "day": "5日目"
     },
     {
       "sport": "jra",
-      "venue": "札幌"
+      "venue": "札幌",
+      "grade": "GIII"
     },
     {
       "sport": "jra",
-      "venue": "新潟"
+      "venue": "新潟",
+      "grade": "GIII"
     },
     {
       "sport": "jra",
@@ -125,22 +115,33 @@
     },
     {
       "sport": "nar",
-      "venue": "高知",
+      "venue": "盛岡",
+      "grade": "M3"
+    },
+    {
+      "sport": "nar",
+      "venue": "船橋",
       "session": "night"
+    },
+    {
+      "sport": "nar",
+      "venue": "高知",
+      "session": "night",
+      "grade": ""
     }
   ],
   "after": [
     {
       "sport": "keirin",
       "venue": "いわき平",
-      "day": "2日目",
+      "day": "最終日",
       "grade": "FⅠ",
       "session": "night"
     },
     {
       "sport": "keirin",
       "venue": "京王閣",
-      "day": "2日目",
+      "day": "最終日",
       "grade": "FⅡ",
       "session": "midnight"
     },
@@ -148,33 +149,33 @@
       "sport": "keirin",
       "venue": "小田原",
       "grade": "GⅢ",
-      "day": "初日"
+      "day": "2日目"
     },
     {
       "sport": "keirin",
       "venue": "防府",
-      "day": "2日目",
+      "day": "最終日",
       "grade": "FⅡ",
       "session": "morning"
     },
     {
       "sport": "keirin",
       "venue": "高知",
-      "day": "2日目",
+      "day": "最終日",
       "grade": "FⅡ",
       "session": "midnight"
     },
     {
       "sport": "keirin",
       "venue": "武雄",
-      "day": "2日目",
+      "day": "最終日",
       "grade": "FⅡ",
       "session": "midnight"
     },
     {
       "sport": "keirin",
       "venue": "佐世保",
-      "day": "2日目",
+      "day": "最終日",
       "grade": "FⅠ"
     },
     {
@@ -190,8 +191,8 @@
     {
       "sport": "auto",
       "venue": "浜松",
-      "grade": "普通",
-      "day": "4日目"
+      "grade": "GⅡ",
+      "day": "最終日"
     },
     {
       "sport": "auto",
@@ -204,44 +205,37 @@
       "grade": "一般",
       "session": "night",
       "girls": true,
-      "day": "2日目"
+      "day": "3日目"
     },
     {
       "sport": "boat",
       "venue": "多摩川",
       "grade": "一般",
-      "day": "2日目"
+      "day": "3日目"
     },
     {
       "sport": "boat",
       "venue": "浜名湖",
       "grade": "一般",
-      "day": "2日目"
+      "day": "3日目"
     },
     {
       "sport": "boat",
       "venue": "常滑",
       "grade": "一般",
-      "day": "3日目"
-    },
-    {
-      "sport": "boat",
-      "venue": "三国",
-      "grade": "一般",
-      "day": "最終日",
-      "session": "morning"
+      "day": "4日目"
     },
     {
       "sport": "boat",
       "venue": "びわこ",
-      "grade": "一般",
-      "day": "5日目"
+      "grade": "SG",
+      "day": "最終日"
     },
     {
       "sport": "boat",
       "venue": "尼崎",
       "grade": "一般",
-      "day": "2日目"
+      "day": "3日目"
     },
     {
       "sport": "boat",
@@ -249,53 +243,67 @@
       "grade": "一般",
       "session": "night",
       "girls": true,
-      "day": "5日目"
+      "day": "最終日"
     },
     {
       "sport": "boat",
       "venue": "児島",
       "grade": "一般",
-      "day": "5日目"
-    },
-    {
-      "sport": "boat",
-      "venue": "徳山",
-      "grade": "一般",
-      "day": "最終日",
-      "session": "morning"
+      "day": "最終日"
     },
     {
       "sport": "boat",
       "venue": "若松",
       "grade": "一般",
       "session": "night",
-      "day": "2日目"
+      "day": "3日目"
+    },
+    {
+      "sport": "boat",
+      "venue": "芦屋",
+      "grade": "一般",
+      "day": "初日",
+      "session": "morning"
     },
     {
       "sport": "boat",
       "venue": "福岡",
       "grade": "一般",
-      "day": "4日目"
+      "day": "5日目"
     },
     {
       "sport": "boat",
       "venue": "唐津",
       "grade": "一般",
-      "day": "4日目",
+      "day": "5日目",
       "session": "morning"
     },
     {
       "sport": "nar",
-      "venue": "高知",
+      "venue": "盛岡",
+      "grade": "M3",
       "session": "night"
     },
     {
-      "sport": "jra",
-      "venue": "札幌"
+      "sport": "nar",
+      "venue": "船橋",
+      "session": "night"
+    },
+    {
+      "sport": "nar",
+      "venue": "高知",
+      "session": "night",
+      "grade": ""
     },
     {
       "sport": "jra",
-      "venue": "新潟"
+      "venue": "札幌",
+      "grade": "GⅢ"
+    },
+    {
+      "sport": "jra",
+      "venue": "新潟",
+      "grade": "GⅢ"
     },
     {
       "sport": "jra",
@@ -318,12 +326,12 @@
       "ok": true,
       "entry_count": 4,
       "fetched_urls": [
-        "https://autorace.jp/race_info/Program/kawaguchi/2026-08-01",
-        "https://autorace.jp/race_info/Program/isesaki/2026-08-01",
-        "https://autorace.jp/race_info/Program/hamamatsu/2026-08-01",
-        "https://autorace.jp/race_info/Program/iizuka/2026-08-01",
-        "https://autorace.jp/race_info/Program/sanyo/2026-08-01",
-        "https://autorace.jp/race_info/Program/sanyo/2026-08-01_01"
+        "https://autorace.jp/race_info/Program/kawaguchi/2026-08-02",
+        "https://autorace.jp/race_info/Program/isesaki/2026-08-02",
+        "https://autorace.jp/race_info/Program/hamamatsu/2026-08-02",
+        "https://autorace.jp/race_info/Program/iizuka/2026-08-02",
+        "https://autorace.jp/race_info/Program/sanyo/2026-08-02",
+        "https://autorace.jp/race_info/Program/sanyo/2026-08-02_01"
       ],
       "warnings": [],
       "error": ""
@@ -331,23 +339,21 @@
     {
       "sport": "boat",
       "ok": true,
-      "entry_count": 13,
+      "entry_count": 12,
       "fetched_urls": [
         "https://www.boatrace.jp/owpc/pc/race/monthlyschedule?ym=202608",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=01&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=05&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=06&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=08&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=09&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=10&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=11&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=13&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=15&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=16&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=18&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=20&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=22&hd=20260801",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=23&hd=20260801"
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=01&hd=20260802",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=05&hd=20260802",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=06&hd=20260802",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=08&hd=20260802",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=11&hd=20260802",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=13&hd=20260802",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=15&hd=20260802",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=16&hd=20260802",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=20&hd=20260802",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=21&hd=20260802",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=22&hd=20260802",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=23&hd=20260802"
       ],
       "warnings": [],
       "error": ""
@@ -355,23 +361,23 @@
     {
       "sport": "nar",
       "ok": true,
-      "entry_count": 1,
+      "entry_count": 3,
       "fetched_urls": [
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=03",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=36",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=10",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=11",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=18",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=19",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=20",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=21",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=22",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=23",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=24",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=27",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=28",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=31",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F01&k_babaCode=32"
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=03",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=36",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=10",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=11",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=18",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=19",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=20",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=21",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=22",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=23",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=24",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=27",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=28",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=31",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F02&k_babaCode=32"
       ],
       "warnings": [],
       "error": ""
@@ -381,7 +387,7 @@
       "ok": true,
       "entry_count": 3,
       "fetched_urls": [
-        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0801.html"
+        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0802.html"
       ],
       "warnings": [],
       "error": ""
