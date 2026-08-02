@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-02T05:17:03.967837+09:00",
-  "center_date": "2026-08-02",
-  "past_unresolved_count": 1,
+  "generated_at": "2026-08-03T05:19:11.549623+09:00",
+  "center_date": "2026-08-03",
+  "past_unresolved_count": 2,
   "upcoming_missing_time_count": 20,
   "past_unresolved": [
     {
@@ -14,9 +14,7 @@
         "time",
         "winner"
       ]
-    }
-  ],
-  "upcoming_missing_time": [
+    },
     {
       "date": "2026-08-02",
       "sport": "auto",
@@ -26,7 +24,9 @@
       "missing": [
         "time"
       ]
-    },
+    }
+  ],
+  "upcoming_missing_time": [
     {
       "date": "2026-08-04",
       "sport": "keirin",
@@ -213,6 +213,16 @@
       "venue": "伊勢崎",
       "grade": "SG",
       "name": "オートレースグランプリ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "sport": "boat",
+      "venue": "大村",
+      "grade": "GⅢ",
+      "name": "オールレディース",
       "missing": [
         "time"
       ]

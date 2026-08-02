@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-02T05:17:04.079579+09:00",
-  "base_date": "2026-08-02",
+  "generated_at": "2026-08-03T05:19:11.691296+09:00",
+  "base_date": "2026-08-03",
   "steps": [
     {
       "command": [
@@ -46,12 +46,12 @@
   "summary": {
     "master_official_records": 204,
     "master_added": 0,
-    "master_updated": 5,
+    "master_updated": 7,
     "master_review_required": 7,
     "master_duplicates": 0,
-    "detail_targets": 32,
+    "detail_targets": 33,
     "detail_changes": 11,
-    "past_unresolved": 1,
+    "past_unresolved": 2,
     "upcoming_missing_time": 20,
     "detail_source_failures": 0
   }
