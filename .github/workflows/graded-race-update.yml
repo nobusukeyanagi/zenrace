@@ -63,9 +63,11 @@ jobs:
           if [ -n "$BASE_DATE" ]; then
             python -m monthly.scripts.update_schedule \
               --date "$BASE_DATE" \
+              --smart \
               --fail-if-all-sources-fail
           else
             python -m monthly.scripts.update_schedule \
+              --smart \
               --fail-if-all-sources-fail
           fi
 
@@ -96,7 +98,8 @@ jobs:
               '',
               '## Integrated result',
               f"- 公式日程取得: {summary.get('master_official_records', 0)}件",
-              f"- 新規レース追加: {summary.get('master_added', 0)}件",
+              f"- 新規レース追加（～{summary.get('master_new_addition_end', '')}）: {summary.get('master_added', 0)}件",
+              f"- 翌月末より先の追加保留: {summary.get('master_deferred_additions', 0)}件",
               f"- 基本情報更新: {summary.get('master_updated', 0)}件",
               f"- 公式日程との照合要確認: {summary.get('master_review_required', 0)}件",
               f"- 重複候補: {summary.get('master_duplicates', 0)}件",
@@ -104,7 +107,11 @@ jobs:
               f"- 発走時刻・優勝者等の更新: {summary.get('detail_changes', 0)}件",
               f"- 終了済み未解決: {incomplete.get('past_unresolved_count', 0)}件",
               f"- 開催前の時刻未公開: {incomplete.get('upcoming_missing_time_count', 0)}件",
-              f"- 開催日程（{monthly.get('target_date', '')}）: {monthly.get('before_count', 0)}件 → {monthly.get('after_count', 0)}件",
+              f"- 開催日程（基準日 {monthly.get('target_date', '')}）: {monthly.get('before_count', 0)}件 → {monthly.get('after_count', 0)}件",
+              f"- 通常更新範囲: {monthly.get('refresh_window', {}).get('start', '')} ～ {monthly.get('refresh_window', {}).get('end', '')}",
+              f"- 過去90日の未解決再確認: {monthly.get('retried_unresolved_count', 0)}件",
+              f"- 翌月末までの新規開催追加: {monthly.get('new_addition_count', 0)}件",
+              f"- 未解決残数: {monthly.get('unresolved_after_count', 0)}件",
               '',
               '## Official schedules',
           ]
@@ -163,7 +170,8 @@ jobs:
             gradedraces/master_schedule_report.json \
             gradedraces/daily_update_report.json \
             monthly/monthly.js \
-            monthly/monthly_update_report.json; do
+            monthly/monthly_update_report.json \
+            monthly/schedule_sync_state.json; do
             [ -f "$file" ] && git add "$file"
           done
 
@@ -201,6 +209,7 @@ jobs:
             gradedraces/incomplete_records.json
             gradedraces/schedule_sync_state.json
             monthly/monthly_update_report.json
+            monthly/schedule_sync_state.json
           if-no-files-found: ignore
           retention-days: 30
 
