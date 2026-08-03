@@ -30,7 +30,7 @@ SPORT_NAMES = {
 SPORT_ORDER = {"keirin": 0, "auto": 1, "boat": 2, "nar": 3, "jra": 4}
 SPORT_HEADINGS = {
     "keirin": "🚴競輪",
-    "auto": "🏍オート―レース",
+    "auto": "🏍オートレース",
     "boat": "🚤ボートレース",
     "nar": "🏇地方競馬",
     "jra": "🏇JRA",
@@ -134,7 +134,7 @@ def time_value(value: str) -> int:
 
 def format_date(target_date: str) -> str:
     parsed = date.fromisoformat(target_date)
-    return f"{parsed.month}/{parsed.day} ({WEEKDAY_NAMES[parsed.weekday()]})"
+    return f"{parsed.month}/{parsed.day}({WEEKDAY_NAMES[parsed.weekday()]})"
 
 
 def format_race(race: dict[str, Any]) -> str:
@@ -192,7 +192,7 @@ def build_full_message(target_date: str, races: list[dict[str, Any]], venues: li
             str(item.get("name", "")),
         )
     )
-    lines = [f"🏁{format_date(target_date)} の公営競技", "", "🏆グレードレース"]
+    lines = [f"🏁{format_date(target_date)}の公営競技", "", "🏆グレードレース"]
     lines.extend(format_race(item) for item in todays_races)
     if not todays_races:
         lines.append("グレードレースはありません")
@@ -205,7 +205,10 @@ def build_full_message(target_date: str, races: list[dict[str, Any]], venues: li
         for item in venues:
             sport = str(item.get("sport", ""))
             grouped_venues.setdefault(sport, []).append(item)
-        for sport in sorted(grouped_venues, key=lambda value: SPORT_ORDER.get(value, 99)):
+        ordered_sports = sorted(grouped_venues, key=lambda value: SPORT_ORDER.get(value, 99))
+        for index, sport in enumerate(ordered_sports):
+            if index:
+                lines.append("")
             lines.append(SPORT_HEADINGS.get(sport, SPORT_NAMES.get(sport, sport)))
             lines.extend(format_venue(item) for item in grouped_venues[sport])
 

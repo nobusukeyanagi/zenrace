@@ -111,12 +111,12 @@ class ScheduleTests(unittest.TestCase):
             "https://example.com/gradedraces/",
             "https://example.com/monthly/",
         )
-        self.assertTrue(message.startswith("🏁7/22 (水) の公営競技\n\n🏆グレードレース"))
+        self.assertTrue(message.startswith("🏁7/22(水)の公営競技\n\n🏆グレードレース"))
         self.assertIn("17:50 ボートレース 児島 GⅢ シモデンカップ", message)
         self.assertIn("🚴競輪\n青森 FⅠ 初日", message)
-        self.assertIn("🏍オート―レース\n伊勢崎 普通 最終日 ナイター", message)
-        self.assertIn("🚤ボートレース\n児島 G3 最終日 ナイター", message)
-        self.assertIn("🏇地方競馬\n門別 H3 ナイター", message)
+        self.assertIn("\n\n🏍オートレース\n伊勢崎 普通 最終日 ナイター", message)
+        self.assertIn("\n\n🚤ボートレース\n児島 G3 最終日 ナイター", message)
+        self.assertIn("\n\n🏇地方競馬\n門別 H3 ナイター", message)
         self.assertTrue(message.endswith("https://example.com/monthly/"))
 
 
