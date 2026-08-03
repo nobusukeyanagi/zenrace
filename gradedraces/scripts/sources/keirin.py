@@ -16,6 +16,7 @@ from scripts.common import (
     normalize,
     now_jst,
     same_name,
+    sanitize_winner_name,
     soup_from,
     strip_edition,
     table_rows,
@@ -44,7 +45,7 @@ SALES_RE = re.compile(r"^[\d,]+億|^[\d,]+万|円$")
 
 
 def _looks_like_person_name(value: str) -> bool:
-    text = clean_text(value)
+    text = sanitize_winner_name(value)
     if not 2 <= len(text) <= 20 or re.search(r"\d", text):
         return False
     if SALES_RE.search(text):
@@ -84,7 +85,7 @@ def parse_schedule_entries(soup: BeautifulSoup) -> list[dict[str, Any]]:
         winner = ""
         for cell in reversed(cells[venue_index + 1 :]):
             if _looks_like_person_name(cell):
-                winner = clean_text(cell)
+                winner = sanitize_winner_name(cell)
                 break
         entries.append(
             {

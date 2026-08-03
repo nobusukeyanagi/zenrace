@@ -1,4 +1,5 @@
 import datetime as dt
+import json
 from pathlib import Path
 import sys
 
@@ -8,7 +9,13 @@ from bs4 import BeautifulSoup
 PROJECT_DIR = Path(__file__).resolve().parents[1] / "gradedraces"
 sys.path.insert(0, str(PROJECT_DIR))
 
-from scripts.common import Patch, merge_patches, same_name, strip_edition  # noqa: E402
+from scripts.common import (  # noqa: E402
+    Patch,
+    merge_patches,
+    same_name,
+    sanitize_winner_name,
+    strip_edition,
+)
 from scripts.sources.autorace import grade_schedule_patches  # noqa: E402
 from scripts.sources.boatrace import parse_official_result_page  # noqa: E402
 from scripts.sources.keirin import (  # noqa: E402
@@ -326,3 +333,58 @@ def test_master_reconcile_adds_and_updates_without_deleting_time_on_name_change(
     assert boat["time"] == "17:50"
     assert len(changes) == 1
     assert len(additions) == 1
+
+
+def test_keirin_winner_age_and_class_are_removed() -> None:
+    assert sanitize_winner_name("谷口 遼平 32歳/103期") == "谷口 遼平"
+    assert sanitize_winner_name("深谷 知広 36歳／96期 愛知") == "深谷 知広"
+
+
+def test_keirin_official_schedule_winner_metadata_is_removed() -> None:
+    records = [
+        {
+            "date": "2026-07-24",
+            "sport": "keirin",
+            "venue": "前橋",
+            "grade": "GⅢ",
+            "name": "ドームスーパーナイトレース",
+            "time": "20:30",
+            "winner": "",
+        }
+    ]
+    patches = schedule_patches(
+        records,
+        soup(
+            """
+            <table>
+              <tr><td>7月</td><td>ドームスーパーナイトレース</td><td>前橋(22～24)</td><td>谷口 遼平 32歳/103期</td></tr>
+            </table>
+            """
+        ),
+        "https://keirin.jp/pc/graderaceschedule",
+    )
+    assert patches[0].fields == {"winner": "谷口 遼平"}
+
+
+def test_verified_july_august_schedule_has_no_missing_or_extra_races() -> None:
+    from scripts.verified_schedule import compare_month, load_snapshot  # noqa: E402
+
+    records = json.loads((PROJECT_DIR / "races.json").read_text(encoding="utf-8"))
+    snapshot = load_snapshot()
+    assert compare_month(records, "2026-07", snapshot) == {"missing": [], "unexpected": []}
+    assert compare_month(records, "2026-08", snapshot) == {"missing": [], "unexpected": []}
+
+
+def test_verified_july_august_corrected_times_and_winners() -> None:
+    records = json.loads((PROJECT_DIR / "races.json").read_text(encoding="utf-8"))
+    by_key = {
+        (record["date"], record["sport"], record["venue"], record["name"]): record
+        for record in records
+    }
+    assert by_key[("2026-07-12", "jra", "福島", "七夕賞")]["time"] == "15:45"
+    assert by_key[("2026-07-26", "jra", "中京", "東海S")]["time"] == "15:35"
+    assert by_key[("2026-08-02", "boat", "びわこ", "オーシャンカップ")]["winner"] == "定松 勇樹"
+    assert by_key[("2026-08-02", "auto", "浜松", "浜松記念 曳馬野賞")]["winner"] == "永井 大介"
+    assert by_key[("2026-08-02", "auto", "浜松", "浜松記念 曳馬野賞")]["time"] == "16:35"
+    assert by_key[("2026-07-24", "keirin", "前橋", "ドームスーパーナイトレース")]["winner"] == "谷口 遼平"
+    assert by_key[("2026-07-28", "keirin", "豊橋", "開設77周年記念ちぎり賞争奪戦")]["winner"] == "深谷 知広"

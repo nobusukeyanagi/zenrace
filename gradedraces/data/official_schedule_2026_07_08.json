@@ -1,0 +1,788 @@
+{
+  "verified_at": "2026-08-03",
+  "description": "2026年7月・8月の公式グレード／重賞日程を全競技で照合した固定監査リスト。発走時刻・優勝者は日々更新されるため日程同一性の監査対象外。",
+  "sources": {
+    "keirin": [
+      "https://keirin.jp/pc/graderaceschedule?scyy=2026"
+    ],
+    "auto": [
+      "https://autorace.jp/calendar/graderace/"
+    ],
+    "boat": [
+      "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=01&year=2026",
+      "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=02&year=2026",
+      "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=03&year=2026"
+    ],
+    "nar": [
+      "https://www.keiba.go.jp/pdf/RaceScheduleList/heavyprize202607.pdf",
+      "https://www.keiba.go.jp/pdf/RaceScheduleList/heavyprize202608.pdf"
+    ],
+    "jra": [
+      "https://www.jra.go.jp/keiba/calendar2026/2026/7.html",
+      "https://www.jra.go.jp/keiba/calendar2026/2026/8.html"
+    ]
+  },
+  "expected_counts": {
+    "2026-07": {
+      "total": 52,
+      "by_sport": {
+        "auto": 2,
+        "boat": 10,
+        "jra": 6,
+        "keirin": 5,
+        "nar": 29
+      }
+    },
+    "2026-08": {
+      "total": 53,
+      "by_sport": {
+        "auto": 3,
+        "boat": 7,
+        "jra": 12,
+        "keirin": 6,
+        "nar": 25
+      }
+    }
+  },
+  "months": {
+    "2026-07": [
+      {
+        "date": "2026-07-01",
+        "sport": "nar",
+        "venue": "大井",
+        "grade": "JpnⅠ",
+        "name": "帝王賞"
+      },
+      {
+        "date": "2026-07-05",
+        "sport": "boat",
+        "venue": "児島",
+        "grade": "GⅡ",
+        "name": "モーターボート大賞"
+      },
+      {
+        "date": "2026-07-05",
+        "sport": "jra",
+        "venue": "小倉",
+        "grade": "GⅢ",
+        "name": "北九州記念"
+      },
+      {
+        "date": "2026-07-05",
+        "sport": "keirin",
+        "venue": "小松島",
+        "grade": "GⅢ",
+        "name": "阿波おどり杯争覇戦"
+      },
+      {
+        "date": "2026-07-05",
+        "sport": "nar",
+        "venue": "佐賀",
+        "grade": "",
+        "name": "佐賀ユーススプリント"
+      },
+      {
+        "date": "2026-07-05",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M2",
+        "name": "せきれい賞"
+      },
+      {
+        "date": "2026-07-05",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "兼六園スプリント"
+      },
+      {
+        "date": "2026-07-07",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M2",
+        "name": "岩鷲賞"
+      },
+      {
+        "date": "2026-07-08",
+        "sport": "nar",
+        "venue": "川崎",
+        "grade": "JpnⅢ",
+        "name": "スパーキングレディーカップ"
+      },
+      {
+        "date": "2026-07-09",
+        "sport": "nar",
+        "venue": "笠松",
+        "grade": "SPⅠ",
+        "name": "ぎふ清流カップ"
+      },
+      {
+        "date": "2026-07-09",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "星雲賞"
+      },
+      {
+        "date": "2026-07-10",
+        "sport": "auto",
+        "venue": "飯塚",
+        "grade": "GⅡ",
+        "name": "ミッドナイトチャンピオンカップ"
+      },
+      {
+        "date": "2026-07-10",
+        "sport": "nar",
+        "venue": "園田",
+        "grade": "重賞Ⅰ",
+        "name": "兵庫サマークイーン賞"
+      },
+      {
+        "date": "2026-07-12",
+        "sport": "boat",
+        "venue": "戸田",
+        "grade": "GⅡ",
+        "name": "全国ボートレース甲子園"
+      },
+      {
+        "date": "2026-07-12",
+        "sport": "boat",
+        "venue": "若松",
+        "grade": "GⅢ",
+        "name": "シャボン玉石けん杯"
+      },
+      {
+        "date": "2026-07-12",
+        "sport": "jra",
+        "venue": "福島",
+        "grade": "GⅢ",
+        "name": "七夕賞"
+      },
+      {
+        "date": "2026-07-12",
+        "sport": "keirin",
+        "venue": "前橋",
+        "grade": "GⅢ",
+        "name": "まえばし七夕賞・CTC杯"
+      },
+      {
+        "date": "2026-07-12",
+        "sport": "nar",
+        "venue": "帯広",
+        "grade": "BG2",
+        "name": "旭川記念"
+      },
+      {
+        "date": "2026-07-12",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M2",
+        "name": "やまびこ賞"
+      },
+      {
+        "date": "2026-07-12",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "加賀友禅賞"
+      },
+      {
+        "date": "2026-07-16",
+        "sport": "nar",
+        "venue": "佐賀",
+        "grade": "",
+        "name": "霧島賞"
+      },
+      {
+        "date": "2026-07-16",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H2",
+        "name": "ノースクイーンカップ"
+      },
+      {
+        "date": "2026-07-18",
+        "sport": "boat",
+        "venue": "尼崎",
+        "grade": "GⅢ",
+        "name": "オールレディース"
+      },
+      {
+        "date": "2026-07-18",
+        "sport": "boat",
+        "venue": "蒲郡",
+        "grade": "GⅡ",
+        "name": "モーターボート大賞"
+      },
+      {
+        "date": "2026-07-19",
+        "sport": "jra",
+        "venue": "函館",
+        "grade": "GⅢ",
+        "name": "函館2歳S"
+      },
+      {
+        "date": "2026-07-19",
+        "sport": "jra",
+        "venue": "小倉",
+        "grade": "GⅢ",
+        "name": "小倉記念"
+      },
+      {
+        "date": "2026-07-19",
+        "sport": "nar",
+        "venue": "帯広",
+        "grade": "BG3",
+        "name": "ばんえい大賞典"
+      },
+      {
+        "date": "2026-07-19",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M3",
+        "name": "いしがきマイラーズ"
+      },
+      {
+        "date": "2026-07-19",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢城鼠多門賞"
+      },
+      {
+        "date": "2026-07-19",
+        "sport": "nar",
+        "venue": "高知",
+        "grade": "",
+        "name": "トレノ賞"
+      },
+      {
+        "date": "2026-07-20",
+        "sport": "auto",
+        "venue": "川口",
+        "grade": "GⅠ",
+        "name": "キューポラ杯"
+      },
+      {
+        "date": "2026-07-20",
+        "sport": "keirin",
+        "venue": "高知",
+        "grade": "GⅡ",
+        "name": "サマーナイトフェスティバル"
+      },
+      {
+        "date": "2026-07-20",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "JpnⅢ",
+        "name": "マーキュリーカップ"
+      },
+      {
+        "date": "2026-07-20",
+        "sport": "nar",
+        "venue": "笠松",
+        "grade": "SPⅡ",
+        "name": "サマーカップ"
+      },
+      {
+        "date": "2026-07-22",
+        "sport": "boat",
+        "venue": "児島",
+        "grade": "GⅢ",
+        "name": "シモデンカップ"
+      },
+      {
+        "date": "2026-07-22",
+        "sport": "nar",
+        "venue": "大井",
+        "grade": "SⅢ",
+        "name": "サンタアニタトロフィー"
+      },
+      {
+        "date": "2026-07-22",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "リリーカップ"
+      },
+      {
+        "date": "2026-07-23",
+        "sport": "boat",
+        "venue": "津",
+        "grade": "GⅢ",
+        "name": "イースタンヤング"
+      },
+      {
+        "date": "2026-07-23",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H2",
+        "name": "王冠賞"
+      },
+      {
+        "date": "2026-07-24",
+        "sport": "boat",
+        "venue": "下関",
+        "grade": "GⅢ",
+        "name": "オールレディース"
+      },
+      {
+        "date": "2026-07-24",
+        "sport": "boat",
+        "venue": "福岡",
+        "grade": "GⅢ",
+        "name": "ウエスタンヤング"
+      },
+      {
+        "date": "2026-07-24",
+        "sport": "keirin",
+        "venue": "前橋",
+        "grade": "GⅢ",
+        "name": "ドームスーパーナイトレース"
+      },
+      {
+        "date": "2026-07-26",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GⅢ",
+        "name": "東海S"
+      },
+      {
+        "date": "2026-07-26",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GⅢ",
+        "name": "関屋記念"
+      },
+      {
+        "date": "2026-07-26",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M3",
+        "name": "若鮎賞"
+      },
+      {
+        "date": "2026-07-26",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "能登復興祈念百万石かがやきナイター賞"
+      },
+      {
+        "date": "2026-07-28",
+        "sport": "boat",
+        "venue": "江戸川",
+        "grade": "GⅢ",
+        "name": "アサヒビールカップ"
+      },
+      {
+        "date": "2026-07-28",
+        "sport": "keirin",
+        "venue": "豊橋",
+        "grade": "GⅢ",
+        "name": "開設77周年記念ちぎり賞争奪戦"
+      },
+      {
+        "date": "2026-07-28",
+        "sport": "nar",
+        "venue": "名古屋",
+        "grade": "SPⅠ",
+        "name": "名港盃"
+      },
+      {
+        "date": "2026-07-28",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M2",
+        "name": "オパールカップ"
+      },
+      {
+        "date": "2026-07-29",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "旭岳賞"
+      },
+      {
+        "date": "2026-07-30",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "ポラリスサマースプリント"
+      }
+    ],
+    "2026-08": [
+      {
+        "date": "2026-08-02",
+        "sport": "auto",
+        "venue": "浜松",
+        "grade": "GⅡ",
+        "name": "浜松記念 曳馬野賞"
+      },
+      {
+        "date": "2026-08-02",
+        "sport": "boat",
+        "venue": "びわこ",
+        "grade": "SG",
+        "name": "オーシャンカップ"
+      },
+      {
+        "date": "2026-08-02",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GⅢ",
+        "name": "アイビスサマーダッシュ"
+      },
+      {
+        "date": "2026-08-02",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GⅢ",
+        "name": "クイーンS"
+      },
+      {
+        "date": "2026-08-02",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M3",
+        "name": "フェアリーカップ"
+      },
+      {
+        "date": "2026-08-02",
+        "sport": "nar",
+        "venue": "高知",
+        "grade": "",
+        "name": "黒潮菊花賞"
+      },
+      {
+        "date": "2026-08-04",
+        "sport": "keirin",
+        "venue": "小田原",
+        "grade": "GⅢ",
+        "name": "第77周年記念北条早雲杯争奪戦"
+      },
+      {
+        "date": "2026-08-05",
+        "sport": "boat",
+        "venue": "桐生",
+        "grade": "GⅢ",
+        "name": "オールレディース"
+      },
+      {
+        "date": "2026-08-06",
+        "sport": "nar",
+        "venue": "船橋",
+        "grade": "SⅡ",
+        "name": "習志野きらっとスプリント"
+      },
+      {
+        "date": "2026-08-06",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "サッポロクラシックカップ"
+      },
+      {
+        "date": "2026-08-08",
+        "sport": "boat",
+        "venue": "平和島",
+        "grade": "GⅢ",
+        "name": "キリンカップ"
+      },
+      {
+        "date": "2026-08-08",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GⅢ",
+        "name": "エルムS"
+      },
+      {
+        "date": "2026-08-09",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GⅢ",
+        "name": "CBC賞"
+      },
+      {
+        "date": "2026-08-09",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GⅢ",
+        "name": "レパードS"
+      },
+      {
+        "date": "2026-08-09",
+        "sport": "keirin",
+        "venue": "佐世保",
+        "grade": "GⅠ",
+        "name": "毎日新聞社杯女子オールスター競輪"
+      },
+      {
+        "date": "2026-08-09",
+        "sport": "keirin",
+        "venue": "和歌山",
+        "grade": "GⅢ",
+        "name": "ワールドサイクリスト支援競輪"
+      },
+      {
+        "date": "2026-08-09",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M1",
+        "name": "ひまわり賞（オークス）"
+      },
+      {
+        "date": "2026-08-11",
+        "sport": "boat",
+        "venue": "徳山",
+        "grade": "PGⅠ",
+        "name": "レディースチャンピオン"
+      },
+      {
+        "date": "2026-08-11",
+        "sport": "nar",
+        "venue": "浦和",
+        "grade": "SⅢ",
+        "name": "ルーキーズサマーカップ"
+      },
+      {
+        "date": "2026-08-11",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "JpnⅢ",
+        "name": "クラスターカップ"
+      },
+      {
+        "date": "2026-08-11",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "読売レディス杯"
+      },
+      {
+        "date": "2026-08-12",
+        "sport": "nar",
+        "venue": "笠松",
+        "grade": "SPⅠ",
+        "name": "くろゆり賞"
+      },
+      {
+        "date": "2026-08-13",
+        "sport": "nar",
+        "venue": "大井",
+        "grade": "SⅢ",
+        "name": "黒潮盃"
+      },
+      {
+        "date": "2026-08-13",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "JpnⅢ",
+        "name": "北海道スプリントカップ"
+      },
+      {
+        "date": "2026-08-14",
+        "sport": "nar",
+        "venue": "園田",
+        "grade": "重賞Ⅰ",
+        "name": "摂津盃"
+      },
+      {
+        "date": "2026-08-15",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "J・GⅢ",
+        "name": "新潟ジャンプS"
+      },
+      {
+        "date": "2026-08-16",
+        "sport": "auto",
+        "venue": "伊勢崎",
+        "grade": "SG",
+        "name": "オートレースグランプリ"
+      },
+      {
+        "date": "2026-08-16",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GⅢ",
+        "name": "中京記念"
+      },
+      {
+        "date": "2026-08-16",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GⅡ",
+        "name": "札幌記念"
+      },
+      {
+        "date": "2026-08-16",
+        "sport": "keirin",
+        "venue": "松山",
+        "grade": "GⅠ",
+        "name": "オールスター競輪"
+      },
+      {
+        "date": "2026-08-16",
+        "sport": "nar",
+        "venue": "帯広",
+        "grade": "BG2",
+        "name": "ばんえいグランプリ"
+      },
+      {
+        "date": "2026-08-17",
+        "sport": "boat",
+        "venue": "大村",
+        "grade": "GⅢ",
+        "name": "オールレディース"
+      },
+      {
+        "date": "2026-08-18",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M1",
+        "name": "岩手県知事杯OROカップ"
+      },
+      {
+        "date": "2026-08-19",
+        "sport": "nar",
+        "venue": "川崎",
+        "grade": "SⅡ",
+        "name": "スパーキングサマーカップ"
+      },
+      {
+        "date": "2026-08-19",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "フルールカップ"
+      },
+      {
+        "date": "2026-08-20",
+        "sport": "nar",
+        "venue": "名古屋",
+        "grade": "SPⅡ",
+        "name": "ベイスプリント"
+      },
+      {
+        "date": "2026-08-20",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H2",
+        "name": "ブリーダーズゴールドジュニアカップ"
+      },
+      {
+        "date": "2026-08-23",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GⅢ",
+        "name": "新潟2歳S"
+      },
+      {
+        "date": "2026-08-23",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GⅢ",
+        "name": "キーンランドC"
+      },
+      {
+        "date": "2026-08-23",
+        "sport": "nar",
+        "venue": "佐賀",
+        "grade": "",
+        "name": "九州チャンピオンシップ"
+      },
+      {
+        "date": "2026-08-23",
+        "sport": "nar",
+        "venue": "帯広",
+        "grade": "BG3",
+        "name": "はまなす賞"
+      },
+      {
+        "date": "2026-08-23",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M1",
+        "name": "ジュニアグランプリ"
+      },
+      {
+        "date": "2026-08-25",
+        "sport": "auto",
+        "venue": "飯塚",
+        "grade": "GⅠ",
+        "name": "ダイヤモンドレース"
+      },
+      {
+        "date": "2026-08-25",
+        "sport": "keirin",
+        "venue": "松戸",
+        "grade": "GⅢ",
+        "name": "燦燦ダイヤモンド滝澤正光杯"
+      },
+      {
+        "date": "2026-08-25",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "イヌワシ賞"
+      },
+      {
+        "date": "2026-08-26",
+        "sport": "nar",
+        "venue": "船橋",
+        "grade": "SⅢ",
+        "name": "フリオーソレジェンドカップ"
+      },
+      {
+        "date": "2026-08-27",
+        "sport": "boat",
+        "venue": "常滑",
+        "grade": "GⅢ",
+        "name": "中日新聞・中日スポーツ 中日カップ"
+      },
+      {
+        "date": "2026-08-27",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "JpnⅢ",
+        "name": "ブリーダーズゴールドカップ"
+      },
+      {
+        "date": "2026-08-30",
+        "sport": "boat",
+        "venue": "桐生",
+        "grade": "SG",
+        "name": "ボートレースメモリアル"
+      },
+      {
+        "date": "2026-08-30",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GⅢ",
+        "name": "中京2歳S"
+      },
+      {
+        "date": "2026-08-30",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GⅢ",
+        "name": "新潟記念"
+      },
+      {
+        "date": "2026-08-30",
+        "sport": "keirin",
+        "venue": "前橋",
+        "grade": "GⅢ",
+        "name": "三山王冠争奪戦"
+      },
+      {
+        "date": "2026-08-30",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "M1",
+        "name": "ビューチフルドリーマーカップ"
+      }
+    ]
+  }
+}

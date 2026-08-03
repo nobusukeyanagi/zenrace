@@ -130,9 +130,14 @@ def strip_edition(value: str) -> str:
 
 
 def sanitize_winner_name(value: Any) -> str:
-    """Remove registration numbers accidentally captured with a winner name."""
+    """Remove registration numbers and competitor metadata captured with a winner name."""
     text = clean_text(value)
     text = re.sub(r"^(?:登録\s*)?(?:第\s*)?\d{4}\s*(?:号)?\s*", "", text)
+    # KEIRIN result/schedule cells can append age and class, for example
+    # ``谷口 遼平 32歳/103期``.  The public page must show the name only.
+    text = re.sub(r"\s+\d{1,2}歳\s*(?:[/／]\s*)?\d{2,3}期(?:\s+.*)?$", "", text)
+    text = re.sub(r"\s+\d{1,2}歳(?:\s+.*)?$", "", text)
+    text = re.sub(r"\s+(?:第\s*)?\d{2,3}期(?:\s+.*)?$", "", text)
     return clean_text(text)
 
 
