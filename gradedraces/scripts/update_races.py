@@ -167,7 +167,7 @@ def main() -> int:
     if smart_mode:
         upcoming_days = int(config.get("upcoming_days", 14))
         unresolved_retry_days = int(config.get("unresolved_retry_days", 90))
-        recent_verification_days = int(config.get("recent_verification_days", 2))
+        recent_verification_days = int(config.get("recent_verification_days", 1))
         target_indices, selection_reasons = select_smart_target_indices(
             all_records,
             center,

@@ -43,25 +43,27 @@ def _stream(soup: BeautifulSoup) -> list[tuple[str, str]]:
     return tokens
 
 
-def _range_dates(target: date, start_month: int, start_day: int, end_month: int, end_day: int) -> tuple[date, date]:
-    start_year = target.year - 1 if target.month == 1 and start_month == 12 else target.year
+def _range_dates(reference: date, start_month: int, start_day: int, end_month: int, end_day: int) -> tuple[date, date]:
+    start_year = reference.year - 1 if reference.month == 1 and start_month == 12 else reference.year
     end_year = start_year + (1 if end_month < start_month else 0)
     return date(start_year, start_month, start_day), date(end_year, end_month, end_day)
 
 
-def collect(target: date, session: OfficialSession) -> SourceResult:
-    response = session.get(URL, params={"scyy": str(target.year), "scym": f"{target.month:02d}"})
-    soup = BeautifulSoup(response.text, "lxml")
+def _parse_month(soup: BeautifulSoup, reference: date) -> dict[date, list[dict[str, Any]]]:
     tokens = _stream(soup)
     current_venue = ""
     recent_images: list[str] = []
-    entries: list[dict[str, Any]] = []
+    entries_by_date: dict[date, list[dict[str, Any]]] = {}
     seen_ranges: set[tuple[str, date, date]] = set()
 
     for index, (kind, value) in enumerate(tokens):
         if kind == "text" and value in VENUES:
             # メニュー部の開催場名を誤採用しないよう、後方に日付範囲がある場合だけ見出しとして採用する。
-            if any(DATE_RANGE_RE.search(next_value) for next_kind, next_value in tokens[index + 1 : index + 18] if next_kind == "text"):
+            if any(
+                DATE_RANGE_RE.search(next_value)
+                for next_kind, next_value in tokens[index + 1 : index + 18]
+                if next_kind == "text"
+            ):
                 current_venue = value
                 recent_images = []
             continue
@@ -75,10 +77,9 @@ def collect(target: date, session: OfficialSession) -> SourceResult:
         if not match:
             continue
 
-        start_month = int(match.group("sm"))
         start, end = _range_dates(
-            target,
-            start_month,
+            reference,
+            int(match.group("sm")),
             int(match.group("sd")),
             int(match.group("em")),
             int(match.group("ed")),
@@ -102,8 +103,9 @@ def collect(target: date, session: OfficialSession) -> SourceResult:
                 girls = True
 
         days = list(daterange(start, end))
-        if target in days:
-            offset = days.index(target)
+        for offset, target in enumerate(days):
+            if target.year != reference.year or target.month != reference.month:
+                continue
             label = "初日" if offset == 0 else ("最終日" if offset == len(days) - 1 else f"{offset + 1}日目")
             item: dict[str, Any] = {"sport": SPORT, "venue": current_venue, "day": label}
             if grade:
@@ -112,9 +114,51 @@ def collect(target: date, session: OfficialSession) -> SourceResult:
                 item["session"] = session_name
             if girls:
                 item["girls"] = True
-            entries.append(item)
+            entries_by_date.setdefault(target, []).append(item)
         recent_images = []
 
-    if not entries and "開催日程" not in soup.get_text(" ", strip=True):
+    return entries_by_date
+
+
+def _collect_month_uncached(year: int, month: int, session: OfficialSession) -> SourceResult:
+    reference = date(year, month, 1)
+    try:
+        response = session.get(URL, params={"scyy": str(year), "scym": f"{month:02d}"})
+    except Exception as exc:
+        return SourceResult(SPORT, False, fetched_urls=[URL], error=str(exc))
+    soup = BeautifulSoup(response.text, "lxml")
+    entries_by_date = _parse_month(soup, reference)
+    if not entries_by_date and "開催日程" not in soup.get_text(" ", strip=True):
         return SourceResult(SPORT, False, fetched_urls=[response.url], error="KEIRIN.JP開催日程を確認できませんでした")
+    entries: list[dict[str, Any]] = []
+    for target, items in sorted(entries_by_date.items()):
+        entries.extend({"date": target.isoformat(), **item} for item in items)
     return SourceResult(SPORT, True, entries=entries, fetched_urls=[response.url])
+
+
+def collect_month(year: int, month: int, session: OfficialSession) -> SourceResult:
+    cache_key = (SPORT, year, month)
+    cache = getattr(session, "source_cache", None)
+    if cache is None:
+        cache = {}
+        try:
+            setattr(session, "source_cache", cache)
+        except Exception:
+            pass
+    cached = cache.get(cache_key)
+    if cached is not None:
+        return cached
+    result = _collect_month_uncached(year, month, session)
+    cache[cache_key] = result
+    return result
+
+def collect(target: date, session: OfficialSession) -> SourceResult:
+    result = collect_month(target.year, target.month, session)
+    if not result.ok:
+        return result
+    entries = [
+        {key: value for key, value in item.items() if key != "date"}
+        for item in result.entries
+        if item.get("date") == target.isoformat()
+    ]
+    return SourceResult(SPORT, True, entries=entries, fetched_urls=result.fetched_urls, warnings=result.warnings)

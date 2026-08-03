@@ -54,6 +54,8 @@ class OfficialSession:
     def __init__(self, *, delay_seconds: float = 0.12) -> None:
         self.delay_seconds = delay_seconds
         self._last_request_at = 0.0
+        self._cache: dict[tuple[str, tuple[tuple[str, str], ...]], requests.Response] = {}
+        self.source_cache: dict[tuple[str, int, int], SourceResult] = {}
         self.session = requests.Session()
         retry = Retry(
             total=3,
@@ -72,6 +74,12 @@ class OfficialSession:
         )
 
     def get(self, url: str, **kwargs: Any) -> requests.Response:
+        params = kwargs.get("params") or {}
+        cache_key = (url, tuple(sorted((str(key), str(value)) for key, value in params.items())))
+        cached = self._cache.get(cache_key)
+        if cached is not None:
+            return cached
+
         elapsed = time.monotonic() - self._last_request_at
         if elapsed < self.delay_seconds:
             time.sleep(self.delay_seconds - elapsed)
@@ -79,6 +87,7 @@ class OfficialSession:
         self._last_request_at = time.monotonic()
         response.raise_for_status()
         response.encoding = response.apparent_encoding or response.encoding
+        self._cache[cache_key] = response
         return response
 
 

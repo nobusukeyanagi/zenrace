@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import calendar
 import dataclasses
 import datetime as dt
 import hashlib
@@ -628,19 +629,37 @@ def find_match(records: list[dict[str, Any]], official: MasterRecord) -> tuple[i
     return None, ""
 
 
+def end_of_month_after(target: dt.date, months_ahead: int) -> dt.date:
+    month_index = target.year * 12 + (target.month - 1) + months_ahead
+    year, zero_based_month = divmod(month_index, 12)
+    month = zero_based_month + 1
+    return dt.date(year, month, calendar.monthrange(year, month)[1])
+
+
 def reconcile(
     original: list[dict[str, Any]],
     official_records: list[MasterRecord],
     today: dt.date,
+    *,
+    addition_end: dt.date | None = None,
+    deferred_additions: list[dict[str, Any]] | None = None,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
     records = [dict(item) for item in original]
     changes: list[dict[str, Any]] = []
     additions: list[dict[str, Any]] = []
+    deferred = deferred_additions if deferred_additions is not None else []
 
     for official in official_records:
         index, match_type = find_match(records, official)
         incoming = official.as_race()
         if index is None:
+            try:
+                official_date = dt.date.fromisoformat(official.date)
+            except ValueError:
+                official_date = today
+            if addition_end is not None and official_date > addition_end:
+                deferred.append({**incoming, "source_url": official.source_url, "source_id": official.source_id})
+                continue
             records.append(incoming)
             additions.append({**incoming, "source_url": official.source_url, "source_id": official.source_id})
             continue
@@ -777,6 +796,8 @@ def main() -> int:
     config = load_json((root / args.config).resolve())
     today = dt.date.fromisoformat(args.date) if args.date else now_jst().date()
     years_ahead = int(config.get("master_schedule_years_ahead", 1))
+    new_additions_months_ahead = int(config.get("new_additions_months_ahead", 1))
+    addition_end = end_of_month_after(today, new_additions_months_ahead)
     calendar_years = list(range(today.year, today.year + years_ahead + 1))
     current_fiscal = today.year if today.month >= 4 else today.year - 1
     fiscal_years = list(range(current_fiscal, current_fiscal + years_ahead + 1))
@@ -803,7 +824,10 @@ def main() -> int:
     if not isinstance(original, list):
         raise TypeError("races.jsonの最上位は配列である必要があります")
 
-    updated, changes, additions = reconcile(original, official, today)
+    deferred_additions: list[dict[str, Any]] = []
+    updated, changes, additions = reconcile(
+        original, official, today, addition_end=addition_end, deferred_additions=deferred_additions
+    )
     registered_only = registered_only_records(updated, official)
     duplicates = duplicate_records(updated)
     source_summary = [
@@ -823,16 +847,19 @@ def main() -> int:
         "calendar_years": calendar_years,
         "fiscal_years": fiscal_years,
         "official_record_count": len(official),
+        "new_addition_end": addition_end.isoformat(),
         "added_count": len(additions),
+        "deferred_addition_count": len(deferred_additions),
         "updated_count": len(changes),
         "registered_only_count": len(registered_only),
         "duplicate_count": len(duplicates),
         "additions": additions,
+        "deferred_additions": deferred_additions,
         "changes": changes,
         "registered_only": registered_only,
         "duplicates": duplicates,
         "sources": source_summary,
-        "note": "公式日程に見つからない登録済みレースは自動削除せず、要確認として記録します。",
+        "note": "公式日程に見つからない登録済みレースは自動削除しません。新規追加は翌月末までを対象とし、それより先は次回以降へ保留します。",
     }
     save_json(report_path, report)
     save_json(state_path, update_state(state_path, fetch_results))
@@ -840,8 +867,8 @@ def main() -> int:
         save_json(data_path, updated)
 
     LOGGER.info(
-        "公式日程=%d件 追加=%d件 更新=%d件 要確認=%d件 重複=%d件",
-        len(official), len(additions), len(changes), len(registered_only), len(duplicates),
+        "公式日程=%d件 追加=%d件 追加保留=%d件 更新=%d件 要確認=%d件 重複=%d件",
+        len(official), len(additions), len(deferred_additions), len(changes), len(registered_only), len(duplicates),
     )
     for item in registered_only[:20]:
         print(f"::warning::公式日程との照合要確認 {item['date']} {item['venue']} {item['name']}", flush=True)

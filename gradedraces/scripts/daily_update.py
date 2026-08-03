@@ -58,6 +58,8 @@ def main() -> int:
         "summary": {
             "master_official_records": master.get("official_record_count", 0),
             "master_added": master.get("added_count", 0),
+            "master_deferred_additions": master.get("deferred_addition_count", 0),
+            "master_new_addition_end": master.get("new_addition_end", ""),
             "master_updated": master.get("updated_count", 0),
             "master_review_required": master.get("registered_only_count", 0),
             "master_duplicates": master.get("duplicate_count", 0),

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import re
-from datetime import date, datetime, timedelta
+from datetime import date, datetime
 from typing import Any
 from urllib.parse import parse_qs, urlparse
 
@@ -38,7 +38,6 @@ def _session_from_text(text: str) -> str:
 
 
 def _grade_from_page(soup: BeautifulSoup, fallback: str = "") -> str:
-    # ナビゲーション内の「SG・PG1」等を誤採用しないよう、開催タイトルと開催アイコンだけを見る。
     candidates = [fallback]
     title_node = soup.find(["h1", "h2"])
     if title_node:
@@ -51,7 +50,7 @@ def _grade_from_page(soup: BeautifulSoup, fallback: str = "") -> str:
     return "一般"
 
 
-def _candidate_links(soup: BeautifulSoup, target: date) -> list[tuple[date, str, str, str]]:
+def _meeting_links(soup: BeautifulSoup) -> list[tuple[date, str, str, str]]:
     candidates: list[tuple[date, str, str, str]] = []
     seen: set[tuple[str, str]] = set()
     for anchor in soup.find_all("a", href=True):
@@ -64,8 +63,6 @@ def _candidate_links(soup: BeautifulSoup, target: date) -> list[tuple[date, str,
         if jcd not in VENUE_CODES or not re.fullmatch(r"\d{8}", hd):
             continue
         end_date = datetime.strptime(hd, "%Y%m%d").date()
-        if not (target <= end_date <= target + timedelta(days=8)):
-            continue
         title = clean_text(anchor.get_text(" ", strip=True))
         key = (jcd, hd)
         if key in seen:
@@ -76,49 +73,97 @@ def _candidate_links(soup: BeautifulSoup, target: date) -> list[tuple[date, str,
     return candidates
 
 
-def collect(target: date, session: OfficialSession) -> SourceResult:
-    response = session.get(MONTHLY_URL, params={"ym": target.strftime("%Y%m")})
+def _resolve_day_date(end_date: date, month: int, day: int) -> date:
+    # 開催詳細には月日だけが表示されるため、終了日を基準に年を補う。
+    candidates = []
+    for year in (end_date.year - 1, end_date.year, end_date.year + 1):
+        try:
+            candidate = date(year, month, day)
+        except ValueError:
+            continue
+        if abs((candidate - end_date).days) <= 12:
+            candidates.append(candidate)
+    return min(candidates, key=lambda value: abs((value - end_date).days)) if candidates else date(end_date.year, month, day)
+
+
+def _collect_month_uncached(year: int, month: int, session: OfficialSession) -> SourceResult:
+    try:
+        response = session.get(MONTHLY_URL, params={"ym": f"{year}{month:02d}"})
+    except Exception as exc:
+        return SourceResult(SPORT, False, fetched_urls=[MONTHLY_URL], error=str(exc))
     soup = BeautifulSoup(response.text, "lxml")
     fetched = [response.url]
     warnings: list[str] = []
     entries: list[dict[str, Any]] = []
-    handled_venues: set[str] = set()
+    seen: set[tuple[str, str]] = set()
 
-    for _, jcd, href, link_title in _candidate_links(soup, target):
-        venue = VENUE_CODES[jcd]
-        if venue in handled_venues:
+    for end_date, jcd, href, link_title in _meeting_links(soup):
+        # 月末終了の前月跨ぎと、翌月終了の当月開始を拾う。
+        if not (date(year, month, 1).replace(day=1) <= end_date):
             continue
         try:
             detail = session.get(href if href.startswith("http") else f"https://www.boatrace.jp{href}")
             fetched.append(detail.url)
             detail_soup = BeautifulSoup(detail.text, "lxml")
             text = clean_text(detail_soup.get_text(" ", strip=True)).translate(FULLWIDTH)
-            day_label = ""
-            for month, day, label in DAY_RE.findall(text):
-                candidate = date(target.year, int(month), int(day))
-                if candidate == target:
-                    day_label = label.translate(FULLWIDTH)
-                    break
-            if not day_label:
-                continue
             title_node = detail_soup.find(["h1", "h2"])
             title = clean_text(title_node.get_text(" ", strip=True) if title_node else link_title)
-            item: dict[str, Any] = {
-                "sport": SPORT,
-                "venue": venue,
-                "grade": _grade_from_page(detail_soup, link_title),
-                "day": day_label,
-            }
+            grade = _grade_from_page(detail_soup, link_title)
             session_name = _session_from_text(text)
-            if session_name:
-                item["session"] = session_name
-            if any(keyword in title for keyword in ("オールレディース", "ヴィーナス", "女子", "レディース")):
-                item["girls"] = True
-            entries.append(item)
-            handled_venues.add(venue)
-        except Exception as exc:  # 個別開催が取れなくても他場を継続する。
-            warnings.append(f"{venue}: {exc}")
+            girls = any(keyword in title for keyword in ("オールレディース", "ヴィーナス", "女子", "レディース"))
+            for day_month, day_value, label in DAY_RE.findall(text):
+                target = _resolve_day_date(end_date, int(day_month), int(day_value))
+                if target.year != year or target.month != month:
+                    continue
+                venue = VENUE_CODES[jcd]
+                key = (target.isoformat(), venue)
+                if key in seen:
+                    continue
+                seen.add(key)
+                item: dict[str, Any] = {
+                    "date": target.isoformat(),
+                    "sport": SPORT,
+                    "venue": venue,
+                    "grade": grade,
+                    "day": label.translate(FULLWIDTH),
+                }
+                if session_name:
+                    item["session"] = session_name
+                if girls:
+                    item["girls"] = True
+                entries.append(item)
+        except Exception as exc:
+            warnings.append(f"{VENUE_CODES[jcd]}: {exc}")
 
     if not entries and "月間スケジュール" not in soup.get_text(" ", strip=True):
         return SourceResult(SPORT, False, fetched_urls=fetched, warnings=warnings, error="BOAT RACE月間スケジュールを確認できませんでした")
+    entries.sort(key=lambda item: (str(item.get("date", "")), str(item.get("venue", ""))))
     return SourceResult(SPORT, True, entries=entries, fetched_urls=fetched, warnings=warnings)
+
+
+def collect_month(year: int, month: int, session: OfficialSession) -> SourceResult:
+    cache_key = (SPORT, year, month)
+    cache = getattr(session, "source_cache", None)
+    if cache is None:
+        cache = {}
+        try:
+            setattr(session, "source_cache", cache)
+        except Exception:
+            pass
+    cached = cache.get(cache_key)
+    if cached is not None:
+        return cached
+    result = _collect_month_uncached(year, month, session)
+    cache[cache_key] = result
+    return result
+
+def collect(target: date, session: OfficialSession) -> SourceResult:
+    result = collect_month(target.year, target.month, session)
+    if not result.ok:
+        return result
+    entries = [
+        {key: value for key, value in item.items() if key != "date"}
+        for item in result.entries
+        if item.get("date") == target.isoformat()
+    ]
+    return SourceResult(SPORT, True, entries=entries, fetched_urls=result.fetched_urls, warnings=result.warnings)
