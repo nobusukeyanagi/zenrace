@@ -99,6 +99,30 @@ def validate_month_rows(rows: Any, month: str) -> list[dict[str, Any]]:
     return [normalized_by_date[value] for value in expected]
 
 
+def validate_partial_month_rows(rows: Any, month: str) -> list[dict[str, Any]]:
+    """存在する日だけを検査する。
+
+    GitHub Actionsの更新処理は、テスト用の最小データや将来月の未入力日を扱う
+    場合がある。欠けている日を空開催として一時補完してから完全検証を行うことで、
+    日付の不足は許容しつつ、開催場・重複・時間帯・日目表記の異常は書き込み前に
+    検出する。
+    """
+    if not isinstance(rows, list):
+        raise ValueError(f"{month}のデータは配列である必要があります。")
+    present_dates = {
+        str(row.get("date", ""))
+        for row in rows
+        if isinstance(row, dict)
+    }
+    padded = copy.deepcopy(rows)
+    padded.extend(
+        {"date": row_date, "venues": []}
+        for row_date in expected_dates(month)
+        if row_date not in present_dates
+    )
+    return validate_month_rows(padded, month)
+
+
 def load_snapshot(path: Path) -> dict[str, Any]:
     payload = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(payload, dict) or not isinstance(payload.get("months"), dict):

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-08-03T09:26:00+09:00",
+  "verified_at": "2026-08-04T09:20:00+09:00",
   "basis": "各競技の公式月間開催日程を日単位へ展開し、月跨ぎ開催・時間帯・グレードを照合した確定スナップショット",
   "sources": {
     "keirin": {
@@ -35,7 +35,7 @@
     },
     "2026-08": {
       "keirin": 233,
-      "auto": 67,
+      "auto": 68,
       "boat": 411,
       "nar": 112,
       "jra": 30
@@ -8160,6 +8160,13 @@
             "day": "4日目"
           },
           {
+            "sport": "auto",
+            "venue": "飯塚",
+            "grade": "普通",
+            "session": "midnight",
+            "day": "初日"
+          },
+          {
             "sport": "boat",
             "venue": "桐生",
             "grade": "一般",
@@ -8343,7 +8350,7 @@
             "venue": "飯塚",
             "grade": "普通",
             "session": "midnight",
-            "day": "初日"
+            "day": "2日目"
           },
           {
             "sport": "boat",

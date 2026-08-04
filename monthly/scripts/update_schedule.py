@@ -19,6 +19,7 @@ from monthly.scripts.common import (
     load_monthly_data,
     normalize_grade,
     overlay_grades,
+    relabel_meeting_days,
     sort_entries,
     write_monthly_data,
 )
@@ -28,6 +29,7 @@ from monthly.scripts.verified_schedule import (
     load_snapshot,
     load_verified_month,
     parse_month_key,
+    validate_partial_month_rows,
     validate_month_rows,
 )
 
@@ -51,6 +53,7 @@ SMART_PREVIOUS_DAYS = 1
 SMART_UPCOMING_DAYS = 14
 SMART_UNRESOLVED_DAYS = 90
 SMART_NEW_ADDITION_MONTHS_AHEAD = 1
+DAY_SPORTS = {"keirin", "auto", "boat"}
 
 
 def parse_target(value: str | None) -> date:
@@ -362,6 +365,19 @@ def apply_day_update(
     current_entries = apply_source_results(before, results)
     overlay_grades(current_entries, grades, target)
     target_day["venues"] = normalize_entries(current_entries)
+
+    # 日別ページに「初日／○日目／最終日」が無い競技でも、前後の連続開催から
+    # 必ず日目表記を再構成する。開催の追加・削除のどちらにも対応するため、
+    # 対象日と前後日を起点に同一開催場の連続区間を再ラベルする。
+    affected_pairs = {
+        (str(item.get("sport", "")), str(item.get("venue", "")))
+        for item in [*before, *target_day.get("venues", [])]
+        if str(item.get("sport", "")) in DAY_SPORTS and item.get("venue")
+    }
+    for sport, venue in sorted(affected_pairs):
+        for around in (target - timedelta(days=1), target, target + timedelta(days=1)):
+            relabel_meeting_days(payload, sport, venue, around)
+
     return before, [dict(item) for item in target_day.get("venues", [])]
 
 
@@ -376,6 +392,7 @@ def add_future_entries(
         return []
     additions: list[dict[str, Any]] = []
     affected_dates: set[date] = set()
+    affected_meetings: set[tuple[str, str, date]] = set()
     for raw in result.entries:
         raw_date = str(raw.get("date", ""))
         try:
@@ -394,6 +411,13 @@ def add_future_entries(
         find_day(payload, target)["venues"].append(item)
         additions.append({"date": target.isoformat(), **item})
         affected_dates.add(target)
+        if sport in DAY_SPORTS:
+            affected_meetings.add((sport, venue, target))
+
+    # 月間表には日目表記が載らない場合があるため、追加後の連続開催から補完する。
+    for sport, venue, target in sorted(affected_meetings, key=lambda value: (value[2], value[0], value[1])):
+        relabel_meeting_days(payload, sport, venue, target)
+
     for target in affected_dates:
         day = find_day(payload, target)
         overlay_grades(day["venues"], grades, target)
@@ -495,6 +519,18 @@ def sync_smart(
                         "error": result.error,
                     }
                 )
+
+    # 書き込み前に今回触れた月だけを検証する。ここで異常が見つかった場合は
+    # monthly.jsへ一切書き込まないため、後続テストで初めて壊れたデータを
+    # 検出する状態を防げる。
+    touched_months = {
+        target.strftime("%Y-%m")
+        for target in daterange(refresh_start, refresh_end)
+    }
+    touched_months.update(item["date"][:7] for item in retried_unresolved if item.get("date"))
+    touched_months.update(item["date"][:7] for item in new_additions if item.get("date"))
+    for month in sorted(touched_months):
+        validate_partial_month_rows(payload.get(month, []), month)
 
     write_monthly_data(monthly_path, payload, original_text)
     write_sync_state(state_path, failures)
@@ -615,16 +651,11 @@ def main() -> int:
             return 1
         return 0
 
-    target_day = find_day(payload, target)
-    before = [dict(item) for item in target_day.get("venues", [])]
     session = OfficialSession()
     results = [safe_collect_daily(sport, collector, target, session) for sport, collector in DAILY_COLLECTORS]
-
-    current_entries = apply_source_results(before, results)
-    overlay_grades(current_entries, grades, target)
-    target_day["venues"] = normalize_entries(current_entries)
+    before, after = apply_day_update(payload, target, results, grades)
+    validate_partial_month_rows(payload.get(target.strftime("%Y-%m"), []), target.strftime("%Y-%m"))
     write_monthly_data(monthly_path, payload, original_text)
-    after = [dict(item) for item in target_day.get("venues", [])]
     report = {
         "generated_at": datetime.now(JST).isoformat(),
         "mode": "daily_official",

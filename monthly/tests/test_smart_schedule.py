@@ -15,7 +15,7 @@ from scripts.master_schedule import MasterRecord, reconcile
 from scripts.update_races import select_smart_target_indices
 from monthly.scripts.common import SourceResult, load_monthly_data
 from monthly.scripts.sources.autorace import _parse_pdf_layout
-from monthly.scripts.update_schedule import end_of_month_after, sync_smart
+from monthly.scripts.update_schedule import apply_day_update, end_of_month_after, sync_smart
 
 
 def check_end_of_next_month() -> None:
@@ -43,7 +43,7 @@ def check_smart_sync_refresh_retry_and_new_addition() -> None:
         root = Path(directory)
         monthly_js = root / "monthly.js"
         monthly_js.write_text(
-            'const MONTHLY_DATA = {"2026-08":[{"date":"2026-08-20","venues":[{"sport":"keirin","venue":"青森","grade":"FⅠ"}]}]};\n\n  const WEEKDAY = [];\n',
+            'const MONTHLY_DATA = {"2026-08":[{"date":"2026-08-20","venues":[{"sport":"keirin","venue":"青森","grade":"FⅠ","day":"初日"}]}]};\n\n  const WEEKDAY = [];\n',
             encoding="utf-8",
         )
         report_path = root / "report.json"
@@ -106,6 +106,56 @@ def check_graded_master_defers_new_records_after_next_month_end() -> None:
     assert [item["name"] for item in additions] == ["対象内"]
     assert [item["name"] for item in deferred] == ["対象外"]
     assert [item["name"] for item in updated] == ["対象内"]
+
+
+def check_new_autorace_day_relabels_existing_meeting() -> None:
+    payload = {
+        "2026-08": [
+            {"date": "2026-08-14", "venues": []},
+            {
+                "date": "2026-08-15",
+                "venues": [
+                    {
+                        "sport": "auto",
+                        "venue": "飯塚",
+                        "grade": "普通",
+                        "session": "midnight",
+                        "day": "初日",
+                    }
+                ],
+            },
+            {
+                "date": "2026-08-16",
+                "venues": [
+                    {
+                        "sport": "auto",
+                        "venue": "飯塚",
+                        "grade": "普通",
+                        "session": "midnight",
+                        "day": "最終日",
+                    }
+                ],
+            },
+        ]
+    }
+    result = SourceResult(
+        "auto",
+        True,
+        entries=[
+            {
+                "sport": "auto",
+                "venue": "飯塚",
+                "grade": "普通",
+                "session": "midnight",
+            }
+        ],
+    )
+    apply_day_update(payload, date(2026, 8, 14), [result], [])
+    labels = []
+    for day in (14, 15, 16):
+        row = next(item for item in payload["2026-08"] if item["date"] == f"2026-08-{day:02d}")
+        labels.append(row["venues"][0]["day"])
+    assert labels == ["初日", "2日目", "最終日"]
 
 
 
@@ -199,6 +249,9 @@ class SmartScheduleTests(unittest.TestCase):
 
     def test_graded_master_defers_new_records_after_next_month_end(self) -> None:
         check_graded_master_defers_new_records_after_next_month_end()
+
+    def test_new_autorace_day_relabels_existing_meeting(self) -> None:
+        check_new_autorace_day_relabels_existing_meeting()
 
     def test_graded_detail_window_uses_previous_day_only(self) -> None:
         check_graded_detail_window_uses_previous_day_only()

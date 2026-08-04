@@ -18,7 +18,7 @@ SNAPSHOT = ROOT / "monthly/data/official_schedule.json"
 MONTHLY_JS = ROOT / "monthly/monthly.js"
 EXPECTED_COUNTS = {
     "2026-07": {"keirin": 246, "auto": 65, "boat": 413, "nar": 120, "jra": 24},
-    "2026-08": {"keirin": 233, "auto": 67, "boat": 411, "nar": 112, "jra": 30},
+    "2026-08": {"keirin": 233, "auto": 68, "boat": 411, "nar": 112, "jra": 30},
 }
 
 
