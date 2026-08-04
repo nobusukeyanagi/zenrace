@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-03T05:16:07.793010+09:00",
-  "base_date": "2026-08-03",
+  "generated_at": "2026-08-04T09:23:57.342022+09:00",
+  "base_date": "2026-08-04",
   "calendar_years": [
     2026,
     2027
@@ -9,180 +9,63 @@
     2026,
     2027
   ],
-  "official_record_count": 204,
+  "official_record_count": 203,
+  "new_addition_end": "2026-09-30",
   "added_count": 0,
-  "updated_count": 7,
-  "registered_only_count": 7,
+  "deferred_addition_count": 0,
+  "updated_count": 2,
+  "registered_only_count": 8,
   "duplicate_count": 0,
   "additions": [],
+  "deferred_additions": [],
   "changes": [
     {
       "type": "master_updated",
-      "match_type": "exact",
+      "match_type": "date_venue",
       "before": {
-        "date": "2026-08-02",
-        "time": "15:35",
+        "date": "2026-08-15",
+        "time": "16:40",
         "sport": "jra",
         "venue": "新潟",
-        "grade": "GIII",
-        "name": "アイビスサマーダッシュ",
+        "grade": "J・GⅢ",
+        "name": "新潟ジャンプS",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-02",
-        "time": "15:35",
+        "date": "2026-08-15",
+        "time": "16:40",
         "sport": "jra",
         "venue": "新潟",
-        "grade": "GⅢ",
-        "name": "アイビスサマーダッシュ",
-        "winner": "ピューロマジック"
+        "grade": "J・GⅢ",
+        "name": "J ・ GIII 新潟ジャンプS",
+        "winner": ""
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-02:アイビスサマーダッシュ"
+      "source_id": "jra:2026:2026-08-15:j・giii新潟ジャンプs"
     },
     {
       "type": "master_updated",
       "match_type": "exact",
       "before": {
-        "date": "2026-08-02",
-        "time": "14:20",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GIII",
-        "name": "クイーンS",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-02",
-        "time": "14:20",
-        "sport": "jra",
-        "venue": "札幌",
+        "date": "2026-12-13",
+        "time": "",
+        "sport": "keirin",
+        "venue": "佐世保",
         "grade": "GⅢ",
-        "name": "クイーンS",
-        "winner": "ココナッツブラウン"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-02:クイーンs"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-08",
-        "time": "14:20",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GIII",
-        "name": "エルムS",
+        "name": "",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-08",
-        "time": "14:20",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GⅢ",
-        "name": "エルムS",
+        "date": "2026-12-13",
+        "time": "",
+        "sport": "keirin",
+        "venue": "佐世保",
+        "grade": "GP",
+        "name": "",
         "winner": ""
       },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-08:エルムs"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-09",
-        "time": "13:50",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GIII",
-        "name": "CBC賞",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-09",
-        "time": "13:50",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GⅢ",
-        "name": "CBC賞",
-        "winner": ""
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-09:cbc賞"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-09",
-        "time": "17:20",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GIII",
-        "name": "レパードS",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-09",
-        "time": "17:20",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GⅢ",
-        "name": "レパードS",
-        "winner": ""
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-09:レパードs"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-16",
-        "time": "14:00",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GIII",
-        "name": "中京記念",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-16",
-        "time": "14:00",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GⅢ",
-        "name": "中京記念",
-        "winner": ""
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-16:中京記念"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-16",
-        "time": "16:30",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GII",
-        "name": "札幌記念",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-16",
-        "time": "16:30",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GⅡ",
-        "name": "札幌記念",
-        "winner": ""
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-16:札幌記念"
+      "source_url": "https://keirin.jp/pc/graderaceschedule?scyy=2026",
+      "source_id": "keirin:2026:2026-12-13:佐世保:"
     }
   ],
   "registered_only": [
@@ -213,6 +96,13 @@
       "venue": "小倉",
       "grade": "GⅠ",
       "name": "朝日新聞社杯競輪祭・競輪祭女子王座戦"
+    },
+    {
+      "date": "2026-12-06",
+      "sport": "keirin",
+      "venue": "別府",
+      "grade": "GP",
+      "name": ""
     },
     {
       "date": "2026-12-30",
@@ -280,7 +170,7 @@
     {
       "name": "KEIRIN.JP公式グレード日程",
       "ok": true,
-      "record_count": 146,
+      "record_count": 143,
       "fetched_urls": [
         "https://keirin.jp/pc/graderaceschedule?scyy=2026",
         "https://keirin.jp/pc/graderaceschedule?scyy=2027"
@@ -300,5 +190,5 @@
       "error": "オートレース日程を取得できませんでした"
     }
   ],
-  "note": "公式日程に見つからない登録済みレースは自動削除せず、要確認として記録します。"
+  "note": "公式日程に見つからない登録済みレースは自動削除しません。新規追加は翌月末までを対象とし、それより先は次回以降へ保留します。"
 }

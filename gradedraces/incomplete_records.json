@@ -1,58 +1,16 @@
 {
-  "generated_at": "2026-08-03T05:19:11.549623+09:00",
-  "center_date": "2026-08-03",
-  "past_unresolved_count": 2,
-  "upcoming_missing_time_count": 20,
-  "past_unresolved": [
-    {
-      "date": "2026-07-26",
-      "sport": "nar",
-      "venue": "金沢",
-      "grade": "",
-      "name": "能登復興祈念百万石かがやきナイター賞",
-      "missing": [
-        "time",
-        "winner"
-      ]
-    },
-    {
-      "date": "2026-08-02",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "GⅡ",
-      "name": "浜松記念 曳馬野賞",
-      "missing": [
-        "time"
-      ]
-    }
-  ],
+  "generated_at": "2026-08-04T09:26:15.316762+09:00",
+  "center_date": "2026-08-04",
+  "past_unresolved_count": 0,
+  "upcoming_missing_time_count": 18,
+  "past_unresolved": [],
   "upcoming_missing_time": [
-    {
-      "date": "2026-08-04",
-      "sport": "keirin",
-      "venue": "小田原",
-      "grade": "GⅢ",
-      "name": "第77周年記念北条早雲杯争奪戦",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-08-05",
       "sport": "boat",
       "venue": "桐生",
       "grade": "GⅢ",
       "name": "オールレディース",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-06",
-      "sport": "nar",
-      "venue": "船橋",
-      "grade": "SⅡ",
-      "name": "習志野きらっとスプリント",
       "missing": [
         "time"
       ]
@@ -178,16 +136,6 @@
       ]
     },
     {
-      "date": "2026-08-15",
-      "sport": "jra",
-      "venue": "新潟",
-      "grade": "J・GⅢ",
-      "name": "J ・ GIII 新潟ジャンプS",
-      "missing": [
-        "time"
-      ]
-    },
-    {
       "date": "2026-08-16",
       "sport": "nar",
       "venue": "帯広",
@@ -223,6 +171,16 @@
       "venue": "大村",
       "grade": "GⅢ",
       "name": "オールレディース",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "sport": "nar",
+      "venue": "盛岡",
+      "grade": "M1",
+      "name": "岩手県知事杯OROカップ",
       "missing": [
         "time"
       ]
