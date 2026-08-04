@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-04T09:23:57.342022+09:00",
-  "base_date": "2026-08-04",
+  "generated_at": "2026-08-05T02:28:06.278883+09:00",
+  "base_date": "2026-08-05",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 2,
+  "updated_count": 5,
   "registered_only_count": 8,
   "duplicate_count": 0,
   "additions": [],
@@ -21,51 +21,123 @@
   "changes": [
     {
       "type": "master_updated",
-      "match_type": "date_venue",
+      "match_type": "exact",
       "before": {
-        "date": "2026-08-15",
-        "time": "16:40",
+        "date": "2026-08-08",
+        "time": "14:20",
         "sport": "jra",
-        "venue": "新潟",
-        "grade": "J・GⅢ",
-        "name": "新潟ジャンプS",
+        "venue": "札幌",
+        "grade": "GIII",
+        "name": "エルムS",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-15",
-        "time": "16:40",
+        "date": "2026-08-08",
+        "time": "14:20",
         "sport": "jra",
-        "venue": "新潟",
-        "grade": "J・GⅢ",
-        "name": "J ・ GIII 新潟ジャンプS",
+        "venue": "札幌",
+        "grade": "GⅢ",
+        "name": "エルムS",
         "winner": ""
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-15:j・giii新潟ジャンプs"
+      "source_id": "jra:2026:2026-08-08:エルムs"
     },
     {
       "type": "master_updated",
       "match_type": "exact",
       "before": {
-        "date": "2026-12-13",
-        "time": "",
-        "sport": "keirin",
-        "venue": "佐世保",
-        "grade": "GⅢ",
-        "name": "",
+        "date": "2026-08-09",
+        "time": "13:50",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GIII",
+        "name": "CBC賞",
         "winner": ""
       },
       "after": {
-        "date": "2026-12-13",
-        "time": "",
-        "sport": "keirin",
-        "venue": "佐世保",
-        "grade": "GP",
-        "name": "",
+        "date": "2026-08-09",
+        "time": "13:50",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GⅢ",
+        "name": "CBC賞",
         "winner": ""
       },
-      "source_url": "https://keirin.jp/pc/graderaceschedule?scyy=2026",
-      "source_id": "keirin:2026:2026-12-13:佐世保:"
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-08-09:cbc賞"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-08-09",
+        "time": "17:20",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GIII",
+        "name": "レパードS",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-09",
+        "time": "17:20",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GⅢ",
+        "name": "レパードS",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-08-09:レパードs"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-08-16",
+        "time": "14:00",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GIII",
+        "name": "中京記念",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-16",
+        "time": "14:00",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GⅢ",
+        "name": "中京記念",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-08-16:中京記念"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-08-16",
+        "time": "16:30",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GII",
+        "name": "札幌記念",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-16",
+        "time": "16:30",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GⅡ",
+        "name": "札幌記念",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-08-16:札幌記念"
     }
   ],
   "registered_only": [

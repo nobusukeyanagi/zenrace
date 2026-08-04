@@ -1,20 +1,10 @@
 {
-  "generated_at": "2026-08-04T09:26:15.316762+09:00",
-  "center_date": "2026-08-04",
+  "generated_at": "2026-08-05T02:30:21.932340+09:00",
+  "center_date": "2026-08-05",
   "past_unresolved_count": 0,
-  "upcoming_missing_time_count": 18,
+  "upcoming_missing_time_count": 19,
   "past_unresolved": [],
   "upcoming_missing_time": [
-    {
-      "date": "2026-08-05",
-      "sport": "boat",
-      "venue": "桐生",
-      "grade": "GⅢ",
-      "name": "オールレディース",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-08-08",
       "sport": "boat",
@@ -181,6 +171,26 @@
       "venue": "盛岡",
       "grade": "M1",
       "name": "岩手県知事杯OROカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "sport": "nar",
+      "venue": "川崎",
+      "grade": "SⅡ",
+      "name": "スパーキングサマーカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "sport": "nar",
+      "venue": "門別",
+      "grade": "H3",
+      "name": "フルールカップ",
       "missing": [
         "time"
       ]

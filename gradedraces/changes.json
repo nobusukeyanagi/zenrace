@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-08-04T09:26:15.316226+09:00",
-  "center_date": "2026-08-04",
+  "generated_at": "2026-08-05T02:30:21.931778+09:00",
+  "center_date": "2026-08-05",
   "selection_mode": "smart",
   "selection_counts": {
-    "upcoming": 27
+    "unresolved": 1,
+    "recent_verification": 1,
+    "upcoming": 28
   },
-  "target_count": 27,
-  "change_count": 13,
+  "target_count": 29,
+  "change_count": 7,
   "changes": [
     {
       "date": "2026-08-08",
@@ -15,145 +17,10 @@
       "name": "エルムS",
       "before": {
         "date": "2026-08-08",
-        "time": "15:25",
+        "time": "14:20",
         "sport": "jra",
         "venue": "札幌",
         "grade": "GⅢ",
-        "name": "エルムS",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-08",
-        "time": "15:25",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GIII",
-        "name": "エルムS",
-        "winner": ""
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-08-09",
-      "sport": "jra",
-      "venue": "新潟",
-      "name": "レパードS",
-      "before": {
-        "date": "2026-08-09",
-        "time": "15:35",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GⅢ",
-        "name": "レパードS",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-09",
-        "time": "15:35",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GIII",
-        "name": "レパードS",
-        "winner": ""
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-08-09",
-      "sport": "jra",
-      "venue": "中京",
-      "name": "CBC賞",
-      "before": {
-        "date": "2026-08-09",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GⅢ",
-        "name": "CBC賞",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-09",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GIII",
-        "name": "CBC賞",
-        "winner": ""
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-08-16",
-      "sport": "jra",
-      "venue": "中京",
-      "name": "中京記念",
-      "before": {
-        "date": "2026-08-16",
-        "time": "15:35",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GⅢ",
-        "name": "中京記念",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-16",
-        "time": "15:35",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GIII",
-        "name": "中京記念",
-        "winner": ""
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-08-16",
-      "sport": "jra",
-      "venue": "札幌",
-      "name": "札幌記念",
-      "before": {
-        "date": "2026-08-16",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GⅡ",
-        "name": "札幌記念",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-16",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GII",
-        "name": "札幌記念",
-        "winner": ""
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-08-08",
-      "sport": "jra",
-      "venue": "札幌",
-      "name": "エルムS",
-      "before": {
-        "date": "2026-08-08",
-        "time": "15:25",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GIII",
         "name": "エルムS",
         "winner": ""
       },
@@ -167,8 +34,8 @@
         "winner": ""
       },
       "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/8/0808.html",
-      "note": "JRA競馬番組"
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
     },
     {
       "date": "2026-08-09",
@@ -177,10 +44,10 @@
       "name": "レパードS",
       "before": {
         "date": "2026-08-09",
-        "time": "15:35",
+        "time": "17:20",
         "sport": "jra",
         "venue": "新潟",
-        "grade": "GIII",
+        "grade": "GⅢ",
         "name": "レパードS",
         "winner": ""
       },
@@ -194,8 +61,8 @@
         "winner": ""
       },
       "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/8/0809.html",
-      "note": "JRA競馬番組"
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
     },
     {
       "date": "2026-08-09",
@@ -204,10 +71,10 @@
       "name": "CBC賞",
       "before": {
         "date": "2026-08-09",
-        "time": "15:45",
+        "time": "13:50",
         "sport": "jra",
         "venue": "中京",
-        "grade": "GIII",
+        "grade": "GⅢ",
         "name": "CBC賞",
         "winner": ""
       },
@@ -221,8 +88,8 @@
         "winner": ""
       },
       "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/8/0809.html",
-      "note": "JRA競馬番組"
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
     },
     {
       "date": "2026-08-16",
@@ -231,10 +98,10 @@
       "name": "中京記念",
       "before": {
         "date": "2026-08-16",
-        "time": "15:35",
+        "time": "14:00",
         "sport": "jra",
         "venue": "中京",
-        "grade": "GIII",
+        "grade": "GⅢ",
         "name": "中京記念",
         "winner": ""
       },
@@ -248,8 +115,8 @@
         "winner": ""
       },
       "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/8/0816.html",
-      "note": "JRA競馬番組"
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
     },
     {
       "date": "2026-08-16",
@@ -258,10 +125,10 @@
       "name": "札幌記念",
       "before": {
         "date": "2026-08-16",
-        "time": "15:45",
+        "time": "16:30",
         "sport": "jra",
         "venue": "札幌",
-        "grade": "GII",
+        "grade": "GⅡ",
         "name": "札幌記念",
         "winner": ""
       },
@@ -275,62 +142,35 @@
         "winner": ""
       },
       "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/8/0816.html",
-      "note": "JRA競馬番組"
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-08-06",
-      "sport": "nar",
-      "venue": "船橋",
-      "name": "習志野きらっとスプリント",
+      "date": "2026-08-05",
+      "sport": "boat",
+      "venue": "桐生",
+      "name": "オールレディース",
       "before": {
-        "date": "2026-08-06",
+        "date": "2026-08-05",
         "time": "",
-        "sport": "nar",
-        "venue": "船橋",
-        "grade": "SⅡ",
-        "name": "習志野きらっとスプリント",
+        "sport": "boat",
+        "venue": "桐生",
+        "grade": "GⅢ",
+        "name": "オールレディース",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-06",
-        "time": "20:05",
-        "sport": "nar",
-        "venue": "船橋",
-        "grade": "SⅡ",
-        "name": "習志野きらっとスプリント",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F06&k_babaCode=19",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-08-06",
-      "sport": "nar",
-      "venue": "門別",
-      "name": "サッポロクラシックカップ",
-      "before": {
-        "date": "2026-08-06",
-        "time": "",
-        "sport": "nar",
-        "venue": "門別",
-        "grade": "H3",
-        "name": "サッポロクラシックカップ",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-06",
+        "date": "2026-08-05",
         "time": "20:30",
-        "sport": "nar",
-        "venue": "門別",
-        "grade": "H3",
-        "name": "サッポロクラシックカップ",
+        "sport": "boat",
+        "venue": "桐生",
+        "grade": "GⅢ",
+        "name": "オールレディース",
         "winner": ""
       },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F06&k_babaCode=36",
-      "note": "地方競馬公式レース情報"
+      "source": "ボートレース",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=01&hd=20260805&rno=12",
+      "note": "BOAT RACE公式12R結果"
     },
     {
       "date": "2026-08-04",
@@ -339,7 +179,7 @@
       "name": "第77周年記念北条早雲杯争奪戦",
       "before": {
         "date": "2026-08-04",
-        "time": "",
+        "time": "16:21",
         "sport": "keirin",
         "venue": "小田原",
         "grade": "GⅢ",
@@ -353,11 +193,11 @@
         "venue": "小田原",
         "grade": "GⅢ",
         "name": "第77周年記念北条早雲杯争奪戦",
-        "winner": ""
+        "winner": "郡司 浩平"
       },
       "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceList.do?joCode=36&kaisaiBi=20260804&raceNo=11",
-      "note": "公開出走表によるKEIRIN.JP補完（11R発走時間）"
+      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=36&kaisaiBi=20260804&raceNo=11",
+      "note": "公開結果によるKEIRIN.JP補完（11R）"
     }
   ]
 }
