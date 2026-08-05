@@ -30,8 +30,9 @@
     featuredRaceKey("2026-02-23", "nar", "名古屋", "7R"),
     featuredRaceKey("2026-02-24", "boat", "江戸川", "12R"),
   ]);
+  const getDaySource = (date) => raceDays[date] || {};
   const getRacesForDate = (date) => {
-    const source = raceDays[date];
+    const source = getDaySource(date);
     const detailed = source?.races;
     if (Array.isArray(detailed)) {
       const sessions = source.venueSessions || {};
@@ -42,6 +43,12 @@
     }
     if (date === BASE_DATE) return filterSports(baseRaces);
     return [];
+  };
+  const getPendingVenuesForDate = (date, races) => {
+    const source = getDaySource(date);
+    const detailedKeys = new Set(races.map((race) => venueKey(race)));
+    return filterSports(Array.isArray(source.venueOrder) ? source.venueOrder : [])
+      .filter((entry) => !detailedKeys.has(venueKey(entry)));
   };
   const isFeaturedRace = (date, race) => FEATURED_RACES.has(
     featuredRaceKey(date, race.sport, race.venue, race.race),
@@ -138,7 +145,8 @@
   const render = (date, resetPosition = true) => {
     if (!board) return;
     const races = getRacesForDate(date);
-    if (!races.length) {
+    const pendingVenues = getPendingVenuesForDate(date, races);
+    if (!races.length && !pendingVenues.length) {
       const [, month, day] = date.split("-").map(Number);
       board.innerHTML = `
         <section class="timetable-empty">
@@ -149,7 +157,12 @@
       return;
     }
 
-    board.innerHTML = buildHourGroups(date, races);
+    const pendingMarkup = pendingVenues.length ? `
+      <section class="timetable-pending" aria-label="発走時刻取得中の開催場">
+        <strong>発走時刻取得中</strong>
+        <div class="pending-venues">${pendingVenues.map((entry) => `<span class="pending-venue sport-${entry.sport}">${entry.venue}</span>`).join("")}</div>
+      </section>` : "";
+    board.innerHTML = buildHourGroups(date, races) + pendingMarkup;
     bindCards();
     if (!resetPosition) return;
     requestAnimationFrame(() => requestAnimationFrame(scrollToCurrentHour));

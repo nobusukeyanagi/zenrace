@@ -149,6 +149,18 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
 }
 .race-card:focus-visible{outline:2px solid #ffe7a0;outline-offset:1px}
 
+.race-data-pending{
+  min-height:var(--race-card-h);
+  display:flex;
+  align-items:center;
+  padding:0 14px;
+  color:#d9d9d9;
+  font-size:13px;
+  font-weight:800;
+  white-space:nowrap;
+}
+.venue-row[data-mode="pending"] .venue-focus-band{display:none}
+
 .today-race-toast{
   position:fixed;left:50%;bottom:calc(var(--bottom-nav-total-h,62px) + 16px);z-index:12000;
   max-width:min(88vw,420px);padding:10px 16px;color:#18130a;border:1px solid rgba(255,255,255,.42);

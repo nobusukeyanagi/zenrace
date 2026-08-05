@@ -113,6 +113,20 @@ class VerifiedScheduleTests(unittest.TestCase):
         self.assertEqual([item["time"] for item in races[-2:]], ["24:04", "24:30"])
         self.assertEqual(payload["2026-08-05"]["venueSessions"]["auto:山陽"], "overmidnight")
 
+    def test_august_fifth_race_day_keeps_all_scheduled_sports(self) -> None:
+        text = RACE_DAYS_JS.read_text(encoding="utf-8")
+        match = re.search(r"window\.ZENRACE_RACE_DAYS = (\{.*\});\n\}\)\(\);", text, re.S)
+        self.assertIsNotNone(match)
+        payload = json.loads(match.group(1))
+        self.assertIn("2026-02-22", payload)
+        self.assertIn("2026-02-24", payload)
+        venues = payload["2026-08-05"]["venueOrder"]
+        counts: dict[str, int] = {}
+        for item in venues:
+            counts[item["sport"]] = counts.get(item["sport"], 0) + 1
+        self.assertEqual(counts, {"keirin": 9, "auto": 3, "boat": 11, "nar": 3})
+        self.assertEqual(len(venues), 26)
+
     def test_duplicate_entry_is_rejected(self) -> None:
         rows = load_verified_month(SNAPSHOT, "2026-08")
         broken = copy.deepcopy(rows)

@@ -205,6 +205,10 @@
   const groupRacesByVenue = (dayData) => {
     const grouped = new Map();
     const gradeMap = new Map(dayData.venueGrades.map((item) => [groupKey(item.sport, item.venue), item]));
+    for (const entry of dayData.venueOrder) {
+      const key = groupKey(entry.sport, entry.venue);
+      grouped.set(key, { venue: entry.venue, sport: entry.sport, grade: gradeMap.get(key) || null, races: [] });
+    }
     for (const race of dayData.races) {
       const key = groupKey(race.sport, race.venue);
       const time = normalizeOverMidnightTime(race.time, dayData.venueSessionMap.get(key) || "");
@@ -242,6 +246,13 @@
   };
 
   const buildCurrentTrack = (row) => {
+    if (!row.races.length) {
+      return {
+        mode: "pending",
+        anchor: "left",
+        cards: '<span class="race-data-pending" role="status">発走時刻取得中</span>',
+      };
+    }
     const nextIndex = row.races.findIndex((race) => race.minutes > REFERENCE_MINUTES);
     const leadingSpacers = [createCard(null, "spacer"), createCard(null, "spacer")];
 
@@ -284,16 +295,16 @@
   };
 
 
-  const buildPastTrack = (row) => ({
+  const buildPastTrack = (row) => row.races.length ? ({
     mode: "past",
     anchor: "right",
     cards: row.races.map((race, index) => createCard(
       race,
       index === row.races.length - 1 ? "finished final anchor-card" : "finished",
     )).join(""),
-  });
+  }) : ({ mode: "pending", anchor: "left", cards: '<span class="race-data-pending" role="status">発走時刻取得中</span>' });
 
-  const buildFutureTrack = (row) => ({
+  const buildFutureTrack = (row) => row.races.length ? ({
     mode: "future",
     anchor: "left",
     // 未来日は1Rを左端に置き、最終レース以降の空白領域を作らない。
@@ -301,7 +312,7 @@
       race,
       `upcoming${index === 0 ? " anchor-card" : ""}`,
     )).join(""),
-  });
+  }) : ({ mode: "pending", anchor: "left", cards: '<span class="race-data-pending" role="status">発走時刻取得中</span>' });
 
   const SESSION_LABEL = { morning: "モーニング", night: "ナイター", midnight: "ミッドナイト", overmidnight: "オーバーミッドナイト" };
   const sessionIconName = (session) => session === "overmidnight" ? "midnight" : session;
