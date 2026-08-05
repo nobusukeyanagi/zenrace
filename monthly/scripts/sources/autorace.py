@@ -66,7 +66,9 @@ def _months_from_pdf_text(text: str) -> tuple[int, list[int]]:
 
 
 def _session_from_context(context_text: str) -> str:
-    if "オーバーミッドナイト" in context_text or "ミッドナイト" in context_text:
+    if "オーバーミッドナイト" in context_text:
+        return "overmidnight"
+    if "ミッドナイト" in context_text:
         return "midnight"
     if "ナイター" in context_text or "ナイトレース" in context_text or "アフター" in context_text:
         return "night"
@@ -203,7 +205,9 @@ def _collect_month_uncached(year: int, month: int, session: OfficialSession) -> 
 
 
 def _session_from_text(context_text: str, first_time: str) -> str:
-    if "オーバーミッドナイト" in context_text or "ミッドナイト" in context_text:
+    if "オーバーミッドナイト" in context_text:
+        return "overmidnight"
+    if "ミッドナイト" in context_text:
         return "midnight"
     if "ナイター" in context_text or "アフター5" in context_text or "アフター５" in context_text:
         return "night"

@@ -1,12 +1,15 @@
 (() => {
   "use strict";
 
-  const SUPPORTED_DATES = new Set(["2026-02-22", "2026-02-23", "2026-02-24"]);
+  const BASE_DATE = "2026-08-05";
+  const SUPPORTED_DATES = new Set(["2026-02-22", "2026-02-23", "2026-02-24", ...Object.keys(window.ZENRACE_RACE_DAYS || {})]);
   const SESSION_ICON = {
     morning: "../schedule/icons/morning.png",
     night: "../schedule/icons/night.png",
     midnight: "../schedule/icons/midnight.png",
+    overmidnight: "../schedule/icons/midnight.png",
   };
+  const SESSION_LABEL = { morning: "モーニング", night: "ナイター", midnight: "ミッドナイト", overmidnight: "オーバーミッドナイト" };
 
   // 2026年2月22日〜24日の確定結果。表示項目は、R、1〜3着の番号、三連単払戻、人気。
   // 同着により三連単が複数成立したレースは、1レースの行内に複数結果を併記する。
@@ -85,7 +88,6 @@
     const sessions = source.venueSessions || {};
     const girls = new Set(source.girlsVenues || []);
     return filterSports(source.venueOrder || [])
-      .filter((entry) => Array.isArray(results[venueKey(entry)]))
       .map((entry) => {
         const key = venueKey(entry);
         return {
@@ -111,7 +113,7 @@
       ? `<span class="venue-grade-icon ${isAccentGrade(entry.sport, entry.grade.label) ? "accent" : "muted"}">${entry.grade.label}</span>`
       : "";
     const sessionHtml = entry.session
-      ? `<img class="venue-status-icon" src="${SESSION_ICON[entry.session]}" alt="" aria-hidden="true">`
+      ? `<img class="venue-status-icon" src="${SESSION_ICON[entry.session]}" alt="${SESSION_LABEL[entry.session] || entry.session}" title="${SESSION_LABEL[entry.session] || entry.session}">`
       : "";
     const girlsHtml = entry.girls
       ? `<img class="venue-status-icon girls" src="../schedule/icons/girls.png" alt="" aria-hidden="true">`
@@ -145,7 +147,7 @@
   const renderVenueTable = (dateKey, entry, results) => {
     const key = venueKey(entry);
     const featuredSet = FEATURED_BY_DATE[dateKey] || new Set();
-    const rows = results.map((item) => {
+    const rows = results.length ? results.map((item) => {
       const { race, outcomes } = normalizeResult(item);
       const featured = featuredSet.has(`${key}:${race}`) ? " featured" : "";
       const frameValue = isHorseRace(entry.sport)
@@ -170,7 +172,7 @@
         <td class="payout-cell"><div class="outcome-stack">${payoutLines}</div></td>
         <td class="pop-cell"><div class="outcome-stack">${popularityLines}</div></td>
       </tr>`;
-    }).join("");
+    }).join("") : `<tr class="pending-result"><td colspan="4">結果未確定</td></tr>`;
 
     return `
       <div class="result-table-wrap">
@@ -206,12 +208,12 @@
   };
 
   const initialRender = () => {
-    const selected = document.querySelector("[data-zenrace-date-selector]")?.dataset.selectedDate || "2026-02-23";
+    const selected = document.querySelector("[data-zenrace-date-selector]")?.dataset.selectedDate || BASE_DATE;
     render(selected);
   };
 
   window.addEventListener("zenrace-date-refresh", (event) => {
-    render(event.detail?.date || "2026-02-23");
+    render(event.detail?.date || BASE_DATE);
   });
   window.addEventListener("zenrace:sport-preferences-change", initialRender);
   window.addEventListener("pageshow", initialRender);

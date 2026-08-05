@@ -5876,7 +5876,7 @@
             "sport": "auto",
             "venue": "山陽",
             "grade": "普通",
-            "session": "midnight",
+            "session": "overmidnight",
             "day": "最終日"
           },
           {
@@ -6574,7 +6574,7 @@
             "sport": "auto",
             "venue": "山陽",
             "grade": "普通",
-            "session": "midnight",
+            "session": "overmidnight",
             "day": "初日"
           },
           {
@@ -6740,7 +6740,7 @@
             "sport": "auto",
             "venue": "山陽",
             "grade": "普通",
-            "session": "midnight",
+            "session": "overmidnight",
             "day": "2日目"
           },
           {
@@ -6898,7 +6898,7 @@
             "sport": "auto",
             "venue": "山陽",
             "grade": "普通",
-            "session": "midnight",
+            "session": "overmidnight",
             "day": "最終日"
           },
           {
@@ -8163,7 +8163,7 @@
             "sport": "auto",
             "venue": "飯塚",
             "grade": "普通",
-            "session": "midnight",
+            "session": "overmidnight",
             "day": "初日"
           },
           {
@@ -8349,7 +8349,7 @@
             "sport": "auto",
             "venue": "飯塚",
             "grade": "普通",
-            "session": "midnight",
+            "session": "overmidnight",
             "day": "2日目"
           },
           {
@@ -8554,7 +8554,7 @@
             "sport": "auto",
             "venue": "飯塚",
             "grade": "普通",
-            "session": "midnight",
+            "session": "overmidnight",
             "day": "最終日"
           },
           {
@@ -11276,7 +11276,7 @@
             "sport": "auto",
             "venue": "飯塚",
             "grade": "普通",
-            "session": "midnight",
+            "session": "overmidnight",
             "day": "初日"
           },
           {

@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const BASE_DATE = "2026-02-23";
+  const BASE_DATE = "2026-08-05";
   const TARGET_HOUR = 16;
   const board = document.getElementById("timetableBoard");
   const toolbar = document.querySelector("[data-zenrace-date-selector]");
@@ -12,6 +12,13 @@
     : {};
   const sportPreferences = window.ZENRACE_SPORT_PREFERENCES;
   const filterSports = (items) => sportPreferences?.filter(items) || [...items];
+  const venueKey = (race) => `${race.sport}:${race.venue}`;
+  const normalizeOverMidnightTime = (time, session) => {
+    const value = String(time || "");
+    if (session !== "overmidnight") return value;
+    const match = /^(?:0?0):(\d{2})$/.exec(value);
+    return match ? `24:${match[1]}` : value;
+  };
   const featuredRaceKey = (date, sport, venue, race) => `${date}:${sport}:${venue}:${race}`;
   const FEATURED_RACES = new Set([
     featuredRaceKey("2026-02-22", "jra", "東京", "11R"),
@@ -24,8 +31,17 @@
     featuredRaceKey("2026-02-24", "boat", "江戸川", "12R"),
   ]);
   const getRacesForDate = (date) => {
+    const source = raceDays[date];
+    const detailed = source?.races;
+    if (Array.isArray(detailed)) {
+      const sessions = source.venueSessions || {};
+      return filterSports(detailed).map((race) => ({
+        ...race,
+        time: normalizeOverMidnightTime(race.time, sessions[venueKey(race)] || ""),
+      }));
+    }
     if (date === BASE_DATE) return filterSports(baseRaces);
-    return filterSports(Array.isArray(raceDays[date]?.races) ? raceDays[date].races : []);
+    return [];
   };
   const isFeaturedRace = (date, race) => FEATURED_RACES.has(
     featuredRaceKey(date, race.sport, race.venue, race.race),

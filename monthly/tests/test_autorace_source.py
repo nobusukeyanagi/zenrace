@@ -98,6 +98,22 @@ class AutoRaceSourceTests(unittest.TestCase):
         self.assertTrue(result.ok)
         self.assertEqual(result.entries[0]["session"], "night")
 
+    def test_over_midnight_heading_has_priority_over_midnight_word(self) -> None:
+        target = date(2026, 8, 5)
+        responses: dict[str, str] = {}
+        for venue, slug in autorace.VENUES.items():
+            for url in venue_urls(slug, target):
+                responses[url] = (
+                    race_page(target, "山陽", first_time="21:28", footer="",).replace(
+                        "普通開催", "オーバーミッドナイト開催"
+                    )
+                    if venue == "山陽"
+                    else "<html><head><title>開催なし | AutoRace.JP</title></head><body></body></html>"
+                )
+        result = autorace.collect(target, FakeSession(responses))
+        self.assertTrue(result.ok)
+        self.assertEqual(result.entries[0]["session"], "overmidnight")
+
     def test_all_five_distinct_pages_are_stopped_as_anomaly(self) -> None:
         target = date(2026, 7, 24)
         responses: dict[str, str] = {}

@@ -2,10 +2,10 @@
   "use strict";
 
   // 添付データセットの基準日・表示基準時刻。
-  const todayBase = new Date(2026, 1, 23);
+  const todayBase = new Date(2026, 7, 5);
   const selectedDate = new Date(todayBase);
-  const minDate = new Date(2026, 1, 22);
-  const maxDate = new Date(2026, 1, 24);
+  const minDate = new Date(2026, 7, 1);
+  const maxDate = new Date(2026, 7, 31);
   const REFERENCE_MINUTES = 16 * 60 + 40;
   const FOCUS_SLOT_INDEX = 1;
   const WEEKDAY = ["日", "月", "火", "水", "木", "金", "土"];
@@ -62,6 +62,12 @@
   };
   const raceNumber = (race) => Number.parseInt(String(race.race), 10) || 0;
   const groupKey = (sport, venue) => `${sport}:${venue}`;
+  const normalizeOverMidnightTime = (time, session) => {
+    const value = String(time || "");
+    if (session !== "overmidnight") return value;
+    const match = /^(?:0?0):(\d{2})$/.exec(value);
+    return match ? `24:${match[1]}` : value;
+  };
   const normalizedGrade = (value) => String(value ?? "")
     .trim()
     .toUpperCase()
@@ -174,7 +180,8 @@
   const makeMap = (value) => new Map(Object.entries(value || {}));
   const currentDayData = () => {
     const key = dateKey(selectedDate);
-    if (key === dateKey(todayBase)) {
+    const source = extraRaceDays[key];
+    if (!source && key === dateKey(todayBase)) {
       return {
         races: filterSports(baseRaces),
         venueOrder: filterSports(baseVenueOrder),
@@ -184,14 +191,14 @@
         girlsVenueSet: baseGirlsVenueSet,
       };
     }
-    const source = extraRaceDays[key] || {};
+    const daySource = source || {};
     return {
-      races: filterSports(Array.isArray(source.races) ? source.races : []),
-      venueOrder: filterSports(Array.isArray(source.venueOrder) ? source.venueOrder : []),
-      venueGrades: filterSports(Array.isArray(source.venueGrades) ? source.venueGrades : []),
-      venueDayMap: makeMap(source.venueDays),
-      venueSessionMap: makeMap(source.venueSessions),
-      girlsVenueSet: new Set(Array.isArray(source.girlsVenues) ? source.girlsVenues : []),
+      races: filterSports(Array.isArray(daySource.races) ? daySource.races : []),
+      venueOrder: filterSports(Array.isArray(daySource.venueOrder) ? daySource.venueOrder : []),
+      venueGrades: filterSports(Array.isArray(daySource.venueGrades) ? daySource.venueGrades : []),
+      venueDayMap: makeMap(daySource.venueDays),
+      venueSessionMap: makeMap(daySource.venueSessions),
+      girlsVenueSet: new Set(Array.isArray(daySource.girlsVenues) ? daySource.girlsVenues : []),
     };
   };
 
@@ -200,10 +207,11 @@
     const gradeMap = new Map(dayData.venueGrades.map((item) => [groupKey(item.sport, item.venue), item]));
     for (const race of dayData.races) {
       const key = groupKey(race.sport, race.venue);
+      const time = normalizeOverMidnightTime(race.time, dayData.venueSessionMap.get(key) || "");
       if (!grouped.has(key)) {
         grouped.set(key, { venue: race.venue, sport: race.sport, grade: gradeMap.get(key) || null, races: [] });
       }
-      grouped.get(key).races.push({ ...race, minutes: timeToMinutes(race.time) });
+      grouped.get(key).races.push({ ...race, time, minutes: timeToMinutes(time) });
     }
 
     const venueRank = new Map(dayData.venueOrder.map((item, index) => [groupKey(item.sport, item.venue), index]));
@@ -295,6 +303,9 @@
     )).join(""),
   });
 
+  const SESSION_LABEL = { morning: "モーニング", night: "ナイター", midnight: "ミッドナイト", overmidnight: "オーバーミッドナイト" };
+  const sessionIconName = (session) => session === "overmidnight" ? "midnight" : session;
+
   const renderRow = (row, dayDiff, dayData) => {
     let track = buildCurrentTrack(row);
     if (dayDiff < 0) track = buildPastTrack(row);
@@ -307,7 +318,7 @@
       ? `<span class="venue-grade-icon ${isAccentGrade(row.sport, row.grade.label) ? "accent" : "muted"}" aria-label="格 ${row.grade.label}">${row.grade.label}</span>`
       : "";
     const sessionIcon = session
-      ? `<img class="venue-status-icon" src="icons/${session}.png" alt="" aria-hidden="true">`
+      ? `<img class="venue-status-icon" src="icons/${sessionIconName(session)}.png" alt="${SESSION_LABEL[session] || session}" title="${SESSION_LABEL[session] || session}">`
       : "";
     const girlsIcon = hasGirls
       ? `<img class="venue-status-icon girls" src="icons/girls.png" alt="" aria-hidden="true">`
