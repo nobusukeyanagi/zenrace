@@ -2,10 +2,10 @@
   "use strict";
 
   // 添付データセットの基準日・表示基準時刻。
-  const todayBase = new Date(2026, 7, 5);
+  const todayBase = new Date(2026, 1, 23);
   const selectedDate = new Date(todayBase);
-  const minDate = new Date(2026, 7, 1);
-  const maxDate = new Date(2026, 7, 31);
+  const minDate = new Date(2026, 1, 22);
+  const maxDate = new Date(2026, 1, 24);
   const REFERENCE_MINUTES = 16 * 60 + 40;
   const FOCUS_SLOT_INDEX = 1;
   const WEEKDAY = ["日", "月", "火", "水", "木", "金", "土"];
@@ -62,12 +62,6 @@
   };
   const raceNumber = (race) => Number.parseInt(String(race.race), 10) || 0;
   const groupKey = (sport, venue) => `${sport}:${venue}`;
-  const normalizeOverMidnightTime = (time, session) => {
-    const value = String(time || "");
-    if (session !== "overmidnight") return value;
-    const match = /^(?:0?0):(\d{2})$/.exec(value);
-    return match ? `24:${match[1]}` : value;
-  };
   const normalizedGrade = (value) => String(value ?? "")
     .trim()
     .toUpperCase()
@@ -180,8 +174,7 @@
   const makeMap = (value) => new Map(Object.entries(value || {}));
   const currentDayData = () => {
     const key = dateKey(selectedDate);
-    const source = extraRaceDays[key];
-    if (!source && key === dateKey(todayBase)) {
+    if (key === dateKey(todayBase)) {
       return {
         races: filterSports(baseRaces),
         venueOrder: filterSports(baseVenueOrder),
@@ -191,31 +184,26 @@
         girlsVenueSet: baseGirlsVenueSet,
       };
     }
-    const daySource = source || {};
+    const source = extraRaceDays[key] || {};
     return {
-      races: filterSports(Array.isArray(daySource.races) ? daySource.races : []),
-      venueOrder: filterSports(Array.isArray(daySource.venueOrder) ? daySource.venueOrder : []),
-      venueGrades: filterSports(Array.isArray(daySource.venueGrades) ? daySource.venueGrades : []),
-      venueDayMap: makeMap(daySource.venueDays),
-      venueSessionMap: makeMap(daySource.venueSessions),
-      girlsVenueSet: new Set(Array.isArray(daySource.girlsVenues) ? daySource.girlsVenues : []),
+      races: filterSports(Array.isArray(source.races) ? source.races : []),
+      venueOrder: filterSports(Array.isArray(source.venueOrder) ? source.venueOrder : []),
+      venueGrades: filterSports(Array.isArray(source.venueGrades) ? source.venueGrades : []),
+      venueDayMap: makeMap(source.venueDays),
+      venueSessionMap: makeMap(source.venueSessions),
+      girlsVenueSet: new Set(Array.isArray(source.girlsVenues) ? source.girlsVenues : []),
     };
   };
 
   const groupRacesByVenue = (dayData) => {
     const grouped = new Map();
     const gradeMap = new Map(dayData.venueGrades.map((item) => [groupKey(item.sport, item.venue), item]));
-    for (const entry of dayData.venueOrder) {
-      const key = groupKey(entry.sport, entry.venue);
-      grouped.set(key, { venue: entry.venue, sport: entry.sport, grade: gradeMap.get(key) || null, races: [] });
-    }
     for (const race of dayData.races) {
       const key = groupKey(race.sport, race.venue);
-      const time = normalizeOverMidnightTime(race.time, dayData.venueSessionMap.get(key) || "");
       if (!grouped.has(key)) {
         grouped.set(key, { venue: race.venue, sport: race.sport, grade: gradeMap.get(key) || null, races: [] });
       }
-      grouped.get(key).races.push({ ...race, time, minutes: timeToMinutes(time) });
+      grouped.get(key).races.push({ ...race, minutes: timeToMinutes(race.time) });
     }
 
     const venueRank = new Map(dayData.venueOrder.map((item, index) => [groupKey(item.sport, item.venue), index]));
@@ -246,13 +234,6 @@
   };
 
   const buildCurrentTrack = (row) => {
-    if (!row.races.length) {
-      return {
-        mode: "pending",
-        anchor: "left",
-        cards: '<span class="race-data-pending" role="status">発走時刻取得中</span>',
-      };
-    }
     const nextIndex = row.races.findIndex((race) => race.minutes > REFERENCE_MINUTES);
     const leadingSpacers = [createCard(null, "spacer"), createCard(null, "spacer")];
 
@@ -295,16 +276,16 @@
   };
 
 
-  const buildPastTrack = (row) => row.races.length ? ({
+  const buildPastTrack = (row) => ({
     mode: "past",
     anchor: "right",
     cards: row.races.map((race, index) => createCard(
       race,
       index === row.races.length - 1 ? "finished final anchor-card" : "finished",
     )).join(""),
-  }) : ({ mode: "pending", anchor: "left", cards: '<span class="race-data-pending" role="status">発走時刻取得中</span>' });
+  });
 
-  const buildFutureTrack = (row) => row.races.length ? ({
+  const buildFutureTrack = (row) => ({
     mode: "future",
     anchor: "left",
     // 未来日は1Rを左端に置き、最終レース以降の空白領域を作らない。
@@ -312,10 +293,7 @@
       race,
       `upcoming${index === 0 ? " anchor-card" : ""}`,
     )).join(""),
-  }) : ({ mode: "pending", anchor: "left", cards: '<span class="race-data-pending" role="status">発走時刻取得中</span>' });
-
-  const SESSION_LABEL = { morning: "モーニング", night: "ナイター", midnight: "ミッドナイト", overmidnight: "オーバーミッドナイト" };
-  const sessionIconName = (session) => session === "overmidnight" ? "midnight" : session;
+  });
 
   const renderRow = (row, dayDiff, dayData) => {
     let track = buildCurrentTrack(row);
@@ -329,7 +307,7 @@
       ? `<span class="venue-grade-icon ${isAccentGrade(row.sport, row.grade.label) ? "accent" : "muted"}" aria-label="格 ${row.grade.label}">${row.grade.label}</span>`
       : "";
     const sessionIcon = session
-      ? `<img class="venue-status-icon" src="icons/${sessionIconName(session)}.png" alt="${SESSION_LABEL[session] || session}" title="${SESSION_LABEL[session] || session}">`
+      ? `<img class="venue-status-icon" src="icons/${session}.png" alt="" aria-hidden="true">`
       : "";
     const girlsIcon = hasGirls
       ? `<img class="venue-status-icon girls" src="icons/girls.png" alt="" aria-hidden="true">`

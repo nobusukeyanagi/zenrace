@@ -44,7 +44,7 @@ VENUE_ORDER = {
 }
 VENUE_RANK = {sport: {venue: index for index, venue in enumerate(venues)} for sport, venues in VENUE_ORDER.items()}
 WEEKDAY_NAMES = ("月", "火", "水", "木", "金", "土", "日")
-SESSION_NAMES = {"morning": "モーニング", "night": "ナイター", "midnight": "ミッドナイト", "overmidnight": "オーバーミッドナイト"}
+SESSION_NAMES = {"morning": "モーニング", "night": "ナイター", "midnight": "ミッドナイト"}
 
 
 def truthy(value: str) -> bool:

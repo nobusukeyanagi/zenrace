@@ -106,11 +106,3 @@ button{font:inherit;-webkit-tap-highlight-color:transparent}
   .result-table col.r-col{width:34px}.result-table col.finish-col{width:75px}.result-table col.payout-col{width:98px}.result-table col.pop-col{width:60px}
   .result-table tbody td{height:38px;font-size:13px;padding:5px 3px}.entry-no{width:21px;height:21px;margin-inline:1px;font-size:14px}.entry-no.double-digit{font-size:12px}.result-table .payout-cell{font-size:13px;padding-right:5px}.result-table .pop-cell{font-size:12px;padding-right:5px}
 }
-
-.result-table .pending-result td {
-  height: 64px;
-  text-align: center;
-  color: #bcbcbc;
-  font-weight: 700;
-  letter-spacing: .04em;
-}

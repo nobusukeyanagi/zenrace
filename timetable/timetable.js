@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const BASE_DATE = "2026-08-05";
+  const BASE_DATE = "2026-02-23";
   const TARGET_HOUR = 16;
   const board = document.getElementById("timetableBoard");
   const toolbar = document.querySelector("[data-zenrace-date-selector]");
@@ -12,13 +12,6 @@
     : {};
   const sportPreferences = window.ZENRACE_SPORT_PREFERENCES;
   const filterSports = (items) => sportPreferences?.filter(items) || [...items];
-  const venueKey = (race) => `${race.sport}:${race.venue}`;
-  const normalizeOverMidnightTime = (time, session) => {
-    const value = String(time || "");
-    if (session !== "overmidnight") return value;
-    const match = /^(?:0?0):(\d{2})$/.exec(value);
-    return match ? `24:${match[1]}` : value;
-  };
   const featuredRaceKey = (date, sport, venue, race) => `${date}:${sport}:${venue}:${race}`;
   const FEATURED_RACES = new Set([
     featuredRaceKey("2026-02-22", "jra", "東京", "11R"),
@@ -30,25 +23,9 @@
     featuredRaceKey("2026-02-23", "nar", "名古屋", "7R"),
     featuredRaceKey("2026-02-24", "boat", "江戸川", "12R"),
   ]);
-  const getDaySource = (date) => raceDays[date] || {};
   const getRacesForDate = (date) => {
-    const source = getDaySource(date);
-    const detailed = source?.races;
-    if (Array.isArray(detailed)) {
-      const sessions = source.venueSessions || {};
-      return filterSports(detailed).map((race) => ({
-        ...race,
-        time: normalizeOverMidnightTime(race.time, sessions[venueKey(race)] || ""),
-      }));
-    }
     if (date === BASE_DATE) return filterSports(baseRaces);
-    return [];
-  };
-  const getPendingVenuesForDate = (date, races) => {
-    const source = getDaySource(date);
-    const detailedKeys = new Set(races.map((race) => venueKey(race)));
-    return filterSports(Array.isArray(source.venueOrder) ? source.venueOrder : [])
-      .filter((entry) => !detailedKeys.has(venueKey(entry)));
+    return filterSports(Array.isArray(raceDays[date]?.races) ? raceDays[date].races : []);
   };
   const isFeaturedRace = (date, race) => FEATURED_RACES.has(
     featuredRaceKey(date, race.sport, race.venue, race.race),
@@ -145,8 +122,7 @@
   const render = (date, resetPosition = true) => {
     if (!board) return;
     const races = getRacesForDate(date);
-    const pendingVenues = getPendingVenuesForDate(date, races);
-    if (!races.length && !pendingVenues.length) {
+    if (!races.length) {
       const [, month, day] = date.split("-").map(Number);
       board.innerHTML = `
         <section class="timetable-empty">
@@ -157,12 +133,7 @@
       return;
     }
 
-    const pendingMarkup = pendingVenues.length ? `
-      <section class="timetable-pending" aria-label="発走時刻取得中の開催場">
-        <strong>発走時刻取得中</strong>
-        <div class="pending-venues">${pendingVenues.map((entry) => `<span class="pending-venue sport-${entry.sport}">${entry.venue}</span>`).join("")}</div>
-      </section>` : "";
-    board.innerHTML = buildHourGroups(date, races) + pendingMarkup;
+    board.innerHTML = buildHourGroups(date, races);
     bindCards();
     if (!resetPosition) return;
     requestAnimationFrame(() => requestAnimationFrame(scrollToCurrentHour));

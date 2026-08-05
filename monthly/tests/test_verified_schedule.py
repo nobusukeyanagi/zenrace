@@ -1,8 +1,6 @@
 from __future__ import annotations
 
 import copy
-import json
-import re
 import unittest
 from pathlib import Path
 
@@ -18,7 +16,6 @@ from monthly.scripts.verified_schedule import (
 ROOT = Path(__file__).resolve().parents[2]
 SNAPSHOT = ROOT / "monthly/data/official_schedule.json"
 MONTHLY_JS = ROOT / "monthly/monthly.js"
-RACE_DAYS_JS = ROOT / "schedule/race-days.js"
 EXPECTED_COUNTS = {
     "2026-07": {"keirin": 246, "auto": 65, "boat": 413, "nar": 120, "jra": 24},
     "2026-08": {"keirin": 233, "auto": 68, "boat": 411, "nar": 112, "jra": 30},
@@ -83,49 +80,6 @@ class VerifiedScheduleTests(unittest.TestCase):
             item = find(day_rows(rows, f"2026-08-{day:02d}"), "nar", "船橋")
             self.assertIsNotNone(item)
             self.assertEqual(item.get("session"), "night")
-
-    def test_august_overmidnight_dates_are_distinct_from_midnight(self) -> None:
-        rows = load_verified_month(SNAPSHOT, "2026-08")
-        actual = {
-            (row["date"], item["venue"])
-            for row in rows
-            for item in row["venues"]
-            if item.get("sport") == "auto" and item.get("session") == "overmidnight"
-        }
-        self.assertEqual(actual, {
-            ("2026-08-01", "山陽"),
-            ("2026-08-05", "山陽"), ("2026-08-06", "山陽"), ("2026-08-07", "山陽"),
-            ("2026-08-14", "飯塚"), ("2026-08-15", "飯塚"), ("2026-08-16", "飯塚"),
-            ("2026-08-31", "飯塚"),
-        })
-        self.assertEqual(find(day_rows(rows, "2026-08-08"), "auto", "飯塚").get("session"), "midnight")
-        self.assertEqual(find(day_rows(rows, "2026-08-17"), "auto", "山陽").get("session"), "midnight")
-
-    def test_august_fifth_sanyo_uses_24_hour_notation(self) -> None:
-        text = RACE_DAYS_JS.read_text(encoding="utf-8")
-        match = re.search(r"window\.ZENRACE_RACE_DAYS = (\{.*\});\n\}\)\(\);", text, re.S)
-        self.assertIsNotNone(match)
-        payload = json.loads(match.group(1))
-        races = [
-            item for item in payload["2026-08-05"]["races"]
-            if item["sport"] == "auto" and item["venue"] == "山陽"
-        ]
-        self.assertEqual([item["time"] for item in races[-2:]], ["24:04", "24:30"])
-        self.assertEqual(payload["2026-08-05"]["venueSessions"]["auto:山陽"], "overmidnight")
-
-    def test_august_fifth_race_day_keeps_all_scheduled_sports(self) -> None:
-        text = RACE_DAYS_JS.read_text(encoding="utf-8")
-        match = re.search(r"window\.ZENRACE_RACE_DAYS = (\{.*\});\n\}\)\(\);", text, re.S)
-        self.assertIsNotNone(match)
-        payload = json.loads(match.group(1))
-        self.assertIn("2026-02-22", payload)
-        self.assertIn("2026-02-24", payload)
-        venues = payload["2026-08-05"]["venueOrder"]
-        counts: dict[str, int] = {}
-        for item in venues:
-            counts[item["sport"]] = counts.get(item["sport"], 0) + 1
-        self.assertEqual(counts, {"keirin": 9, "auto": 3, "boat": 11, "nar": 3})
-        self.assertEqual(len(venues), 26)
 
     def test_duplicate_entry_is_rejected(self) -> None:
         rows = load_verified_month(SNAPSHOT, "2026-08")

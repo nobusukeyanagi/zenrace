@@ -156,26 +156,6 @@ button{font:inherit}
 .timetable-empty strong{font-size:19px}
 .timetable-empty span{color:#b9b9b9;font-size:13px}
 
-.timetable-pending{
-  padding:12px;
-  border:1px solid #51411D;
-  border-radius:8px;
-  color:#fff;
-  background:#090909;
-}
-.timetable-pending strong{display:block;margin-bottom:9px;font-size:14px}
-.pending-venues{display:flex;flex-wrap:wrap;gap:6px}
-.pending-venue{
-  display:inline-flex;align-items:center;min-height:30px;padding:5px 9px;
-  border:1px solid #51411D;border-radius:999px;background:#fff;color:#171717;
-  font-size:12px;font-weight:900;
-}
-.pending-venue.sport-keirin{border-left:5px solid #f17c32}
-.pending-venue.sport-auto{border-left:5px solid #8a56b5}
-.pending-venue.sport-boat{border-left:5px solid #1185c8}
-.pending-venue.sport-nar{border-left:5px solid #9a673e}
-.pending-venue.sport-jra{border-left:5px solid #2d9f54}
-
 .timetable-toast{
   position:fixed;
   left:50%;

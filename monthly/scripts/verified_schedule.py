@@ -12,7 +12,7 @@ from typing import Any
 from monthly.scripts.common import SPORT_ORDER, VENUE_ORDER, normalize_grade, sort_entries
 
 MONTH_RE = re.compile(r"^(?P<year>\d{4})-(?P<month>0[1-9]|1[0-2])$")
-ALLOWED_SESSIONS = {"morning", "night", "midnight", "overmidnight"}
+ALLOWED_SESSIONS = {"morning", "night", "midnight"}
 DAY_SPORTS = {"keirin", "auto", "boat"}
 
 
