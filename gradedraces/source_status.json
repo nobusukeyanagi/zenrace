@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-05T02:30:21.931798+09:00",
+  "generated_at": "2026-08-06T02:19:22.379105+09:00",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 1,
     "recent_verification": 1,
-    "upcoming": 28
+    "upcoming": 29
   },
   "sources": [
     {
@@ -52,7 +52,10 @@
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F18&k_babaCode=10",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F19&k_babaCode=21",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=21&k_nenndo=2026",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F19&k_babaCode=36"
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F19&k_babaCode=36",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=24",
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=24&k_nenndo=2026",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=36"
       ],
       "warnings": [
         "地方競馬重賞一覧の本文を十分に確認できませんでした。個別レース情報の取得は継続します。"
@@ -78,10 +81,9 @@
     {
       "name": "競輪",
       "ok": true,
-      "patch_count": 1,
+      "patch_count": 0,
       "fetched_urls": [
-        "https://keirin.jp/pc/graderaceschedule",
-        "https://www.oddspark.com/keirin/RaceKekka.do?joCode=36&kaisaiBi=20260804&raceNo=11"
+        "https://keirin.jp/pc/graderaceschedule"
       ],
       "warnings": [
         "2026-08-09 佐世保: 発走時刻を特定できませんでした",

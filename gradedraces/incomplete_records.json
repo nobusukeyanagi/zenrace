@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-05T02:30:21.932340+09:00",
-  "center_date": "2026-08-05",
+  "generated_at": "2026-08-06T02:19:22.379625+09:00",
+  "center_date": "2026-08-06",
   "past_unresolved_count": 0,
-  "upcoming_missing_time_count": 19,
+  "upcoming_missing_time_count": 21,
   "past_unresolved": [],
   "upcoming_missing_time": [
     {
@@ -191,6 +191,26 @@
       "venue": "門別",
       "grade": "H3",
       "name": "フルールカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "sport": "nar",
+      "venue": "名古屋",
+      "grade": "SPⅡ",
+      "name": "ベイスプリント",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "sport": "nar",
+      "venue": "門別",
+      "grade": "H2",
+      "name": "ブリーダーズゴールドジュニアカップ",
       "missing": [
         "time"
       ]

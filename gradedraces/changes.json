@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-05T02:30:21.931778+09:00",
-  "center_date": "2026-08-05",
+  "generated_at": "2026-08-06T02:19:22.379080+09:00",
+  "center_date": "2026-08-06",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 1,
     "recent_verification": 1,
-    "upcoming": 28
+    "upcoming": 29
   },
-  "target_count": 29,
-  "change_count": 7,
+  "target_count": 30,
+  "change_count": 6,
   "changes": [
     {
       "date": "2026-08-08",
@@ -152,7 +152,7 @@
       "name": "オールレディース",
       "before": {
         "date": "2026-08-05",
-        "time": "",
+        "time": "20:30",
         "sport": "boat",
         "venue": "桐生",
         "grade": "GⅢ",
@@ -166,38 +166,11 @@
         "venue": "桐生",
         "grade": "GⅢ",
         "name": "オールレディース",
-        "winner": ""
+        "winner": "大山 千広"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=01&hd=20260805&rno=12",
       "note": "BOAT RACE公式12R結果"
-    },
-    {
-      "date": "2026-08-04",
-      "sport": "keirin",
-      "venue": "小田原",
-      "name": "第77周年記念北条早雲杯争奪戦",
-      "before": {
-        "date": "2026-08-04",
-        "time": "16:21",
-        "sport": "keirin",
-        "venue": "小田原",
-        "grade": "GⅢ",
-        "name": "第77周年記念北条早雲杯争奪戦",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-04",
-        "time": "16:21",
-        "sport": "keirin",
-        "venue": "小田原",
-        "grade": "GⅢ",
-        "name": "第77周年記念北条早雲杯争奪戦",
-        "winner": "郡司 浩平"
-      },
-      "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=36&kaisaiBi=20260804&raceNo=11",
-      "note": "公開結果によるKEIRIN.JP補完（11R）"
     }
   ]
 }
