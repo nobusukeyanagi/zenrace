@@ -1,39 +1,30 @@
 {
-  "generated_at": "2026-08-06T02:25:11.089920+09:00",
+  "generated_at": "2026-08-08T01:48:39.919099+09:00",
   "mode": "smart",
-  "target_date": "2026-08-06",
+  "target_date": "2026-08-08",
   "refresh_window": {
-    "start": "2026-08-05",
-    "end": "2026-08-20",
+    "start": "2026-08-07",
+    "end": "2026-08-22",
     "policy": "前日＋当日から14日後"
   },
   "unresolved_window": {
-    "start": "2026-05-08",
-    "end": "2026-08-04",
+    "start": "2026-05-10",
+    "end": "2026-08-06",
     "policy": "過去90日以内の取得失敗を再確認"
   },
   "new_addition_window": {
-    "start": "2026-08-21",
+    "start": "2026-08-23",
     "end": "2026-09-30",
     "policy": "翌月末までの公式月間表に新規開催があれば追加"
   },
-  "before_count": 7603,
-  "after_count": 7637,
+  "before_count": 7637,
+  "after_count": 7636,
   "changed": true,
   "refreshed_date_count": 16,
   "refreshed_dates": [
     {
-      "date": "2026-08-05",
-      "before_count": 26,
-      "after_count": 25,
-      "changed": true,
-      "failed_sports": [
-        "jra"
-      ]
-    },
-    {
-      "date": "2026-08-06",
-      "before_count": 24,
+      "date": "2026-08-07",
+      "before_count": 21,
       "after_count": 23,
       "changed": true,
       "failed_sports": [
@@ -41,32 +32,23 @@
       ]
     },
     {
-      "date": "2026-08-07",
-      "before_count": 24,
-      "after_count": 21,
-      "changed": true,
-      "failed_sports": [
-        "jra"
-      ]
-    },
-    {
       "date": "2026-08-08",
-      "before_count": 28,
-      "after_count": 22,
+      "before_count": 22,
+      "after_count": 27,
       "changed": true,
       "failed_sports": []
     },
     {
       "date": "2026-08-09",
-      "before_count": 31,
-      "after_count": 20,
+      "before_count": 20,
+      "after_count": 27,
       "changed": true,
       "failed_sports": []
     },
     {
       "date": "2026-08-10",
-      "before_count": 24,
-      "after_count": 11,
+      "before_count": 11,
+      "after_count": 18,
       "changed": true,
       "failed_sports": [
         "jra"
@@ -74,8 +56,8 @@
     },
     {
       "date": "2026-08-11",
-      "before_count": 30,
-      "after_count": 11,
+      "before_count": 11,
+      "after_count": 16,
       "changed": true,
       "failed_sports": [
         "jra"
@@ -83,8 +65,8 @@
     },
     {
       "date": "2026-08-12",
-      "before_count": 29,
-      "after_count": 9,
+      "before_count": 9,
+      "after_count": 11,
       "changed": true,
       "failed_sports": [
         "jra"
@@ -92,8 +74,8 @@
     },
     {
       "date": "2026-08-13",
-      "before_count": 28,
-      "after_count": 9,
+      "before_count": 9,
+      "after_count": 10,
       "changed": true,
       "failed_sports": [
         "jra"
@@ -101,39 +83,66 @@
     },
     {
       "date": "2026-08-14",
-      "before_count": 29,
+      "before_count": 10,
       "after_count": 10,
-      "changed": true,
+      "changed": false,
       "failed_sports": [
         "jra"
       ]
     },
     {
       "date": "2026-08-15",
-      "before_count": 32,
+      "before_count": 11,
       "after_count": 11,
-      "changed": true,
+      "changed": false,
       "failed_sports": []
     },
     {
       "date": "2026-08-16",
-      "before_count": 32,
+      "before_count": 12,
       "after_count": 12,
-      "changed": true,
+      "changed": false,
       "failed_sports": []
     },
     {
       "date": "2026-08-17",
-      "before_count": 27,
+      "before_count": 8,
       "after_count": 8,
-      "changed": true,
+      "changed": false,
       "failed_sports": [
         "jra"
       ]
     },
     {
       "date": "2026-08-18",
-      "before_count": 28,
+      "before_count": 10,
+      "after_count": 10,
+      "changed": false,
+      "failed_sports": [
+        "jra"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "before_count": 9,
+      "after_count": 9,
+      "changed": false,
+      "failed_sports": [
+        "jra"
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "before_count": 9,
+      "after_count": 9,
+      "changed": false,
+      "failed_sports": [
+        "jra"
+      ]
+    },
+    {
+      "date": "2026-08-21",
+      "before_count": 25,
       "after_count": 10,
       "changed": true,
       "failed_sports": [
@@ -141,25 +150,14 @@
       ]
     },
     {
-      "date": "2026-08-19",
-      "before_count": 26,
-      "after_count": 9,
+      "date": "2026-08-22",
+      "before_count": 29,
+      "after_count": 14,
       "changed": true,
-      "failed_sports": [
-        "jra"
-      ]
-    },
-    {
-      "date": "2026-08-20",
-      "before_count": 28,
-      "after_count": 9,
-      "changed": true,
-      "failed_sports": [
-        "jra"
-      ]
+      "failed_sports": []
     }
   ],
-  "retried_unresolved_count": 2,
+  "retried_unresolved_count": 4,
   "retried_unresolved": [
     {
       "date": "2026-08-03",
@@ -174,1962 +172,26 @@
       "ok": false,
       "changed": false,
       "error": "403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0804.html"
+    },
+    {
+      "date": "2026-08-05",
+      "sport": "jra",
+      "ok": false,
+      "changed": false,
+      "error": "403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0805.html"
+    },
+    {
+      "date": "2026-08-06",
+      "sport": "jra",
+      "ok": false,
+      "changed": false,
+      "error": "403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0806.html"
     }
   ],
-  "unresolved_before_count": 13,
-  "unresolved_after_count": 14,
-  "new_addition_count": 260,
-  "new_additions": [
-    {
-      "date": "2026-09-01",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-01",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-01",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-01",
-      "sport": "keirin",
-      "venue": "宇都宮",
-      "day": "2日目",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-01",
-      "sport": "keirin",
-      "venue": "松山",
-      "day": "2日目",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-01",
-      "sport": "keirin",
-      "venue": "松戸",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-01",
-      "sport": "keirin",
-      "venue": "松阪",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-01",
-      "sport": "keirin",
-      "venue": "西武園",
-      "day": "2日目",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-01",
-      "sport": "nar",
-      "venue": "大井",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-02",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-02",
-      "sport": "keirin",
-      "venue": "伊東",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-02",
-      "sport": "keirin",
-      "venue": "宇都宮",
-      "day": "最終日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-02",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-02",
-      "sport": "keirin",
-      "venue": "松山",
-      "day": "最終日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-02",
-      "sport": "keirin",
-      "venue": "松戸",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-02",
-      "sport": "keirin",
-      "venue": "松阪",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-02",
-      "sport": "keirin",
-      "venue": "玉野",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-02",
-      "sport": "keirin",
-      "venue": "西武園",
-      "day": "最終日",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-03",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-03",
-      "sport": "keirin",
-      "venue": "伊東",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-03",
-      "sport": "keirin",
-      "venue": "富山",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-03",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-03",
-      "sport": "keirin",
-      "venue": "松戸",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-03",
-      "sport": "keirin",
-      "venue": "武雄",
-      "day": "初日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-03",
-      "sport": "keirin",
-      "venue": "玉野",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-03",
-      "sport": "keirin",
-      "venue": "立川",
-      "day": "初日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-03",
-      "sport": "nar",
-      "venue": "大井",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-04",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "普通",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-04",
-      "sport": "keirin",
-      "venue": "伊東",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-04",
-      "sport": "keirin",
-      "venue": "富山",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-04",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-04",
-      "sport": "keirin",
-      "venue": "武雄",
-      "day": "2日目",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-04",
-      "sport": "keirin",
-      "venue": "玉野",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-04",
-      "sport": "keirin",
-      "venue": "立川",
-      "day": "2日目",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-04",
-      "sport": "keirin",
-      "venue": "豊橋",
-      "day": "初日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-04",
-      "sport": "keirin",
-      "venue": "防府",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-04",
-      "sport": "nar",
-      "venue": "大井",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-05",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "普通",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-05",
-      "sport": "keirin",
-      "venue": "久留米",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-05",
-      "sport": "keirin",
-      "venue": "富山",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-05",
-      "sport": "keirin",
-      "venue": "松阪",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-05",
-      "sport": "keirin",
-      "venue": "武雄",
-      "day": "最終日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-05",
-      "sport": "keirin",
-      "venue": "立川",
-      "day": "最終日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-05",
-      "sport": "keirin",
-      "venue": "豊橋",
-      "day": "2日目",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-05",
-      "sport": "keirin",
-      "venue": "防府",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-06",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "普通",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-06",
-      "sport": "keirin",
-      "venue": "久留米",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-06",
-      "sport": "keirin",
-      "venue": "松阪",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-06",
-      "sport": "keirin",
-      "venue": "西武園",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-06",
-      "sport": "keirin",
-      "venue": "豊橋",
-      "day": "最終日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-06",
-      "sport": "keirin",
-      "venue": "防府",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-07",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "普通",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-07",
-      "sport": "auto",
-      "venue": "川口",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-07",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "day": "初日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-07",
-      "sport": "keirin",
-      "venue": "久留米",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-07",
-      "sport": "keirin",
-      "venue": "伊東",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-07",
-      "sport": "keirin",
-      "venue": "大垣",
-      "day": "初日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-07",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "day": "初日",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-07",
-      "sport": "keirin",
-      "venue": "松阪",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-07",
-      "sport": "keirin",
-      "venue": "西武園",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-08",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "普通",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-08",
-      "sport": "auto",
-      "venue": "川口",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-08",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "day": "2日目",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-08",
-      "sport": "keirin",
-      "venue": "京王閣",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-08",
-      "sport": "keirin",
-      "venue": "伊東",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-08",
-      "sport": "keirin",
-      "venue": "大垣",
-      "day": "2日目",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-08",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "day": "2日目",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-08",
-      "sport": "keirin",
-      "venue": "玉野",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-08",
-      "sport": "keirin",
-      "venue": "西武園",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-09",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "普通",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-09",
-      "sport": "auto",
-      "venue": "川口",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-09",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "day": "最終日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-09",
-      "sport": "keirin",
-      "venue": "京王閣",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-09",
-      "sport": "keirin",
-      "venue": "伊東",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-09",
-      "sport": "keirin",
-      "venue": "四日市",
-      "day": "初日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-09",
-      "sport": "keirin",
-      "venue": "大垣",
-      "day": "最終日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-09",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "day": "最終日",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-09",
-      "sport": "keirin",
-      "venue": "武雄",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-09",
-      "sport": "keirin",
-      "venue": "玉野",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-09",
-      "sport": "keirin",
-      "venue": "高知",
-      "day": "初日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-10",
-      "sport": "auto",
-      "venue": "山陽",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-10",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-10",
-      "sport": "keirin",
-      "venue": "京王閣",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-10",
-      "sport": "keirin",
-      "venue": "四日市",
-      "day": "2日目",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-10",
-      "sport": "keirin",
-      "venue": "富山",
-      "day": "初日",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-10",
-      "sport": "keirin",
-      "venue": "川崎",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-10",
-      "sport": "keirin",
-      "venue": "武雄",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-10",
-      "sport": "keirin",
-      "venue": "玉野",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-10",
-      "sport": "keirin",
-      "venue": "高知",
-      "day": "2日目",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-11",
-      "sport": "auto",
-      "venue": "山陽",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-11",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-11",
-      "sport": "keirin",
-      "venue": "前橋",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-11",
-      "sport": "keirin",
-      "venue": "四日市",
-      "day": "最終日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-11",
-      "sport": "keirin",
-      "venue": "富山",
-      "day": "2日目",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-11",
-      "sport": "keirin",
-      "venue": "川崎",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-11",
-      "sport": "keirin",
-      "venue": "武雄",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-11",
-      "sport": "keirin",
-      "venue": "豊橋",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-11",
-      "sport": "keirin",
-      "venue": "高知",
-      "day": "最終日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-12",
-      "sport": "auto",
-      "venue": "山陽",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-12",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-12",
-      "sport": "keirin",
-      "venue": "佐世保",
-      "day": "初日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-12",
-      "sport": "keirin",
-      "venue": "前橋",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-12",
-      "sport": "keirin",
-      "venue": "富山",
-      "day": "最終日",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-12",
-      "sport": "keirin",
-      "venue": "川崎",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-12",
-      "sport": "keirin",
-      "venue": "松山",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-12",
-      "sport": "keirin",
-      "venue": "豊橋",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-13",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "普通",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-13",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-13",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-13",
-      "sport": "keirin",
-      "venue": "佐世保",
-      "day": "2日目",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-13",
-      "sport": "keirin",
-      "venue": "前橋",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-13",
-      "sport": "keirin",
-      "venue": "大垣",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-13",
-      "sport": "keirin",
-      "venue": "大宮",
-      "day": "初日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-13",
-      "sport": "keirin",
-      "venue": "岐阜",
-      "day": "初日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-13",
-      "sport": "keirin",
-      "venue": "松山",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-13",
-      "sport": "keirin",
-      "venue": "豊橋",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-14",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "普通",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-14",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-14",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-14",
-      "sport": "keirin",
-      "venue": "佐世保",
-      "day": "最終日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-14",
-      "sport": "keirin",
-      "venue": "大垣",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-14",
-      "sport": "keirin",
-      "venue": "大宮",
-      "day": "2日目",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-14",
-      "sport": "keirin",
-      "venue": "岐阜",
-      "day": "2日目",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-14",
-      "sport": "keirin",
-      "venue": "岸和田",
-      "day": "初日",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-14",
-      "sport": "keirin",
-      "venue": "松山",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-14",
-      "sport": "keirin",
-      "venue": "青森",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-15",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "普通",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-15",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-15",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-15",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-15",
-      "sport": "keirin",
-      "venue": "大垣",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-15",
-      "sport": "keirin",
-      "venue": "大宮",
-      "day": "最終日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-15",
-      "sport": "keirin",
-      "venue": "岐阜",
-      "day": "最終日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-15",
-      "sport": "keirin",
-      "venue": "岸和田",
-      "day": "2日目",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-15",
-      "sport": "keirin",
-      "venue": "防府",
-      "day": "初日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-15",
-      "sport": "keirin",
-      "venue": "青森",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-16",
-      "sport": "auto",
-      "venue": "山陽",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-16",
-      "sport": "auto",
-      "venue": "川口",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-16",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-16",
-      "sport": "keirin",
-      "venue": "別府",
-      "day": "初日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-16",
-      "sport": "keirin",
-      "venue": "岸和田",
-      "day": "最終日",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-16",
-      "sport": "keirin",
-      "venue": "武雄",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-16",
-      "sport": "keirin",
-      "venue": "立川",
-      "day": "初日",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-16",
-      "sport": "keirin",
-      "venue": "防府",
-      "day": "2日目",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-16",
-      "sport": "keirin",
-      "venue": "青森",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-17",
-      "sport": "auto",
-      "venue": "山陽",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-17",
-      "sport": "auto",
-      "venue": "川口",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-17",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-17",
-      "sport": "keirin",
-      "venue": "久留米",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-17",
-      "sport": "keirin",
-      "venue": "別府",
-      "day": "2日目",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-17",
-      "sport": "keirin",
-      "venue": "小松島",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-17",
-      "sport": "keirin",
-      "venue": "川崎",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-17",
-      "sport": "keirin",
-      "venue": "武雄",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-17",
-      "sport": "keirin",
-      "venue": "立川",
-      "day": "2日目",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-17",
-      "sport": "keirin",
-      "venue": "防府",
-      "day": "最終日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-18",
-      "sport": "auto",
-      "venue": "山陽",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-18",
-      "sport": "auto",
-      "venue": "川口",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-18",
-      "sport": "keirin",
-      "venue": "久留米",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-18",
-      "sport": "keirin",
-      "venue": "別府",
-      "day": "最終日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-18",
-      "sport": "keirin",
-      "venue": "小松島",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-18",
-      "sport": "keirin",
-      "venue": "川崎",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-18",
-      "sport": "keirin",
-      "venue": "武雄",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-18",
-      "sport": "keirin",
-      "venue": "立川",
-      "day": "最終日",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-18",
-      "sport": "keirin",
-      "venue": "静岡",
-      "day": "初日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-19",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "普通",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-19",
-      "sport": "keirin",
-      "venue": "久留米",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-19",
-      "sport": "keirin",
-      "venue": "小松島",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-19",
-      "sport": "keirin",
-      "venue": "川崎",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-19",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "day": "初日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-19",
-      "sport": "keirin",
-      "venue": "松山",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-19",
-      "sport": "keirin",
-      "venue": "静岡",
-      "day": "2日目",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-20",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "普通",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-20",
-      "sport": "keirin",
-      "venue": "佐世保",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-20",
-      "sport": "keirin",
-      "venue": "広島",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-20",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "day": "2日目",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-20",
-      "sport": "keirin",
-      "venue": "松山",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-20",
-      "sport": "keirin",
-      "venue": "静岡",
-      "day": "最終日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-20",
-      "sport": "keirin",
-      "venue": "高知",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-21",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "普通",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-21",
-      "sport": "keirin",
-      "venue": "佐世保",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-21",
-      "sport": "keirin",
-      "venue": "大宮",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-21",
-      "sport": "keirin",
-      "venue": "広島",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-21",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "day": "最終日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-21",
-      "sport": "keirin",
-      "venue": "松山",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-21",
-      "sport": "keirin",
-      "venue": "青森",
-      "day": "初日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-21",
-      "sport": "keirin",
-      "venue": "高知",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-22",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "普通",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-22",
-      "sport": "keirin",
-      "venue": "佐世保",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-22",
-      "sport": "keirin",
-      "venue": "大垣",
-      "day": "初日",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-22",
-      "sport": "keirin",
-      "venue": "大宮",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-22",
-      "sport": "keirin",
-      "venue": "広島",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-22",
-      "sport": "keirin",
-      "venue": "立川",
-      "day": "初日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-22",
-      "sport": "keirin",
-      "venue": "青森",
-      "day": "2日目",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-22",
-      "sport": "keirin",
-      "venue": "高知",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-23",
-      "sport": "auto",
-      "venue": "山陽",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-23",
-      "sport": "auto",
-      "venue": "浜松",
-      "grade": "普通",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-23",
-      "sport": "keirin",
-      "venue": "伊東",
-      "day": "初日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-23",
-      "sport": "keirin",
-      "venue": "大垣",
-      "day": "2日目",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-23",
-      "sport": "keirin",
-      "venue": "大宮",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-23",
-      "sport": "keirin",
-      "venue": "小松島",
-      "day": "初日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-23",
-      "sport": "keirin",
-      "venue": "立川",
-      "day": "2日目",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-23",
-      "sport": "keirin",
-      "venue": "青森",
-      "day": "最終日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-24",
-      "sport": "auto",
-      "venue": "山陽",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-24",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-24",
-      "sport": "keirin",
-      "venue": "伊東",
-      "day": "2日目",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-24",
-      "sport": "keirin",
-      "venue": "別府",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-24",
-      "sport": "keirin",
-      "venue": "大垣",
-      "day": "最終日",
-      "grade": "FⅡ"
-    },
-    {
-      "date": "2026-09-24",
-      "sport": "keirin",
-      "venue": "奈良",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-24",
-      "sport": "keirin",
-      "venue": "小松島",
-      "day": "2日目",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-24",
-      "sport": "keirin",
-      "venue": "川崎",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-24",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-24",
-      "sport": "keirin",
-      "venue": "熊本",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-24",
-      "sport": "keirin",
-      "venue": "立川",
-      "day": "最終日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-25",
-      "sport": "auto",
-      "venue": "山陽",
-      "grade": "普通",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-25",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-25",
-      "sport": "keirin",
-      "venue": "伊東",
-      "day": "最終日",
-      "grade": "FⅠ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-25",
-      "sport": "keirin",
-      "venue": "別府",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-25",
-      "sport": "keirin",
-      "venue": "奈良",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-25",
-      "sport": "keirin",
-      "venue": "小松島",
-      "day": "最終日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-25",
-      "sport": "keirin",
-      "venue": "川崎",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-25",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-25",
-      "sport": "keirin",
-      "venue": "熊本",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-26",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "普通",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-26",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-26",
-      "sport": "keirin",
-      "venue": "別府",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-26",
-      "sport": "keirin",
-      "venue": "奈良",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-26",
-      "sport": "keirin",
-      "venue": "岸和田",
-      "day": "初日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-26",
-      "sport": "keirin",
-      "venue": "川崎",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-26",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-26",
-      "sport": "keirin",
-      "venue": "熊本",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-26",
-      "sport": "keirin",
-      "venue": "青森",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-27",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "普通",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-27",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-27",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-27",
-      "sport": "keirin",
-      "venue": "岸和田",
-      "day": "2日目",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-27",
-      "sport": "keirin",
-      "venue": "武雄",
-      "day": "初日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-27",
-      "sport": "keirin",
-      "venue": "玉野",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-27",
-      "sport": "keirin",
-      "venue": "青森",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-28",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "普通",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-28",
-      "sport": "auto",
-      "venue": "山陽",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-28",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-28",
-      "sport": "keirin",
-      "venue": "岸和田",
-      "day": "最終日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-28",
-      "sport": "keirin",
-      "venue": "平塚",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-28",
-      "sport": "keirin",
-      "venue": "広島",
-      "day": "初日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-28",
-      "sport": "keirin",
-      "venue": "武雄",
-      "day": "2日目",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-28",
-      "sport": "keirin",
-      "venue": "玉野",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-28",
-      "sport": "keirin",
-      "venue": "青森",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-29",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "普通",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-29",
-      "sport": "auto",
-      "venue": "山陽",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-29",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-29",
-      "sport": "keirin",
-      "venue": "平塚",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-29",
-      "sport": "keirin",
-      "venue": "広島",
-      "day": "2日目",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-29",
-      "sport": "keirin",
-      "venue": "武雄",
-      "day": "最終日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-29",
-      "sport": "keirin",
-      "venue": "玉野",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "midnight"
-    },
-    {
-      "date": "2026-09-29",
-      "sport": "keirin",
-      "venue": "防府",
-      "day": "初日",
-      "grade": "FⅡ",
-      "session": "morning"
-    },
-    {
-      "date": "2026-09-30",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "普通",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-30",
-      "sport": "auto",
-      "venue": "山陽",
-      "grade": "普通"
-    },
-    {
-      "date": "2026-09-30",
-      "sport": "keirin",
-      "venue": "平塚",
-      "day": "最終日",
-      "grade": "FⅡ",
-      "session": "night"
-    },
-    {
-      "date": "2026-09-30",
-      "sport": "keirin",
-      "venue": "広島",
-      "day": "最終日",
-      "grade": "FⅠ"
-    },
-    {
-      "date": "2026-09-30",
-      "sport": "keirin",
-      "venue": "防府",
-      "day": "2日目",
-      "grade": "FⅡ",
-      "session": "morning"
-    }
-  ],
+  "unresolved_before_count": 14,
+  "unresolved_after_count": 15,
+  "new_addition_count": 0,
+  "new_additions": [],
   "discovery_results": [
     {
       "month": "2026-08",
@@ -2151,7 +213,7 @@
       "month": "2026-08",
       "sport": "boat",
       "ok": true,
-      "official_entry_count": 101,
+      "official_entry_count": 122,
       "added_count": 0,
       "error": ""
     },
@@ -2176,7 +238,7 @@
       "sport": "keirin",
       "ok": true,
       "official_entry_count": 221,
-      "added_count": 202,
+      "added_count": 0,
       "error": ""
     },
     {
@@ -2184,7 +246,7 @@
       "sport": "auto",
       "ok": true,
       "official_entry_count": 65,
-      "added_count": 55,
+      "added_count": 0,
       "error": ""
     },
     {
@@ -2200,7 +262,7 @@
       "sport": "nar",
       "ok": true,
       "official_entry_count": 119,
-      "added_count": 3,
+      "added_count": 0,
       "error": ""
     },
     {
@@ -2236,14 +298,6 @@
       "entry_count": 158,
       "fetched_urls": [
         "https://autorace.jp/calendar/first/schedule.pdf",
-        "https://autorace.jp/race_info/Program/isesaki/2026-08-05",
-        "https://autorace.jp/race_info/Program/iizuka/2026-08-05",
-        "https://autorace.jp/race_info/Program/sanyo/2026-08-05",
-        "https://autorace.jp/race_info/Program/sanyo/2026-08-05_01",
-        "https://autorace.jp/race_info/Program/kawaguchi/2026-08-06",
-        "https://autorace.jp/race_info/Program/isesaki/2026-08-06",
-        "https://autorace.jp/race_info/Program/sanyo/2026-08-06",
-        "https://autorace.jp/race_info/Program/sanyo/2026-08-06_01",
         "https://autorace.jp/race_info/Program/kawaguchi/2026-08-07",
         "https://autorace.jp/race_info/Program/isesaki/2026-08-07",
         "https://autorace.jp/race_info/Program/sanyo/2026-08-07",
@@ -2277,7 +331,11 @@
         "https://autorace.jp/race_info/Program/sanyo/2026-08-19_01",
         "https://autorace.jp/race_info/Program/hamamatsu/2026-08-20",
         "https://autorace.jp/race_info/Program/sanyo/2026-08-20",
-        "https://autorace.jp/race_info/Program/sanyo/2026-08-20_01"
+        "https://autorace.jp/race_info/Program/sanyo/2026-08-20_01",
+        "https://autorace.jp/race_info/Program/hamamatsu/2026-08-21",
+        "https://autorace.jp/race_info/Program/iizuka/2026-08-21",
+        "https://autorace.jp/race_info/Program/hamamatsu/2026-08-22",
+        "https://autorace.jp/race_info/Program/iizuka/2026-08-22"
       ],
       "warnings": [],
       "error": ""
@@ -2288,7 +346,7 @@
       "attempts": 18,
       "success_count": 18,
       "failure_count": 0,
-      "entry_count": 154,
+      "entry_count": 175,
       "fetched_urls": [
         "https://www.boatrace.jp/owpc/pc/race/monthlyschedule?ym=202608",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=09&hd=20260801",
@@ -2303,19 +361,23 @@
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=08&hd=20260804",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=13&hd=20260804",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=01&hd=20260805",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=04&hd=20260805",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=05&hd=20260805",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=06&hd=20260805",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=09&hd=20260805",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=10&hd=20260805",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=12&hd=20260805",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=14&hd=20260805",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=17&hd=20260805",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=19&hd=20260805",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=21&hd=20260805",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=02&hd=20260806",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=18&hd=20260806",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=24&hd=20260806",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=02&hd=20260807",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=04&hd=20260807",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=09&hd=20260807",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=10&hd=20260807",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=12&hd=20260807",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=14&hd=20260807",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=15&hd=20260807",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=17&hd=20260807",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=18&hd=20260807",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=19&hd=20260807",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=20&hd=20260807",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=24&hd=20260807",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=05&hd=20260808",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=16&hd=20260808",
         "https://www.boatrace.jp/owpc/pc/race/monthlyschedule?ym=202609"
       ],
       "warnings": [],
@@ -2327,15 +389,9 @@
       "attempts": 18,
       "success_count": 18,
       "failure_count": 0,
-      "entry_count": 239,
+      "entry_count": 241,
       "fetched_urls": [
         "https://www.keiba.go.jp/KeibaWeb/MonthlyConveneInfo/MonthlyConveneInfoTop?k_year=2026&k_month=8",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F05&k_babaCode=36",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F05&k_babaCode=19",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F05&k_babaCode=27",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F06&k_babaCode=36",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F06&k_babaCode=19",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F06&k_babaCode=27",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F07&k_babaCode=18",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F07&k_babaCode=27",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F08&k_babaCode=03",
@@ -2389,6 +445,11 @@
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=21",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=24",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=27",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F21&k_babaCode=21",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F21&k_babaCode=24",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F21&k_babaCode=27",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F22&k_babaCode=03",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F22&k_babaCode=32",
         "https://www.keiba.go.jp/KeibaWeb/MonthlyConveneInfo/MonthlyConveneInfoTop?k_year=2026&k_month=9"
       ],
       "warnings": [],
@@ -2397,13 +458,11 @@
     {
       "sport": "jra",
       "ok": false,
-      "attempts": 20,
-      "success_count": 4,
-      "failure_count": 16,
-      "entry_count": 12,
+      "attempts": 22,
+      "success_count": 5,
+      "failure_count": 17,
+      "entry_count": 15,
       "fetched_urls": [
-        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0805.html",
-        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0806.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0807.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0808.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0809.html",
@@ -2418,13 +477,17 @@
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0818.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0819.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0820.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0821.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0822.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0803.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0804.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0805.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0806.html",
         "https://www.jra.go.jp/keiba/calendar2026/aug.html",
         "https://www.jra.go.jp/keiba/calendar2026/sep.html"
       ],
       "warnings": [],
-      "error": "403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0805.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0806.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0807.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0810.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0811.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0812.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0813.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0814.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0817.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0818.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0819.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0820.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0803.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0804.html / JRA月間開催日程を確認できませんでした"
+      "error": "403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0807.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0810.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0811.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0812.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0813.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0814.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0817.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0818.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0819.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0820.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0821.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0803.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0804.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0805.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0806.html / JRA月間開催日程を確認できませんでした"
     }
   ]
 }

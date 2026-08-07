@@ -3453,7 +3453,7 @@
     "venue": "船橋",
     "grade": "SⅡ",
     "name": "習志野きらっとスプリント",
-    "winner": ""
+    "winner": "メンコイボクチャン"
   },
   {
     "date": "2026-08-06",
@@ -3462,7 +3462,7 @@
     "venue": "門別",
     "grade": "H3",
     "name": "サッポロクラシックカップ",
-    "winner": ""
+    "winner": "カズドリーム"
   },
   {
     "date": "2026-08-08",
@@ -3475,7 +3475,7 @@
   },
   {
     "date": "2026-08-08",
-    "time": "",
+    "time": "17:42",
     "sport": "boat",
     "venue": "平和島",
     "grade": "GⅢ",
@@ -3529,6 +3529,15 @@
   },
   {
     "date": "2026-08-11",
+    "time": "20:00",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "",
+    "name": "読売レディス杯",
+    "winner": ""
+  },
+  {
+    "date": "2026-08-11",
     "time": "",
     "sport": "nar",
     "venue": "浦和",
@@ -3543,15 +3552,6 @@
     "venue": "盛岡",
     "grade": "JpnⅢ",
     "name": "クラスターカップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-08-11",
-    "time": "",
-    "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "読売レディス杯",
     "winner": ""
   },
   {
@@ -5827,7 +5827,7 @@
     "time": "",
     "sport": "keirin",
     "venue": "川崎",
-    "grade": "GⅢ",
+    "grade": "GP",
     "name": "",
     "winner": ""
   },
@@ -6241,7 +6241,7 @@
     "time": "",
     "sport": "keirin",
     "venue": "奈良",
-    "grade": "GⅢ",
+    "grade": "GⅠ",
     "name": "",
     "winner": ""
   },

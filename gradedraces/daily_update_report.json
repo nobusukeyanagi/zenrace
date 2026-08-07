@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-06T02:19:22.538403+09:00",
-  "base_date": "2026-08-06",
+  "generated_at": "2026-08-08T01:42:12.655537+09:00",
+  "base_date": "2026-08-08",
   "steps": [
     {
       "command": [
@@ -44,17 +44,17 @@
     }
   ],
   "summary": {
-    "master_official_records": 203,
+    "master_official_records": 200,
     "master_added": 0,
     "master_deferred_additions": 0,
     "master_new_addition_end": "2026-09-30",
-    "master_updated": 5,
-    "master_review_required": 8,
+    "master_updated": 7,
+    "master_review_required": 11,
     "master_duplicates": 0,
-    "detail_targets": 30,
-    "detail_changes": 6,
+    "detail_targets": 29,
+    "detail_changes": 9,
     "past_unresolved": 0,
-    "upcoming_missing_time": 21,
+    "upcoming_missing_time": 19,
     "detail_source_failures": 0
   }
 }

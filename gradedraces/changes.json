@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-08-06T02:19:22.379080+09:00",
-  "center_date": "2026-08-06",
+  "generated_at": "2026-08-08T01:42:12.539090+09:00",
+  "center_date": "2026-08-08",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 1,
-    "recent_verification": 1,
-    "upcoming": 29
+    "unresolved": 2,
+    "upcoming": 27
   },
-  "target_count": 30,
-  "change_count": 6,
+  "target_count": 29,
+  "change_count": 9,
   "changes": [
     {
       "date": "2026-08-08",
@@ -146,30 +145,111 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-08-05",
-      "sport": "boat",
-      "venue": "桐生",
-      "name": "オールレディース",
+      "date": "2026-08-06",
+      "sport": "nar",
+      "venue": "船橋",
+      "name": "習志野きらっとスプリント",
       "before": {
-        "date": "2026-08-05",
-        "time": "20:30",
-        "sport": "boat",
-        "venue": "桐生",
-        "grade": "GⅢ",
-        "name": "オールレディース",
+        "date": "2026-08-06",
+        "time": "20:05",
+        "sport": "nar",
+        "venue": "船橋",
+        "grade": "SⅡ",
+        "name": "習志野きらっとスプリント",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-05",
+        "date": "2026-08-06",
+        "time": "20:05",
+        "sport": "nar",
+        "venue": "船橋",
+        "grade": "SⅡ",
+        "name": "習志野きらっとスプリント",
+        "winner": "メンコイボクチャン"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F06&k_babaCode=19",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-08-06",
+      "sport": "nar",
+      "venue": "門別",
+      "name": "サッポロクラシックカップ",
+      "before": {
+        "date": "2026-08-06",
         "time": "20:30",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "サッポロクラシックカップ",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-06",
+        "time": "20:30",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "サッポロクラシックカップ",
+        "winner": "カズドリーム"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F06&k_babaCode=36",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-08-11",
+      "sport": "nar",
+      "venue": "金沢",
+      "name": "読売レディス杯",
+      "before": {
+        "date": "2026-08-11",
+        "time": "",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "読売レディス杯",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-11",
+        "time": "20:00",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "読売レディス杯",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F11&k_babaCode=22",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-08-08",
+      "sport": "boat",
+      "venue": "平和島",
+      "name": "キリンカップ",
+      "before": {
+        "date": "2026-08-08",
+        "time": "",
         "sport": "boat",
-        "venue": "桐生",
+        "venue": "平和島",
         "grade": "GⅢ",
-        "name": "オールレディース",
-        "winner": "大山 千広"
+        "name": "キリンカップ",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-08",
+        "time": "17:42",
+        "sport": "boat",
+        "venue": "平和島",
+        "grade": "GⅢ",
+        "name": "キリンカップ",
+        "winner": ""
       },
       "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=01&hd=20260805&rno=12",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=04&hd=20260808&rno=12",
       "note": "BOAT RACE公式12R結果"
     }
   ]
