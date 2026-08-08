@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-08T01:39:49.660444+09:00",
-  "base_date": "2026-08-08",
+  "generated_at": "2026-08-09T01:18:20.046464+09:00",
+  "base_date": "2026-08-09",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 7,
+  "updated_count": 5,
   "registered_only_count": 11,
   "duplicate_count": 0,
   "additions": [],
@@ -38,7 +38,7 @@
         "venue": "札幌",
         "grade": "GⅢ",
         "name": "エルムS",
-        "winner": ""
+        "winner": "ルクソールカフェ"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-08-08:エルムs"
@@ -138,54 +138,6 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-08-16:札幌記念"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-12-22",
-        "time": "",
-        "sport": "keirin",
-        "venue": "川崎",
-        "grade": "GⅢ",
-        "name": "",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-12-22",
-        "time": "",
-        "sport": "keirin",
-        "venue": "川崎",
-        "grade": "GP",
-        "name": "",
-        "winner": ""
-      },
-      "source_url": "https://keirin.jp/pc/graderaceschedule?scyy=2026",
-      "source_id": "keirin:2026:2026-12-22:川崎:"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2027-02-14",
-        "time": "",
-        "sport": "keirin",
-        "venue": "奈良",
-        "grade": "GⅢ",
-        "name": "",
-        "winner": ""
-      },
-      "after": {
-        "date": "2027-02-14",
-        "time": "",
-        "sport": "keirin",
-        "venue": "奈良",
-        "grade": "GⅠ",
-        "name": "",
-        "winner": ""
-      },
-      "source_url": "https://keirin.jp/pc/graderaceschedule?scyy=2026",
-      "source_id": "keirin:2026:2027-02-14:奈良:"
     }
   ],
   "registered_only": [

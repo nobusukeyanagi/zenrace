@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-08T01:42:12.539493+09:00",
-  "center_date": "2026-08-08",
+  "generated_at": "2026-08-09T01:20:33.801658+09:00",
+  "center_date": "2026-08-09",
   "past_unresolved_count": 0,
-  "upcoming_missing_time_count": 19,
+  "upcoming_missing_time_count": 17,
   "past_unresolved": [],
   "upcoming_missing_time": [
     {
@@ -11,46 +11,6 @@
       "venue": "盛岡",
       "grade": "M1",
       "name": "ひまわり賞（オークス）",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-09",
-      "sport": "keirin",
-      "venue": "佐世保",
-      "grade": "GⅠ",
-      "name": "毎日新聞社杯女子オールスター競輪",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-09",
-      "sport": "keirin",
-      "venue": "和歌山",
-      "grade": "GⅢ",
-      "name": "ワールドサイクリスト支援競輪",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-11",
-      "sport": "nar",
-      "venue": "浦和",
-      "grade": "SⅢ",
-      "name": "ルーキーズサマーカップ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-11",
-      "sport": "nar",
-      "venue": "盛岡",
-      "grade": "JpnⅢ",
-      "name": "クラスターカップ",
       "missing": [
         "time"
       ]
@@ -81,16 +41,6 @@
       "venue": "大井",
       "grade": "SⅢ",
       "name": "黒潮盃",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-13",
-      "sport": "nar",
-      "venue": "門別",
-      "grade": "JpnⅢ",
-      "name": "北海道スプリントカップ",
       "missing": [
         "time"
       ]
@@ -191,6 +141,36 @@
       "venue": "門別",
       "grade": "H2",
       "name": "ブリーダーズゴールドジュニアカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "sport": "nar",
+      "venue": "佐賀",
+      "grade": "",
+      "name": "九州チャンピオンシップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "sport": "nar",
+      "venue": "帯広",
+      "grade": "BG3",
+      "name": "はまなす賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "sport": "nar",
+      "venue": "盛岡",
+      "grade": "M1",
+      "name": "ジュニアグランプリ",
       "missing": [
         "time"
       ]
