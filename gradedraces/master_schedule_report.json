@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-09T01:18:20.046464+09:00",
-  "base_date": "2026-08-09",
+  "generated_at": "2026-08-10T01:19:36.291275+09:00",
+  "base_date": "2026-08-10",
   "calendar_years": [
     2026,
     2027
@@ -9,12 +9,12 @@
     2026,
     2027
   ],
-  "official_record_count": 200,
+  "official_record_count": 199,
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 5,
-  "registered_only_count": 11,
+  "updated_count": 7,
+  "registered_only_count": 12,
   "duplicate_count": 0,
   "additions": [],
   "deferred_additions": [],
@@ -29,7 +29,7 @@
         "venue": "札幌",
         "grade": "GIII",
         "name": "エルムS",
-        "winner": ""
+        "winner": "ルクソールカフェ"
       },
       "after": {
         "date": "2026-08-08",
@@ -62,7 +62,7 @@
         "venue": "中京",
         "grade": "GⅢ",
         "name": "CBC賞",
-        "winner": ""
+        "winner": "フロムダスク"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-08-09:cbc賞"
@@ -86,7 +86,7 @@
         "venue": "新潟",
         "grade": "GⅢ",
         "name": "レパードS",
-        "winner": ""
+        "winner": "チェリヴェント"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-08-09:レパードs"
@@ -138,6 +138,54 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-08-16:札幌記念"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-08-23",
+        "time": "17:10",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GIII",
+        "name": "新潟2歳S",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-23",
+        "time": "17:10",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GⅢ",
+        "name": "新潟2歳S",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-08-23:新潟2歳s"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-08-23",
+        "time": "15:45",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GIII",
+        "name": "キーンランドC",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-23",
+        "time": "15:45",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GⅢ",
+        "name": "キーンランドC",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-08-23:キーンランドc"
     }
   ],
   "registered_only": [
@@ -212,6 +260,13 @@
       "name": "読売新聞社杯全日本選抜競輪"
     },
     {
+      "date": "2027-03-14",
+      "sport": "keirin",
+      "venue": "福井",
+      "grade": "GⅢ",
+      "name": ""
+    },
+    {
       "date": "2027-03-22",
       "sport": "keirin",
       "venue": "大垣",
@@ -263,7 +318,7 @@
     {
       "name": "KEIRIN.JP公式グレード日程",
       "ok": true,
-      "record_count": 136,
+      "record_count": 134,
       "fetched_urls": [
         "https://keirin.jp/pc/graderaceschedule?scyy=2026",
         "https://keirin.jp/pc/graderaceschedule?scyy=2027"

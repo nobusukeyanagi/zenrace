@@ -1,53 +1,37 @@
 {
-  "generated_at": "2026-08-09T01:27:10.742048+09:00",
+  "generated_at": "2026-08-10T01:28:56.202034+09:00",
   "mode": "smart",
-  "target_date": "2026-08-09",
+  "target_date": "2026-08-10",
   "refresh_window": {
-    "start": "2026-08-08",
-    "end": "2026-08-23",
+    "start": "2026-08-09",
+    "end": "2026-08-24",
     "policy": "前日＋当日から14日後"
   },
   "unresolved_window": {
-    "start": "2026-05-11",
-    "end": "2026-08-07",
+    "start": "2026-05-12",
+    "end": "2026-08-08",
     "policy": "過去90日以内の取得失敗を再確認"
   },
   "new_addition_window": {
-    "start": "2026-08-24",
+    "start": "2026-08-25",
     "end": "2026-09-30",
     "policy": "翌月末までの公式月間表に新規開催があれば追加"
   },
-  "before_count": 7636,
+  "before_count": 7641,
   "after_count": 7641,
   "changed": true,
   "refreshed_date_count": 16,
   "refreshed_dates": [
     {
-      "date": "2026-08-08",
-      "before_count": 27,
-      "after_count": 27,
+      "date": "2026-08-09",
+      "before_count": 30,
+      "after_count": 30,
       "changed": false,
       "failed_sports": []
     },
     {
-      "date": "2026-08-09",
-      "before_count": 27,
-      "after_count": 30,
-      "changed": true,
-      "failed_sports": []
-    },
-    {
       "date": "2026-08-10",
-      "before_count": 18,
-      "after_count": 21,
-      "changed": true,
-      "failed_sports": [
-        "jra"
-      ]
-    },
-    {
-      "date": "2026-08-11",
-      "before_count": 16,
+      "before_count": 21,
       "after_count": 23,
       "changed": true,
       "failed_sports": [
@@ -55,9 +39,18 @@
       ]
     },
     {
+      "date": "2026-08-11",
+      "before_count": 23,
+      "after_count": 25,
+      "changed": true,
+      "failed_sports": [
+        "jra"
+      ]
+    },
+    {
       "date": "2026-08-12",
-      "before_count": 11,
-      "after_count": 14,
+      "before_count": 14,
+      "after_count": 20,
       "changed": true,
       "failed_sports": [
         "jra"
@@ -65,8 +58,8 @@
     },
     {
       "date": "2026-08-13",
-      "before_count": 10,
-      "after_count": 14,
+      "before_count": 14,
+      "after_count": 17,
       "changed": true,
       "failed_sports": [
         "jra"
@@ -74,8 +67,8 @@
     },
     {
       "date": "2026-08-14",
-      "before_count": 10,
-      "after_count": 13,
+      "before_count": 13,
+      "after_count": 16,
       "changed": true,
       "failed_sports": [
         "jra"
@@ -84,8 +77,8 @@
     {
       "date": "2026-08-15",
       "before_count": 11,
-      "after_count": 11,
-      "changed": false,
+      "after_count": 13,
+      "changed": true,
       "failed_sports": []
     },
     {
@@ -149,10 +142,19 @@
     },
     {
       "date": "2026-08-23",
-      "before_count": 31,
+      "before_count": 13,
       "after_count": 13,
-      "changed": true,
+      "changed": false,
       "failed_sports": []
+    },
+    {
+      "date": "2026-08-24",
+      "before_count": 27,
+      "after_count": 9,
+      "changed": true,
+      "failed_sports": [
+        "jra"
+      ]
     }
   ],
   "retried_unresolved_count": 5,
@@ -194,7 +196,7 @@
     }
   ],
   "unresolved_before_count": 15,
-  "unresolved_after_count": 15,
+  "unresolved_after_count": 16,
   "new_addition_count": 0,
   "new_additions": [],
   "discovery_results": [
@@ -218,7 +220,7 @@
       "month": "2026-08",
       "sport": "boat",
       "ok": true,
-      "official_entry_count": 140,
+      "official_entry_count": 152,
       "added_count": 0,
       "error": ""
     },
@@ -286,7 +288,7 @@
       "attempts": 18,
       "success_count": 18,
       "failure_count": 0,
-      "entry_count": 574,
+      "entry_count": 575,
       "fetched_urls": [
         "https://www.keirin.jp/sp/raceschedule?scyy=2026&scym=08",
         "https://www.keirin.jp/sp/raceschedule?scyy=2026&scym=09"
@@ -300,11 +302,9 @@
       "attempts": 18,
       "success_count": 18,
       "failure_count": 0,
-      "entry_count": 158,
+      "entry_count": 157,
       "fetched_urls": [
         "https://autorace.jp/calendar/first/schedule.pdf",
-        "https://autorace.jp/race_info/Program/kawaguchi/2026-08-08",
-        "https://autorace.jp/race_info/Program/iizuka/2026-08-08",
         "https://autorace.jp/race_info/Program/kawaguchi/2026-08-09",
         "https://autorace.jp/race_info/Program/iizuka/2026-08-09",
         "https://autorace.jp/race_info/Program/iizuka/2026-08-10",
@@ -338,7 +338,8 @@
         "https://autorace.jp/race_info/Program/hamamatsu/2026-08-22",
         "https://autorace.jp/race_info/Program/iizuka/2026-08-22",
         "https://autorace.jp/race_info/Program/hamamatsu/2026-08-23",
-        "https://autorace.jp/race_info/Program/iizuka/2026-08-23"
+        "https://autorace.jp/race_info/Program/iizuka/2026-08-23",
+        "https://autorace.jp/race_info/Program/iizuka/2026-08-24"
       ],
       "warnings": [],
       "error": ""
@@ -349,7 +350,7 @@
       "attempts": 18,
       "success_count": 18,
       "failure_count": 0,
-      "entry_count": 199,
+      "entry_count": 209,
       "fetched_urls": [
         "https://www.boatrace.jp/owpc/pc/race/monthlyschedule?ym=202608",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=09&hd=20260801",
@@ -367,23 +368,25 @@
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=05&hd=20260805",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=06&hd=20260805",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=21&hd=20260805",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=02&hd=20260808",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=04&hd=20260808",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=05&hd=20260808",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=09&hd=20260808",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=10&hd=20260808",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=12&hd=20260808",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=14&hd=20260808",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=15&hd=20260808",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=16&hd=20260808",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=17&hd=20260808",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=18&hd=20260808",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=19&hd=20260808",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=20&hd=20260808",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=24&hd=20260808",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=02&hd=20260809",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=03&hd=20260809",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=05&hd=20260809",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=09&hd=20260809",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=10&hd=20260809",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=12&hd=20260809",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=13&hd=20260809",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=14&hd=20260809",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=15&hd=20260809",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=16&hd=20260809",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=18&hd=20260809",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=20&hd=20260809",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=23&hd=20260809",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=24&hd=20260809",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=08&hd=20260810",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=21&hd=20260810",
         "https://www.boatrace.jp/owpc/pc/race/monthlyschedule?ym=202609"
       ],
       "warnings": [],
@@ -395,11 +398,9 @@
       "attempts": 18,
       "success_count": 18,
       "failure_count": 0,
-      "entry_count": 244,
+      "entry_count": 249,
       "fetched_urls": [
         "https://www.keiba.go.jp/KeibaWeb/MonthlyConveneInfo/MonthlyConveneInfoTop?k_year=2026&k_month=8",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F08&k_babaCode=03",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F08&k_babaCode=32",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F09&k_babaCode=03",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F09&k_babaCode=10",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F09&k_babaCode=22",
@@ -458,6 +459,11 @@
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=10",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=22",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=32",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F24&k_babaCode=03",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F24&k_babaCode=10",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F24&k_babaCode=19",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F24&k_babaCode=22",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F24&k_babaCode=24",
         "https://www.keiba.go.jp/KeibaWeb/MonthlyConveneInfo/MonthlyConveneInfoTop?k_year=2026&k_month=9"
       ],
       "warnings": [],
@@ -467,11 +473,10 @@
       "sport": "jra",
       "ok": false,
       "attempts": 23,
-      "success_count": 6,
-      "failure_count": 17,
-      "entry_count": 18,
+      "success_count": 5,
+      "failure_count": 18,
+      "entry_count": 15,
       "fetched_urls": [
-        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0808.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0809.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0810.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0811.html",
@@ -487,6 +492,7 @@
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0821.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0822.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0823.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0824.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0803.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0804.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0805.html",
@@ -496,7 +502,7 @@
         "https://www.jra.go.jp/keiba/calendar2026/sep.html"
       ],
       "warnings": [],
-      "error": "403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0810.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0811.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0812.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0813.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0814.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0817.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0818.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0819.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0820.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0821.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0803.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0804.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0805.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0806.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0807.html / JRA月間開催日程を確認できませんでした"
+      "error": "403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0810.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0811.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0812.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0813.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0814.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0817.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0818.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0819.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0820.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0821.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0824.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0803.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0804.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0805.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0806.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0807.html / JRA月間開催日程を確認できませんでした"
     }
   ]
 }
