@@ -1,69 +1,14 @@
 {
-  "generated_at": "2026-08-10T01:21:39.620345+09:00",
-  "center_date": "2026-08-10",
+  "generated_at": "2026-08-11T01:43:19.387592+09:00",
+  "center_date": "2026-08-11",
   "selection_mode": "smart",
   "selection_counts": {
-    "recent_verification": 5,
-    "unresolved": 3,
-    "upcoming": 25
+    "unresolved": 1,
+    "upcoming": 28
   },
-  "target_count": 30,
-  "change_count": 10,
+  "target_count": 29,
+  "change_count": 7,
   "changes": [
-    {
-      "date": "2026-08-09",
-      "sport": "jra",
-      "venue": "新潟",
-      "name": "レパードS",
-      "before": {
-        "date": "2026-08-09",
-        "time": "17:20",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GⅢ",
-        "name": "レパードS",
-        "winner": "チェリヴェント"
-      },
-      "after": {
-        "date": "2026-08-09",
-        "time": "17:20",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GIII",
-        "name": "レパードS",
-        "winner": "チェリヴェント"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-08-09",
-      "sport": "jra",
-      "venue": "中京",
-      "name": "CBC賞",
-      "before": {
-        "date": "2026-08-09",
-        "time": "13:50",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GⅢ",
-        "name": "CBC賞",
-        "winner": "フロムダスク"
-      },
-      "after": {
-        "date": "2026-08-09",
-        "time": "13:50",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GIII",
-        "name": "CBC賞",
-        "winner": "フロムダスク"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
     {
       "date": "2026-08-16",
       "sport": "jra",
@@ -173,112 +118,85 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-08-12",
+      "date": "2026-08-09",
       "sport": "nar",
-      "venue": "笠松",
-      "name": "くろゆり賞",
+      "venue": "盛岡",
+      "name": "ひまわり賞（オークス）",
       "before": {
-        "date": "2026-08-12",
+        "date": "2026-08-09",
         "time": "",
         "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅠ",
-        "name": "くろゆり賞",
+        "venue": "盛岡",
+        "grade": "M1",
+        "name": "ひまわり賞（オークス）",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-12",
-        "time": "13:35",
+        "date": "2026-08-09",
+        "time": "",
         "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅠ",
-        "name": "くろゆり賞",
-        "winner": ""
+        "venue": "盛岡",
+        "grade": "M1",
+        "name": "ひまわり賞（オークス）",
+        "winner": "歴代"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F12&k_babaCode=23",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F09&k_babaCode=10",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-08-14",
+      "date": "2026-08-13",
       "sport": "nar",
-      "venue": "園田",
-      "name": "摂津盃",
+      "venue": "大井",
+      "name": "黒潮盃",
       "before": {
-        "date": "2026-08-14",
+        "date": "2026-08-13",
         "time": "",
         "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅰ",
-        "name": "摂津盃",
+        "venue": "大井",
+        "grade": "SⅢ",
+        "name": "黒潮盃",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-14",
-        "time": "19:55",
+        "date": "2026-08-13",
+        "time": "20:10",
         "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅰ",
-        "name": "摂津盃",
+        "venue": "大井",
+        "grade": "SⅢ",
+        "name": "黒潮盃",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F14&k_babaCode=27",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F13&k_babaCode=20",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-08-09",
-      "sport": "keirin",
-      "venue": "和歌山",
-      "name": "ワールドサイクリスト支援競輪",
+      "date": "2026-08-11",
+      "sport": "boat",
+      "venue": "徳山",
+      "name": "レディースチャンピオン",
       "before": {
-        "date": "2026-08-09",
-        "time": "15:30",
-        "sport": "keirin",
-        "venue": "和歌山",
-        "grade": "GⅢ",
-        "name": "ワールドサイクリスト支援競輪",
+        "date": "2026-08-11",
+        "time": "",
+        "sport": "boat",
+        "venue": "徳山",
+        "grade": "PGⅠ",
+        "name": "レディースチャンピオン",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-09",
-        "time": "15:30",
-        "sport": "keirin",
-        "venue": "和歌山",
-        "grade": "GⅢ",
-        "name": "ワールドサイクリスト支援競輪",
-        "winner": "トゥルーマ 29歳/-期"
-      },
-      "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=55&kaisaiBi=20260809&raceNo=12",
-      "note": "公開結果によるKEIRIN.JP補完（12R）"
-    },
-    {
-      "date": "2026-08-09",
-      "sport": "keirin",
-      "venue": "佐世保",
-      "name": "毎日新聞社杯女子オールスター競輪",
-      "before": {
-        "date": "2026-08-09",
-        "time": "20:30",
-        "sport": "keirin",
-        "venue": "佐世保",
-        "grade": "GⅠ",
-        "name": "毎日新聞社杯女子オールスター競輪",
+        "date": "2026-08-11",
+        "time": "16:35",
+        "sport": "boat",
+        "venue": "徳山",
+        "grade": "PGⅠ",
+        "name": "レディースチャンピオン",
         "winner": ""
       },
-      "after": {
-        "date": "2026-08-09",
-        "time": "20:30",
-        "sport": "keirin",
-        "venue": "佐世保",
-        "grade": "GⅠ",
-        "name": "毎日新聞社杯女子オールスター競輪",
-        "winner": "佐藤 水菜"
-      },
-      "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=85&kaisaiBi=20260809&raceNo=12",
-      "note": "公開結果によるKEIRIN.JP補完（12R）"
+      "source": "ボートレース",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=18&hd=20260811&rno=12",
+      "note": "BOAT RACE公式12R結果"
     }
   ]
 }

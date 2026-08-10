@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-10T01:19:36.291275+09:00",
-  "base_date": "2026-08-10",
+  "generated_at": "2026-08-11T01:41:03.083544+09:00",
+  "base_date": "2026-08-11",
   "calendar_years": [
     2026,
     2027
@@ -9,40 +9,16 @@
     2026,
     2027
   ],
-  "official_record_count": 199,
+  "official_record_count": 197,
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 7,
-  "registered_only_count": 12,
+  "updated_count": 6,
+  "registered_only_count": 14,
   "duplicate_count": 0,
   "additions": [],
   "deferred_additions": [],
   "changes": [
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-08",
-        "time": "14:20",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GIII",
-        "name": "エルムS",
-        "winner": "ルクソールカフェ"
-      },
-      "after": {
-        "date": "2026-08-08",
-        "time": "14:20",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GⅢ",
-        "name": "エルムS",
-        "winner": "ルクソールカフェ"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-08:エルムs"
-    },
     {
       "type": "master_updated",
       "match_type": "exact",
@@ -53,7 +29,7 @@
         "venue": "中京",
         "grade": "GIII",
         "name": "CBC賞",
-        "winner": ""
+        "winner": "フロムダスク"
       },
       "after": {
         "date": "2026-08-09",
@@ -77,7 +53,7 @@
         "venue": "新潟",
         "grade": "GIII",
         "name": "レパードS",
-        "winner": ""
+        "winner": "チェリヴェント"
       },
       "after": {
         "date": "2026-08-09",
@@ -232,6 +208,13 @@
       "name": ""
     },
     {
+      "date": "2026-12-22",
+      "sport": "keirin",
+      "venue": "川崎",
+      "grade": "GP",
+      "name": ""
+    },
+    {
       "date": "2026-12-30",
       "sport": "keirin",
       "venue": "いわき平",
@@ -258,6 +241,13 @@
       "venue": "広島",
       "grade": "GⅠ",
       "name": "読売新聞社杯全日本選抜競輪"
+    },
+    {
+      "date": "2027-02-28",
+      "sport": "keirin",
+      "venue": "久留米",
+      "grade": "GⅢ",
+      "name": ""
     },
     {
       "date": "2027-03-14",
@@ -318,7 +308,7 @@
     {
       "name": "KEIRIN.JP公式グレード日程",
       "ok": true,
-      "record_count": 134,
+      "record_count": 130,
       "fetched_urls": [
         "https://keirin.jp/pc/graderaceschedule?scyy=2026",
         "https://keirin.jp/pc/graderaceschedule?scyy=2027"
