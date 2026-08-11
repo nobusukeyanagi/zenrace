@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-08-11T01:43:19.387592+09:00",
-  "center_date": "2026-08-11",
+  "generated_at": "2026-08-12T01:46:39.244374+09:00",
+  "center_date": "2026-08-12",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 1,
-    "upcoming": 28
+    "unresolved": 5,
+    "recent_verification": 4,
+    "upcoming": 25
   },
-  "target_count": 29,
-  "change_count": 7,
+  "target_count": 30,
+  "change_count": 8,
   "changes": [
     {
       "date": "2026-08-16",
@@ -118,57 +119,84 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-08-09",
+      "date": "2026-08-11",
       "sport": "nar",
       "venue": "盛岡",
-      "name": "ひまわり賞（オークス）",
+      "name": "クラスターカップ",
       "before": {
-        "date": "2026-08-09",
-        "time": "",
+        "date": "2026-08-11",
+        "time": "17:05",
         "sport": "nar",
         "venue": "盛岡",
-        "grade": "M1",
-        "name": "ひまわり賞（オークス）",
+        "grade": "JpnⅢ",
+        "name": "クラスターカップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-09",
-        "time": "",
+        "date": "2026-08-11",
+        "time": "17:05",
         "sport": "nar",
         "venue": "盛岡",
-        "grade": "M1",
-        "name": "ひまわり賞（オークス）",
-        "winner": "歴代"
+        "grade": "JpnⅢ",
+        "name": "クラスターカップ",
+        "winner": "アンズアメ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F09&k_babaCode=10",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F11&k_babaCode=10",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-08-13",
+      "date": "2026-08-11",
       "sport": "nar",
-      "venue": "大井",
-      "name": "黒潮盃",
+      "venue": "浦和",
+      "name": "ルーキーズサマーカップ",
       "before": {
-        "date": "2026-08-13",
-        "time": "",
+        "date": "2026-08-11",
+        "time": "18:55",
         "sport": "nar",
-        "venue": "大井",
+        "venue": "浦和",
         "grade": "SⅢ",
-        "name": "黒潮盃",
+        "name": "ルーキーズサマーカップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-13",
-        "time": "20:10",
+        "date": "2026-08-11",
+        "time": "18:55",
         "sport": "nar",
-        "venue": "大井",
+        "venue": "浦和",
         "grade": "SⅢ",
-        "name": "黒潮盃",
-        "winner": ""
+        "name": "ルーキーズサマーカップ",
+        "winner": "ウノキボンバイエ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F13&k_babaCode=20",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F11&k_babaCode=18",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-08-11",
+      "sport": "nar",
+      "venue": "金沢",
+      "name": "読売レディス杯",
+      "before": {
+        "date": "2026-08-11",
+        "time": "20:00",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "読売レディス杯",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-11",
+        "time": "20:00",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "読売レディス杯",
+        "winner": "スカンジナビア"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F11&k_babaCode=22",
       "note": "地方競馬公式レース情報"
     },
     {
@@ -178,7 +206,7 @@
       "name": "レディースチャンピオン",
       "before": {
         "date": "2026-08-11",
-        "time": "",
+        "time": "16:35",
         "sport": "boat",
         "venue": "徳山",
         "grade": "PGⅠ",
@@ -192,7 +220,7 @@
         "venue": "徳山",
         "grade": "PGⅠ",
         "name": "レディースチャンピオン",
-        "winner": ""
+        "winner": "川野 芽唯"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=18&hd=20260811&rno=12",
