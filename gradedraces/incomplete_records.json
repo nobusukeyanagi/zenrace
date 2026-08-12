@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-12T01:46:39.244939+09:00",
-  "center_date": "2026-08-12",
+  "generated_at": "2026-08-13T01:46:32.879161+09:00",
+  "center_date": "2026-08-13",
   "past_unresolved_count": 1,
-  "upcoming_missing_time_count": 16,
+  "upcoming_missing_time_count": 18,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -172,6 +172,26 @@
       "venue": "船橋",
       "grade": "SⅢ",
       "name": "フリオーソレジェンドカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "sport": "nar",
+      "venue": "門別",
+      "grade": "JpnⅢ",
+      "name": "ブリーダーズゴールドカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "sport": "boat",
+      "venue": "常滑",
+      "grade": "GⅢ",
+      "name": "中日新聞・中日スポーツ 中日カップ",
       "missing": [
         "time"
       ]
