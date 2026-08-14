@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-08-14T01:45:14.222146+09:00",
-  "center_date": "2026-08-14",
+  "generated_at": "2026-08-15T01:41:12.587429+09:00",
+  "center_date": "2026-08-15",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 3,
-    "recent_verification": 2,
-    "upcoming": 24
+    "unresolved": 2,
+    "recent_verification": 1,
+    "upcoming": 23
   },
-  "target_count": 27,
+  "target_count": 25,
   "change_count": 6,
   "changes": [
     {
@@ -119,57 +119,57 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-08-13",
+      "date": "2026-08-14",
       "sport": "nar",
-      "venue": "門別",
-      "name": "北海道スプリントカップ",
+      "venue": "園田",
+      "name": "摂津盃",
       "before": {
-        "date": "2026-08-13",
+        "date": "2026-08-14",
         "time": "19:55",
         "sport": "nar",
-        "venue": "門別",
-        "grade": "JpnⅢ",
-        "name": "北海道スプリントカップ",
+        "venue": "園田",
+        "grade": "重賞Ⅰ",
+        "name": "摂津盃",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-13",
+        "date": "2026-08-14",
         "time": "19:55",
         "sport": "nar",
-        "venue": "門別",
-        "grade": "JpnⅢ",
-        "name": "北海道スプリントカップ",
-        "winner": "ベストグリーン"
+        "venue": "園田",
+        "grade": "重賞Ⅰ",
+        "name": "摂津盃",
+        "winner": "オマツリオトコ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F13&k_babaCode=36",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F14&k_babaCode=27",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-08-13",
+      "date": "2026-08-16",
       "sport": "nar",
-      "venue": "大井",
-      "name": "黒潮盃",
+      "venue": "帯広",
+      "name": "ばんえいグランプリ",
       "before": {
-        "date": "2026-08-13",
-        "time": "20:10",
+        "date": "2026-08-16",
+        "time": "",
         "sport": "nar",
-        "venue": "大井",
-        "grade": "SⅢ",
-        "name": "黒潮盃",
+        "venue": "帯広",
+        "grade": "BG2",
+        "name": "ばんえいグランプリ",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-13",
-        "time": "20:15",
+        "date": "2026-08-16",
+        "time": "20:00",
         "sport": "nar",
-        "venue": "大井",
-        "grade": "SⅢ",
-        "name": "黒潮盃",
-        "winner": "ミルトイブニング"
+        "venue": "帯広",
+        "grade": "BG2",
+        "name": "ばんえいグランプリ",
+        "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F13&k_babaCode=20",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F16&k_babaCode=03",
       "note": "地方競馬公式レース情報"
     }
   ]
