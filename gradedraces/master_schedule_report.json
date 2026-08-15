@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-15T01:38:54.347136+09:00",
-  "base_date": "2026-08-15",
+  "generated_at": "2026-08-16T01:10:47.355360+09:00",
+  "base_date": "2026-08-16",
   "calendar_years": [
     2026,
     2027
@@ -13,12 +13,36 @@
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 4,
+  "updated_count": 5,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
   "deferred_additions": [],
   "changes": [
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-08-15",
+        "time": "16:40",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "J・GⅢ",
+        "name": "J ・ GIII 新潟ジャンプS",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-15",
+        "time": "16:40",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "J・GⅢ",
+        "name": "J ・ GIII 新潟ジャンプS",
+        "winner": "ローディアマント"
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-08-15:j・giii新潟ジャンプs"
+    },
     {
       "type": "master_updated",
       "match_type": "exact",

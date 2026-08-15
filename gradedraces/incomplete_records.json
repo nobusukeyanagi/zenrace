@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-15T01:41:12.587966+09:00",
-  "center_date": "2026-08-15",
+  "generated_at": "2026-08-16T01:13:16.843099+09:00",
+  "center_date": "2026-08-16",
   "past_unresolved_count": 1,
   "upcoming_missing_time_count": 17,
   "past_unresolved": [
@@ -16,16 +16,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-08-16",
-      "sport": "keirin",
-      "venue": "松山",
-      "grade": "GⅠ",
-      "name": "オールスター競輪",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-08-16",
       "sport": "auto",
@@ -47,31 +37,11 @@
       ]
     },
     {
-      "date": "2026-08-18",
-      "sport": "nar",
-      "venue": "盛岡",
-      "grade": "M1",
-      "name": "岩手県知事杯OROカップ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
       "date": "2026-08-19",
       "sport": "nar",
       "venue": "川崎",
       "grade": "SⅡ",
       "name": "スパーキングサマーカップ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-19",
-      "sport": "nar",
-      "venue": "門別",
-      "grade": "H3",
-      "name": "フルールカップ",
       "missing": [
         "time"
       ]
@@ -182,6 +152,36 @@
       "venue": "常滑",
       "grade": "GⅢ",
       "name": "中日新聞・中日スポーツ 中日カップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "sport": "nar",
+      "venue": "盛岡",
+      "grade": "M1",
+      "name": "ビューチフルドリーマーカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "sport": "boat",
+      "venue": "桐生",
+      "grade": "SG",
+      "name": "ボートレースメモリアル",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "sport": "keirin",
+      "venue": "前橋",
+      "grade": "GⅢ",
+      "name": "三山王冠争奪戦",
       "missing": [
         "time"
       ]
