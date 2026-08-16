@@ -3615,7 +3615,7 @@
     "venue": "中京",
     "grade": "GIII",
     "name": "中京記念",
-    "winner": ""
+    "winner": "ラヴァンダ"
   },
   {
     "date": "2026-08-16",
@@ -3624,7 +3624,7 @@
     "venue": "札幌",
     "grade": "GII",
     "name": "札幌記念",
-    "winner": ""
+    "winner": "シェイクユアハート"
   },
   {
     "date": "2026-08-16",
@@ -3633,7 +3633,7 @@
     "venue": "帯広",
     "grade": "BG2",
     "name": "ばんえいグランプリ",
-    "winner": ""
+    "winner": "メムロボブサップ"
   },
   {
     "date": "2026-08-16",
@@ -3651,11 +3651,11 @@
     "venue": "伊勢崎",
     "grade": "SG",
     "name": "オートレースグランプリ",
-    "winner": ""
+    "winner": "青山 周平"
   },
   {
     "date": "2026-08-17",
-    "time": "",
+    "time": "20:40",
     "sport": "boat",
     "venue": "大村",
     "grade": "GⅢ",
@@ -3673,20 +3673,20 @@
   },
   {
     "date": "2026-08-19",
+    "time": "20:10",
+    "sport": "nar",
+    "venue": "川崎",
+    "grade": "SⅡ",
+    "name": "スパーキングサマーカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-08-19",
     "time": "20:35",
     "sport": "nar",
     "venue": "門別",
     "grade": "H3",
     "name": "フルールカップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-08-19",
-    "time": "",
-    "sport": "nar",
-    "venue": "川崎",
-    "grade": "SⅡ",
-    "name": "スパーキングサマーカップ",
     "winner": ""
   },
   {

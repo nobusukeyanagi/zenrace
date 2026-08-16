@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-16T01:10:47.355360+09:00",
-  "base_date": "2026-08-16",
+  "generated_at": "2026-08-17T01:10:57.308778+09:00",
+  "base_date": "2026-08-17",
   "calendar_years": [
     2026,
     2027
@@ -9,40 +9,16 @@
     2026,
     2027
   ],
-  "official_record_count": 194,
+  "official_record_count": 140,
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 5,
-  "registered_only_count": 17,
+  "updated_count": 6,
+  "registered_only_count": 0,
   "duplicate_count": 0,
   "additions": [],
   "deferred_additions": [],
   "changes": [
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-15",
-        "time": "16:40",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "J・GⅢ",
-        "name": "J ・ GIII 新潟ジャンプS",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-15",
-        "time": "16:40",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "J・GⅢ",
-        "name": "J ・ GIII 新潟ジャンプS",
-        "winner": "ローディアマント"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-15:j・giii新潟ジャンプs"
-    },
     {
       "type": "master_updated",
       "match_type": "exact",
@@ -62,7 +38,7 @@
         "venue": "中京",
         "grade": "GⅢ",
         "name": "中京記念",
-        "winner": ""
+        "winner": "ラヴァンダ"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-08-16:中京記念"
@@ -86,7 +62,7 @@
         "venue": "札幌",
         "grade": "GⅡ",
         "name": "札幌記念",
-        "winner": ""
+        "winner": "シェイクユアハート"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-08-16:札幌記念"
@@ -138,129 +114,57 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-08-23:キーンランドc"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-08-30",
+        "time": "16:10",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GIII",
+        "name": "中京2歳S",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-30",
+        "time": "16:10",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GⅢ",
+        "name": "中京2歳S",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-08-30:中京2歳s"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-08-30",
+        "time": "16:10",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GIII",
+        "name": "新潟記念",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-30",
+        "time": "16:10",
+        "sport": "jra",
+        "venue": "新潟",
+        "grade": "GⅢ",
+        "name": "新潟記念",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-08-30:新潟記念"
     }
   ],
-  "registered_only": [
-    {
-      "date": "2026-10-12",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "grade": "GⅠ",
-      "name": "寛仁親王牌・世界選手権記念トーナメント"
-    },
-    {
-      "date": "2026-10-20",
-      "sport": "keirin",
-      "venue": "京王閣",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2026-10-25",
-      "sport": "keirin",
-      "venue": "熊本",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2026-11-23",
-      "sport": "keirin",
-      "venue": "小倉",
-      "grade": "GⅠ",
-      "name": "朝日新聞社杯競輪祭・競輪祭女子王座戦"
-    },
-    {
-      "date": "2026-12-06",
-      "sport": "keirin",
-      "venue": "別府",
-      "grade": "GP",
-      "name": ""
-    },
-    {
-      "date": "2026-12-13",
-      "sport": "keirin",
-      "venue": "佐世保",
-      "grade": "GP",
-      "name": ""
-    },
-    {
-      "date": "2026-12-22",
-      "sport": "keirin",
-      "venue": "川崎",
-      "grade": "GP",
-      "name": ""
-    },
-    {
-      "date": "2026-12-30",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "grade": "GP",
-      "name": "KEIRINグランプリ2026"
-    },
-    {
-      "date": "2027-01-12",
-      "sport": "keirin",
-      "venue": "和歌山",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2027-01-17",
-      "sport": "keirin",
-      "venue": "大宮",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2027-01-24",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2027-02-07",
-      "sport": "keirin",
-      "venue": "静岡",
-      "grade": "GⅠ",
-      "name": ""
-    },
-    {
-      "date": "2027-02-23",
-      "sport": "keirin",
-      "venue": "広島",
-      "grade": "GⅠ",
-      "name": "読売新聞社杯全日本選抜競輪"
-    },
-    {
-      "date": "2027-02-28",
-      "sport": "keirin",
-      "venue": "久留米",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2027-02-28",
-      "sport": "keirin",
-      "venue": "大宮",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2027-03-14",
-      "sport": "keirin",
-      "venue": "福井",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2027-03-22",
-      "sport": "keirin",
-      "venue": "大垣",
-      "grade": "GⅡ",
-      "name": "ウィナーズカップ"
-    }
-  ],
+  "registered_only": [],
   "duplicates": [],
   "sources": [
     {
@@ -304,14 +208,14 @@
     },
     {
       "name": "KEIRIN.JP公式グレード日程",
-      "ok": true,
-      "record_count": 124,
-      "fetched_urls": [
-        "https://keirin.jp/pc/graderaceschedule?scyy=2026",
-        "https://keirin.jp/pc/graderaceschedule?scyy=2027"
+      "ok": false,
+      "record_count": 0,
+      "fetched_urls": [],
+      "warnings": [
+        "2026年度: 日程を解析できませんでした",
+        "2027年度: 日程を解析できませんでした"
       ],
-      "warnings": [],
-      "error": ""
+      "error": "競輪日程を取得できませんでした"
     },
     {
       "name": "AutoRace.JP公式年間日程",
