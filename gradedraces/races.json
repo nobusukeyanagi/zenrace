@@ -3613,7 +3613,7 @@
     "time": "14:00",
     "sport": "jra",
     "venue": "中京",
-    "grade": "GIII",
+    "grade": "GⅢ",
     "name": "中京記念",
     "winner": "ラヴァンダ"
   },
@@ -3622,7 +3622,7 @@
     "time": "16:30",
     "sport": "jra",
     "venue": "札幌",
-    "grade": "GII",
+    "grade": "GⅡ",
     "name": "札幌記念",
     "winner": "シェイクユアハート"
   },
@@ -3660,7 +3660,7 @@
     "venue": "大村",
     "grade": "GⅢ",
     "name": "オールレディース",
-    "winner": ""
+    "winner": "平高 奈菜"
   },
   {
     "date": "2026-08-18",
@@ -3691,7 +3691,7 @@
   },
   {
     "date": "2026-08-20",
-    "time": "",
+    "time": "20:05",
     "sport": "nar",
     "venue": "名古屋",
     "grade": "SPⅡ",

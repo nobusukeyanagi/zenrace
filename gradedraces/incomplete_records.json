@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-17T01:13:07.746959+09:00",
-  "center_date": "2026-08-17",
+  "generated_at": "2026-08-18T01:16:00.512367+09:00",
+  "center_date": "2026-08-18",
   "past_unresolved_count": 3,
   "upcoming_missing_time_count": 14,
   "past_unresolved": [
@@ -36,16 +36,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-08-20",
-      "sport": "nar",
-      "venue": "名古屋",
-      "grade": "SPⅡ",
-      "name": "ベイスプリント",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-08-20",
       "sport": "nar",
@@ -172,6 +162,16 @@
       "venue": "前橋",
       "grade": "GⅢ",
       "name": "三山王冠争奪戦",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "sport": "nar",
+      "venue": "盛岡",
+      "grade": "JpnⅡ",
+      "name": "不来方賞",
       "missing": [
         "time"
       ]

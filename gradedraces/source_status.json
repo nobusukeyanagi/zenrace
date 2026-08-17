@@ -1,20 +1,18 @@
 {
-  "generated_at": "2026-08-17T01:13:07.746585+09:00",
+  "generated_at": "2026-08-18T01:16:00.511870+09:00",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 4,
-    "recent_verification": 5,
+    "recent_verification": 1,
     "upcoming": 22
   },
   "sources": [
     {
       "name": "JRA",
       "ok": true,
-      "patch_count": 11,
+      "patch_count": 7,
       "fetched_urls": [
         "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0816.html",
-        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0816.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0823.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0823.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0830.html",
@@ -31,12 +29,11 @@
         "https://www.keiba.go.jp/gradedrace/schedule.html",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F09&k_babaCode=10",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=10&k_nenndo=2026",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F16&k_babaCode=03",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F18&k_babaCode=10",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F19&k_babaCode=36",
-        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=36&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F19&k_babaCode=21",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=21&k_nenndo=2026",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F19&k_babaCode=36",
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=36&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=24",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=24&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=36",
@@ -50,7 +47,8 @@
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F26&k_babaCode=19",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=19&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F27&k_babaCode=36",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F30&k_babaCode=10"
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F30&k_babaCode=10",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F01&k_babaCode=10"
       ],
       "warnings": [
         "地方競馬重賞一覧の本文を十分に確認できませんでした。個別レース情報の取得は継続します。"
@@ -74,13 +72,17 @@
     },
     {
       "name": "競輪",
-      "ok": false,
+      "ok": true,
       "patch_count": 0,
       "fetched_urls": [
-        "https://keirin.jp:443/pc/sorry/index.html"
+        "https://keirin.jp/pc/graderaceschedule"
       ],
-      "warnings": [],
-      "error": "競輪グレード日程の内容を確認できません"
+      "warnings": [
+        "2026-08-16 松山: 公開結果取得を見送り (HTTPSConnectionPool(host='www.oddspark.com', port=443): Max retries exceeded with url: /keirin/RaceKekka.do?joCode=75&kaisaiBi=20260816&raceNo=12 (Caused by ResponseError('too many 503 error responses')))",
+        "2026-08-25 松戸: 発走時刻取得を見送り (HTTPSConnectionPool(host='www.oddspark.com', port=443): Max retries exceeded with url: /keirin/RaceList.do?joCode=31&kaisaiBi=20260825&raceNo=12 (Caused by ResponseError('too many 503 error responses')))",
+        "2026-08-30 前橋: 発走時刻取得を見送り (HTTPSConnectionPool(host='www.oddspark.com', port=443): Max retries exceeded with url: /keirin/RaceList.do?joCode=22&kaisaiBi=20260830&raceNo=12 (Caused by ResponseError('too many 503 error responses')))"
+      ],
+      "error": ""
     },
     {
       "name": "オートレース",
