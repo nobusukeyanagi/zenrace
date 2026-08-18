@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-08-18T01:16:00.511850+09:00",
-  "center_date": "2026-08-18",
+  "generated_at": "2026-08-19T01:20:02.966728+09:00",
+  "center_date": "2026-08-19",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 4,
     "recent_verification": 1,
-    "upcoming": 22
+    "upcoming": 23
   },
-  "target_count": 26,
+  "target_count": 27,
   "change_count": 6,
   "changes": [
     {
@@ -119,58 +119,58 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-08-20",
+      "date": "2026-08-18",
       "sport": "nar",
-      "venue": "名古屋",
-      "name": "ベイスプリント",
+      "venue": "盛岡",
+      "name": "岩手県知事杯OROカップ",
       "before": {
-        "date": "2026-08-20",
-        "time": "",
+        "date": "2026-08-18",
+        "time": "17:40",
         "sport": "nar",
-        "venue": "名古屋",
-        "grade": "SPⅡ",
-        "name": "ベイスプリント",
+        "venue": "盛岡",
+        "grade": "M1",
+        "name": "岩手県知事杯OROカップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-20",
-        "time": "20:05",
+        "date": "2026-08-18",
+        "time": "17:40",
         "sport": "nar",
-        "venue": "名古屋",
-        "grade": "SPⅡ",
-        "name": "ベイスプリント",
-        "winner": ""
+        "venue": "盛岡",
+        "grade": "M1",
+        "name": "岩手県知事杯OROカップ",
+        "winner": "シンボ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=24",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F18&k_babaCode=10",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-08-17",
-      "sport": "boat",
-      "venue": "大村",
-      "name": "オールレディース",
+      "date": "2026-08-16",
+      "sport": "keirin",
+      "venue": "松山",
+      "name": "オールスター競輪",
       "before": {
-        "date": "2026-08-17",
-        "time": "20:40",
-        "sport": "boat",
-        "venue": "大村",
-        "grade": "GⅢ",
-        "name": "オールレディース",
+        "date": "2026-08-16",
+        "time": "20:30",
+        "sport": "keirin",
+        "venue": "松山",
+        "grade": "GⅠ",
+        "name": "オールスター競輪",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-17",
-        "time": "20:40",
-        "sport": "boat",
-        "venue": "大村",
-        "grade": "GⅢ",
-        "name": "オールレディース",
-        "winner": "平高 奈菜"
+        "date": "2026-08-16",
+        "time": "20:30",
+        "sport": "keirin",
+        "venue": "松山",
+        "grade": "GⅠ",
+        "name": "オールスター競輪",
+        "winner": "犬伏 湧也"
       },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=24&hd=20260817&rno=12",
-      "note": "BOAT RACE公式12R結果"
+      "source": "競輪",
+      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=75&kaisaiBi=20260816&raceNo=11",
+      "note": "公開結果によるKEIRIN.JP補完（11R）"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-18T01:13:33.761662+09:00",
-  "base_date": "2026-08-18",
+  "generated_at": "2026-08-19T01:17:37.866987+09:00",
+  "base_date": "2026-08-19",
   "calendar_years": [
     2026,
     2027
@@ -13,60 +13,12 @@
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 6,
+  "updated_count": 4,
   "registered_only_count": 14,
   "duplicate_count": 0,
   "additions": [],
   "deferred_additions": [],
   "changes": [
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-16",
-        "time": "14:00",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GIII",
-        "name": "中京記念",
-        "winner": "ラヴァンダ"
-      },
-      "after": {
-        "date": "2026-08-16",
-        "time": "14:00",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GⅢ",
-        "name": "中京記念",
-        "winner": "ラヴァンダ"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-16:中京記念"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-16",
-        "time": "16:30",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GII",
-        "name": "札幌記念",
-        "winner": "シェイクユアハート"
-      },
-      "after": {
-        "date": "2026-08-16",
-        "time": "16:30",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GⅡ",
-        "name": "札幌記念",
-        "winner": "シェイクユアハート"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-16:札幌記念"
-    },
     {
       "type": "master_updated",
       "match_type": "exact",

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-18T01:16:00.512367+09:00",
-  "center_date": "2026-08-18",
-  "past_unresolved_count": 3,
-  "upcoming_missing_time_count": 14,
+  "generated_at": "2026-08-19T01:20:02.967236+09:00",
+  "center_date": "2026-08-19",
+  "past_unresolved_count": 2,
+  "upcoming_missing_time_count": 16,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -12,16 +12,6 @@
       "name": "ひまわり賞（オークス）",
       "missing": [
         "time"
-      ]
-    },
-    {
-      "date": "2026-08-16",
-      "sport": "keirin",
-      "venue": "松山",
-      "grade": "GⅠ",
-      "name": "オールスター競輪",
-      "missing": [
-        "winner"
       ]
     },
     {
@@ -172,6 +162,26 @@
       "venue": "盛岡",
       "grade": "JpnⅡ",
       "name": "不来方賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "sport": "nar",
+      "venue": "大井",
+      "grade": "SⅢ",
+      "name": "アフター5スター賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "sport": "boat",
+      "venue": "多摩川",
+      "grade": "GⅢ",
+      "name": "ホットマンカップ",
       "missing": [
         "time"
       ]
