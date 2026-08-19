@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-19T01:17:37.866987+09:00",
-  "base_date": "2026-08-19",
+  "generated_at": "2026-08-20T01:17:29.526505+09:00",
+  "base_date": "2026-08-20",
   "calendar_years": [
     2026,
     2027
@@ -9,12 +9,12 @@
     2026,
     2027
   ],
-  "official_record_count": 193,
+  "official_record_count": 190,
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
   "updated_count": 4,
-  "registered_only_count": 14,
+  "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
   "deferred_additions": [],
@@ -174,9 +174,23 @@
       "name": ""
     },
     {
+      "date": "2027-01-31",
+      "sport": "keirin",
+      "venue": "玉野",
+      "grade": "GⅢ",
+      "name": ""
+    },
+    {
       "date": "2027-02-07",
       "sport": "keirin",
       "venue": "静岡",
+      "grade": "GⅠ",
+      "name": ""
+    },
+    {
+      "date": "2027-02-14",
+      "sport": "keirin",
+      "venue": "奈良",
       "grade": "GⅠ",
       "name": ""
     },
@@ -214,6 +228,13 @@
       "venue": "大垣",
       "grade": "GⅡ",
       "name": "ウィナーズカップ"
+    },
+    {
+      "date": "2027-03-30",
+      "sport": "keirin",
+      "venue": "玉野",
+      "grade": "GⅢ",
+      "name": ""
     }
   ],
   "duplicates": [],
@@ -260,7 +281,7 @@
     {
       "name": "KEIRIN.JP公式グレード日程",
       "ok": true,
-      "record_count": 121,
+      "record_count": 115,
       "fetched_urls": [
         "https://keirin.jp/pc/graderaceschedule?scyy=2026",
         "https://keirin.jp/pc/graderaceschedule?scyy=2027"
