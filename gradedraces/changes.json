@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-20T01:19:49.875309+09:00",
-  "center_date": "2026-08-20",
+  "generated_at": "2026-08-21T01:22:31.952585+09:00",
+  "center_date": "2026-08-21",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 4,
     "recent_verification": 2,
-    "upcoming": 23
+    "upcoming": 22
   },
-  "target_count": 27,
-  "change_count": 6,
+  "target_count": 26,
+  "change_count": 7,
   "changes": [
     {
       "date": "2026-08-23",
@@ -119,57 +119,84 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-08-19",
+      "date": "2026-08-20",
       "sport": "nar",
-      "venue": "川崎",
-      "name": "スパーキングサマーカップ",
+      "venue": "名古屋",
+      "name": "ベイスプリント",
       "before": {
-        "date": "2026-08-19",
-        "time": "20:10",
+        "date": "2026-08-20",
+        "time": "20:05",
         "sport": "nar",
-        "venue": "川崎",
-        "grade": "SⅡ",
-        "name": "スパーキングサマーカップ",
+        "venue": "名古屋",
+        "grade": "SPⅡ",
+        "name": "ベイスプリント",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-19",
-        "time": "20:10",
+        "date": "2026-08-20",
+        "time": "20:05",
         "sport": "nar",
-        "venue": "川崎",
-        "grade": "SⅡ",
-        "name": "スパーキングサマーカップ",
-        "winner": "ベアバッキューン"
+        "venue": "名古屋",
+        "grade": "SPⅡ",
+        "name": "ベイスプリント",
+        "winner": "ゴールデンリング"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F19&k_babaCode=21",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=24",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-08-19",
+      "date": "2026-08-23",
       "sport": "nar",
-      "venue": "門別",
-      "name": "フルールカップ",
+      "venue": "佐賀",
+      "name": "九州チャンピオンシップ",
       "before": {
-        "date": "2026-08-19",
-        "time": "20:35",
+        "date": "2026-08-23",
+        "time": "",
         "sport": "nar",
-        "venue": "門別",
-        "grade": "H3",
-        "name": "フルールカップ",
+        "venue": "佐賀",
+        "grade": "",
+        "name": "九州チャンピオンシップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-19",
-        "time": "20:35",
+        "date": "2026-08-23",
+        "time": "19:15",
         "sport": "nar",
-        "venue": "門別",
-        "grade": "H3",
-        "name": "フルールカップ",
-        "winner": "セルアウトクラウド"
+        "venue": "佐賀",
+        "grade": "",
+        "name": "九州チャンピオンシップ",
+        "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F19&k_babaCode=36",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=32",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-08-25",
+      "sport": "nar",
+      "venue": "金沢",
+      "name": "イヌワシ賞",
+      "before": {
+        "date": "2026-08-25",
+        "time": "",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "イヌワシ賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-25",
+        "time": "19:55",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "イヌワシ賞",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F25&k_babaCode=22",
       "note": "地方競馬公式レース情報"
     }
   ]

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-20T01:19:49.875703+09:00",
-  "center_date": "2026-08-20",
-  "past_unresolved_count": 2,
-  "upcoming_missing_time_count": 18,
+  "generated_at": "2026-08-21T01:22:31.953122+09:00",
+  "center_date": "2026-08-21",
+  "past_unresolved_count": 3,
+  "upcoming_missing_time_count": 16,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -23,9 +23,7 @@
       "missing": [
         "time"
       ]
-    }
-  ],
-  "upcoming_missing_time": [
+    },
     {
       "date": "2026-08-20",
       "sport": "nar",
@@ -33,19 +31,12 @@
       "grade": "H2",
       "name": "ブリーダーズゴールドジュニアカップ",
       "missing": [
-        "time"
+        "time",
+        "winner"
       ]
-    },
-    {
-      "date": "2026-08-23",
-      "sport": "nar",
-      "venue": "佐賀",
-      "grade": "",
-      "name": "九州チャンピオンシップ",
-      "missing": [
-        "time"
-      ]
-    },
+    }
+  ],
+  "upcoming_missing_time": [
     {
       "date": "2026-08-23",
       "sport": "nar",
@@ -62,16 +53,6 @@
       "venue": "盛岡",
       "grade": "M1",
       "name": "ジュニアグランプリ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-25",
-      "sport": "nar",
-      "venue": "金沢",
-      "grade": "",
-      "name": "イヌワシ賞",
       "missing": [
         "time"
       ]
@@ -202,6 +183,16 @@
       "venue": "名古屋",
       "grade": "SPⅠ",
       "name": "秋桜賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "sport": "boat",
+      "venue": "浜名湖",
+      "grade": "GⅢ",
+      "name": "オールレディース",
       "missing": [
         "time"
       ]
