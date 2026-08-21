@@ -12,13 +12,13 @@
     },
     "https://keirin.jp/pc/graderaceschedule?scyy=2026": {
       "source": "KEIRIN.JP公式グレード日程",
-      "content_hash": "78a2e7d4854932160739f773aa15043c2342ad0fb64c346905fe4043e55379ad",
-      "last_changed_at": "2026-08-21T01:20:05.365283+09:00"
+      "content_hash": "c2031b3cb20ed1e3353ab0810e728c30505d7c31ccd9f1c3906e06c1d6a0b8c2",
+      "last_changed_at": "2026-08-22T01:18:15.184208+09:00"
     },
     "https://keirin.jp/pc/graderaceschedule?scyy=2027": {
       "source": "KEIRIN.JP公式グレード日程",
-      "content_hash": "d52f6e1a72b18322822d2ff4add703459db5e590ee9879b4d10ace129b0719da",
-      "last_changed_at": "2026-08-21T01:20:05.365283+09:00"
+      "content_hash": "7d91bf5c45eb8dcd3153953fce2d15deb1c2915c18acb74ad60ee36421a5cdf3",
+      "last_changed_at": "2026-08-22T01:18:15.184208+09:00"
     }
   }
 }

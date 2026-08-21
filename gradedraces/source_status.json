@@ -1,22 +1,23 @@
 {
-  "generated_at": "2026-08-21T01:22:31.952599+09:00",
+  "generated_at": "2026-08-22T01:20:40.914383+09:00",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 4,
-    "recent_verification": 2,
-    "upcoming": 22
+    "unresolved": 3,
+    "upcoming": 24
   },
   "sources": [
     {
       "name": "JRA",
       "ok": true,
-      "patch_count": 7,
+      "patch_count": 10,
       "fetched_urls": [
         "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0823.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0823.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0830.html",
-        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0830.html"
+        "https://www.jra.go.jp/keiba/calendar2026/2026/8/0830.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/9/0905.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/9/0905.html"
       ],
       "warnings": [],
       "error": ""
@@ -24,12 +25,11 @@
     {
       "name": "地方競馬",
       "ok": true,
-      "patch_count": 4,
+      "patch_count": 5,
       "fetched_urls": [
         "https://www.keiba.go.jp/gradedrace/schedule.html",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F09&k_babaCode=10",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=10&k_nenndo=2026",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=24",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=36",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=36&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=32",

@@ -3727,6 +3727,15 @@
   },
   {
     "date": "2026-08-23",
+    "time": "17:15",
+    "sport": "nar",
+    "venue": "盛岡",
+    "grade": "M1",
+    "name": "ジュニアグランプリ",
+    "winner": ""
+  },
+  {
+    "date": "2026-08-23",
     "time": "19:15",
     "sport": "nar",
     "venue": "佐賀",
@@ -3736,20 +3745,11 @@
   },
   {
     "date": "2026-08-23",
-    "time": "",
+    "time": "20:00",
     "sport": "nar",
     "venue": "帯広",
     "grade": "BG3",
     "name": "はまなす賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-08-23",
-    "time": "",
-    "sport": "nar",
-    "venue": "盛岡",
-    "grade": "M1",
-    "name": "ジュニアグランプリ",
     "winner": ""
   },
   {
@@ -3907,20 +3907,20 @@
   },
   {
     "date": "2026-09-05",
-    "time": "",
+    "time": "14:10",
     "sport": "jra",
-    "venue": "中山",
-    "grade": "GⅢ",
-    "name": "京成杯オータムH",
+    "venue": "札幌",
+    "grade": "GIII",
+    "name": "札幌2歳S",
     "winner": ""
   },
   {
     "date": "2026-09-05",
     "time": "",
     "sport": "jra",
-    "venue": "札幌",
-    "grade": "GⅢ",
-    "name": "札幌2歳S",
+    "venue": "中山",
+    "grade": "GIII",
+    "name": "京成杯オータムH",
     "winner": ""
   },
   {

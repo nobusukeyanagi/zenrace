@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-08-21T01:22:31.952585+09:00",
-  "center_date": "2026-08-21",
+  "generated_at": "2026-08-22T01:20:40.914360+09:00",
+  "center_date": "2026-08-22",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 4,
-    "recent_verification": 2,
-    "upcoming": 22
+    "unresolved": 3,
+    "upcoming": 24
   },
-  "target_count": 26,
-  "change_count": 7,
+  "target_count": 27,
+  "change_count": 9,
   "changes": [
     {
       "date": "2026-08-23",
@@ -119,84 +118,138 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-08-20",
-      "sport": "nar",
-      "venue": "名古屋",
-      "name": "ベイスプリント",
+      "date": "2026-09-05",
+      "sport": "jra",
+      "venue": "中山",
+      "name": "京成杯オータムH",
       "before": {
-        "date": "2026-08-20",
-        "time": "20:05",
-        "sport": "nar",
-        "venue": "名古屋",
-        "grade": "SPⅡ",
-        "name": "ベイスプリント",
+        "date": "2026-09-05",
+        "time": "",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GⅢ",
+        "name": "京成杯オータムH",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-20",
-        "time": "20:05",
+        "date": "2026-09-05",
+        "time": "",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GIII",
+        "name": "京成杯オータムH",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-09-05",
+      "sport": "jra",
+      "venue": "札幌",
+      "name": "札幌2歳S",
+      "before": {
+        "date": "2026-09-05",
+        "time": "",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GⅢ",
+        "name": "札幌2歳S",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-05",
+        "time": "",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GIII",
+        "name": "札幌2歳S",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-09-05",
+      "sport": "jra",
+      "venue": "札幌",
+      "name": "札幌2歳S",
+      "before": {
+        "date": "2026-09-05",
+        "time": "",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GIII",
+        "name": "札幌2歳S",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-05",
+        "time": "14:10",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GIII",
+        "name": "札幌2歳S",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/9/0905.html",
+      "note": "JRA競馬番組"
+    },
+    {
+      "date": "2026-08-23",
+      "sport": "nar",
+      "venue": "帯広",
+      "name": "はまなす賞",
+      "before": {
+        "date": "2026-08-23",
+        "time": "",
         "sport": "nar",
-        "venue": "名古屋",
-        "grade": "SPⅡ",
-        "name": "ベイスプリント",
-        "winner": "ゴールデンリング"
+        "venue": "帯広",
+        "grade": "BG3",
+        "name": "はまなす賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-23",
+        "time": "20:00",
+        "sport": "nar",
+        "venue": "帯広",
+        "grade": "BG3",
+        "name": "はまなす賞",
+        "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=24",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=03",
       "note": "地方競馬公式レース情報"
     },
     {
       "date": "2026-08-23",
       "sport": "nar",
-      "venue": "佐賀",
-      "name": "九州チャンピオンシップ",
+      "venue": "盛岡",
+      "name": "ジュニアグランプリ",
       "before": {
         "date": "2026-08-23",
         "time": "",
         "sport": "nar",
-        "venue": "佐賀",
-        "grade": "",
-        "name": "九州チャンピオンシップ",
+        "venue": "盛岡",
+        "grade": "M1",
+        "name": "ジュニアグランプリ",
         "winner": ""
       },
       "after": {
         "date": "2026-08-23",
-        "time": "19:15",
+        "time": "17:15",
         "sport": "nar",
-        "venue": "佐賀",
-        "grade": "",
-        "name": "九州チャンピオンシップ",
+        "venue": "盛岡",
+        "grade": "M1",
+        "name": "ジュニアグランプリ",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=32",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-08-25",
-      "sport": "nar",
-      "venue": "金沢",
-      "name": "イヌワシ賞",
-      "before": {
-        "date": "2026-08-25",
-        "time": "",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "イヌワシ賞",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-08-25",
-        "time": "19:55",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "イヌワシ賞",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F25&k_babaCode=22",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=10",
       "note": "地方競馬公式レース情報"
     }
   ]

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-21T01:22:31.953122+09:00",
-  "center_date": "2026-08-21",
+  "generated_at": "2026-08-22T01:20:40.914869+09:00",
+  "center_date": "2026-08-22",
   "past_unresolved_count": 3,
-  "upcoming_missing_time_count": 16,
+  "upcoming_missing_time_count": 15,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -37,26 +37,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-08-23",
-      "sport": "nar",
-      "venue": "帯広",
-      "grade": "BG3",
-      "name": "はまなす賞",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-23",
-      "sport": "nar",
-      "venue": "盛岡",
-      "grade": "M1",
-      "name": "ジュニアグランプリ",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-08-25",
       "sport": "keirin",
@@ -193,6 +173,16 @@
       "venue": "浜名湖",
       "grade": "GⅢ",
       "name": "オールレディース",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "sport": "jra",
+      "venue": "中山",
+      "grade": "GIII",
+      "name": "京成杯オータムH",
       "missing": [
         "time"
       ]
