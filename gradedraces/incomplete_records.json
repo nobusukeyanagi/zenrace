@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-22T01:20:40.914869+09:00",
-  "center_date": "2026-08-22",
+  "generated_at": "2026-08-23T01:12:51.068907+09:00",
+  "center_date": "2026-08-23",
   "past_unresolved_count": 3,
-  "upcoming_missing_time_count": 15,
+  "upcoming_missing_time_count": 19,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -63,16 +63,6 @@
       "venue": "船橋",
       "grade": "SⅢ",
       "name": "フリオーソレジェンドカップ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-27",
-      "sport": "nar",
-      "venue": "門別",
-      "grade": "JpnⅢ",
-      "name": "ブリーダーズゴールドカップ",
       "missing": [
         "time"
       ]
@@ -183,6 +173,56 @@
       "venue": "中山",
       "grade": "GIII",
       "name": "京成杯オータムH",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "sport": "nar",
+      "venue": "佐賀",
+      "grade": "",
+      "name": "九州ジュニアチャンピオン",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "sport": "nar",
+      "venue": "水沢",
+      "grade": "M3",
+      "name": "ビギナーズカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "sport": "nar",
+      "venue": "金沢",
+      "grade": "",
+      "name": "石川テレビ杯",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "sport": "keirin",
+      "venue": "青森",
+      "grade": "GⅢ",
+      "name": "みちのく記念 善知鳥杯争奪戦",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "sport": "auto",
+      "venue": "山陽",
+      "grade": "GⅡ",
+      "name": "小林啓二杯",
       "missing": [
         "time"
       ]

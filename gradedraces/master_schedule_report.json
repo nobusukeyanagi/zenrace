@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-22T01:18:15.183337+09:00",
-  "base_date": "2026-08-22",
+  "generated_at": "2026-08-23T01:10:00.130264+09:00",
+  "base_date": "2026-08-23",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 4,
+  "updated_count": 6,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -114,6 +114,54 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-08-30:新潟記念"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-09-05",
+        "time": "",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GIII",
+        "name": "京成杯オータムH",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-05",
+        "time": "",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GⅢ",
+        "name": "京成杯オータムH",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-09-05:京成杯オータムh"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-09-05",
+        "time": "14:10",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GIII",
+        "name": "札幌2歳S",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-05",
+        "time": "14:10",
+        "sport": "jra",
+        "venue": "札幌",
+        "grade": "GⅢ",
+        "name": "札幌2歳S",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-09-05:札幌2歳s"
     }
   ],
   "registered_only": [

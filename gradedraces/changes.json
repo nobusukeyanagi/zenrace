@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-08-22T01:20:40.914360+09:00",
-  "center_date": "2026-08-22",
+  "generated_at": "2026-08-23T01:12:51.068407+09:00",
+  "center_date": "2026-08-23",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 3,
-    "upcoming": 24
+    "upcoming": 31
   },
-  "target_count": 27,
-  "change_count": 9,
+  "target_count": 34,
+  "change_count": 11,
   "changes": [
     {
       "date": "2026-08-23",
@@ -151,37 +151,10 @@
       "name": "札幌2歳S",
       "before": {
         "date": "2026-09-05",
-        "time": "",
+        "time": "14:10",
         "sport": "jra",
         "venue": "札幌",
         "grade": "GⅢ",
-        "name": "札幌2歳S",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-09-05",
-        "time": "",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GIII",
-        "name": "札幌2歳S",
-        "winner": ""
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-09-05",
-      "sport": "jra",
-      "venue": "札幌",
-      "name": "札幌2歳S",
-      "before": {
-        "date": "2026-09-05",
-        "time": "",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GIII",
         "name": "札幌2歳S",
         "winner": ""
       },
@@ -195,61 +168,142 @@
         "winner": ""
       },
       "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/9/0905.html",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-09-06",
+      "sport": "jra",
+      "venue": "中山",
+      "name": "紫苑S",
+      "before": {
+        "date": "2026-09-06",
+        "time": "",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GⅡ",
+        "name": "紫苑S",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-06",
+        "time": "",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GII",
+        "name": "紫苑S",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-09-06",
+      "sport": "jra",
+      "venue": "阪神",
+      "name": "セントウルS",
+      "before": {
+        "date": "2026-09-06",
+        "time": "",
+        "sport": "jra",
+        "venue": "阪神",
+        "grade": "GⅡ",
+        "name": "セントウルS",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-06",
+        "time": "",
+        "sport": "jra",
+        "venue": "阪神",
+        "grade": "GII",
+        "name": "セントウルS",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-09-06",
+      "sport": "jra",
+      "venue": "中山",
+      "name": "紫苑S",
+      "before": {
+        "date": "2026-09-06",
+        "time": "",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GII",
+        "name": "紫苑S",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-06",
+        "time": "16:30",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GII",
+        "name": "紫苑S",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/9/0906.html",
       "note": "JRA競馬番組"
     },
     {
-      "date": "2026-08-23",
-      "sport": "nar",
-      "venue": "帯広",
-      "name": "はまなす賞",
+      "date": "2026-09-06",
+      "sport": "jra",
+      "venue": "阪神",
+      "name": "セントウルS",
       "before": {
-        "date": "2026-08-23",
+        "date": "2026-09-06",
         "time": "",
-        "sport": "nar",
-        "venue": "帯広",
-        "grade": "BG3",
-        "name": "はまなす賞",
+        "sport": "jra",
+        "venue": "阪神",
+        "grade": "GII",
+        "name": "セントウルS",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-23",
-        "time": "20:00",
-        "sport": "nar",
-        "venue": "帯広",
-        "grade": "BG3",
-        "name": "はまなす賞",
+        "date": "2026-09-06",
+        "time": "15:30",
+        "sport": "jra",
+        "venue": "阪神",
+        "grade": "GII",
+        "name": "セントウルS",
         "winner": ""
       },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=03",
-      "note": "地方競馬公式レース情報"
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/9/0906.html",
+      "note": "JRA競馬番組"
     },
     {
-      "date": "2026-08-23",
+      "date": "2026-08-27",
       "sport": "nar",
-      "venue": "盛岡",
-      "name": "ジュニアグランプリ",
+      "venue": "門別",
+      "name": "ブリーダーズゴールドカップ",
       "before": {
-        "date": "2026-08-23",
+        "date": "2026-08-27",
         "time": "",
         "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M1",
-        "name": "ジュニアグランプリ",
+        "venue": "門別",
+        "grade": "JpnⅢ",
+        "name": "ブリーダーズゴールドカップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-23",
-        "time": "17:15",
+        "date": "2026-08-27",
+        "time": "19:55",
         "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M1",
-        "name": "ジュニアグランプリ",
+        "venue": "門別",
+        "grade": "JpnⅢ",
+        "name": "ブリーダーズゴールドカップ",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=10",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F27&k_babaCode=36",
       "note": "地方競馬公式レース情報"
     }
   ]

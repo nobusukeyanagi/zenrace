@@ -3790,7 +3790,7 @@
   },
   {
     "date": "2026-08-27",
-    "time": "",
+    "time": "19:55",
     "sport": "nar",
     "venue": "門別",
     "grade": "JpnⅢ",
@@ -3925,20 +3925,20 @@
   },
   {
     "date": "2026-09-06",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
-    "venue": "中山",
-    "grade": "GⅡ",
-    "name": "紫苑S",
+    "venue": "阪神",
+    "grade": "GII",
+    "name": "セントウルS",
     "winner": ""
   },
   {
     "date": "2026-09-06",
-    "time": "",
+    "time": "16:30",
     "sport": "jra",
-    "venue": "阪神",
-    "grade": "GⅡ",
-    "name": "セントウルS",
+    "venue": "中山",
+    "grade": "GII",
+    "name": "紫苑S",
     "winner": ""
   },
   {
