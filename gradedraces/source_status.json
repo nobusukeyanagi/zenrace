@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-08-23T01:12:51.068427+09:00",
+  "generated_at": "2026-08-24T01:14:08.209860+09:00",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 3,
-    "upcoming": 31
+    "unresolved": 6,
+    "recent_verification": 5,
+    "upcoming": 26
   },
   "sources": [
     {
@@ -27,7 +28,7 @@
     {
       "name": "地方競馬",
       "ok": true,
-      "patch_count": 6,
+      "patch_count": 7,
       "fetched_urls": [
         "https://www.keiba.go.jp/gradedrace/schedule.html",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F09&k_babaCode=10",
@@ -36,9 +37,7 @@
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=36&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=10",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=32",
-        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=32&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F23&k_babaCode=03",
-        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=03&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F25&k_babaCode=22",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=22&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F26&k_babaCode=19",
@@ -49,6 +48,7 @@
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F02&k_babaCode=20",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=20&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F03&k_babaCode=32",
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=32&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F03&k_babaCode=24",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=24&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F06&k_babaCode=32",
