@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-24T01:11:12.221862+09:00",
-  "base_date": "2026-08-24",
+  "generated_at": "2026-08-25T01:22:14.836624+09:00",
+  "base_date": "2026-08-25",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 9,
+  "updated_count": 8,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -29,7 +29,7 @@
         "venue": "新潟",
         "grade": "GIII",
         "name": "新潟2歳S",
-        "winner": ""
+        "winner": "レッチュベルク"
       },
       "after": {
         "date": "2026-08-23",
@@ -53,7 +53,7 @@
         "venue": "札幌",
         "grade": "GIII",
         "name": "キーンランドC",
-        "winner": ""
+        "winner": "サウンドモリアーナ"
       },
       "after": {
         "date": "2026-08-23",
@@ -210,30 +210,6 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-09-06:セントウルs"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-11-08",
-        "time": "",
-        "sport": "keirin",
-        "venue": "四日市",
-        "grade": "GⅢ",
-        "name": "",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-11-08",
-        "time": "",
-        "sport": "keirin",
-        "venue": "四日市",
-        "grade": "GⅠ",
-        "name": "",
-        "winner": ""
-      },
-      "source_url": "https://keirin.jp/pc/graderaceschedule?scyy=2026",
-      "source_id": "keirin:2026:2026-11-08:四日市:"
     }
   ],
   "registered_only": [

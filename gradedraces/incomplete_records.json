@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-24T01:14:08.210223+09:00",
-  "center_date": "2026-08-24",
+  "generated_at": "2026-08-25T01:24:58.288514+09:00",
+  "center_date": "2026-08-25",
   "past_unresolved_count": 3,
   "upcoming_missing_time_count": 18,
   "past_unresolved": [
@@ -37,16 +37,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-08-25",
-      "sport": "keirin",
-      "venue": "松戸",
-      "grade": "GⅢ",
-      "name": "燦燦ダイヤモンド滝澤正光杯",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-08-25",
       "sport": "auto",
@@ -213,6 +203,16 @@
       "venue": "山陽",
       "grade": "GⅡ",
       "name": "小林啓二杯",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "sport": "boat",
+      "venue": "津",
+      "grade": "GⅠ",
+      "name": "ツッキー王座決定戦",
       "missing": [
         "time"
       ]

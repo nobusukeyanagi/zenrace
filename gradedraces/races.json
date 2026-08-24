@@ -3712,7 +3712,7 @@
     "time": "15:45",
     "sport": "jra",
     "venue": "札幌",
-    "grade": "GIII",
+    "grade": "GⅢ",
     "name": "キーンランドC",
     "winner": "サウンドモリアーナ"
   },
@@ -3721,7 +3721,7 @@
     "time": "17:10",
     "sport": "jra",
     "venue": "新潟",
-    "grade": "GIII",
+    "grade": "GⅢ",
     "name": "新潟2歳S",
     "winner": "レッチュベルク"
   },
@@ -3763,7 +3763,7 @@
   },
   {
     "date": "2026-08-25",
-    "time": "",
+    "time": "20:30",
     "sport": "keirin",
     "venue": "松戸",
     "grade": "GⅢ",
