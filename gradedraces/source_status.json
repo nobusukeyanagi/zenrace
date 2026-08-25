@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-08-25T01:24:58.288132+09:00",
+  "generated_at": "2026-08-26T01:26:06.861067+09:00",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 3,
-    "upcoming": 27
+    "unresolved": 6,
+    "recent_verification": 3,
+    "upcoming": 25
   },
   "sources": [
     {
@@ -33,7 +34,6 @@
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=36",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=36&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F25&k_babaCode=22",
-        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=22&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F26&k_babaCode=19",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=19&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F27&k_babaCode=36",
@@ -48,7 +48,10 @@
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F06&k_babaCode=32",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F06&k_babaCode=11",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=11&k_nenndo=2026",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F06&k_babaCode=22"
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F06&k_babaCode=22",
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=22&k_nenndo=2026",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F09&k_babaCode=21",
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=21&k_nenndo=2026"
       ],
       "warnings": [
         "地方競馬重賞一覧の本文を十分に確認できませんでした。個別レース情報の取得は継続します。"
@@ -78,7 +81,7 @@
       "patch_count": 1,
       "fetched_urls": [
         "https://keirin.jp/pc/graderaceschedule",
-        "https://www.oddspark.com/keirin/RaceList.do?joCode=31&kaisaiBi=20260825&raceNo=12"
+        "https://www.oddspark.com/keirin/RaceKekka.do?joCode=31&kaisaiBi=20260825&raceNo=12"
       ],
       "warnings": [
         "2026-08-30 前橋: 発走時刻を特定できませんでした",
@@ -89,7 +92,7 @@
     {
       "name": "オートレース",
       "ok": true,
-      "patch_count": 1,
+      "patch_count": 2,
       "fetched_urls": [
         "https://autorace.jp/calendar/graderace/",
         "https://autorace.jp/race_info/RaceResult/isesaki/2026-08-16_12",

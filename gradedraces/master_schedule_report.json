@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-25T01:22:14.836624+09:00",
-  "base_date": "2026-08-25",
+  "generated_at": "2026-08-26T01:23:16.605661+09:00",
+  "base_date": "2026-08-26",
   "calendar_years": [
     2026,
     2027
@@ -13,60 +13,12 @@
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 8,
+  "updated_count": 6,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
   "deferred_additions": [],
   "changes": [
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-23",
-        "time": "17:10",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GIII",
-        "name": "新潟2歳S",
-        "winner": "レッチュベルク"
-      },
-      "after": {
-        "date": "2026-08-23",
-        "time": "17:10",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GⅢ",
-        "name": "新潟2歳S",
-        "winner": "レッチュベルク"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-23:新潟2歳s"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-23",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GIII",
-        "name": "キーンランドC",
-        "winner": "サウンドモリアーナ"
-      },
-      "after": {
-        "date": "2026-08-23",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "札幌",
-        "grade": "GⅢ",
-        "name": "キーンランドC",
-        "winner": "サウンドモリアーナ"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-23:キーンランドc"
-    },
     {
       "type": "master_updated",
       "match_type": "exact",

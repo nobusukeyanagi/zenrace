@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-08-25T01:24:58.288099+09:00",
-  "center_date": "2026-08-25",
+  "generated_at": "2026-08-26T01:26:06.861050+09:00",
+  "center_date": "2026-08-26",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 3,
-    "upcoming": 27
+    "unresolved": 6,
+    "recent_verification": 3,
+    "upcoming": 25
   },
-  "target_count": 30,
-  "change_count": 7,
+  "target_count": 31,
+  "change_count": 9,
   "changes": [
     {
       "date": "2026-08-30",
@@ -173,12 +174,39 @@
     },
     {
       "date": "2026-08-25",
+      "sport": "nar",
+      "venue": "金沢",
+      "name": "イヌワシ賞",
+      "before": {
+        "date": "2026-08-25",
+        "time": "19:55",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "イヌワシ賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-25",
+        "time": "19:55",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "イヌワシ賞",
+        "winner": "ダンテバローズ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F25&k_babaCode=22",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-08-25",
       "sport": "keirin",
       "venue": "松戸",
       "name": "燦燦ダイヤモンド滝澤正光杯",
       "before": {
         "date": "2026-08-25",
-        "time": "",
+        "time": "20:30",
         "sport": "keirin",
         "venue": "松戸",
         "grade": "GⅢ",
@@ -192,11 +220,38 @@
         "venue": "松戸",
         "grade": "GⅢ",
         "name": "燦燦ダイヤモンド滝澤正光杯",
-        "winner": ""
+        "winner": "岩本 俊介"
       },
       "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceList.do?joCode=31&kaisaiBi=20260825&raceNo=12",
-      "note": "公開出走表によるKEIRIN.JP補完（12R発走時間）"
+      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=31&kaisaiBi=20260825&raceNo=12",
+      "note": "公開結果によるKEIRIN.JP補完（12R）"
+    },
+    {
+      "date": "2026-08-25",
+      "sport": "auto",
+      "venue": "飯塚",
+      "name": "ダイヤモンドレース",
+      "before": {
+        "date": "2026-08-25",
+        "time": "",
+        "sport": "auto",
+        "venue": "飯塚",
+        "grade": "GⅠ",
+        "name": "ダイヤモンドレース",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-08-25",
+        "time": "",
+        "sport": "auto",
+        "venue": "飯塚",
+        "grade": "GⅠ",
+        "name": "ダイヤモンドレース",
+        "winner": "黒川 京介"
+      },
+      "source": "オートレース",
+      "evidence_url": "https://autorace.jp/calendar/graderace/",
+      "note": "AutoRace.JP公式年間日程の優勝者"
     }
   ]
 }

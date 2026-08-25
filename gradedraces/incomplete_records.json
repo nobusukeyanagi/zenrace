@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-25T01:24:58.288514+09:00",
-  "center_date": "2026-08-25",
-  "past_unresolved_count": 3,
+  "generated_at": "2026-08-26T01:26:06.861614+09:00",
+  "center_date": "2026-08-26",
+  "past_unresolved_count": 4,
   "upcoming_missing_time_count": 18,
   "past_unresolved": [
     {
@@ -34,9 +34,7 @@
         "time",
         "winner"
       ]
-    }
-  ],
-  "upcoming_missing_time": [
+    },
     {
       "date": "2026-08-25",
       "sport": "auto",
@@ -46,7 +44,9 @@
       "missing": [
         "time"
       ]
-    },
+    }
+  ],
+  "upcoming_missing_time": [
     {
       "date": "2026-08-27",
       "sport": "boat",
@@ -213,6 +213,16 @@
       "venue": "津",
       "grade": "GⅠ",
       "name": "ツッキー王座決定戦",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "sport": "nar",
+      "venue": "川崎",
+      "grade": "SⅠ",
+      "name": "戸塚記念",
       "missing": [
         "time"
       ]
