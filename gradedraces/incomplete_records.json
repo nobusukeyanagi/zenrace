@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-26T01:26:06.861614+09:00",
-  "center_date": "2026-08-26",
+  "generated_at": "2026-08-27T01:44:34.617342+09:00",
+  "center_date": "2026-08-27",
   "past_unresolved_count": 4,
   "upcoming_missing_time_count": 18,
   "past_unresolved": [
@@ -47,16 +47,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-08-27",
-      "sport": "boat",
-      "venue": "常滑",
-      "grade": "GⅢ",
-      "name": "中日新聞・中日スポーツ 中日カップ",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-08-30",
       "sport": "nar",
@@ -223,6 +213,16 @@
       "venue": "川崎",
       "grade": "SⅠ",
       "name": "戸塚記念",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "sport": "nar",
+      "venue": "川崎",
+      "grade": "SⅢ",
+      "name": "若武者賞",
       "missing": [
         "time"
       ]

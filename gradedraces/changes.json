@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-26T01:26:06.861050+09:00",
-  "center_date": "2026-08-26",
+  "generated_at": "2026-08-27T01:44:34.616823+09:00",
+  "center_date": "2026-08-27",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 6,
-    "recent_verification": 3,
+    "unresolved": 5,
+    "recent_verification": 1,
     "upcoming": 25
   },
-  "target_count": 31,
-  "change_count": 9,
+  "target_count": 30,
+  "change_count": 8,
   "changes": [
     {
       "date": "2026-08-30",
@@ -173,85 +173,58 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-08-25",
+      "date": "2026-08-26",
       "sport": "nar",
-      "venue": "金沢",
-      "name": "イヌワシ賞",
+      "venue": "船橋",
+      "name": "フリオーソレジェンドカップ",
       "before": {
-        "date": "2026-08-25",
-        "time": "19:55",
+        "date": "2026-08-26",
+        "time": "20:05",
         "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "イヌワシ賞",
+        "venue": "船橋",
+        "grade": "SⅢ",
+        "name": "フリオーソレジェンドカップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-25",
-        "time": "19:55",
+        "date": "2026-08-26",
+        "time": "20:05",
         "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "イヌワシ賞",
-        "winner": "ダンテバローズ"
+        "venue": "船橋",
+        "grade": "SⅢ",
+        "name": "フリオーソレジェンドカップ",
+        "winner": "リベイクフルシティ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F25&k_babaCode=22",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F26&k_babaCode=19",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-08-25",
-      "sport": "keirin",
-      "venue": "松戸",
-      "name": "燦燦ダイヤモンド滝澤正光杯",
+      "date": "2026-08-27",
+      "sport": "boat",
+      "venue": "常滑",
+      "name": "中日新聞・中日スポーツ 中日カップ",
       "before": {
-        "date": "2026-08-25",
-        "time": "20:30",
-        "sport": "keirin",
-        "venue": "松戸",
+        "date": "2026-08-27",
+        "time": "",
+        "sport": "boat",
+        "venue": "常滑",
         "grade": "GⅢ",
-        "name": "燦燦ダイヤモンド滝澤正光杯",
+        "name": "中日新聞・中日スポーツ 中日カップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-25",
-        "time": "20:30",
-        "sport": "keirin",
-        "venue": "松戸",
+        "date": "2026-08-27",
+        "time": "16:19",
+        "sport": "boat",
+        "venue": "常滑",
         "grade": "GⅢ",
-        "name": "燦燦ダイヤモンド滝澤正光杯",
-        "winner": "岩本 俊介"
-      },
-      "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=31&kaisaiBi=20260825&raceNo=12",
-      "note": "公開結果によるKEIRIN.JP補完（12R）"
-    },
-    {
-      "date": "2026-08-25",
-      "sport": "auto",
-      "venue": "飯塚",
-      "name": "ダイヤモンドレース",
-      "before": {
-        "date": "2026-08-25",
-        "time": "",
-        "sport": "auto",
-        "venue": "飯塚",
-        "grade": "GⅠ",
-        "name": "ダイヤモンドレース",
+        "name": "中日新聞・中日スポーツ 中日カップ",
         "winner": ""
       },
-      "after": {
-        "date": "2026-08-25",
-        "time": "",
-        "sport": "auto",
-        "venue": "飯塚",
-        "grade": "GⅠ",
-        "name": "ダイヤモンドレース",
-        "winner": "黒川 京介"
-      },
-      "source": "オートレース",
-      "evidence_url": "https://autorace.jp/calendar/graderace/",
-      "note": "AutoRace.JP公式年間日程の優勝者"
+      "source": "ボートレース",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=08&hd=20260827&rno=12",
+      "note": "BOAT RACE公式12R結果"
     }
   ]
 }
