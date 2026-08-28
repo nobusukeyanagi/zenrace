@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-27T01:44:34.617342+09:00",
-  "center_date": "2026-08-27",
+  "generated_at": "2026-08-28T09:43:11.663441+09:00",
+  "center_date": "2026-08-28",
   "past_unresolved_count": 4,
-  "upcoming_missing_time_count": 18,
+  "upcoming_missing_time_count": 19,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -223,6 +223,16 @@
       "venue": "川崎",
       "grade": "SⅢ",
       "name": "若武者賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-11",
+      "sport": "nar",
+      "venue": "笠松",
+      "grade": "",
+      "name": "西日本3歳優駿",
       "missing": [
         "time"
       ]

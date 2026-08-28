@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-27T01:44:34.616823+09:00",
-  "center_date": "2026-08-27",
+  "generated_at": "2026-08-28T09:43:11.662903+09:00",
+  "center_date": "2026-08-28",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 5,
-    "recent_verification": 1,
-    "upcoming": 25
+    "unresolved": 6,
+    "recent_verification": 2,
+    "upcoming": 24
   },
   "target_count": 30,
   "change_count": 8,
@@ -173,30 +173,30 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-08-26",
+      "date": "2026-08-27",
       "sport": "nar",
-      "venue": "船橋",
-      "name": "フリオーソレジェンドカップ",
+      "venue": "門別",
+      "name": "ブリーダーズゴールドカップ",
       "before": {
-        "date": "2026-08-26",
-        "time": "20:05",
+        "date": "2026-08-27",
+        "time": "19:55",
         "sport": "nar",
-        "venue": "船橋",
-        "grade": "SⅢ",
-        "name": "フリオーソレジェンドカップ",
+        "venue": "門別",
+        "grade": "JpnⅢ",
+        "name": "ブリーダーズゴールドカップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-08-26",
-        "time": "20:05",
+        "date": "2026-08-27",
+        "time": "19:55",
         "sport": "nar",
-        "venue": "船橋",
-        "grade": "SⅢ",
-        "name": "フリオーソレジェンドカップ",
-        "winner": "リベイクフルシティ"
+        "venue": "門別",
+        "grade": "JpnⅢ",
+        "name": "ブリーダーズゴールドカップ",
+        "winner": "レイバックスピン"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F26&k_babaCode=19",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F27&k_babaCode=36",
       "note": "地方競馬公式レース情報"
     },
     {
@@ -206,7 +206,7 @@
       "name": "中日新聞・中日スポーツ 中日カップ",
       "before": {
         "date": "2026-08-27",
-        "time": "",
+        "time": "16:19",
         "sport": "boat",
         "venue": "常滑",
         "grade": "GⅢ",
@@ -215,12 +215,12 @@
       },
       "after": {
         "date": "2026-08-27",
-        "time": "16:19",
+        "time": "16:20",
         "sport": "boat",
         "venue": "常滑",
         "grade": "GⅢ",
         "name": "中日新聞・中日スポーツ 中日カップ",
-        "winner": ""
+        "winner": "谷野 錬志"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=08&hd=20260827&rno=12",
