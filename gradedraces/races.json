@@ -3826,6 +3826,15 @@
   },
   {
     "date": "2026-08-30",
+    "time": "16:25",
+    "sport": "keirin",
+    "venue": "前橋",
+    "grade": "GⅢ",
+    "name": "三山王冠争奪戦",
+    "winner": ""
+  },
+  {
+    "date": "2026-08-30",
     "time": "19:15",
     "sport": "nar",
     "venue": "盛岡",
@@ -3835,7 +3844,7 @@
   },
   {
     "date": "2026-08-30",
-    "time": "",
+    "time": "20:40",
     "sport": "boat",
     "venue": "桐生",
     "grade": "SG",
@@ -3843,17 +3852,8 @@
     "winner": ""
   },
   {
-    "date": "2026-08-30",
-    "time": "",
-    "sport": "keirin",
-    "venue": "前橋",
-    "grade": "GⅢ",
-    "name": "三山王冠争奪戦",
-    "winner": ""
-  },
-  {
     "date": "2026-09-01",
-    "time": "",
+    "time": "17:05",
     "sport": "nar",
     "venue": "盛岡",
     "grade": "JpnⅡ",
@@ -4042,19 +4042,19 @@
   },
   {
     "date": "2026-09-13",
-    "time": "",
+    "time": "14:50",
     "sport": "jra",
     "venue": "中山",
-    "grade": "GⅡ",
+    "grade": "GII",
     "name": "セントライト記念",
     "winner": ""
   },
   {
     "date": "2026-09-13",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "阪神",
-    "grade": "GⅡ",
+    "grade": "GII",
     "name": "ローズS",
     "winner": ""
   },

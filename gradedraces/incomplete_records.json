@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-29T09:15:22.411490+09:00",
-  "center_date": "2026-08-29",
+  "generated_at": "2026-08-30T04:00:56.324972+09:00",
+  "center_date": "2026-08-30",
   "past_unresolved_count": 4,
-  "upcoming_missing_time_count": 20,
+  "upcoming_missing_time_count": 22,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -47,36 +47,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-08-30",
-      "sport": "boat",
-      "venue": "桐生",
-      "grade": "SG",
-      "name": "ボートレースメモリアル",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-08-30",
-      "sport": "keirin",
-      "venue": "前橋",
-      "grade": "GⅢ",
-      "name": "三山王冠争奪戦",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-09-01",
-      "sport": "nar",
-      "venue": "盛岡",
-      "grade": "JpnⅡ",
-      "name": "不来方賞",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-09-02",
       "sport": "nar",
@@ -243,6 +213,56 @@
       "venue": "大村",
       "grade": "GⅠ",
       "name": "海の王者決定戦",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "sport": "nar",
+      "venue": "帯広",
+      "grade": "BG2",
+      "name": "岩見沢記念",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "sport": "nar",
+      "venue": "水沢",
+      "grade": "M2",
+      "name": "青藍賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "sport": "nar",
+      "venue": "金沢",
+      "grade": "",
+      "name": "サラブレッド大賞典",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "sport": "nar",
+      "venue": "高知",
+      "grade": "",
+      "name": "建依別賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "sport": "keirin",
+      "venue": "奈良",
+      "grade": "GⅢ",
+      "name": "76周年記念平安賞in奈良",
       "missing": [
         "time"
       ]

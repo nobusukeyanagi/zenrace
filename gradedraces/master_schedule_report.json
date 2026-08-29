@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-29T09:12:31.537973+09:00",
-  "base_date": "2026-08-29",
+  "generated_at": "2026-08-30T03:57:58.005487+09:00",
+  "base_date": "2026-08-30",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 6,
+  "updated_count": 7,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -162,6 +162,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-09-06:セントウルs"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-09-12",
+        "time": "",
+        "sport": "jra",
+        "venue": "阪神",
+        "grade": "GIII",
+        "name": "チャレンジC",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-12",
+        "time": "",
+        "sport": "jra",
+        "venue": "阪神",
+        "grade": "GⅢ",
+        "name": "チャレンジC",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-09-12:チャレンジc"
     }
   ],
   "registered_only": [
