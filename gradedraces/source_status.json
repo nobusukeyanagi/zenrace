@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-08-30T04:00:56.324432+09:00",
+  "generated_at": "2026-08-31T03:56:56.743034+09:00",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 4,
-    "upcoming": 33
+    "unresolved": 7,
+    "recent_verification": 5,
+    "upcoming": 28
   },
   "sources": [
     {
@@ -28,7 +29,7 @@
     {
       "name": "地方競馬",
       "ok": true,
-      "patch_count": 3,
+      "patch_count": 4,
       "fetched_urls": [
         "https://www.keiba.go.jp/gradedrace/schedule.html",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F09&k_babaCode=10",
@@ -88,7 +89,7 @@
       "patch_count": 1,
       "fetched_urls": [
         "https://keirin.jp/pc/graderaceschedule",
-        "https://www.oddspark.com/keirin/RaceList.do?joCode=22&kaisaiBi=20260830&raceNo=12"
+        "https://www.oddspark.com/keirin/RaceKekka.do?joCode=22&kaisaiBi=20260830&raceNo=12"
       ],
       "warnings": [
         "2026-09-06 青森: 発走時刻を特定できませんでした",

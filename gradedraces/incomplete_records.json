@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-30T04:00:56.324972+09:00",
-  "center_date": "2026-08-30",
+  "generated_at": "2026-08-31T03:56:56.743559+09:00",
+  "center_date": "2026-08-31",
   "past_unresolved_count": 4,
-  "upcoming_missing_time_count": 22,
+  "upcoming_missing_time_count": 21,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -47,16 +47,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-09-02",
-      "sport": "nar",
-      "venue": "大井",
-      "grade": "SⅢ",
-      "name": "アフター5スター賞",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-09-02",
       "sport": "boat",

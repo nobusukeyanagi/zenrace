@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-30T03:57:58.005487+09:00",
-  "base_date": "2026-08-30",
+  "generated_at": "2026-08-31T03:53:49.738794+09:00",
+  "base_date": "2026-08-31",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-09-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 7,
+  "updated_count": 9,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -38,7 +38,7 @@
         "venue": "中京",
         "grade": "GⅢ",
         "name": "中京2歳S",
-        "winner": ""
+        "winner": "ジーティーマイカ"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-08-30:中京2歳s"
@@ -62,7 +62,7 @@
         "venue": "新潟",
         "grade": "GⅢ",
         "name": "新潟記念",
-        "winner": ""
+        "winner": "ゾロアストロ"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-08-30:新潟記念"
@@ -186,6 +186,54 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-09-12:チャレンジc"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-09-13",
+        "time": "14:50",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GII",
+        "name": "セントライト記念",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-13",
+        "time": "14:50",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GⅡ",
+        "name": "セントライト記念",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-09-13:セントライト記念"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-09-13",
+        "time": "15:30",
+        "sport": "jra",
+        "venue": "阪神",
+        "grade": "GII",
+        "name": "ローズS",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-13",
+        "time": "15:30",
+        "sport": "jra",
+        "venue": "阪神",
+        "grade": "GⅡ",
+        "name": "ローズS",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-09-13:ローズs"
     }
   ],
   "registered_only": [
