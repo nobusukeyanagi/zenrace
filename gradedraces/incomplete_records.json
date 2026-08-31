@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-31T03:56:56.743559+09:00",
-  "center_date": "2026-08-31",
+  "generated_at": "2026-09-01T06:13:02.466078+09:00",
+  "center_date": "2026-09-01",
   "past_unresolved_count": 4,
-  "upcoming_missing_time_count": 21,
+  "upcoming_missing_time_count": 19,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -53,26 +53,6 @@
       "venue": "多摩川",
       "grade": "GⅢ",
       "name": "ホットマンカップ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-09-03",
-      "sport": "nar",
-      "venue": "佐賀",
-      "grade": "JpnⅢ",
-      "name": "サマーチャンピオン",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-09-03",
-      "sport": "nar",
-      "venue": "名古屋",
-      "grade": "SPⅠ",
-      "name": "秋桜賞",
       "missing": [
         "time"
       ]

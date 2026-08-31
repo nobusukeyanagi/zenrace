@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-31T03:53:49.738794+09:00",
-  "base_date": "2026-08-31",
+  "generated_at": "2026-09-01T06:10:20.640478+09:00",
+  "base_date": "2026-09-01",
   "calendar_years": [
     2026,
     2027
@@ -10,7 +10,7 @@
     2027
   ],
   "official_record_count": 189,
-  "new_addition_end": "2026-09-30",
+  "new_addition_end": "2026-10-31",
   "added_count": 0,
   "deferred_addition_count": 0,
   "updated_count": 9,
@@ -29,7 +29,7 @@
         "venue": "中京",
         "grade": "GIII",
         "name": "中京2歳S",
-        "winner": ""
+        "winner": "ジーティーマイカ"
       },
       "after": {
         "date": "2026-08-30",
@@ -53,7 +53,7 @@
         "venue": "新潟",
         "grade": "GIII",
         "name": "新潟記念",
-        "winner": ""
+        "winner": "ゾロアストロ"
       },
       "after": {
         "date": "2026-08-30",

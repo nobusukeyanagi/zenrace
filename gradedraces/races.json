@@ -3811,7 +3811,7 @@
     "time": "16:10",
     "sport": "jra",
     "venue": "中京",
-    "grade": "GIII",
+    "grade": "GⅢ",
     "name": "中京2歳S",
     "winner": "ジーティーマイカ"
   },
@@ -3820,7 +3820,7 @@
     "time": "16:10",
     "sport": "jra",
     "venue": "新潟",
-    "grade": "GIII",
+    "grade": "GⅢ",
     "name": "新潟記念",
     "winner": "ゾロアストロ"
   },
@@ -3880,20 +3880,20 @@
   },
   {
     "date": "2026-09-03",
-    "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "JpnⅢ",
-    "name": "サマーチャンピオン",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-03",
-    "time": "",
+    "time": "19:30",
     "sport": "nar",
     "venue": "名古屋",
     "grade": "SPⅠ",
     "name": "秋桜賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-03",
+    "time": "20:00",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "JpnⅢ",
+    "name": "サマーチャンピオン",
     "winner": ""
   },
   {
