@@ -3858,6 +3858,15 @@
     "venue": "盛岡",
     "grade": "JpnⅡ",
     "name": "不来方賞",
+    "winner": "イッテラッシャイ"
+  },
+  {
+    "date": "2026-09-02",
+    "time": "17:15",
+    "sport": "boat",
+    "venue": "多摩川",
+    "grade": "GⅢ",
+    "name": "ホットマンカップ",
     "winner": ""
   },
   {
@@ -3867,15 +3876,6 @@
     "venue": "大井",
     "grade": "SⅢ",
     "name": "アフター5スター賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-02",
-    "time": "",
-    "sport": "boat",
-    "venue": "多摩川",
-    "grade": "GⅢ",
-    "name": "ホットマンカップ",
     "winner": ""
   },
   {

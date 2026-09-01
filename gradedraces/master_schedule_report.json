@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-01T06:10:20.640478+09:00",
-  "base_date": "2026-09-01",
+  "generated_at": "2026-09-02T03:56:14.086888+09:00",
+  "base_date": "2026-09-02",
   "calendar_years": [
     2026,
     2027
@@ -13,60 +13,12 @@
   "new_addition_end": "2026-10-31",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 9,
+  "updated_count": 7,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
   "deferred_additions": [],
   "changes": [
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-30",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GIII",
-        "name": "中京2歳S",
-        "winner": "ジーティーマイカ"
-      },
-      "after": {
-        "date": "2026-08-30",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "中京",
-        "grade": "GⅢ",
-        "name": "中京2歳S",
-        "winner": "ジーティーマイカ"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-30:中京2歳s"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-08-30",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GIII",
-        "name": "新潟記念",
-        "winner": "ゾロアストロ"
-      },
-      "after": {
-        "date": "2026-08-30",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "新潟",
-        "grade": "GⅢ",
-        "name": "新潟記念",
-        "winner": "ゾロアストロ"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-08-30:新潟記念"
-    },
     {
       "type": "master_updated",
       "match_type": "exact",
