@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-02T03:59:05.416313+09:00",
-  "center_date": "2026-09-02",
+  "generated_at": "2026-09-03T04:04:34.000496+09:00",
+  "center_date": "2026-09-03",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 5,
-    "recent_verification": 1,
-    "upcoming": 29
+    "unresolved": 6,
+    "recent_verification": 2,
+    "upcoming": 32
   },
-  "target_count": 34,
+  "target_count": 38,
   "change_count": 9,
   "changes": [
     {
@@ -200,30 +200,30 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-09-01",
+      "date": "2026-09-02",
       "sport": "nar",
-      "venue": "盛岡",
-      "name": "不来方賞",
+      "venue": "大井",
+      "name": "アフター5スター賞",
       "before": {
-        "date": "2026-09-01",
-        "time": "17:05",
+        "date": "2026-09-02",
+        "time": "20:15",
         "sport": "nar",
-        "venue": "盛岡",
-        "grade": "JpnⅡ",
-        "name": "不来方賞",
+        "venue": "大井",
+        "grade": "SⅢ",
+        "name": "アフター5スター賞",
         "winner": ""
       },
       "after": {
-        "date": "2026-09-01",
-        "time": "17:05",
+        "date": "2026-09-02",
+        "time": "20:15",
         "sport": "nar",
-        "venue": "盛岡",
-        "grade": "JpnⅡ",
-        "name": "不来方賞",
-        "winner": "イッテラッシャイ"
+        "venue": "大井",
+        "grade": "SⅢ",
+        "name": "アフター5スター賞",
+        "winner": "ティントレット"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F01&k_babaCode=10",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F02&k_babaCode=20",
       "note": "地方競馬公式レース情報"
     },
     {
@@ -233,7 +233,7 @@
       "name": "ホットマンカップ",
       "before": {
         "date": "2026-09-02",
-        "time": "",
+        "time": "17:15",
         "sport": "boat",
         "venue": "多摩川",
         "grade": "GⅢ",
@@ -247,7 +247,7 @@
         "venue": "多摩川",
         "grade": "GⅢ",
         "name": "ホットマンカップ",
-        "winner": ""
+        "winner": "前田 翔"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=05&hd=20260902&rno=12",

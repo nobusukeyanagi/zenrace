@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-02T03:59:05.416848+09:00",
-  "center_date": "2026-09-02",
+  "generated_at": "2026-09-03T04:04:34.001043+09:00",
+  "center_date": "2026-09-03",
   "past_unresolved_count": 4,
-  "upcoming_missing_time_count": 20,
+  "upcoming_missing_time_count": 25,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -243,6 +243,56 @@
       "venue": "伊東",
       "grade": "GⅢ",
       "name": "ミッドナイトG3",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "sport": "nar",
+      "venue": "名古屋",
+      "grade": "SPⅠ",
+      "name": "秋の鞍",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "sport": "nar",
+      "venue": "園田",
+      "grade": "重賞Ⅱ",
+      "name": "園田プリンセスカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "sport": "nar",
+      "venue": "大井",
+      "grade": "SⅢ",
+      "name": "ゴールドジュニア",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "sport": "nar",
+      "venue": "門別",
+      "grade": "H3",
+      "name": "フローラルカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "sport": "boat",
+      "venue": "徳山",
+      "grade": "GⅠ",
+      "name": "ダイヤモンドカップ",
       "missing": [
         "time"
       ]
