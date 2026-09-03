@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-03T04:04:34.000496+09:00",
-  "center_date": "2026-09-03",
+  "generated_at": "2026-09-04T03:59:55.432726+09:00",
+  "center_date": "2026-09-04",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 6,
     "recent_verification": 2,
-    "upcoming": 32
+    "upcoming": 30
   },
-  "target_count": 38,
-  "change_count": 9,
+  "target_count": 36,
+  "change_count": 12,
   "changes": [
     {
       "date": "2026-09-05",
@@ -200,57 +200,138 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-09-02",
+      "date": "2026-09-03",
       "sport": "nar",
-      "venue": "大井",
-      "name": "アフター5スター賞",
+      "venue": "名古屋",
+      "name": "秋桜賞",
       "before": {
-        "date": "2026-09-02",
-        "time": "20:15",
+        "date": "2026-09-03",
+        "time": "19:30",
         "sport": "nar",
-        "venue": "大井",
-        "grade": "SⅢ",
-        "name": "アフター5スター賞",
+        "venue": "名古屋",
+        "grade": "SPⅠ",
+        "name": "秋桜賞",
         "winner": ""
       },
       "after": {
-        "date": "2026-09-02",
-        "time": "20:15",
+        "date": "2026-09-03",
+        "time": "19:30",
         "sport": "nar",
-        "venue": "大井",
-        "grade": "SⅢ",
-        "name": "アフター5スター賞",
-        "winner": "ティントレット"
+        "venue": "名古屋",
+        "grade": "SPⅠ",
+        "name": "秋桜賞",
+        "winner": "プロミストジーン"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F02&k_babaCode=20",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F03&k_babaCode=24",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-09-02",
-      "sport": "boat",
-      "venue": "多摩川",
-      "name": "ホットマンカップ",
+      "date": "2026-09-03",
+      "sport": "nar",
+      "venue": "佐賀",
+      "name": "サマーチャンピオン",
       "before": {
-        "date": "2026-09-02",
-        "time": "17:15",
-        "sport": "boat",
-        "venue": "多摩川",
-        "grade": "GⅢ",
-        "name": "ホットマンカップ",
+        "date": "2026-09-03",
+        "time": "20:00",
+        "sport": "nar",
+        "venue": "佐賀",
+        "grade": "JpnⅢ",
+        "name": "サマーチャンピオン",
         "winner": ""
       },
       "after": {
-        "date": "2026-09-02",
-        "time": "17:15",
+        "date": "2026-09-03",
+        "time": "20:00",
+        "sport": "nar",
+        "venue": "佐賀",
+        "grade": "JpnⅢ",
+        "name": "サマーチャンピオン",
+        "winner": "マテンロウコマンド"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F03&k_babaCode=32",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-09-06",
+      "sport": "nar",
+      "venue": "佐賀",
+      "name": "九州ジュニアチャンピオン",
+      "before": {
+        "date": "2026-09-06",
+        "time": "",
+        "sport": "nar",
+        "venue": "佐賀",
+        "grade": "",
+        "name": "九州ジュニアチャンピオン",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-06",
+        "time": "18:05",
+        "sport": "nar",
+        "venue": "佐賀",
+        "grade": "",
+        "name": "九州ジュニアチャンピオン",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F06&k_babaCode=32",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-09-06",
+      "sport": "nar",
+      "venue": "金沢",
+      "name": "石川テレビ杯",
+      "before": {
+        "date": "2026-09-06",
+        "time": "",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "石川テレビ杯",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-06",
+        "time": "18:15",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "石川テレビ杯",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F06&k_babaCode=22",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-09-04",
+      "sport": "boat",
+      "venue": "浜名湖",
+      "name": "オールレディース",
+      "before": {
+        "date": "2026-09-04",
+        "time": "",
         "sport": "boat",
-        "venue": "多摩川",
+        "venue": "浜名湖",
         "grade": "GⅢ",
-        "name": "ホットマンカップ",
-        "winner": "前田 翔"
+        "name": "オールレディース",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-04",
+        "time": "17:10",
+        "sport": "boat",
+        "venue": "浜名湖",
+        "grade": "GⅢ",
+        "name": "オールレディース",
+        "winner": ""
       },
       "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=05&hd=20260902&rno=12",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=06&hd=20260904&rno=12",
       "note": "BOAT RACE公式12R結果"
     }
   ]

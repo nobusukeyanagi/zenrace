@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-03T04:04:34.201587+09:00",
-  "base_date": "2026-09-03",
+  "generated_at": "2026-09-04T03:59:55.602514+09:00",
+  "base_date": "2026-09-04",
   "steps": [
     {
       "command": [
@@ -51,10 +51,10 @@
     "master_updated": 7,
     "master_review_required": 17,
     "master_duplicates": 0,
-    "detail_targets": 38,
-    "detail_changes": 9,
+    "detail_targets": 36,
+    "detail_changes": 12,
     "past_unresolved": 4,
-    "upcoming_missing_time": 25,
+    "upcoming_missing_time": 22,
     "detail_source_failures": 0
   }
 }
