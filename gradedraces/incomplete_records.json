@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-04T03:59:55.433327+09:00",
-  "center_date": "2026-09-04",
+  "generated_at": "2026-09-05T03:40:56.227597+09:00",
+  "center_date": "2026-09-05",
   "past_unresolved_count": 4,
   "upcoming_missing_time_count": 22,
   "past_unresolved": [
@@ -53,16 +53,6 @@
       "venue": "中山",
       "grade": "GIII",
       "name": "京成杯オータムH",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-09-06",
-      "sport": "nar",
-      "venue": "水沢",
-      "grade": "M3",
-      "name": "ビギナーズカップ",
       "missing": [
         "time"
       ]
@@ -263,6 +253,16 @@
       "venue": "徳山",
       "grade": "GⅠ",
       "name": "ダイヤモンドカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-09-19",
+      "sport": "jra",
+      "venue": "阪神",
+      "grade": "J・GⅢ",
+      "name": "J ・ GIII 阪神ジャンプS",
       "missing": [
         "time"
       ]

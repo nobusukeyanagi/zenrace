@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-04T03:59:55.432726+09:00",
-  "center_date": "2026-09-04",
+  "generated_at": "2026-09-05T03:40:56.227081+09:00",
+  "center_date": "2026-09-05",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 6,
-    "recent_verification": 2,
+    "unresolved": 5,
+    "recent_verification": 1,
     "upcoming": 30
   },
-  "target_count": 36,
-  "change_count": 12,
+  "target_count": 35,
+  "change_count": 9,
   "changes": [
     {
       "date": "2026-09-05",
@@ -200,111 +200,30 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-09-03",
-      "sport": "nar",
-      "venue": "名古屋",
-      "name": "秋桜賞",
-      "before": {
-        "date": "2026-09-03",
-        "time": "19:30",
-        "sport": "nar",
-        "venue": "名古屋",
-        "grade": "SPⅠ",
-        "name": "秋桜賞",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-09-03",
-        "time": "19:30",
-        "sport": "nar",
-        "venue": "名古屋",
-        "grade": "SPⅠ",
-        "name": "秋桜賞",
-        "winner": "プロミストジーン"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F03&k_babaCode=24",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-09-03",
-      "sport": "nar",
-      "venue": "佐賀",
-      "name": "サマーチャンピオン",
-      "before": {
-        "date": "2026-09-03",
-        "time": "20:00",
-        "sport": "nar",
-        "venue": "佐賀",
-        "grade": "JpnⅢ",
-        "name": "サマーチャンピオン",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-09-03",
-        "time": "20:00",
-        "sport": "nar",
-        "venue": "佐賀",
-        "grade": "JpnⅢ",
-        "name": "サマーチャンピオン",
-        "winner": "マテンロウコマンド"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F03&k_babaCode=32",
-      "note": "地方競馬公式レース情報"
-    },
-    {
       "date": "2026-09-06",
       "sport": "nar",
-      "venue": "佐賀",
-      "name": "九州ジュニアチャンピオン",
+      "venue": "水沢",
+      "name": "ビギナーズカップ",
       "before": {
         "date": "2026-09-06",
         "time": "",
         "sport": "nar",
-        "venue": "佐賀",
-        "grade": "",
-        "name": "九州ジュニアチャンピオン",
+        "venue": "水沢",
+        "grade": "M3",
+        "name": "ビギナーズカップ",
         "winner": ""
       },
       "after": {
         "date": "2026-09-06",
-        "time": "18:05",
+        "time": "17:25",
         "sport": "nar",
-        "venue": "佐賀",
-        "grade": "",
-        "name": "九州ジュニアチャンピオン",
+        "venue": "水沢",
+        "grade": "M3",
+        "name": "ビギナーズカップ",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F06&k_babaCode=32",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-09-06",
-      "sport": "nar",
-      "venue": "金沢",
-      "name": "石川テレビ杯",
-      "before": {
-        "date": "2026-09-06",
-        "time": "",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "石川テレビ杯",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-09-06",
-        "time": "18:15",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "石川テレビ杯",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F06&k_babaCode=22",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F06&k_babaCode=11",
       "note": "地方競馬公式レース情報"
     },
     {
@@ -314,7 +233,7 @@
       "name": "オールレディース",
       "before": {
         "date": "2026-09-04",
-        "time": "",
+        "time": "17:10",
         "sport": "boat",
         "venue": "浜名湖",
         "grade": "GⅢ",
@@ -328,7 +247,7 @@
         "venue": "浜名湖",
         "grade": "GⅢ",
         "name": "オールレディース",
-        "winner": ""
+        "winner": "倉持 莉々"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=06&hd=20260904&rno=12",
