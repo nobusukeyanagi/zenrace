@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-05T03:38:01.175489+09:00",
-  "base_date": "2026-09-05",
+  "generated_at": "2026-09-06T02:46:20.258482+09:00",
+  "base_date": "2026-09-06",
   "calendar_years": [
     2026,
     2027
@@ -38,7 +38,7 @@
         "venue": "中山",
         "grade": "GⅢ",
         "name": "京成杯オータムH",
-        "winner": ""
+        "winner": "ピコローズ"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-09-05:京成杯オータムh"
@@ -62,7 +62,7 @@
         "venue": "札幌",
         "grade": "GⅢ",
         "name": "札幌2歳S",
-        "winner": ""
+        "winner": "ショウナンガレオン"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-09-05:札幌2歳s"

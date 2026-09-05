@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-05T03:40:56.227597+09:00",
-  "center_date": "2026-09-05",
-  "past_unresolved_count": 4,
-  "upcoming_missing_time_count": 22,
+  "generated_at": "2026-09-06T02:49:04.078425+09:00",
+  "center_date": "2026-09-06",
+  "past_unresolved_count": 5,
+  "upcoming_missing_time_count": 20,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -44,9 +44,7 @@
       "missing": [
         "time"
       ]
-    }
-  ],
-  "upcoming_missing_time": [
+    },
     {
       "date": "2026-09-05",
       "sport": "jra",
@@ -56,17 +54,9 @@
       "missing": [
         "time"
       ]
-    },
-    {
-      "date": "2026-09-06",
-      "sport": "keirin",
-      "venue": "青森",
-      "grade": "GⅢ",
-      "name": "みちのく記念 善知鳥杯争奪戦",
-      "missing": [
-        "time"
-      ]
-    },
+    }
+  ],
+  "upcoming_missing_time": [
     {
       "date": "2026-09-06",
       "sport": "auto",

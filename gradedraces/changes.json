@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-05T03:40:56.227081+09:00",
-  "center_date": "2026-09-05",
+  "generated_at": "2026-09-06T02:49:04.077858+09:00",
+  "center_date": "2026-09-06",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 5,
-    "recent_verification": 1,
-    "upcoming": 30
+    "recent_verification": 2,
+    "upcoming": 29
   },
   "target_count": 35,
-  "change_count": 9,
+  "change_count": 10,
   "changes": [
     {
       "date": "2026-09-05",
@@ -22,7 +22,7 @@
         "venue": "中山",
         "grade": "GⅢ",
         "name": "京成杯オータムH",
-        "winner": ""
+        "winner": "ピコローズ"
       },
       "after": {
         "date": "2026-09-05",
@@ -31,7 +31,7 @@
         "venue": "中山",
         "grade": "GIII",
         "name": "京成杯オータムH",
-        "winner": ""
+        "winner": "ピコローズ"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -49,7 +49,7 @@
         "venue": "札幌",
         "grade": "GⅢ",
         "name": "札幌2歳S",
-        "winner": ""
+        "winner": "ショウナンガレオン"
       },
       "after": {
         "date": "2026-09-05",
@@ -58,7 +58,7 @@
         "venue": "札幌",
         "grade": "GIII",
         "name": "札幌2歳S",
-        "winner": ""
+        "winner": "ショウナンガレオン"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -200,58 +200,85 @@
       "note": "JRA重賞一覧"
     },
     {
+      "date": "2026-09-20",
+      "sport": "jra",
+      "venue": "中山",
+      "name": "オールカマー",
+      "before": {
+        "date": "2026-09-20",
+        "time": "",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GⅡ",
+        "name": "オールカマー",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-20",
+        "time": "",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GII",
+        "name": "オールカマー",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-09-20",
+      "sport": "jra",
+      "venue": "中山",
+      "name": "オールカマー",
+      "before": {
+        "date": "2026-09-20",
+        "time": "",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GII",
+        "name": "オールカマー",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-20",
+        "time": "15:30",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GII",
+        "name": "オールカマー",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/9/0920.html",
+      "note": "JRA競馬番組"
+    },
+    {
       "date": "2026-09-06",
-      "sport": "nar",
-      "venue": "水沢",
-      "name": "ビギナーズカップ",
+      "sport": "keirin",
+      "venue": "青森",
+      "name": "みちのく記念 善知鳥杯争奪戦",
       "before": {
         "date": "2026-09-06",
         "time": "",
-        "sport": "nar",
-        "venue": "水沢",
-        "grade": "M3",
-        "name": "ビギナーズカップ",
+        "sport": "keirin",
+        "venue": "青森",
+        "grade": "GⅢ",
+        "name": "みちのく記念 善知鳥杯争奪戦",
         "winner": ""
       },
       "after": {
         "date": "2026-09-06",
-        "time": "17:25",
-        "sport": "nar",
-        "venue": "水沢",
-        "grade": "M3",
-        "name": "ビギナーズカップ",
+        "time": "16:25",
+        "sport": "keirin",
+        "venue": "青森",
+        "grade": "GⅢ",
+        "name": "みちのく記念 善知鳥杯争奪戦",
         "winner": ""
       },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F06&k_babaCode=11",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-09-04",
-      "sport": "boat",
-      "venue": "浜名湖",
-      "name": "オールレディース",
-      "before": {
-        "date": "2026-09-04",
-        "time": "17:10",
-        "sport": "boat",
-        "venue": "浜名湖",
-        "grade": "GⅢ",
-        "name": "オールレディース",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-09-04",
-        "time": "17:10",
-        "sport": "boat",
-        "venue": "浜名湖",
-        "grade": "GⅢ",
-        "name": "オールレディース",
-        "winner": "倉持 莉々"
-      },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=06&hd=20260904&rno=12",
-      "note": "BOAT RACE公式12R結果"
+      "source": "競輪",
+      "evidence_url": "https://www.oddspark.com/keirin/RaceList.do?joCode=12&kaisaiBi=20260906&raceNo=12",
+      "note": "公開出走表によるKEIRIN.JP補完（12R発走時間）"
     }
   ]
 }

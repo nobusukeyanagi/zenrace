@@ -3912,7 +3912,7 @@
     "venue": "札幌",
     "grade": "GIII",
     "name": "札幌2歳S",
-    "winner": ""
+    "winner": "ショウナンガレオン"
   },
   {
     "date": "2026-09-05",
@@ -3921,7 +3921,7 @@
     "venue": "中山",
     "grade": "GIII",
     "name": "京成杯オータムH",
-    "winner": ""
+    "winner": "ピコローズ"
   },
   {
     "date": "2026-09-06",
@@ -3930,6 +3930,15 @@
     "venue": "阪神",
     "grade": "GII",
     "name": "セントウルS",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-06",
+    "time": "16:25",
+    "sport": "keirin",
+    "venue": "青森",
+    "grade": "GⅢ",
+    "name": "みちのく記念 善知鳥杯争奪戦",
     "winner": ""
   },
   {
@@ -3966,15 +3975,6 @@
     "venue": "金沢",
     "grade": "",
     "name": "石川テレビ杯",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-06",
-    "time": "",
-    "sport": "keirin",
-    "venue": "青森",
-    "grade": "GⅢ",
-    "name": "みちのく記念 善知鳥杯争奪戦",
     "winner": ""
   },
   {
@@ -4177,10 +4177,10 @@
   },
   {
     "date": "2026-09-20",
-    "time": "",
+    "time": "15:30",
     "sport": "jra",
     "venue": "中山",
-    "grade": "GⅡ",
+    "grade": "GII",
     "name": "オールカマー",
     "winner": ""
   },
