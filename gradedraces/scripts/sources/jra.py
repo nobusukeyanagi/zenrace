@@ -13,6 +13,7 @@ from scripts.common import (
     clean_text,
     extract_time_near,
     parse_grade_and_name,
+    same_name,
     soup_from,
     table_rows,
 )
@@ -57,6 +58,17 @@ def collect(records: list[dict[str, Any]], session: RateLimitedSession, logger: 
                 index = best_record_match(records, sport="jra", date=date_text, venue=venue, name=name)
                 if index is None:
                     continue
+
+                # スマート更新では、同日の全重賞が target_records に入るとは限らない。
+                # そのため「同日の候補が1件だけ」という理由だけで別会場・別レースを
+                # 採用すると、既存レコードを別重賞へ書き換えて重複を作ることがある。
+                # 会場またはレース名の少なくとも一方が一致する場合だけ更新対象とする。
+                candidate = records[index]
+                venue_matches = clean_text(candidate.get("venue", "")) == clean_text(venue)
+                name_matches = bool(name) and same_name(str(candidate.get("name", "")), name)
+                if not (venue_matches or name_matches):
+                    continue
+
                 fields = {"venue": venue, "grade": grade, "name": name}
                 if winner:
                     fields["winner"] = winner
