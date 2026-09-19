@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-19T03:47:07.024730+09:00",
-  "center_date": "2026-09-19",
-  "past_unresolved_count": 7,
+  "generated_at": "2026-09-20T03:20:08.966996+09:00",
+  "center_date": "2026-09-20",
+  "past_unresolved_count": 8,
   "upcoming_missing_time_count": 26,
   "past_unresolved": [
     {
@@ -74,9 +74,7 @@
       "missing": [
         "time"
       ]
-    }
-  ],
-  "upcoming_missing_time": [
+    },
     {
       "date": "2026-09-19",
       "sport": "jra",
@@ -86,17 +84,9 @@
       "missing": [
         "time"
       ]
-    },
-    {
-      "date": "2026-09-21",
-      "sport": "nar",
-      "venue": "水沢",
-      "grade": "M1",
-      "name": "オータムティアラ",
-      "missing": [
-        "time"
-      ]
-    },
+    }
+  ],
+  "upcoming_missing_time": [
     {
       "date": "2026-09-21",
       "sport": "boat",
@@ -113,16 +103,6 @@
       "venue": "富山",
       "grade": "GⅡ",
       "name": "共同通信社杯競輪",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-09-22",
-      "sport": "nar",
-      "venue": "門別",
-      "grade": "H2",
-      "name": "ウポポイオータムスプリント",
       "missing": [
         "time"
       ]
@@ -153,16 +133,6 @@
       "venue": "笠松",
       "grade": "SPⅢ",
       "name": "ブルームカップ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-09-23",
-      "sport": "nar",
-      "venue": "門別",
-      "grade": "H2",
-      "name": "瑞穂賞",
       "missing": [
         "time"
       ]
@@ -333,6 +303,46 @@
       "venue": "児島",
       "grade": "GⅠ",
       "name": "児島キングカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "sport": "nar",
+      "venue": "盛岡",
+      "grade": "M2",
+      "name": "若駒賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "sport": "nar",
+      "venue": "金沢",
+      "grade": "",
+      "name": "金沢シンデレラカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "sport": "boat",
+      "venue": "蒲郡",
+      "grade": "GⅢ",
+      "name": "「いい風吹け」キリンビール晴れ風賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "sport": "keirin",
+      "venue": "松阪",
+      "grade": "GⅠ",
+      "name": "",
       "missing": [
         "time"
       ]
