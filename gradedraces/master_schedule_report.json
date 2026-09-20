@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-20T03:16:21.177134+09:00",
-  "base_date": "2026-09-20",
+  "generated_at": "2026-09-21T03:21:36.561024+09:00",
+  "base_date": "2026-09-21",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-10-31",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 7,
+  "updated_count": 8,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -71,30 +71,6 @@
       "type": "master_updated",
       "match_type": "exact",
       "before": {
-        "date": "2026-09-19",
-        "time": "",
-        "sport": "jra",
-        "venue": "阪神",
-        "grade": "J・GⅢ",
-        "name": "J ・ GIII 阪神ジャンプS",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-09-19",
-        "time": "",
-        "sport": "jra",
-        "venue": "阪神",
-        "grade": "J・GⅢ",
-        "name": "J ・ GIII 阪神ジャンプS",
-        "winner": "オオキニ"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-09-19:j・giii阪神ジャンプs"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
         "date": "2026-09-20",
         "time": "15:30",
         "sport": "jra",
@@ -110,7 +86,7 @@
         "venue": "中山",
         "grade": "GⅡ",
         "name": "オールカマー",
-        "winner": ""
+        "winner": "メイショウゲキリン"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-09-20:オールカマー"
@@ -186,6 +162,54 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-09-27:スプリンターズs"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-10-04",
+        "time": "16:10",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GII",
+        "name": "京都大賞典",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-04",
+        "time": "16:10",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GⅡ",
+        "name": "京都大賞典",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-10-04:京都大賞典"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-10-04",
+        "time": "15:30",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GII",
+        "name": "毎日王冠",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-04",
+        "time": "15:30",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GⅡ",
+        "name": "毎日王冠",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-10-04:毎日王冠"
     }
   ],
   "registered_only": [

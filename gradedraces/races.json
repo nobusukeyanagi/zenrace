@@ -4182,7 +4182,7 @@
     "venue": "中山",
     "grade": "GII",
     "name": "オールカマー",
-    "winner": ""
+    "winner": "メイショウゲキリン"
   },
   {
     "date": "2026-09-21",
@@ -4191,6 +4191,24 @@
     "venue": "阪神",
     "grade": "GII",
     "name": "神戸新聞杯",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-21",
+    "time": "16:30",
+    "sport": "boat",
+    "venue": "多摩川",
+    "grade": "GⅠ",
+    "name": "ウェイキーカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-21",
+    "time": "16:30",
+    "sport": "keirin",
+    "venue": "富山",
+    "grade": "GⅡ",
+    "name": "共同通信社杯競輪",
     "winner": ""
   },
   {
@@ -4209,24 +4227,6 @@
     "venue": "金沢",
     "grade": "",
     "name": "金沢鼓門賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-21",
-    "time": "",
-    "sport": "boat",
-    "venue": "多摩川",
-    "grade": "GⅠ",
-    "name": "ウェイキーカップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-21",
-    "time": "",
-    "sport": "keirin",
-    "venue": "富山",
-    "grade": "GⅡ",
-    "name": "共同通信社杯競輪",
     "winner": ""
   },
   {
@@ -4249,16 +4249,7 @@
   },
   {
     "date": "2026-09-23",
-    "time": "20:50",
-    "sport": "nar",
-    "venue": "門別",
-    "grade": "H2",
-    "name": "瑞穂賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-23",
-    "time": "",
+    "time": "16:15",
     "sport": "nar",
     "venue": "園田",
     "grade": "重賞Ⅱ",
@@ -4267,7 +4258,16 @@
   },
   {
     "date": "2026-09-23",
-    "time": "",
+    "time": "16:40",
+    "sport": "nar",
+    "venue": "笠松",
+    "grade": "SPⅢ",
+    "name": "ブルームカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-23",
+    "time": "18:15",
     "sport": "nar",
     "venue": "浦和",
     "grade": "JpnⅢ",
@@ -4276,11 +4276,11 @@
   },
   {
     "date": "2026-09-23",
-    "time": "",
+    "time": "20:50",
     "sport": "nar",
-    "venue": "笠松",
-    "grade": "SPⅢ",
-    "name": "ブルームカップ",
+    "venue": "門別",
+    "grade": "H2",
+    "name": "瑞穂賞",
     "winner": ""
   },
   {
@@ -4303,7 +4303,7 @@
   },
   {
     "date": "2026-09-25",
-    "time": "",
+    "time": "20:00",
     "sport": "nar",
     "venue": "園田",
     "grade": "重賞Ⅱ",
