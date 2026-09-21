@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-21T03:21:36.561024+09:00",
-  "base_date": "2026-09-21",
+  "generated_at": "2026-09-22T05:10:14.529655+09:00",
+  "base_date": "2026-09-22",
   "calendar_years": [
     2026,
     2027
@@ -77,7 +77,7 @@
         "venue": "中山",
         "grade": "GII",
         "name": "オールカマー",
-        "winner": ""
+        "winner": "メイショウゲキリン"
       },
       "after": {
         "date": "2026-09-20",
@@ -110,7 +110,7 @@
         "venue": "阪神",
         "grade": "GⅡ",
         "name": "神戸新聞杯",
-        "winner": ""
+        "winner": "ロブチェン"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-09-21:神戸新聞杯"

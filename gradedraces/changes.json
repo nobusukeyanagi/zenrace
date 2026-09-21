@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-21T03:25:27.919323+09:00",
-  "center_date": "2026-09-21",
+  "generated_at": "2026-09-22T05:14:03.422390+09:00",
+  "center_date": "2026-09-22",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 8,
-    "recent_verification": 1,
-    "upcoming": 36
+    "unresolved": 12,
+    "recent_verification": 5,
+    "upcoming": 33
   },
-  "target_count": 45,
-  "change_count": 14,
+  "target_count": 46,
+  "change_count": 11,
   "changes": [
     {
       "date": "2026-09-05",
@@ -65,33 +65,6 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-09-20",
-      "sport": "jra",
-      "venue": "中山",
-      "name": "オールカマー",
-      "before": {
-        "date": "2026-09-20",
-        "time": "15:30",
-        "sport": "jra",
-        "venue": "中山",
-        "grade": "GⅡ",
-        "name": "オールカマー",
-        "winner": "メイショウゲキリン"
-      },
-      "after": {
-        "date": "2026-09-20",
-        "time": "15:30",
-        "sport": "jra",
-        "venue": "中山",
-        "grade": "GII",
-        "name": "オールカマー",
-        "winner": "メイショウゲキリン"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
       "date": "2026-09-21",
       "sport": "jra",
       "venue": "阪神",
@@ -103,7 +76,7 @@
         "venue": "阪神",
         "grade": "GⅡ",
         "name": "神戸新聞杯",
-        "winner": ""
+        "winner": "ロブチェン"
       },
       "after": {
         "date": "2026-09-21",
@@ -112,7 +85,7 @@
         "venue": "阪神",
         "grade": "GII",
         "name": "神戸新聞杯",
-        "winner": ""
+        "winner": "ロブチェン"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -227,111 +200,57 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-09-23",
+      "date": "2026-09-21",
       "sport": "nar",
-      "venue": "園田",
-      "name": "兵庫ジュベナイルカップ",
+      "venue": "水沢",
+      "name": "オータムティアラ",
       "before": {
-        "date": "2026-09-23",
-        "time": "",
+        "date": "2026-09-21",
+        "time": "18:05",
         "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅱ",
-        "name": "兵庫ジュベナイルカップ",
+        "venue": "水沢",
+        "grade": "M1",
+        "name": "オータムティアラ",
         "winner": ""
       },
       "after": {
-        "date": "2026-09-23",
-        "time": "16:15",
+        "date": "2026-09-21",
+        "time": "18:05",
         "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅱ",
-        "name": "兵庫ジュベナイルカップ",
-        "winner": ""
+        "venue": "水沢",
+        "grade": "M1",
+        "name": "オータムティアラ",
+        "winner": "セイクリスティーナ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F23&k_babaCode=27",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F21&k_babaCode=11",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-09-23",
+      "date": "2026-09-21",
       "sport": "nar",
-      "venue": "浦和",
-      "name": "オーバルスプリント",
+      "venue": "金沢",
+      "name": "金沢鼓門賞",
       "before": {
-        "date": "2026-09-23",
-        "time": "",
-        "sport": "nar",
-        "venue": "浦和",
-        "grade": "JpnⅢ",
-        "name": "オーバルスプリント",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-09-23",
+        "date": "2026-09-21",
         "time": "18:15",
         "sport": "nar",
-        "venue": "浦和",
-        "grade": "JpnⅢ",
-        "name": "オーバルスプリント",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F23&k_babaCode=18",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-09-23",
-      "sport": "nar",
-      "venue": "笠松",
-      "name": "ブルームカップ",
-      "before": {
-        "date": "2026-09-23",
-        "time": "",
-        "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅢ",
-        "name": "ブルームカップ",
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢鼓門賞",
         "winner": ""
       },
       "after": {
-        "date": "2026-09-23",
-        "time": "16:40",
+        "date": "2026-09-21",
+        "time": "18:15",
         "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅢ",
-        "name": "ブルームカップ",
-        "winner": ""
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢鼓門賞",
+        "winner": "キュムロンニンバス"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F23&k_babaCode=23",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-09-25",
-      "sport": "nar",
-      "venue": "園田",
-      "name": "園田チャレンジカップ",
-      "before": {
-        "date": "2026-09-25",
-        "time": "",
-        "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅱ",
-        "name": "園田チャレンジカップ",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-09-25",
-        "time": "20:00",
-        "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅱ",
-        "name": "園田チャレンジカップ",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F25&k_babaCode=27",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F21&k_babaCode=22",
       "note": "地方競馬公式レース情報"
     },
     {
@@ -341,7 +260,7 @@
       "name": "ウェイキーカップ",
       "before": {
         "date": "2026-09-21",
-        "time": "",
+        "time": "16:30",
         "sport": "boat",
         "venue": "多摩川",
         "grade": "GⅠ",
@@ -355,7 +274,7 @@
         "venue": "多摩川",
         "grade": "GⅠ",
         "name": "ウェイキーカップ",
-        "winner": ""
+        "winner": "丸野 一樹"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=05&hd=20260921&rno=12",
@@ -368,7 +287,7 @@
       "name": "共同通信社杯競輪",
       "before": {
         "date": "2026-09-21",
-        "time": "",
+        "time": "16:30",
         "sport": "keirin",
         "venue": "富山",
         "grade": "GⅡ",
@@ -382,11 +301,11 @@
         "venue": "富山",
         "grade": "GⅡ",
         "name": "共同通信社杯競輪",
-        "winner": ""
+        "winner": "佐々木悠葵"
       },
       "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceList.do?joCode=46&kaisaiBi=20260921&raceNo=11",
-      "note": "公開出走表によるKEIRIN.JP補完（11R発走時間）"
+      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=46&kaisaiBi=20260921&raceNo=11",
+      "note": "公開結果によるKEIRIN.JP補完（11R）"
     }
   ]
 }
