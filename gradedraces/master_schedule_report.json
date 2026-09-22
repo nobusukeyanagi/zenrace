@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-22T05:10:14.529655+09:00",
-  "base_date": "2026-09-22",
+  "generated_at": "2026-09-23T04:20:09.498317+09:00",
+  "base_date": "2026-09-23",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-10-31",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 8,
+  "updated_count": 7,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -71,37 +71,13 @@
       "type": "master_updated",
       "match_type": "exact",
       "before": {
-        "date": "2026-09-20",
-        "time": "15:30",
-        "sport": "jra",
-        "venue": "中山",
-        "grade": "GII",
-        "name": "オールカマー",
-        "winner": "メイショウゲキリン"
-      },
-      "after": {
-        "date": "2026-09-20",
-        "time": "15:30",
-        "sport": "jra",
-        "venue": "中山",
-        "grade": "GⅡ",
-        "name": "オールカマー",
-        "winner": "メイショウゲキリン"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-09-20:オールカマー"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
         "date": "2026-09-21",
         "time": "16:30",
         "sport": "jra",
         "venue": "阪神",
         "grade": "GII",
         "name": "神戸新聞杯",
-        "winner": ""
+        "winner": "ロブチェン"
       },
       "after": {
         "date": "2026-09-21",
