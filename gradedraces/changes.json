@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-23T04:23:28.888448+09:00",
-  "center_date": "2026-09-23",
+  "generated_at": "2026-09-24T04:20:56.026115+09:00",
+  "center_date": "2026-09-24",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 9,
-    "recent_verification": 2,
-    "upcoming": 33
+    "unresolved": 14,
+    "recent_verification": 6,
+    "upcoming": 30
   },
-  "target_count": 43,
-  "change_count": 9,
+  "target_count": 44,
+  "change_count": 12,
   "changes": [
     {
       "date": "2026-09-05",
@@ -173,57 +173,138 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-09-22",
+      "date": "2026-09-23",
       "sport": "nar",
-      "venue": "金沢",
-      "name": "白山大賞典",
+      "venue": "園田",
+      "name": "兵庫ジュベナイルカップ",
       "before": {
-        "date": "2026-09-22",
-        "time": "18:00",
+        "date": "2026-09-23",
+        "time": "16:15",
         "sport": "nar",
-        "venue": "金沢",
-        "grade": "JpnⅢ",
-        "name": "白山大賞典",
-        "winner": "歴代"
-      },
-      "after": {
-        "date": "2026-09-22",
-        "time": "18:00",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "JpnⅢ",
-        "name": "白山大賞典",
-        "winner": "ホウオウルーレット"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F22&k_babaCode=22",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-09-22",
-      "sport": "nar",
-      "venue": "門別",
-      "name": "ウポポイオータムスプリント",
-      "before": {
-        "date": "2026-09-22",
-        "time": "20:45",
-        "sport": "nar",
-        "venue": "門別",
-        "grade": "H2",
-        "name": "ウポポイオータムスプリント",
+        "venue": "園田",
+        "grade": "重賞Ⅱ",
+        "name": "兵庫ジュベナイルカップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-09-22",
-        "time": "20:45",
+        "date": "2026-09-23",
+        "time": "16:15",
+        "sport": "nar",
+        "venue": "園田",
+        "grade": "重賞Ⅱ",
+        "name": "兵庫ジュベナイルカップ",
+        "winner": "ジョイドール"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F23&k_babaCode=27",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-09-23",
+      "sport": "nar",
+      "venue": "笠松",
+      "name": "ブルームカップ",
+      "before": {
+        "date": "2026-09-23",
+        "time": "16:40",
+        "sport": "nar",
+        "venue": "笠松",
+        "grade": "SPⅢ",
+        "name": "ブルームカップ",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-23",
+        "time": "16:40",
+        "sport": "nar",
+        "venue": "笠松",
+        "grade": "SPⅢ",
+        "name": "ブルームカップ",
+        "winner": "ファーストボーイ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F23&k_babaCode=23",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-09-23",
+      "sport": "nar",
+      "venue": "浦和",
+      "name": "オーバルスプリント",
+      "before": {
+        "date": "2026-09-23",
+        "time": "18:15",
+        "sport": "nar",
+        "venue": "浦和",
+        "grade": "JpnⅢ",
+        "name": "オーバルスプリント",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-23",
+        "time": "18:15",
+        "sport": "nar",
+        "venue": "浦和",
+        "grade": "JpnⅢ",
+        "name": "オーバルスプリント",
+        "winner": "タガノミスト"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F23&k_babaCode=18",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-09-23",
+      "sport": "nar",
+      "venue": "門別",
+      "name": "瑞穂賞",
+      "before": {
+        "date": "2026-09-23",
+        "time": "20:50",
         "sport": "nar",
         "venue": "門別",
         "grade": "H2",
-        "name": "ウポポイオータムスプリント",
-        "winner": "ベストグリーン"
+        "name": "瑞穂賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-23",
+        "time": "20:50",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H2",
+        "name": "瑞穂賞",
+        "winner": "ベルピット"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F22&k_babaCode=36",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F23&k_babaCode=36",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-09-27",
+      "sport": "nar",
+      "venue": "高知",
+      "name": "珊瑚冠賞",
+      "before": {
+        "date": "2026-09-27",
+        "time": "",
+        "sport": "nar",
+        "venue": "高知",
+        "grade": "",
+        "name": "珊瑚冠賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-27",
+        "time": "18:15",
+        "sport": "nar",
+        "venue": "高知",
+        "grade": "",
+        "name": "珊瑚冠賞",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F27&k_babaCode=31",
       "note": "地方競馬公式レース情報"
     },
     {
@@ -233,7 +314,7 @@
       "name": "オールレディース",
       "before": {
         "date": "2026-09-23",
-        "time": "",
+        "time": "16:45",
         "sport": "boat",
         "venue": "宮島",
         "grade": "GⅢ",
@@ -242,12 +323,12 @@
       },
       "after": {
         "date": "2026-09-23",
-        "time": "16:45",
+        "time": "16:46",
         "sport": "boat",
         "venue": "宮島",
         "grade": "GⅢ",
         "name": "オールレディース",
-        "winner": ""
+        "winner": "海野 ゆかり"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=17&hd=20260923&rno=12",

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-23T04:23:28.888971+09:00",
-  "center_date": "2026-09-23",
-  "past_unresolved_count": 8,
-  "upcoming_missing_time_count": 23,
+  "generated_at": "2026-09-24T04:20:56.026634+09:00",
+  "center_date": "2026-09-24",
+  "past_unresolved_count": 9,
+  "upcoming_missing_time_count": 24,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -84,9 +84,7 @@
       "missing": [
         "time"
       ]
-    }
-  ],
-  "upcoming_missing_time": [
+    },
     {
       "date": "2026-09-23",
       "sport": "auto",
@@ -94,9 +92,12 @@
       "grade": "特GⅠ",
       "name": "共同通信社杯プレミアムカップ",
       "missing": [
-        "time"
+        "time",
+        "winner"
       ]
-    },
+    }
+  ],
+  "upcoming_missing_time": [
     {
       "date": "2026-09-27",
       "sport": "nar",
@@ -123,16 +124,6 @@
       "venue": "水沢",
       "grade": "M3",
       "name": "ヴィーナススプリント",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-09-27",
-      "sport": "nar",
-      "venue": "高知",
-      "grade": "",
-      "name": "珊瑚冠賞",
       "missing": [
         "time"
       ]
@@ -313,6 +304,36 @@
       "venue": "笠松",
       "grade": "SPⅡ",
       "name": "オータムカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "sport": "nar",
+      "venue": "大井",
+      "grade": "JpnⅡ",
+      "name": "東京盃",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "sport": "nar",
+      "venue": "笠松",
+      "grade": "",
+      "name": "ネクストスター笠松",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "sport": "nar",
+      "venue": "門別",
+      "grade": "H3",
+      "name": "グランシャリオクイーンズ",
       "missing": [
         "time"
       ]
