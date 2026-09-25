@@ -4308,7 +4308,7 @@
     "venue": "園田",
     "grade": "重賞Ⅱ",
     "name": "園田チャレンジカップ",
-    "winner": ""
+    "winner": "エコロガイア"
   },
   {
     "date": "2026-09-26",
@@ -4326,6 +4326,15 @@
     "venue": "中山",
     "grade": "GI",
     "name": "スプリンターズS",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-27",
+    "time": "17:25",
+    "sport": "nar",
+    "venue": "水沢",
+    "grade": "M3",
+    "name": "ヴィーナススプリント",
     "winner": ""
   },
   {
@@ -4348,20 +4357,11 @@
   },
   {
     "date": "2026-09-27",
-    "time": "",
+    "time": "20:00",
     "sport": "nar",
     "venue": "帯広",
     "grade": "BG2",
     "name": "銀河賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-27",
-    "time": "",
-    "sport": "nar",
-    "venue": "水沢",
-    "grade": "M3",
-    "name": "ヴィーナススプリント",
     "winner": ""
   },
   {
@@ -4585,7 +4585,7 @@
     "time": "",
     "sport": "jra",
     "venue": "東京",
-    "grade": "GⅢ",
+    "grade": "GIII",
     "name": "サウジアラビアロイヤルC",
     "winner": ""
   },

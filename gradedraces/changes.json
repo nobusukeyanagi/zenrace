@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-09-25T04:37:18.507511+09:00",
-  "center_date": "2026-09-25",
+  "generated_at": "2026-09-26T04:42:10.969422+09:00",
+  "center_date": "2026-09-26",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 9,
+    "unresolved": 10,
+    "recent_verification": 1,
     "upcoming": 31
   },
-  "target_count": 40,
-  "change_count": 7,
+  "target_count": 41,
+  "change_count": 10,
   "changes": [
     {
       "date": "2026-09-05",
@@ -172,30 +173,111 @@
       "note": "JRA重賞一覧"
     },
     {
+      "date": "2026-10-10",
+      "sport": "jra",
+      "venue": "東京",
+      "name": "サウジアラビアロイヤルC",
+      "before": {
+        "date": "2026-10-10",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GⅢ",
+        "name": "サウジアラビアロイヤルC",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-10",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GIII",
+        "name": "サウジアラビアロイヤルC",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-09-25",
+      "sport": "nar",
+      "venue": "園田",
+      "name": "園田チャレンジカップ",
+      "before": {
+        "date": "2026-09-25",
+        "time": "20:00",
+        "sport": "nar",
+        "venue": "園田",
+        "grade": "重賞Ⅱ",
+        "name": "園田チャレンジカップ",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-25",
+        "time": "20:00",
+        "sport": "nar",
+        "venue": "園田",
+        "grade": "重賞Ⅱ",
+        "name": "園田チャレンジカップ",
+        "winner": "エコロガイア"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F25&k_babaCode=27",
+      "note": "地方競馬公式レース情報"
+    },
+    {
       "date": "2026-09-27",
       "sport": "nar",
-      "venue": "佐賀",
-      "name": "ロータスクラウン賞",
+      "venue": "帯広",
+      "name": "銀河賞",
       "before": {
         "date": "2026-09-27",
         "time": "",
         "sport": "nar",
-        "venue": "佐賀",
-        "grade": "",
-        "name": "ロータスクラウン賞",
+        "venue": "帯広",
+        "grade": "BG2",
+        "name": "銀河賞",
         "winner": ""
       },
       "after": {
         "date": "2026-09-27",
-        "time": "18:05",
+        "time": "20:00",
         "sport": "nar",
-        "venue": "佐賀",
-        "grade": "",
-        "name": "ロータスクラウン賞",
+        "venue": "帯広",
+        "grade": "BG2",
+        "name": "銀河賞",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F27&k_babaCode=32",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F27&k_babaCode=03",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-09-27",
+      "sport": "nar",
+      "venue": "水沢",
+      "name": "ヴィーナススプリント",
+      "before": {
+        "date": "2026-09-27",
+        "time": "",
+        "sport": "nar",
+        "venue": "水沢",
+        "grade": "M3",
+        "name": "ヴィーナススプリント",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-27",
+        "time": "17:25",
+        "sport": "nar",
+        "venue": "水沢",
+        "grade": "M3",
+        "name": "ヴィーナススプリント",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F27&k_babaCode=11",
       "note": "地方競馬公式レース情報"
     }
   ]
