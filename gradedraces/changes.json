@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-26T04:42:10.969422+09:00",
-  "center_date": "2026-09-26",
+  "generated_at": "2026-09-27T03:50:09.694645+09:00",
+  "center_date": "2026-09-27",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 10,
+    "unresolved": 9,
     "recent_verification": 1,
-    "upcoming": 31
+    "upcoming": 32
   },
-  "target_count": 41,
-  "change_count": 10,
+  "target_count": 42,
+  "change_count": 13,
   "changes": [
     {
       "date": "2026-09-05",
@@ -76,7 +76,7 @@
         "venue": "阪神",
         "grade": "GⅢ",
         "name": "シリウスS",
-        "winner": ""
+        "winner": "ヴァルツァーシャル"
       },
       "after": {
         "date": "2026-09-26",
@@ -85,7 +85,7 @@
         "venue": "阪神",
         "grade": "GIII",
         "name": "シリウスS",
-        "winner": ""
+        "winner": "ヴァルツァーシャル"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -200,85 +200,166 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-09-25",
-      "sport": "nar",
-      "venue": "園田",
-      "name": "園田チャレンジカップ",
+      "date": "2026-10-11",
+      "sport": "jra",
+      "venue": "東京",
+      "name": "アイルランドT",
       "before": {
-        "date": "2026-09-25",
-        "time": "20:00",
-        "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅱ",
-        "name": "園田チャレンジカップ",
+        "date": "2026-10-11",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GⅡ",
+        "name": "アイルランドT",
         "winner": ""
       },
       "after": {
-        "date": "2026-09-25",
-        "time": "20:00",
+        "date": "2026-10-11",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GII",
+        "name": "アイルランドT",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-10-11",
+      "sport": "jra",
+      "venue": "東京",
+      "name": "アイルランドT",
+      "before": {
+        "date": "2026-10-11",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GII",
+        "name": "アイルランドT",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-11",
+        "time": "09:50",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GII",
+        "name": "アイルランドT",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/10/1011.html",
+      "note": "JRA競馬番組"
+    },
+    {
+      "date": "2026-09-30",
+      "sport": "nar",
+      "venue": "門別",
+      "name": "サンライズカップ",
+      "before": {
+        "date": "2026-09-30",
+        "time": "",
         "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅱ",
-        "name": "園田チャレンジカップ",
-        "winner": "エコロガイア"
+        "venue": "門別",
+        "grade": "H1",
+        "name": "サンライズカップ",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-09-30",
+        "time": "20:30",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H1",
+        "name": "サンライズカップ",
+        "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F25&k_babaCode=27",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F30&k_babaCode=36",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-01",
+      "sport": "nar",
+      "venue": "門別",
+      "name": "ネクストスター門別",
+      "before": {
+        "date": "2026-10-01",
+        "time": "",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H1",
+        "name": "ネクストスター門別",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-01",
+        "time": "20:30",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H1",
+        "name": "ネクストスター門別",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F01&k_babaCode=36",
       "note": "地方競馬公式レース情報"
     },
     {
       "date": "2026-09-27",
-      "sport": "nar",
-      "venue": "帯広",
-      "name": "銀河賞",
+      "sport": "boat",
+      "venue": "びわこ",
+      "name": "つるやパン提供 みんな大好き！サラダパン賞",
       "before": {
         "date": "2026-09-27",
         "time": "",
-        "sport": "nar",
-        "venue": "帯広",
-        "grade": "BG2",
-        "name": "銀河賞",
+        "sport": "boat",
+        "venue": "びわこ",
+        "grade": "GⅢ",
+        "name": "つるやパン提供 みんな大好き！サラダパン賞",
         "winner": ""
       },
       "after": {
         "date": "2026-09-27",
-        "time": "20:00",
-        "sport": "nar",
-        "venue": "帯広",
-        "grade": "BG2",
-        "name": "銀河賞",
+        "time": "16:18",
+        "sport": "boat",
+        "venue": "びわこ",
+        "grade": "GⅢ",
+        "name": "つるやパン提供 みんな大好き！サラダパン賞",
         "winner": ""
       },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F27&k_babaCode=03",
-      "note": "地方競馬公式レース情報"
+      "source": "ボートレース",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=11&hd=20260927&rno=12",
+      "note": "BOAT RACE公式12R結果"
     },
     {
       "date": "2026-09-27",
-      "sport": "nar",
-      "venue": "水沢",
-      "name": "ヴィーナススプリント",
+      "sport": "boat",
+      "venue": "若松",
+      "name": "ヤングダービー",
       "before": {
         "date": "2026-09-27",
         "time": "",
-        "sport": "nar",
-        "venue": "水沢",
-        "grade": "M3",
-        "name": "ヴィーナススプリント",
+        "sport": "boat",
+        "venue": "若松",
+        "grade": "PGⅠ",
+        "name": "ヤングダービー",
         "winner": ""
       },
       "after": {
         "date": "2026-09-27",
-        "time": "17:25",
-        "sport": "nar",
-        "venue": "水沢",
-        "grade": "M3",
-        "name": "ヴィーナススプリント",
+        "time": "20:40",
+        "sport": "boat",
+        "venue": "若松",
+        "grade": "PGⅠ",
+        "name": "ヤングダービー",
         "winner": ""
       },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F27&k_babaCode=11",
-      "note": "地方競馬公式レース情報"
+      "source": "ボートレース",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=20&hd=20260927&rno=12",
+      "note": "BOAT RACE公式12R結果"
     }
   ]
 }

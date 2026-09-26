@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-26T04:38:47.212085+09:00",
-  "base_date": "2026-09-26",
+  "generated_at": "2026-09-27T03:46:51.749695+09:00",
+  "base_date": "2026-09-27",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-10-31",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 6,
+  "updated_count": 7,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -86,7 +86,7 @@
         "venue": "阪神",
         "grade": "GⅢ",
         "name": "シリウスS",
-        "winner": ""
+        "winner": "ヴァルツァーシャル"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-09-26:シリウスs"
@@ -162,6 +162,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-04:毎日王冠"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-10-10",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GIII",
+        "name": "サウジアラビアロイヤルC",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-10",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GⅢ",
+        "name": "サウジアラビアロイヤルC",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-10-10:サウジアラビアロイヤルc"
     }
   ],
   "registered_only": [

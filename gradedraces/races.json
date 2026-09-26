@@ -4317,6 +4317,15 @@
     "venue": "阪神",
     "grade": "GIII",
     "name": "シリウスS",
+    "winner": "ヴァルツァーシャル"
+  },
+  {
+    "date": "2026-09-27",
+    "time": "16:18",
+    "sport": "boat",
+    "venue": "びわこ",
+    "grade": "GⅢ",
+    "name": "つるやパン提供 みんな大好き！サラダパン賞",
     "winner": ""
   },
   {
@@ -4366,16 +4375,7 @@
   },
   {
     "date": "2026-09-27",
-    "time": "",
-    "sport": "boat",
-    "venue": "びわこ",
-    "grade": "GⅢ",
-    "name": "つるやパン提供 みんな大好き！サラダパン賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-09-27",
-    "time": "",
+    "time": "20:40",
     "sport": "boat",
     "venue": "若松",
     "grade": "PGⅠ",
@@ -4402,6 +4402,15 @@
   },
   {
     "date": "2026-09-30",
+    "time": "20:30",
+    "sport": "nar",
+    "venue": "門別",
+    "grade": "H1",
+    "name": "サンライズカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-09-30",
     "time": "",
     "sport": "nar",
     "venue": "船橋",
@@ -4410,12 +4419,12 @@
     "winner": ""
   },
   {
-    "date": "2026-09-30",
-    "time": "",
+    "date": "2026-10-01",
+    "time": "20:30",
     "sport": "nar",
     "venue": "門別",
     "grade": "H1",
-    "name": "サンライズカップ",
+    "name": "ネクストスター門別",
     "winner": ""
   },
   {
@@ -4434,15 +4443,6 @@
     "venue": "船橋",
     "grade": "JpnⅢ",
     "name": "マリーンカップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-01",
-    "time": "",
-    "sport": "nar",
-    "venue": "門別",
-    "grade": "H1",
-    "name": "ネクストスター門別",
     "winner": ""
   },
   {
@@ -4591,10 +4591,10 @@
   },
   {
     "date": "2026-10-11",
-    "time": "",
+    "time": "09:50",
     "sport": "jra",
     "venue": "東京",
-    "grade": "GⅡ",
+    "grade": "GII",
     "name": "アイルランドT",
     "winner": ""
   },
