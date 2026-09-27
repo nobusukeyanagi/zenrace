@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-27T03:46:51.749695+09:00",
-  "base_date": "2026-09-27",
+  "generated_at": "2026-09-28T04:22:24.405535+09:00",
+  "base_date": "2026-09-28",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-10-31",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 7,
+  "updated_count": 8,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -77,7 +77,7 @@
         "venue": "阪神",
         "grade": "GIII",
         "name": "シリウスS",
-        "winner": ""
+        "winner": "ヴァルツァーシャル"
       },
       "after": {
         "date": "2026-09-26",
@@ -110,7 +110,7 @@
         "venue": "中山",
         "grade": "GⅠ",
         "name": "スプリンターズS",
-        "winner": ""
+        "winner": "ピューロマジック"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-09-27:スプリンターズs"
@@ -186,6 +186,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-10:サウジアラビアロイヤルc"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-10-11",
+        "time": "09:50",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GII",
+        "name": "アイルランドT",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-11",
+        "time": "09:50",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GⅡ",
+        "name": "アイルランドT",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-10-11:アイルランドt"
     }
   ],
   "registered_only": [
