@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-28T04:26:12.139169+09:00",
-  "center_date": "2026-09-28",
+  "generated_at": "2026-09-29T06:30:39.435175+09:00",
+  "center_date": "2026-09-29",
   "past_unresolved_count": 9,
-  "upcoming_missing_time_count": 23,
+  "upcoming_missing_time_count": 20,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -98,36 +98,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-09-29",
-      "sport": "boat",
-      "venue": "芦屋",
-      "grade": "GⅢ",
-      "name": "オールレディース",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-09-29",
-      "sport": "keirin",
-      "venue": "岐阜",
-      "grade": "GⅢ",
-      "name": "長良川鵜飼カップ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-10-01",
-      "sport": "nar",
-      "venue": "船橋",
-      "grade": "JpnⅢ",
-      "name": "マリーンカップ",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-10-03",
       "sport": "boat",

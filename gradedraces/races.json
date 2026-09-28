@@ -4333,7 +4333,7 @@
     "time": "16:30",
     "sport": "jra",
     "venue": "中山",
-    "grade": "GI",
+    "grade": "GⅠ",
     "name": "スプリンターズS",
     "winner": "ピューロマジック"
   },
@@ -4384,7 +4384,7 @@
   },
   {
     "date": "2026-09-29",
-    "time": "",
+    "time": "14:29",
     "sport": "boat",
     "venue": "芦屋",
     "grade": "GⅢ",
@@ -4393,7 +4393,7 @@
   },
   {
     "date": "2026-09-29",
-    "time": "",
+    "time": "20:30",
     "sport": "keirin",
     "venue": "岐阜",
     "grade": "GⅢ",
@@ -4429,20 +4429,20 @@
   },
   {
     "date": "2026-10-01",
+    "time": "20:05",
+    "sport": "nar",
+    "venue": "船橋",
+    "grade": "JpnⅢ",
+    "name": "マリーンカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-01",
     "time": "20:30",
     "sport": "nar",
     "venue": "門別",
     "grade": "H1",
     "name": "ネクストスター門別",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-01",
-    "time": "",
-    "sport": "nar",
-    "venue": "船橋",
-    "grade": "JpnⅢ",
-    "name": "マリーンカップ",
     "winner": ""
   },
   {
