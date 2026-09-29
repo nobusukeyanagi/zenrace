@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-29T06:27:18.777950+09:00",
-  "base_date": "2026-09-29",
+  "generated_at": "2026-09-30T05:18:22.144134+09:00",
+  "base_date": "2026-09-30",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-10-31",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 8,
+  "updated_count": 7,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -66,30 +66,6 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-09-12:チャレンジc"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-09-27",
-        "time": "16:30",
-        "sport": "jra",
-        "venue": "中山",
-        "grade": "GI",
-        "name": "スプリンターズS",
-        "winner": "ピューロマジック"
-      },
-      "after": {
-        "date": "2026-09-27",
-        "time": "16:30",
-        "sport": "jra",
-        "venue": "中山",
-        "grade": "GⅠ",
-        "name": "スプリンターズS",
-        "winner": "ピューロマジック"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-09-27:スプリンターズs"
     },
     {
       "type": "master_updated",
