@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-30T05:21:41.061004+09:00",
-  "center_date": "2026-09-30",
+  "generated_at": "2026-10-01T05:26:01.649570+09:00",
+  "center_date": "2026-10-01",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 11,
@@ -200,58 +200,58 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-09-29",
-      "sport": "boat",
-      "venue": "芦屋",
-      "name": "オールレディース",
+      "date": "2026-09-30",
+      "sport": "nar",
+      "venue": "船橋",
+      "name": "日本テレビ盃",
       "before": {
-        "date": "2026-09-29",
-        "time": "14:29",
-        "sport": "boat",
-        "venue": "芦屋",
-        "grade": "GⅢ",
-        "name": "オールレディース",
+        "date": "2026-09-30",
+        "time": "20:05",
+        "sport": "nar",
+        "venue": "船橋",
+        "grade": "JpnⅡ",
+        "name": "日本テレビ盃",
         "winner": ""
       },
       "after": {
-        "date": "2026-09-29",
-        "time": "14:29",
-        "sport": "boat",
-        "venue": "芦屋",
-        "grade": "GⅢ",
-        "name": "オールレディース",
-        "winner": "大山 千広"
+        "date": "2026-09-30",
+        "time": "20:05",
+        "sport": "nar",
+        "venue": "船橋",
+        "grade": "JpnⅡ",
+        "name": "日本テレビ盃",
+        "winner": "ミッキーファイト"
       },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=21&hd=20260929&rno=12",
-      "note": "BOAT RACE公式12R結果"
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F30&k_babaCode=19",
+      "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-09-29",
-      "sport": "keirin",
-      "venue": "岐阜",
-      "name": "長良川鵜飼カップ",
+      "date": "2026-09-30",
+      "sport": "nar",
+      "venue": "門別",
+      "name": "サンライズカップ",
       "before": {
-        "date": "2026-09-29",
+        "date": "2026-09-30",
         "time": "20:30",
-        "sport": "keirin",
-        "venue": "岐阜",
-        "grade": "GⅢ",
-        "name": "長良川鵜飼カップ",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H1",
+        "name": "サンライズカップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-09-29",
+        "date": "2026-09-30",
         "time": "20:30",
-        "sport": "keirin",
-        "venue": "岐阜",
-        "grade": "GⅢ",
-        "name": "長良川鵜飼カップ",
-        "winner": "山口 拳矢"
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H1",
+        "name": "サンライズカップ",
+        "winner": "イケメンモンスター"
       },
-      "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=43&kaisaiBi=20260929&raceNo=12",
-      "note": "公開結果によるKEIRIN.JP補完（12R）"
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F30&k_babaCode=36",
+      "note": "地方競馬公式レース情報"
     }
   ]
 }
