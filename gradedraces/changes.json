@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T05:26:01.649570+09:00",
-  "center_date": "2026-10-01",
+  "generated_at": "2026-10-02T05:40:49.247345+09:00",
+  "center_date": "2026-10-02",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 11,
-    "recent_verification": 2,
-    "upcoming": 30
+    "unresolved": 12,
+    "recent_verification": 3,
+    "upcoming": 27
   },
-  "target_count": 41,
-  "change_count": 9,
+  "target_count": 39,
+  "change_count": 12,
   "changes": [
     {
       "date": "2026-09-05",
@@ -200,57 +200,138 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-09-30",
+      "date": "2026-10-01",
       "sport": "nar",
-      "venue": "船橋",
-      "name": "日本テレビ盃",
+      "venue": "園田",
+      "name": "姫山菊花賞",
       "before": {
-        "date": "2026-09-30",
-        "time": "20:05",
+        "date": "2026-10-01",
+        "time": "15:55",
         "sport": "nar",
-        "venue": "船橋",
-        "grade": "JpnⅡ",
-        "name": "日本テレビ盃",
+        "venue": "園田",
+        "grade": "重賞Ⅰ",
+        "name": "姫山菊花賞",
         "winner": ""
       },
       "after": {
-        "date": "2026-09-30",
-        "time": "20:05",
+        "date": "2026-10-01",
+        "time": "15:55",
         "sport": "nar",
-        "venue": "船橋",
-        "grade": "JpnⅡ",
-        "name": "日本テレビ盃",
-        "winner": "ミッキーファイト"
+        "venue": "園田",
+        "grade": "重賞Ⅰ",
+        "name": "姫山菊花賞",
+        "winner": "オマツリオトコ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F30&k_babaCode=19",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F01&k_babaCode=27",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-09-30",
+      "date": "2026-10-01",
       "sport": "nar",
-      "venue": "門別",
-      "name": "サンライズカップ",
+      "venue": "船橋",
+      "name": "マリーンカップ",
       "before": {
-        "date": "2026-09-30",
-        "time": "20:30",
+        "date": "2026-10-01",
+        "time": "20:05",
         "sport": "nar",
-        "venue": "門別",
-        "grade": "H1",
-        "name": "サンライズカップ",
+        "venue": "船橋",
+        "grade": "JpnⅢ",
+        "name": "マリーンカップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-09-30",
+        "date": "2026-10-01",
+        "time": "20:05",
+        "sport": "nar",
+        "venue": "船橋",
+        "grade": "JpnⅢ",
+        "name": "マリーンカップ",
+        "winner": "ロンギングフォユー"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F01&k_babaCode=19",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-01",
+      "sport": "nar",
+      "venue": "門別",
+      "name": "ネクストスター門別",
+      "before": {
+        "date": "2026-10-01",
         "time": "20:30",
         "sport": "nar",
         "venue": "門別",
         "grade": "H1",
-        "name": "サンライズカップ",
-        "winner": "イケメンモンスター"
+        "name": "ネクストスター門別",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-01",
+        "time": "20:30",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H1",
+        "name": "ネクストスター門別",
+        "winner": "クラプロスパー"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F09%2F30&k_babaCode=36",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F01&k_babaCode=36",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-04",
+      "sport": "nar",
+      "venue": "金沢",
+      "name": "金沢シンデレラカップ",
+      "before": {
+        "date": "2026-10-04",
+        "time": "",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢シンデレラカップ",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-04",
+        "time": "18:05",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢シンデレラカップ",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F04&k_babaCode=22",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-06",
+      "sport": "nar",
+      "venue": "金沢",
+      "name": "金沢クイーン賞",
+      "before": {
+        "date": "2026-10-06",
+        "time": "",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢クイーン賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-06",
+        "time": "18:00",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢クイーン賞",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F06&k_babaCode=22",
       "note": "地方競馬公式レース情報"
     }
   ]

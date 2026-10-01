@@ -4425,7 +4425,7 @@
     "venue": "園田",
     "grade": "重賞Ⅰ",
     "name": "姫山菊花賞",
-    "winner": ""
+    "winner": "オマツリオトコ"
   },
   {
     "date": "2026-10-01",
@@ -4434,7 +4434,7 @@
     "venue": "船橋",
     "grade": "JpnⅢ",
     "name": "マリーンカップ",
-    "winner": ""
+    "winner": "ロンギングフォユー"
   },
   {
     "date": "2026-10-01",
@@ -4443,7 +4443,7 @@
     "venue": "門別",
     "grade": "H1",
     "name": "ネクストスター門別",
-    "winner": ""
+    "winner": "クラプロスパー"
   },
   {
     "date": "2026-10-03",
@@ -4474,20 +4474,20 @@
   },
   {
     "date": "2026-10-04",
-    "time": "",
+    "time": "18:05",
     "sport": "nar",
-    "venue": "盛岡",
-    "grade": "M2",
-    "name": "若駒賞",
+    "venue": "金沢",
+    "grade": "",
+    "name": "金沢シンデレラカップ",
     "winner": ""
   },
   {
     "date": "2026-10-04",
     "time": "",
     "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "金沢シンデレラカップ",
+    "venue": "盛岡",
+    "grade": "M2",
+    "name": "若駒賞",
     "winner": ""
   },
   {
@@ -4510,20 +4510,20 @@
   },
   {
     "date": "2026-10-06",
-    "time": "",
+    "time": "18:00",
     "sport": "nar",
-    "venue": "大井",
-    "grade": "JpnⅡ",
-    "name": "レディスプレリュード",
+    "venue": "金沢",
+    "grade": "",
+    "name": "金沢クイーン賞",
     "winner": ""
   },
   {
     "date": "2026-10-06",
     "time": "",
     "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "金沢クイーン賞",
+    "venue": "大井",
+    "grade": "JpnⅡ",
+    "name": "レディスプレリュード",
     "winner": ""
   },
   {
