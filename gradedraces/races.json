@@ -4447,7 +4447,7 @@
   },
   {
     "date": "2026-10-03",
-    "time": "",
+    "time": "16:50",
     "sport": "boat",
     "venue": "児島",
     "grade": "GⅠ",
@@ -4483,7 +4483,7 @@
   },
   {
     "date": "2026-10-04",
-    "time": "",
+    "time": "18:15",
     "sport": "nar",
     "venue": "盛岡",
     "grade": "M2",
@@ -4690,10 +4690,10 @@
   },
   {
     "date": "2026-10-17",
-    "time": "",
+    "time": "09:55",
     "sport": "jra",
     "venue": "東京",
-    "grade": "GⅡ",
+    "grade": "GII",
     "name": "富士S",
     "winner": ""
   },
