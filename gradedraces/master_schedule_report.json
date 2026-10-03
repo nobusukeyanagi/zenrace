@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-03T05:13:06.631865+09:00",
-  "base_date": "2026-10-03",
+  "generated_at": "2026-10-04T03:52:31.730203+09:00",
+  "base_date": "2026-10-04",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-11-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 7,
+  "updated_count": 8,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -186,6 +186,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-12:スワンs"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-10-17",
+        "time": "09:55",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GII",
+        "name": "富士S",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-17",
+        "time": "09:55",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GⅡ",
+        "name": "富士S",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-10-17:富士s"
     }
   ],
   "registered_only": [

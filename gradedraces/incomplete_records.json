@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-03T05:16:07.509187+09:00",
-  "center_date": "2026-10-03",
+  "generated_at": "2026-10-04T03:55:52.553446+09:00",
+  "center_date": "2026-10-04",
   "past_unresolved_count": 9,
-  "upcoming_missing_time_count": 19,
+  "upcoming_missing_time_count": 20,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -99,36 +99,6 @@
   ],
   "upcoming_missing_time": [
     {
-      "date": "2026-10-04",
-      "sport": "boat",
-      "venue": "蒲郡",
-      "grade": "GⅢ",
-      "name": "「いい風吹け」キリンビール晴れ風賞",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-10-04",
-      "sport": "keirin",
-      "venue": "松阪",
-      "grade": "GⅠ",
-      "name": "",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-10-06",
-      "sport": "nar",
-      "venue": "大井",
-      "grade": "JpnⅡ",
-      "name": "レディスプレリュード",
-      "missing": [
-        "time"
-      ]
-    },
-    {
       "date": "2026-10-07",
       "sport": "nar",
       "venue": "大井",
@@ -164,16 +134,6 @@
       "venue": "笠松",
       "grade": "",
       "name": "ネクストスター笠松",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-10-08",
-      "sport": "nar",
-      "venue": "門別",
-      "grade": "H3",
-      "name": "グランシャリオクイーンズ",
       "missing": [
         "time"
       ]
@@ -284,6 +244,56 @@
       "venue": "園田",
       "grade": "重賞Ⅰ",
       "name": "園田オータムトロフィー",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "sport": "jra",
+      "venue": "東京",
+      "grade": "J・GⅡ",
+      "name": "J ・ GII 東京ハイジャンプ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "sport": "nar",
+      "venue": "佐賀",
+      "grade": "",
+      "name": "佐賀オータムスプリント",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "sport": "nar",
+      "venue": "盛岡",
+      "grade": "M1",
+      "name": "ネクストスター盛岡",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "sport": "nar",
+      "venue": "金沢",
+      "grade": "",
+      "name": "金沢スプリントカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "sport": "boat",
+      "venue": "平和島",
+      "grade": "GⅠ",
+      "name": "トーキョー・ベイ・カップ",
       "missing": [
         "time"
       ]
