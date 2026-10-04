@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-04T03:55:52.553185+09:00",
+  "generated_at": "2026-10-05T03:55:27.419909+09:00",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 10,
-    "recent_verification": 1,
-    "upcoming": 33
+    "unresolved": 13,
+    "recent_verification": 6,
+    "upcoming": 27
   },
   "sources": [
     {
@@ -31,7 +31,7 @@
     {
       "name": "地方競馬",
       "ok": true,
-      "patch_count": 6,
+      "patch_count": 8,
       "fetched_urls": [
         "https://www.keiba.go.jp/gradedrace/schedule.html",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F09&k_babaCode=10",
@@ -39,17 +39,17 @@
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=36",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=36&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F04&k_babaCode=22",
-        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=22&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F04&k_babaCode=10",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F06&k_babaCode=22",
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=22&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F06&k_babaCode=20",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=20&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F07&k_babaCode=20",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F07&k_babaCode=23",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=23&k_nenndo=2026",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=36",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=20",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=23",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=36",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F11&k_babaCode=03",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=03&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F12&k_babaCode=32",
@@ -73,12 +73,11 @@
     {
       "name": "ボートレース",
       "ok": true,
-      "patch_count": 2,
+      "patch_count": 1,
       "fetched_urls": [
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=01",
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=02",
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=03",
-        "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=16&hd=20261003&rno=12",
         "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=07&hd=20261004&rno=12",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=10&hd=20261009",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=03&hd=20261012",
@@ -93,7 +92,7 @@
       "patch_count": 1,
       "fetched_urls": [
         "https://keirin.jp/pc/graderaceschedule",
-        "https://www.oddspark.com/keirin/RaceList.do?joCode=47&kaisaiBi=20261004&raceNo=12"
+        "https://www.oddspark.com/keirin/RaceKekka.do?joCode=47&kaisaiBi=20261004&raceNo=12"
       ],
       "warnings": [
         "2026-10-12 弥彦: 発走時刻を特定できませんでした"

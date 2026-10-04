@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-04T03:52:31.730203+09:00",
-  "base_date": "2026-10-04",
+  "generated_at": "2026-10-05T03:52:26.107560+09:00",
+  "base_date": "2026-10-05",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-11-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 8,
+  "updated_count": 9,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -86,7 +86,7 @@
         "venue": "京都",
         "grade": "GⅡ",
         "name": "京都大賞典",
-        "winner": ""
+        "winner": "エコロディノス"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-04:京都大賞典"
@@ -110,7 +110,7 @@
         "venue": "東京",
         "grade": "GⅡ",
         "name": "毎日王冠",
-        "winner": ""
+        "winner": "セイウンハーデス"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-04:毎日王冠"
@@ -210,6 +210,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-17:富士s"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-10-18",
+        "time": "14:35",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GI",
+        "name": "秋華賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-18",
+        "time": "14:35",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GⅠ",
+        "name": "秋華賞",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-10-18:秋華賞"
     }
   ],
   "registered_only": [
