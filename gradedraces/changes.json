@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-10-05T03:55:27.419893+09:00",
-  "center_date": "2026-10-05",
+  "generated_at": "2026-10-06T07:17:33.228898+09:00",
+  "center_date": "2026-10-06",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 13,
-    "recent_verification": 6,
-    "upcoming": 27
+    "unresolved": 9,
+    "upcoming": 29
   },
-  "target_count": 42,
-  "change_count": 15,
+  "target_count": 38,
+  "change_count": 9,
   "changes": [
     {
       "date": "2026-09-05",
@@ -59,60 +58,6 @@
         "grade": "GIII",
         "name": "チャレンジC",
         "winner": "ジョバンニ"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-10-04",
-      "sport": "jra",
-      "venue": "東京",
-      "name": "毎日王冠",
-      "before": {
-        "date": "2026-10-04",
-        "time": "15:30",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GⅡ",
-        "name": "毎日王冠",
-        "winner": "セイウンハーデス"
-      },
-      "after": {
-        "date": "2026-10-04",
-        "time": "15:30",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GII",
-        "name": "毎日王冠",
-        "winner": "セイウンハーデス"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-10-04",
-      "sport": "jra",
-      "venue": "京都",
-      "name": "京都大賞典",
-      "before": {
-        "date": "2026-10-04",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GⅡ",
-        "name": "京都大賞典",
-        "winner": "エコロディノス"
-      },
-      "after": {
-        "date": "2026-10-04",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GII",
-        "name": "京都大賞典",
-        "winner": "エコロディノス"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -254,166 +199,58 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-10-04",
-      "sport": "nar",
-      "venue": "金沢",
-      "name": "金沢シンデレラカップ",
-      "before": {
-        "date": "2026-10-04",
-        "time": "18:05",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "金沢シンデレラカップ",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-04",
-        "time": "18:05",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "金沢シンデレラカップ",
-        "winner": "クリームパン"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F04&k_babaCode=22",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-04",
-      "sport": "nar",
-      "venue": "盛岡",
-      "name": "若駒賞",
-      "before": {
-        "date": "2026-10-04",
-        "time": "18:15",
-        "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M2",
-        "name": "若駒賞",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-04",
-        "time": "18:15",
-        "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M2",
-        "name": "若駒賞",
-        "winner": "リケアサンバ"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F04&k_babaCode=10",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-07",
+      "date": "2026-10-08",
       "sport": "nar",
       "venue": "大井",
-      "name": "ジャパンダートクラシック",
+      "name": "東京盃",
       "before": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "time": "",
         "sport": "nar",
         "venue": "大井",
-        "grade": "JpnⅠ",
-        "name": "ジャパンダートクラシック",
+        "grade": "JpnⅡ",
+        "name": "東京盃",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-07",
-        "time": "20:05",
+        "date": "2026-10-08",
+        "time": "20:10",
         "sport": "nar",
         "venue": "大井",
-        "grade": "JpnⅠ",
-        "name": "ジャパンダートクラシック",
+        "grade": "JpnⅡ",
+        "name": "東京盃",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F07&k_babaCode=20",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=20",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-10-07",
+      "date": "2026-10-08",
       "sport": "nar",
       "venue": "笠松",
-      "name": "オータムカップ",
+      "name": "ネクストスター笠松",
       "before": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "time": "",
         "sport": "nar",
         "venue": "笠松",
-        "grade": "SPⅡ",
-        "name": "オータムカップ",
+        "grade": "",
+        "name": "ネクストスター笠松",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-07",
-        "time": "16:30",
+        "date": "2026-10-08",
+        "time": "16:20",
         "sport": "nar",
         "venue": "笠松",
-        "grade": "SPⅡ",
-        "name": "オータムカップ",
+        "grade": "",
+        "name": "ネクストスター笠松",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F07&k_babaCode=23",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=23",
       "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-04",
-      "sport": "boat",
-      "venue": "蒲郡",
-      "name": "「いい風吹け」キリンビール晴れ風賞",
-      "before": {
-        "date": "2026-10-04",
-        "time": "20:38",
-        "sport": "boat",
-        "venue": "蒲郡",
-        "grade": "GⅢ",
-        "name": "「いい風吹け」キリンビール晴れ風賞",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-04",
-        "time": "20:38",
-        "sport": "boat",
-        "venue": "蒲郡",
-        "grade": "GⅢ",
-        "name": "「いい風吹け」キリンビール晴れ風賞",
-        "winner": "新田 泰章"
-      },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=07&hd=20261004&rno=12",
-      "note": "BOAT RACE公式12R結果"
-    },
-    {
-      "date": "2026-10-04",
-      "sport": "keirin",
-      "venue": "松阪",
-      "name": "",
-      "before": {
-        "date": "2026-10-04",
-        "time": "16:25",
-        "sport": "keirin",
-        "venue": "松阪",
-        "grade": "GⅠ",
-        "name": "",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-04",
-        "time": "16:25",
-        "sport": "keirin",
-        "venue": "松阪",
-        "grade": "GⅠ",
-        "name": "",
-        "winner": "郡司 浩平"
-      },
-      "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=47&kaisaiBi=20261004&raceNo=12",
-      "note": "公開結果によるKEIRIN.JP補完（12R）"
     }
   ]
 }

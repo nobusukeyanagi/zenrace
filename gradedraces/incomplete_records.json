@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-05T03:55:27.420331+09:00",
-  "center_date": "2026-10-05",
+  "generated_at": "2026-10-06T07:17:33.229446+09:00",
+  "center_date": "2026-10-06",
   "past_unresolved_count": 9,
   "upcoming_missing_time_count": 18,
   "past_unresolved": [
@@ -98,26 +98,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-10-08",
-      "sport": "nar",
-      "venue": "大井",
-      "grade": "JpnⅡ",
-      "name": "東京盃",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-10-08",
-      "sport": "nar",
-      "venue": "笠松",
-      "grade": "",
-      "name": "ネクストスター笠松",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-10-09",
       "sport": "boat",
@@ -274,6 +254,26 @@
       "venue": "平和島",
       "grade": "GⅠ",
       "name": "トーキョー・ベイ・カップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "sport": "nar",
+      "venue": "金沢",
+      "grade": "",
+      "name": "ネクストスター金沢",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "sport": "keirin",
+      "venue": "京王閣",
+      "grade": "GⅢ",
+      "name": "",
       "missing": [
         "time"
       ]

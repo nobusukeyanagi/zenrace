@@ -4459,7 +4459,7 @@
     "time": "15:30",
     "sport": "jra",
     "venue": "東京",
-    "grade": "GII",
+    "grade": "GⅡ",
     "name": "毎日王冠",
     "winner": "セイウンハーデス"
   },
@@ -4468,7 +4468,7 @@
     "time": "16:10",
     "sport": "jra",
     "venue": "京都",
-    "grade": "GII",
+    "grade": "GⅡ",
     "name": "京都大賞典",
     "winner": "エコロディノス"
   },
@@ -4546,16 +4546,16 @@
   },
   {
     "date": "2026-10-08",
-    "time": "20:35",
+    "time": "16:20",
     "sport": "nar",
-    "venue": "門別",
-    "grade": "H3",
-    "name": "グランシャリオクイーンズ",
+    "venue": "笠松",
+    "grade": "",
+    "name": "ネクストスター笠松",
     "winner": ""
   },
   {
     "date": "2026-10-08",
-    "time": "",
+    "time": "20:10",
     "sport": "nar",
     "venue": "大井",
     "grade": "JpnⅡ",
@@ -4564,11 +4564,11 @@
   },
   {
     "date": "2026-10-08",
-    "time": "",
+    "time": "20:35",
     "sport": "nar",
-    "venue": "笠松",
-    "grade": "",
-    "name": "ネクストスター笠松",
+    "venue": "門別",
+    "grade": "H3",
+    "name": "グランシャリオクイーンズ",
     "winner": ""
   },
   {
