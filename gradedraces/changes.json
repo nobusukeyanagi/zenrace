@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-10-06T07:17:33.228898+09:00",
-  "center_date": "2026-10-06",
+  "generated_at": "2026-10-07T05:40:59.330801+09:00",
+  "center_date": "2026-10-07",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 9,
-    "upcoming": 29
+    "unresolved": 11,
+    "recent_verification": 2,
+    "upcoming": 28
   },
-  "target_count": 38,
+  "target_count": 39,
   "change_count": 9,
   "changes": [
     {
@@ -199,57 +200,57 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-10-08",
+      "date": "2026-10-06",
       "sport": "nar",
-      "venue": "大井",
-      "name": "東京盃",
+      "venue": "金沢",
+      "name": "金沢クイーン賞",
       "before": {
-        "date": "2026-10-08",
-        "time": "",
+        "date": "2026-10-06",
+        "time": "18:00",
         "sport": "nar",
-        "venue": "大井",
-        "grade": "JpnⅡ",
-        "name": "東京盃",
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢クイーン賞",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-08",
+        "date": "2026-10-06",
+        "time": "18:00",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢クイーン賞",
+        "winner": "スターキャンディ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F06&k_babaCode=22",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-06",
+      "sport": "nar",
+      "venue": "大井",
+      "name": "レディスプレリュード",
+      "before": {
+        "date": "2026-10-06",
         "time": "20:10",
         "sport": "nar",
         "venue": "大井",
         "grade": "JpnⅡ",
-        "name": "東京盃",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=20",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-08",
-      "sport": "nar",
-      "venue": "笠松",
-      "name": "ネクストスター笠松",
-      "before": {
-        "date": "2026-10-08",
-        "time": "",
-        "sport": "nar",
-        "venue": "笠松",
-        "grade": "",
-        "name": "ネクストスター笠松",
+        "name": "レディスプレリュード",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-08",
-        "time": "16:20",
+        "date": "2026-10-06",
+        "time": "20:10",
         "sport": "nar",
-        "venue": "笠松",
-        "grade": "",
-        "name": "ネクストスター笠松",
-        "winner": ""
+        "venue": "大井",
+        "grade": "JpnⅡ",
+        "name": "レディスプレリュード",
+        "winner": "メモリアカフェ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=23",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F06&k_babaCode=20",
       "note": "地方競馬公式レース情報"
     }
   ]
