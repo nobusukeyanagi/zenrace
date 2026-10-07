@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-07T05:40:59.330801+09:00",
-  "center_date": "2026-10-07",
+  "generated_at": "2026-10-08T05:55:29.398414+09:00",
+  "center_date": "2026-10-08",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 11,
@@ -200,57 +200,57 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-10-06",
+      "date": "2026-10-07",
       "sport": "nar",
-      "venue": "金沢",
-      "name": "金沢クイーン賞",
+      "venue": "笠松",
+      "name": "オータムカップ",
       "before": {
-        "date": "2026-10-06",
-        "time": "18:00",
+        "date": "2026-10-07",
+        "time": "16:30",
         "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "金沢クイーン賞",
+        "venue": "笠松",
+        "grade": "SPⅡ",
+        "name": "オータムカップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-06",
-        "time": "18:00",
+        "date": "2026-10-07",
+        "time": "16:30",
         "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "金沢クイーン賞",
-        "winner": "スターキャンディ"
+        "venue": "笠松",
+        "grade": "SPⅡ",
+        "name": "オータムカップ",
+        "winner": "ダグフォース"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F06&k_babaCode=22",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F07&k_babaCode=23",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-10-06",
+      "date": "2026-10-07",
       "sport": "nar",
       "venue": "大井",
-      "name": "レディスプレリュード",
+      "name": "ジャパンダートクラシック",
       "before": {
-        "date": "2026-10-06",
-        "time": "20:10",
+        "date": "2026-10-07",
+        "time": "20:05",
         "sport": "nar",
         "venue": "大井",
-        "grade": "JpnⅡ",
-        "name": "レディスプレリュード",
+        "grade": "JpnⅠ",
+        "name": "ジャパンダートクラシック",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-06",
-        "time": "20:10",
+        "date": "2026-10-07",
+        "time": "20:05",
         "sport": "nar",
         "venue": "大井",
-        "grade": "JpnⅡ",
-        "name": "レディスプレリュード",
-        "winner": "メモリアカフェ"
+        "grade": "JpnⅠ",
+        "name": "ジャパンダートクラシック",
+        "winner": "シルバーレシオ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F06&k_babaCode=20",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F07&k_babaCode=20",
       "note": "地方競馬公式レース情報"
     }
   ]

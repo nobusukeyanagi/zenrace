@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-07T05:40:59.331362+09:00",
-  "center_date": "2026-10-07",
+  "generated_at": "2026-10-08T05:55:29.398813+09:00",
+  "center_date": "2026-10-08",
   "past_unresolved_count": 9,
-  "upcoming_missing_time_count": 19,
+  "upcoming_missing_time_count": 21,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -284,6 +284,26 @@
       "venue": "浦和",
       "grade": "SⅢ",
       "name": "埼玉栄冠",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "sport": "nar",
+      "venue": "笠松",
+      "grade": "SPⅠ",
+      "name": "岐阜金賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "sport": "nar",
+      "venue": "門別",
+      "grade": "H2",
+      "name": "ブロッサムカップ",
       "missing": [
         "time"
       ]
