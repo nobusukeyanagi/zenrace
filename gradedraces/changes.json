@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T05:55:29.398414+09:00",
-  "center_date": "2026-10-08",
+  "generated_at": "2026-10-09T05:57:42.499483+09:00",
+  "center_date": "2026-10-09",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 11,
-    "recent_verification": 2,
+    "unresolved": 12,
+    "recent_verification": 3,
     "upcoming": 28
   },
-  "target_count": 39,
-  "change_count": 9,
+  "target_count": 40,
+  "change_count": 11,
   "changes": [
     {
       "date": "2026-09-05",
@@ -200,58 +200,112 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-10-07",
+      "date": "2026-10-08",
       "sport": "nar",
       "venue": "笠松",
-      "name": "オータムカップ",
+      "name": "ネクストスター笠松",
       "before": {
-        "date": "2026-10-07",
-        "time": "16:30",
+        "date": "2026-10-08",
+        "time": "16:20",
         "sport": "nar",
         "venue": "笠松",
-        "grade": "SPⅡ",
-        "name": "オータムカップ",
+        "grade": "",
+        "name": "ネクストスター笠松",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-07",
-        "time": "16:30",
+        "date": "2026-10-08",
+        "time": "16:20",
         "sport": "nar",
         "venue": "笠松",
-        "grade": "SPⅡ",
-        "name": "オータムカップ",
-        "winner": "ダグフォース"
+        "grade": "",
+        "name": "ネクストスター笠松",
+        "winner": "キャトルブランシュ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F07&k_babaCode=23",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=23",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-10-07",
+      "date": "2026-10-08",
       "sport": "nar",
       "venue": "大井",
-      "name": "ジャパンダートクラシック",
+      "name": "東京盃",
       "before": {
-        "date": "2026-10-07",
-        "time": "20:05",
+        "date": "2026-10-08",
+        "time": "20:10",
         "sport": "nar",
         "venue": "大井",
-        "grade": "JpnⅠ",
-        "name": "ジャパンダートクラシック",
+        "grade": "JpnⅡ",
+        "name": "東京盃",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-07",
-        "time": "20:05",
+        "date": "2026-10-08",
+        "time": "20:10",
         "sport": "nar",
         "venue": "大井",
-        "grade": "JpnⅠ",
-        "name": "ジャパンダートクラシック",
-        "winner": "シルバーレシオ"
+        "grade": "JpnⅡ",
+        "name": "東京盃",
+        "winner": "ゼーロス"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F07&k_babaCode=20",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=20",
       "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-08",
+      "sport": "nar",
+      "venue": "門別",
+      "name": "グランシャリオクイーンズ",
+      "before": {
+        "date": "2026-10-08",
+        "time": "20:35",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "グランシャリオクイーンズ",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-08",
+        "time": "20:35",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H3",
+        "name": "グランシャリオクイーンズ",
+        "winner": "ゼロアワー"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=36",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-09",
+      "sport": "boat",
+      "venue": "三国",
+      "name": "北陸艇王決戦",
+      "before": {
+        "date": "2026-10-09",
+        "time": "",
+        "sport": "boat",
+        "venue": "三国",
+        "grade": "GⅠ",
+        "name": "北陸艇王決戦",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-09",
+        "time": "16:20",
+        "sport": "boat",
+        "venue": "三国",
+        "grade": "GⅠ",
+        "name": "北陸艇王決戦",
+        "winner": ""
+      },
+      "source": "ボートレース",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=10&hd=20261009&rno=12",
+      "note": "BOAT RACE公式12R結果"
     }
   ]
 }
