@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-09T05:57:42.499483+09:00",
-  "center_date": "2026-10-09",
+  "generated_at": "2026-10-10T05:26:55.835404+09:00",
+  "center_date": "2026-10-10",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 12,
-    "recent_verification": 3,
-    "upcoming": 28
+    "unresolved": 10,
+    "recent_verification": 1,
+    "upcoming": 29
   },
-  "target_count": 40,
-  "change_count": 11,
+  "target_count": 39,
+  "change_count": 14,
   "changes": [
     {
       "date": "2026-09-05",
@@ -200,84 +200,165 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-10-08",
-      "sport": "nar",
-      "venue": "笠松",
-      "name": "ネクストスター笠松",
+      "date": "2026-10-24",
+      "sport": "jra",
+      "venue": "東京",
+      "name": "アルテミスS",
       "before": {
-        "date": "2026-10-08",
-        "time": "16:20",
-        "sport": "nar",
-        "venue": "笠松",
-        "grade": "",
-        "name": "ネクストスター笠松",
+        "date": "2026-10-24",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GⅢ",
+        "name": "アルテミスS",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-08",
-        "time": "16:20",
+        "date": "2026-10-24",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GIII",
+        "name": "アルテミスS",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-10-24",
+      "sport": "jra",
+      "venue": "東京",
+      "name": "アルテミスS",
+      "before": {
+        "date": "2026-10-24",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GIII",
+        "name": "アルテミスS",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-24",
+        "time": "09:55",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GIII",
+        "name": "アルテミスS",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/10/1024.html",
+      "note": "JRA競馬番組"
+    },
+    {
+      "date": "2026-10-11",
+      "sport": "nar",
+      "venue": "帯広",
+      "name": "ナナカマド賞",
+      "before": {
+        "date": "2026-10-11",
+        "time": "",
         "sport": "nar",
-        "venue": "笠松",
-        "grade": "",
-        "name": "ネクストスター笠松",
-        "winner": "キャトルブランシュ"
+        "venue": "帯広",
+        "grade": "BG3",
+        "name": "ナナカマド賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-11",
+        "time": "20:00",
+        "sport": "nar",
+        "venue": "帯広",
+        "grade": "BG3",
+        "name": "ナナカマド賞",
+        "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=23",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F11&k_babaCode=03",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-10-08",
+      "date": "2026-10-12",
       "sport": "nar",
-      "venue": "大井",
-      "name": "東京盃",
+      "venue": "佐賀",
+      "name": "ネクストスター佐賀",
       "before": {
-        "date": "2026-10-08",
-        "time": "20:10",
+        "date": "2026-10-12",
+        "time": "",
         "sport": "nar",
-        "venue": "大井",
-        "grade": "JpnⅡ",
-        "name": "東京盃",
+        "venue": "佐賀",
+        "grade": "",
+        "name": "ネクストスター佐賀",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-08",
-        "time": "20:10",
+        "date": "2026-10-12",
+        "time": "17:25",
         "sport": "nar",
-        "venue": "大井",
-        "grade": "JpnⅡ",
-        "name": "東京盃",
-        "winner": "ゼーロス"
+        "venue": "佐賀",
+        "grade": "",
+        "name": "ネクストスター佐賀",
+        "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=20",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F12&k_babaCode=32",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-10-08",
+      "date": "2026-10-12",
       "sport": "nar",
-      "venue": "門別",
-      "name": "グランシャリオクイーンズ",
+      "venue": "盛岡",
+      "name": "トパーズカップ",
       "before": {
-        "date": "2026-10-08",
-        "time": "20:35",
+        "date": "2026-10-12",
+        "time": "",
         "sport": "nar",
-        "venue": "門別",
-        "grade": "H3",
-        "name": "グランシャリオクイーンズ",
+        "venue": "盛岡",
+        "grade": "M2",
+        "name": "トパーズカップ",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-08",
-        "time": "20:35",
+        "date": "2026-10-12",
+        "time": "17:35",
         "sport": "nar",
-        "venue": "門別",
-        "grade": "H3",
-        "name": "グランシャリオクイーンズ",
-        "winner": "ゼロアワー"
+        "venue": "盛岡",
+        "grade": "M2",
+        "name": "トパーズカップ",
+        "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F08&k_babaCode=36",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F12&k_babaCode=10",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-12",
+      "sport": "nar",
+      "venue": "盛岡",
+      "name": "マイルチャンピオンシップ南部杯",
+      "before": {
+        "date": "2026-10-12",
+        "time": "",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "JpnⅠ",
+        "name": "マイルチャンピオンシップ南部杯",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-12",
+        "time": "18:15",
+        "sport": "nar",
+        "venue": "盛岡",
+        "grade": "JpnⅠ",
+        "name": "マイルチャンピオンシップ南部杯",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F12&k_babaCode=10",
       "note": "地方競馬公式レース情報"
     },
     {
@@ -287,7 +368,7 @@
       "name": "北陸艇王決戦",
       "before": {
         "date": "2026-10-09",
-        "time": "",
+        "time": "16:20",
         "sport": "boat",
         "venue": "三国",
         "grade": "GⅠ",
@@ -301,7 +382,7 @@
         "venue": "三国",
         "grade": "GⅠ",
         "name": "北陸艇王決戦",
-        "winner": ""
+        "winner": "毒島 誠"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=10&hd=20261009&rno=12",
