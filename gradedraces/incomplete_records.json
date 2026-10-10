@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-10T05:26:55.835866+09:00",
-  "center_date": "2026-10-10",
-  "past_unresolved_count": 9,
-  "upcoming_missing_time_count": 20,
+  "generated_at": "2026-10-11T04:40:05.364691+09:00",
+  "center_date": "2026-10-11",
+  "past_unresolved_count": 10,
+  "upcoming_missing_time_count": 24,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -95,9 +95,7 @@
         "time",
         "winner"
       ]
-    }
-  ],
-  "upcoming_missing_time": [
+    },
     {
       "date": "2026-10-10",
       "sport": "jra",
@@ -107,7 +105,9 @@
       "missing": [
         "time"
       ]
-    },
+    }
+  ],
+  "upcoming_missing_time": [
     {
       "date": "2026-10-12",
       "sport": "boat",
@@ -294,6 +294,56 @@
       "venue": "住之江",
       "grade": "GⅢ",
       "name": "オールレディース",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "sport": "nar",
+      "venue": "帯広",
+      "grade": "BG2",
+      "name": "北見記念",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "sport": "nar",
+      "venue": "盛岡",
+      "grade": "M2",
+      "name": "絆カップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "sport": "nar",
+      "venue": "金沢",
+      "grade": "",
+      "name": "かがやきスプリント",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "sport": "nar",
+      "venue": "高知",
+      "grade": "",
+      "name": "ネクストスター高知",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "sport": "keirin",
+      "venue": "熊本",
+      "grade": "GⅢ",
+      "name": "",
       "missing": [
         "time"
       ]

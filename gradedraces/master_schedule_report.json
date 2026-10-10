@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-10T05:23:48.533499+09:00",
-  "base_date": "2026-10-10",
+  "generated_at": "2026-10-11T04:36:50.273619+09:00",
+  "base_date": "2026-10-11",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-11-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 7,
+  "updated_count": 8,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -86,7 +86,7 @@
         "venue": "東京",
         "grade": "GⅢ",
         "name": "サウジアラビアロイヤルC",
-        "winner": ""
+        "winner": "アゴルディーノ"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-10:サウジアラビアロイヤルc"
@@ -186,6 +186,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-18:秋華賞"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-10-24",
+        "time": "09:55",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GIII",
+        "name": "アルテミスS",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-24",
+        "time": "09:55",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GⅢ",
+        "name": "アルテミスS",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-10-24:アルテミスs"
     }
   ],
   "registered_only": [
