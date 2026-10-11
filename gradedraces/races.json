@@ -4596,7 +4596,7 @@
     "venue": "東京",
     "grade": "GII",
     "name": "アイルランドT",
-    "winner": ""
+    "winner": "カムニャック"
   },
   {
     "date": "2026-10-11",
@@ -4605,7 +4605,7 @@
     "venue": "帯広",
     "grade": "BG3",
     "name": "ナナカマド賞",
-    "winner": ""
+    "winner": "クリスタルザイオン"
   },
   {
     "date": "2026-10-12",
@@ -4614,6 +4614,24 @@
     "venue": "京都",
     "grade": "GII",
     "name": "スワンS",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-12",
+    "time": "16:25",
+    "sport": "boat",
+    "venue": "江戸川",
+    "grade": "GⅢ",
+    "name": "オールレディース",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-12",
+    "time": "16:30",
+    "sport": "keirin",
+    "venue": "弥彦",
+    "grade": "GⅠ",
+    "name": "寛仁親王牌・世界選手権記念トーナメント",
     "winner": ""
   },
   {
@@ -4644,30 +4662,21 @@
     "winner": ""
   },
   {
-    "date": "2026-10-12",
-    "time": "",
-    "sport": "boat",
-    "venue": "江戸川",
-    "grade": "GⅢ",
-    "name": "オールレディース",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-12",
-    "time": "",
-    "sport": "keirin",
-    "venue": "弥彦",
-    "grade": "GⅠ",
-    "name": "寛仁親王牌・世界選手権記念トーナメント",
-    "winner": ""
-  },
-  {
     "date": "2026-10-14",
-    "time": "",
+    "time": "20:10",
     "sport": "nar",
     "venue": "川崎",
     "grade": "SⅡ",
     "name": "鎌倉記念",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-15",
+    "time": "16:05",
+    "sport": "nar",
+    "venue": "園田",
+    "grade": "重賞Ⅰ",
+    "name": "園田オータムトロフィー",
     "winner": ""
   },
   {
@@ -4677,15 +4686,6 @@
     "venue": "名古屋",
     "grade": "SPⅠ",
     "name": "ゴールド争覇",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-15",
-    "time": "",
-    "sport": "nar",
-    "venue": "園田",
-    "grade": "重賞Ⅰ",
-    "name": "園田オータムトロフィー",
     "winner": ""
   },
   {
