@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-12T04:47:36.545218+09:00",
-  "base_date": "2026-10-12",
+  "generated_at": "2026-10-13T07:39:14.056545+09:00",
+  "base_date": "2026-10-13",
   "calendar_years": [
     2026,
     2027
@@ -101,7 +101,7 @@
         "venue": "東京",
         "grade": "GII",
         "name": "アイルランドT",
-        "winner": ""
+        "winner": "カムニャック"
       },
       "after": {
         "date": "2026-10-11",
@@ -134,7 +134,7 @@
         "venue": "京都",
         "grade": "GⅡ",
         "name": "スワンS",
-        "winner": ""
+        "winner": "ダイヤモンドノット"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-12:スワンs"
