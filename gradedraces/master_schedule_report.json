@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-13T07:39:14.056545+09:00",
-  "base_date": "2026-10-13",
+  "generated_at": "2026-10-14T05:52:47.662044+09:00",
+  "base_date": "2026-10-14",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-11-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 9,
+  "updated_count": 8,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -95,37 +95,13 @@
       "type": "master_updated",
       "match_type": "exact",
       "before": {
-        "date": "2026-10-11",
-        "time": "09:50",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GII",
-        "name": "アイルランドT",
-        "winner": "カムニャック"
-      },
-      "after": {
-        "date": "2026-10-11",
-        "time": "09:50",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GⅡ",
-        "name": "アイルランドT",
-        "winner": "カムニャック"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-10-11:アイルランドt"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
         "date": "2026-10-12",
         "time": "15:45",
         "sport": "jra",
         "venue": "京都",
         "grade": "GII",
         "name": "スワンS",
-        "winner": ""
+        "winner": "ダイヤモンドノット"
       },
       "after": {
         "date": "2026-10-12",

@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-10-13T07:42:34.172796+09:00",
-  "center_date": "2026-10-13",
+  "generated_at": "2026-10-14T05:55:42.333206+09:00",
+  "center_date": "2026-10-14",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 15,
-    "recent_verification": 6,
-    "upcoming": 27
+    "unresolved": 10,
+    "upcoming": 28
   },
-  "target_count": 43,
-  "change_count": 14,
+  "target_count": 38,
+  "change_count": 7,
   "changes": [
     {
       "date": "2026-09-05",
@@ -86,33 +85,6 @@
         "grade": "GIII",
         "name": "サウジアラビアロイヤルC",
         "winner": "アゴルディーノ"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-10-12",
-      "sport": "jra",
-      "venue": "京都",
-      "name": "スワンS",
-      "before": {
-        "date": "2026-10-12",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GⅡ",
-        "name": "スワンS",
-        "winner": "ダイヤモンドノット"
-      },
-      "after": {
-        "date": "2026-10-12",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GII",
-        "name": "スワンS",
-        "winner": "ダイヤモンドノット"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -225,168 +197,6 @@
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-10-12",
-      "sport": "nar",
-      "venue": "佐賀",
-      "name": "ネクストスター佐賀",
-      "before": {
-        "date": "2026-10-12",
-        "time": "17:25",
-        "sport": "nar",
-        "venue": "佐賀",
-        "grade": "",
-        "name": "ネクストスター佐賀",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-12",
-        "time": "17:25",
-        "sport": "nar",
-        "venue": "佐賀",
-        "grade": "",
-        "name": "ネクストスター佐賀",
-        "winner": "リケアルンバ"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F12&k_babaCode=32",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-12",
-      "sport": "nar",
-      "venue": "盛岡",
-      "name": "トパーズカップ",
-      "before": {
-        "date": "2026-10-12",
-        "time": "17:35",
-        "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M2",
-        "name": "トパーズカップ",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-12",
-        "time": "17:35",
-        "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M2",
-        "name": "トパーズカップ",
-        "winner": "ブライオン"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F12&k_babaCode=10",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-12",
-      "sport": "nar",
-      "venue": "盛岡",
-      "name": "マイルチャンピオンシップ南部杯",
-      "before": {
-        "date": "2026-10-12",
-        "time": "18:15",
-        "sport": "nar",
-        "venue": "盛岡",
-        "grade": "JpnⅠ",
-        "name": "マイルチャンピオンシップ南部杯",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-12",
-        "time": "18:15",
-        "sport": "nar",
-        "venue": "盛岡",
-        "grade": "JpnⅠ",
-        "name": "マイルチャンピオンシップ南部杯",
-        "winner": "メイショウハチロー"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F12&k_babaCode=10",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-15",
-      "sport": "nar",
-      "venue": "名古屋",
-      "name": "ゴールド争覇",
-      "before": {
-        "date": "2026-10-15",
-        "time": "",
-        "sport": "nar",
-        "venue": "名古屋",
-        "grade": "SPⅠ",
-        "name": "ゴールド争覇",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-15",
-        "time": "18:10",
-        "sport": "nar",
-        "venue": "名古屋",
-        "grade": "SPⅠ",
-        "name": "ゴールド争覇",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F15&k_babaCode=24",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-12",
-      "sport": "boat",
-      "venue": "江戸川",
-      "name": "オールレディース",
-      "before": {
-        "date": "2026-10-12",
-        "time": "16:25",
-        "sport": "boat",
-        "venue": "江戸川",
-        "grade": "GⅢ",
-        "name": "オールレディース",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-12",
-        "time": "16:25",
-        "sport": "boat",
-        "venue": "江戸川",
-        "grade": "GⅢ",
-        "name": "オールレディース",
-        "winner": "魚谷 香織"
-      },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=03&hd=20261012&rno=12",
-      "note": "BOAT RACE公式12R結果"
-    },
-    {
-      "date": "2026-10-12",
-      "sport": "keirin",
-      "venue": "弥彦",
-      "name": "寛仁親王牌・世界選手権記念トーナメント",
-      "before": {
-        "date": "2026-10-12",
-        "time": "16:30",
-        "sport": "keirin",
-        "venue": "弥彦",
-        "grade": "GⅠ",
-        "name": "寛仁親王牌・世界選手権記念トーナメント",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-12",
-        "time": "16:30",
-        "sport": "keirin",
-        "venue": "弥彦",
-        "grade": "GⅠ",
-        "name": "寛仁親王牌・世界選手権記念トーナメント",
-        "winner": "石原 颯"
-      },
-      "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=21&kaisaiBi=20261012&raceNo=12",
-      "note": "公開結果によるKEIRIN.JP補完（12R）"
     }
   ]
 }
