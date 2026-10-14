@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-10-14T05:55:42.333206+09:00",
-  "center_date": "2026-10-14",
+  "generated_at": "2026-10-15T04:51:15.735359+09:00",
+  "center_date": "2026-10-15",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 10,
-    "upcoming": 28
+    "unresolved": 11,
+    "recent_verification": 1,
+    "upcoming": 30
   },
-  "target_count": 38,
-  "change_count": 7,
+  "target_count": 41,
+  "change_count": 8,
   "changes": [
     {
       "date": "2026-09-05",
@@ -197,6 +198,33 @@
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-10-14",
+      "sport": "nar",
+      "venue": "川崎",
+      "name": "鎌倉記念",
+      "before": {
+        "date": "2026-10-14",
+        "time": "20:10",
+        "sport": "nar",
+        "venue": "川崎",
+        "grade": "SⅡ",
+        "name": "鎌倉記念",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-14",
+        "time": "20:10",
+        "sport": "nar",
+        "venue": "川崎",
+        "grade": "SⅡ",
+        "name": "鎌倉記念",
+        "winner": "ブラフキャッチ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F14&k_babaCode=21",
+      "note": "地方競馬公式レース情報"
     }
   ]
 }
