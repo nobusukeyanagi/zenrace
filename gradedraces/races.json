@@ -4677,7 +4677,7 @@
     "venue": "園田",
     "grade": "重賞Ⅰ",
     "name": "園田オータムトロフィー",
-    "winner": ""
+    "winner": "ハイラブレジェンド"
   },
   {
     "date": "2026-10-15",
@@ -4686,7 +4686,7 @@
     "venue": "名古屋",
     "grade": "SPⅠ",
     "name": "ゴールド争覇",
-    "winner": ""
+    "winner": "ベント"
   },
   {
     "date": "2026-10-17",
@@ -4708,20 +4708,29 @@
   },
   {
     "date": "2026-10-18",
-    "time": "",
-    "sport": "jra",
-    "venue": "東京",
-    "grade": "J・GⅡ",
-    "name": "J ・ GII 東京ハイジャンプ",
+    "time": "17:25",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "佐賀オータムスプリント",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-18",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "",
+    "name": "金沢スプリントカップ",
     "winner": ""
   },
   {
     "date": "2026-10-18",
     "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "佐賀オータムスプリント",
+    "sport": "jra",
+    "venue": "東京",
+    "grade": "J・GⅡ",
+    "name": "J ・ GII 東京ハイジャンプ",
     "winner": ""
   },
   {
@@ -4736,15 +4745,6 @@
   {
     "date": "2026-10-18",
     "time": "",
-    "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "金沢スプリントカップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-18",
-    "time": "",
     "sport": "boat",
     "venue": "平和島",
     "grade": "GⅠ",
@@ -4753,7 +4753,7 @@
   },
   {
     "date": "2026-10-20",
-    "time": "",
+    "time": "18:00",
     "sport": "nar",
     "venue": "金沢",
     "grade": "",
