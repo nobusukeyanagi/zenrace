@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-16T04:34:59.264164+09:00",
-  "center_date": "2026-10-16",
+  "generated_at": "2026-10-17T04:09:22.065905+09:00",
+  "center_date": "2026-10-17",
   "past_unresolved_count": 10,
-  "upcoming_missing_time_count": 22,
+  "upcoming_missing_time_count": 21,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -114,16 +114,6 @@
       "venue": "東京",
       "grade": "J・GⅡ",
       "name": "J ・ GII 東京ハイジャンプ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-10-18",
-      "sport": "nar",
-      "venue": "盛岡",
-      "grade": "M1",
-      "name": "ネクストスター盛岡",
       "missing": [
         "time"
       ]

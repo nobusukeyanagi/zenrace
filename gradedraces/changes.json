@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-10-16T04:34:59.263603+09:00",
-  "center_date": "2026-10-16",
+  "generated_at": "2026-10-17T04:09:22.065352+09:00",
+  "center_date": "2026-10-17",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 12,
-    "recent_verification": 2,
-    "upcoming": 29
+    "unresolved": 10,
+    "upcoming": 30
   },
-  "target_count": 41,
-  "change_count": 12,
+  "target_count": 40,
+  "change_count": 10,
   "changes": [
     {
       "date": "2026-09-05",
@@ -200,138 +199,84 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-10-15",
-      "sport": "nar",
-      "venue": "園田",
-      "name": "園田オータムトロフィー",
+      "date": "2026-10-31",
+      "sport": "jra",
+      "venue": "京都",
+      "name": "ファンタジーS",
       "before": {
-        "date": "2026-10-15",
-        "time": "16:05",
-        "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅰ",
-        "name": "園田オータムトロフィー",
+        "date": "2026-10-31",
+        "time": "",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GⅢ",
+        "name": "ファンタジーS",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-15",
-        "time": "16:05",
-        "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅰ",
-        "name": "園田オータムトロフィー",
-        "winner": "ハイラブレジェンド"
+        "date": "2026-10-31",
+        "time": "",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GIII",
+        "name": "ファンタジーS",
+        "winner": ""
       },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F15&k_babaCode=27",
-      "note": "地方競馬公式レース情報"
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-10-15",
-      "sport": "nar",
-      "venue": "名古屋",
-      "name": "ゴールド争覇",
+      "date": "2026-10-31",
+      "sport": "jra",
+      "venue": "京都",
+      "name": "ファンタジーS",
       "before": {
-        "date": "2026-10-15",
-        "time": "18:10",
-        "sport": "nar",
-        "venue": "名古屋",
-        "grade": "SPⅠ",
-        "name": "ゴールド争覇",
+        "date": "2026-10-31",
+        "time": "",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GIII",
+        "name": "ファンタジーS",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-15",
-        "time": "18:10",
-        "sport": "nar",
-        "venue": "名古屋",
-        "grade": "SPⅠ",
-        "name": "ゴールド争覇",
-        "winner": "ベント"
+        "date": "2026-10-31",
+        "time": "15:45",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GIII",
+        "name": "ファンタジーS",
+        "winner": ""
       },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F15&k_babaCode=24",
-      "note": "地方競馬公式レース情報"
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/10/1031.html",
+      "note": "JRA競馬番組"
     },
     {
       "date": "2026-10-18",
       "sport": "nar",
-      "venue": "佐賀",
-      "name": "佐賀オータムスプリント",
+      "venue": "盛岡",
+      "name": "ネクストスター盛岡",
       "before": {
         "date": "2026-10-18",
         "time": "",
         "sport": "nar",
-        "venue": "佐賀",
-        "grade": "",
-        "name": "佐賀オータムスプリント",
+        "venue": "盛岡",
+        "grade": "M1",
+        "name": "ネクストスター盛岡",
         "winner": ""
       },
       "after": {
         "date": "2026-10-18",
-        "time": "17:25",
+        "time": "18:15",
         "sport": "nar",
-        "venue": "佐賀",
-        "grade": "",
-        "name": "佐賀オータムスプリント",
+        "venue": "盛岡",
+        "grade": "M1",
+        "name": "ネクストスター盛岡",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F18&k_babaCode=32",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-18",
-      "sport": "nar",
-      "venue": "金沢",
-      "name": "金沢スプリントカップ",
-      "before": {
-        "date": "2026-10-18",
-        "time": "",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "金沢スプリントカップ",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-18",
-        "time": "18:05",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "金沢スプリントカップ",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F18&k_babaCode=22",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-20",
-      "sport": "nar",
-      "venue": "金沢",
-      "name": "ネクストスター金沢",
-      "before": {
-        "date": "2026-10-20",
-        "time": "",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "ネクストスター金沢",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-20",
-        "time": "18:00",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "ネクストスター金沢",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F20&k_babaCode=22",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F18&k_babaCode=10",
       "note": "地方競馬公式レース情報"
     }
   ]

@@ -4726,20 +4726,20 @@
   },
   {
     "date": "2026-10-18",
-    "time": "",
-    "sport": "jra",
-    "venue": "東京",
-    "grade": "J・GⅡ",
-    "name": "J ・ GII 東京ハイジャンプ",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "盛岡",
+    "grade": "M1",
+    "name": "ネクストスター盛岡",
     "winner": ""
   },
   {
     "date": "2026-10-18",
     "time": "",
-    "sport": "nar",
-    "venue": "盛岡",
-    "grade": "M1",
-    "name": "ネクストスター盛岡",
+    "sport": "jra",
+    "venue": "東京",
+    "grade": "J・GⅡ",
+    "name": "J ・ GII 東京ハイジャンプ",
     "winner": ""
   },
   {
@@ -4951,10 +4951,10 @@
   },
   {
     "date": "2026-10-31",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "京都",
-    "grade": "GⅢ",
+    "grade": "GIII",
     "name": "ファンタジーS",
     "winner": ""
   },
