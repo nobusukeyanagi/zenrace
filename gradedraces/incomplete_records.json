@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-17T04:09:22.065905+09:00",
-  "center_date": "2026-10-17",
+  "generated_at": "2026-10-18T03:04:25.178877+09:00",
+  "center_date": "2026-10-18",
   "past_unresolved_count": 10,
-  "upcoming_missing_time_count": 21,
+  "upcoming_missing_time_count": 24,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -119,16 +119,6 @@
       ]
     },
     {
-      "date": "2026-10-18",
-      "sport": "boat",
-      "venue": "平和島",
-      "grade": "GⅠ",
-      "name": "トーキョー・ベイ・カップ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
       "date": "2026-10-20",
       "sport": "keirin",
       "venue": "京王閣",
@@ -154,16 +144,6 @@
       "venue": "笠松",
       "grade": "SPⅠ",
       "name": "岐阜金賞",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-10-22",
-      "sport": "nar",
-      "venue": "門別",
-      "grade": "H2",
-      "name": "ブロッサムカップ",
       "missing": [
         "time"
       ]
@@ -314,6 +294,56 @@
       "venue": "園田",
       "grade": "重賞Ⅱ",
       "name": "兵庫クイーンカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "sport": "nar",
+      "venue": "佐賀",
+      "grade": "",
+      "name": "九州大賞典",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "sport": "nar",
+      "venue": "帯広",
+      "grade": "BG2",
+      "name": "ばんえい菊花賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "sport": "nar",
+      "venue": "盛岡",
+      "grade": "M1",
+      "name": "プリンセスカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "sport": "nar",
+      "venue": "高知",
+      "grade": "",
+      "name": "土佐秋月賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "sport": "boat",
+      "venue": "尼崎",
+      "grade": "SG",
+      "name": "ボートレースダービー",
       "missing": [
         "time"
       ]

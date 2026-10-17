@@ -4695,7 +4695,7 @@
     "venue": "東京",
     "grade": "GII",
     "name": "富士S",
-    "winner": ""
+    "winner": "シュガークン"
   },
   {
     "date": "2026-10-18",
@@ -4704,6 +4704,15 @@
     "venue": "京都",
     "grade": "GI",
     "name": "秋華賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-18",
+    "time": "16:20",
+    "sport": "boat",
+    "venue": "平和島",
+    "grade": "GⅠ",
+    "name": "トーキョー・ベイ・カップ",
     "winner": ""
   },
   {
@@ -4743,15 +4752,6 @@
     "winner": ""
   },
   {
-    "date": "2026-10-18",
-    "time": "",
-    "sport": "boat",
-    "venue": "平和島",
-    "grade": "GⅠ",
-    "name": "トーキョー・ベイ・カップ",
-    "winner": ""
-  },
-  {
     "date": "2026-10-20",
     "time": "18:00",
     "sport": "nar",
@@ -4780,20 +4780,20 @@
   },
   {
     "date": "2026-10-22",
-    "time": "",
+    "time": "20:50",
     "sport": "nar",
-    "venue": "笠松",
-    "grade": "SPⅠ",
-    "name": "岐阜金賞",
+    "venue": "門別",
+    "grade": "H2",
+    "name": "ブロッサムカップ",
     "winner": ""
   },
   {
     "date": "2026-10-22",
     "time": "",
     "sport": "nar",
-    "venue": "門別",
-    "grade": "H2",
-    "name": "ブロッサムカップ",
+    "venue": "笠松",
+    "grade": "SPⅠ",
+    "name": "岐阜金賞",
     "winner": ""
   },
   {
@@ -4960,10 +4960,10 @@
   },
   {
     "date": "2026-11-01",
-    "time": "",
+    "time": "16:25",
     "sport": "jra",
     "venue": "東京",
-    "grade": "GⅠ",
+    "grade": "GI",
     "name": "天皇賞(秋)",
     "winner": ""
   },
