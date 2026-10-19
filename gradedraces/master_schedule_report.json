@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-19T03:20:19.265053+09:00",
-  "base_date": "2026-10-19",
+  "generated_at": "2026-10-20T05:47:06.018737+09:00",
+  "base_date": "2026-10-20",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-11-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 10,
+  "updated_count": 8,
   "registered_only_count": 17,
   "duplicate_count": 0,
   "additions": [],
@@ -95,37 +95,13 @@
       "type": "master_updated",
       "match_type": "exact",
       "before": {
-        "date": "2026-10-17",
-        "time": "09:55",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GII",
-        "name": "富士S",
-        "winner": "シュガークン"
-      },
-      "after": {
-        "date": "2026-10-17",
-        "time": "09:55",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GⅡ",
-        "name": "富士S",
-        "winner": "シュガークン"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-10-17:富士s"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
         "date": "2026-10-18",
         "time": "14:35",
         "sport": "jra",
         "venue": "京都",
         "grade": "GI",
         "name": "秋華賞",
-        "winner": ""
+        "winner": "モンローウォーク"
       },
       "after": {
         "date": "2026-10-18",
@@ -138,30 +114,6 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-18:秋華賞"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-10-18",
-        "time": "",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "J・GⅡ",
-        "name": "J ・ GII 東京ハイジャンプ",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-18",
-        "time": "",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "J・GⅡ",
-        "name": "J ・ GII 東京ハイジャンプ",
-        "winner": "ジューンベロシティ"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-10-18:j・gii東京ハイジャンプ"
     },
     {
       "type": "master_updated",

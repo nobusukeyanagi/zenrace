@@ -4702,7 +4702,7 @@
     "time": "14:35",
     "sport": "jra",
     "venue": "京都",
-    "grade": "GI",
+    "grade": "GⅠ",
     "name": "秋華賞",
     "winner": "モンローウォーク"
   },
@@ -4762,7 +4762,7 @@
   },
   {
     "date": "2026-10-20",
-    "time": "",
+    "time": "20:30",
     "sport": "keirin",
     "venue": "京王閣",
     "grade": "GⅢ",
@@ -4780,20 +4780,20 @@
   },
   {
     "date": "2026-10-22",
+    "time": "15:50",
+    "sport": "nar",
+    "venue": "笠松",
+    "grade": "SPⅠ",
+    "name": "岐阜金賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-22",
     "time": "20:50",
     "sport": "nar",
     "venue": "門別",
     "grade": "H2",
     "name": "ブロッサムカップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-22",
-    "time": "",
-    "sport": "nar",
-    "venue": "笠松",
-    "grade": "SPⅠ",
-    "name": "岐阜金賞",
     "winner": ""
   },
   {
