@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-10-20T05:50:40.847256+09:00",
-  "center_date": "2026-10-20",
+  "generated_at": "2026-10-21T04:45:54.130691+09:00",
+  "center_date": "2026-10-21",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 11,
-    "upcoming": 36
+    "unresolved": 13,
+    "recent_verification": 2,
+    "upcoming": 37
   },
-  "target_count": 47,
-  "change_count": 9,
+  "target_count": 50,
+  "change_count": 10,
   "changes": [
     {
       "date": "2026-09-05",
@@ -199,30 +200,57 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-10-22",
+      "date": "2026-10-20",
       "sport": "nar",
-      "venue": "笠松",
-      "name": "岐阜金賞",
+      "venue": "金沢",
+      "name": "ネクストスター金沢",
       "before": {
-        "date": "2026-10-22",
-        "time": "",
+        "date": "2026-10-20",
+        "time": "18:00",
         "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅠ",
-        "name": "岐阜金賞",
+        "venue": "金沢",
+        "grade": "",
+        "name": "ネクストスター金沢",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-22",
-        "time": "15:50",
+        "date": "2026-10-20",
+        "time": "18:00",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "ネクストスター金沢",
+        "winner": "ハジマリノアイズ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F20&k_babaCode=22",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-23",
+      "sport": "nar",
+      "venue": "笠松",
+      "name": "東海クラウン",
+      "before": {
+        "date": "2026-10-23",
+        "time": "",
         "sport": "nar",
         "venue": "笠松",
-        "grade": "SPⅠ",
-        "name": "岐阜金賞",
+        "grade": "SPⅢ",
+        "name": "東海クラウン",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-23",
+        "time": "15:45",
+        "sport": "nar",
+        "venue": "笠松",
+        "grade": "SPⅢ",
+        "name": "東海クラウン",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F22&k_babaCode=23",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F23&k_babaCode=23",
       "note": "地方競馬公式レース情報"
     },
     {
@@ -232,7 +260,7 @@
       "name": "",
       "before": {
         "date": "2026-10-20",
-        "time": "",
+        "time": "20:30",
         "sport": "keirin",
         "venue": "京王閣",
         "grade": "GⅢ",
@@ -246,11 +274,11 @@
         "venue": "京王閣",
         "grade": "GⅢ",
         "name": "",
-        "winner": ""
+        "winner": "佐々木悠葵"
       },
       "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceList.do?joCode=27&kaisaiBi=20261020&raceNo=12",
-      "note": "公開出走表によるKEIRIN.JP補完（12R発走時間）"
+      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=27&kaisaiBi=20261020&raceNo=12",
+      "note": "公開結果によるKEIRIN.JP補完（12R）"
     }
   ]
 }

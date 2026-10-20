@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-20T05:47:06.018737+09:00",
-  "base_date": "2026-10-20",
+  "generated_at": "2026-10-21T04:42:03.942223+09:00",
+  "base_date": "2026-10-21",
   "calendar_years": [
     2026,
     2027
@@ -9,12 +9,12 @@
     2026,
     2027
   ],
-  "official_record_count": 188,
+  "official_record_count": 186,
   "new_addition_end": "2026-11-30",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 8,
-  "registered_only_count": 17,
+  "updated_count": 7,
+  "registered_only_count": 3,
   "duplicate_count": 0,
   "additions": [],
   "deferred_additions": [],
@@ -90,30 +90,6 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-10:サウジアラビアロイヤルc"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-10-18",
-        "time": "14:35",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GI",
-        "name": "秋華賞",
-        "winner": "モンローウォーク"
-      },
-      "after": {
-        "date": "2026-10-18",
-        "time": "14:35",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GⅠ",
-        "name": "秋華賞",
-        "winner": "モンローウォーク"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-10-18:秋華賞"
     },
     {
       "type": "master_updated",
@@ -214,104 +190,6 @@
   ],
   "registered_only": [
     {
-      "date": "2026-11-23",
-      "sport": "keirin",
-      "venue": "小倉",
-      "grade": "GⅠ",
-      "name": "朝日新聞社杯競輪祭・競輪祭女子王座戦"
-    },
-    {
-      "date": "2026-12-06",
-      "sport": "keirin",
-      "venue": "別府",
-      "grade": "GP",
-      "name": ""
-    },
-    {
-      "date": "2026-12-13",
-      "sport": "keirin",
-      "venue": "佐世保",
-      "grade": "GP",
-      "name": ""
-    },
-    {
-      "date": "2026-12-22",
-      "sport": "keirin",
-      "venue": "川崎",
-      "grade": "GP",
-      "name": ""
-    },
-    {
-      "date": "2026-12-30",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "grade": "GP",
-      "name": "KEIRINグランプリ2026"
-    },
-    {
-      "date": "2027-01-12",
-      "sport": "keirin",
-      "venue": "和歌山",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2027-01-17",
-      "sport": "keirin",
-      "venue": "大宮",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2027-01-24",
-      "sport": "keirin",
-      "venue": "いわき平",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2027-01-31",
-      "sport": "keirin",
-      "venue": "玉野",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2027-02-07",
-      "sport": "keirin",
-      "venue": "静岡",
-      "grade": "GⅠ",
-      "name": ""
-    },
-    {
-      "date": "2027-02-14",
-      "sport": "keirin",
-      "venue": "奈良",
-      "grade": "GⅠ",
-      "name": ""
-    },
-    {
-      "date": "2027-02-23",
-      "sport": "keirin",
-      "venue": "広島",
-      "grade": "GⅠ",
-      "name": "読売新聞社杯全日本選抜競輪"
-    },
-    {
-      "date": "2027-02-28",
-      "sport": "keirin",
-      "venue": "久留米",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
-      "date": "2027-02-28",
-      "sport": "keirin",
-      "venue": "大宮",
-      "grade": "GⅢ",
-      "name": ""
-    },
-    {
       "date": "2027-03-14",
       "sport": "keirin",
       "venue": "福井",
@@ -377,7 +255,7 @@
     {
       "name": "KEIRIN.JP公式グレード日程",
       "ok": true,
-      "record_count": 110,
+      "record_count": 105,
       "fetched_urls": [
         "https://keirin.jp/pc/graderaceschedule?scyy=2026",
         "https://keirin.jp/pc/graderaceschedule?scyy=2027"
