@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-21T04:45:54.130691+09:00",
-  "center_date": "2026-10-21",
+  "generated_at": "2026-10-22T04:47:36.032288+09:00",
+  "center_date": "2026-10-22",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 13,
-    "recent_verification": 2,
-    "upcoming": 37
+    "unresolved": 12,
+    "recent_verification": 1,
+    "upcoming": 39
   },
-  "target_count": 50,
-  "change_count": 10,
+  "target_count": 51,
+  "change_count": 7,
   "changes": [
     {
       "date": "2026-09-05",
@@ -198,87 +198,6 @@
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-10-20",
-      "sport": "nar",
-      "venue": "金沢",
-      "name": "ネクストスター金沢",
-      "before": {
-        "date": "2026-10-20",
-        "time": "18:00",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "ネクストスター金沢",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-20",
-        "time": "18:00",
-        "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "ネクストスター金沢",
-        "winner": "ハジマリノアイズ"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F20&k_babaCode=22",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-23",
-      "sport": "nar",
-      "venue": "笠松",
-      "name": "東海クラウン",
-      "before": {
-        "date": "2026-10-23",
-        "time": "",
-        "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅢ",
-        "name": "東海クラウン",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-23",
-        "time": "15:45",
-        "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅢ",
-        "name": "東海クラウン",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F23&k_babaCode=23",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-20",
-      "sport": "keirin",
-      "venue": "京王閣",
-      "name": "",
-      "before": {
-        "date": "2026-10-20",
-        "time": "20:30",
-        "sport": "keirin",
-        "venue": "京王閣",
-        "grade": "GⅢ",
-        "name": "",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-20",
-        "time": "20:30",
-        "sport": "keirin",
-        "venue": "京王閣",
-        "grade": "GⅢ",
-        "name": "",
-        "winner": "佐々木悠葵"
-      },
-      "source": "競輪",
-      "evidence_url": "https://www.oddspark.com/keirin/RaceKekka.do?joCode=27&kaisaiBi=20261020&raceNo=12",
-      "note": "公開結果によるKEIRIN.JP補完（12R）"
     }
   ]
 }

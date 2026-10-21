@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-21T04:42:03.942223+09:00",
-  "base_date": "2026-10-21",
+  "generated_at": "2026-10-22T04:44:06.674613+09:00",
+  "base_date": "2026-10-22",
   "calendar_years": [
     2026,
     2027
@@ -230,7 +230,7 @@
       "ok": false,
       "record_count": 0,
       "fetched_urls": [
-        "https://www.keiba.go.jp/gradedrace/schedule.html"
+        "https://www.keiba.go.jp/maintenance/20261021.html"
       ],
       "warnings": [
         "重賞一覧からレース行を抽出できませんでした"

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-21T04:45:54.131210+09:00",
-  "center_date": "2026-10-21",
-  "past_unresolved_count": 11,
-  "upcoming_missing_time_count": 28,
+  "generated_at": "2026-10-22T04:47:36.032841+09:00",
+  "center_date": "2026-10-22",
+  "past_unresolved_count": 12,
+  "upcoming_missing_time_count": 31,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -114,6 +114,16 @@
       "name": "J ・ GII 東京ハイジャンプ",
       "missing": [
         "time"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "sport": "nar",
+      "venue": "浦和",
+      "grade": "SⅢ",
+      "name": "埼玉栄冠",
+      "missing": [
+        "winner"
       ]
     }
   ],
@@ -394,6 +404,36 @@
       "venue": "門別",
       "grade": "H1",
       "name": "道営スプリント",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "sport": "nar",
+      "venue": "笠松",
+      "grade": "SPⅠ",
+      "name": "ラブミーチャン記念",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "sport": "nar",
+      "venue": "門別",
+      "grade": "H1",
+      "name": "道営記念",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "sport": "boat",
+      "venue": "津",
+      "grade": "GⅢ",
+      "name": "オールレディース",
       "missing": [
         "time"
       ]
