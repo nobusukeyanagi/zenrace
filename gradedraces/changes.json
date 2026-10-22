@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-22T04:47:36.032288+09:00",
-  "center_date": "2026-10-22",
+  "generated_at": "2026-10-23T04:39:53.947111+09:00",
+  "center_date": "2026-10-23",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 12,
-    "recent_verification": 1,
-    "upcoming": 39
+    "unresolved": 14,
+    "recent_verification": 2,
+    "upcoming": 37
   },
   "target_count": 51,
-  "change_count": 7,
+  "change_count": 12,
   "changes": [
     {
       "date": "2026-09-05",
@@ -198,6 +198,141 @@
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-10-21",
+      "sport": "nar",
+      "venue": "浦和",
+      "name": "埼玉栄冠",
+      "before": {
+        "date": "2026-10-21",
+        "time": "17:45",
+        "sport": "nar",
+        "venue": "浦和",
+        "grade": "SⅢ",
+        "name": "埼玉栄冠",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-21",
+        "time": "17:45",
+        "sport": "nar",
+        "venue": "浦和",
+        "grade": "SⅢ",
+        "name": "埼玉栄冠",
+        "winner": "スレイマン"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F21&k_babaCode=18",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-22",
+      "sport": "nar",
+      "venue": "笠松",
+      "name": "岐阜金賞",
+      "before": {
+        "date": "2026-10-22",
+        "time": "15:50",
+        "sport": "nar",
+        "venue": "笠松",
+        "grade": "SPⅠ",
+        "name": "岐阜金賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-22",
+        "time": "15:50",
+        "sport": "nar",
+        "venue": "笠松",
+        "grade": "SPⅠ",
+        "name": "岐阜金賞",
+        "winner": "アースジャッジ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F22&k_babaCode=23",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-22",
+      "sport": "nar",
+      "venue": "門別",
+      "name": "ブロッサムカップ",
+      "before": {
+        "date": "2026-10-22",
+        "time": "20:50",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H2",
+        "name": "ブロッサムカップ",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-22",
+        "time": "20:50",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H2",
+        "name": "ブロッサムカップ",
+        "winner": "シリントーン"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F22&k_babaCode=36",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-25",
+      "sport": "nar",
+      "venue": "高知",
+      "name": "ネクストスター高知",
+      "before": {
+        "date": "2026-10-25",
+        "time": "",
+        "sport": "nar",
+        "venue": "高知",
+        "grade": "",
+        "name": "ネクストスター高知",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-25",
+        "time": "18:05",
+        "sport": "nar",
+        "venue": "高知",
+        "grade": "",
+        "name": "ネクストスター高知",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F25&k_babaCode=31",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-10-23",
+      "sport": "boat",
+      "venue": "唐津",
+      "name": "全日本王者決定戦",
+      "before": {
+        "date": "2026-10-23",
+        "time": "",
+        "sport": "boat",
+        "venue": "唐津",
+        "grade": "GⅠ",
+        "name": "全日本王者決定戦",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-23",
+        "time": "16:36",
+        "sport": "boat",
+        "venue": "唐津",
+        "grade": "GⅠ",
+        "name": "全日本王者決定戦",
+        "winner": ""
+      },
+      "source": "ボートレース",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=23&hd=20261023&rno=12",
+      "note": "BOAT RACE公式12R結果"
     }
   ]
 }
