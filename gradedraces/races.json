@@ -4803,7 +4803,7 @@
     "venue": "笠松",
     "grade": "SPⅢ",
     "name": "東海クラウン",
-    "winner": ""
+    "winner": "ゴールドボンド"
   },
   {
     "date": "2026-10-23",
@@ -4812,7 +4812,7 @@
     "venue": "唐津",
     "grade": "GⅠ",
     "name": "全日本王者決定戦",
-    "winner": ""
+    "winner": "峰 竜太"
   },
   {
     "date": "2026-10-23",
@@ -4821,7 +4821,7 @@
     "venue": "園田",
     "grade": "重賞Ⅰ",
     "name": "兵庫ゴールドカップ",
-    "winner": ""
+    "winner": "ミスズグランドオー"
   },
   {
     "date": "2026-10-24",
@@ -4834,7 +4834,7 @@
   },
   {
     "date": "2026-10-24",
-    "time": "",
+    "time": "20:36",
     "sport": "boat",
     "venue": "住之江",
     "grade": "GⅢ",
@@ -4861,20 +4861,20 @@
   },
   {
     "date": "2026-10-25",
-    "time": "",
-    "sport": "nar",
-    "venue": "帯広",
-    "grade": "BG2",
-    "name": "北見記念",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-25",
-    "time": "",
+    "time": "18:15",
     "sport": "nar",
     "venue": "盛岡",
     "grade": "M2",
     "name": "絆カップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-25",
+    "time": "20:00",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG2",
+    "name": "北見記念",
     "winner": ""
   },
   {
@@ -5131,20 +5131,20 @@
   },
   {
     "date": "2026-11-07",
-    "time": "",
+    "time": "10:05",
     "sport": "jra",
-    "venue": "京都",
-    "grade": "J・GⅢ",
-    "name": "J ・ GIII 京都ジャンプS",
+    "venue": "東京",
+    "grade": "GII",
+    "name": "京王杯2歳S",
     "winner": ""
   },
   {
     "date": "2026-11-07",
     "time": "",
     "sport": "jra",
-    "venue": "東京",
-    "grade": "GⅡ",
-    "name": "京王杯2歳S",
+    "venue": "京都",
+    "grade": "J・GⅢ",
+    "name": "J ・ GIII 京都ジャンプS",
     "winner": ""
   },
   {
