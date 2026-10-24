@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-24T04:40:25.046778+09:00",
-  "center_date": "2026-10-24",
+  "generated_at": "2026-10-25T03:29:18.192820+09:00",
+  "center_date": "2026-10-25",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 14,
-    "recent_verification": 3,
-    "upcoming": 36
+    "unresolved": 12,
+    "recent_verification": 2,
+    "upcoming": 41
   },
-  "target_count": 50,
-  "change_count": 15,
+  "target_count": 54,
+  "change_count": 14,
   "changes": [
     {
       "date": "2026-09-05",
@@ -103,7 +103,7 @@
         "venue": "東京",
         "grade": "GⅢ",
         "name": "アルテミスS",
-        "winner": ""
+        "winner": "プルヴィナル"
       },
       "after": {
         "date": "2026-10-24",
@@ -112,7 +112,7 @@
         "venue": "東京",
         "grade": "GIII",
         "name": "アルテミスS",
-        "winner": ""
+        "winner": "プルヴィナル"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -206,37 +206,10 @@
       "name": "京王杯2歳S",
       "before": {
         "date": "2026-11-07",
-        "time": "",
+        "time": "10:05",
         "sport": "jra",
         "venue": "東京",
         "grade": "GⅡ",
-        "name": "京王杯2歳S",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-11-07",
-        "time": "",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GII",
-        "name": "京王杯2歳S",
-        "winner": ""
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-11-07",
-      "sport": "jra",
-      "venue": "東京",
-      "name": "京王杯2歳S",
-      "before": {
-        "date": "2026-11-07",
-        "time": "",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GII",
         "name": "京王杯2歳S",
         "winner": ""
       },
@@ -250,143 +223,143 @@
         "winner": ""
       },
       "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/11/1107.html",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-11-08",
+      "sport": "jra",
+      "venue": "東京",
+      "name": "アルゼンチン共和国杯",
+      "before": {
+        "date": "2026-11-08",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GⅡ",
+        "name": "アルゼンチン共和国杯",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-08",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GII",
+        "name": "アルゼンチン共和国杯",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-11-08",
+      "sport": "jra",
+      "venue": "京都",
+      "name": "みやこS",
+      "before": {
+        "date": "2026-11-08",
+        "time": "",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GⅢ",
+        "name": "みやこS",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-08",
+        "time": "",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GIII",
+        "name": "みやこS",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-11-08",
+      "sport": "jra",
+      "venue": "京都",
+      "name": "みやこS",
+      "before": {
+        "date": "2026-11-08",
+        "time": "",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GIII",
+        "name": "みやこS",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-08",
+        "time": "15:45",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GIII",
+        "name": "みやこS",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/11/1108.html",
       "note": "JRA競馬番組"
     },
     {
-      "date": "2026-10-23",
-      "sport": "nar",
-      "venue": "笠松",
-      "name": "東海クラウン",
+      "date": "2026-11-08",
+      "sport": "jra",
+      "venue": "東京",
+      "name": "アルゼンチン共和国杯",
       "before": {
-        "date": "2026-10-23",
-        "time": "15:45",
-        "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅢ",
-        "name": "東海クラウン",
+        "date": "2026-11-08",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GII",
+        "name": "アルゼンチン共和国杯",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-23",
+        "date": "2026-11-08",
         "time": "15:45",
-        "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅢ",
-        "name": "東海クラウン",
-        "winner": "ゴールドボンド"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F23&k_babaCode=23",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-23",
-      "sport": "nar",
-      "venue": "園田",
-      "name": "兵庫ゴールドカップ",
-      "before": {
-        "date": "2026-10-23",
-        "time": "20:05",
-        "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅰ",
-        "name": "兵庫ゴールドカップ",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GII",
+        "name": "アルゼンチン共和国杯",
         "winner": ""
       },
-      "after": {
-        "date": "2026-10-23",
-        "time": "20:05",
-        "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅰ",
-        "name": "兵庫ゴールドカップ",
-        "winner": "ミスズグランドオー"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F23&k_babaCode=27",
-      "note": "地方競馬公式レース情報"
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/11/1108.html",
+      "note": "JRA競馬番組"
     },
     {
-      "date": "2026-10-25",
+      "date": "2026-10-29",
       "sport": "nar",
-      "venue": "帯広",
-      "name": "北見記念",
+      "venue": "門別",
+      "name": "エーデルワイス賞",
       "before": {
-        "date": "2026-10-25",
+        "date": "2026-10-29",
         "time": "",
         "sport": "nar",
-        "venue": "帯広",
-        "grade": "BG2",
-        "name": "北見記念",
+        "venue": "門別",
+        "grade": "JpnⅢ",
+        "name": "エーデルワイス賞",
         "winner": ""
       },
       "after": {
-        "date": "2026-10-25",
-        "time": "20:00",
+        "date": "2026-10-29",
+        "time": "19:55",
         "sport": "nar",
-        "venue": "帯広",
-        "grade": "BG2",
-        "name": "北見記念",
+        "venue": "門別",
+        "grade": "JpnⅢ",
+        "name": "エーデルワイス賞",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F25&k_babaCode=03",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F29&k_babaCode=36",
       "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-25",
-      "sport": "nar",
-      "venue": "盛岡",
-      "name": "絆カップ",
-      "before": {
-        "date": "2026-10-25",
-        "time": "",
-        "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M2",
-        "name": "絆カップ",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-25",
-        "time": "18:15",
-        "sport": "nar",
-        "venue": "盛岡",
-        "grade": "M2",
-        "name": "絆カップ",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F25&k_babaCode=10",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-23",
-      "sport": "boat",
-      "venue": "唐津",
-      "name": "全日本王者決定戦",
-      "before": {
-        "date": "2026-10-23",
-        "time": "16:36",
-        "sport": "boat",
-        "venue": "唐津",
-        "grade": "GⅠ",
-        "name": "全日本王者決定戦",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-23",
-        "time": "16:36",
-        "sport": "boat",
-        "venue": "唐津",
-        "grade": "GⅠ",
-        "name": "全日本王者決定戦",
-        "winner": "峰 竜太"
-      },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=23&hd=20261023&rno=12",
-      "note": "BOAT RACE公式12R結果"
     },
     {
       "date": "2026-10-24",
@@ -395,7 +368,7 @@
       "name": "オールレディース",
       "before": {
         "date": "2026-10-24",
-        "time": "",
+        "time": "20:36",
         "sport": "boat",
         "venue": "住之江",
         "grade": "GⅢ",
@@ -409,7 +382,7 @@
         "venue": "住之江",
         "grade": "GⅢ",
         "name": "オールレディース",
-        "winner": ""
+        "winner": "平川 香織"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=12&hd=20261024&rno=12",

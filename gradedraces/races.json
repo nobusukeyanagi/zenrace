@@ -4830,7 +4830,7 @@
     "venue": "東京",
     "grade": "GIII",
     "name": "アルテミスS",
-    "winner": ""
+    "winner": "プルヴィナル"
   },
   {
     "date": "2026-10-24",
@@ -4839,7 +4839,7 @@
     "venue": "住之江",
     "grade": "GⅢ",
     "name": "オールレディース",
-    "winner": ""
+    "winner": "平川 香織"
   },
   {
     "date": "2026-10-25",
@@ -4915,6 +4915,15 @@
   },
   {
     "date": "2026-10-29",
+    "time": "19:55",
+    "sport": "nar",
+    "venue": "門別",
+    "grade": "JpnⅢ",
+    "name": "エーデルワイス賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-10-29",
     "time": "",
     "sport": "nar",
     "venue": "名古屋",
@@ -4929,15 +4938,6 @@
     "venue": "園田",
     "grade": "重賞Ⅰ",
     "name": "ネクストスター園田",
-    "winner": ""
-  },
-  {
-    "date": "2026-10-29",
-    "time": "",
-    "sport": "nar",
-    "venue": "門別",
-    "grade": "JpnⅢ",
-    "name": "エーデルワイス賞",
     "winner": ""
   },
   {
@@ -5149,19 +5149,19 @@
   },
   {
     "date": "2026-11-08",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "京都",
-    "grade": "GⅢ",
+    "grade": "GIII",
     "name": "みやこS",
     "winner": ""
   },
   {
     "date": "2026-11-08",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "東京",
-    "grade": "GⅡ",
+    "grade": "GII",
     "name": "アルゼンチン共和国杯",
     "winner": ""
   },
