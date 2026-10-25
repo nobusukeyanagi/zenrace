@@ -2,8 +2,8 @@
   "pages": {
     "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html": {
       "source": "JRA公式重賞一覧",
-      "content_hash": "9b39ea005c6a198851333a2aa399e245b39d3a5f712404f2667aa0c9346e6605",
-      "last_changed_at": "2026-10-25T03:25:34.238058+09:00"
+      "content_hash": "2e2cf16839f1576c2848387bd9f510dc04945c49b1a0f4c61371aa6499d14a2d",
+      "last_changed_at": "2026-10-26T03:36:15.638203+09:00"
     },
     "https://www.keiba.go.jp/gradedrace/schedule.html": {
       "source": "地方競馬公式重賞一覧",
@@ -12,13 +12,13 @@
     },
     "https://keirin.jp/pc/graderaceschedule?scyy=2026": {
       "source": "KEIRIN.JP公式グレード日程",
-      "content_hash": "49a9921113c8410fbd7f8bf2fec25a795e66fbd509d095f3ae6b14dc7a36d8a0",
-      "last_changed_at": "2026-10-25T03:25:34.238058+09:00"
+      "content_hash": "aad0066c1023af2ba4adcf558f6706fce0a5ea4fbd3244a451bc7ca28242a590",
+      "last_changed_at": "2026-10-26T03:36:15.638203+09:00"
     },
     "https://keirin.jp/pc/graderaceschedule?scyy=2027": {
       "source": "KEIRIN.JP公式グレード日程",
-      "content_hash": "402ac1a18c76ce3ce5ed915ceff9b73b82e8248be27b7f535446dfe26085c347",
-      "last_changed_at": "2026-10-25T03:25:34.238058+09:00"
+      "content_hash": "77460f90a63dd1c7c0084adf28d09bb4864590877ecd0a348a445a8a352f9715",
+      "last_changed_at": "2026-10-26T03:36:15.638203+09:00"
     },
     "https://www.keiba.go.jp/maintenance/20261021.html": {
       "source": "地方競馬公式重賞一覧",

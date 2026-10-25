@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-25T03:29:18.193354+09:00",
-  "center_date": "2026-10-25",
-  "past_unresolved_count": 11,
-  "upcoming_missing_time_count": 31,
+  "generated_at": "2026-10-26T03:39:46.094362+09:00",
+  "center_date": "2026-10-26",
+  "past_unresolved_count": 14,
+  "upcoming_missing_time_count": 25,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -115,9 +115,17 @@
       "missing": [
         "time"
       ]
-    }
-  ],
-  "upcoming_missing_time": [
+    },
+    {
+      "date": "2026-10-25",
+      "sport": "nar",
+      "venue": "盛岡",
+      "grade": "M2",
+      "name": "絆カップ",
+      "missing": [
+        "winner"
+      ]
+    },
     {
       "date": "2026-10-25",
       "sport": "nar",
@@ -125,7 +133,8 @@
       "grade": "",
       "name": "かがやきスプリント",
       "missing": [
-        "time"
+        "time",
+        "winner"
       ]
     },
     {
@@ -135,55 +144,18 @@
       "grade": "GⅢ",
       "name": "",
       "missing": [
-        "time"
+        "time",
+        "winner"
       ]
-    },
-    {
-      "date": "2026-10-26",
-      "sport": "boat",
-      "venue": "浜名湖",
-      "grade": "GⅢ",
-      "name": "",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-10-28",
-      "sport": "nar",
-      "venue": "大井",
-      "grade": "SⅡ",
-      "name": "マイルグランプリ",
-      "missing": [
-        "time"
-      ]
-    },
+    }
+  ],
+  "upcoming_missing_time": [
     {
       "date": "2026-10-29",
       "sport": "nar",
       "venue": "名古屋",
       "grade": "",
       "name": "ネクストスター名古屋",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-10-29",
-      "sport": "nar",
-      "venue": "園田",
-      "grade": "重賞Ⅰ",
-      "name": "ネクストスター園田",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-10-30",
-      "sport": "nar",
-      "venue": "園田",
-      "grade": "重賞Ⅱ",
-      "name": "兵庫クイーンカップ",
       "missing": [
         "time"
       ]
