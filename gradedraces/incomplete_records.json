@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-26T03:39:46.094362+09:00",
-  "center_date": "2026-10-26",
+  "generated_at": "2026-10-27T05:51:38.915031+09:00",
+  "center_date": "2026-10-27",
   "past_unresolved_count": 14,
   "upcoming_missing_time_count": 25,
   "past_unresolved": [
@@ -150,16 +150,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-10-29",
-      "sport": "nar",
-      "venue": "名古屋",
-      "grade": "",
-      "name": "ネクストスター名古屋",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-11-01",
       "sport": "nar",
@@ -396,6 +386,16 @@
       "venue": "四日市",
       "grade": "GⅠ",
       "name": "",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "sport": "boat",
+      "venue": "住之江",
+      "grade": "GⅠ",
+      "name": "高松宮記念",
       "missing": [
         "time"
       ]

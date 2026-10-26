@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-26T03:39:46.093814+09:00",
-  "center_date": "2026-10-26",
+  "generated_at": "2026-10-27T05:51:38.914551+09:00",
+  "center_date": "2026-10-27",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 16,
-    "recent_verification": 6,
+    "unresolved": 15,
+    "recent_verification": 1,
     "upcoming": 35
   },
-  "target_count": 52,
-  "change_count": 15,
+  "target_count": 50,
+  "change_count": 10,
   "changes": [
     {
       "date": "2026-09-05",
@@ -86,33 +86,6 @@
         "grade": "GIII",
         "name": "サウジアラビアロイヤルC",
         "winner": "アゴルディーノ"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-10-25",
-      "sport": "jra",
-      "venue": "京都",
-      "name": "菊花賞",
-      "before": {
-        "date": "2026-10-25",
-        "time": "14:35",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GⅠ",
-        "name": "菊花賞",
-        "winner": "ゴーイントゥスカイ"
-      },
-      "after": {
-        "date": "2026-10-25",
-        "time": "14:35",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GI",
-        "name": "菊花賞",
-        "winner": "ゴーイントゥスカイ"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -254,138 +227,30 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-10-25",
-      "sport": "nar",
-      "venue": "高知",
-      "name": "ネクストスター高知",
-      "before": {
-        "date": "2026-10-25",
-        "time": "18:05",
-        "sport": "nar",
-        "venue": "高知",
-        "grade": "",
-        "name": "ネクストスター高知",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-25",
-        "time": "18:05",
-        "sport": "nar",
-        "venue": "高知",
-        "grade": "",
-        "name": "ネクストスター高知",
-        "winner": "リケアボレロ"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F25&k_babaCode=31",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-25",
-      "sport": "nar",
-      "venue": "帯広",
-      "name": "北見記念",
-      "before": {
-        "date": "2026-10-25",
-        "time": "20:00",
-        "sport": "nar",
-        "venue": "帯広",
-        "grade": "BG2",
-        "name": "北見記念",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-25",
-        "time": "20:00",
-        "sport": "nar",
-        "venue": "帯広",
-        "grade": "BG2",
-        "name": "北見記念",
-        "winner": "メムロボブサップ"
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F25&k_babaCode=03",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-28",
-      "sport": "nar",
-      "venue": "大井",
-      "name": "マイルグランプリ",
-      "before": {
-        "date": "2026-10-28",
-        "time": "",
-        "sport": "nar",
-        "venue": "大井",
-        "grade": "SⅡ",
-        "name": "マイルグランプリ",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-28",
-        "time": "20:10",
-        "sport": "nar",
-        "venue": "大井",
-        "grade": "SⅡ",
-        "name": "マイルグランプリ",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F28&k_babaCode=20",
-      "note": "地方競馬公式レース情報"
-    },
-    {
       "date": "2026-10-29",
       "sport": "nar",
-      "venue": "園田",
-      "name": "ネクストスター園田",
+      "venue": "名古屋",
+      "name": "ネクストスター名古屋",
       "before": {
         "date": "2026-10-29",
         "time": "",
         "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅰ",
-        "name": "ネクストスター園田",
+        "venue": "名古屋",
+        "grade": "",
+        "name": "ネクストスター名古屋",
         "winner": ""
       },
       "after": {
         "date": "2026-10-29",
-        "time": "15:55",
+        "time": "18:00",
         "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅰ",
-        "name": "ネクストスター園田",
+        "venue": "名古屋",
+        "grade": "",
+        "name": "ネクストスター名古屋",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F29&k_babaCode=27",
-      "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-10-30",
-      "sport": "nar",
-      "venue": "園田",
-      "name": "兵庫クイーンカップ",
-      "before": {
-        "date": "2026-10-30",
-        "time": "",
-        "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅱ",
-        "name": "兵庫クイーンカップ",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-10-30",
-        "time": "20:00",
-        "sport": "nar",
-        "venue": "園田",
-        "grade": "重賞Ⅱ",
-        "name": "兵庫クイーンカップ",
-        "winner": ""
-      },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F30&k_babaCode=27",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F29&k_babaCode=24",
       "note": "地方競馬公式レース情報"
     },
     {
@@ -395,7 +260,7 @@
       "name": "",
       "before": {
         "date": "2026-10-26",
-        "time": "",
+        "time": "16:23",
         "sport": "boat",
         "venue": "浜名湖",
         "grade": "GⅢ",
@@ -409,7 +274,7 @@
         "venue": "浜名湖",
         "grade": "GⅢ",
         "name": "",
-        "winner": ""
+        "winner": "吉田 凌太朗"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=06&hd=20261026&rno=12",
