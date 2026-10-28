@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-10-28T05:21:21.152023+09:00",
-  "center_date": "2026-10-28",
+  "generated_at": "2026-10-29T05:42:22.010923+09:00",
+  "center_date": "2026-10-29",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 14,
-    "upcoming": 37
+    "unresolved": 15,
+    "recent_verification": 1,
+    "upcoming": 38
   },
-  "target_count": 51,
-  "change_count": 8,
+  "target_count": 53,
+  "change_count": 10,
   "changes": [
     {
       "date": "2026-09-05",
@@ -224,6 +225,60 @@
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-10-28",
+      "sport": "nar",
+      "venue": "大井",
+      "name": "マイルグランプリ",
+      "before": {
+        "date": "2026-10-28",
+        "time": "20:10",
+        "sport": "nar",
+        "venue": "大井",
+        "grade": "SⅡ",
+        "name": "マイルグランプリ",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-10-28",
+        "time": "20:10",
+        "sport": "nar",
+        "venue": "大井",
+        "grade": "SⅡ",
+        "name": "マイルグランプリ",
+        "winner": "ソニックスター"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F28&k_babaCode=20",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-01",
+      "sport": "nar",
+      "venue": "高知",
+      "name": "土佐秋月賞",
+      "before": {
+        "date": "2026-11-01",
+        "time": "",
+        "sport": "nar",
+        "venue": "高知",
+        "grade": "",
+        "name": "土佐秋月賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-01",
+        "time": "17:40",
+        "sport": "nar",
+        "venue": "高知",
+        "grade": "",
+        "name": "土佐秋月賞",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F01&k_babaCode=31",
+      "note": "地方競馬公式レース情報"
     }
   ]
 }
