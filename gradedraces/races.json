@@ -4947,7 +4947,7 @@
     "venue": "園田",
     "grade": "重賞Ⅱ",
     "name": "兵庫クイーンカップ",
-    "winner": ""
+    "winner": "エレインアスティ"
   },
   {
     "date": "2026-10-31",
@@ -4987,20 +4987,20 @@
   },
   {
     "date": "2026-11-01",
-    "time": "",
-    "sport": "nar",
-    "venue": "帯広",
-    "grade": "BG2",
-    "name": "ばんえい菊花賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-01",
-    "time": "",
+    "time": "18:15",
     "sport": "nar",
     "venue": "盛岡",
     "grade": "M1",
     "name": "プリンセスカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-01",
+    "time": "20:00",
+    "sport": "nar",
+    "venue": "帯広",
+    "grade": "BG2",
+    "name": "ばんえい菊花賞",
     "winner": ""
   },
   {
@@ -5014,25 +5014,7 @@
   },
   {
     "date": "2026-11-03",
-    "time": "",
-    "sport": "nar",
-    "venue": "金沢",
-    "grade": "JpnⅠ",
-    "name": "JBCクラシック",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-03",
-    "time": "",
-    "sport": "nar",
-    "venue": "金沢",
-    "grade": "JpnⅠ",
-    "name": "JBCスプリント",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-03",
-    "time": "",
+    "time": "14:25",
     "sport": "nar",
     "venue": "金沢",
     "grade": "JpnⅠ",
@@ -5041,7 +5023,16 @@
   },
   {
     "date": "2026-11-03",
-    "time": "",
+    "time": "15:10",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "JpnⅠ",
+    "name": "JBCスプリント",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-03",
+    "time": "15:40",
     "sport": "nar",
     "venue": "門別",
     "grade": "JpnⅢ",
@@ -5050,7 +5041,16 @@
   },
   {
     "date": "2026-11-03",
-    "time": "",
+    "time": "16:25",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "JpnⅠ",
+    "name": "JBCクラシック",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-03",
+    "time": "16:40",
     "sport": "nar",
     "venue": "門別",
     "grade": "H1",
@@ -5077,6 +5077,15 @@
   },
   {
     "date": "2026-11-04",
+    "time": "20:30",
+    "sport": "nar",
+    "venue": "門別",
+    "grade": "H1",
+    "name": "道営スプリント",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-04",
     "time": "",
     "sport": "nar",
     "venue": "園田",
@@ -5094,12 +5103,12 @@
     "winner": ""
   },
   {
-    "date": "2026-11-04",
-    "time": "",
+    "date": "2026-11-05",
+    "time": "20:35",
     "sport": "nar",
     "venue": "門別",
     "grade": "H1",
-    "name": "道営スプリント",
+    "name": "道営記念",
     "winner": ""
   },
   {
@@ -5109,15 +5118,6 @@
     "venue": "笠松",
     "grade": "SPⅠ",
     "name": "ラブミーチャン記念",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-05",
-    "time": "",
-    "sport": "nar",
-    "venue": "門別",
-    "grade": "H1",
-    "name": "道営記念",
     "winner": ""
   },
   {
@@ -5257,19 +5257,19 @@
   },
   {
     "date": "2026-11-14",
-    "time": "",
+    "time": "15:45",
     "sport": "jra",
     "venue": "京都",
-    "grade": "GⅡ",
+    "grade": "GII",
     "name": "デイリー杯2歳S",
     "winner": ""
   },
   {
     "date": "2026-11-14",
-    "time": "",
+    "time": "16:10",
     "sport": "jra",
     "venue": "東京",
-    "grade": "GⅢ",
+    "grade": "GIII",
     "name": "武蔵野S",
     "winner": ""
   },
