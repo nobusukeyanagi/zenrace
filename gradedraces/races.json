@@ -4956,7 +4956,7 @@
     "venue": "京都",
     "grade": "GIII",
     "name": "ファンタジーS",
-    "winner": ""
+    "winner": "ニクスルーナ"
   },
   {
     "date": "2026-11-01",
@@ -4965,6 +4965,15 @@
     "venue": "東京",
     "grade": "GI",
     "name": "天皇賞(秋)",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-01",
+    "time": "16:35",
+    "sport": "boat",
+    "venue": "尼崎",
+    "grade": "SG",
+    "name": "ボートレースダービー",
     "winner": ""
   },
   {
@@ -5001,15 +5010,6 @@
     "venue": "帯広",
     "grade": "BG2",
     "name": "ばんえい菊花賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-01",
-    "time": "",
-    "sport": "boat",
-    "venue": "尼崎",
-    "grade": "SG",
-    "name": "ボートレースダービー",
     "winner": ""
   },
   {
@@ -5275,10 +5275,10 @@
   },
   {
     "date": "2026-11-15",
-    "time": "",
+    "time": "14:35",
     "sport": "jra",
     "venue": "京都",
-    "grade": "GⅠ",
+    "grade": "GI",
     "name": "エリザベス女王杯",
     "winner": ""
   },
