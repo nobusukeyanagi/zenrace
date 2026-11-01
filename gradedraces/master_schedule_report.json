@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-01T04:37:23.857670+09:00",
-  "base_date": "2026-11-01",
+  "generated_at": "2026-11-02T04:57:05.912221+09:00",
+  "base_date": "2026-11-02",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-12-31",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 10,
+  "updated_count": 11,
   "registered_only_count": 3,
   "duplicate_count": 0,
   "additions": [],
@@ -101,7 +101,7 @@
         "venue": "京都",
         "grade": "GIII",
         "name": "ファンタジーS",
-        "winner": ""
+        "winner": "ニクスルーナ"
       },
       "after": {
         "date": "2026-10-31",
@@ -134,7 +134,7 @@
         "venue": "東京",
         "grade": "GⅠ",
         "name": "天皇賞(秋)",
-        "winner": ""
+        "winner": "ダノンデサイル"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-01:天皇賞(秋)"
@@ -258,6 +258,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-14:武蔵野s"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-11-15",
+        "time": "14:35",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GI",
+        "name": "エリザベス女王杯",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-15",
+        "time": "14:35",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GⅠ",
+        "name": "エリザベス女王杯",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-11-15:エリザベス女王杯"
     }
   ],
   "registered_only": [
