@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-02T05:00:46.805051+09:00",
-  "center_date": "2026-11-02",
+  "generated_at": "2026-11-03T08:18:54.201837+09:00",
+  "center_date": "2026-11-03",
   "past_unresolved_count": 14,
   "upcoming_missing_time_count": 20,
   "past_unresolved": [
@@ -172,16 +172,6 @@
     },
     {
       "date": "2026-11-05",
-      "sport": "nar",
-      "venue": "笠松",
-      "grade": "SPⅠ",
-      "name": "ラブミーチャン記念",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-05",
       "sport": "boat",
       "venue": "津",
       "grade": "GⅢ",
@@ -346,6 +336,16 @@
       "venue": "大村",
       "grade": "GⅢ",
       "name": "",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "sport": "nar",
+      "venue": "金沢",
+      "grade": "",
+      "name": "金沢ヤングチャンピオン",
       "missing": [
         "time"
       ]

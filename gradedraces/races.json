@@ -4963,7 +4963,7 @@
     "time": "16:25",
     "sport": "jra",
     "venue": "東京",
-    "grade": "GI",
+    "grade": "GⅠ",
     "name": "天皇賞(秋)",
     "winner": "ダノンデサイル"
   },
@@ -5104,20 +5104,20 @@
   },
   {
     "date": "2026-11-05",
+    "time": "16:15",
+    "sport": "nar",
+    "venue": "笠松",
+    "grade": "SPⅠ",
+    "name": "ラブミーチャン記念",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-05",
     "time": "20:35",
     "sport": "nar",
     "venue": "門別",
     "grade": "H1",
     "name": "道営記念",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-05",
-    "time": "",
-    "sport": "nar",
-    "venue": "笠松",
-    "grade": "SPⅠ",
-    "name": "ラブミーチャン記念",
     "winner": ""
   },
   {
