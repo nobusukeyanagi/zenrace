@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-03T08:15:29.368653+09:00",
-  "base_date": "2026-11-03",
+  "generated_at": "2026-11-04T06:20:36.829422+09:00",
+  "base_date": "2026-11-04",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-12-31",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 10,
+  "updated_count": 9,
   "registered_only_count": 3,
   "duplicate_count": 0,
   "additions": [],
@@ -90,30 +90,6 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-10:サウジアラビアロイヤルc"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-11-01",
-        "time": "16:25",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GI",
-        "name": "天皇賞(秋)",
-        "winner": "ダノンデサイル"
-      },
-      "after": {
-        "date": "2026-11-01",
-        "time": "16:25",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GⅠ",
-        "name": "天皇賞(秋)",
-        "winner": "ダノンデサイル"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-11-01:天皇賞(秋)"
     },
     {
       "type": "master_updated",

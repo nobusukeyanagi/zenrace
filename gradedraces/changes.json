@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-11-03T08:18:54.201367+09:00",
-  "center_date": "2026-11-03",
+  "generated_at": "2026-11-04T06:23:59.442107+09:00",
+  "center_date": "2026-11-04",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 14,
-    "upcoming": 36
+    "unresolved": 21,
+    "recent_verification": 7,
+    "upcoming": 30
   },
-  "target_count": 50,
-  "change_count": 10,
+  "target_count": 51,
+  "change_count": 15,
   "changes": [
     {
       "date": "2026-09-05",
@@ -253,31 +254,166 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-11-05",
+      "date": "2026-11-03",
       "sport": "nar",
-      "venue": "笠松",
-      "name": "ラブミーチャン記念",
+      "venue": "金沢",
+      "name": "JBCレディスクラシック",
       "before": {
-        "date": "2026-11-05",
-        "time": "",
+        "date": "2026-11-03",
+        "time": "14:25",
         "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅠ",
-        "name": "ラブミーチャン記念",
+        "venue": "金沢",
+        "grade": "JpnⅠ",
+        "name": "JBCレディスクラシック",
         "winner": ""
       },
       "after": {
-        "date": "2026-11-05",
-        "time": "16:15",
+        "date": "2026-11-03",
+        "time": "14:25",
         "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅠ",
-        "name": "ラブミーチャン記念",
-        "winner": ""
+        "venue": "金沢",
+        "grade": "JpnⅠ",
+        "name": "JBCレディスクラシック",
+        "winner": "アンズアメ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F05&k_babaCode=23",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F03&k_babaCode=22",
       "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-03",
+      "sport": "nar",
+      "venue": "金沢",
+      "name": "JBCスプリント",
+      "before": {
+        "date": "2026-11-03",
+        "time": "15:10",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "JpnⅠ",
+        "name": "JBCスプリント",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-03",
+        "time": "15:10",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "JpnⅠ",
+        "name": "JBCスプリント",
+        "winner": "メイショウハチロー"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F03&k_babaCode=22",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-03",
+      "sport": "nar",
+      "venue": "門別",
+      "name": "JBC2歳優駿",
+      "before": {
+        "date": "2026-11-03",
+        "time": "15:40",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "JpnⅢ",
+        "name": "JBC2歳優駿",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-03",
+        "time": "15:40",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "JpnⅢ",
+        "name": "JBC2歳優駿",
+        "winner": "オーリエイト"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F03&k_babaCode=36",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-03",
+      "sport": "nar",
+      "venue": "金沢",
+      "name": "JBCクラシック",
+      "before": {
+        "date": "2026-11-03",
+        "time": "16:25",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "JpnⅠ",
+        "name": "JBCクラシック",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-03",
+        "time": "16:25",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "JpnⅠ",
+        "name": "JBCクラシック",
+        "winner": "アウトレンジ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F03&k_babaCode=22",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-03",
+      "sport": "nar",
+      "venue": "門別",
+      "name": "北海道2歳スプリント",
+      "before": {
+        "date": "2026-11-03",
+        "time": "16:40",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H1",
+        "name": "北海道2歳スプリント",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-03",
+        "time": "16:40",
+        "sport": "nar",
+        "venue": "門別",
+        "grade": "H1",
+        "name": "北海道2歳スプリント",
+        "winner": "アペリティーヴォ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F03&k_babaCode=36",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-03",
+      "sport": "auto",
+      "venue": "浜松",
+      "name": "日本選手権オートレース",
+      "before": {
+        "date": "2026-11-03",
+        "time": "",
+        "sport": "auto",
+        "venue": "浜松",
+        "grade": "SG",
+        "name": "日本選手権オートレース",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-03",
+        "time": "",
+        "sport": "auto",
+        "venue": "浜松",
+        "grade": "SG",
+        "name": "日本選手権オートレース",
+        "winner": "青山 周平"
+      },
+      "source": "オートレース",
+      "evidence_url": "https://autorace.jp/calendar/graderace/",
+      "note": "AutoRace.JP公式年間日程の優勝者"
     }
   ]
 }
