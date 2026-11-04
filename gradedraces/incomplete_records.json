@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-04T06:23:59.442657+09:00",
-  "center_date": "2026-11-04",
+  "generated_at": "2026-11-05T06:40:24.368277+09:00",
+  "center_date": "2026-11-05",
   "past_unresolved_count": 16,
   "upcoming_missing_time_count": 19,
   "past_unresolved": [
@@ -133,8 +133,7 @@
       "grade": "",
       "name": "かがやきスプリント",
       "missing": [
-        "time",
-        "winner"
+        "time"
       ]
     },
     {
@@ -172,16 +171,6 @@
   ],
   "upcoming_missing_time": [
     {
-      "date": "2026-11-05",
-      "sport": "boat",
-      "venue": "津",
-      "grade": "GⅢ",
-      "name": "オールレディース",
-      "missing": [
-        "time"
-      ]
-    },
-    {
       "date": "2026-11-07",
       "sport": "jra",
       "venue": "京都",
@@ -217,16 +206,6 @@
       "venue": "盛岡",
       "grade": "M3",
       "name": "すずらん賞",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "sport": "nar",
-      "venue": "高知",
-      "grade": "",
-      "name": "黒潮マイルチャンピオンシップ",
       "missing": [
         "time"
       ]
@@ -357,6 +336,26 @@
       "venue": "大井",
       "grade": "SⅠ",
       "name": "ハイセイコー記念",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "sport": "nar",
+      "venue": "笠松",
+      "grade": "SPⅠ",
+      "name": "笠松グランプリ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "sport": "boat",
+      "venue": "びわこ",
+      "grade": "GⅠ",
+      "name": "びわこ大賞",
       "missing": [
         "time"
       ]
