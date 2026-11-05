@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-05T06:40:24.368277+09:00",
-  "center_date": "2026-11-05",
+  "generated_at": "2026-11-06T06:42:05.813110+09:00",
+  "center_date": "2026-11-06",
   "past_unresolved_count": 16,
   "upcoming_missing_time_count": 19,
   "past_unresolved": [
@@ -183,16 +183,6 @@
     {
       "date": "2026-11-08",
       "sport": "nar",
-      "venue": "佐賀",
-      "grade": "",
-      "name": "カペラ賞",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "sport": "nar",
       "venue": "帯広",
       "grade": "BG3",
       "name": "クインカップ",
@@ -356,6 +346,16 @@
       "venue": "びわこ",
       "grade": "GⅠ",
       "name": "びわこ大賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "sport": "boat",
+      "venue": "丸亀",
+      "grade": "GⅠ",
+      "name": "京極賞",
       "missing": [
         "time"
       ]

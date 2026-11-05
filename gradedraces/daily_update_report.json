@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-05T06:40:24.525000+09:00",
-  "base_date": "2026-11-05",
+  "generated_at": "2026-11-06T06:42:05.951957+09:00",
+  "base_date": "2026-11-06",
   "steps": [
     {
       "command": [
-        "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python",
         "-m",
         "scripts.master_schedule",
         "--fail-if-all-sources-fail"
@@ -13,7 +13,7 @@
     },
     {
       "command": [
-        "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python",
         "-m",
         "scripts.update_races",
         "--smart",
@@ -23,7 +23,7 @@
     },
     {
       "command": [
-        "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python",
         "-m",
         "scripts.validate_races",
         "races.json"
@@ -32,7 +32,7 @@
     },
     {
       "command": [
-        "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+        "/opt/hostedtoolcache/Python/3.12.16/x64/bin/python",
         "-m",
         "scripts.sync_html",
         "--json",
@@ -51,8 +51,8 @@
     "master_updated": 9,
     "master_review_required": 3,
     "master_duplicates": 0,
-    "detail_targets": 48,
-    "detail_changes": 15,
+    "detail_targets": 46,
+    "detail_changes": 13,
     "past_unresolved": 16,
     "upcoming_missing_time": 19,
     "detail_source_failures": 0

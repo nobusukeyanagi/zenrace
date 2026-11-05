@@ -5105,20 +5105,20 @@
   {
     "date": "2026-11-05",
     "time": "16:15",
-    "sport": "nar",
-    "venue": "笠松",
-    "grade": "SPⅠ",
-    "name": "ラブミーチャン記念",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-05",
-    "time": "16:15",
     "sport": "boat",
     "venue": "津",
     "grade": "GⅢ",
     "name": "オールレディース",
-    "winner": ""
+    "winner": "守屋 美穂"
+  },
+  {
+    "date": "2026-11-05",
+    "time": "16:25",
+    "sport": "nar",
+    "venue": "笠松",
+    "grade": "SPⅠ",
+    "name": "ラブミーチャン記念",
+    "winner": "パルムグレン"
   },
   {
     "date": "2026-11-05",
@@ -5127,7 +5127,7 @@
     "venue": "門別",
     "grade": "H1",
     "name": "道営記念",
-    "winner": ""
+    "winner": "ベルピット"
   },
   {
     "date": "2026-11-07",
@@ -5167,20 +5167,20 @@
   },
   {
     "date": "2026-11-08",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "カペラ賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-08",
     "time": "18:15",
     "sport": "nar",
     "venue": "高知",
     "grade": "",
     "name": "黒潮マイルチャンピオンシップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-08",
-    "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "カペラ賞",
     "winner": ""
   },
   {
