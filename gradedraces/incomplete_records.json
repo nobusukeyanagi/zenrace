@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-06T06:42:05.813110+09:00",
-  "center_date": "2026-11-06",
+  "generated_at": "2026-11-07T06:12:17.209394+09:00",
+  "center_date": "2026-11-07",
   "past_unresolved_count": 16,
-  "upcoming_missing_time_count": 19,
+  "upcoming_missing_time_count": 17,
   "past_unresolved": [
     {
       "date": "2026-08-09",
@@ -176,26 +176,6 @@
       "venue": "京都",
       "grade": "J・GⅢ",
       "name": "J ・ GIII 京都ジャンプS",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "sport": "nar",
-      "venue": "帯広",
-      "grade": "BG3",
-      "name": "クインカップ",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "sport": "nar",
-      "venue": "盛岡",
-      "grade": "M3",
-      "name": "すずらん賞",
       "missing": [
         "time"
       ]

@@ -5167,6 +5167,15 @@
   },
   {
     "date": "2026-11-08",
+    "time": "17:35",
+    "sport": "nar",
+    "venue": "盛岡",
+    "grade": "M3",
+    "name": "すずらん賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-08",
     "time": "18:05",
     "sport": "nar",
     "venue": "佐賀",
@@ -5185,20 +5194,11 @@
   },
   {
     "date": "2026-11-08",
-    "time": "",
+    "time": "20:00",
     "sport": "nar",
     "venue": "帯広",
     "grade": "BG3",
     "name": "クインカップ",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-08",
-    "time": "",
-    "sport": "nar",
-    "venue": "盛岡",
-    "grade": "M3",
-    "name": "すずらん賞",
     "winner": ""
   },
   {
@@ -5374,10 +5374,10 @@
   },
   {
     "date": "2026-11-21",
-    "time": "",
+    "time": "15:55",
     "sport": "jra",
     "venue": "福島",
-    "grade": "GⅢ",
+    "grade": "GIII",
     "name": "福島記念",
     "winner": ""
   },
