@@ -5136,7 +5136,7 @@
     "venue": "東京",
     "grade": "GII",
     "name": "京王杯2歳S",
-    "winner": ""
+    "winner": "ブルージェイ"
   },
   {
     "date": "2026-11-07",
@@ -5145,7 +5145,7 @@
     "venue": "京都",
     "grade": "J・GⅢ",
     "name": "J ・ GIII 京都ジャンプS",
-    "winner": ""
+    "winner": "スマイルスルー"
   },
   {
     "date": "2026-11-08",
@@ -5383,10 +5383,10 @@
   },
   {
     "date": "2026-11-22",
-    "time": "",
+    "time": "16:20",
     "sport": "jra",
     "venue": "京都",
-    "grade": "GⅠ",
+    "grade": "GI",
     "name": "マイルチャンピオンシップ",
     "winner": ""
   },

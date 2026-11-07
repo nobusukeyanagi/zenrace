@@ -1,19 +1,9 @@
 {
-  "generated_at": "2026-11-07T06:12:17.209394+09:00",
-  "center_date": "2026-11-07",
+  "generated_at": "2026-11-08T04:46:46.531627+09:00",
+  "center_date": "2026-11-08",
   "past_unresolved_count": 16,
   "upcoming_missing_time_count": 17,
   "past_unresolved": [
-    {
-      "date": "2026-08-09",
-      "sport": "nar",
-      "venue": "盛岡",
-      "grade": "M1",
-      "name": "ひまわり賞（オークス）",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-08-16",
       "sport": "auto",
@@ -167,9 +157,7 @@
       "missing": [
         "time"
       ]
-    }
-  ],
-  "upcoming_missing_time": [
+    },
     {
       "date": "2026-11-07",
       "sport": "jra",
@@ -179,7 +167,9 @@
       "missing": [
         "time"
       ]
-    },
+    }
+  ],
+  "upcoming_missing_time": [
     {
       "date": "2026-11-08",
       "sport": "keirin",
@@ -336,6 +326,16 @@
       "venue": "丸亀",
       "grade": "GⅠ",
       "name": "京極賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "sport": "nar",
+      "venue": "帯広",
+      "grade": "BG3",
+      "name": "ドリームエイジカップ",
       "missing": [
         "time"
       ]

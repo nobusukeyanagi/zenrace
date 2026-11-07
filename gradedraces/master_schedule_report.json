@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-07T06:08:56.136683+09:00",
-  "base_date": "2026-11-07",
+  "generated_at": "2026-11-08T04:43:21.924178+09:00",
+  "base_date": "2026-11-08",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-12-31",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 9,
+  "updated_count": 11,
   "registered_only_count": 3,
   "duplicate_count": 0,
   "additions": [],
@@ -96,6 +96,30 @@
       "match_type": "exact",
       "before": {
         "date": "2026-11-07",
+        "time": "",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "J・GⅢ",
+        "name": "J ・ GIII 京都ジャンプS",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-07",
+        "time": "",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "J・GⅢ",
+        "name": "J ・ GIII 京都ジャンプS",
+        "winner": "スマイルスルー"
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-11-07:j・giii京都ジャンプs"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-11-07",
         "time": "10:05",
         "sport": "jra",
         "venue": "東京",
@@ -110,7 +134,7 @@
         "venue": "東京",
         "grade": "GⅡ",
         "name": "京王杯2歳S",
-        "winner": ""
+        "winner": "ブルージェイ"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-07:京王杯2歳s"
@@ -234,6 +258,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-15:エリザベス女王杯"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-11-21",
+        "time": "15:55",
+        "sport": "jra",
+        "venue": "福島",
+        "grade": "GIII",
+        "name": "福島記念",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-21",
+        "time": "15:55",
+        "sport": "jra",
+        "venue": "福島",
+        "grade": "GⅢ",
+        "name": "福島記念",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-11-21:福島記念"
     }
   ],
   "registered_only": [
