@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-08T04:43:21.924178+09:00",
-  "base_date": "2026-11-08",
+  "generated_at": "2026-11-09T05:01:33.419210+09:00",
+  "base_date": "2026-11-09",
   "calendar_years": [
     2026,
     2027
@@ -96,36 +96,12 @@
       "match_type": "exact",
       "before": {
         "date": "2026-11-07",
-        "time": "",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "J・GⅢ",
-        "name": "J ・ GIII 京都ジャンプS",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-11-07",
-        "time": "",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "J・GⅢ",
-        "name": "J ・ GIII 京都ジャンプS",
-        "winner": "スマイルスルー"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-11-07:j・giii京都ジャンプs"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-11-07",
         "time": "10:05",
         "sport": "jra",
         "venue": "東京",
         "grade": "GII",
         "name": "京王杯2歳S",
-        "winner": ""
+        "winner": "ブルージェイ"
       },
       "after": {
         "date": "2026-11-07",
@@ -158,7 +134,7 @@
         "venue": "京都",
         "grade": "GⅢ",
         "name": "みやこS",
-        "winner": ""
+        "winner": "ロードクロンヌ"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-08:みやこs"
@@ -182,7 +158,7 @@
         "venue": "東京",
         "grade": "GⅡ",
         "name": "アルゼンチン共和国杯",
-        "winner": ""
+        "winner": "ファミリータイム"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-08:アルゼンチン共和国杯"
@@ -282,6 +258,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-21:福島記念"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-11-22",
+        "time": "16:20",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GI",
+        "name": "マイルチャンピオンシップ",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-22",
+        "time": "16:20",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GⅠ",
+        "name": "マイルチャンピオンシップ",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-11-22:マイルチャンピオンシップ"
     }
   ],
   "registered_only": [
