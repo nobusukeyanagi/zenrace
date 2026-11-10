@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-09T05:01:33.419210+09:00",
-  "base_date": "2026-11-09",
+  "generated_at": "2026-11-10T08:54:10.361553+09:00",
+  "base_date": "2026-11-10",
   "calendar_years": [
     2026,
     2027
@@ -95,37 +95,13 @@
       "type": "master_updated",
       "match_type": "exact",
       "before": {
-        "date": "2026-11-07",
-        "time": "10:05",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GII",
-        "name": "京王杯2歳S",
-        "winner": "ブルージェイ"
-      },
-      "after": {
-        "date": "2026-11-07",
-        "time": "10:05",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GⅡ",
-        "name": "京王杯2歳S",
-        "winner": "ブルージェイ"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-11-07:京王杯2歳s"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
         "date": "2026-11-08",
         "time": "15:45",
         "sport": "jra",
         "venue": "京都",
         "grade": "GIII",
         "name": "みやこS",
-        "winner": ""
+        "winner": "ロードクロンヌ"
       },
       "after": {
         "date": "2026-11-08",
@@ -149,7 +125,7 @@
         "venue": "東京",
         "grade": "GII",
         "name": "アルゼンチン共和国杯",
-        "winner": ""
+        "winner": "ファミリータイム"
       },
       "after": {
         "date": "2026-11-08",
@@ -282,6 +258,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-22:マイルチャンピオンシップ"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-11-23",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GII",
+        "name": "東スポ杯2歳S",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-23",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GⅡ",
+        "name": "東スポ杯2歳S",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-11-23:東スポ杯2歳s"
     }
   ],
   "registered_only": [

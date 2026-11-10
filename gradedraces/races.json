@@ -5152,7 +5152,7 @@
     "time": "15:45",
     "sport": "jra",
     "venue": "京都",
-    "grade": "GIII",
+    "grade": "GⅢ",
     "name": "みやこS",
     "winner": "ロードクロンヌ"
   },
@@ -5161,7 +5161,7 @@
     "time": "15:45",
     "sport": "jra",
     "venue": "東京",
-    "grade": "GII",
+    "grade": "GⅡ",
     "name": "アルゼンチン共和国杯",
     "winner": "ファミリータイム"
   },
@@ -5212,7 +5212,7 @@
   },
   {
     "date": "2026-11-10",
-    "time": "",
+    "time": "20:45",
     "sport": "boat",
     "venue": "住之江",
     "grade": "GⅠ",
@@ -5239,7 +5239,7 @@
   },
   {
     "date": "2026-11-12",
-    "time": "",
+    "time": "18:00",
     "sport": "nar",
     "venue": "名古屋",
     "grade": "SPⅠ",
@@ -5248,7 +5248,7 @@
   },
   {
     "date": "2026-11-12",
-    "time": "",
+    "time": "20:10",
     "sport": "nar",
     "venue": "川崎",
     "grade": "SⅡ",

@@ -12,13 +12,13 @@
     },
     "https://keirin.jp/pc/graderaceschedule?scyy=2026": {
       "source": "KEIRIN.JP公式グレード日程",
-      "content_hash": "413af0996944a6a297ef08ffeac16f468bb06564f579b9bff4e9ce58ebc99640",
-      "last_changed_at": "2026-11-09T05:01:33.420175+09:00"
+      "content_hash": "0864713cfaa022f98de4906a4e15b871f292add3f2b8c111251400e9e76baccd",
+      "last_changed_at": "2026-11-10T08:54:10.362462+09:00"
     },
     "https://keirin.jp/pc/graderaceschedule?scyy=2027": {
       "source": "KEIRIN.JP公式グレード日程",
-      "content_hash": "cb35f0f6b0ad7cd0d3f961a518b4b9ff9b24291a69b2bf4eb1b7fe18b42fb4f5",
-      "last_changed_at": "2026-11-09T05:01:33.420175+09:00"
+      "content_hash": "4916c18580ff8d21523883488d624afca64cbe2c990e1d0caae8e6de0d5658b4",
+      "last_changed_at": "2026-11-10T08:54:10.362462+09:00"
     },
     "https://www.keiba.go.jp/maintenance/20261021.html": {
       "source": "地方競馬公式重賞一覧",
