@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-10T08:54:10.361553+09:00",
-  "base_date": "2026-11-10",
+  "generated_at": "2026-11-11T06:31:14.302031+09:00",
+  "base_date": "2026-11-11",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-12-31",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 11,
+  "updated_count": 9,
   "registered_only_count": 3,
   "duplicate_count": 0,
   "additions": [],
@@ -90,54 +90,6 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-10-10:サウジアラビアロイヤルc"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-11-08",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GIII",
-        "name": "みやこS",
-        "winner": "ロードクロンヌ"
-      },
-      "after": {
-        "date": "2026-11-08",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GⅢ",
-        "name": "みやこS",
-        "winner": "ロードクロンヌ"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-11-08:みやこs"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-11-08",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GII",
-        "name": "アルゼンチン共和国杯",
-        "winner": "ファミリータイム"
-      },
-      "after": {
-        "date": "2026-11-08",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GⅡ",
-        "name": "アルゼンチン共和国杯",
-        "winner": "ファミリータイム"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-11-08:アルゼンチン共和国杯"
     },
     {
       "type": "master_updated",

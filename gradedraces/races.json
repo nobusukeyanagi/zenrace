@@ -5217,6 +5217,15 @@
     "venue": "住之江",
     "grade": "GⅠ",
     "name": "高松宮記念",
+    "winner": "篠崎 元志"
+  },
+  {
+    "date": "2026-11-11",
+    "time": "16:15",
+    "sport": "boat",
+    "venue": "鳴門",
+    "grade": "GⅠ",
+    "name": "大渦大賞",
     "winner": ""
   },
   {
@@ -5226,15 +5235,6 @@
     "venue": "川崎",
     "grade": "SⅠ",
     "name": "ロジータ記念",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-11",
-    "time": "",
-    "sport": "boat",
-    "venue": "鳴門",
-    "grade": "GⅠ",
-    "name": "大渦大賞",
     "winner": ""
   },
   {

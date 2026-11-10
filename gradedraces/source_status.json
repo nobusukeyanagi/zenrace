@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-11-10T08:57:33.719751+09:00",
+  "generated_at": "2026-11-11T06:34:45.519396+09:00",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 17,
+    "unresolved": 18,
+    "recent_verification": 1,
     "upcoming": 26
   },
   "sources": [
@@ -58,7 +59,9 @@
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F22&k_babaCode=03",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=03&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F23&k_babaCode=11",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F23&k_babaCode=22"
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F23&k_babaCode=22",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F25&k_babaCode=18",
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=18&k_nenndo=2026"
       ],
       "warnings": [
         "地方競馬重賞一覧の本文を十分に確認できませんでした。個別レース情報の取得は継続します。"
@@ -68,13 +71,13 @@
     {
       "name": "ボートレース",
       "ok": true,
-      "patch_count": 1,
+      "patch_count": 2,
       "fetched_urls": [
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=01",
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=02",
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=03",
         "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=12&hd=20261110&rno=12",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=14&hd=20261111",
+        "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=14&hd=20261111&rno=12",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=24&hd=20261116",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=11&hd=20261119",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=15&hd=20261120",
