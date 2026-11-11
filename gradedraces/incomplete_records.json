@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-11T06:34:45.519928+09:00",
-  "center_date": "2026-11-11",
+  "generated_at": "2026-11-12T07:24:57.761949+09:00",
+  "center_date": "2026-11-12",
   "past_unresolved_count": 17,
-  "upcoming_missing_time_count": 17,
+  "upcoming_missing_time_count": 21,
   "past_unresolved": [
     {
       "date": "2026-08-16",
@@ -347,6 +347,46 @@
       "venue": "浦和",
       "grade": "JpnⅡ",
       "name": "浦和記念",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "sport": "nar",
+      "venue": "名古屋",
+      "grade": "SPⅠ",
+      "name": "ゴールドウィング賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "sport": "nar",
+      "venue": "園田",
+      "grade": "JpnⅡ",
+      "name": "兵庫ジュニアグランプリ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "sport": "nar",
+      "venue": "浦和",
+      "grade": "SⅢ",
+      "name": "サザンスタースプリント",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "sport": "boat",
+      "venue": "三国",
+      "grade": "GⅢ",
+      "name": "スズキ・カープラザカップ",
       "missing": [
         "time"
       ]
