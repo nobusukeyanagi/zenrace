@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-12T07:24:57.761949+09:00",
-  "center_date": "2026-11-12",
+  "generated_at": "2026-11-13T07:01:20.560034+09:00",
+  "center_date": "2026-11-13",
   "past_unresolved_count": 17,
-  "upcoming_missing_time_count": 21,
+  "upcoming_missing_time_count": 18,
   "past_unresolved": [
     {
       "date": "2026-08-16",
@@ -184,29 +184,9 @@
     {
       "date": "2026-11-15",
       "sport": "nar",
-      "venue": "佐賀",
-      "grade": "",
-      "name": "ウインターチャンピオン",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-15",
-      "sport": "nar",
       "venue": "水沢",
       "grade": "M1",
       "name": "南部駒賞",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-15",
-      "sport": "nar",
-      "venue": "金沢",
-      "grade": "",
-      "name": "北國王冠",
       "missing": [
         "time"
       ]
@@ -227,16 +207,6 @@
       "venue": "大村",
       "grade": "GⅢ",
       "name": "",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-17",
-      "sport": "nar",
-      "venue": "金沢",
-      "grade": "",
-      "name": "金沢ヤングチャンピオン",
       "missing": [
         "time"
       ]
