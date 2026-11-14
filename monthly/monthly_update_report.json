@@ -1,54 +1,45 @@
 {
-  "generated_at": "2026-11-14T06:56:15.052912+09:00",
+  "generated_at": "2026-11-15T05:25:36.142173+09:00",
   "mode": "smart",
-  "target_date": "2026-11-14",
+  "target_date": "2026-11-15",
   "refresh_window": {
-    "start": "2026-11-13",
-    "end": "2026-11-28",
+    "start": "2026-11-14",
+    "end": "2026-11-29",
     "policy": "前日＋当日から14日後"
   },
   "unresolved_window": {
-    "start": "2026-08-16",
-    "end": "2026-11-12",
+    "start": "2026-08-17",
+    "end": "2026-11-13",
     "policy": "過去90日以内の取得失敗を再確認"
   },
   "new_addition_window": {
-    "start": "2026-11-29",
+    "start": "2026-11-30",
     "end": "2026-12-31",
     "policy": "翌月末までの公式月間表に新規開催があれば追加"
   },
-  "before_count": 8868,
-  "after_count": 8876,
+  "before_count": 8876,
+  "after_count": 8887,
   "changed": true,
   "refreshed_date_count": 16,
   "refreshed_dates": [
     {
-      "date": "2026-11-13",
-      "before_count": 28,
-      "after_count": 28,
-      "changed": false,
-      "failed_sports": [
-        "jra"
-      ]
-    },
-    {
       "date": "2026-11-14",
-      "before_count": 29,
+      "before_count": 30,
       "after_count": 30,
-      "changed": true,
+      "changed": false,
       "failed_sports": []
     },
     {
       "date": "2026-11-15",
-      "before_count": 28,
-      "after_count": 30,
+      "before_count": 30,
+      "after_count": 32,
       "changed": true,
       "failed_sports": []
     },
     {
       "date": "2026-11-16",
-      "before_count": 19,
-      "after_count": 22,
+      "before_count": 22,
+      "after_count": 24,
       "changed": true,
       "failed_sports": [
         "jra"
@@ -56,8 +47,8 @@
     },
     {
       "date": "2026-11-17",
-      "before_count": 17,
-      "after_count": 18,
+      "before_count": 18,
+      "after_count": 22,
       "changed": true,
       "failed_sports": [
         "jra"
@@ -65,8 +56,8 @@
     },
     {
       "date": "2026-11-18",
-      "before_count": 15,
-      "after_count": 16,
+      "before_count": 16,
+      "after_count": 18,
       "changed": true,
       "failed_sports": [
         "jra"
@@ -74,8 +65,8 @@
     },
     {
       "date": "2026-11-19",
-      "before_count": 12,
-      "after_count": 13,
+      "before_count": 13,
+      "after_count": 15,
       "changed": true,
       "failed_sports": [
         "jra"
@@ -84,8 +75,8 @@
     {
       "date": "2026-11-20",
       "before_count": 10,
-      "after_count": 10,
-      "changed": false,
+      "after_count": 12,
+      "changed": true,
       "failed_sports": [
         "jra"
       ]
@@ -149,13 +140,20 @@
     },
     {
       "date": "2026-11-28",
-      "before_count": 15,
+      "before_count": 14,
       "after_count": 14,
+      "changed": false,
+      "failed_sports": []
+    },
+    {
+      "date": "2026-11-29",
+      "before_count": 14,
+      "after_count": 11,
       "changed": true,
       "failed_sports": []
     }
   ],
-  "retried_unresolved_count": 61,
+  "retried_unresolved_count": 62,
   "retried_unresolved": [
     {
       "date": "2026-08-17",
@@ -583,6 +581,13 @@
       "ok": false,
       "changed": false,
       "error": "403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1112.html"
+    },
+    {
+      "date": "2026-11-13",
+      "sport": "jra",
+      "ok": false,
+      "changed": false,
+      "error": "403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1113.html"
     }
   ],
   "unresolved_before_count": 71,
@@ -610,7 +615,7 @@
       "month": "2026-11",
       "sport": "boat",
       "ok": true,
-      "official_entry_count": 204,
+      "official_entry_count": 216,
       "added_count": 0,
       "error": ""
     },
@@ -678,7 +683,7 @@
       "attempts": 18,
       "success_count": 18,
       "failure_count": 0,
-      "entry_count": 564,
+      "entry_count": 562,
       "fetched_urls": [
         "https://www.keirin.jp/sp/raceschedule?scyy=2026&scym=11",
         "https://www.keirin.jp/sp/raceschedule?scyy=2026&scym=12"
@@ -695,12 +700,6 @@
       "entry_count": 64,
       "fetched_urls": [
         "https://autorace.jp/calendar/first/schedule.pdf",
-        "https://autorace.jp/race_info/Program/kawaguchi/2026-11-13",
-        "https://autorace.jp/race_info/Program/isesaki/2026-11-13",
-        "https://autorace.jp/race_info/Program/hamamatsu/2026-11-13",
-        "https://autorace.jp/race_info/Program/iizuka/2026-11-13",
-        "https://autorace.jp/race_info/Program/sanyo/2026-11-13",
-        "https://autorace.jp/race_info/Program/sanyo/2026-11-13_01",
         "https://autorace.jp/race_info/Program/kawaguchi/2026-11-14",
         "https://autorace.jp/race_info/Program/isesaki/2026-11-14",
         "https://autorace.jp/race_info/Program/hamamatsu/2026-11-14",
@@ -790,7 +789,13 @@
         "https://autorace.jp/race_info/Program/hamamatsu/2026-11-28",
         "https://autorace.jp/race_info/Program/iizuka/2026-11-28",
         "https://autorace.jp/race_info/Program/sanyo/2026-11-28",
-        "https://autorace.jp/race_info/Program/sanyo/2026-11-28_01"
+        "https://autorace.jp/race_info/Program/sanyo/2026-11-28_01",
+        "https://autorace.jp/race_info/Program/kawaguchi/2026-11-29",
+        "https://autorace.jp/race_info/Program/isesaki/2026-11-29",
+        "https://autorace.jp/race_info/Program/hamamatsu/2026-11-29",
+        "https://autorace.jp/race_info/Program/iizuka/2026-11-29",
+        "https://autorace.jp/race_info/Program/sanyo/2026-11-29",
+        "https://autorace.jp/race_info/Program/sanyo/2026-11-29_01"
       ],
       "warnings": [],
       "error": "オートレース日程PDFに対象月が見つかりませんでした"
@@ -801,7 +806,7 @@
       "attempts": 18,
       "success_count": 18,
       "failure_count": 0,
-      "entry_count": 261,
+      "entry_count": 272,
       "fetched_urls": [
         "https://www.boatrace.jp/owpc/pc/race/monthlyschedule?ym=202611",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=07&hd=20261101",
@@ -832,20 +837,22 @@
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=17&hd=20261112",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=19&hd=20261112",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=21&hd=20261112",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=02&hd=20261114",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=03&hd=20261114",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=04&hd=20261114",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=07&hd=20261114",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=08&hd=20261114",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=09&hd=20261114",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=10&hd=20261114",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=11&hd=20261114",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=13&hd=20261114",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=16&hd=20261114",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=20&hd=20261114",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=22&hd=20261114",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=23&hd=20261114",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=24&hd=20261114",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=02&hd=20261115",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=03&hd=20261115",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=08&hd=20261115",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=09&hd=20261115",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=11&hd=20261115",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=13&hd=20261115",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=15&hd=20261115",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=16&hd=20261115",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=18&hd=20261115",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=20&hd=20261115",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=22&hd=20261115",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=23&hd=20261115",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=24&hd=20261115",
         "https://www.boatrace.jp/owpc/pc/race/monthlyschedule?ym=202612"
       ],
       "warnings": [],
@@ -857,13 +864,9 @@
       "attempts": 18,
       "success_count": 18,
       "failure_count": 0,
-      "entry_count": 242,
+      "entry_count": 240,
       "fetched_urls": [
         "https://www.keiba.go.jp/KeibaWeb/MonthlyConveneInfo/MonthlyConveneInfoTop?k_year=2026&k_month=11",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F13&k_babaCode=21",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F13&k_babaCode=22",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F13&k_babaCode=24",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F13&k_babaCode=27",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F14&k_babaCode=03",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F14&k_babaCode=31",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F14&k_babaCode=32",
@@ -915,6 +918,11 @@
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F28&k_babaCode=03",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F28&k_babaCode=31",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F28&k_babaCode=32",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=03",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=11",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=22",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=31",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=32",
         "https://www.keiba.go.jp/KeibaWeb/MonthlyConveneInfo/MonthlyConveneInfoTop?k_year=2026&k_month=12"
       ],
       "warnings": [],
@@ -923,12 +931,11 @@
     {
       "sport": "jra",
       "ok": false,
-      "attempts": 79,
-      "success_count": 6,
+      "attempts": 80,
+      "success_count": 7,
       "failure_count": 73,
-      "entry_count": 14,
+      "entry_count": 16,
       "fetched_urls": [
-        "https://www.jra.go.jp/keiba/calendar2026/2026/11/1113.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1114.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1115.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1116.html",
@@ -944,6 +951,7 @@
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1126.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1127.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1128.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/11/1129.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0817.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0818.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/8/0819.html",
@@ -1005,11 +1013,12 @@
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1110.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1111.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1112.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/11/1113.html",
         "https://www.jra.go.jp/keiba/calendar2026/nov.html",
         "https://www.jra.go.jp/keiba/calendar2026/dec.html"
       ],
       "warnings": [],
-      "error": "403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1113.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1116.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1117.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1118.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1119.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1120.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1124.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1125.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1126.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1127.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0817.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0818.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0819.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0820.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0821.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0824.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0825.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0826.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0827.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0828.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0831.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0901.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0902.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0903.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0904.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0907.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0908.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0909.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0910.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0911.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0914.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0915.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0916.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0917.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0918.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0923.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0924.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0925.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0928.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0929.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0930.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1001.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1002.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1005.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1006.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1007.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1008.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1009.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1013.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1014.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1015.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1016.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1019.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1020.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1021.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1022.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1023.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1026.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1027.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1028.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1029.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1030.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1102.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1103.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1104.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1105.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1106.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1109.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1110.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1111.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1112.html / JRA月間開催日程を確認できませんでした"
+      "error": "403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1116.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1117.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1118.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1119.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1120.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1124.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1125.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1126.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1127.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0817.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0818.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0819.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0820.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0821.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0824.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0825.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0826.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0827.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0828.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/8/0831.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0901.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0902.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0903.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0904.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0907.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0908.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0909.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0910.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0911.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0914.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0915.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0916.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0917.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0918.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0923.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0924.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0925.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0928.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0929.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/9/0930.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1001.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1002.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1005.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1006.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1007.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1008.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1009.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1013.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1014.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1015.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1016.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1019.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1020.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1021.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1022.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1023.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1026.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1027.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1028.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1029.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/10/1030.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1102.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1103.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1104.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1105.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1106.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1109.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1110.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1111.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1112.html / 403 Client Error: Forbidden for url: https://www.jra.go.jp/keiba/calendar2026/2026/11/1113.html / JRA月間開催日程を確認できませんでした"
     }
   ]
 }

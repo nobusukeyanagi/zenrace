@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-14T06:42:54.774260+09:00",
-  "base_date": "2026-11-14",
+  "generated_at": "2026-11-15T05:12:27.217281+09:00",
+  "base_date": "2026-11-15",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-12-31",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 9,
+  "updated_count": 10,
   "registered_only_count": 3,
   "duplicate_count": 0,
   "additions": [],
@@ -110,7 +110,7 @@
         "venue": "京都",
         "grade": "GⅡ",
         "name": "デイリー杯2歳S",
-        "winner": ""
+        "winner": "ブラッドバローズ"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-14:デイリー杯2歳s"
@@ -134,7 +134,7 @@
         "venue": "東京",
         "grade": "GⅢ",
         "name": "武蔵野S",
-        "winner": ""
+        "winner": "ルヴァレドクール"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-14:武蔵野s"
@@ -234,6 +234,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-23:東スポ杯2歳s"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-11-28",
+        "time": "15:40",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GIII",
+        "name": "京都2歳S",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-28",
+        "time": "15:40",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GⅢ",
+        "name": "京都2歳S",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-11-28:京都2歳s"
     }
   ],
   "registered_only": [

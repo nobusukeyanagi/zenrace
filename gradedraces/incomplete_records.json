@@ -1,19 +1,9 @@
 {
-  "generated_at": "2026-11-14T06:46:27.198673+09:00",
-  "center_date": "2026-11-14",
-  "past_unresolved_count": 17,
-  "upcoming_missing_time_count": 17,
+  "generated_at": "2026-11-15T05:16:04.212030+09:00",
+  "center_date": "2026-11-15",
+  "past_unresolved_count": 16,
+  "upcoming_missing_time_count": 24,
   "past_unresolved": [
-    {
-      "date": "2026-08-16",
-      "sport": "auto",
-      "venue": "伊勢崎",
-      "grade": "SG",
-      "name": "オートレースグランプリ",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-08-20",
       "sport": "nar",
@@ -347,6 +337,76 @@
       "venue": "三国",
       "grade": "GⅢ",
       "name": "スズキ・カープラザカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "sport": "jra",
+      "venue": "東京",
+      "grade": "GI",
+      "name": "ジャパンC",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "sport": "nar",
+      "venue": "佐賀",
+      "grade": "",
+      "name": "鳥栖大賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "sport": "nar",
+      "venue": "帯広",
+      "grade": "BG1",
+      "name": "ばんえいオークス",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "sport": "nar",
+      "venue": "水沢",
+      "grade": "M3",
+      "name": "寒菊賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "sport": "nar",
+      "venue": "金沢",
+      "grade": "",
+      "name": "徽軫賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "sport": "boat",
+      "venue": "常滑",
+      "grade": "SG",
+      "name": "チャレンジカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "sport": "boat",
+      "venue": "常滑",
+      "grade": "GⅡ",
+      "name": "レディースチャレンジカップ",
       "missing": [
         "time"
       ]

@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-11-14T06:46:27.198154+09:00",
-  "center_date": "2026-11-14",
+  "generated_at": "2026-11-15T05:16:04.211467+09:00",
+  "center_date": "2026-11-15",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 17,
-    "upcoming": 27
+    "unresolved": 16,
+    "recent_verification": 2,
+    "upcoming": 33
   },
-  "target_count": 44,
-  "change_count": 12,
+  "target_count": 51,
+  "change_count": 13,
   "changes": [
     {
       "date": "2026-09-05",
@@ -102,7 +103,7 @@
         "venue": "東京",
         "grade": "GⅢ",
         "name": "武蔵野S",
-        "winner": ""
+        "winner": "ルヴァレドクール"
       },
       "after": {
         "date": "2026-11-14",
@@ -111,7 +112,7 @@
         "venue": "東京",
         "grade": "GIII",
         "name": "武蔵野S",
-        "winner": ""
+        "winner": "ルヴァレドクール"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -129,7 +130,7 @@
         "venue": "京都",
         "grade": "GⅡ",
         "name": "デイリー杯2歳S",
-        "winner": ""
+        "winner": "ブラッドバローズ"
       },
       "after": {
         "date": "2026-11-14",
@@ -138,7 +139,7 @@
         "venue": "京都",
         "grade": "GII",
         "name": "デイリー杯2歳S",
-        "winner": ""
+        "winner": "ブラッドバローズ"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -259,37 +260,10 @@
       "name": "京都2歳S",
       "before": {
         "date": "2026-11-28",
-        "time": "",
+        "time": "15:40",
         "sport": "jra",
         "venue": "京都",
         "grade": "GⅢ",
-        "name": "京都2歳S",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-11-28",
-        "time": "",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GIII",
-        "name": "京都2歳S",
-        "winner": ""
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-11-28",
-      "sport": "jra",
-      "venue": "京都",
-      "name": "京都2歳S",
-      "before": {
-        "date": "2026-11-28",
-        "time": "",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GIII",
         "name": "京都2歳S",
         "winner": ""
       },
@@ -303,35 +277,89 @@
         "winner": ""
       },
       "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/11/1128.html",
-      "note": "JRA競馬番組"
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-11-15",
-      "sport": "nar",
-      "venue": "水沢",
-      "name": "南部駒賞",
+      "date": "2026-11-29",
+      "sport": "jra",
+      "venue": "東京",
+      "name": "ジャパンC",
       "before": {
-        "date": "2026-11-15",
+        "date": "2026-11-29",
         "time": "",
-        "sport": "nar",
-        "venue": "水沢",
-        "grade": "M1",
-        "name": "南部駒賞",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GⅠ",
+        "name": "ジャパンC",
         "winner": ""
       },
       "after": {
-        "date": "2026-11-15",
-        "time": "18:05",
-        "sport": "nar",
-        "venue": "水沢",
-        "grade": "M1",
-        "name": "南部駒賞",
+        "date": "2026-11-29",
+        "time": "",
+        "sport": "jra",
+        "venue": "東京",
+        "grade": "GI",
+        "name": "ジャパンC",
         "winner": ""
       },
-      "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F15&k_babaCode=11",
-      "note": "地方競馬公式レース情報"
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-11-29",
+      "sport": "jra",
+      "venue": "京都",
+      "name": "京阪杯",
+      "before": {
+        "date": "2026-11-29",
+        "time": "",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GⅢ",
+        "name": "京阪杯",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-29",
+        "time": "",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GIII",
+        "name": "京阪杯",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-11-29",
+      "sport": "jra",
+      "venue": "京都",
+      "name": "京阪杯",
+      "before": {
+        "date": "2026-11-29",
+        "time": "",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GIII",
+        "name": "京阪杯",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-29",
+        "time": "16:15",
+        "sport": "jra",
+        "venue": "京都",
+        "grade": "GIII",
+        "name": "京阪杯",
+        "winner": ""
+      },
+      "source": "JRA",
+      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/11/1129.html",
+      "note": "JRA競馬番組"
     }
   ]
 }

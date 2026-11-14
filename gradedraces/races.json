@@ -5262,7 +5262,7 @@
     "venue": "京都",
     "grade": "GII",
     "name": "デイリー杯2歳S",
-    "winner": ""
+    "winner": "ブラッドバローズ"
   },
   {
     "date": "2026-11-14",
@@ -5271,7 +5271,7 @@
     "venue": "東京",
     "grade": "GIII",
     "name": "武蔵野S",
-    "winner": ""
+    "winner": "ルヴァレドクール"
   },
   {
     "date": "2026-11-15",
@@ -5500,10 +5500,10 @@
   },
   {
     "date": "2026-11-29",
-    "time": "",
+    "time": "16:15",
     "sport": "jra",
     "venue": "京都",
-    "grade": "GⅢ",
+    "grade": "GIII",
     "name": "京阪杯",
     "winner": ""
   },
@@ -5512,7 +5512,7 @@
     "time": "",
     "sport": "jra",
     "venue": "東京",
-    "grade": "GⅠ",
+    "grade": "GI",
     "name": "ジャパンC",
     "winner": ""
   },
