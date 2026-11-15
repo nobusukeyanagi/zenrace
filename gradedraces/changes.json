@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-15T05:16:04.211467+09:00",
-  "center_date": "2026-11-15",
+  "generated_at": "2026-11-16T05:42:38.501998+09:00",
+  "center_date": "2026-11-16",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 16,
-    "recent_verification": 2,
-    "upcoming": 33
+    "unresolved": 20,
+    "recent_verification": 5,
+    "upcoming": 28
   },
-  "target_count": 51,
-  "change_count": 13,
+  "target_count": 49,
+  "change_count": 15,
   "changes": [
     {
       "date": "2026-09-05",
@@ -92,60 +92,6 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-11-14",
-      "sport": "jra",
-      "venue": "東京",
-      "name": "武蔵野S",
-      "before": {
-        "date": "2026-11-14",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GⅢ",
-        "name": "武蔵野S",
-        "winner": "ルヴァレドクール"
-      },
-      "after": {
-        "date": "2026-11-14",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GIII",
-        "name": "武蔵野S",
-        "winner": "ルヴァレドクール"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-11-14",
-      "sport": "jra",
-      "venue": "京都",
-      "name": "デイリー杯2歳S",
-      "before": {
-        "date": "2026-11-14",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GⅡ",
-        "name": "デイリー杯2歳S",
-        "winner": "ブラッドバローズ"
-      },
-      "after": {
-        "date": "2026-11-14",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GII",
-        "name": "デイリー杯2歳S",
-        "winner": "ブラッドバローズ"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
       "date": "2026-11-15",
       "sport": "jra",
       "venue": "京都",
@@ -157,7 +103,7 @@
         "venue": "京都",
         "grade": "GⅠ",
         "name": "エリザベス女王杯",
-        "winner": ""
+        "winner": "ラフターラインズ"
       },
       "after": {
         "date": "2026-11-15",
@@ -166,7 +112,7 @@
         "venue": "京都",
         "grade": "GI",
         "name": "エリザベス女王杯",
-        "winner": ""
+        "winner": "ラフターラインズ"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -314,37 +260,10 @@
       "name": "京阪杯",
       "before": {
         "date": "2026-11-29",
-        "time": "",
+        "time": "16:15",
         "sport": "jra",
         "venue": "京都",
         "grade": "GⅢ",
-        "name": "京阪杯",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-11-29",
-        "time": "",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GIII",
-        "name": "京阪杯",
-        "winner": ""
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
-      "date": "2026-11-29",
-      "sport": "jra",
-      "venue": "京都",
-      "name": "京阪杯",
-      "before": {
-        "date": "2026-11-29",
-        "time": "",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GIII",
         "name": "京阪杯",
         "winner": ""
       },
@@ -358,8 +277,143 @@
         "winner": ""
       },
       "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/keiba/calendar2026/2026/11/1129.html",
-      "note": "JRA競馬番組"
+      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-11-15",
+      "sport": "nar",
+      "venue": "佐賀",
+      "name": "ウインターチャンピオン",
+      "before": {
+        "date": "2026-11-15",
+        "time": "17:25",
+        "sport": "nar",
+        "venue": "佐賀",
+        "grade": "",
+        "name": "ウインターチャンピオン",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-15",
+        "time": "17:25",
+        "sport": "nar",
+        "venue": "佐賀",
+        "grade": "",
+        "name": "ウインターチャンピオン",
+        "winner": "アメストリス"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F15&k_babaCode=32",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-15",
+      "sport": "nar",
+      "venue": "水沢",
+      "name": "南部駒賞",
+      "before": {
+        "date": "2026-11-15",
+        "time": "18:05",
+        "sport": "nar",
+        "venue": "水沢",
+        "grade": "M1",
+        "name": "南部駒賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-15",
+        "time": "18:05",
+        "sport": "nar",
+        "venue": "水沢",
+        "grade": "M1",
+        "name": "南部駒賞",
+        "winner": "エイシンフロイデ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F15&k_babaCode=11",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-15",
+      "sport": "nar",
+      "venue": "金沢",
+      "name": "北國王冠",
+      "before": {
+        "date": "2026-11-15",
+        "time": "18:15",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "北國王冠",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-15",
+        "time": "18:15",
+        "sport": "nar",
+        "venue": "金沢",
+        "grade": "",
+        "name": "北國王冠",
+        "winner": "エイシンレオ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F15&k_babaCode=22",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-18",
+      "sport": "nar",
+      "venue": "大井",
+      "name": "ハイセイコー記念",
+      "before": {
+        "date": "2026-11-18",
+        "time": "",
+        "sport": "nar",
+        "venue": "大井",
+        "grade": "SⅠ",
+        "name": "ハイセイコー記念",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-18",
+        "time": "20:10",
+        "sport": "nar",
+        "venue": "大井",
+        "grade": "SⅠ",
+        "name": "ハイセイコー記念",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F18&k_babaCode=20",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-16",
+      "sport": "boat",
+      "venue": "大村",
+      "name": "",
+      "before": {
+        "date": "2026-11-16",
+        "time": "",
+        "sport": "boat",
+        "venue": "大村",
+        "grade": "GⅢ",
+        "name": "",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-16",
+        "time": "20:38",
+        "sport": "boat",
+        "venue": "大村",
+        "grade": "GⅢ",
+        "name": "",
+        "winner": ""
+      },
+      "source": "ボートレース",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=24&hd=20261116&rno=12",
+      "note": "BOAT RACE公式12R結果"
     }
   ]
 }

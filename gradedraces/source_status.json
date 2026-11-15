@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-15T05:16:04.211487+09:00",
+  "generated_at": "2026-11-16T05:42:38.502017+09:00",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 16,
-    "recent_verification": 2,
-    "upcoming": 33
+    "unresolved": 20,
+    "recent_verification": 5,
+    "upcoming": 28
   },
   "sources": [
     {
       "name": "JRA",
       "ok": true,
-      "patch_count": 22,
+      "patch_count": 18,
       "fetched_urls": [
         "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/9/0905.html",
@@ -19,8 +19,6 @@
         "https://www.jra.go.jp/keiba/calendar2026/2026/10/1010.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/10/1018.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1107.html",
-        "https://www.jra.go.jp/keiba/calendar2026/2026/11/1114.html",
-        "https://www.jra.go.jp/keiba/calendar2026/2026/11/1114.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1115.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1121.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1122.html",
@@ -35,7 +33,7 @@
     {
       "name": "地方競馬",
       "ok": true,
-      "patch_count": 6,
+      "patch_count": 7,
       "fetched_urls": [
         "https://www.keiba.go.jp/gradedrace/schedule.html",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F08%2F20&k_babaCode=36",
@@ -45,9 +43,7 @@
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F10%2F25&k_babaCode=22",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=22&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F15&k_babaCode=32",
-        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=32&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F15&k_babaCode=11",
-        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=11&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F15&k_babaCode=22",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F17&k_babaCode=22",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F18&k_babaCode=20",
@@ -57,6 +53,7 @@
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F22&k_babaCode=03",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=03&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F23&k_babaCode=11",
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=11&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F23&k_babaCode=22",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F25&k_babaCode=18",
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=18&k_nenndo=2026",
@@ -66,6 +63,7 @@
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=27&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F26&k_babaCode=18",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=32",
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=32&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=03",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=11",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=22"
@@ -78,12 +76,12 @@
     {
       "name": "ボートレース",
       "ok": true,
-      "patch_count": 0,
+      "patch_count": 1,
       "fetched_urls": [
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=01",
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=02",
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=03",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=24&hd=20261116",
+        "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=24&hd=20261116&rno=12",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=11&hd=20261119",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=15&hd=20261120",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=02&hd=20261123",
