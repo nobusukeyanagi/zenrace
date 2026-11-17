@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-16T05:38:57.532419+09:00",
-  "base_date": "2026-11-16",
+  "generated_at": "2026-11-17T08:53:52.870925+09:00",
+  "base_date": "2026-11-17",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-12-31",
   "added_count": 0,
   "deferred_addition_count": 0,
-  "updated_count": 12,
+  "updated_count": 10,
   "registered_only_count": 3,
   "duplicate_count": 0,
   "additions": [],
@@ -95,61 +95,13 @@
       "type": "master_updated",
       "match_type": "exact",
       "before": {
-        "date": "2026-11-14",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GII",
-        "name": "デイリー杯2歳S",
-        "winner": "ブラッドバローズ"
-      },
-      "after": {
-        "date": "2026-11-14",
-        "time": "15:45",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GⅡ",
-        "name": "デイリー杯2歳S",
-        "winner": "ブラッドバローズ"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-11-14:デイリー杯2歳s"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
-        "date": "2026-11-14",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GIII",
-        "name": "武蔵野S",
-        "winner": "ルヴァレドクール"
-      },
-      "after": {
-        "date": "2026-11-14",
-        "time": "16:10",
-        "sport": "jra",
-        "venue": "東京",
-        "grade": "GⅢ",
-        "name": "武蔵野S",
-        "winner": "ルヴァレドクール"
-      },
-      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "source_id": "jra:2026:2026-11-14:武蔵野s"
-    },
-    {
-      "type": "master_updated",
-      "match_type": "exact",
-      "before": {
         "date": "2026-11-15",
         "time": "14:35",
         "sport": "jra",
         "venue": "京都",
         "grade": "GI",
         "name": "エリザベス女王杯",
-        "winner": ""
+        "winner": "ラフターラインズ"
       },
       "after": {
         "date": "2026-11-15",
