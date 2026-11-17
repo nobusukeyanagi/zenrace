@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-17T08:57:21.951944+09:00",
+  "generated_at": "2026-11-18T08:17:28.395333+09:00",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 18,
     "recent_verification": 1,
-    "upcoming": 27
+    "upcoming": 28
   },
   "sources": [
     {
@@ -62,7 +62,8 @@
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=32&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=03",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=11",
-        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=22"
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F29&k_babaCode=22",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F12%2F02&k_babaCode=20"
       ],
       "warnings": [
         "地方競馬重賞一覧の本文を十分に確認できませんでした。個別レース情報の取得は継続します。"
@@ -72,17 +73,17 @@
     {
       "name": "ボートレース",
       "ok": true,
-      "patch_count": 1,
+      "patch_count": 0,
       "fetched_urls": [
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=01",
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=02",
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=03",
-        "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=24&hd=20261116&rno=12",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=11&hd=20261119",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=15&hd=20261120",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=02&hd=20261123",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=10&hd=20261126",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=08&hd=20261129"
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=08&hd=20261129",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=13&hd=20261202"
       ],
       "warnings": [],
       "error": ""

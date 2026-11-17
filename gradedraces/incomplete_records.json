@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-17T08:57:21.952337+09:00",
-  "center_date": "2026-11-17",
+  "generated_at": "2026-11-18T08:17:28.395868+09:00",
+  "center_date": "2026-11-18",
   "past_unresolved_count": 17,
-  "upcoming_missing_time_count": 20,
+  "upcoming_missing_time_count": 22,
   "past_unresolved": [
     {
       "date": "2026-08-20",
@@ -378,6 +378,26 @@
       "venue": "常滑",
       "grade": "GⅡ",
       "name": "レディースチャレンジカップ",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-12-02",
+      "sport": "nar",
+      "venue": "大井",
+      "grade": "SⅡ",
+      "name": "勝島王冠",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-12-02",
+      "sport": "boat",
+      "venue": "尼崎",
+      "grade": "GⅢ",
+      "name": "",
       "missing": [
         "time"
       ]

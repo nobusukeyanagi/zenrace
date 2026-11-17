@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-17T08:57:21.951928+09:00",
-  "center_date": "2026-11-17",
+  "generated_at": "2026-11-18T08:17:28.395317+09:00",
+  "center_date": "2026-11-18",
   "selection_mode": "smart",
   "selection_counts": {
     "unresolved": 18,
     "recent_verification": 1,
-    "upcoming": 27
+    "upcoming": 28
   },
-  "target_count": 45,
-  "change_count": 11,
+  "target_count": 46,
+  "change_count": 10,
   "changes": [
     {
       "date": "2026-09-05",
@@ -254,58 +254,31 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-11-19",
+      "date": "2026-11-17",
       "sport": "nar",
-      "venue": "笠松",
-      "name": "笠松グランプリ",
+      "venue": "金沢",
+      "name": "金沢ヤングチャンピオン",
       "before": {
-        "date": "2026-11-19",
-        "time": "",
+        "date": "2026-11-17",
+        "time": "20:00",
         "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅠ",
-        "name": "笠松グランプリ",
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢ヤングチャンピオン",
         "winner": ""
       },
       "after": {
-        "date": "2026-11-19",
-        "time": "15:45",
+        "date": "2026-11-17",
+        "time": "20:00",
         "sport": "nar",
-        "venue": "笠松",
-        "grade": "SPⅠ",
-        "name": "笠松グランプリ",
-        "winner": ""
+        "venue": "金沢",
+        "grade": "",
+        "name": "金沢ヤングチャンピオン",
+        "winner": "ハジマリノアイズ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F19&k_babaCode=23",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F17&k_babaCode=22",
       "note": "地方競馬公式レース情報"
-    },
-    {
-      "date": "2026-11-16",
-      "sport": "boat",
-      "venue": "大村",
-      "name": "",
-      "before": {
-        "date": "2026-11-16",
-        "time": "20:38",
-        "sport": "boat",
-        "venue": "大村",
-        "grade": "GⅢ",
-        "name": "",
-        "winner": ""
-      },
-      "after": {
-        "date": "2026-11-16",
-        "time": "20:38",
-        "sport": "boat",
-        "venue": "大村",
-        "grade": "GⅢ",
-        "name": "",
-        "winner": "白神 優"
-      },
-      "source": "ボートレース",
-      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=24&hd=20261116&rno=12",
-      "note": "BOAT RACE公式12R結果"
     }
   ]
 }
