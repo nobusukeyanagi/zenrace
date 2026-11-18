@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-18T08:17:28.395317+09:00",
-  "center_date": "2026-11-18",
+  "generated_at": "2026-11-19T07:48:34.268948+09:00",
+  "center_date": "2026-11-19",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 18,
+    "unresolved": 17,
     "recent_verification": 1,
     "upcoming": 28
   },
-  "target_count": 46,
-  "change_count": 10,
+  "target_count": 45,
+  "change_count": 11,
   "changes": [
     {
       "date": "2026-09-05",
@@ -254,31 +254,58 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-11-17",
+      "date": "2026-11-18",
       "sport": "nar",
-      "venue": "金沢",
-      "name": "金沢ヤングチャンピオン",
+      "venue": "大井",
+      "name": "ハイセイコー記念",
       "before": {
-        "date": "2026-11-17",
-        "time": "20:00",
+        "date": "2026-11-18",
+        "time": "20:10",
         "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "金沢ヤングチャンピオン",
+        "venue": "大井",
+        "grade": "SⅠ",
+        "name": "ハイセイコー記念",
         "winner": ""
       },
       "after": {
-        "date": "2026-11-17",
-        "time": "20:00",
+        "date": "2026-11-18",
+        "time": "20:10",
         "sport": "nar",
-        "venue": "金沢",
-        "grade": "",
-        "name": "金沢ヤングチャンピオン",
-        "winner": "ハジマリノアイズ"
+        "venue": "大井",
+        "grade": "SⅠ",
+        "name": "ハイセイコー記念",
+        "winner": "ケテンパッション"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F17&k_babaCode=22",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F18&k_babaCode=20",
       "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-19",
+      "sport": "boat",
+      "venue": "びわこ",
+      "name": "びわこ大賞",
+      "before": {
+        "date": "2026-11-19",
+        "time": "",
+        "sport": "boat",
+        "venue": "びわこ",
+        "grade": "GⅠ",
+        "name": "びわこ大賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-19",
+        "time": "16:10",
+        "sport": "boat",
+        "venue": "びわこ",
+        "grade": "GⅠ",
+        "name": "びわこ大賞",
+        "winner": ""
+      },
+      "source": "ボートレース",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=11&hd=20261119&rno=12",
+      "note": "BOAT RACE公式12R結果"
     }
   ]
 }

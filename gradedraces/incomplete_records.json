@@ -1,20 +1,9 @@
 {
-  "generated_at": "2026-11-18T08:17:28.395868+09:00",
-  "center_date": "2026-11-18",
-  "past_unresolved_count": 17,
+  "generated_at": "2026-11-19T07:48:34.269348+09:00",
+  "center_date": "2026-11-19",
+  "past_unresolved_count": 16,
   "upcoming_missing_time_count": 22,
   "past_unresolved": [
-    {
-      "date": "2026-08-20",
-      "sport": "nar",
-      "venue": "門別",
-      "grade": "H2",
-      "name": "ブリーダーズゴールドジュニアカップ",
-      "missing": [
-        "time",
-        "winner"
-      ]
-    },
     {
       "date": "2026-08-25",
       "sport": "auto",
@@ -182,16 +171,6 @@
     }
   ],
   "upcoming_missing_time": [
-    {
-      "date": "2026-11-19",
-      "sport": "boat",
-      "venue": "びわこ",
-      "grade": "GⅠ",
-      "name": "びわこ大賞",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-11-20",
       "sport": "boat",
@@ -398,6 +377,16 @@
       "venue": "尼崎",
       "grade": "GⅢ",
       "name": "",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-12-03",
+      "sport": "nar",
+      "venue": "大井",
+      "grade": "SⅢ",
+      "name": "ジェムストーン賞",
       "missing": [
         "time"
       ]
