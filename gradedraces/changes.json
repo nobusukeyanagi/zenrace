@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-19T07:48:34.268948+09:00",
-  "center_date": "2026-11-19",
+  "generated_at": "2026-11-20T07:52:32.185652+09:00",
+  "center_date": "2026-11-20",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 17,
-    "recent_verification": 1,
-    "upcoming": 28
+    "unresolved": 18,
+    "recent_verification": 2,
+    "upcoming": 27
   },
   "target_count": 45,
-  "change_count": 11,
+  "change_count": 12,
   "changes": [
     {
       "date": "2026-09-05",
@@ -254,30 +254,30 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-11-18",
+      "date": "2026-11-19",
       "sport": "nar",
-      "venue": "大井",
-      "name": "ハイセイコー記念",
+      "venue": "笠松",
+      "name": "笠松グランプリ",
       "before": {
-        "date": "2026-11-18",
-        "time": "20:10",
+        "date": "2026-11-19",
+        "time": "15:45",
         "sport": "nar",
-        "venue": "大井",
-        "grade": "SⅠ",
-        "name": "ハイセイコー記念",
+        "venue": "笠松",
+        "grade": "SPⅠ",
+        "name": "笠松グランプリ",
         "winner": ""
       },
       "after": {
-        "date": "2026-11-18",
-        "time": "20:10",
+        "date": "2026-11-19",
+        "time": "15:45",
         "sport": "nar",
-        "venue": "大井",
-        "grade": "SⅠ",
-        "name": "ハイセイコー記念",
-        "winner": "ケテンパッション"
+        "venue": "笠松",
+        "grade": "SPⅠ",
+        "name": "笠松グランプリ",
+        "winner": "チカッパ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F18&k_babaCode=20",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F19&k_babaCode=23",
       "note": "地方競馬公式レース情報"
     },
     {
@@ -287,7 +287,7 @@
       "name": "びわこ大賞",
       "before": {
         "date": "2026-11-19",
-        "time": "",
+        "time": "16:10",
         "sport": "boat",
         "venue": "びわこ",
         "grade": "GⅠ",
@@ -301,10 +301,37 @@
         "venue": "びわこ",
         "grade": "GⅠ",
         "name": "びわこ大賞",
-        "winner": ""
+        "winner": "宮地 元輝"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=11&hd=20261119&rno=12",
+      "note": "BOAT RACE公式12R結果"
+    },
+    {
+      "date": "2026-11-20",
+      "sport": "boat",
+      "venue": "丸亀",
+      "name": "京極賞",
+      "before": {
+        "date": "2026-11-20",
+        "time": "",
+        "sport": "boat",
+        "venue": "丸亀",
+        "grade": "GⅠ",
+        "name": "京極賞",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-20",
+        "time": "20:45",
+        "sport": "boat",
+        "venue": "丸亀",
+        "grade": "GⅠ",
+        "name": "京極賞",
+        "winner": ""
+      },
+      "source": "ボートレース",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=15&hd=20261120&rno=12",
       "note": "BOAT RACE公式12R結果"
     }
   ]

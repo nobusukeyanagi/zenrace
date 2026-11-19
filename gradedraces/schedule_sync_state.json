@@ -17,8 +17,8 @@
     },
     "https://keirin.jp/pc/graderaceschedule?scyy=2027": {
       "source": "KEIRIN.JP公式グレード日程",
-      "content_hash": "59de93705b3bff6c1d8a158d9c525d403bee638587c4d9e09317da66e5939bc1",
-      "last_changed_at": "2026-11-19T07:45:08.524543+09:00"
+      "content_hash": "ebbc8726ac4d9a497c2297d755ec626ed4101264a89e8150d003ef6883b937b1",
+      "last_changed_at": "2026-11-20T07:48:54.863595+09:00"
     },
     "https://www.keiba.go.jp/maintenance/20261021.html": {
       "source": "地方競馬公式重賞一覧",
