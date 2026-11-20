@@ -5370,7 +5370,7 @@
     "venue": "丸亀",
     "grade": "GⅠ",
     "name": "京極賞",
-    "winner": ""
+    "winner": "峰 竜太"
   },
   {
     "date": "2026-11-21",
@@ -5392,11 +5392,29 @@
   },
   {
     "date": "2026-11-22",
-    "time": "",
+    "time": "19:30",
     "sport": "nar",
     "venue": "帯広",
     "grade": "BG3",
     "name": "ドリームエイジカップ",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-23",
+    "time": "18:05",
+    "sport": "nar",
+    "venue": "水沢",
+    "grade": "M2",
+    "name": "トウケイニセイ記念",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-23",
+    "time": "18:15",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "",
+    "name": "MRO金賞",
     "winner": ""
   },
   {
@@ -5406,24 +5424,6 @@
     "venue": "東京",
     "grade": "GII",
     "name": "東スポ杯2歳S",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-23",
-    "time": "",
-    "sport": "nar",
-    "venue": "水沢",
-    "grade": "M2",
-    "name": "トウケイニセイ記念",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-23",
-    "time": "",
-    "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "MRO金賞",
     "winner": ""
   },
   {
@@ -5608,20 +5608,20 @@
   },
   {
     "date": "2026-12-05",
-    "time": "",
+    "time": "15:15",
     "sport": "jra",
-    "venue": "中山",
-    "grade": "GⅡ",
-    "name": "ステイヤーズS",
+    "venue": "阪神",
+    "grade": "GIII",
+    "name": "鳴尾記念",
     "winner": ""
   },
   {
     "date": "2026-12-05",
-    "time": "",
+    "time": "16:20",
     "sport": "jra",
-    "venue": "阪神",
-    "grade": "GⅢ",
-    "name": "鳴尾記念",
+    "venue": "中山",
+    "grade": "GII",
+    "name": "ステイヤーズS",
     "winner": ""
   },
   {
