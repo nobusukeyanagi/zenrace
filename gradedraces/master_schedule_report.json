@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-21T07:25:36.229773+09:00",
-  "base_date": "2026-11-21",
+  "generated_at": "2026-11-22T06:16:18.767749+09:00",
+  "base_date": "2026-11-22",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-12-31",
   "added_count": 0,
   "deferred_addition_count": 141,
-  "updated_count": 9,
+  "updated_count": 11,
   "registered_only_count": 0,
   "duplicate_count": 0,
   "additions": [],
@@ -1662,7 +1662,7 @@
         "venue": "福島",
         "grade": "GⅢ",
         "name": "福島記念",
-        "winner": ""
+        "winner": "マリアイリダータ"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-21:福島記念"
@@ -1786,6 +1786,54 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-29:ジャパンc"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-12-05",
+        "time": "16:20",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GII",
+        "name": "ステイヤーズS",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-12-05",
+        "time": "16:20",
+        "sport": "jra",
+        "venue": "中山",
+        "grade": "GⅡ",
+        "name": "ステイヤーズS",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-12-05:ステイヤーズs"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-12-05",
+        "time": "15:15",
+        "sport": "jra",
+        "venue": "阪神",
+        "grade": "GIII",
+        "name": "鳴尾記念",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-12-05",
+        "time": "15:15",
+        "sport": "jra",
+        "venue": "阪神",
+        "grade": "GⅢ",
+        "name": "鳴尾記念",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-12-05:鳴尾記念"
     }
   ],
   "registered_only": [],

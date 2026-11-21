@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-21T07:29:02.630351+09:00",
+  "generated_at": "2026-11-22T06:19:46.119533+09:00",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 17,
+    "unresolved": 16,
     "recent_verification": 1,
-    "upcoming": 28
+    "upcoming": 31
   },
   "sources": [
     {
       "name": "JRA",
       "ok": true,
-      "patch_count": 20,
+      "patch_count": 21,
       "fetched_urls": [
         "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/9/0905.html",
@@ -26,7 +26,8 @@
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1129.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/11/1129.html",
         "https://www.jra.go.jp/keiba/calendar2026/2026/12/1205.html",
-        "https://www.jra.go.jp/keiba/calendar2026/2026/12/1205.html"
+        "https://www.jra.go.jp/keiba/calendar2026/2026/12/1205.html",
+        "https://www.jra.go.jp/keiba/calendar2026/2026/12/1206.html"
       ],
       "warnings": [],
       "error": ""
@@ -62,7 +63,8 @@
         "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=20&k_nenndo=2026",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F12%2F03&k_babaCode=20",
         "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F12%2F04&k_babaCode=23",
-        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=23&k_nenndo=2026"
+        "https://www.keiba.go.jp/KeibaWeb/DataRoom/JyusyoRaceWinhorse?k_babaCode=23&k_nenndo=2026",
+        "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F12%2F06&k_babaCode=32"
       ],
       "warnings": [
         "地方競馬重賞一覧の本文を十分に確認できませんでした。個別レース情報の取得は継続します。"
@@ -72,16 +74,16 @@
     {
       "name": "ボートレース",
       "ok": true,
-      "patch_count": 1,
+      "patch_count": 0,
       "fetched_urls": [
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=01",
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=02",
         "https://www.boatrace.jp/owpc/pc/race/gradesch?hcd=03",
-        "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=15&hd=20261120&rno=12",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=02&hd=20261123",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=10&hd=20261126",
         "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=08&hd=20261129",
-        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=13&hd=20261202"
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=13&hd=20261202",
+        "https://www.boatrace.jp/owpc/pc/race/raceindex?jcd=11&hd=20261206"
       ],
       "warnings": [],
       "error": ""
@@ -102,7 +104,8 @@
         "2026-11-08 四日市: 発走時刻取得を見送り (403 Client Error: Forbidden for url: https://www.oddspark.com/keirin/RaceList.do?joCode=48&kaisaiBi=20261108&raceNo=12)",
         "2026-11-15 立川: 公開結果取得を見送り (403 Client Error: Forbidden for url: https://www.oddspark.com/keirin/RaceKekka.do?joCode=28&kaisaiBi=20261115&raceNo=12)",
         "2026-11-15 立川: 発走時刻取得を見送り (403 Client Error: Forbidden for url: https://www.oddspark.com/keirin/RaceList.do?joCode=28&kaisaiBi=20261115&raceNo=12)",
-        "2026-11-23 小倉: 発走時刻取得を見送り (403 Client Error: Forbidden for url: https://www.oddspark.com/keirin/RaceList.do?joCode=81&kaisaiBi=20261123&raceNo=12)"
+        "2026-11-23 小倉: 発走時刻取得を見送り (403 Client Error: Forbidden for url: https://www.oddspark.com/keirin/RaceList.do?joCode=81&kaisaiBi=20261123&raceNo=12)",
+        "2026-12-06 別府: 発走時刻取得を見送り (403 Client Error: Forbidden for url: https://www.oddspark.com/keirin/RaceList.do?joCode=86&kaisaiBi=20261206&raceNo=12)"
       ],
       "error": ""
     },

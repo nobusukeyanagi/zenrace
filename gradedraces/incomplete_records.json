@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-21T07:29:02.630769+09:00",
-  "center_date": "2026-11-21",
+  "generated_at": "2026-11-22T06:19:46.119970+09:00",
+  "center_date": "2026-11-22",
   "past_unresolved_count": 16,
-  "upcoming_missing_time_count": 19,
+  "upcoming_missing_time_count": 23,
   "past_unresolved": [
     {
       "date": "2026-08-25",
@@ -357,6 +357,46 @@
       "venue": "笠松",
       "grade": "SPⅢ",
       "name": "レジェンドハンター記念",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-12-06",
+      "sport": "jra",
+      "venue": "中京",
+      "grade": "GI",
+      "name": "チャンピオンズC",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-12-06",
+      "sport": "nar",
+      "venue": "佐賀",
+      "grade": "",
+      "name": "フォーマルハウト賞",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-12-06",
+      "sport": "boat",
+      "venue": "びわこ",
+      "grade": "GⅢ",
+      "name": "オールレディース",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-12-06",
+      "sport": "keirin",
+      "venue": "別府",
+      "grade": "GP",
+      "name": "",
       "missing": [
         "time"
       ]
