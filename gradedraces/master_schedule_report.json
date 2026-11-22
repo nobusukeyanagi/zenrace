@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-22T06:16:18.767749+09:00",
-  "base_date": "2026-11-22",
+  "generated_at": "2026-11-23T06:22:08.485998+09:00",
+  "base_date": "2026-11-23",
   "calendar_years": [
     2026,
     2027
@@ -13,7 +13,7 @@
   "new_addition_end": "2026-12-31",
   "added_count": 0,
   "deferred_addition_count": 141,
-  "updated_count": 11,
+  "updated_count": 12,
   "registered_only_count": 0,
   "duplicate_count": 0,
   "additions": [],
@@ -1653,7 +1653,7 @@
         "venue": "福島",
         "grade": "GIII",
         "name": "福島記念",
-        "winner": ""
+        "winner": "マリアイリダータ"
       },
       "after": {
         "date": "2026-11-21",
@@ -1686,7 +1686,7 @@
         "venue": "京都",
         "grade": "GⅠ",
         "name": "マイルチャンピオンシップ",
-        "winner": ""
+        "winner": "エルデナリ"
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-11-22:マイルチャンピオンシップ"
@@ -1834,6 +1834,30 @@
       },
       "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "source_id": "jra:2026:2026-12-05:鳴尾記念"
+    },
+    {
+      "type": "master_updated",
+      "match_type": "exact",
+      "before": {
+        "date": "2026-12-06",
+        "time": "",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GI",
+        "name": "チャンピオンズC",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-12-06",
+        "time": "",
+        "sport": "jra",
+        "venue": "中京",
+        "grade": "GⅠ",
+        "name": "チャンピオンズC",
+        "winner": ""
+      },
+      "source_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
+      "source_id": "jra:2026:2026-12-06:チャンピオンズc"
     }
   ],
   "registered_only": [],
