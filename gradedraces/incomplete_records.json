@@ -1,19 +1,9 @@
 {
-  "generated_at": "2026-11-23T06:25:34.030307+09:00",
-  "center_date": "2026-11-23",
-  "past_unresolved_count": 16,
-  "upcoming_missing_time_count": 20,
+  "generated_at": "2026-11-24T11:43:32.792894+09:00",
+  "center_date": "2026-11-24",
+  "past_unresolved_count": 17,
+  "upcoming_missing_time_count": 18,
   "past_unresolved": [
-    {
-      "date": "2026-08-25",
-      "sport": "auto",
-      "venue": "飯塚",
-      "grade": "GⅠ",
-      "name": "ダイヤモンドレース",
-      "missing": [
-        "time"
-      ]
-    },
     {
       "date": "2026-09-05",
       "sport": "jra",
@@ -168,9 +158,7 @@
         "time",
         "winner"
       ]
-    }
-  ],
-  "upcoming_missing_time": [
+    },
     {
       "date": "2026-11-23",
       "sport": "jra",
@@ -188,29 +176,12 @@
       "grade": "GⅠ",
       "name": "朝日新聞社杯競輪祭・競輪祭女子王座戦",
       "missing": [
-        "time"
+        "time",
+        "winner"
       ]
-    },
-    {
-      "date": "2026-11-26",
-      "sport": "nar",
-      "venue": "名古屋",
-      "grade": "SPⅠ",
-      "name": "ゴールドウィング賞",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-26",
-      "sport": "nar",
-      "venue": "浦和",
-      "grade": "SⅢ",
-      "name": "サザンスタースプリント",
-      "missing": [
-        "time"
-      ]
-    },
+    }
+  ],
+  "upcoming_missing_time": [
     {
       "date": "2026-11-26",
       "sport": "boat",
@@ -367,6 +338,26 @@
       "venue": "別府",
       "grade": "GP",
       "name": "",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-12-08",
+      "sport": "nar",
+      "venue": "水沢",
+      "grade": "M2",
+      "name": "北上川大賞典",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-12-08",
+      "sport": "boat",
+      "venue": "徳山",
+      "grade": "GⅠ",
+      "name": "徳山クラウン争奪戦",
       "missing": [
         "time"
       ]

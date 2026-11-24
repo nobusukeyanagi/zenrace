@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T06:25:34.029776+09:00",
-  "center_date": "2026-11-23",
+  "generated_at": "2026-11-24T11:43:32.792340+09:00",
+  "center_date": "2026-11-24",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 17,
-    "recent_verification": 2,
-    "upcoming": 29
+    "unresolved": 20,
+    "recent_verification": 5,
+    "upcoming": 26
   },
-  "target_count": 47,
+  "target_count": 46,
   "change_count": 15,
   "changes": [
     {
@@ -92,33 +92,6 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-11-22",
-      "sport": "jra",
-      "venue": "京都",
-      "name": "マイルチャンピオンシップ",
-      "before": {
-        "date": "2026-11-22",
-        "time": "16:20",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GⅠ",
-        "name": "マイルチャンピオンシップ",
-        "winner": "エルデナリ"
-      },
-      "after": {
-        "date": "2026-11-22",
-        "time": "16:20",
-        "sport": "jra",
-        "venue": "京都",
-        "grade": "GI",
-        "name": "マイルチャンピオンシップ",
-        "winner": "エルデナリ"
-      },
-      "source": "JRA",
-      "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
-      "note": "JRA重賞一覧"
-    },
-    {
       "date": "2026-11-23",
       "sport": "jra",
       "venue": "東京",
@@ -130,7 +103,7 @@
         "venue": "東京",
         "grade": "GⅡ",
         "name": "東スポ杯2歳S",
-        "winner": ""
+        "winner": "オンユアマークス"
       },
       "after": {
         "date": "2026-11-23",
@@ -139,7 +112,7 @@
         "venue": "東京",
         "grade": "GII",
         "name": "東スポ杯2歳S",
-        "winner": ""
+        "winner": "オンユアマークス"
       },
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
@@ -308,84 +281,111 @@
       "note": "JRA重賞一覧"
     },
     {
-      "date": "2026-11-22",
+      "date": "2026-11-23",
       "sport": "nar",
-      "venue": "帯広",
-      "name": "ドリームエイジカップ",
+      "venue": "水沢",
+      "name": "トウケイニセイ記念",
       "before": {
-        "date": "2026-11-22",
-        "time": "19:30",
+        "date": "2026-11-23",
+        "time": "18:05",
         "sport": "nar",
-        "venue": "帯広",
-        "grade": "BG3",
-        "name": "ドリームエイジカップ",
+        "venue": "水沢",
+        "grade": "M2",
+        "name": "トウケイニセイ記念",
         "winner": ""
       },
       "after": {
-        "date": "2026-11-22",
-        "time": "19:30",
+        "date": "2026-11-23",
+        "time": "18:05",
         "sport": "nar",
-        "venue": "帯広",
-        "grade": "BG3",
-        "name": "ドリームエイジカップ",
-        "winner": "キングフェスタ"
+        "venue": "水沢",
+        "grade": "M2",
+        "name": "トウケイニセイ記念",
+        "winner": "ヒロシクン"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F22&k_babaCode=03",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F23&k_babaCode=11",
       "note": "地方競馬公式レース情報"
     },
     {
-      "date": "2026-11-25",
+      "date": "2026-11-23",
       "sport": "nar",
-      "venue": "浦和",
-      "name": "浦和記念",
+      "venue": "金沢",
+      "name": "MRO金賞",
       "before": {
-        "date": "2026-11-25",
-        "time": "",
+        "date": "2026-11-23",
+        "time": "18:15",
         "sport": "nar",
-        "venue": "浦和",
-        "grade": "JpnⅡ",
-        "name": "浦和記念",
+        "venue": "金沢",
+        "grade": "",
+        "name": "MRO金賞",
         "winner": ""
       },
       "after": {
-        "date": "2026-11-25",
-        "time": "17:45",
+        "date": "2026-11-23",
+        "time": "18:15",
         "sport": "nar",
-        "venue": "浦和",
-        "grade": "JpnⅡ",
-        "name": "浦和記念",
-        "winner": ""
+        "venue": "金沢",
+        "grade": "",
+        "name": "MRO金賞",
+        "winner": "ニャンタロウ"
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F25&k_babaCode=18",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F23&k_babaCode=22",
       "note": "地方競馬公式レース情報"
     },
     {
       "date": "2026-11-26",
       "sport": "nar",
-      "venue": "園田",
-      "name": "兵庫ジュニアグランプリ",
+      "venue": "名古屋",
+      "name": "ゴールドウィング賞",
       "before": {
         "date": "2026-11-26",
         "time": "",
         "sport": "nar",
-        "venue": "園田",
-        "grade": "JpnⅡ",
-        "name": "兵庫ジュニアグランプリ",
+        "venue": "名古屋",
+        "grade": "SPⅠ",
+        "name": "ゴールドウィング賞",
         "winner": ""
       },
       "after": {
         "date": "2026-11-26",
-        "time": "16:15",
+        "time": "20:15",
         "sport": "nar",
-        "venue": "園田",
-        "grade": "JpnⅡ",
-        "name": "兵庫ジュニアグランプリ",
+        "venue": "名古屋",
+        "grade": "SPⅠ",
+        "name": "ゴールドウィング賞",
         "winner": ""
       },
       "source": "地方競馬",
-      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F26&k_babaCode=27",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F26&k_babaCode=24",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-26",
+      "sport": "nar",
+      "venue": "浦和",
+      "name": "サザンスタースプリント",
+      "before": {
+        "date": "2026-11-26",
+        "time": "",
+        "sport": "nar",
+        "venue": "浦和",
+        "grade": "SⅢ",
+        "name": "サザンスタースプリント",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-26",
+        "time": "17:45",
+        "sport": "nar",
+        "venue": "浦和",
+        "grade": "SⅢ",
+        "name": "サザンスタースプリント",
+        "winner": ""
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F26&k_babaCode=18",
       "note": "地方競馬公式レース情報"
     },
     {
@@ -395,7 +395,7 @@
       "name": "オールレディース",
       "before": {
         "date": "2026-11-23",
-        "time": "",
+        "time": "15:55",
         "sport": "boat",
         "venue": "戸田",
         "grade": "GⅢ",
@@ -404,12 +404,12 @@
       },
       "after": {
         "date": "2026-11-23",
-        "time": "15:55",
+        "time": "15:58",
         "sport": "boat",
         "venue": "戸田",
         "grade": "GⅢ",
         "name": "オールレディース",
-        "winner": ""
+        "winner": "安井 瑞紀"
       },
       "source": "ボートレース",
       "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=02&hd=20261123&rno=12",
