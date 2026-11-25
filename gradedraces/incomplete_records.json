@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-24T11:43:32.792894+09:00",
-  "center_date": "2026-11-24",
+  "generated_at": "2026-11-25T09:15:27.408046+09:00",
+  "center_date": "2026-11-25",
   "past_unresolved_count": 17,
-  "upcoming_missing_time_count": 18,
+  "upcoming_missing_time_count": 20,
   "past_unresolved": [
     {
       "date": "2026-09-05",
@@ -358,6 +358,26 @@
       "venue": "徳山",
       "grade": "GⅠ",
       "name": "徳山クラウン争奪戦",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-12-09",
+      "sport": "nar",
+      "venue": "園田",
+      "grade": "重賞Ⅰ",
+      "name": "園田金盃",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-12-09",
+      "sport": "nar",
+      "venue": "船橋",
+      "grade": "SⅢ",
+      "name": "船橋記念",
       "missing": [
         "time"
       ]
