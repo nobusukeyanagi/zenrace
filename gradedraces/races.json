@@ -5451,6 +5451,15 @@
     "venue": "浦和",
     "grade": "JpnⅡ",
     "name": "浦和記念",
+    "winner": "イッテラッシャイ"
+  },
+  {
+    "date": "2026-11-26",
+    "time": "14:28",
+    "sport": "boat",
+    "venue": "三国",
+    "grade": "GⅢ",
+    "name": "スズキ・カープラザカップ",
     "winner": ""
   },
   {
@@ -5478,15 +5487,6 @@
     "venue": "名古屋",
     "grade": "SPⅠ",
     "name": "ゴールドウィング賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-26",
-    "time": "",
-    "sport": "boat",
-    "venue": "三国",
-    "grade": "GⅢ",
-    "name": "スズキ・カープラザカップ",
     "winner": ""
   },
   {

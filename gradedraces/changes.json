@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-11-25T09:15:27.407768+09:00",
-  "center_date": "2026-11-25",
+  "generated_at": "2026-11-26T08:54:22.415929+09:00",
+  "center_date": "2026-11-26",
   "selection_mode": "smart",
   "selection_counts": {
-    "unresolved": 17,
-    "upcoming": 28
+    "unresolved": 18,
+    "recent_verification": 1,
+    "upcoming": 27
   },
   "target_count": 45,
-  "change_count": 10,
+  "change_count": 12,
   "changes": [
     {
       "date": "2026-09-05",
@@ -278,6 +279,60 @@
       "source": "JRA",
       "evidence_url": "https://www.jra.go.jp/datafile/seiseki/replay/2026/jyusyo.html",
       "note": "JRA重賞一覧"
+    },
+    {
+      "date": "2026-11-25",
+      "sport": "nar",
+      "venue": "浦和",
+      "name": "浦和記念",
+      "before": {
+        "date": "2026-11-25",
+        "time": "17:45",
+        "sport": "nar",
+        "venue": "浦和",
+        "grade": "JpnⅡ",
+        "name": "浦和記念",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-25",
+        "time": "17:45",
+        "sport": "nar",
+        "venue": "浦和",
+        "grade": "JpnⅡ",
+        "name": "浦和記念",
+        "winner": "イッテラッシャイ"
+      },
+      "source": "地方競馬",
+      "evidence_url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList?k_raceDate=2026%2F11%2F25&k_babaCode=18",
+      "note": "地方競馬公式レース情報"
+    },
+    {
+      "date": "2026-11-26",
+      "sport": "boat",
+      "venue": "三国",
+      "name": "スズキ・カープラザカップ",
+      "before": {
+        "date": "2026-11-26",
+        "time": "",
+        "sport": "boat",
+        "venue": "三国",
+        "grade": "GⅢ",
+        "name": "スズキ・カープラザカップ",
+        "winner": ""
+      },
+      "after": {
+        "date": "2026-11-26",
+        "time": "14:28",
+        "sport": "boat",
+        "venue": "三国",
+        "grade": "GⅢ",
+        "name": "スズキ・カープラザカップ",
+        "winner": ""
+      },
+      "source": "ボートレース",
+      "evidence_url": "https://www.boatrace.jp/owpc/pc/race/raceresult?jcd=10&hd=20261126&rno=12",
+      "note": "BOAT RACE公式12R結果"
     }
   ]
 }
