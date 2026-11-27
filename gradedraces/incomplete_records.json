@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-26T08:54:22.416233+09:00",
-  "center_date": "2026-11-26",
+  "generated_at": "2026-11-27T09:12:25.823840+09:00",
+  "center_date": "2026-11-27",
   "past_unresolved_count": 17,
-  "upcoming_missing_time_count": 19,
+  "upcoming_missing_time_count": 18,
   "past_unresolved": [
     {
       "date": "2026-09-05",
@@ -195,16 +195,6 @@
     {
       "date": "2026-11-29",
       "sport": "nar",
-      "venue": "佐賀",
-      "grade": "",
-      "name": "鳥栖大賞",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-29",
-      "sport": "nar",
       "venue": "帯広",
       "grade": "BG1",
       "name": "ばんえいオークス",
@@ -218,16 +208,6 @@
       "venue": "水沢",
       "grade": "M3",
       "name": "寒菊賞",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-29",
-      "sport": "nar",
-      "venue": "金沢",
-      "grade": "",
-      "name": "徽軫賞",
       "missing": [
         "time"
       ]
@@ -368,6 +348,16 @@
       "venue": "船橋",
       "grade": "SⅢ",
       "name": "船橋記念",
+      "missing": [
+        "time"
+      ]
+    },
+    {
+      "date": "2026-12-11",
+      "sport": "boat",
+      "venue": "蒲郡",
+      "grade": "GⅠ",
+      "name": "オールジャパン竹島特別",
       "missing": [
         "time"
       ]

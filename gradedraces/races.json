@@ -5460,7 +5460,7 @@
     "venue": "三国",
     "grade": "GⅢ",
     "name": "スズキ・カープラザカップ",
-    "winner": ""
+    "winner": "今泉 友吾"
   },
   {
     "date": "2026-11-26",
@@ -5469,7 +5469,7 @@
     "venue": "園田",
     "grade": "JpnⅡ",
     "name": "兵庫ジュニアグランプリ",
-    "winner": ""
+    "winner": "ワンスフォーユー"
   },
   {
     "date": "2026-11-26",
@@ -5478,7 +5478,7 @@
     "venue": "浦和",
     "grade": "SⅢ",
     "name": "サザンスタースプリント",
-    "winner": ""
+    "winner": "ランニングビーチ"
   },
   {
     "date": "2026-11-26",
@@ -5487,7 +5487,7 @@
     "venue": "名古屋",
     "grade": "SPⅠ",
     "name": "ゴールドウィング賞",
-    "winner": ""
+    "winner": "ドリームオブコージ"
   },
   {
     "date": "2026-11-28",
@@ -5509,20 +5509,29 @@
   },
   {
     "date": "2026-11-29",
-    "time": "",
-    "sport": "jra",
-    "venue": "東京",
-    "grade": "GI",
-    "name": "ジャパンC",
+    "time": "17:05",
+    "sport": "nar",
+    "venue": "佐賀",
+    "grade": "",
+    "name": "鳥栖大賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-29",
+    "time": "17:15",
+    "sport": "nar",
+    "venue": "金沢",
+    "grade": "",
+    "name": "徽軫賞",
     "winner": ""
   },
   {
     "date": "2026-11-29",
     "time": "",
-    "sport": "nar",
-    "venue": "佐賀",
-    "grade": "",
-    "name": "鳥栖大賞",
+    "sport": "jra",
+    "venue": "東京",
+    "grade": "GI",
+    "name": "ジャパンC",
     "winner": ""
   },
   {
@@ -5541,15 +5550,6 @@
     "venue": "水沢",
     "grade": "M3",
     "name": "寒菊賞",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-29",
-    "time": "",
-    "sport": "nar",
-    "venue": "金沢",
-    "grade": "",
-    "name": "徽軫賞",
     "winner": ""
   },
   {
