@@ -5509,6 +5509,15 @@
   },
   {
     "date": "2026-11-29",
+    "time": "16:55",
+    "sport": "nar",
+    "venue": "水沢",
+    "grade": "M3",
+    "name": "寒菊賞",
+    "winner": ""
+  },
+  {
+    "date": "2026-11-29",
     "time": "17:05",
     "sport": "nar",
     "venue": "佐賀",
@@ -5527,16 +5536,7 @@
   },
   {
     "date": "2026-11-29",
-    "time": "",
-    "sport": "jra",
-    "venue": "東京",
-    "grade": "GI",
-    "name": "ジャパンC",
-    "winner": ""
-  },
-  {
-    "date": "2026-11-29",
-    "time": "",
+    "time": "19:35",
     "sport": "nar",
     "venue": "帯広",
     "grade": "BG1",
@@ -5546,10 +5546,10 @@
   {
     "date": "2026-11-29",
     "time": "",
-    "sport": "nar",
-    "venue": "水沢",
-    "grade": "M3",
-    "name": "寒菊賞",
+    "sport": "jra",
+    "venue": "東京",
+    "grade": "GI",
+    "name": "ジャパンC",
     "winner": ""
   },
   {
@@ -5707,10 +5707,10 @@
   },
   {
     "date": "2026-12-12",
-    "time": "",
+    "time": "16:25",
     "sport": "jra",
     "venue": "中京",
-    "grade": "GⅢ",
+    "grade": "GIII",
     "name": "中日新聞杯",
     "winner": ""
   },

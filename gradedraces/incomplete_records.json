@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-27T09:12:25.823840+09:00",
-  "center_date": "2026-11-27",
+  "generated_at": "2026-11-28T08:51:28.353397+09:00",
+  "center_date": "2026-11-28",
   "past_unresolved_count": 17,
-  "upcoming_missing_time_count": 18,
+  "upcoming_missing_time_count": 16,
   "past_unresolved": [
     {
       "date": "2026-09-05",
@@ -188,26 +188,6 @@
       "venue": "東京",
       "grade": "GI",
       "name": "ジャパンC",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-29",
-      "sport": "nar",
-      "venue": "帯広",
-      "grade": "BG1",
-      "name": "ばんえいオークス",
-      "missing": [
-        "time"
-      ]
-    },
-    {
-      "date": "2026-11-29",
-      "sport": "nar",
-      "venue": "水沢",
-      "grade": "M3",
-      "name": "寒菊賞",
       "missing": [
         "time"
       ]
